@@ -1,2 +1,18 @@
 _build
 venv
+
+# Base ignores:
+# =============
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+Icon?
+ehthumbs.db
+Thumbs.db
+.cache
+.project
+.*.swp
+*.sublime-project
+*.sublime-workspace
