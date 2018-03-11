@@ -334,7 +334,7 @@ If you supply a GCP file called gcp_list.txt then ODM will automatically detect 
 
 For example, in this image, I would use the sharp corners of the diamond-shaped bioswales in the parking lot:
 
-.. image:: _static/tol_sm.jpg
+.. todo:: add file for ``.. image:: _static/tol_sm.jpg``
 
 You should also place/find the GCPs evenly around your survey area.
 

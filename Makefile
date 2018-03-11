@@ -15,7 +15,12 @@ help:
 .PHONY: help Makefile
 
 livehtml:
-	sphinx-autobuild -b html $(SOURCEDIR) $(BUILDDIR)/html
+	sphinx-autobuild --open-browser -b html "$(SOURCEDIR)" "$(BUILDDIR)"
+	
+deploy:
+	@$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" -nW
+	#  -n   Run in nit-picky mode. Currently, this generates warnings for all missing references.
+	#  -W   Turn warnings into errors that stop the build.
 
 # Catch-all target: route all unknown targets to Sphinx using the new
 # "make mode" option.  $(O) is meant as a shortcut for $(SPHINXOPTS).
