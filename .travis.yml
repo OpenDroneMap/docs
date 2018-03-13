@@ -3,9 +3,7 @@ python:
   - '3.6'
 env:
   matrix:
-    - USE_NETWORK=true
-    - USE_NETWORK=false
-    - secure: m9erew3TlDT9DOS820wkCVwDVjo9IQNgDmU4r5rZMDowObfuaG/W42C6aphYBw/347GtfPPp7wg/Ler7aHHjv3yjY3GcepFaNkHVNbk+o1sLzFsR7gfTDl2J3wpOF5d4nfkJe37oHBgviCwlcLEq5NNmljdmi0vQpXDTFiLNzIhKeIWCJT2hXTegMqpyDzDNOxVjxrcRHGZppfGu/+FupRoAaqKSifareBNkbDB9w4yjsXxQg0AgMpmhtuy2lTl7bNRd7Sn90KzHZm9AuSXNxlcRv1e+EdogtssuEQpa9+n592GFlai7edVqxRD1XnD4tmAanQRGLDsc6YrhcunsgKRjUKfCPchAJi1177ImqQSN4sU5IwUwxBnWYpsuVukcj+D1RCwaw6Gw/D2mISgimCqZlvxAjqVqEnbaw1/M0/fMmOvgyIVTKFOZC8qG4jEgopzkXtevGx28xaWJKfKxdKeFN3l9HGAM+Q8hXwsU0UAsKqCkcABU9mbtRRN4xTQfj6Q7B2B7zh2lONcwjqbFZnzAd4xkdJ+NN9o/S8fgIgnYhA2UpoasMXEwhQaMIB2T+QJL3okOQLO6T6wd6yk0Wt1Js5WncM19T6Ju1lodzTkMkkmWnSFp24H3EV5R26MD0yAo3QgJIwHPx/iti7jKeiQi4Ekk4/6y1/sai+sA9Cw=
+    secure: m9erew3TlDT9DOS820wkCVwDVjo9IQNgDmU4r5rZMDowObfuaG/W42C6aphYBw/347GtfPPp7wg/Ler7aHHjv3yjY3GcepFaNkHVNbk+o1sLzFsR7gfTDl2J3wpOF5d4nfkJe37oHBgviCwlcLEq5NNmljdmi0vQpXDTFiLNzIhKeIWCJT2hXTegMqpyDzDNOxVjxrcRHGZppfGu/+FupRoAaqKSifareBNkbDB9w4yjsXxQg0AgMpmhtuy2lTl7bNRd7Sn90KzHZm9AuSXNxlcRv1e+EdogtssuEQpa9+n592GFlai7edVqxRD1XnD4tmAanQRGLDsc6YrhcunsgKRjUKfCPchAJi1177ImqQSN4sU5IwUwxBnWYpsuVukcj+D1RCwaw6Gw/D2mISgimCqZlvxAjqVqEnbaw1/M0/fMmOvgyIVTKFOZC8qG4jEgopzkXtevGx28xaWJKfKxdKeFN3l9HGAM+Q8hXwsU0UAsKqCkcABU9mbtRRN4xTQfj6Q7B2B7zh2lONcwjqbFZnzAd4xkdJ+NN9o/S8fgIgnYhA2UpoasMXEwhQaMIB2T+QJL3okOQLO6T6wd6yk0Wt1Js5WncM19T6Ju1lodzTkMkkmWnSFp24H3EV5R26MD0yAo3QgJIwHPx/iti7jKeiQi4Ekk4/6y1/sai+sA9Cw=
 install: 
   - pip install -r requirements.txt
 script: 
@@ -13,7 +11,7 @@ script:
 deploy:
   provider: pages
   skip-cleanup: true
-  github-token: $GITHUB_TOKEN
+  github-token: $GH_TOKEN
   keep-history: false
   on:
     branch: publish
