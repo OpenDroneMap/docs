@@ -14,5 +14,5 @@ deploy:
   github-token: $GITHUB_TOKEN
   keep-history: false
   on:
-    branch: master
+    branch: publish
   local_dir: _build/html
