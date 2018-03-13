@@ -20,12 +20,14 @@ source venv/bin/activate
 # install requirements
 pip install -r requirements.txt
 ```
+
 More on [`virtualenv`](https://virtualenv.pypa.io/en/stable/).
 
 Use [`sphinx-autobuild`](https://github.com/GaretJax/sphinx-autobuild) to automatically watch for changes and rebuild the html site using:
 ```
 make livehtml
 ```
+
 To stop the server press `Ctrl+C`.
 
 ### Travis-CI
