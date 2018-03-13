@@ -9,7 +9,7 @@ install:
 script: 
   - make deploy
 after-success:
-  - echo "http://docs.opendronemap.org/" > ./_build/html/CNAME
+  - echo "docs.opendronemap.org/" > ./_build/html/CNAME
 deploy:
   provider: pages
   skip-cleanup: true
