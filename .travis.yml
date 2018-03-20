@@ -8,8 +8,7 @@ install:
   - pip install -r requirements.txt
 script: 
   - make deploy
-after-success:
-  - echo "docs.opendronemap.org/" > ./_build/html/CNAME
+  - echo "docs.opendronemap.org" > ./_build/html/CNAME
 deploy:
   provider: pages
   skip-cleanup: true
