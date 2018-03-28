@@ -8,7 +8,7 @@ OpenDroneMap relies on community contributions. You can contribute in many ways,
 Community Forum
 ---------------
 
-If you are looking to get involved, are stuck on a problem, or want to reach out, `the forum <https://community.opendronemap.org/>`_ is a great place to start. You may find your questions already answered or else you can find other useful tips and resources. You can also contribute your open access datasets for others to explore. It is a good place go before submitting bug reports or getting in touch with developers before writing a new feature. In addition to the forum, you can reach us on `gitter <https://gitter.im/OpenDroneMap/OpenDroneMap/>`_.
+If you are looking to get involved, are stuck on a problem, or want to reach out, `the forum <http://community.opendronemap.org/>`_ is a great place to start. You may find your questions already answered or else you can find other useful tips and resources. You can also contribute your open access datasets for others to explore. It is a good place go before submitting bug reports or getting in touch with developers before writing a new feature. In addition to the forum, you can reach us on `gitter <https://gitter.im/OpenDroneMap/OpenDroneMap/>`_.
 
 Reporting Bugs
 --------------
