@@ -134,7 +134,26 @@ Args::
                         Turn off camera parameter optimization during bundler
   --opensfm-processes <positive integer>
                         The maximum number of processes to use in dense
-                        reconstruction. Default: 16
+                        reconstruction. Default: <num cpus>
+  --opensfm-depthmap-resolution <positive float>
+                        Resolution of the depthmaps. Higher values take longer
+                        to compute but produce denser point clouds. Default:
+                        640
+  --opensfm-depthmap-min-consistent-views <integer: 2 <= x <= 9>
+                        Minimum number of views that should reconstruct a
+                        point for it to be valid. Use lower values if your
+                        images have less overlap. Lower values result in
+                        denser point clouds but with more noise. Default: 3
+  --opensfm-depthmap-method <string>
+                        Raw depthmap computation algorithm. PATCH_MAP and
+                        PATCH_MATCH_SAMPLE are faster, but might miss some
+                        valid points. BRUTE_FORCE takes longer but produces
+                        denser reconstructions. Default: PATCH_MAP
+  --opensfm-depthmap-min-patch-sd <positive float>
+                        When using PATCH_MAP or PATCH_MATCH_SAMPLE, controls
+                        the standard deviation threshold to include patches.
+                        Patches with lower standard deviation are ignored.
+                        Default: 1
   --use-hybrid-bundle-adjustment
                         Run local bundle adjustment for every image added to
                         the reconstruction and a global adjustment every 100
