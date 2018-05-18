@@ -145,12 +145,12 @@ Args::
                         images have less overlap. Lower values result in
                         denser point clouds but with more noise. Default: 3
   --opensfm-depthmap-method <string>
-                        Raw depthmap computation algorithm. PATCH_MAP and
+                        Raw depthmap computation algorithm. PATCH_MATCH and
                         PATCH_MATCH_SAMPLE are faster, but might miss some
                         valid points. BRUTE_FORCE takes longer but produces
-                        denser reconstructions. Default: PATCH_MAP
+                        denser reconstructions. Default: PATCH_MATCH
   --opensfm-depthmap-min-patch-sd <positive float>
-                        When using PATCH_MAP or PATCH_MATCH_SAMPLE, controls
+                        When using PATCH_MATCH or PATCH_MATCH_SAMPLE, controls
                         the standard deviation threshold to include patches.
                         Patches with lower standard deviation are ignored.
                         Default: 1
