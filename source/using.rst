@@ -88,20 +88,20 @@ Args::
                         resizes images by the largest side for opensfm. Set to
                         -1 to disable. Default: 2048
   --start-with <string>, -s <string>
-                        Can be one of: dataset | opensfm | slam | cmvs | pmvs
-                        | odm_meshing | odm_25dmeshing | mvs_texturing |
+                        Can be one of: dataset | opensfm | slam | smvs |
+                        odm_meshing | odm_25dmeshing | mvs_texturing |
                         odm_georeferencing | odm_dem | odm_orthophoto
   --end-with <string>, -e <string>
-                        Can be one of:dataset | opensfm | slam | cmvs | pmvs |
+                        Can be one of:dataset | opensfm | slam | smvs |
                         odm_meshing | odm_25dmeshing | mvs_texturing |
                         odm_georeferencing | odm_dem | odm_orthophoto
   --rerun <string>, -r <string>
-                        Can be one of:dataset | opensfm | slam | cmvs | pmvs |
+                        Can be one of:dataset | opensfm | slam | smvs |
                         odm_meshing | odm_25dmeshing | mvs_texturing |
                         odm_georeferencing | odm_dem | odm_orthophoto
   --rerun-all           force rerun of all tasks
   --rerun-from <string>
-                        Can be one of:dataset | opensfm | slam | cmvs | pmvs |
+                        Can be one of:dataset | opensfm | slam | smvs |
                         odm_meshing | odm_25dmeshing | mvs_texturing |
                         odm_georeferencing | odm_dem | odm_orthophoto
   --video <string>      Path to the video file to process
@@ -132,13 +132,15 @@ Args::
                         0
   --use-fixed-camera-params
                         Turn off camera parameter optimization during bundler
-  --opensfm-processes <positive integer>
-                        The maximum number of processes to use in dense
-                        reconstruction. Default: <num cpus>
-  --opensfm-depthmap-resolution <positive float>
-                        Resolution of the depthmaps. Higher values take longer
-                        to compute but produce denser point clouds. Default:
-                        640
+  --max-concurrency <positive integer>
+                        The maximum number of processes to use in various
+                        processes. Peak memory requirement is ~1GB per thread
+                        and 2 megapixel image resolution. Default: 4
+  --depthmap-resolution <positive float>
+                        Controls the density of the point cloud by setting the
+                        resolution of the depthmap images. Higher values take
+                        longer to compute but produce denser point clouds.
+                        Default: 640
   --opensfm-depthmap-min-consistent-views <integer: 2 <= x <= 9>
                         Minimum number of views that should reconstruct a
                         point for it to be valid. Use lower values if your
@@ -159,40 +161,39 @@ Args::
                         the reconstruction and a global adjustment every 100
                         images. Speeds up reconstruction for very large
                         datasets.
-  --use-25dmesh         Use a 2.5D mesh to compute the orthophoto. This option
-                        tends to provide better results for planar surfaces.
-                        Experimental.
-  --use-pmvs            Use pmvs to compute point cloud alternatively
-  --cmvs-maxImages <integer>
-                        The maximum number of images per cluster. Default: 500
-  --pmvs-level <positive integer>
-                        The level in the image pyramid that is used for the
-                        computation. see
-                        http://www.di.ens.fr/pmvs/documentation.html for more
-                        pmvs documentation. Default: 1
-  --pmvs-csize <positive integer>
-                        Cell size controls the density of
-                        reconstructionsDefault: 2
-  --pmvs-threshold <float: -1.0 <= x <= 1.0>
-                        A patch reconstruction is accepted as a success and
-                        kept if its associated photometric consistency measure
-                        is above this threshold. Default: 0.7
-  --pmvs-wsize <positive integer>
-                        pmvs samples wsize x wsize pixel colors from each
-                        image to compute photometric consistency score. For
-                        example, when wsize=7, 7x7=49 pixel colors are sampled
-                        in each image. Increasing the value leads to more
-                        stable reconstructions, but the program becomes
-                        slower. Default: 7
-  --pmvs-min-images <positive integer>
-                        Each 3D point must be visible in at least minImageNum
-                        images for being reconstructed. 3 is suggested in
-                        general. Default: 3
-  --pmvs-num-cores <positive integer>
-                        The maximum number of cores to use in dense
-                        reconstruction. Default: 16
+  --use-3dmesh          Use a full 3D mesh to compute the orthophoto instead
+                        of a 2.5D mesh. This option is a bit faster and
+                        provides similar results in planar areas.
+  --skip-3dmodel        Skip generation of a full 3D model. This can save time
+                        if you only need 2D results such as orthophotos and
+                        DEMs.
+  --use-opensfm-dense   Use opensfm to compute dense point cloud alternatively
+  --ignore-gsd          Ignore Ground Sampling Distance (GSD). GSD caps the
+                        maximum resolution of image outputs and resizes images
+                        when necessary, resulting in faster processing and
+                        lower memory usage. Since GSD is an estimate,
+                        sometimes ignoring it can result in slightly better
+                        image output quality.
+  --smvs-alpha <float>  Regularization parameter, a higher alpha leads to
+                        smoother surfaces. Default: 1.0
+  --smvs-output-scale <positive integer>
+                        The scale of the optimization - the finest resolution
+                        of the bicubic patches will have the size of the
+                        respective power of 2 (e.g. 2 will optimize patches
+                        covering down to 4x4 pixels). Default: 2
+  --smvs-enable-shading
+                        Use shading-based optimization. This model cannot
+                        handle complex scenes. Try to supply linear images to
+                        the reconstruction pipeline that are not tone mapped
+                        or altered as this can also have very negative effects
+                        on the reconstruction. If you have simple JPGs with
+                        SRGB gamma correction you can remove it with the
+                        --smvs-gamma-srgb option. Default: False
+  --smvs-gamma-srgb     Apply inverse SRGB gamma correction. To be used with
+                        --smvs-enable-shading when you have simple JPGs with
+                        SRGB gamma correction. Default: False
   --mesh-size <positive integer>
-                        The maximum vertex count of the output mesh Default:
+                        The maximum vertex count of the output mesh. Default:
                         100000
   --mesh-octree-depth <positive integer>
                         Oct-tree depth used in the mesh reconstruction,
@@ -201,28 +202,13 @@ Args::
   --mesh-samples <float >= 1.0>
                         Number of points per octree node, recommended and
                         default value: 1.0
-  --mesh-solver-divide <positive integer>
-                        Oct-tree depth at which the Laplacian equation is
-                        solved in the surface reconstruction step. Increasing
-                        this value increases computation times slightly but
-                        helps reduce memory usage. Default: 9
-  --mesh-neighbors <positive integer>
-                        Number of neighbors to select when estimating the
-                        surface model used to compute the mesh and for
-                        statistical outlier removal. Higher values lead to
-                        smoother meshes but take longer to process. Applies to
-                        2.5D mesh only. Default: 24
-  --mesh-resolution <positive float>
-                        Size of the interpolated surface model used for
-                        deriving the 2.5D mesh, expressed in pixels per meter.
-                        Higher values work better for complex or urban
-                        terrains. Lower values work better on flat areas.
-                        Resolution has no effect on the number of vertices,
-                        but high values can severely impact runtime speed and
-                        memory usage. When set to zero, the program
-                        automatically attempts to find a good value based on
-                        the point cloud extent and target vertex count.
-                        Applies to 2.5D mesh only. Default: 0
+  --mesh-point-weight <interpolation weight>
+                        This floating point value specifies the importance
+                        that interpolation of the point samples is given in
+                        the formulation of the screened Poisson equation. The
+                        results of the original (unscreened) Poisson
+                        Reconstruction can be obtained by setting this value
+                        to 0.Default= 4
   --fast-orthophoto     Skips dense reconstruction and 3D model generation. It
                         generates an orthophoto directly from the sparse
                         reconstruction. If you just need an orthophoto and do
@@ -239,8 +225,16 @@ Args::
                         defaults to smrf. You can control the behavior of both
                         smrf and pmf by tweaking the --dem-* parameters.
                         Default: none
+  --pc-csv              Export the georeferenced point cloud in CSV format.
+                        Default: False
   --texturing-data-term <string>
                         Data term: [area, gmi]. Default: gmi
+  --texturing-nadir-weight <integer: 0 <= x <= 32>
+                        Affects orthophotos only. Higher values result in
+                        sharper corners, but can affect color distribution and
+                        blurriness. Use lower values for planar areas and
+                        higher values for urban areas. The default value works
+                        well for most scenarios. Default: 16
   --texturing-outlier-removal-type <string>
                         Type of photometric outlier removal method: [none,
                         gauss_damping, gauss_clamping]. Default:
@@ -279,9 +273,9 @@ Args::
                         generated with progressively bigger radius using the
                         inverse distance weighted (IDW) algorithm and merged
                         together. Remaining gaps are then merged using nearest
-                        neighbor interpolation. Default=4
+                        neighbor interpolation. Default=3
   --dem-resolution <float>
-                        Length of raster cell edges in meters. Default: 0.1
+                        DSM/DTM resolution in cm / pixel. Default: 5
   --dem-maxangle <positive float>
                         Points that are more than maxangle degrees off-nadir
                         are discarded. Default: 20
@@ -314,8 +308,7 @@ Args::
                         vegetation ComplexForest: Varied terrain that is
                         forested Default=ComplexForest
   --orthophoto-resolution <float > 0.0>
-                        Orthophoto ground resolution in pixels/meterDefault:
-                        20.0
+                        Orthophoto resolution in cm / pixel. Default: 5
   --orthophoto-target-srs <EPSG:XXXX>
                         Target spatial reference for orthophoto creation. Not
                         implemented yet. Default: None
