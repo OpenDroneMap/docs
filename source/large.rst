@@ -40,18 +40,27 @@ And make sure you have all the parameters you want to pass in the settings.yaml 
 
 setup.py
 ````````
+The setup.py command initializes the dataset and writes the config file for OpenSfM. The command accepts command line parameters to configure the process.
 
-This script sets up the metadataset/submodel structure. It takes some arguments:::
+A first group of parameters are equivalent to the standard ODM parameters and configure the feature extraction and matching: ``--resize-to``, ``--min-num-features``, ``--num-cores``, ``--matcher-neighbors``. See :ref:`arguments` for more info.
 
-    <path-to-project>
-    --resize-to n
-    --min-num-features n
-    --num-cores n
-    --matcher-neighbors n
-    --submodel-size n
-    --submodel-overlap float
+A second group of parameters controls the size and overlap of the submodels. They are equivalent to the OpenSfM parameters with the same name.
 
-``<path-to-project>`` is where the data lies, set up like an ODM project (images should be in an "images" subdirectory), `n` in each of the other parameters is an integer. See https://github.com/OpenDroneMap/OpenDroneMap/wiki/Run-Time-Parameters for more info on the first four. The submodel-size parameter sets how many images are put in each submodel cluster on average. The default is 80 images. It is good to keep the size small because it decreases the bowling effect overall. There also needs to be sufficient overlap between clusters for alignment and merging the models. The submodel-overlap parameter determines how large a radius (in meters) around the cluster to include neighboring images. ::
+    ``submodel_size``: Average number of images per submodel. When splitting a large dataset into smaller submodels, images are grouped into clusters. This value regulates the number of images that each cluster should have on average. The splitting is done via K-means clustering with k set to the number of images divided by submodel_size.
+
+    ``submodel_overlap``: Radius of the overlapping region between submodels in meters. To be able to align the different submodels, there needs to be some common images between the neighboring submodels. Any image that is closer to a cluster than submodel_overlap it is added to that cluster.
+
+Finally, if you already know how you want to split the dataset, you can provide that information and it will be used instead of the clustering algorithm.
+
+The grouping can be provided by adding a file named image_groups.txt in the main dataset folder. The file should have one line per image. Each line should have two words: first the name of the image and second the name of the group it belongs to. For example:::
+
+    01.jpg A
+    02.jpg A
+    03.jpg B
+    04.jpg B
+    05.jpg C
+
+will create 3 submodels.::
 
     python setup.py ~/ODMProjects/split-merge-test/
 
