@@ -75,7 +75,7 @@ Then sit back, grab a coffee and wait. You only have to specify ``--images </pat
 .. _arguments:
 
 Additional Arguments
-````````````````````
+--------------------
 
 Args::
 
