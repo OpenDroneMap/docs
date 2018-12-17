@@ -77,6 +77,8 @@ Then sit back, grab a coffee and wait. You only have to specify ``--images </pat
 Command Line Arguments
 ----------------------
 
+Arguments::
+
   -h, --help            show this help message and exit
   --images <path>, -i <path>
                         Path to input images
@@ -333,7 +335,7 @@ Command Line Arguments
                         False
   --version             Displays version number and exits.
 
-.. _ground-control:
+.. _ground-control-points:
 
 Ground Control Points
 ---------------------
@@ -454,7 +456,7 @@ Camera Calibration
 It is highly recommended that you calibrate your images to reduce lens distortion. Doing so will increase the likelihood of finding quality matches between photos and reduce processing time. You can do this in Photoshop or `ImageMagick <http://www.imagemagick.org/Usage/lens/>`_. We also have some simple scripts to perform this task: https://github.com/OpenDroneMap/CameraCalibration . This suite of scripts will find camera matrix and distortion parameters with a set of checkerboard images, then use those parameters to remove distortion from photos.
 
 Installation
-````````````
+^^^^^^^^^^^^
 
 You need to install numpy and opencv:::
 
@@ -462,7 +464,7 @@ You need to install numpy and opencv:::
     sudo apt-get install python-opencv exiftool
 
 Usage: Calibrate chessboard
-```````````````````````````
+^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 First you will need to take some photos of a black and white chessboard with a white border, `like this one <https://raw.githubusercontent.com/LongerVision/OpenCV_Examples/master/markers/pattern_chessboard.png>`_.
 
@@ -476,7 +478,7 @@ The first argument is the path to the chessboard. You will also have to input th
     --square_size   float     if your chessboard squares are not square, you can change this. default is 1.0
 
 Usage: undistort photos
-```````````````````````
+^^^^^^^^^^^^^^^^^^^^^^^
 
 With the photos and the produced matrix.txt and distortion.txt, run the following:::
 
@@ -485,7 +487,7 @@ With the photos and the produced matrix.txt and distortion.txt, run the followin
 Note: Do not forget the quotes in "/path/to/images"
 
 Docker Usage for undistorting images
-````````````````````````````````````
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The ``undistort.py`` script depends on exiftool to copy exif metadata to the new images, so on Windows you may have to use Docker for the undistort step. Put the matrix.txt and distortion.txt in their own directory (eg. sample/config) and do the following:::
 
