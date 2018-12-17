@@ -74,10 +74,8 @@ Then sit back, grab a coffee and wait. You only have to specify ``--images </pat
 
 .. _arguments:
 
-Additional Arguments
---------------------
-
-Args::
+Command Line Arguments
+----------------------
 
   -h, --help            show this help message and exit
   --images <path>, -i <path>
@@ -338,39 +336,38 @@ Args::
 .. _ground-control:
 
 Ground Control Points
-`````````````````````
+---------------------
+
+The format of the GCP file is simple.
+
+ * The header line is a description of a UTM coordinate system, which must be written as a proj4 string. http://spatialreference.org/ is a good resource for finding that information. Please note that currently angular coordinates (like lat/lon) DO NOT work.
+ * Subsequent lines are the X, Y & Z coordinates, your associated pixels and the image filename:
+
+GCP file format::
+
+    <proj4 string>
+    <geo_x> <geo_y> <geo_z> <im_x> <im_y> <image_name>
+    ...
+
+e.g. for the Langley dataset::
+
+    +proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs 
+    544256.7 5320919.9 5 3044 2622 IMG_0525.jpg
+    544157.7 5320899.2 5 4193 1552 IMG_0585.jpg
+    544033.4 5320876.0 5 1606 2763 IMG_0690.jpg
 
 If you supply a GCP file called gcp_list.txt then ODM will automatically detect it. If it has another name you can specify using ``--gcp <path>``. If you have a gcp file and want to do georeferencing with exif instead, then you can specify ``--use-exif``.
 
 `This post has some information about placing Ground Control Targets before a flight <http://diydrones.com/profiles/blogs/ground-control-points-gcps-for-aerial-photography>`_, but if you already have images, you can find your own points in the images post facto. It's important that you find high-contrast objects that are found in **at least** 3 photos, and that you find a minimum of 5 objects.
 
-For example, in this image, I would use the sharp corners of the diamond-shaped bioswales in the parking lot:
+Sharp corners are good picks for GCPs. You should also place/find the GCPs evenly around your survey area.
 
-.. todo:: add file for ``.. image:: _static/tol_sm.jpg``
+The ``gcp_list.txt`` file must be created in the base of your project folder.
 
-You should also place/find the GCPs evenly around your survey area.
-
-The ``gcp_list.txt`` file must then be created in the base of your project folder:
-
-The format of the GCP file is simple. The header line is a description of the coordinate system, which must be written as a http://spatialreference.org/ is a good resource for finding that information. proj4 string. Please note that currently angular coordinates (like lat/lon) do not work. Subsequent lines are the X, Y & Z coordinate in your coordinate system, your associated pixel and line number in the image, and the image name itself::
-
-    coordinate system description
-    x1 y1 z1 pixelx1 pixely1 imagename1
-    x2 y2 z2 pixelx2 pixely2 imagename2
-    x3 y3 z3 pixelx3 pixely3 imagename3
-
-e.g. for the Langley dataset::
-
-    WGS84 UTM 10N
-    544256.7 5320919.9 5 3044 2622 IMG_0525.jpg
-    544157.7 5320899.2 5 4193 1552 IMG_0585.jpg
-    544033.4 5320876.0 5 1606 2763 IMG_0690.jpg
-
-
-Given the recommendations above, your file should have a minimum of 15 lines after the header (5 points with 3 images to each point).
+For good results your file should have a minimum of 15 lines after the header (5 points with 3 images to each point).
 
 Video Reconstruction (Experimental)
-```````````````````````````````````
+-----------------------------------
 
 **Note: This is an experimental feature**
 
