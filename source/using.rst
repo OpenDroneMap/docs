@@ -274,16 +274,6 @@ Arguments::
                         Decimate the points before generating the DEM. 1 is no
                         decimation (full quality). 100 decimates ~99% of the
                         points. Useful for speeding up generation. Default=1
-  --dem-terrain-type <string>
-                        One of: FlatNonForest, FlatForest, ComplexNonForest,
-                        ComplexForest. Specifies the type of terrain. This
-                        mainly helps reduce processing time. FlatNonForest:
-                        Relatively flat region with little to no vegetation
-                        FlatForest: Relatively flat region that is forested
-                        ComplexNonForest: Varied terrain with little to no
-                        vegetation ComplexForest: Varied terrain that is
-                        forested
-                        Default: ComplexForest
   --smrf-scalar <positive float>
                         Simple Morphological Filter elevation scalar parameter.
                         Default: 1.25
