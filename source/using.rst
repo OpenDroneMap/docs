@@ -87,33 +87,25 @@ Arguments::
   --resize-to <integer>
                         resizes images by the largest side for opensfm. Set to
                         -1 to disable. Default: 2048
-  --start-with <string>, -s <string>
-                        Can be one of: dataset | opensfm | slam | smvs |
-                        odm_meshing | odm_25dmeshing | mvs_texturing |
-                        odm_georeferencing | odm_dem | odm_orthophoto
   --end-with <string>, -e <string>
-                        Can be one of:dataset | opensfm | slam | smvs |
+                        Can be one of:dataset | opensfm | slam | mve |
                         odm_meshing | odm_25dmeshing | mvs_texturing |
                         odm_georeferencing | odm_dem | odm_orthophoto
   --rerun <string>, -r <string>
-                        Can be one of:dataset | opensfm | slam | smvs |
+                        Can be one of:dataset | opensfm | slam | mve |
                         odm_meshing | odm_25dmeshing | mvs_texturing |
                         odm_georeferencing | odm_dem | odm_orthophoto
   --rerun-all           force rerun of all tasks
   --rerun-from <string>
-                        Can be one of:dataset | opensfm | slam | smvs |
+                        Can be one of:dataset | opensfm | slam | mve |
                         odm_meshing | odm_25dmeshing | mvs_texturing |
                         odm_georeferencing | odm_dem | odm_orthophoto
   --video <string>      Path to the video file to process
   --slam-config <string>
                         Path to config file for orb-slam
-  --force-focal <positive float>
-                        Override the focal length information for the images
   --proj <PROJ4 string>
                         Projection used to transform the model into geographic
                         coordinates
-  --force-ccd <positive float>
-                        Override the ccd width information for the images
   --min-num-features <integer>
                         Minimum number of features to extract per image. More
                         features leads to better results but slower execution.
@@ -174,24 +166,6 @@ Arguments::
                         lower memory usage. Since GSD is an estimate,
                         sometimes ignoring it can result in slightly better
                         image output quality.
-  --smvs-alpha <float>  Regularization parameter, a higher alpha leads to
-                        smoother surfaces. Default: 1.0
-  --smvs-output-scale <positive integer>
-                        The scale of the optimization - the finest resolution
-                        of the bicubic patches will have the size of the
-                        respective power of 2 (e.g. 2 will optimize patches
-                        covering down to 4x4 pixels). Default: 2
-  --smvs-enable-shading
-                        Use shading-based optimization. This model cannot
-                        handle complex scenes. Try to supply linear images to
-                        the reconstruction pipeline that are not tone mapped
-                        or altered as this can also have very negative effects
-                        on the reconstruction. If you have simple JPGs with
-                        SRGB gamma correction you can remove it with the
-                        --smvs-gamma-srgb option. Default: False
-  --smvs-gamma-srgb     Apply inverse SRGB gamma correction. To be used with
-                        --smvs-enable-shading when you have simple JPGs with
-                        SRGB gamma correction. Default: False
   --mesh-size <positive integer>
                         The maximum vertex count of the output mesh. Default:
                         100000
@@ -309,9 +283,6 @@ Arguments::
                         forested Default=ComplexForest
   --orthophoto-resolution <float > 0.0>
                         Orthophoto resolution in cm / pixel. Default: 5
-  --orthophoto-target-srs <EPSG:XXXX>
-                        Target spatial reference for orthophoto creation. Not
-                        implemented yet. Default: None
   --orthophoto-no-tiled
                         Set this parameter if you want a stripped geoTIFF.
                         Default: False
@@ -328,7 +299,6 @@ Arguments::
                         https://www.gdal.org/frmt_gtiff.html for more info.
                         Default: IF_SAFER
   --build-overviews     Build orthophoto overviews using gdaladdo.
-  --zip-results         compress the results using gunzip
   --verbose, -v         Print additional messages to the console Default:
                         False
   --time                Generates a benchmark file with runtime info Default:
