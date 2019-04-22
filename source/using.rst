@@ -166,6 +166,10 @@ Arguments::
                         lower memory usage. Since GSD is an estimate,
                         sometimes ignoring it can result in slightly better
                         image output quality.
+  --mve-confidence      Discard points that have less than a certain confidence
+                        threshold. This only affects dense reconstructions
+                        performed with MVE. Higher values discard more points.
+                        Default: 0.6                        
   --mesh-size <positive integer>
                         The maximum vertex count of the output mesh. Default:
                         100000
@@ -193,11 +197,9 @@ Arguments::
                         buffer around the dataset boundaries, shrinked by N
                         meters. Use 0 to disable cropping. Default: 3
   --pc-classify <string>
-                        Classify the .LAS point cloud output using either a
-                        Simple Morphological Filter or a Progressive
-                        Morphological Filter. If --dtm is set this parameter
-                        defaults to smrf. You can control the behavior of both
-                        smrf and pmf by tweaking the --dem-* parameters.
+                        Classify the .LAS point cloud output using a Simple
+                        Morphological Filter. You can control the behavior of
+                        smrf by tweaking the --dem-* and --smrf-* parameters.
                         Default: none
   --pc-csv              Export the georeferenced point cloud in CSV format.
                         Default: False
@@ -280,7 +282,23 @@ Arguments::
                         FlatForest: Relatively flat region that is forested
                         ComplexNonForest: Varied terrain with little to no
                         vegetation ComplexForest: Varied terrain that is
-                        forested Default=ComplexForest
+                        forested
+                        Default: ComplexForest
+  --smrf-scalar <positive float>
+                        Simple Morphological Filter elevation scalar parameter.
+                        Default: 1.25
+  --smrf-slope <positive float>
+                        Simple Morphological Filter slope parameter
+                        (rise over run)
+                        Default: 0.15
+  --smrf-threshold <positive float>
+                        Simple Morphological Filter elevation threshold
+                        parameter (meters).
+                        Default: 0.5
+  --smrf-window <positive float>'
+                        Simple Morphological Filter window radius parameter
+                        (meters)
+                        Default: 18.0                        
   --orthophoto-resolution <float > 0.0>
                         Orthophoto resolution in cm / pixel. Default: 5
   --orthophoto-no-tiled
