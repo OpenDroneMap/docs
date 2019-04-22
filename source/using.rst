@@ -252,24 +252,6 @@ Arguments::
                         neighbor interpolation. Default=3
   --dem-resolution <float>
                         DSM/DTM resolution in cm / pixel. Default: 5
-  --dem-maxangle <positive float>
-                        Points that are more than maxangle degrees off-nadir
-                        are discarded. Default: 20
-  --dem-maxsd <positive float>
-                        Points that deviate more than maxsd standard
-                        deviations from the local mean are discarded. Default:
-                        2.5
-  --dem-initial-distance <positive float>
-                        Used to classify ground vs non-ground points. Set this
-                        value to account for Z noise in meters. If you have an
-                        uncertainty of around 15 cm, set this value large
-                        enough to not exclude these points. Too small of a
-                        value will exclude valid ground points, while too
-                        large of a value will misclassify non-ground points
-                        for ground ones. Default: 0.15
-  --dem-approximate     Use this tag use the approximate progressive
-                        morphological filter, which computes DEMs faster but
-                        is not as accurate.
   --dem-decimation <positive integer>
                         Decimate the points before generating the DEM. 1 is no
                         decimation (full quality). 100 decimates ~99% of the
