@@ -9,44 +9,19 @@ Usage
 Docker
 ------
 
-There are two methods for running with docker. One pulls a pre-built image from the docker hub. This is the most reliable. You can also :ref:`build your own image <docker-installation>`. In either case, the run command is the same, what you will change is the name of the image. For the docker hub image, use ``opendronemap/opendronemap``. For an image you built yourself, use that image name (in our case, ``my_odm_image``).::
+There are two methods for running with docker. One pulls a pre-built image from the docker hub. This is the most reliable. You can also :ref:`build your own image <docker-installation>`. In either case, the run command is the same, what you will change is the name of the image. For the docker hub image, use ``opendronemap/odm``. For an image you built yourself, use that image name (in our case, ``my_odm_image``).::
 
-    docker run -it --rm \
-        -v $(pwd)/images:/code/images \
-        -v $(pwd)/odm_texturing:/code/odm_texturing \
-        -v $(pwd)/odm_orthophoto:/code/odm_orthophoto \
-        <docker-image>
+    docker run -ti --rm -v /my/project:/datasets/code <my_odm_image> --project-path /datasets
 
-``-v`` is used to connect folders in the docker container to local folders. See :doc:`dataset` for reference on the project layout.
+Where /my/project is the path to your project containing an ``images`` folder (/my/project/images). ``-v`` is used to connect folders in the docker container to local folders. See :doc:`dataset` for reference on the project layout.
 
-If you want to get all intermediate outputs, run the following command:::
+To pass in custom parameters to the run.py script, simply pass it as arguments to the docker run command. For example::
 
-    docker run -it --rm \
-        -v $(pwd)/images:/code/images \
-        -v $(pwd)/odm_meshing:/code/odm_meshing \
-        -v $(pwd)/odm_orthophoto:/code/odm_orthophoto \
-        -v $(pwd)/odm_georeferencing:/code/odm_georeferencing \
-        -v $(pwd)/odm_texturing:/code/odm_texturing \
-        -v $(pwd)/opensfm:/code/opensfm \
-        -v $(pwd)/pmvs:/code/pmvs \
-        opendronemap/opendronemap
+    docker run -ti --rm -v /my/project:/datasets/code <my_odm_image> --project-path /datasets --resize-to 1800 --dsm
 
-To pass in custom parameters to the run.py script, simply pass it as arguments to the docker run command. For example:::
+If you want to pass in custom parameters using the settings.yaml file, you can pass it as a -v volume binding::
 
-    docker run -it --rm \
-        -v $(pwd)/images:/code/images \
-        -v $(pwd)/odm_orthophoto:/code/odm_orthophoto \
-        -v $(pwd)/odm_texturing:/code/odm_texturing \
-        opendronemap/opendronemap --resize-to 1800 --force-ccd 6.16
-
-If you want to pass in custom parameters using the settings.yaml file, you can pass it as a -v volume binding:::
-
-    docker run -it --rm \
-        -v $(pwd)/images:/code/images \
-        -v $(pwd)/odm_orthophoto:/code/odm_orthophoto \
-        -v $(pwd)/odm_texturing:/code/odm_texturing \
-        -v $(pwd)/settings.yaml:/code/settings.yaml \
-        opendronemap/opendronemap
+    docker run -ti --rm -v $(pwd)/settings.yaml:/code/settings.yaml -v /my/project:/datasets/code <my_odm_image> --project-path /datasets --resize-to 1800 --dsm
 
 For more information about Docker, check out their `docs <https://docs.docker.com/>`_.
 
@@ -88,17 +63,17 @@ Arguments::
                         resizes images by the largest side for opensfm. Set to
                         -1 to disable. Default: 2048
   --end-with <string>, -e <string>
-                        Can be one of:dataset | opensfm | slam | mve |
-                        odm_meshing | odm_25dmeshing | mvs_texturing |
+                        Can be one of:dataset | split | merge | opensfm | mve
+                        | odm_filterpoints | odm_meshing | mvs_texturing |
                         odm_georeferencing | odm_dem | odm_orthophoto
   --rerun <string>, -r <string>
-                        Can be one of:dataset | opensfm | slam | mve |
-                        odm_meshing | odm_25dmeshing | mvs_texturing |
+                        Can be one of:dataset | split | merge | opensfm | mve
+                        | odm_filterpoints | odm_meshing | mvs_texturing |
                         odm_georeferencing | odm_dem | odm_orthophoto
   --rerun-all           force rerun of all tasks
   --rerun-from <string>
-                        Can be one of:dataset | opensfm | slam | mve |
-                        odm_meshing | odm_25dmeshing | mvs_texturing |
+                        Can be one of:dataset | split | merge | opensfm | mve
+                        | odm_filterpoints | odm_meshing | mvs_texturing |
                         odm_georeferencing | odm_dem | odm_orthophoto
   --video <string>      Path to the video file to process
   --slam-config <string>
@@ -153,6 +128,11 @@ Arguments::
                         the reconstruction and a global adjustment every 100
                         images. Speeds up reconstruction for very large
                         datasets.
+  --mve-confidence <float: 0 <= x <= 1>
+                        Discard points that have less than a certain
+                        confidence threshold. This only affects dense
+                        reconstructions performed with MVE. Higher values
+                        discard more points. Default: 0.6
   --use-3dmesh          Use a full 3D mesh to compute the orthophoto instead
                         of a 2.5D mesh. This option is a bit faster and
                         provides similar results in planar areas.
@@ -166,10 +146,6 @@ Arguments::
                         lower memory usage. Since GSD is an estimate,
                         sometimes ignoring it can result in slightly better
                         image output quality.
-  --mve-confidence      Discard points that have less than a certain confidence
-                        threshold. This only affects dense reconstructions
-                        performed with MVE. Higher values discard more points.
-                        Default: 0.6                        
   --mesh-size <positive integer>
                         The maximum vertex count of the output mesh. Default:
                         100000
@@ -180,7 +156,7 @@ Arguments::
   --mesh-samples <float >= 1.0>
                         Number of points per octree node, recommended and
                         default value: 1.0
-  --mesh-point-weight <interpolation weight>
+  --mesh-point-weight <positive float>
                         This floating point value specifies the importance
                         that interpolation of the point samples is given in
                         the formulation of the screened Poisson equation. The
@@ -196,13 +172,30 @@ Arguments::
                         Automatically crop image outputs by creating a smooth
                         buffer around the dataset boundaries, shrinked by N
                         meters. Use 0 to disable cropping. Default: 3
-  --pc-classify <string>
-                        Classify the .LAS point cloud output using a Simple
+  --pc-classify         Classify the point cloud outputs using a Simple
                         Morphological Filter. You can control the behavior of
-                        smrf by tweaking the --dem-* and --smrf-* parameters.
-                        Default: none
+                        this option by tweaking the --dem-* parameters.
+                        Default: False
   --pc-csv              Export the georeferenced point cloud in CSV format.
                         Default: False
+  --pc-las              Export the georeferenced point cloud in LAS format.
+                        Default: False
+  --pc-filter <positive float>
+                        Filters the point cloud by removing points that
+                        deviate more than N standard deviations from the local
+                        mean. Set to 0 to disable filtering. Default: 2.5
+  --smrf-scalar <positive float>
+                        Simple Morphological Filter elevation scalar
+                        parameter. Default: 1.25
+  --smrf-slope <positive float>
+                        Simple Morphological Filter slope parameter (rise over
+                        run). Default: 0.15
+  --smrf-threshold <positive float>
+                        Simple Morphological Filter elevation threshold
+                        parameter (meters). Default: 0.5
+  --smrf-window <positive float>
+                        Simple Morphological Filter window radius parameter
+                        (meters). Default: 18.0
   --texturing-data-term <string>
                         Data term: [area, gmi]. Default: gmi
   --texturing-nadir-weight <integer: 0 <= x <= 32>
@@ -237,11 +230,12 @@ Arguments::
   --use-exif            Use this tag if you have a gcp_list.txt but want to
                         use the exif geotags instead
   --dtm                 Use this tag to build a DTM (Digital Terrain Model,
-                        ground only) using a progressive morphological filter.
-                        Check the --dem* parameters for fine tuning.
+                        ground only) using a simple morphological filter.
+                        Check the --dem* and --smrf* parameters for finer
+                        tuning.
   --dsm                 Use this tag to build a DSM (Digital Surface Model,
                         ground + objects) using a progressive morphological
-                        filter. Check the --dem* parameters for fine tuning.
+                        filter. Check the --dem* parameters for finer tuning.
   --dem-gapfill-steps <positive integer>
                         Number of steps used to fill areas with gaps. Set to 0
                         to disable gap filling. Starting with a radius equal
@@ -256,21 +250,11 @@ Arguments::
                         Decimate the points before generating the DEM. 1 is no
                         decimation (full quality). 100 decimates ~99% of the
                         points. Useful for speeding up generation. Default=1
-  --smrf-scalar <positive float>
-                        Simple Morphological Filter elevation scalar parameter.
-                        Default: 1.25
-  --smrf-slope <positive float>
-                        Simple Morphological Filter slope parameter
-                        (rise over run)
-                        Default: 0.15
-  --smrf-threshold <positive float>
-                        Simple Morphological Filter elevation threshold
-                        parameter (meters).
-                        Default: 0.5
-  --smrf-window <positive float>'
-                        Simple Morphological Filter window radius parameter
-                        (meters)
-                        Default: 18.0                        
+  --dem-euclidean-map   Computes an euclidean raster map for each DEM. The map
+                        reports the distance from each cell to the nearest
+                        NODATA value (before any hole filling takes place).
+                        This can be useful to isolate the areas that have been
+                        filled. Default: False
   --orthophoto-resolution <float > 0.0>
                         Orthophoto resolution in cm / pixel. Default: 5
   --orthophoto-no-tiled
@@ -288,12 +272,34 @@ Arguments::
                         IF_SAFER. See GDAL specs:
                         https://www.gdal.org/frmt_gtiff.html for more info.
                         Default: IF_SAFER
+  --orthophoto-cutline  Generates a polygon around the cropping area that cuts
+                        the orthophoto around the edges of features. This
+                        polygon can be useful for stitching seamless mosaics
+                        with multiple overlapping orthophotos. Default: False
   --build-overviews     Build orthophoto overviews using gdaladdo.
   --verbose, -v         Print additional messages to the console Default:
                         False
   --time                Generates a benchmark file with runtime info Default:
                         False
   --version             Displays version number and exits.
+  --split <positive integer>
+                        Average number of images per submodel. When splitting
+                        a large dataset into smaller submodels, images are
+                        grouped into clusters. This value regulates the number
+                        of images that each cluster should have on average.
+  --split-overlap <positive integer>
+                        Radius of the overlap between submodels. After
+                        grouping images into clusters, images that are closer
+                        than this radius to a cluster are added to the
+                        cluster. This is done to ensure that neighboring
+                        submodels overlap.
+  --sm-cluster <string>
+                        URL to a nodeodm-proxy instance for distributing a
+                        split-merge workflow on multiple nodes in parallel.
+                        Default: None
+  --merge <string>      Choose what to merge in the merge step in a split
+                        dataset. By default all available outputs are merged.
+                        Default: all
 
 .. _ground-control-points:
 
@@ -328,10 +334,54 @@ The ``gcp_list.txt`` file must be created in the base of your project folder.
 
 For good results your file should have a minimum of 15 lines after the header (5 points with 3 images to each point).
 
-Video Reconstruction (Experimental)
+Tutorials
+---------
+
+Below you will find step-by-step instructions for some common use cases.
+
+Creating High Quality Orthophotos
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+Without any parameter tweaks, ODM chooses a good compromise between quality, speed and memory usage. If you want to get higher quality results, you need to tweak some parameters:
+
+ * ``--orthophoto-resolution`` is the resolution of the orthophoto in cm/pixel. Increase this value for a higher resolution result.
+ * ``--ignore-gsd`` is a flag that instructs ODM to skip certain memory and speed optimizations that directly affect the orthophoto. Using this flag will increase runtime and memory usage, but will produce sharper results.
+ * ``--texturing-nadir-weight`` should be increased to ``29-32`` in urban areas to reconstruct better edges of roofs. It should be decreased to ``0-6`` in grassy / flat areas.
+ * ``--texturing-data-term`` should be set to `area` in forest areas.
+ * ``--mesh-size`` should be increased to `300000-600000` and `--mesh-octree-depth`` should be increased to `10-11` in urban areas to recreate better buildings / roofs.
+
+Creating Digital Terrain Models
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+By default ODM does not create DEMs. To create a digital terrain model, make sure to pass the ``--dtm`` flag.
+
+For DTM generation, a Simple Morphological Filter (smrf) is used to classify points in ground vs. non-ground and only the ground points are used. The ``smrf`` filter can be controlled via several parameters:
+
+ * ``--smrf-scalar`` scaling value. Increase this parameter for terrains with lots of height variation.  
+ * ``--smrf-slope`` slope parameter, which is a measure of "slope tolerance". Increase this parameter for terrains with lots of height variation. Should be set to something higher than 0.1 and not higher than 1.2.
+ * ``--smrf-threshold`` elevation threshold. Set this parameter to the minimum height (in meters) that you expect non-ground objects to be.
+ * ``--smrf-window`` window radius parameter (in meters) that corresponds to the size of the largest feature (building, trees, etc.) to be removed. Should be set to a value higher than 10.
+
+Changing these options can affect the result of DTMs significantly. The best source to read to understand how the parameters affect the output is to read the original paper `An improved simple morphological filter for the terrain classification of airborne LIDAR data <https://www.researchgate.net/publication/258333806_An_Improved_Simple_Morphological_Filter_for_the_Terrain_Classification_of_Airborne_LIDAR_Data>`_ (PDF freely available).
+
+Overall the ``--smrf-threshold`` option has the biggest impact on results.
+
+SMRF is good at avoiding Type I errors (small number of ground points mistakenly classified as non-ground) but only "acceptable" at avoiding Type II errors (large number non-ground points mistakenly classified as ground). This needs to be taken in consideration when generating DTMs that are meant to be used visually, since objects mistaken for ground look like artifacts in the final DTM.
+
+Two other important parameters affect DEM generation:
+
+ * ``--dem-resolution`` which sets the output resolution of the DEM raster (cm/pixel)
+ * ``--dem-gapfill-steps`` which determines the number of progressive DEM layers to use. For urban scenes increasing this value to `4-5` can help produce better interpolation results in the areas that are left empty by the SMRF filter.
+
+Example of how to generate a DTM::
+
+    docker run -ti --rm -v /my/project:/datasets/code <my_odm_image> --project-path /datasets --dtm --dem-resolution 2 --smrf-threshold 0.4 --smrf-window 24
+
+
+Video Reconstruction (Developers Only)
 -----------------------------------
 
-**Note: This is an experimental feature**
+**Note: Video reconstruction currently will not work out of the box! There's code in the project that should allow a developer to add SLAM functionality to ODM, but this feature has not been touched in a while and is currently broken.**
 
 It is possible to build a reconstruction using a video file instead of still images.  The technique for reconstructing the camera trajectory from a video is called Simultaneous Localization And Mapping (SLAM).  OpenDroneMap uses the opensource `ORB_SLAM2 <https://github.com/raulmur/ORB_SLAM2>`_ library for this task.
 

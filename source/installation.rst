@@ -1,7 +1,7 @@
-.. Notes and doc on building ODM
+.. Notes and doc on installing ODM
 
-Building
-========
+Installation
+============
 
 
 Hardware Recommendations
@@ -16,14 +16,47 @@ Minimum 4GB of RAM, recommended 16GB or more. Many parts of the ODM toolchain ar
 Docker Installation (cross-platform)
 ------------------------------------
 
-First you need to `download and install Docker <https://www.docker.com/>`_. Note for Windows users that Docker CE only works for Windows 10 Professional and Enterprise. Otherwise you should use `Docker Toolbox <https://www.docker.com/products/docker-toolbox>`_
+We recommend people use `docker <https://www.docker.com>`_ for running ODM, whether you are on Windows, macOS or Linux.
 
-You can easily pull and run a pre-built image. Start here: :ref:`docker-usage`. If you want to build your own docker image, follow the instructions below.
+Install Docker on Windows
+`````````````````````````
+
+Before you start, check that your CPU supports virtualization! Sometimes this is disabled from the BIOS. The feature is often called "VT-X" and needs to be enabled. On Windows 8 or higher you can check if virtualization is enabled by opening the Task Manager --> Performance tab. The "Virtualization" field of your CPU should read "enabled". On Windows 7 you can use `this tool <http://www.microsoft.com/en-us/download/details.aspx?id=592>`_ instead.
+
+Now we can install docker:
+
+ * If you are on Windows 10 Home, Windows 8 (any version) or Windows 7 (any version), use Docker Toolbox: https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe
+ * If you are on Windows 10 Professional or a newer version use Docker for Windows instead: https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe 
+
+Install Docker on macOS/Linux
+`````````````````````````````
+
+Docker installation on macOS and Linux is straightforward. 
+
+ * For macOS simply download the Docker for Mac installer from https://download.docker.com/mac/stable/Docker.dmg  
+ * For Linux simply use the the docker install script::
+
+    curl -fsSL https://get.docker.com -o get-docker.sh
+    sh get-docker.sh
+
+Running ODM/WebODM
+``````````````````
+
+With docker installed, see the :ref:`docker-usage` usage page on using ODM.
 
 Before running ODM it's advised to check that Docker is allocating sufficient resources to containers. In Windows this can be done in the 'Docker for Windows' program under the 'Advanced' tab.
 
-Build the image
-```````````````
+ODM is a command line utility. We also have a graphical interface called `WebODM <https://github.com/OpenDroneMap/WebODM>`_. To install it, make sure you have installed `git <https://git-scm.com/downloads/>`_ and `python <https://www.python.org/downloads/>`_. Then launch a shell (macOS/Linux) or ``Git Bash`` (Windows) from the start menu (**not** a command prompt/powershell) and simply type::
+
+    git clone https://github.com/OpenDroneMap/WebODM  --config core.autocrlf=input --depth 1
+    cd WebODM/
+    ./webodm.sh start
+
+See the `WebODM project README <https://github.com/OpenDroneMap/WebODM>`_ for other useful commands.
+
+
+Build your docker image
+```````````````````````
 
 Download and extract the latest version of ODM: :ref:`download`
 

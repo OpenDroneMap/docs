@@ -1,7 +1,7 @@
-.. Explaining the dataset structure
+.. Explaining the outputs structure
 
-Dataset Structure
-=================
+Outputs
+=======
 ::
 
     project/
@@ -43,52 +43,40 @@ Dataset Structure
     │   ├── odm_orthophoto_log.txt          # Log file
     │   └── gdal_translate_log.txt          # Log for georeferencing the png file
     └── odm_dem/
-        ├── odm_dsm.tif                     # Digital Surface Model Geotiff - the tops of everything
-        └── odm_dtm.tif                     # Digital Terrain Model Geotoff - the ground.
+        ├── dsm.tif                     # Digital Surface Model Geotiff - the tops of everything
+        └── dtm.tif                     # Digital Terrain Model Geotoff - the ground.
 
-Outputs
-```````
 Listed below are some of the useful outputs ODM produces
 
-3D Models (unreferenced)
-^^^^^^^^^^^^^^^^^^^^^^^^
+Point Cloud
+^^^^^^^^^^^
 
-``pmvs/recon0/models/option-0000.ply`` -- The point cloud file
+``odm_georeferenced_model.ply/laz/csv`` -- The georeferenced point cloud in different file formats
 
-``odm_meshing/odm_mesh.ply`` -- The meshed surface
 
-Textured Models
-^^^^^^^^^^^^^^^
+3D Textured Model
+^^^^^^^^^^^^^^^^^
 
 ``odm_texturing/odm_textured_model.obj`` -- The textured surface mesh
+``odm_texturing/odm_textured_model_geo.obj`` -- The georeferenced and textured surface mesh
 
 You can access the point cloud and textured meshes using MeshLab. Open MeshLab, and choose File:Import Mesh and choose your textured mesh from a location similar to the following: ``odm_texturing\odm_textured_model.obj``
 
-Georeferencing
-^^^^^^^^^^^^^^
-
-``odm_texturing/odm_textured_model_geo.obj`` -- The georeferenced and textured surface mesh
-
-``odm_georeferenced_model.ply/laz/csv`` -- The georeferenced point cloud in different file formats
 
 Orthophoto
 ^^^^^^^^^^
 
-``odm_orthphoto.png`` -- The orthophoto, but this is a simple png, which doesn't have any georeferencing information
+``odm_orthophoto/odm_orthphoto.png`` -- The orthophoto, but this is a simple png, which doesn't have any georeferencing information
 
-``odm_orthphoto.tif`` -- GeoTIFF Orthophoto. You can use it in QGIS as a raster layer.
+``odm_orthophoto/odm_orthphoto.tif`` -- GeoTIFF Orthophoto. You can use it in QGIS as a raster layer.
 
 
-DEM/DSM
+DTM/DSM
 ^^^^^^^
 
-DEM/DSM will only be created if the ``--dem`` or ``--dsm`` options are used.
+DTM/DSM will only be created if the ``--dtm`` or ``--dsm`` options are used and will be stored in:
 
-``odm_dem.tif``
+ * ``odm_dem/dtm.tif``
+ * ``odm_dem/dsm.tif``
 
-``odm_dsm.tif``
 
-2.5D Meshing Reconstruction
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The ``--use-25dmesh`` option will generate two extra directories, ``odm_texturing_25d/`` and ``odm_25dgeoreferencing``. The items inside correspond to those inside the 3D meshed output folders, only they were run using the 2.5D meshing algorithm.
