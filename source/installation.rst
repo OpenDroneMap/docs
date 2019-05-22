@@ -58,7 +58,7 @@ See the `WebODM project README <https://github.com/OpenDroneMap/WebODM>`_ for ot
 Build your docker image
 ```````````````````````
 
-Download and extract the latest version of ODM: :ref:`download`
+Download and extract the latest version of ODM: https://github.com/OpenDroneMap/ODM/archive/master.zip
 
 In Docker toolbox or Docker CE, navigate to your extracted ODM directory. Then build the Docker image.::
 
@@ -89,7 +89,7 @@ Once this is done, go to :ref:`docker-usage`
 Native Installation (Ubuntu 16.04)
 ----------------------------------
 
-Download and extract the latest version of ODM: :ref:`download`
+Download and extract the latest version of ODM: https://github.com/OpenDroneMap/ODM/archive/master.zip
 
 The installation is simple::
 

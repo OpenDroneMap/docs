@@ -13,7 +13,7 @@ There are two methods for running with docker. One pulls a pre-built image from 
 
     docker run -ti --rm -v /my/project:/datasets/code <my_odm_image> --project-path /datasets
 
-Where /my/project is the path to your project containing an ``images`` folder (/my/project/images). ``-v`` is used to connect folders in the docker container to local folders. See :doc:`dataset` for reference on the project layout.
+Where /my/project is the path to your project containing an ``images`` folder (/my/project/images). ``-v`` is used to connect folders in the docker container to local folders. See :doc:`outputs` for reference on the project layout.
 
 To pass in custom parameters to the run.py script, simply pass it as arguments to the docker run command. For example::
 
