@@ -379,7 +379,7 @@ Example of how to generate a DTM::
 
 
 Video Reconstruction (Developers Only)
------------------------------------
+--------------------------------------
 
 **Note: Video reconstruction currently will not work out of the box! There's code in the project that should allow a developer to add SLAM functionality to ODM, but this feature has not been touched in a while and is currently broken.**
 
