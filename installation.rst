@@ -1,6 +1,6 @@
 .. Notes and doc on installing ODM
 
-Installation
+ODM Installation
 ============
 
 
