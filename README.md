@@ -39,7 +39,7 @@ Press the "Fork" button at the top of this page.
 ### Linux:
 
 ```bash
-sudo apt-get install -y git python3`
+sudo apt-get install -y git python3
 ```
 
 ### MacOS 

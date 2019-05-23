@@ -3,56 +3,27 @@
 Splitting Large Datasets
 ========================
 
-A recent ODM update (coined split-merge) introduces a new workflow for splitting up very large datasets into manageable chunks (called submodels), running the pipeline on each chunk, and then producing some merged products.
+Starting with ODM version ``0.6.0`` you can split up very large datasets into manageable chunks (called submodels), running the pipeline on each chunk, and then producing merged DEMs, orthophotos and point clouds. The process is referred to as "split-merge".
 
-Why might you use the split-merge pipeline? If you have a very large number of images in your dataset, split-merge will help make the processing more manageable on a large machine. It will also alleviate the need for Ground Control. GPS information gathered from the UAV is still a long way from being accurate, and those problems only get more noticeable as datasets scale. Obviously the best results will come from survey-grade GCPs, but this is not always possible.
+Why might you use the split-merge pipeline? If you have a very large number of images in your dataset, split-merge will help make the processing more manageable on a large machine (it will require less memory). If you have many machines all connected to the same network you can also process the submodels in parallel, thus allowing for horizontal scaling and processing thousands of images more quickly.
 
-What split-merge doesn’t solve is the ability to run large datasets on small machines. We have made strides towards reducing processing costs in general, but the goal of split-merge was specifically to solve a scaling problem, not necessarily an efficiency one.
-
+Split-merge works in WebODM out of the box as long as the processing nodes support split-merge, by enabling the ``--split`` option when creating a new task.
 
 Calibrate images
 ----------------
 
-Image calibration is essential for large datasets because error propagation due to image distortion will cause a bowl effect on the models. Calibration instructions can be found at :ref:`calibration`.
+Image calibration is recommended (but not required) for large datasets because error propagation due to image distortion could cause a bowl effect on the models. Calibration instructions can be found at :ref:`calibration`.
 
-Overview
---------
+Local Split-Merge
+-----------------
 
-The scripts lay inside the ``scripts/metadataset`` folder. They are:::
+Splitting a dataset into more manageable submodels and sequentially processing all submodels on the same machine is easy! Just use ``--split`` and ``--split-overlap`` to decide the the average number of images per submodels and the overlap (in meters) between submodels respectively::
 
-    run_all.sh
-    setup.py
-    run_matching.py
-    split.py
-    run_reconstructions.py
-    align.py
-    run_dense.py
-    merge.py
+    docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split 400 --split-overlap 100
 
-If you look into ``run_all.sh`` you will see that you run each of these scripts in the order above. It's really just a placeholder file we used for testing, so I will largely ignore it. Instead I will go through each step in order to explain what it does and how to run it.
-Before you run the following scripts, you should set up the environment variables:::
+If you already know how you want to split the dataset, you can provide that information and it will be used instead of the clustering algorithm.
 
-    RUNPATH=<Set this to your ODM base directory, eg. /home/dmb2/opendronemap>
-    export PYTHONPATH=$RUNPATH:$RUNPATH/SuperBuild/install/lib/python2.7/dist-packages:$RUNPATH/SuperBuild/src/opensfm:$PYTHONPATH
-    export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:$RUNPATH/SuperBuild/install/lib
-
-And make sure you have all the parameters you want to pass in the settings.yaml file in the software root directory. You won't be able to put most of those settings into the command line.
-
-setup.py
-````````
-The setup.py command initializes the dataset and writes the config file for OpenSfM. The command accepts command line parameters to configure the process.
-
-A first group of parameters are equivalent to the standard ODM parameters and configure the feature extraction and matching: ``--resize-to``, ``--min-num-features``, ``--num-cores``, ``--matcher-neighbors``. See :ref:`arguments` for more info.
-
-A second group of parameters controls the size and overlap of the submodels. They are equivalent to the OpenSfM parameters with the same name.
-
-    ``submodel_size``: Average number of images per submodel. When splitting a large dataset into smaller submodels, images are grouped into clusters. This value regulates the number of images that each cluster should have on average. The splitting is done via K-means clustering with k set to the number of images divided by submodel_size.
-
-    ``submodel_overlap``: Radius of the overlapping region between submodels in meters. To be able to align the different submodels, there needs to be some common images between the neighboring submodels. Any image that is closer to a cluster than submodel_overlap it is added to that cluster.
-
-Finally, if you already know how you want to split the dataset, you can provide that information and it will be used instead of the clustering algorithm.
-
-The grouping can be provided by adding a file named image_groups.txt in the main dataset folder. The file should have one line per image. Each line should have two words: first the name of the image and second the name of the group it belongs to. For example:::
+The grouping can be provided by adding a file named image_groups.txt in the main dataset folder. The file should have one line per image. Each line should have two words: first the name of the image and second the name of the group it belongs to. For example::
 
     01.jpg A
     02.jpg A
@@ -60,60 +31,48 @@ The grouping can be provided by adding a file named image_groups.txt in the main
     04.jpg B
     05.jpg C
 
-will create 3 submodels.::
-
-    python setup.py ~/ODMProjects/split-merge-test/
-
-run_matching.py
-```````````````
-
-Before we split the dataset up, we have to match the images so that the software knows where to make the splits. This is done on the whole dataset, so it can take a while if there are a lot of photos.
-This one takes nothing except the project path:::
-
-    python run_matching.py ~/ODMProjects/split-merge-test/
-
-split.py
-````````
-
-Now we split the model. This will create a directory called “submodels” within which is a set of directories for each submodel. Each of these is set up like a typical ODM project folder, except the images are symlinked to the root images folder. This is an important concept to know because moving the project folder will break the symlinks if you are not careful.::
-
-    python split.py ~/ODMProjects/split-merge-test/
-
-run_reconstructions.py
-``````````````````````
-
-Now that we have the submodels, we can run the sparse reconstruction on each. There is an optional argument in this script to run matching on each submodel. You already should have run matching above so we don't need to do it again.::
-
-    --run-matching
-
-Here's what I ran:::
-
-    python run_reconstructions.py ~/ODMProjects/split-merge-test/
-
-align.py
-````````
-
-Each submodel is self-referenced, so it’s important to realign the point clouds before getting to the next steps of the pipeline:::
-
-    python align.py ~/ODMProjects/split-merge-test/
-
-run_dense.py
-````````````
-
-This is the one that will take a while. It basically runs the rest of the toolchain for each aligned submodel.::
-
-    python run_dense.py ~/ODMProjects/split-merge-test/
-
-And then we wait....
-
-merge.py
-````````
-
-The previous script generated an orthophoto for each submodel, and now we have to merge them into a single file. By default it will not overwrite the resulting TIFF so if you need to rerun, make sure you append ``--overwrite``.::
-
-    python merge.py ~/ODMProjects/split-merge-test/ --overwrite
+will create 3 submodels. Make sure to pass ``--split-overlap 0`` if you manually provide a ``image_groups.txt`` file.
 
 
-Next steps
-----------
-This process is a pretty great start to scaling our image processing capabilities, although there is always work to be done. Overall, I would like to see the process streamlined into the standard OpenDroneMap flow. I would also like to see more merged outputs than only the GeoTIFF: the point cloud, textured mesh, and DSM/DTM for starters. Huge props to Pau and the folks at Mapillary for their amazing contributions to OpenDroneMap through their OpenSfM code. I look forward to further pushing the limits of OpenDroneMap and seeing how big a dataset we can process.
+Distributed Split-Merge
+-----------------------
+
+ODM can also automatically distribute the processing of each submodel to multiple machines via `NodeODM <https://github.com/OpenDroneMap/NodeODM>`_ nodes, orchestrated via `ClusterODM <https://github.com/OpenDroneMap/ClusterODM>`_.
+
+The first step is start ClusterODM::
+
+    docker run -ti -p 3001:3000 -p 8080:8080 opendronemap/clusterodm
+
+Then on each machine you want to use for processing, launch a NodeODM instance via::
+
+    docker run -ti -p 3000:3000 opendronemap/nodeodm
+
+Connect via telnet to ClusterODM and add the IP addresses/port of the machines running NodeODM::
+
+    $ telnet <cluster-odm-ip> 8080
+    Connected to <cluster-odm-ip>.
+    Escape character is '^]'.
+    [...]
+    # node add <node-odm-ip-1> 3000
+    # node add <node-odm-ip-2> 3000
+    [...]
+    # node list
+    1) <node-odm-ip-1>:3000 [online] [0/2] <version 1.5.1>
+    2) <node-odm-ip-2>:3000 [online] [0/2] <version 1.5.1>
+
+Make sure you are running version ``1.5.1`` or higher of the NodeODM API.
+
+At this point, simply use the ``--sm-cluster`` option to enable distributed split-merge::
+
+    docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split 400 --split-overlap 100 --sm-cluster http://<cluster-odm-ip>:3001
+
+Limitations
+-----------
+
+The 3D textured meshes are currently not being merged as part of the workflow (only point clouds, DEMs and orthophotos are). Point clouds are also currently merged using a naive merge approach, which requires a lot of memory. We have plans to use `Entwine <https://github.com/connormanning/entwine>`_ for point cloud merging in the near future. 
+
+GCPs are fully supported, however, there needs to be at least 3 GCP points on each submodel for the georeferencing to take place. If a submodel has less than 3 GCPs, a combination of the remaining GCPs + EXIF data will be used instead (which is going to be less accurate). We recommend using the ``image_groups.txt`` file to accurately control the submodel split when using GCPs.
+
+Aknowledgments
+--------------
+Huge props to Pau and the folks at Mapillary for their amazing contributions to OpenDroneMap through their OpenSfM code, which is a key component of the split-merge pipeline. We look forward to further pushing the limits of OpenDroneMap and seeing how big a dataset we can process.

@@ -5,10 +5,9 @@ Welcome to OpenDroneMap's documentation!
     :maxdepth: 2
     :caption: Contents:
 
-    download
-    building
+    ODMinstallation
     using
-    dataset
+    outputs
     large
     api
     flying
