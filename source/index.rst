@@ -5,7 +5,7 @@ Welcome to OpenDroneMap's documentation!
     :maxdepth: 2
     :caption: Contents:
 
-    installation
+    ODMinstallation
     using
     outputs
     large
