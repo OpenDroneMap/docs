@@ -69,7 +69,7 @@ At this point, simply use the ``--sm-cluster`` option to enable distributed spli
 Limitations
 -----------
 
-The 3D textured meshes are currently not being merged as part of the workflow (only point clouds, DEMs and orthophotos are). Point clouds are also currently merged using a naive merge approach, which requires a lot of memory. We have plans to use `Entwine <https://github.com/connormanning/entwine>`_ for point cloud merging in the near future. 
+The 3D textured meshes are currently not being merged as part of the workflow (only point clouds, DEMs and orthophotos are).
 
 GCPs are fully supported, however, there needs to be at least 3 GCP points on each submodel for the georeferencing to take place. If a submodel has less than 3 GCPs, a combination of the remaining GCPs + EXIF data will be used instead (which is going to be less accurate). We recommend using the ``image_groups.txt`` file to accurately control the submodel split when using GCPs.
 
