@@ -344,7 +344,7 @@ Creating High Quality Orthophotos
 
 Without any parameter tweaks, ODM chooses a good compromise between quality, speed and memory usage. If you want to get higher quality results, you need to tweak some parameters:
 
- * ``--orthophoto-resolution`` is the resolution of the orthophoto in cm/pixel. Increase this value for a higher resolution result.
+ * ``--orthophoto-resolution`` is the resolution of the orthophoto in cm/pixel. Decrease this value for a higher resolution result.
  * ``--ignore-gsd`` is a flag that instructs ODM to skip certain memory and speed optimizations that directly affect the orthophoto. Using this flag will increase runtime and memory usage, but will produce sharper results.
  * ``--texturing-nadir-weight`` should be increased to ``29-32`` in urban areas to reconstruct better edges of roofs. It should be decreased to ``0-6`` in grassy / flat areas.
  * ``--texturing-data-term`` should be set to `area` in forest areas.
