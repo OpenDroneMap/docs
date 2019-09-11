@@ -397,3 +397,11 @@ To mitigate this effect, there are a few options but the simplest are as follows
 From James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`_
 
 As this approach to flying can be take longer than typical flights, a pilot or team can fly a small area using the above approach. OpenDroneMap will generate a calibration file called cameras.json that then can be imported to be used to calibrate another flight that is more efficiently but, from a self calibration perspective, less accurately.
+
+Vertically separated flight lines also improve accuracy, but less so than a camera that is forward facing by 5°.
+
+.. figure:: images/forward_facing.png
+   :alt: figure showing effect of vertically separated flight lines and forward facing cameras on improving self calibration
+   :align: center
+
+From James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`_
