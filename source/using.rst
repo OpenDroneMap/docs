@@ -301,39 +301,6 @@ Arguments::
                         dataset. By default all available outputs are merged.
                         Default: all
 
-.. _ground-control-points:
-
-Ground Control Points
----------------------
-
-The format of the GCP file is simple.
-
- * The header line is a description of a UTM coordinate system, which must be written as a proj4 string. http://spatialreference.org/ is a good resource for finding that information. Please note that currently angular coordinates (like lat/lon) DO NOT work.
- * Subsequent lines are the X, Y & Z coordinates, your associated pixels and the image filename:
-
-GCP file format::
-
-    <proj4 string>
-    <geo_x> <geo_y> <geo_z> <im_x> <im_y> <image_name>
-    ...
-
-e.g. for the Langley dataset::
-
-    +proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs 
-    544256.7 5320919.9 5 3044 2622 IMG_0525.jpg
-    544157.7 5320899.2 5 4193 1552 IMG_0585.jpg
-    544033.4 5320876.0 5 1606 2763 IMG_0690.jpg
-
-If you supply a GCP file called gcp_list.txt then ODM will automatically detect it. If it has another name you can specify using ``--gcp <path>``. If you have a gcp file and want to do georeferencing with exif instead, then you can specify ``--use-exif``.
-
-`This post has some information about placing Ground Control Targets before a flight <http://diydrones.com/profiles/blogs/ground-control-points-gcps-for-aerial-photography>`_, but if you already have images, you can find your own points in the images post facto. It's important that you find high-contrast objects that are found in **at least** 3 photos, and that you find a minimum of 5 objects.
-
-Sharp corners are good picks for GCPs. You should also place/find the GCPs evenly around your survey area.
-
-The ``gcp_list.txt`` file must be created in the base of your project folder.
-
-For good results your file should have a minimum of 15 lines after the header (5 points with 3 images to each point).
-
 Tutorials
 ---------
 
@@ -350,8 +317,8 @@ Without any parameter tweaks, ODM chooses a good compromise between quality, spe
  * ``--texturing-data-term`` should be set to `area` in forest areas.
  * ``--mesh-size`` should be increased to `300000-600000` and `--mesh-octree-depth`` should be increased to `10-11` in urban areas to recreate better buildings / roofs.
 
-Creating Digital Terrain Models
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Creating Digital Elevation Models
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 By default ODM does not create DEMs. To create a digital terrain model, make sure to pass the ``--dtm`` flag.
 
@@ -377,8 +344,59 @@ Example of how to generate a DTM::
 
     docker run -ti --rm -v /my/project:/datasets/code <my_odm_image> --project-path /datasets --dtm --dem-resolution 2 --smrf-threshold 0.4 --smrf-window 24
 
-Calibrating the camera
-----------------------
+.. _ground-control-points:
+
+Ground Control Points
+^^^^^^^^^^^^^^^^^^^^^
+
+	The format of the GCP file is simple.
+
+	 * The header line is a description of a UTM coordinate system, which must be written as a proj4 string. http://spatialreference.org/ is a good resource for finding that information. Please note that currently angular coordinates (like lat/lon) DO NOT work.
+	 * Subsequent lines are the X, Y & Z coordinates, your associated pixels and the image filename:
+
+	GCP file format::
+
+	    <proj4 string>
+	    <geo_x> <geo_y> <geo_z> <im_x> <im_y> <image_name>
+	    ...
+
+	e.g. for the Langley dataset::
+
+	    +proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs 
+	    544256.7 5320919.9 5 3044 2622 IMG_0525.jpg
+	    544157.7 5320899.2 5 4193 1552 IMG_0585.jpg
+	    544033.4 5320876.0 5 1606 2763 IMG_0690.jpg
+
+	If you supply a GCP file called gcp_list.txt then ODM will automatically detect it. If it has another name you can specify using ``--gcp <path>``. If you have a gcp file and want to do georeferencing with exif instead, then you can specify ``--use-exif``.
+
+	`This post has some information about placing Ground Control Targets before a flight <http://diydrones.com/profiles/blogs/ground-control-points-gcps-for-aerial-photography>`_, but if you already have images, you can find your own points in the images post facto. It's important that you find high-contrast objects that are found in **at least** 3 photos, and that you find a minimum of 5 objects.
+
+	Sharp corners are good picks for GCPs. You should also place/find the GCPs evenly around your survey area.
+
+	The ``gcp_list.txt`` file must be created in the base of your project folder.
+
+	For good results your file should have a minimum of 15 lines after the header (5 points with 3 images to each point).
+	
+Ground Control Points in GCPi
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+WebODM has a GCP interface, and example of which can be seen on `the WebODM Demo <http://demo.webodm.org/plugins/posm-gcpi/>`_. To use this one would do the following:
+
+Create a GCP list that only includes gcp name (this is the label that will be seen in the GCP interface), x, y, and z, with a header with a proj4 string of your GCPs (make sure they are in a planar coordinate system, such as UTM. It should look something like this:
+
+::
+
+	+proj=utm +zone=37 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs 
+	gcp01 529356.250827686 9251137.5643209 8.465 
+	gcp02 530203.125367657 9250140.80991621 15.781
+	gcp03 530292.136003818 9250745.02372435 11.977
+	gcp04 530203.125367657 9250140.80991621 15.781
+	gcp05 530292.136003818 9250745.02372435 11.977
+
+Then one can load this GCP list into the interface, load the images, and place each of the GCPs in the image.
+
+Calibrating the Camera
+^^^^^^^^^^^^^^^^^^^^^^
 
 Camera calibration is a special challenge with commodity cameras. Temperature changes, vibrations, focus, and other factors can affect the derived parameters with substantial effects on resulting data. Automatic or self calibration is possible and desirable with drone flights, but depending on the flight pattern, automatic calibration may not remove all distortion from the resulting products. James and Robson (2014) in their paper `Mitigating systematic error in topographic models derived from UAV and ground‐based image networks <https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609>`_ address how to minimize the distortion from self-calibration.
 
