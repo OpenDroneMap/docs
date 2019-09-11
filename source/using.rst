@@ -377,40 +377,6 @@ Example of how to generate a DTM::
 
     docker run -ti --rm -v /my/project:/datasets/code <my_odm_image> --project-path /datasets --dtm --dem-resolution 2 --smrf-threshold 0.4 --smrf-window 24
 
-
-Video Reconstruction (Developers Only)
---------------------------------------
-
-**Note: Video reconstruction currently will not work out of the box! There's code in the project that should allow a developer to add SLAM functionality to ODM, but this feature has not been touched in a while and is currently broken.**
-
-It is possible to build a reconstruction using a video file instead of still images.  The technique for reconstructing the camera trajectory from a video is called Simultaneous Localization And Mapping (SLAM).  OpenDroneMap uses the opensource `ORB_SLAM2 <https://github.com/raulmur/ORB_SLAM2>`_ library for this task.
-
-We will explain here how to use it.  We will need to build the SLAM module, calibrate the camera and finally run the reconstruction from a video.
-
-
-Building with SLAM support
-^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-By default, OpenDroneMap does not build the SLAM module.  To build it we need to do the following two steps
-
-**Build SLAM dependencies**::
-
-    sudo apt-get install libglew-dev
-    cd SuperBuild/build
-    cmake -DODM_BUILD_SLAM=ON .
-    make
-    cd ../..
-
-**Build the SLAM module**::
-
-    cd build
-    cmake -DODM_BULID_SLAM=ON .
-    make
-    cd ..
-
-
-.. _calibration:
-
 Calibrating the camera
 ^^^^^^^^^^^^^^^^^^^^^^
 
@@ -441,68 +407,4 @@ You will see a window displaying the video and the detected corners.  When it fi
 
 Keep this text.  We will use it on the next section.
 
-
-Running OpenDroneMap from a video
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-We are now ready to run the OpenDroneMap pipeline from a video.  For this we need the video and a config file for ORB_SLAM2.  Here's an `example config.yaml <https://dl.dropboxusercontent.com/u/2801164/odm/config.yaml>`_.  Before using it, copy-paste the calibration parameters for your camera that you just computed on the previous section.
-
-Put the video and the `config.yaml` file on an empty folder.  Then run OpenDroneMap using the following command::
-
-    python run.py --project-path PROJECT_PATH --video VIDEO.mp4 --slam-config config.yaml --resize-to VIDEO_WIDTH
-
-where ``PROJECT_PATH`` is the path to the folder containing the video and config file, ``VIDEO.mp4`` is the name of your video, and ``VIDEO_WIDTH`` is the width of the video (for example, 1920 for an HD video).
-
-That command will run the pipeline starting with SLAM and continuing with stereo matching and mesh reconstruction and texturing.
-
-When done, the textured model will be in ``PROJECT_PATH/odm_texturing/odm_textured_model.obj``.  The point cloud created by the stereo matching algorithm will be in ``PROJECT_PATH/pmvs/recon0/models/option-0000.ply``
-
-
-.. _camera-calibration:
-
-Camera Calibration
-------------------
-
-It is highly recommended that you calibrate your images to reduce lens distortion. Doing so will increase the likelihood of finding quality matches between photos and reduce processing time. You can do this in Photoshop or `ImageMagick <http://www.imagemagick.org/Usage/lens/>`_. We also have some simple scripts to perform this task: https://github.com/OpenDroneMap/CameraCalibration . This suite of scripts will find camera matrix and distortion parameters with a set of checkerboard images, then use those parameters to remove distortion from photos.
-
-Installation
-^^^^^^^^^^^^
-
-You need to install numpy and opencv:::
-
-    pip install numpy
-    sudo apt-get install python-opencv exiftool
-
-Usage: Calibrate chessboard
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-First you will need to take some photos of a black and white chessboard with a white border, `like this one <https://raw.githubusercontent.com/LongerVision/OpenCV_Examples/master/markers/pattern_chessboard.png>`_.
-
-Then you will run the opencv_calibrate.py script to generate the matrix and distortion files.::
-
-    python opencv_calibrate.py ./sample/chessboard/ 10 7
-
-The first argument is the path to the chessboard. You will also have to input the chessboard dimensions (the number of squares in x and y) Optional arguments:::
-
-    --out           path      if you want to output the parameters and the image outputs to a specific path. otherwise it gets writting to ./out
-    --square_size   float     if your chessboard squares are not square, you can change this. default is 1.0
-
-Usage: undistort photos
-^^^^^^^^^^^^^^^^^^^^^^^
-
-With the photos and the produced matrix.txt and distortion.txt, run the following:::
-
-    python undistort.py --matrix matrix.txt --distortion distortion.txt "/path/to/images/"
-
-Note: Do not forget the quotes in "/path/to/images"
-
-Docker Usage for undistorting images
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-The ``undistort.py`` script depends on exiftool to copy exif metadata to the new images, so on Windows you may have to use Docker for the undistort step. Put the matrix.txt and distortion.txt in their own directory (eg. sample/config) and do the following:::
-
-    docker build -t cc_undistort .
-    docker run -v ~/CameraCalibration/sample/images:/app/images \
-               -v ~/CameraCalibration/sample/config:/app/config \
-               cc_undistort
 
