@@ -378,33 +378,22 @@ Example of how to generate a DTM::
     docker run -ti --rm -v /my/project:/datasets/code <my_odm_image> --project-path /datasets --dtm --dem-resolution 2 --smrf-threshold 0.4 --smrf-window 24
 
 Calibrating the camera
-^^^^^^^^^^^^^^^^^^^^^^
+----------------------
 
-The SLAM algorithm requires the camera to be calibrated.  It is difficult to extract calibration parameters from the video's metadata as we do when using still images.  Thus, it is required to run a calibration procedure that will compute the calibration from a video of a checkerboard.
+Camera calibration is a special challenge with commodity cameras. Temperature changes, vibrations, focus, and other factors can affect the derived parameters with substantial effects on resulting data. Automatic or self calibration is possible and desirable with drone flights, but depending on the flight pattern, automatic calibration may not remove all distortion from the resulting products. James and Robson (2014) in their paper `Mitigating systematic error in topographic models derived from UAV and ground‐based image networks <https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609>`_ address how to minimize the distortion from self-calibration.
 
-We will start by **recording the calibration video**.  Display this `chessboard pattern <https://dl.dropboxusercontent.com/u/2801164/odm/chessboard.pdf>`_ on a large screen, or `print it on a large paper and stick it on a flat surface <http://www.instructables.com/id/How-to-make-a-camera-calibration-pattern/>`_.  Now record a video pointing the camera to the chessboard.
+.. figure:: images/msimbasi_bowling.png
+   :alt: image of lens distortion effect on bowling of data
+   :align: center
 
-While recording move the camera to both sides and up and down always maintaining the entire pattern framed.  The goal is to capture the pattern from different points of views.
+Bowling effect on point cloud over 13,000+ image dataset collected by World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania.
 
+To mitigate this effect, there are a few options but the simplest are as follows: fly two patterns separated by 20°, and rather than having a nadir (straight down pointing) camera, use one that points forward by 5°.
 
-Now you can **run the calibration script** as follows::
+.. figure:: images/flight_lines_20deg.png
+   :alt: figure showing camera flight line
+   :align: center
 
-    python modules/odm_slam/src/calibrate_video.py --visual PATH_TO_CHESSBOARD_VIDEO.mp4
+From James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`_
 
-You will see a window displaying the video and the detected corners.  When it finish, it will print the computed calibration parameters. They should look like this (with different values)::
-
-    # Camera calibration and distortion parameters (OpenCV)
-    Camera.fx: 1512.91332401
-    Camera.fy: 1512.04223185
-    Camera.cx: 956.585155225
-    Camera.cy: 527.321715394
-
-    Camera.k1: 0.140581949184
-    Camera.k2: -0.292250537695
-    Camera.p1: 0.000188785464717
-    Camera.p2: 0.000611510377372
-    Camera.k3: 0.181424769625
-
-Keep this text.  We will use it on the next section.
-
-
+As this approach to flying can be take longer than typical flights, a pilot or team can fly a small area using the above approach. OpenDroneMap will generate a calibration file called cameras.json that then can be imported to be used to calibrate another flight that is more efficiently but, from a self calibration perspective, less accurately.
