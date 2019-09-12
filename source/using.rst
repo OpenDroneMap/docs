@@ -90,6 +90,10 @@ Overall the ``--smrf-threshold`` option has the biggest impact on results.
 
 SMRF is good at avoiding Type I errors (small number of ground points mistakenly classified as non-ground) but only "acceptable" at avoiding Type II errors (large number non-ground points mistakenly classified as ground). This needs to be taken in consideration when generating DTMs that are meant to be used visually, since objects mistaken for ground look like artifacts in the final DTM.
 
+.. figure:: images/smrf.png
+   :alt: image of lens distortion effect on bowling of data
+   :align: center
+
 Two other important parameters affect DEM generation:
 
  * ``--dem-resolution`` which sets the output resolution of the DEM raster (cm/pixel)
@@ -101,8 +105,10 @@ Example of how to generate a DTM::
 
 .. _ground-control-points:
 
-Ground Control Points Format
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Ground Control Points
+^^^^^^^^^^^^^^^^^^^^^
+
+Ground control points are useful for correcting for distortions in the data and referencing the data to know coordinate systems.
 
 	The format of the GCP file is simple.
 

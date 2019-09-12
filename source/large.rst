@@ -45,6 +45,10 @@ Distributed Split-Merge
 
 ODM can also automatically distribute the processing of each submodel to multiple machines via `NodeODM <https://github.com/OpenDroneMap/NodeODM>`_ nodes, orchestrated via `ClusterODM <https://github.com/OpenDroneMap/ClusterODM>`_.
 
+.. figure:: images/clusterodm.png
+   :alt: image of lens distortion effect on bowling of data
+   :align: center
+
 The first step is start ClusterODM::
 
     docker run -ti -p 3001:3000 -p 8080:8080 opendronemap/clusterodm
