@@ -36,7 +36,6 @@ Orthophoto
    :alt: image of OpenDroneMap orthophoto
    :align: center
 
-
 DTM/DSM
 ^^^^^^^
 

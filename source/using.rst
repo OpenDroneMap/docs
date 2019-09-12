@@ -3,7 +3,6 @@
 Usage
 =====
 
-
 .. _docker-usage:
 
 Docker
@@ -52,10 +51,14 @@ Then sit back, grab a coffee and wait. You only have to specify ``--images </pat
 Tutorials
 ---------
 
-Below you will find step-by-step instructions for some common use cases.
+Below you will find instructions for some common use cases.
 
 Creating High Quality Orthophotos
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+.. figure:: images/orthophoto.png
+   :alt: image of OpenDroneMap orthophoto
+   :align: center
 
 Without any parameter tweaks, ODM chooses a good compromise between quality, speed and memory usage. If you want to get higher quality results, you need to tweak some parameters:
 
@@ -68,7 +71,11 @@ Without any parameter tweaks, ODM chooses a good compromise between quality, spe
 Creating Digital Elevation Models
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-By default ODM does not create DEMs. To create a digital terrain model, make sure to pass the ``--dtm`` flag.
+By default ODM does not create DEMs. To create a digital terrain model, make sure to pass the ``--dtm`` flag. To create a digital surface model, be sure to pass the ``--dsm`` flag.
+
+.. figure:: images/digitalsurfacemodel.png
+   :alt: image of OpenDroneMap derived digital surface model
+   :align: center
 
 For DTM generation, a Simple Morphological Filter (smrf) is used to classify points in ground vs. non-ground and only the ground points are used. The ``smrf`` filter can be controlled via several parameters:
 
