@@ -1,4 +1,4 @@
-.. figure:: https://raw.githubusercontent.com/OpenDroneMap/OpenDroneMap/master/img/odm_image.png
+.. figure:: https://www.opendronemap.org/wp-content/uploads/2018/07/odm-logo.svg
    :alt: OpenDroneMap Logo
    :align: center
 
@@ -6,7 +6,7 @@ Welcome to OpenDroneMap's documentation!
 ========================================
 
 .. toctree::
-    :maxdepth: 2
+    :maxdepth: 3
     :caption: Contents:
 
     ODMinstallation

@@ -1,7 +1,57 @@
-.. Explaining the outputs structure
+OpenDroneMap Outputs
+====================
 
-Outputs
-=======
+Listed below are some of the useful outputs ODM produces.
+
+Point Cloud
+^^^^^^^^^^^
+
+``odm_georeferenced_model.ply/laz/csv`` -- The georeferenced point cloud in different file formats
+
+.. figure:: images/pointcloud.png
+   :alt: image of OpenDroneMap derived point cloud
+   :align: center
+
+
+3D Textured Model
+^^^^^^^^^^^^^^^^^
+
+``odm_texturing/odm_textured_model.obj`` -- The textured surface mesh
+``odm_texturing/odm_textured_model_geo.obj`` -- The georeferenced and textured surface mesh
+
+You can access the point cloud and textured meshes using MeshLab. Open MeshLab, and choose File:Import Mesh and choose your textured mesh from a location similar to the following: ``odm_texturing\odm_textured_model.obj``
+
+.. figure:: images/texturedmesh.png
+   :alt: image of OpenDroneMap derived textured mesh
+   :align: center
+
+Orthophoto
+^^^^^^^^^^
+
+``odm_orthophoto/odm_orthphoto.png`` -- The orthophoto, but this is a simple png, which doesn't have any georeferencing information
+
+``odm_orthophoto/odm_orthphoto.tif`` -- GeoTIFF Orthophoto. You can use it in QGIS as a raster layer.
+
+.. figure:: images/orthophoto.png
+   :alt: image of OpenDroneMap orthophoto
+   :align: center
+
+
+DTM/DSM
+^^^^^^^
+
+DTM/DSM will only be created if the ``--dtm`` or ``--dsm`` options are used and will be stored in:
+
+ * ``odm_dem/dtm.tif``
+ * ``odm_dem/dsm.tif``
+
+.. figure:: images/digitalsurfacemodel.png
+   :alt: image of OpenDroneMap derived digital surface model
+   :align: center
+
+List of all outputs
+^^^^^^^^^^^^^^^^^^^
+
 ::
 
     project/
@@ -45,38 +95,3 @@ Outputs
     └── odm_dem/
         ├── dsm.tif                     # Digital Surface Model Geotiff - the tops of everything
         └── dtm.tif                     # Digital Terrain Model Geotoff - the ground.
-
-Listed below are some of the useful outputs ODM produces
-
-Point Cloud
-^^^^^^^^^^^
-
-``odm_georeferenced_model.ply/laz/csv`` -- The georeferenced point cloud in different file formats
-
-
-3D Textured Model
-^^^^^^^^^^^^^^^^^
-
-``odm_texturing/odm_textured_model.obj`` -- The textured surface mesh
-``odm_texturing/odm_textured_model_geo.obj`` -- The georeferenced and textured surface mesh
-
-You can access the point cloud and textured meshes using MeshLab. Open MeshLab, and choose File:Import Mesh and choose your textured mesh from a location similar to the following: ``odm_texturing\odm_textured_model.obj``
-
-
-Orthophoto
-^^^^^^^^^^
-
-``odm_orthophoto/odm_orthphoto.png`` -- The orthophoto, but this is a simple png, which doesn't have any georeferencing information
-
-``odm_orthophoto/odm_orthphoto.tif`` -- GeoTIFF Orthophoto. You can use it in QGIS as a raster layer.
-
-
-DTM/DSM
-^^^^^^^
-
-DTM/DSM will only be created if the ``--dtm`` or ``--dsm`` options are used and will be stored in:
-
- * ``odm_dem/dtm.tif``
- * ``odm_dem/dsm.tif``
-
-

@@ -94,8 +94,8 @@ Example of how to generate a DTM::
 
 .. _ground-control-points:
 
-Ground Control Points
-^^^^^^^^^^^^^^^^^^^^^
+Ground Control Points Format
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 	The format of the GCP file is simple.
 
@@ -125,8 +125,8 @@ Ground Control Points
 
 	For good results your file should have a minimum of 15 lines after the header (5 points with 3 images to each point).
 	
-Ground Control Points in GCPi
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Ground Control Points Interface
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 WebODM has a GCP interface, and example of which can be seen on `the WebODM Demo <http://demo.webodm.org/plugins/posm-gcpi/>`_. To use this one would do the following:
 
