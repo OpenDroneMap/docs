@@ -123,6 +123,44 @@ While a process is running, it is also possible to list the tasks, and view the 
 	# TASK LIST
 	# TASK OUTPUT <taskId> [lines]
 
+Autoscaling CloudODM
+^^^^^^^^^^^^^^^^^^^^
+
+CloudDOM also includes the option to autoscale on multiple platforms, including, to date, Amazon and Digital Ocean. This allows users to reduce costs associated with always-on instances as well as being able to scale processing based on demand.
+
+To setup autoscaling you must:
+
+* Have a functioning version of NodeJS installed and then install ClusterODM
+::
+
+	git clone https://github.com/OpenDroneMap/ClusterODM
+	cd ClusterODM
+	npm install
+
+* Make sure docker-machine is installed.
+* Setup a S3-compatible bucket for storing results.
+* Create a configuration file for `DigitalOcean <https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/digitalocean.md>`_ or `Amazon Web Services <https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/aws.md>`_.
+
+You can then launch ClusterODM with::
+
+	node index.js --asr configuration.json
+
+You should see something similar to following messages in the console::
+
+	info: ASR: DigitalOceanAsrProvider
+	info: Can write to S3
+	info: Found docker-machine executable
+
+You should always have at least one static NodeODM node attached to ClusterODM, even if you plan to use the autoscaler for all processing. If you setup auto scaling, you can't have zero nodes and rely 100% on the autoscaler. You need to attach a NodeODM node to act as the "reference node" otherwise ClusterODM will not know how to handle certain requests (for the forwarding the UI, for validating options prior to spinning up an instance, etc.). For this purpose, you should add a "dummy" NodeODM node and lock it::
+
+	telnet localhost 8080
+	> NODE ADD localhost 3001
+	> NODE LOCK 1
+	> NODE LIST
+	1) localhost:3001 [online] [0/2] <version 1.5.1> [L]
+
+This way all tasks will be automatically forwarded to the autoscaler.
+
 Limitations
 -----------
 
