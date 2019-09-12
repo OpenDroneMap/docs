@@ -108,7 +108,7 @@ Example of how to generate a DTM::
 Ground Control Points
 ^^^^^^^^^^^^^^^^^^^^^
 
-Ground control points are useful for correcting for distortions in the data and referencing the data to know coordinate systems.
+Ground control points are useful for correcting distortions in the data and referencing the data to know coordinate systems.
 
 	The format of the GCP file is simple.
 
@@ -141,7 +141,7 @@ Ground control points are useful for correcting for distortions in the data and 
 Ground Control Points Interface
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-WebODM has a GCP interface, and example of which can be seen on `the WebODM Demo <http://demo.webodm.org/plugins/posm-gcpi/>`_. To use this one would do the following:
+WebODM has a GCP interface, and example of which can be seen on `the WebODM Demo <http://demo.webodm.org/plugins/posm-gcpi/>`_. To use this with known ground control XYZ values, one would do the following:
 
 Create a GCP list that only includes gcp name (this is the label that will be seen in the GCP interface), x, y, and z, with a header with a proj4 string of your GCPs (make sure they are in a planar coordinate system, such as UTM. It should look something like this:
 
