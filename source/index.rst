@@ -17,3 +17,5 @@ Welcome to OpenDroneMap's documentation!
     flying
     contributing
 
+
+`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/index.rst>`_

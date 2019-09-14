@@ -78,3 +78,4 @@ Pull Requests
 * Using a plain return when returning explicitly at the end of a function.
     * Not return null, return undefined, null, or undefined
 
+`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_

@@ -94,3 +94,6 @@ List of all outputs
     └── odm_dem/
         ├── dsm.tif                     # Digital Surface Model Geotiff - the tops of everything
         └── dtm.tif                     # Digital Terrain Model Geotoff - the ground.
+
+
+`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/outputs.rst>`_

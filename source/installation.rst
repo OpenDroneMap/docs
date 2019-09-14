@@ -498,3 +498,5 @@ The above command asks docker to launch a new container using the opendronemap/n
 From WebODM you can then press the **Add New** button under **Processing Nodes**. For the **hostname/IP** field type the IP of the second computer. For the **port** field type “3000”. For the **token** field type “secret”. You can also add an optional **label** for your node, such as “second computer”. Then press **Save**.
 
 If everything went well, you should now have two processing nodes! You will be able to process multiple tasks in parallel using two different machines.
+
+`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst>`_
