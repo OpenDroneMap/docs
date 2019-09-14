@@ -3,51 +3,6 @@
 Usage
 =====
 
-.. _docker-usage:
-
-Docker
-------
-
-There are two methods for running with docker. One pulls a pre-built image from the docker hub. This is the most reliable. You can also :ref:`build your own image <docker-installation>`. In either case, the run command is the same, what you will change is the name of the image. For the docker hub image, use ``opendronemap/odm``. For an image you built yourself, use that image name (in our case, ``my_odm_image``).::
-
-    docker run -ti --rm -v /my/project:/datasets/code <my_odm_image> --project-path /datasets
-
-Where /my/project is the path to your project containing an ``images`` folder (/my/project/images). ``-v`` is used to connect folders in the docker container to local folders. See :doc:`outputs` for reference on the project layout.
-
-To pass in custom parameters to the run.py script, simply pass it as arguments to the docker run command. For example::
-
-    docker run -ti --rm -v /my/project:/datasets/code <my_odm_image> --project-path /datasets --resize-to 1800 --dsm
-
-If you want to pass in custom parameters using the settings.yaml file, you can pass it as a -v volume binding::
-
-    docker run -ti --rm -v $(pwd)/settings.yaml:/code/settings.yaml -v /my/project:/datasets/code <my_odm_image> --project-path /datasets --resize-to 1800 --dsm
-
-For more information about Docker, check out their `docs <https://docs.docker.com/>`_.
-
-.. _native-usage:
-
-Native
-------
-
-
-First thing you need to do is set the project path. Edit the ``settings.yaml`` file to add your projects folder::
-
-    # This line is really important to set up properly
-    project_path: '' # Example: '/home/user/ODMProjects'
-
-    # The rest of the settings will default to the values set unless you uncomment and change them
-    #resize_to: 2400
-
-You must change ``project_path: ''`` to add an absolute path to somewhere on your machine. Whenever you run a new project, it will be saved here.
-
-To use OpenDroneMap run the following command::
-
-    python run.py --images </path/to/images> [arguments] <project-name>
-
-Then sit back, grab a coffee and wait. You only have to specify ``--images </path/to/images>`` on the first run.
-
-.. _Tutorials:
-
 Tutorials
 ---------
 
