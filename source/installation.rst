@@ -76,8 +76,8 @@ Installation
 
 We recommend people use `docker <https://www.docker.com>`_ for running ODM, whether you are on Windows, macOS or Linux.
 
-Install on Windows
-``````````````````
+Windows
+```````
 
 To run OpenDroneMap you need at least Windows 7. Previous
 versions of Windows are not supported.
@@ -227,8 +227,8 @@ You should get a result like the following:
 	
 Then connect to http://192.168.1.100:8000 (replacing the IP address with the proper one).
 
-Installing on macOS
-```````````````````
+macOS
+`````
 
 Most modern (post 2010) Mac computers running macOS Sierra 10.12 or higher can run OpenDroneMap using docker, as long as hardware virtualization is supported (see below).
 
@@ -322,8 +322,8 @@ From a **Terminal** type:
 
 Then open a web browser to http://localhost:8000.
 
-Installing on Linux
-```````````````````
+Linux
+`````
 
 OpenDroneMap can run on any Linux distribution that supports docker. According to `docker’s documentation website <https://docs.docker.com/install/>`_ the officially supported distributions are CentOS, Debian, Ubuntu and Fedora, with static binaries available for others. If you have to pick a distribution solely for running OpenDroneMap, Ubuntu is the recommended way to go.
 
@@ -424,7 +424,7 @@ From a terminal type:
 Then open a web browser to http://localhost:8000.
 
 Basic Commands and Troubleshooting
-``````````````````````````````````
+----------------------------------
 
 The cool thing about using docker is that 99% of the tasks you’ll ever need to perform while using WebODM can be done via the ./webodm.sh script. You have already encountered one of them:
 
@@ -466,7 +466,7 @@ Other useful commands are listed below:
 `The community forum <https://community.opendronemap.org>`_ is a great place to ask for help if you 	get stuck during any of the installation steps and for general questions on using the ./webodm.sh script.
 
 Hello, WebODM!
-``````````````
+--------------
 
 After running ./webodm.sh start and opening WebODM in the browser, you will be greeted with a welcome message and will be asked to create the first user. Take some time to familiarize yourself with the web interface and explore its various menus.
 
