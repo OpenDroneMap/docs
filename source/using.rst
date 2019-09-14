@@ -393,3 +393,6 @@ Arguments::
   --merge <string>      Choose what to merge in the merge step in a split
                         dataset. By default all available outputs are merged.
                         Default: all
+
+
+`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/using.rst>`_
