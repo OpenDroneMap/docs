@@ -486,7 +486,7 @@ If you’ve made it this far, congratulations! Now it’s time to start processi
    :align: center
 
 Running on more than one machine
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+````````````````````````````````
 
 **Optionally:** If you have another computer, you can repeat the installation process (install docker, git, python, etc.) and launch a new NodeODM node by typing from a Terminal/Git Bash window:
 
