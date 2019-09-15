@@ -23,7 +23,9 @@ Bowling effect on point cloud over 13,000+ image dataset collected by World Bank
 Local Split-Merge
 -----------------
 
-Splitting a dataset into more manageable submodels and sequentially processing all submodels on the same machine is easy! Just use ``--split`` and ``--split-overlap`` to decide the the average number of images per submodels and the overlap (in meters) between submodels respectively::
+Splitting a dataset into more manageable submodels and sequentially processing all submodels on the same machine is easy! Just use ``--split`` and ``--split-overlap`` to decide the the average number of images per submodels and the overlap (in meters) between submodels respectively
+
+.. code:: bash
 
     docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split 400 --split-overlap 100
 
@@ -52,15 +54,21 @@ ODM can also automatically distribute the processing of each submodel to multipl
 Getting Started with Distributed Split-Merge
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-The first step is start ClusterODM::
+The first step is start ClusterODM
+
+.. code:: bash
 
     docker run -ti -p 3001:3000 -p 8080:8080 opendronemap/clusterodm
 
-Then on each machine you want to use for processing, launch a NodeODM instance via::
+Then on each machine you want to use for processing, launch a NodeODM instance via
+
+.. code:: bash
 
     docker run -ti -p 3000:3000 opendronemap/nodeodm
 
-Connect via telnet to ClusterODM and add the IP addresses/port of the machines running NodeODM::
+Connect via telnet to ClusterODM and add the IP addresses/port of the machines running NodeODM
+
+.. code:: bash
 
     $ telnet <cluster-odm-ip> 8080
     Connected to <cluster-odm-ip>.
@@ -75,14 +83,18 @@ Connect via telnet to ClusterODM and add the IP addresses/port of the machines r
 
 Make sure you are running version ``1.5.1`` or higher of the NodeODM API.
 
-At this point, simply use the ``--sm-cluster`` option to enable distributed split-merge::
+At this point, simply use the ``--sm-cluster`` option to enable distributed split-merge
+
+.. code:: bash
 
     docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split 800 --split-overlap 120 --sm-cluster http://<cluster-odm-ip>:3001
 
 Understanding the Cluster
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 
-When connected via telnet, it is possible to interrogate what is happening on the cluster. For example, we can use the command HELP to find out available commands::
+When connected via telnet, it is possible to interrogate what is happening on the cluster. For example, we can use the command HELP to find out available commands
+
+.. code:: bash
 
 	# HELP
 	NODE ADD <hostname> <port> [token] - Add new node
@@ -103,12 +115,16 @@ When connected via telnet, it is possible to interrogate what is happening on th
 	ASR VIEWCMD <number of images> - View command used to create a machine
 	!! - Repeat last command
 
-If, for example, the NodeODM instance wasn't active when ClusterODM started, we might list nodes and see something as follows::
+If, for example, the NodeODM instance wasn't active when ClusterODM started, we might list nodes and see something as follows
+
+.. code:: bash
 
 	# NODE LIST
 	1) localhost:3000 [offline] [0/2] <version 1.5.3> [L]
 
-To address this, we can start up our local node (if not already started), and then perform a ``NODE UPDATE``::
+To address this, we can start up our local node (if not already started), and then perform a ``NODE UPDATE``
+
+.. code:: bash
 
 	# NODE UPDATE
 	OK
@@ -118,7 +134,9 @@ To address this, we can start up our local node (if not already started), and th
 Accessing the Logs
 ^^^^^^^^^^^^^^^^^^
 
-While a process is running, it is also possible to list the tasks, and view the task output::
+While a process is running, it is also possible to list the tasks, and view the task output
+
+.. code:: bash
 
 	# TASK LIST
 	# TASK OUTPUT <taskId> [lines]
@@ -131,7 +149,8 @@ CloudDOM also includes the option to autoscale on multiple platforms, including,
 To setup autoscaling you must:
 
 * Have a functioning version of NodeJS installed and then install ClusterODM
-::
+
+.. code:: bash
 
 	git clone https://github.com/OpenDroneMap/ClusterODM
 	cd ClusterODM
@@ -141,17 +160,23 @@ To setup autoscaling you must:
 * Setup a S3-compatible bucket for storing results.
 * Create a configuration file for `DigitalOcean <https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/digitalocean.md>`_ or `Amazon Web Services <https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/aws.md>`_.
 
-You can then launch ClusterODM with::
+You can then launch ClusterODM with
+
+.. code:: bash
 
 	node index.js --asr configuration.json
 
-You should see something similar to following messages in the console::
+You should see something similar to following messages in the console
+
+.. code:: bash
 
 	info: ASR: DigitalOceanAsrProvider
 	info: Can write to S3
 	info: Found docker-machine executable
 
-You should always have at least one static NodeODM node attached to ClusterODM, even if you plan to use the autoscaler for all processing. If you setup auto scaling, you can't have zero nodes and rely 100% on the autoscaler. You need to attach a NodeODM node to act as the "reference node" otherwise ClusterODM will not know how to handle certain requests (for the forwarding the UI, for validating options prior to spinning up an instance, etc.). For this purpose, you should add a "dummy" NodeODM node and lock it::
+You should always have at least one static NodeODM node attached to ClusterODM, even if you plan to use the autoscaler for all processing. If you setup auto scaling, you can't have zero nodes and rely 100% on the autoscaler. You need to attach a NodeODM node to act as the "reference node" otherwise ClusterODM will not know how to handle certain requests (for the forwarding the UI, for validating options prior to spinning up an instance, etc.). For this purpose, you should add a "dummy" NodeODM node and lock it
+
+.. code:: bash
 
 	telnet localhost 8080
 	> NODE ADD localhost 3001
