@@ -5,7 +5,7 @@ Installation and Getting Started
 
 This section is excerpted and modified with permission from `OpenDroneMap: The Missing Guide <https://odmbook.com>`_, by Piero Toffanin.
 
-Until recently OpenDroneMap was the term used to refer to a single command line application (what is now known as the ODM project). Not anymore. With the recent development of a web interface, an API and other tools, OpenDroneMap has become an ecosystem of various applications to process, analyze and display aerial data. This ecosystem is made of several components:
+Until recently OpenDroneMap was the term used to refer to a single command line application (what is now known as the ODM project).  With the recent development of a web interface, an API and other tools, OpenDroneMap has become an ecosystem of various applications to process, analyze and display aerial data. This ecosystem is made of several components:
 
 .. figure:: https://www.opendronemap.org/wp-content/uploads/2018/07/odm-logo-64x64.png
    :alt: ODM Logo
@@ -486,7 +486,7 @@ If you’ve made it this far, congratulations! Now it’s time to start processi
    :align: center
 
 Running on more than one machine
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+````````````````````````````````
 
 **Optionally:** If you have another computer, you can repeat the installation process (install docker, git, python, etc.) and launch a new NodeODM node by typing from a Terminal/Git Bash window:
 
