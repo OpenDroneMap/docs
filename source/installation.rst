@@ -223,6 +223,7 @@ Several components will download to your machine at this point, including WebODM
 You should get a result like the following:
 
 .. code:: bash
+
 	192.168.1.100
 	
 Then connect to http://192.168.1.100:8000 (replacing the IP address with the proper one).
