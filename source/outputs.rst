@@ -47,6 +47,8 @@ DTM/DSM will only be created if the ``--dtm`` or ``--dsm`` options are used and 
 .. figure:: images/digitalsurfacemodel.png
    :alt: image of OpenDroneMap derived digital surface model
    :align: center
+   
+See `tutorial on elevation models <https://docs.opendronemap.org/using.html#creating-digital-elevation-models>`_ for more options in creating.
 
 List of all outputs
 ^^^^^^^^^^^^^^^^^^^
