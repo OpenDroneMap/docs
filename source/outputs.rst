@@ -39,7 +39,9 @@ Orthophoto
 DTM/DSM
 ^^^^^^^
 
-DTM/DSM will only be created if the ``--dtm`` or ``--dsm`` options are used and will be stored in:
+DTM/DSM will only be created if the ``--dtm`` or ``--dsm`` options are used. See `tutorial on elevation models <https://docs.opendronemap.org/using.html#creating-digital-elevation-models>`_ for more options in creating.
+
+Data will be stored in:
 
  * ``odm_dem/dtm.tif``
  * ``odm_dem/dsm.tif``
@@ -47,6 +49,8 @@ DTM/DSM will only be created if the ``--dtm`` or ``--dsm`` options are used and 
 .. figure:: images/digitalsurfacemodel.png
    :alt: image of OpenDroneMap derived digital surface model
    :align: center
+   
+
 
 List of all outputs
 ^^^^^^^^^^^^^^^^^^^
