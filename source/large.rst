@@ -12,7 +12,7 @@ Split-merge works in WebODM out of the box as long as the processing nodes suppo
 Calibrate images
 ----------------
 
-Image calibration is recommended (but not required) for large datasets because error propagation due to image distortion could cause a bowl effect on the models. Calibration instructions can be found at 	`Calibrate Images <using.html#calibrating-the-camera>`_.
+Image calibration is recommended (but not required) for large datasets because error propagation due to image distortion could cause a bowl effect on the models. Calibration instructions can be found at 	`Calibrate Images <tutorials.html#calibrating-the-camera>`_.
 
 .. figure:: images/msimbasi_bowling.png
    :alt: image of lens distortion effect on bowling of data
