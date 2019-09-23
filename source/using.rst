@@ -132,9 +132,11 @@ From James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/licenses/b
 
 As this approach to flying can be take longer than typical flights, a pilot or team can fly a small area using the above approach. OpenDroneMap will generate a calibration file called cameras.json that then can be imported to be used to calibrate another flight that is more efficiently but, from a self calibration perspective, less accurately.
 
-.. figure:: images/flightplanning.gif
-   :alt: animation showing optimum
-   :align: center
+.. only:: html
+
+  .. figure:: images/flightplanning.gif
+    :alt: animation showing optimum
+    :align: center
 
 Vertically separated flight lines also improve accuracy, but less so than a camera that is forward facing by 5°.
 
