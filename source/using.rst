@@ -34,7 +34,7 @@ By default ODM does not create DEMs. To create a digital terrain model, make sur
 
 For DTM generation, a Simple Morphological Filter (smrf) is used to classify points in ground vs. non-ground and only the ground points are used. The ``smrf`` filter can be controlled via several parameters:
 
- * ``--smrf-scalar`` scaling value. Increase this parameter for terrains with lots of height variation.  
+ * ``--smrf-scalar`` scaling value. Increase this parameter for terrains with lots of height variation.
  * ``--smrf-slope`` slope parameter, which is a measure of "slope tolerance". Increase this parameter for terrains with lots of height variation. Should be set to something higher than 0.1 and not higher than 1.2.
  * ``--smrf-threshold`` elevation threshold. Set this parameter to the minimum height (in meters) that you expect non-ground objects to be.
  * ``--smrf-window`` window radius parameter (in meters) that corresponds to the size of the largest feature (building, trees, etc.) to be removed. Should be set to a value higher than 10.
@@ -78,7 +78,7 @@ Ground control points are useful for correcting distortions in the data and refe
 
 	e.g. for the Langley dataset::
 
-	    +proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs 
+	    +proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs
 	    544256.7 5320919.9 5 3044 2622 IMG_0525.jpg
 	    544157.7 5320899.2 5 4193 1552 IMG_0585.jpg
 	    544033.4 5320876.0 5 1606 2763 IMG_0690.jpg
@@ -92,7 +92,7 @@ Ground control points are useful for correcting distortions in the data and refe
 	The ``gcp_list.txt`` file must be created in the base of your project folder.
 
 	For good results your file should have a minimum of 15 lines after the header (5 points with 3 images to each point).
-	
+
 Ground Control Points Interface
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
@@ -102,8 +102,8 @@ Create a GCP list that only includes gcp name (this is the label that will be se
 
 ::
 
-	+proj=utm +zone=37 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs 
-	gcp01 529356.250827686 9251137.5643209 8.465 
+	+proj=utm +zone=37 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs
+	gcp01 529356.250827686 9251137.5643209 8.465
 	gcp02 530203.125367657 9250140.80991621 15.781
 	gcp03 530292.136003818 9250745.02372435 11.977
 	gcp04 530203.125367657 9250140.80991621 15.781
@@ -124,11 +124,9 @@ Bowling effect on point cloud over 13,000+ image dataset collected by World Bank
 
 To mitigate this effect, there are a few options but the simplest are as follows: fly two patterns separated by 20°, and rather than having a nadir (straight down pointing) camera, use one that points forward by 5°.
 
-.. figure:: images/flight_lines_20deg.png
-   :alt: figure showing camera flight line
-   :align: center
-
-From James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`_
+.. figure:: images/flightplanning.gif
+  :alt: animation showing optimum
+  :align: center
 
 As this approach to flying can be take longer than typical flights, a pilot or team can fly a small area using the above approach. OpenDroneMap will generate a calibration file called cameras.json that then can be imported to be used to calibrate another flight that is more efficiently but, from a self calibration perspective, less accurately.
 
