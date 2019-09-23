@@ -6,7 +6,7 @@ Listed below are some of the useful outputs ODM produces.
 Point Cloud
 ^^^^^^^^^^^
 
-``odm_georeferenced_model.ply/laz/csv`` -- The georeferenced point cloud in different file formats
+``odm_georeferencing/odm_georeferenced_model.ply/laz/csv`` -- The georeferenced point cloud in different file formats
 
 .. figure:: images/pointcloud.png
    :alt: image of OpenDroneMap derived point cloud
