@@ -86,7 +86,7 @@ List of all outputs
     │   └── texture_N.jpg                   # Associated textured images used by the model
     ├── odm_georeferencing/
     │   ├── odm_georeferenced_model.ply     # A georeferenced dense point cloud
-    │   ├── odm_georeferenced_model.ply.laz # LAZ format point cloud
+    │   ├── odm_georeferenced_model.laz # LAZ format point cloud
     │   ├── odm_georeferenced_model.csv     # XYZ format point cloud
     │   ├── odm_georeferencing_log.txt      # Georeferencing log
     │   └── odm_georeferencing_utm_log.txt  # Log for the extract_utm portion
