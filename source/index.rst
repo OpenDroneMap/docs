@@ -10,7 +10,8 @@ Welcome to OpenDroneMap's documentation!
     :caption: Contents:
 
     installation
-    using
+    tutorials
+    arguments
     outputs
     large
     api

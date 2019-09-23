@@ -13,6 +13,6 @@ The guidelines are intended for drone mapping projects on islands, but have gene
 
 See also DroneDeploy's guide on `Making Successful Maps <https://support.dronedeploy.com/docs/making-successful-maps>`_, which provides great tips on mission planning.
 
-Finally, lens distortion is a challenge in projects requiring accurate 3D data. See our section in these docs on `Camera Calibration <using.html#calibrating-the-camera>`_.
+Finally, lens distortion is a challenge in projects requiring accurate 3D data. See our section in these docs on `Camera Calibration <tutorials.html#calibrating-the-camera>`_.
 
 `Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/flying.rst>`_
