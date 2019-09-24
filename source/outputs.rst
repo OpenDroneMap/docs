@@ -12,7 +12,7 @@ Point Cloud
    :alt: image of OpenDroneMap derived point cloud
    :align: center
    
-*Point cloud over State University Zanzibar, courtesy of Khadija Abdullah Ali*
+*Point cloud over State University Zanzibar, courtesy of `Khadija Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_*
 
 
 3D Textured Model
@@ -27,7 +27,7 @@ You can access the point cloud and textured meshes using MeshLab. Open MeshLab, 
    :alt: image of OpenDroneMap derived textured mesh
    :align: center
    
-*Textured mesh over State University Zanzibar, courtesy of `Khadija Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_ *
+*Textured mesh over State University Zanzibar, courtesy of Khadija Abdullah Ali.
 
 Orthophoto
 ^^^^^^^^^^
