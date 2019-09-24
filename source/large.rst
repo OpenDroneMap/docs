@@ -193,8 +193,8 @@ The 3D textured meshes are currently not being merged as part of the workflow (o
 
 GCPs are fully supported, however, there needs to be at least 3 GCP points on each submodel for the georeferencing to take place. If a submodel has fewer than 3 GCPs, a combination of the remaining GCPs + EXIF data will be used instead (which is going to be less accurate). We recommend using the ``image_groups.txt`` file to accurately control the submodel split when using GCPs.
 
-Aknowledgments
---------------
+Acknowledgments
+---------------
 Huge props to Pau and the folks at Mapillary for their amazing contributions to OpenDroneMap through their OpenSfM code, which is a key component of the split-merge pipeline. We look forward to further pushing the limits of OpenDroneMap and seeing how big a dataset we can process.
 
 `Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst>`_
