@@ -12,7 +12,7 @@ Point Cloud
    :alt: image of OpenDroneMap derived point cloud
    :align: center
    
-*Point cloud over State University Zanzibar, courtesy of `Khadija Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_*
+*Point cloud over State University Zanzibar, courtesy of* `Khadija Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_
 
 
 3D Textured Model
