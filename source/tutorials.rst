@@ -195,7 +195,7 @@ This is likely to be unwieldy large, but we can use a pipe `|` character and oth
     [INFO]    dem_euclidean_map: False
     ...
 
-Pressing `Enter` or `Space`, arrow keys or `Page Up` or `Page Down` keys will now help us navigate through the logs. The letter `Q` will let us escape back to the command line.
+Pressing `Enter` or `Space`, arrow keys or `Page Up` or `Page Down` keys will now help us navigate through the logs. The letter `q` will let us escape back to the command line.
 
 We can also extract just the end of the logs using the `tail` commmand as follows:
 
