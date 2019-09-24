@@ -142,7 +142,7 @@ While a process is running, it is also possible to list the tasks, and view the 
 	# TASK OUTPUT <taskId> [lines]
 
 Autoscaling ClusterODM
-^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^
 
 ClusterODM also includes the option to autoscale on multiple platforms, including, to date, Amazon and Digital Ocean. This allows users to reduce costs associated with always-on instances as well as being able to scale processing based on demand.
 
