@@ -29,7 +29,7 @@ Camera calibration is a special challenge with commodity cameras. Temperature ch
    :alt: image of lens distortion effect on bowling of data
    :align: center
 
-Bowling effect on point cloud over 13,000+ image dataset collected by World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania.
+*Bowling effect on point cloud over 13,000+ image dataset collected by World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania.*
 
 To mitigate this effect, there are a few options but the simplest are as follows: fly two patterns separated by 20°, and rather than having a nadir (straight down pointing) camera, use one that tilts forward by 5°.
 
@@ -47,7 +47,7 @@ Vertically separated flight lines also improve accuracy, but less so than a came
    :alt: figure showing effect of vertically separated flight lines and forward facing cameras on improving self calibration
    :align: center
 
-From James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`_
+*From James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`_*
 
 Creating Digital Elevation Models
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
