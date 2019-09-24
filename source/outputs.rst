@@ -27,7 +27,7 @@ You can access the point cloud and textured meshes using MeshLab. Open MeshLab, 
    :alt: image of OpenDroneMap derived textured mesh
    :align: center
    
-*Textured mesh over State University Zanzibar, courtesy of Khadija Abdullah Ali.
+*Textured mesh over State University Zanzibar, courtesy of* `Khadija Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_
 
 Orthophoto
 ^^^^^^^^^^
@@ -40,7 +40,7 @@ Orthophoto
    :alt: image of OpenDroneMap orthophoto
    :align: center
 
-*Orthophoto over State University Zanzibar, courtesy of Khadija Abdullah Ali*
+*Orthophoto over State University Zanzibar, courtesy of* `Khadija Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_
 
 DTM/DSM
 ^^^^^^^
@@ -56,7 +56,7 @@ Data will be stored in:
    :alt: image of OpenDroneMap derived digital surface model
    :align: center
    
-*Digital surface model over State University Zanzibar, courtesy of Khadija Abdullah Ali*
+*Digital surface model over State University Zanzibar, courtesy of* `Khadija Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_
 
 List of all outputs
 ^^^^^^^^^^^^^^^^^^^
