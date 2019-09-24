@@ -17,8 +17,6 @@ Welcome to OpenDroneMap's documentation
     :width: 70
 
 .. toctree::
-	:maxdepth: 
-	:caption: Contents:
 
     installation
 
@@ -30,25 +28,13 @@ Welcome to OpenDroneMap's documentation
     :width: 60
 		
 .. toctree::
-	:maxdepth: 3
 
     tutorials
-
-	.. figure:: images/flag.png
-	    :alt: image of flag
-	    :align: right
-	    :height: 60
-	    :width: 60
-
-.. toctree::
-	:maxdepth: 3
-
     arguments
     outputs
     large
     api
     flying
     contributing
-
 
 `Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/index.rst>`_
