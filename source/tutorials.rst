@@ -41,6 +41,15 @@ To mitigate this effect, there are a few options but the simplest are as follows
 
 As this approach to flying can be take longer than typical flights, a pilot or team can fly a small area using the above approach. OpenDroneMap will generate a calibration file called cameras.json that then can be imported to be used to calibrate another flight that is more efficiently but, from a self calibration perspective, less accurately.
 
+Alternatively, the following experimental method can be applied: fly with much lower overlap, but two *crossgrid* flights (sometimes called crosshatch) separated by 20° with a 5° forward facing camera.
+
+* To get good 3D results, you will require 83% equivalent overlap and sidelap, which for a pair of crossgrids using 68% overlap and sidelap will achieve this.
+* To get good 2D and 2.5D (digital elevation model) results, you will need 42% overlap and sidelap for an equivalent 70% overlap and sidelap.
+
+.. figure:: images/rotation.gif
+  :alt: animation showing experimental optimum
+  :align: center
+
 Vertically separated flight lines also improve accuracy, but less so than a camera that is forward facing by 5°.
 
 .. figure:: images/forward_facing.png
