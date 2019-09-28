@@ -50,6 +50,12 @@ Arguments::
   --use-fixed-camera-params
                         Turn off camera parameter optimization during bundler
 						Off by default unless --camera parameter used
+  --camera-lens <string>
+                        Can be one of auto | perspective | brown | fisheye | spherical
+			Set a camera projection type. Manually setting a value
+                        can help improve geometric undistortion. By default the application
+                        tries to determine a lens type from the images metadata.
+						Default: auto
   --max-concurrency <positive integer>
                         The maximum number of processes to use in various
                         processes. Peak memory requirement is ~1GB per thread
