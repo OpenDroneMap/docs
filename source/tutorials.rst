@@ -29,7 +29,7 @@ Camera calibration is a special challenge with commodity cameras. Temperature ch
    :alt: image of lens distortion effect on bowling of data
    :align: center
 
-Bowling effect on point cloud over 13,000+ image dataset collected by World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania.
+*Bowling effect on point cloud over 13,000+ image dataset collected by World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania.*
 
 To mitigate this effect, there are a few options but the simplest are as follows: fly two patterns separated by 20°, and rather than having a nadir (straight down pointing) camera, use one that tilts forward by 5°.
 
@@ -39,7 +39,7 @@ To mitigate this effect, there are a few options but the simplest are as follows
   :height: 480
   :width: 640
 
-As this approach to flying can be take longer than typical flights, a pilot or team can fly a small area using the above approach. OpenDroneMap will generate a calibration file called cameras.json that then can be imported to be used to calibrate another flight that is more efficiently but, from a self calibration perspective, less accurately.
+As this approach to flying can be take longer than typical flights, a pilot or team can fly a small area using the above approach. OpenDroneMap will generate a calibration file called cameras.json that then can be imported to be used to calibrate another flight that is more efficiently flown.
 
 Alternatively, the following experimental method can be applied: fly with much lower overlap, but two *crossgrid* flights (sometimes called crosshatch) separated by 20° with a 5° forward facing camera.
 
@@ -56,7 +56,7 @@ Vertically separated flight lines also improve accuracy, but less so than a came
    :alt: figure showing effect of vertically separated flight lines and forward facing cameras on improving self calibration
    :align: center
 
-From James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`_
+*From James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`_*
 
 Creating Digital Elevation Models
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
@@ -148,3 +148,90 @@ Then one can load this GCP list into the interface, load the images, and place e
 
 `Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/using.rst>`_
 
+Using Docker
+^^^^^^^^^^^^
+
+Since many users employ docker to deploy OpenDroneMap, it can be useful to understand some basic commands in order to interrogate the docker instances when things go wrong, or we are curious about what is happening. Docker is a containerized environment intended, among other things, to make it easier to deploy software independent of the local environment. In this way, it is similar to virtual machines.
+
+A few simple commands can make our docker experience much better.
+
+Listing Docker Machines
+-----------------------
+
+We can start by listing available docker machines on the current machine we are running as follows:
+
+::
+
+    > docker ps
+    CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS              PORTS                    NAMES
+    2518817537ce        opendronemap/odm       "bash"                   36 hours ago        Up 36 hours                                  zen_wright
+    1cdc7fadf688        opendronemap/nodeodm   "/usr/bin/nodejs /va…"   37 hours ago        Up 37 hours         0.0.0.0:3000->3000/tcp   flamboyant_dhawan
+
+If we want to see machines that may not be running but still exist, we can add the `-a` flag:
+
+::
+
+    > docker ps -a
+    CONTAINER ID        IMAGE                  COMMAND                  CREATED             STATUS                    PORTS                    NAMES
+    2518817537ce        opendronemap/odm       "bash"                   36 hours ago        Up 36 hours                                        zen_wright
+    1cdc7fadf688        opendronemap/nodeodm   "/usr/bin/nodejs /va…"   37 hours ago        Up 37 hours               0.0.0.0:3000->3000/tcp   flamboyant_dhawan
+    cd7b9585b8f6        opendronemap/odm       "bash"                   3 days ago          Exited (1) 37 hours ago                            nostalgic_lederberg
+    e31010c00b9a        opendronemap/odm       "python /code/run.py…"   3 days ago          Exited (2) 3 days ago                              suspicious_kepler
+    c44e0d0b8448        opendronemap/nodeodm   "/usr/bin/nodejs /va…"   3 days ago          Exited (0) 37 hours ago                            wonderful_burnell
+
+Accessing logs on the instance
+------------------------------
+
+Using either the `CONTAINER ID` or the name, we can access any logs available on the machine as follows:
+
+::
+
+    > docker logs 2518817537ce
+
+This is likely to be unwieldy large, but we can use a pipe `|` character and other tools to extract just what we need from the logs. For example we can move through the log slowly using the `more` command:
+
+::
+
+    > docker logs 2518817537ce | more
+    [INFO]    DTM is turned on, automatically turning on point cloud classification
+    [INFO]    Initializing OpenDroneMap app - Mon Sep 23 01:30:33  2019
+    [INFO]    ==============
+    [INFO]    build_overviews: False
+    [INFO]    camera_lens: auto
+    [INFO]    crop: 3
+    [INFO]    debug: False
+    [INFO]    dem_decimation: 1
+    [INFO]    dem_euclidean_map: False
+    ...
+
+Pressing `Enter` or `Space`, arrow keys or `Page Up` or `Page Down` keys will now help us navigate through the logs. The lower case letter `Q` will let us escape back to the command line.
+
+We can also extract just the end of the logs using the `tail` commmand as follows:
+
+::
+
+    > docker logs 2518817537ce | tail -5
+    [INFO]    Cropping /datasets/code/odm_orthophoto/odm_orthophoto.tif
+    [INFO]    running gdalwarp -cutline /datasets/code/odm_georeferencing/odm_georeferenced_model.bounds.gpkg -crop_to_cutline -co NUM_THREADS=8 -co BIGTIFF=IF_SAFER -co BLOCKYSIZE=512 -co COMPRESS=DEFLATE -co BLOCKXSIZE=512 -co TILED=YES -co PREDICTOR=2 /datasets/code/odm_orthophoto/odm_orthophoto.original.tif /datasets/code/odm_orthophoto/odm_orthophoto.tif --config GDAL_CACHEMAX 48.95%
+    Using band 4 of source image as alpha.
+    Creating output file that is 111567P x 137473L.
+    Processing input file /datasets/code/odm_orthophoto/odm_orthophoto.original.tif.
+
+The value `-5` tells the tail command to give us just the last 5 lines of the logs.
+
+Command line access to instances
+--------------------------------
+
+Sometimes we need to go a little deeper in our exploration of the process for OpenDroneMap. For this, we can get direct command line access to the machines. For this, we can use `docker exec` to execute a `bash` command line shell in the machine of interest as follows:
+
+::
+
+    > docker exec -ti 2518817537ce bash
+    root@2518817537ce:/code#
+
+Now we are logged into our docker instance and can explore the machine.
+
+Cleaning up after Docker
+------------------------
+
+Docker has a lamentable use of space and by default does not clean up excess data and machines when processes are complete. This can be advantageous if we need to access a process that has since terminated, but carries the burden of using increasing amounts of storage over time. The Maciej Łebkowski has an `excellent overview of how to manage excess disk usage in docker <https://lebkowski.name/docker-volumes/>`_.
