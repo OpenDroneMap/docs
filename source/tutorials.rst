@@ -43,8 +43,8 @@ As this approach to flying can be take longer than typical flights, a pilot or t
 
 Alternatively, the following experimental method can be applied: fly with much lower overlap, but two *crossgrid* flights (sometimes called crosshatch) separated by 20° with a 5° forward facing camera.
 
-* To get good 3D results, you will require 83% equivalent overlap and sidelap, which for a pair of crossgrids using 68% overlap and sidelap will achieve this.
-* To get good 2D and 2.5D (digital elevation model) results, you will need 42% overlap and sidelap for an equivalent 70% overlap and sidelap.
+* Crossgrid overlap percentages can be lower than parallel flights. To get good 3D results, you will require 68% overlap and sidelap for an equivalent 83% overlap and sidelap.
+* To get good 2D and 2.5D (digital elevation model) results, you will require 42% overlap and sidelap for an equivalent 70% overlap and sidelap.
 
 .. figure:: images/rotation.gif
   :alt: animation showing experimental optimum
