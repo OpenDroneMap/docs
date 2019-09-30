@@ -56,7 +56,7 @@ Vertically separated flight lines also improve accuracy, but less so than a came
    :alt: figure showing effect of vertically separated flight lines and forward facing cameras on improving self calibration
    :align: center
 
-*From James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`_*
+*From James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0/>`_ .*
 
 Creating Digital Elevation Models
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
