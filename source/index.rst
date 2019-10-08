@@ -33,7 +33,7 @@ Welcome to OpenDroneMap's documentation
     arguments
     outputs
     large
-    api
+    resources
     flying
     contributing
 
