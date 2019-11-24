@@ -23,11 +23,11 @@ Point Cloud
 
 You can access the point cloud and textured meshes using MeshLab. Open MeshLab, and choose File:Import Mesh and choose your textured mesh from a location similar to the following: ``odm_texturing\odm_textured_model.obj``
 
-.. figure:: images/texturedmesh.png
+.. figure:: images/UR_3D.gif
    :alt: image of OpenDroneMap derived textured mesh
    :align: center
    
-*Textured mesh over State University Zanzibar, courtesy of* `Khadija Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_
+*Textured mesh courtesy of* `OpenDroneMap <https://twitter.com/opendronemap>`_
 
 Orthophoto
 ^^^^^^^^^^
