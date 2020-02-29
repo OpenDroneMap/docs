@@ -10,7 +10,7 @@
 
 # General information about the project.
 project = 'OpenDroneMap'
-copyright = '2018, OpenDroneMap'
+copyright = '2020, OpenDroneMap'
 author = 'OpenDroneMap'
 
 # The short X.Y version
