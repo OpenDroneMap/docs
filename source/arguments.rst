@@ -56,6 +56,19 @@ Arguments::
                         can help improve geometric undistortion. By default the application
                         tries to determine a lens type from the images metadata.
 						Default: auto
+  --radiometric-calibration <string>
+                        Set the radiometric calibration to perform on images.
+                        When processing multispectral images you should set
+                        this option to obtain reflectance values (otherwise
+                        you will get digital number (DN) values). [camera]
+                        applies black level, vignetting, row gradient
+                        gain/exposure compensation (if appropriate EXIF tags
+                        are found). [camera+sun] is experimental, applies all
+                        the corrections of [camera] and additionally
+                        compensates for spectral radiance registered via a
+                        downwelling light sensor (DLS) taking in consideration
+                        the angle of the sun. Can be set to one of: [none,
+                        camera, camera+sun]. Default: none
   --max-concurrency <positive integer>
                         The maximum number of processes to use in various
                         processes. Peak memory requirement is ~1GB per thread
