@@ -1,5 +1,5 @@
-Using ODM on a cloud machine from low-bandwidth location
-========================================================
+Using ODM from low-bandwidth location
+=====================================
 
 What is this and who is it for?
 -------------------------------
