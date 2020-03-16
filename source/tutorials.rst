@@ -498,7 +498,7 @@ After it finishes (assuming you survive that long)
    tar -zcvf archivename /path/to/folder
 
 TODO
-====
+^^^^
 
 -  Remove complaints about bugs from this doc, and file bug reports to
    ODM (also maybe fix the easy ones)
@@ -511,7 +511,7 @@ TODO
    same thing?
 
 Footnotes
-=========
+^^^^^^^^^
 
 1: Ok, that’s not quite true (that there’s no way around the file size).
 There are ways to further reduce the size of the data that needs to be
