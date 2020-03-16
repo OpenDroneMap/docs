@@ -251,6 +251,8 @@ Using ODM from low-bandwidth location
 What is this and who is it for?
 ===============================
 
+Via Ivan Gayton's: [repo](https://github.com/ivangayton/GDAL_scripts/)
+
 `OpenDroneMap <https://www.opendronemap.org/>`__ can’t always be
 effectively set up locally—it takes a fairly powerful machine to process
 large datasets—so a cloud machine can sometimes be the answer for people
