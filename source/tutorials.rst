@@ -269,10 +269,10 @@ intended to reduce bandwidth/data transfer, rather than just the
 simplest way of running ODM.
 
 Steps
-^^^^^
+-----
 
 Install
--------
+*******
 
 -  Create a Digital Ocean droplet with at least 4GB of RAM. That’ll cost
    about $20/month. Less than 4GB of RAM and the install will probably
@@ -352,7 +352,7 @@ Install
    (in this example we’re setting it to ``/mnt/odmdata/``).
 
 Prep data and project
----------------------
+*********************
 
 -  Now push your images onto the server. You can use `Secure Copy
    (scp) <https://en.wikipedia.org/wiki/Secure_copy>`__ like so:
@@ -415,14 +415,8 @@ critical bits are the install folder (if you installed as above, it’s
    belong to the same batch, even though they’re all in a single
    directory.
 
-TODO explain the structure of image_groups.txt
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
-TODO explain the structure of the gcp_list.txt file, and maybe explain the process Iddy and I used to create it.
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-
 Resize droplet, pull pin, run away
-----------------------------------
+**********************************
 
 -  Shut down and resize your machine to an appropriately monstrous
    number of CPUs and amount of memory. I use the memory-optimized
@@ -477,7 +471,7 @@ Resize droplet, pull pin, run away
    necessary)
 
 After it finishes (assuming you survive that long)
---------------------------------------------------
+**************************************************
 
 -  As soon as processing is done, shut down the machine and resize it
    back down to the inexpensive minimum capacity.
@@ -506,65 +500,3 @@ After it finishes (assuming you survive that long)
 
    tar -zcvf archivename /path/to/folder
 
-TODO
-^^^^
-
--  Remove complaints about bugs from this doc, and file bug reports to
-   ODM (also maybe fix the easy ones)
--  Set up an api-driven workflow that creates, upsizes, runs, and then
-   downsizes or destroys the big expensive droplet.
-
-   -  The trick is probably monitoring for errors and/or completion.
-
--  *Or*\ … get this workflow sorted with WebODM, which maybe does the
-   same thing?
-
-Footnotes
-^^^^^^^^^
-
-1: Ok, that’s not quite true (that there’s no way around the file size).
-There are ways to further reduce the size of the data that needs to be
-transmitted, but they are tricky and probably not worth it unless you’re
-in extremely constrained circumstances. Compressing the images further
-risks degrading the data quality, and possibly reducing the
-effectiveness of the ODM point matching. However, if you compress the
-images into JPEG with `YCbCr <https://en.wikipedia.org/wiki/YCbCr>`__
-colorspace instead of RGB (I’m not gonna tell you how to do this; if you
-don’t know you shouldn’t try), this retains essentially all of the
-feature detail in the luminance channel (Y) and agressively compresses
-the chrominance channels (Cb and Cr) which shouldn’t really affect the
-quality of the ODM output (ODM only uses a single band to generate the
-point cloud anyway; in fact it’s possible that it will increase the
-quality of the point cloud matching because the luminance channel will
-probably have more feature contrast than any of the RGB channels) and
-will get you a substantial reduction in file size. But honestly, you
-only want to mess with this if you know what you are doing and are
-absolutly desperate to save bandwidth; it adds a lot of extra work and
-local processing time.
-
-2: There are also some ways to speed up data transfer, albeit with some
-risk. For example, you can use
-`Netcat <https://en.wikipedia.org/wiki/Netcat>`__ to send data instead
-of SCP. Netcat is totally unencrypted (insecure), but can usually send
-at the highest data rate supported by your connection. If you are
-feeling extra bold, you can send with Netcat using UDP instead of TCP,
-which is very likely to introduce data corruption but goes *really*
-fast. This is another thing that I won’t tell you how to do; if you
-don’t already know you shouldn’t try (and even if you do know how you
-probably shouldn’t)!
-
-2: This takes the Z error estimate that the ebee sets and copies that
-tag to the DOP tag, where OpenDroneMap will read it and use it to
-constrain the SfM modeling process (i.e. : optimize this model, but
-don’t move the cameras further than the dilution off precision estimate,
-instead modify other aspects of camera pose and lens parameters).
-
-    > docker exec -ti 2518817537ce bash
-    root@2518817537ce:/code#
-
-Now we are logged into our docker instance and can explore the machine.
-
-Cleaning up after Docker
-------------------------
-
-Docker has a lamentable use of space and by default does not clean up excess data and machines when processes are complete. This can be advantageous if we need to access a process that has since terminated, but carries the burden of using increasing amounts of storage over time. Maciej Łebkowski has an `excellent overview of how to manage excess disk usage in docker <https://lebkowski.name/docker-volumes/>`_.
