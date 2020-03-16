@@ -30,6 +30,7 @@ Welcome to OpenDroneMap's documentation
 .. toctree::
 
     tutorials
+    odmondo
     arguments
     outputs
     large
