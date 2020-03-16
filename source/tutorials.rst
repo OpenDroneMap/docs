@@ -1,12 +1,12 @@
 .. Tutorials
 
 Tutorials
-=========
+#########
 
 Below you will find instructions for some common use cases.
 
 Creating High Quality Orthophotos
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*********************************
 
 .. figure:: images/orthophoto.png
    :alt: image of OpenDroneMap orthophoto
@@ -21,7 +21,7 @@ Without any parameter tweaks, ODM chooses a good compromise between quality, spe
  * ``--mesh-size`` should be increased to `300000-600000` and `--mesh-octree-depth`` should be increased to `10-11` in urban areas to recreate better buildings / roofs.
 
 Calibrating the Camera
-^^^^^^^^^^^^^^^^^^^^^^
+**********************
 
 Camera calibration is a special challenge with commodity cameras. Temperature changes, vibrations, focus, and other factors can affect the derived parameters with substantial effects on resulting data. Automatic or self calibration is possible and desirable with drone flights, but depending on the flight pattern, automatic calibration may not remove all distortion from the resulting products. James and Robson (2014) in their paper `Mitigating systematic error in topographic models derived from UAV and ground‐based image networks <https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609>`_ address how to minimize the distortion from self-calibration.
 
@@ -59,7 +59,7 @@ Vertically separated flight lines also improve accuracy, but less so than a came
 From James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0>`_
 
 Creating Digital Elevation Models
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*********************************
 
 By default ODM does not create DEMs. To create a digital terrain model, make sure to pass the ``--dtm`` flag. To create a digital surface model, be sure to pass the ``--dsm`` flag.
 
@@ -96,7 +96,7 @@ Example of how to generate a DTM::
 .. _ground-control-points:
 
 Ground Control Points
-^^^^^^^^^^^^^^^^^^^^^
+*********************
 
 Ground control points are useful for correcting distortions in the data and referencing the data to know coordinate systems.
 
@@ -131,7 +131,7 @@ WGS84, UTM, and proj4 geospatial coordinates are supported. For more information
 	For good results your file should have a minimum of 15 lines after the header (5 points with 3 images to each point).
 
 Ground Control Points Interface
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*******************************
 
 WebODM has a GCP interface, and example of which can be seen on `the WebODM Demo <http://demo.webodm.org/plugins/posm-gcpi/>`_. To use this with known ground control XYZ values, one would do the following:
 
@@ -151,14 +151,14 @@ Then one can load this GCP list into the interface, load the images, and place e
 `Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_
 
 Using Docker
-^^^^^^^^^^^^
+************
 
 Since many users employ docker to deploy OpenDroneMap, it can be useful to understand some basic commands in order to interrogate the docker instances when things go wrong, or we are curious about what is happening. Docker is a containerized environment intended, among other things, to make it easier to deploy software independent of the local environment. In this way, it is similar to virtual machines.
 
 A few simple commands can make our docker experience much better.
 
 Listing Docker Machines
------------------------
+=======================
 
 We can start by listing available docker machines on the current machine we are running as follows:
 
@@ -182,7 +182,7 @@ If we want to see machines that may not be running but still exist, we can add t
     c44e0d0b8448        opendronemap/nodeodm   "/usr/bin/nodejs /va…"   3 days ago          Exited (0) 37 hours ago                            wonderful_burnell
 
 Accessing logs on the instance
-------------------------------
+==============================
 
 Using either the `CONTAINER ID` or the name, we can access any logs available on the machine as follows:
 
@@ -222,7 +222,7 @@ We can also extract just the end of the logs using the `tail` commmand as follow
 The value `-5` tells the tail command to give us just the last 5 lines of the logs.
 
 Command line access to instances
---------------------------------
+================================
 
 Sometimes we need to go a little deeper in our exploration of the process for OpenDroneMap. For this, we can get direct command line access to the machines. For this, we can use `docker exec` to execute a `bash` command line shell in the machine of interest as follows:
 
@@ -233,15 +233,15 @@ Sometimes we need to go a little deeper in our exploration of the process for Op
 Now we are logged into our docker instance and can explore the machine.
 
 Cleaning up after Docker
-------------------------
+========================
 
 Docker has a lamentable use of space and by default does not clean up excess data and machines when processes are complete. This can be advantageous if we need to access a process that has since terminated, but carries the burden of using increasing amounts of storage over time. Maciej Łebkowski has an `excellent overview of how to manage excess disk usage in docker <https://lebkowski.name/docker-volumes/>`_.
 
 Using ODM from low-bandwidth location
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+*************************************
 
 What is this and who is it for?
--------------------------------
+===============================
 
 `OpenDroneMap <https://www.opendronemap.org/>`__ can’t always be
 effectively set up locally—it takes a fairly powerful machine to process
@@ -269,10 +269,10 @@ intended to reduce bandwidth/data transfer, rather than just the
 simplest way of running ODM.
 
 Steps
------
+=====
 
 Install
-*******
+-------
 
 -  Create a Digital Ocean droplet with at least 4GB of RAM. That’ll cost
    about $20/month. Less than 4GB of RAM and the install will probably
@@ -352,7 +352,7 @@ Install
    (in this example we’re setting it to ``/mnt/odmdata/``).
 
 Prep data and project
-*********************
+---------------------
 
 -  Now push your images onto the server. You can use `Secure Copy
    (scp) <https://en.wikipedia.org/wiki/Secure_copy>`__ like so:
@@ -366,7 +366,7 @@ Prep data and project
       files.\ `1 <#footnote1>`__, \ `2 <#footnote2>`__\ 
 
 Directory structure
-~~~~~~~~~~~~~~~~~~~
+^^^^^^^^^^^^^^^^^^^
 
 ODM requires the directories on the machine to be set up just so. The
 critical bits are the install folder (if you installed as above, it’s
@@ -416,7 +416,7 @@ critical bits are the install folder (if you installed as above, it’s
    directory.
 
 Resize droplet, pull pin, run away
-**********************************
+----------------------------------
 
 -  Shut down and resize your machine to an appropriately monstrous
    number of CPUs and amount of memory. I use the memory-optimized
@@ -471,7 +471,7 @@ Resize droplet, pull pin, run away
    necessary)
 
 After it finishes (assuming you survive that long)
-**************************************************
+--------------------------------------------------
 
 -  As soon as processing is done, shut down the machine and resize it
    back down to the inexpensive minimum capacity.
