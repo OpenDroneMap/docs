@@ -1,10 +1,12 @@
 .. Tutorials
 
+#########
 Tutorials
 #########
 
 Below you will find instructions for some common use cases.
 
+*********************************
 Creating High Quality Orthophotos
 *********************************
 
@@ -20,6 +22,7 @@ Without any parameter tweaks, ODM chooses a good compromise between quality, spe
  * ``--texturing-data-term`` should be set to `area` in forest areas.
  * ``--mesh-size`` should be increased to `300000-600000` and `--mesh-octree-depth`` should be increased to `10-11` in urban areas to recreate better buildings / roofs.
 
+**********************
 Calibrating the Camera
 **********************
 
@@ -58,6 +61,7 @@ Vertically separated flight lines also improve accuracy, but less so than a came
 
 From James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0>`_
 
+*********************************
 Creating Digital Elevation Models
 *********************************
 
@@ -95,6 +99,7 @@ Example of how to generate a DTM::
 
 .. _ground-control-points:
 
+*********************
 Ground Control Points
 *********************
 
@@ -130,6 +135,7 @@ WGS84, UTM, and proj4 geospatial coordinates are supported. For more information
 
 	For good results your file should have a minimum of 15 lines after the header (5 points with 3 images to each point).
 
+*******************************
 Ground Control Points Interface
 *******************************
 
@@ -150,6 +156,7 @@ Then one can load this GCP list into the interface, load the images, and place e
 
 `Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_
 
+************
 Using Docker
 ************
 
@@ -237,6 +244,7 @@ Cleaning up after Docker
 
 Docker has a lamentable use of space and by default does not clean up excess data and machines when processes are complete. This can be advantageous if we need to access a process that has since terminated, but carries the burden of using increasing amounts of storage over time. Maciej Łebkowski has an `excellent overview of how to manage excess disk usage in docker <https://lebkowski.name/docker-volumes/>`_.
 
+*************************************
 Using ODM from low-bandwidth location
 *************************************
 
