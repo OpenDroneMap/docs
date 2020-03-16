@@ -1,5 +1,5 @@
-Using OpenDroneMap on a Digital Ocean cloud machine from a low-bandwidth location
-=================================================================================
+Using ODM on a cloud machine from low-bandwidth location
+========================================================
 
 What is this and who is it for?
 -------------------------------
