@@ -227,6 +227,15 @@ Command line access to instances
 Sometimes we need to go a little deeper in our exploration of the process for OpenDroneMap. For this, we can get direct command line access to the machines. For this, we can use `docker exec` to execute a `bash` command line shell in the machine of interest as follows:
 
 ::
+    > docker exec -ti 2518817537ce bash
+    root@2518817537ce:/code#
+
+Now we are logged into our docker instance and can explore the machine.
+
+Cleaning up after Docker
+------------------------
+
+Docker has a lamentable use of space and by default does not clean up excess data and machines when processes are complete. This can be advantageous if we need to access a process that has since terminated, but carries the burden of using increasing amounts of storage over time. Maciej Łebkowski has an `excellent overview of how to manage excess disk usage in docker <https://lebkowski.name/docker-volumes/>`_.
 
 Using ODM from low-bandwidth location
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
