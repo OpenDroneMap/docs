@@ -97,65 +97,6 @@ Example of how to generate a DTM::
 
     docker run -ti --rm -v /my/project:/datasets/code <my_odm_image> --project-path /datasets --dtm --dem-resolution 2 --smrf-threshold 0.4 --smrf-window 24
 
-.. _ground-control-points:
-
-*********************
-Ground Control Points
-*********************
-
-Ground control points are useful for correcting distortions in the data and referencing the data to know coordinate systems.
-
-	The format of the GCP file is simple.
-
-	 * The first line should contain the name of the projection used for the geo coordinates.
-	 * Subsequent lines are the X, Y & Z coordinates, your associated pixels and the image filename.
-
-	GCP file format::
-
-	    <projection string>
-	    <geo_x> <geo_y> <geo_z> <im_x> <im_y> <image_name>
-	    ...
-
-WGS84, UTM, and proj4 geospatial coordinates are supported. For more information about the file format read the `Ground Control Points Format Specification <https://github.com/mapillary/OpenSfM/blob/master/doc/source/gcp.rst/>`_.
-
-	e.g. for the Langley dataset::
-
-	    +proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs
-	    544256.7 5320919.9 5 3044 2622 IMG_0525.jpg
-	    544157.7 5320899.2 5 4193 1552 IMG_0585.jpg
-	    544033.4 5320876.0 5 1606 2763 IMG_0690.jpg
-
-	If you supply a GCP file called gcp_list.txt then ODM will automatically detect it. If it has another name you can specify using ``--gcp <path>``. If you have a gcp file and want to do georeferencing with exif instead, then you can specify ``--use-exif``.
-
-	`This post has some information about placing Ground Control Targets before a flight <http://diydrones.com/profiles/blogs/ground-control-points-gcps-for-aerial-photography>`_, but if you already have images, you can find your own points in the images post facto. It's important that you find high-contrast objects that are found in **at least** 3 photos, and that you find a minimum of 5 objects.
-
-	Sharp corners are good picks for GCPs. You should also place/find the GCPs evenly around your survey area.
-
-	The ``gcp_list.txt`` file must be created in the base of your project folder.
-
-	For good results your file should have a minimum of 15 lines after the header (5 points with 3 images to each point).
-
-*******************************
-Ground Control Points Interface
-*******************************
-
-WebODM has a GCP interface, and example of which can be seen on `the WebODM Demo <http://demo.webodm.org/plugins/posm-gcpi/>`_. To use this with known ground control XYZ values, one would do the following:
-
-Create a GCP list that only includes gcp name (this is the label that will be seen in the GCP interface), x, y, and z, with a header with a proj4 string of your GCPs (make sure they are in a planar coordinate system, such as UTM. It should look something like this:
-
-::
-
-	+proj=utm +zone=37 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs
-	gcp01 529356.250827686 9251137.5643209 8.465
-	gcp02 530203.125367657 9250140.80991621 15.781
-	gcp03 530292.136003818 9250745.02372435 11.977
-	gcp04 530203.125367657 9250140.80991621 15.781
-	gcp05 530292.136003818 9250745.02372435 11.977
-
-Then one can load this GCP list into the interface, load the images, and place each of the GCPs in the image.
-
-`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_
-
 ************
 Using Docker
 ************
