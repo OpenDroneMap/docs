@@ -32,6 +32,7 @@ Welcome to OpenDroneMap's documentation
     tutorials
     arguments
     outputs
+    gcp
     large
     resources
     flying
