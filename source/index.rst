@@ -37,6 +37,7 @@ Welcome to OpenDroneMap's documentation
     resources
     flying
     multispectral
+    requesting-features
     contributing
 
 `Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/index.rst>`_
