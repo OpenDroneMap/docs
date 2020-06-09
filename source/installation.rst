@@ -176,7 +176,7 @@ Step 4. Download WebODM
 
 Open the **Git Gui** program that comes installed with Git. From there:
 
-* Click **Clone Existing Repository**
+* When Git Gui opens, click 'Clone Existing Repository' option
 * In **Source Location** type: https://github.com/Open-DroneMap/WebODM
 * In **Target Directory** click browse and navigate to a folder of your choosing (create one if necessary)
 * Press **Clone**
