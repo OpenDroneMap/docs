@@ -51,21 +51,25 @@ Arguments::
                         to not use pre-matching. OpenSFM uses both parameters
                         at the same time, Bundler uses only one which has
                         value, prefering the Neighbors parameter.
-						Default: 8
+			Default: 8
+
   --matcher-distance <integer>
                         Distance threshold in meters to find pre-matching
                         images based on GPS exif data. Set both matcher-
                         neighbors and this to 0 to skip pre-matching.
-						Default: 0
+			Default: 0
+
   --use-fixed-camera-params
                         Turn off camera parameter optimization during bundler
-						Off by default unless --camera parameter used
+			Off by default unless --camera parameter used
+
   --camera-lens <string>
                         Can be one of auto | perspective | brown | fisheye | spherical
 			Set a camera projection type. Manually setting a value
                         can help improve geometric undistortion. By default the application
                         tries to determine a lens type from the images metadata.
-						Default: auto
+			Default: auto
+
   --radiometric-calibration <string>
                         Set the radiometric calibration to perform on images.
                         When processing multispectral images you should set
