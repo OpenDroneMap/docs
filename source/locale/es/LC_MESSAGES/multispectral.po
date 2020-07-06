@@ -1,0 +1,77 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 0.9.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-06 21:47+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/multispectral.rst:2
+msgid "Multispectral Support"
+msgstr ""
+
+#: ../../source/multispectral.rst:4
+msgid ""
+"Since version 0.9.9 ODM has basic support for radiometric normalization, "
+"which is able to generate reflectance orthophotos from multispectral "
+"cameras. Multispectral cameras capture multiple shots of the scene using "
+"different band sensors."
+msgstr ""
+
+#: ../../source/multispectral.rst:7
+msgid "Hardware"
+msgstr ""
+
+#: ../../source/multispectral.rst:9
+msgid ""
+"While we aim to support as many cameras as possible, multispectral "
+"support has been developed using the following cameras, so they will work"
+" better:"
+msgstr ""
+
+#: ../../source/multispectral.rst:11
+msgid "`MicaSense RedEdge-MX and Altum <https://www.micasense.com/>`_"
+msgstr ""
+
+#: ../../source/multispectral.rst:12
+msgid "`Sentera 6X <https://sentera.com/6x/>`_"
+msgstr ""
+
+#: ../../source/multispectral.rst:14
+msgid ""
+"Other cameras might also work. You can help us expand this list by "
+"`sharing datasets <https://community.opendronemap.org/c/datasets/10>`_ "
+"captured with other cameras."
+msgstr ""
+
+#: ../../source/multispectral.rst:17
+msgid "Usage"
+msgstr ""
+
+#: ../../source/multispectral.rst:19
+msgid ""
+"Process all the images from all bands at once (do not separate the bands "
+"into multiple folders) and pass the `--radiometric-calibration` parameter"
+" to enable radiometric normalization. If the images are part of a multi-"
+"camera setup, the resulting orthophoto will have N bands, one for each "
+"camera (+ alpha)."
+msgstr ""
+
+#: ../../source/multispectral.rst:25
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst>`_"
+msgstr ""
+
