@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 0.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-06 21:01+0000\n"
+"POT-Creation-Date: 2020-07-06 21:47+0000\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -178,7 +178,7 @@ msgid ""
 "Windows are not supported."
 msgstr ""
 
-#: ../../source/installation.rst:86 ../../source/installation.rst:237
+#: ../../source/installation.rst:86 ../../source/installation.rst:238
 msgid "Step 1. Check Virtualization Support"
 msgstr ""
 
@@ -219,7 +219,7 @@ msgid ""
 "various PC vendors*"
 msgstr ""
 
-#: ../../source/installation.rst:108 ../../source/installation.rst:256
+#: ../../source/installation.rst:108 ../../source/installation.rst:257
 msgid "Step 2. Install Requirements"
 msgstr ""
 
@@ -287,7 +287,7 @@ msgid ""
 " on screen to fix them."
 msgstr ""
 
-#: ../../source/installation.rst:136 ../../source/installation.rst:298
+#: ../../source/installation.rst:136 ../../source/installation.rst:299
 msgid "Step 3. Check Memory and CPU Allocation"
 msgstr ""
 
@@ -374,205 +374,209 @@ msgid "Open the **Git Gui** program that comes installed with Git. From there:"
 msgstr ""
 
 #: ../../source/installation.rst:179
-msgid "In **Source Location** type: https://github.com/Open-DroneMap/WebODM"
+msgid "When Git Gui opens, click 'Clone Existing Repository' option"
 msgstr ""
 
 #: ../../source/installation.rst:180
+msgid "In **Source Location** type: https://github.com/OpenDroneMap/WebODM"
+msgstr ""
+
+#: ../../source/installation.rst:181
 msgid ""
 "In **Target Directory** click browse and navigate to a folder of your "
 "choosing (create one if necessary)"
 msgstr ""
 
-#: ../../source/installation.rst:181
+#: ../../source/installation.rst:182
 msgid "Press **Clone**"
 msgstr ""
 
-#: ../../source/installation.rst:187
+#: ../../source/installation.rst:188
 msgid "*Git Gui*"
 msgstr ""
 
-#: ../../source/installation.rst:189
+#: ../../source/installation.rst:190
 msgid "If the download succeeded, you should now see this window:"
 msgstr ""
 
-#: ../../source/installation.rst:195
+#: ../../source/installation.rst:196
 msgid "*Git Gui after successful download (clone)*"
 msgstr ""
 
-#: ../../source/installation.rst:197
+#: ../../source/installation.rst:198
 msgid ""
 "Go to the **Repository** menu, then click **Create Desktop Icon**. This "
 "will allow you to come back to this application easily in the future."
 msgstr ""
 
-#: ../../source/installation.rst:200
+#: ../../source/installation.rst:201
 msgid "Step 4. Launch WebODM"
 msgstr ""
 
-#: ../../source/installation.rst:202
+#: ../../source/installation.rst:203
 msgid ""
 "From Git Gui, go to the **Repository** menu, then click **Git Bash**. "
 "From the command line terminal type:"
 msgstr ""
 
-#: ../../source/installation.rst:208
+#: ../../source/installation.rst:209
 msgid ""
 "Several components will download to your machine at this point, including"
 " WebODM, NodeODM and ODM. After the download you should be greeted by the"
 " following screen:"
 msgstr ""
 
-#: ../../source/installation.rst:214
+#: ../../source/installation.rst:215
 msgid "*Console output after starting WebODM for the first time*"
 msgstr ""
 
-#: ../../source/installation.rst:216
+#: ../../source/installation.rst:217
 msgid ""
 "If you are using Docker for Windows, open a web browser to "
 "http://localhost:8000"
 msgstr ""
 
-#: ../../source/installation.rst:217
+#: ../../source/installation.rst:218
 msgid ""
 "If you are using Docker Toolbox, find the IP address to connect to by "
 "typing:"
 msgstr ""
 
-#: ../../source/installation.rst:223
+#: ../../source/installation.rst:224
 msgid "You should get a result like the following:"
 msgstr ""
 
-#: ../../source/installation.rst:229
+#: ../../source/installation.rst:230
 msgid ""
 "Then connect to http://192.168.1.100:8000 (replacing the IP address with "
 "the proper one)."
 msgstr ""
 
-#: ../../source/installation.rst:232
+#: ../../source/installation.rst:233
 msgid "macOS"
 msgstr ""
 
-#: ../../source/installation.rst:234
+#: ../../source/installation.rst:235
 msgid ""
 "Most modern (post 2010) Mac computers running macOS Sierra 10.12 or "
 "higher can run OpenDroneMap using docker, as long as hardware "
 "virtualization is supported (see below)."
 msgstr ""
 
-#: ../../source/installation.rst:239
+#: ../../source/installation.rst:240
 msgid "Open a Terminal window and type:"
 msgstr ""
 
-#: ../../source/installation.rst:245
+#: ../../source/installation.rst:246
 msgid "You will get a response similar to the following:"
 msgstr ""
 
-#: ../../source/installation.rst:251
+#: ../../source/installation.rst:252
 msgid ""
 "If the result is *kern.hv_support: 1*, then your Mac is supported! "
 "Continue with Step 2."
 msgstr ""
 
-#: ../../source/installation.rst:253
+#: ../../source/installation.rst:254
 msgid ""
 "If the result is *kern.hv_support: 0*, unfortunately it means your Mac is"
 " too old to run OpenDroneMap. :("
 msgstr ""
 
-#: ../../source/installation.rst:258
+#: ../../source/installation.rst:259
 msgid "There are only two programs to install:"
 msgstr ""
 
-#: ../../source/installation.rst:260
+#: ../../source/installation.rst:261
 msgid "Docker: https://download.docker.com/mac/stable/Docker.dmg"
 msgstr ""
 
-#: ../../source/installation.rst:261
+#: ../../source/installation.rst:262
 msgid "Git: https://sourceforge.net/projects/git-osx-installer/files/"
 msgstr ""
 
-#: ../../source/installation.rst:263
+#: ../../source/installation.rst:264
 msgid ""
 "After installing docker you should find an icon that looks like a whale "
 "in the task bar."
 msgstr ""
 
-#: ../../source/installation.rst:269
+#: ../../source/installation.rst:270
 msgid "*Docker app running*"
 msgstr ""
 
-#: ../../source/installation.rst:271
+#: ../../source/installation.rst:272
 msgid ""
 "You can verify that docker is running properly by opening the "
 "**Terminal** app and typing:"
 msgstr ""
 
-#: ../../source/installation.rst:277
+#: ../../source/installation.rst:278
 msgid "Which should return"
 msgstr ""
 
-#: ../../source/installation.rst:283
+#: ../../source/installation.rst:284
 msgid "To verify that git is installed, simply type:"
 msgstr ""
 
-#: ../../source/installation.rst:289
+#: ../../source/installation.rst:290
 msgid "Which should return something similar to the following:"
 msgstr ""
 
-#: ../../source/installation.rst:295
+#: ../../source/installation.rst:296
 msgid ""
 "If you get a “bash: git: command not found”, try to restart your "
 "**Terminal** app and double-check for any errors during the install "
 "process."
 msgstr ""
 
-#: ../../source/installation.rst:300
+#: ../../source/installation.rst:301
 msgid ""
 "Docker on macOS works by running a VM in the background (think of it as a"
 " “computer emulator”). This VM has a certain amount of memory allocated "
 "and WebODM can only use as much memory as it’s allocated."
 msgstr ""
 
-#: ../../source/installation.rst:302
+#: ../../source/installation.rst:303
 msgid "Right click the whale icon from the task bar and click **Preferences**..."
 msgstr ""
 
-#: ../../source/installation.rst:303
+#: ../../source/installation.rst:304
 msgid "Select the **Advanced** tab"
 msgstr ""
 
-#: ../../source/installation.rst:304
+#: ../../source/installation.rst:305
 #, python-format
 msgid ""
 "Adjust the CPUs slider to use half of all available CPUs and the memory "
 "to use 60-70% of all available memory"
 msgstr ""
 
-#: ../../source/installation.rst:305
+#: ../../source/installation.rst:306
 msgid "Press **Apply & Restart**"
 msgstr ""
 
-#: ../../source/installation.rst:311
+#: ../../source/installation.rst:312
 msgid "*Docker advanced settings*"
 msgstr ""
 
-#: ../../source/installation.rst:314
+#: ../../source/installation.rst:315
 msgid "Step 4. Download and Launch WebODM"
 msgstr ""
 
-#: ../../source/installation.rst:316
+#: ../../source/installation.rst:317
 msgid "From a **Terminal** type:"
 msgstr ""
 
-#: ../../source/installation.rst:324 ../../source/installation.rst:425
+#: ../../source/installation.rst:325 ../../source/installation.rst:426
 msgid "Then open a web browser to http://localhost:8000."
 msgstr ""
 
-#: ../../source/installation.rst:327
+#: ../../source/installation.rst:328
 msgid "Linux"
 msgstr ""
 
-#: ../../source/installation.rst:329
+#: ../../source/installation.rst:330
 msgid ""
 "OpenDroneMap can run on any Linux distribution that supports docker. "
 "According to `docker’s documentation website "
@@ -582,31 +586,31 @@ msgid ""
 "running OpenDroneMap, Ubuntu is the recommended way to go."
 msgstr ""
 
-#: ../../source/installation.rst:332
+#: ../../source/installation.rst:333
 msgid "Step 1. Install Requirements"
 msgstr ""
 
-#: ../../source/installation.rst:334
+#: ../../source/installation.rst:335
 msgid "There are four programs that need to be installed:"
 msgstr ""
 
-#: ../../source/installation.rst:336
+#: ../../source/installation.rst:337
 msgid "Docker"
 msgstr ""
 
-#: ../../source/installation.rst:337
+#: ../../source/installation.rst:338
 msgid "Git"
 msgstr ""
 
-#: ../../source/installation.rst:338
+#: ../../source/installation.rst:339
 msgid "Python (2 or 3)"
 msgstr ""
 
-#: ../../source/installation.rst:339
+#: ../../source/installation.rst:340
 msgid "Pip"
 msgstr ""
 
-#: ../../source/installation.rst:341
+#: ../../source/installation.rst:342
 msgid ""
 "We cannot possibly cover the installation process for every Linux "
 "distribution out there, so we’ll limit the instructions to those that are"
@@ -614,63 +618,63 @@ msgid ""
 "matter of opening a terminal prompt and typing a few commands."
 msgstr ""
 
-#: ../../source/installation.rst:344
+#: ../../source/installation.rst:345
 msgid "Install on Ubuntu / Debian"
 msgstr ""
 
-#: ../../source/installation.rst:346 ../../source/installation.rst:358
-#: ../../source/installation.rst:369 ../../source/installation.rst:380
+#: ../../source/installation.rst:347 ../../source/installation.rst:359
+#: ../../source/installation.rst:370 ../../source/installation.rst:381
 msgid "Commands to type:"
 msgstr ""
 
-#: ../../source/installation.rst:356
+#: ../../source/installation.rst:357
 msgid "Install on CentOS / RHEL"
 msgstr ""
 
-#: ../../source/installation.rst:367
+#: ../../source/installation.rst:368
 msgid "Install on Fedora"
 msgstr ""
 
-#: ../../source/installation.rst:378
+#: ../../source/installation.rst:379
 msgid "Install on Arch"
 msgstr ""
 
-#: ../../source/installation.rst:387
+#: ../../source/installation.rst:388
 msgid "Step 2. Check Additional Requirements"
 msgstr ""
 
-#: ../../source/installation.rst:389
+#: ../../source/installation.rst:390
 msgid ""
 "In addition to the three programs above, the dockercompose script is also"
 " needed. Sometimes it’s already installed with docker, but sometimes it "
 "isn’t. To verify if it’s installed try to type:"
 msgstr ""
 
-#: ../../source/installation.rst:395
+#: ../../source/installation.rst:396
 msgid "You should see somethings similar to the following:"
 msgstr ""
 
-#: ../../source/installation.rst:401
+#: ../../source/installation.rst:402
 msgid "If instead you get something similar to the following:"
 msgstr ""
 
-#: ../../source/installation.rst:407
+#: ../../source/installation.rst:408
 msgid "you can install it by using pip:"
 msgstr ""
 
-#: ../../source/installation.rst:415
+#: ../../source/installation.rst:416
 msgid "Step 3. Download and Launch WebODM"
 msgstr ""
 
-#: ../../source/installation.rst:417
+#: ../../source/installation.rst:418
 msgid "From a terminal type:"
 msgstr ""
 
-#: ../../source/installation.rst:428
+#: ../../source/installation.rst:429
 msgid "Basic Commands and Troubleshooting"
 msgstr ""
 
-#: ../../source/installation.rst:430
+#: ../../source/installation.rst:431
 #, python-format
 msgid ""
 "The cool thing about using docker is that 99% of the tasks you’ll ever "
@@ -678,14 +682,14 @@ msgid ""
 "script. You have already encountered one of them:"
 msgstr ""
 
-#: ../../source/installation.rst:436
+#: ../../source/installation.rst:437
 msgid ""
 "which takes care of starting WebODM and setting up a default processing "
 "node (node-odm-1). If you want to stop WebODM, you can already guess what"
 " the command is:"
 msgstr ""
 
-#: ../../source/installation.rst:442
+#: ../../source/installation.rst:443
 msgid ""
 "There are several other commands you can use, along with different flags."
 " Flags are parameters passed to the ./webodm.sh command and are typically"
@@ -693,22 +697,22 @@ msgid ""
 " a different network port:"
 msgstr ""
 
-#: ../../source/installation.rst:448
+#: ../../source/installation.rst:449
 msgid "Other useful commands are listed below:"
 msgstr ""
 
-#: ../../source/installation.rst:467
+#: ../../source/installation.rst:468
 msgid ""
 "`The community forum <https://community.opendronemap.org>`_ is a great "
 "place to ask for help if you     get stuck during any of the installation"
 " steps and for general questions on using the ./webodm.sh script."
 msgstr ""
 
-#: ../../source/installation.rst:470
+#: ../../source/installation.rst:471
 msgid "Hello, WebODM!"
 msgstr ""
 
-#: ../../source/installation.rst:472
+#: ../../source/installation.rst:473
 msgid ""
 "After running ./webodm.sh start and opening WebODM in the browser, you "
 "will be greeted with a welcome message and will be asked to create the "
@@ -716,11 +720,11 @@ msgid ""
 " and explore its various menus."
 msgstr ""
 
-#: ../../source/installation.rst:478
+#: ../../source/installation.rst:479
 msgid "*WebODM Dashboard*"
 msgstr ""
 
-#: ../../source/installation.rst:480
+#: ../../source/installation.rst:481
 msgid ""
 "Notice that under the **Processing Nodes** menu there’s a \"node-odm-1\" "
 "node already configured for you to use. This is a NodeODM node and has "
@@ -728,24 +732,24 @@ msgid ""
 "machine as WebODM."
 msgstr ""
 
-#: ../../source/installation.rst:482
+#: ../../source/installation.rst:483
 msgid ""
 "If you’ve made it this far, congratulations! Now it’s time to start "
 "processing some data."
 msgstr ""
 
-#: ../../source/installation.rst:489
+#: ../../source/installation.rst:490
 msgid "Running on more than one machine"
 msgstr ""
 
-#: ../../source/installation.rst:491
+#: ../../source/installation.rst:492
 msgid ""
 "**Optionally:** If you have another computer, you can repeat the "
 "installation process (install docker, git, python, etc.) and launch a new"
 " NodeODM node by typing from a Terminal/Git Bash window:"
 msgstr ""
 
-#: ../../source/installation.rst:497
+#: ../../source/installation.rst:498
 msgid ""
 "The above command asks docker to launch a new container using the "
 "opendronemap/nodeodm image from Docker Hub (the latest version of "
@@ -754,7 +758,7 @@ msgid ""
 "\"secret\"."
 msgstr ""
 
-#: ../../source/installation.rst:499
+#: ../../source/installation.rst:500
 msgid ""
 "From WebODM you can then press the **Add New** button under **Processing "
 "Nodes**. For the **hostname/IP** field type the IP of the second "
@@ -763,16 +767,19 @@ msgid ""
 " as “second computer”. Then press **Save**."
 msgstr ""
 
-#: ../../source/installation.rst:501
+#: ../../source/installation.rst:502
 msgid ""
 "If everything went well, you should now have two processing nodes! You "
 "will be able to process multiple tasks in parallel using two different "
 "machines."
 msgstr ""
 
-#: ../../source/installation.rst:503
+#: ../../source/installation.rst:504
 msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst>`_"
 msgstr ""
+
+#~ msgid "In **Source Location** type: https://github.com/Open-DroneMap/WebODM"
+#~ msgstr ""
 
