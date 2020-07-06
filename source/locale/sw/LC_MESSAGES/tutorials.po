@@ -1,0 +1,440 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 0.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-06 21:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/tutorials.rst:4
+msgid "Tutorials"
+msgstr ""
+
+#: ../../source/tutorials.rst:6
+msgid "Below you will find instructions for some common use cases."
+msgstr ""
+
+#: ../../source/tutorials.rst:9
+msgid "Creating High Quality Orthophotos"
+msgstr ""
+
+#: ../../source/tutorials.rst:15
+msgid ""
+"Without any parameter tweaks, ODM chooses a good compromise between "
+"quality, speed and memory usage. If you want to get higher quality "
+"results, you need to tweak some parameters:"
+msgstr ""
+
+#: ../../source/tutorials.rst:17
+msgid ""
+"``--orthophoto-resolution`` is the resolution of the orthophoto in "
+"cm/pixel. Decrease this value for a higher resolution result."
+msgstr ""
+
+#: ../../source/tutorials.rst:18
+msgid ""
+"``--ignore-gsd`` is a flag that instructs ODM to skip certain memory and "
+"speed optimizations that directly affect the orthophoto. Using this flag "
+"will increase runtime and memory usage, but will produce sharper results."
+msgstr ""
+
+#: ../../source/tutorials.rst:19
+msgid ""
+"``--texturing-nadir-weight`` should be increased to ``29-32`` in urban "
+"areas to reconstruct better edges of roofs. It should be decreased to "
+"``0-6`` in grassy / flat areas."
+msgstr ""
+
+#: ../../source/tutorials.rst:20
+msgid "``--texturing-data-term`` should be set to `area` in forest areas."
+msgstr ""
+
+#: ../../source/tutorials.rst:21
+msgid ""
+"``--mesh-size`` should be increased to `300000-600000` and `--mesh-"
+"octree-depth`` should be increased to `10-11` in urban areas to recreate "
+"better buildings / roofs."
+msgstr ""
+
+#: ../../source/tutorials.rst:24
+msgid "Calibrating the Camera"
+msgstr ""
+
+#: ../../source/tutorials.rst:26
+msgid ""
+"Camera calibration is a special challenge with commodity cameras. "
+"Temperature changes, vibrations, focus, and other factors can affect the "
+"derived parameters with substantial effects on resulting data. Automatic "
+"or self calibration is possible and desirable with drone flights, but "
+"depending on the flight pattern, automatic calibration may not remove all"
+" distortion from the resulting products. James and Robson (2014) in their"
+" paper `Mitigating systematic error in topographic models derived from "
+"UAV and ground‐based image networks "
+"<https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609>`_ address how"
+" to minimize the distortion from self-calibration."
+msgstr ""
+
+#: ../../source/tutorials.rst:32
+msgid ""
+"*Bowling effect on point cloud over 13,000+ image dataset collected by "
+"World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, "
+"Tanzania.*"
+msgstr ""
+
+#: ../../source/tutorials.rst:34
+msgid ""
+"To mitigate this effect, there are a few options but the simplest are as "
+"follows: fly two patterns separated by 20°, and rather than having a "
+"nadir (straight down pointing) camera, use one that tilts forward by 5°."
+msgstr ""
+
+#: ../../source/tutorials.rst:42
+msgid ""
+"As this approach to flying can be take longer than typical flights, a "
+"pilot or team can fly a small area using the above approach. OpenDroneMap"
+" will generate a calibration file called cameras.json that then can be "
+"imported to be used to calibrate another flight that is more efficiently "
+"flown."
+msgstr ""
+
+#: ../../source/tutorials.rst:44
+msgid ""
+"Alternatively, the following experimental method can be applied: fly with"
+" much lower overlap, but two *crossgrid* flights (sometimes called "
+"crosshatch) separated by 20° with a 5° forward facing camera."
+msgstr ""
+
+#: ../../source/tutorials.rst:46
+#, python-format
+msgid ""
+"Crossgrid overlap percentages can be lower than parallel flights. To get "
+"good 3D results, you will require 68% overlap and sidelap for an "
+"equivalent 83% overlap and sidelap."
+msgstr ""
+
+#: ../../source/tutorials.rst:47
+#, python-format
+msgid ""
+"To get good 2D and 2.5D (digital elevation model) results, you will "
+"require 42% overlap and sidelap for an equivalent 70% overlap and "
+"sidelap."
+msgstr ""
+
+#: ../../source/tutorials.rst:53
+msgid ""
+"Vertically separated flight lines also improve accuracy, but less so than"
+" a camera that is forward facing by 5°."
+msgstr ""
+
+#: ../../source/tutorials.rst:59
+msgid ""
+"From James and Robson (2014), `CC BY 4.0 "
+"<https://creativecommons.org/licenses/by/4.0>`_"
+msgstr ""
+
+#: ../../source/tutorials.rst:62
+msgid "Creating Digital Elevation Models"
+msgstr ""
+
+#: ../../source/tutorials.rst:64
+msgid ""
+"By default ODM does not create DEMs. To create a digital terrain model, "
+"make sure to pass the ``--dtm`` flag. To create a digital surface model, "
+"be sure to pass the ``--dsm`` flag."
+msgstr ""
+
+#: ../../source/tutorials.rst:70
+msgid ""
+"For DTM generation, a Simple Morphological Filter (smrf) is used to "
+"classify points in ground vs. non-ground and only the ground points are "
+"used. The ``smrf`` filter can be controlled via several parameters:"
+msgstr ""
+
+#: ../../source/tutorials.rst:72
+msgid ""
+"``--smrf-scalar`` scaling value. Increase this parameter for terrains "
+"with lots of height variation."
+msgstr ""
+
+#: ../../source/tutorials.rst:73
+msgid ""
+"``--smrf-slope`` slope parameter, which is a measure of \"slope "
+"tolerance\". Increase this parameter for terrains with lots of height "
+"variation. Should be set to something higher than 0.1 and not higher than"
+" 1.2."
+msgstr ""
+
+#: ../../source/tutorials.rst:74
+msgid ""
+"``--smrf-threshold`` elevation threshold. Set this parameter to the "
+"minimum height (in meters) that you expect non-ground objects to be."
+msgstr ""
+
+#: ../../source/tutorials.rst:75
+msgid ""
+"``--smrf-window`` window radius parameter (in meters) that corresponds to"
+" the size of the largest feature (building, trees, etc.) to be removed. "
+"Should be set to a value higher than 10."
+msgstr ""
+
+#: ../../source/tutorials.rst:77
+msgid ""
+"Changing these options can affect the result of DTMs significantly. The "
+"best source to read to understand how the parameters affect the output is"
+" to read the original paper `An improved simple morphological filter for "
+"the terrain classification of airborne LIDAR data "
+"<https://www.researchgate.net/publication/258333806_An_Improved_Simple_Morphological_Filter_for_the_Terrain_Classification_of_Airborne_LIDAR_Data>`_"
+" (PDF freely available)."
+msgstr ""
+
+#: ../../source/tutorials.rst:79
+msgid "Overall the ``--smrf-threshold`` option has the biggest impact on results."
+msgstr ""
+
+#: ../../source/tutorials.rst:81
+msgid ""
+"SMRF is good at avoiding Type I errors (small number of ground points "
+"mistakenly classified as non-ground) but only \"acceptable\" at avoiding "
+"Type II errors (large number non-ground points mistakenly classified as "
+"ground). This needs to be taken in consideration when generating DTMs "
+"that are meant to be used visually, since objects mistaken for ground "
+"look like artifacts in the final DTM."
+msgstr ""
+
+#: ../../source/tutorials.rst:87
+msgid "Two other important parameters affect DEM generation:"
+msgstr ""
+
+#: ../../source/tutorials.rst:89
+msgid ""
+"``--dem-resolution`` which sets the output resolution of the DEM raster "
+"(cm/pixel)"
+msgstr ""
+
+#: ../../source/tutorials.rst:90
+msgid ""
+"``--dem-gapfill-steps`` which determines the number of progressive DEM "
+"layers to use. For urban scenes increasing this value to `4-5` can help "
+"produce better interpolation results in the areas that are left empty by "
+"the SMRF filter."
+msgstr ""
+
+#: ../../source/tutorials.rst:92
+msgid "Example of how to generate a DTM::"
+msgstr ""
+
+#: ../../source/tutorials.rst:99
+msgid "Ground Control Points"
+msgstr ""
+
+#: ../../source/tutorials.rst:101
+msgid ""
+"Ground control points are useful for correcting distortions in the data "
+"and referencing the data to know coordinate systems."
+msgstr ""
+
+#: ../../source/tutorials.rst:103
+msgid "The format of the GCP file is simple."
+msgstr ""
+
+#: ../../source/tutorials.rst:105
+msgid ""
+"The header line is a description of a UTM coordinate system, which must "
+"be written as a proj4 string. http://spatialreference.org/ is a good "
+"resource for finding that information. Please note that currently angular"
+" coordinates (like lat/lon) DO NOT work."
+msgstr ""
+
+#: ../../source/tutorials.rst:106
+msgid ""
+"Subsequent lines are the X, Y & Z coordinates, your associated pixels and"
+" the image filename:"
+msgstr ""
+
+#: ../../source/tutorials.rst:108
+msgid "GCP file format::"
+msgstr ""
+
+#: ../../source/tutorials.rst:114
+msgid "e.g. for the Langley dataset::"
+msgstr ""
+
+#: ../../source/tutorials.rst:121
+msgid ""
+"If you supply a GCP file called gcp_list.txt then ODM will automatically "
+"detect it. If it has another name you can specify using ``--gcp <path>``."
+" If you have a gcp file and want to do georeferencing with exif instead, "
+"then you can specify ``--use-exif``."
+msgstr ""
+
+#: ../../source/tutorials.rst:123
+msgid ""
+"`This post has some information about placing Ground Control Targets "
+"before a flight <http://diydrones.com/profiles/blogs/ground-control-"
+"points-gcps-for-aerial-photography>`_, but if you already have images, "
+"you can find your own points in the images post facto. It's important "
+"that you find high-contrast objects that are found in **at least** 3 "
+"photos, and that you find a minimum of 5 objects."
+msgstr ""
+
+#: ../../source/tutorials.rst:125
+msgid ""
+"Sharp corners are good picks for GCPs. You should also place/find the "
+"GCPs evenly around your survey area."
+msgstr ""
+
+#: ../../source/tutorials.rst:127
+msgid ""
+"The ``gcp_list.txt`` file must be created in the base of your project "
+"folder."
+msgstr ""
+
+#: ../../source/tutorials.rst:129
+msgid ""
+"For good results your file should have a minimum of 15 lines after the "
+"header (5 points with 3 images to each point)."
+msgstr ""
+
+#: ../../source/tutorials.rst:132
+msgid "Ground Control Points Interface"
+msgstr ""
+
+#: ../../source/tutorials.rst:134
+msgid ""
+"WebODM has a GCP interface, and example of which can be seen on `the "
+"WebODM Demo <http://demo.webodm.org/plugins/posm-gcpi/>`_. To use this "
+"with known ground control XYZ values, one would do the following:"
+msgstr ""
+
+#: ../../source/tutorials.rst:136
+msgid ""
+"Create a GCP list that only includes gcp name (this is the label that "
+"will be seen in the GCP interface), x, y, and z, with a header with a "
+"proj4 string of your GCPs (make sure they are in a planar coordinate "
+"system, such as UTM. It should look something like this:"
+msgstr ""
+
+#: ../../source/tutorials.rst:147
+msgid ""
+"Then one can load this GCP list into the interface, load the images, and "
+"place each of the GCPs in the image."
+msgstr ""
+
+#: ../../source/tutorials.rst:149
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/using.rst>`_"
+msgstr ""
+
+#: ../../source/tutorials.rst:152
+msgid "Using Docker"
+msgstr ""
+
+#: ../../source/tutorials.rst:154
+msgid ""
+"Since many users employ docker to deploy OpenDroneMap, it can be useful "
+"to understand some basic commands in order to interrogate the docker "
+"instances when things go wrong, or we are curious about what is "
+"happening. Docker is a containerized environment intended, among other "
+"things, to make it easier to deploy software independent of the local "
+"environment. In this way, it is similar to virtual machines."
+msgstr ""
+
+#: ../../source/tutorials.rst:156
+msgid "A few simple commands can make our docker experience much better."
+msgstr ""
+
+#: ../../source/tutorials.rst:159
+msgid "Listing Docker Machines"
+msgstr ""
+
+#: ../../source/tutorials.rst:161
+msgid ""
+"We can start by listing available docker machines on the current machine "
+"we are running as follows:"
+msgstr ""
+
+#: ../../source/tutorials.rst:170
+msgid ""
+"If we want to see machines that may not be running but still exist, we "
+"can add the `-a` flag:"
+msgstr ""
+
+#: ../../source/tutorials.rst:183
+msgid "Accessing logs on the instance"
+msgstr ""
+
+#: ../../source/tutorials.rst:185
+msgid ""
+"Using either the `CONTAINER ID` or the name, we can access any logs "
+"available on the machine as follows:"
+msgstr ""
+
+#: ../../source/tutorials.rst:191
+msgid ""
+"This is likely to be unwieldy large, but we can use a pipe `|` character "
+"and other tools to extract just what we need from the logs. For example "
+"we can move through the log slowly using the `more` command:"
+msgstr ""
+
+#: ../../source/tutorials.rst:207
+msgid ""
+"Pressing `Enter` or `Space`, arrow keys or `Page Up` or `Page Down` keys "
+"will now help us navigate through the logs. The lower case letter `Q` "
+"will let us escape back to the command line."
+msgstr ""
+
+#: ../../source/tutorials.rst:209
+msgid ""
+"We can also extract just the end of the logs using the `tail` commmand as"
+" follows:"
+msgstr ""
+
+#: ../../source/tutorials.rst:220
+msgid ""
+"The value `-5` tells the tail command to give us just the last 5 lines of"
+" the logs."
+msgstr ""
+
+#: ../../source/tutorials.rst:223
+msgid "Command line access to instances"
+msgstr ""
+
+#: ../../source/tutorials.rst:225
+msgid ""
+"Sometimes we need to go a little deeper in our exploration of the process"
+" for OpenDroneMap. For this, we can get direct command line access to the"
+" machines. For this, we can use `docker exec` to execute a `bash` command"
+" line shell in the machine of interest as follows:"
+msgstr ""
+
+#: ../../source/tutorials.rst:232
+msgid "Now we are logged into our docker instance and can explore the machine."
+msgstr ""
+
+#: ../../source/tutorials.rst:235
+msgid "Cleaning up after Docker"
+msgstr ""
+
+#: ../../source/tutorials.rst:237
+msgid ""
+"Docker has a lamentable use of space and by default does not clean up "
+"excess data and machines when processes are complete. This can be "
+"advantageous if we need to access a process that has since terminated, "
+"but carries the burden of using increasing amounts of storage over time. "
+"Maciej Łebkowski has an `excellent overview of how to manage excess disk "
+"usage in docker <https://lebkowski.name/docker-volumes/>`_."
+msgstr ""
+

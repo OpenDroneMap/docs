@@ -1,0 +1,135 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2018, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 0.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-06 21:01+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/outputs.rst:2
+msgid "OpenDroneMap Outputs"
+msgstr ""
+
+#: ../../source/outputs.rst:4
+msgid "Listed below are some of the useful outputs ODM produces."
+msgstr ""
+
+#: ../../source/outputs.rst:7
+msgid "Point Cloud"
+msgstr ""
+
+#: ../../source/outputs.rst:9
+msgid ""
+"``odm_georeferencing/odm_georeferenced_model.ply/laz/csv`` -- The "
+"georeferenced point cloud in different file formats"
+msgstr ""
+
+#: ../../source/outputs.rst:15
+msgid ""
+"*Point cloud over State University Zanzibar, courtesy of* `Khadija "
+"Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-"
+"56b4044a/>`_"
+msgstr ""
+
+#: ../../source/outputs.rst:19
+msgid "3D Textured Model"
+msgstr ""
+
+#: ../../source/outputs.rst:21
+msgid ""
+"``odm_texturing/odm_textured_model.obj`` -- The textured surface mesh "
+"``odm_texturing/odm_textured_model_geo.obj`` -- The georeferenced and "
+"textured surface mesh"
+msgstr ""
+
+#: ../../source/outputs.rst:24
+msgid ""
+"You can access the point cloud and textured meshes using MeshLab. Open "
+"MeshLab, and choose File:Import Mesh and choose your textured mesh from a"
+" location similar to the following: "
+"``odm_texturing\\odm_textured_model.obj``"
+msgstr ""
+
+#: ../../source/outputs.rst:30
+msgid ""
+"*Textured mesh over State University Zanzibar, courtesy of* `Khadija "
+"Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-"
+"56b4044a/>`_"
+msgstr ""
+
+#: ../../source/outputs.rst:33
+msgid "Orthophoto"
+msgstr ""
+
+#: ../../source/outputs.rst:35
+msgid ""
+"``odm_orthophoto/odm_orthphoto.png`` -- The orthophoto, but this is a "
+"simple png, which doesn't have any georeferencing information"
+msgstr ""
+
+#: ../../source/outputs.rst:37
+msgid ""
+"``odm_orthophoto/odm_orthphoto.tif`` -- GeoTIFF Orthophoto. You can use "
+"it in QGIS as a raster layer."
+msgstr ""
+
+#: ../../source/outputs.rst:43
+msgid ""
+"*Orthophoto over State University Zanzibar, courtesy of* `Khadija "
+"Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-"
+"56b4044a/>`_"
+msgstr ""
+
+#: ../../source/outputs.rst:46
+msgid "DTM/DSM"
+msgstr ""
+
+#: ../../source/outputs.rst:48
+msgid ""
+"DTM/DSM will only be created if the ``--dtm`` or ``--dsm`` options are "
+"used. See `tutorial on elevation models "
+"<https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-"
+"models>`_ for more options in creating."
+msgstr ""
+
+#: ../../source/outputs.rst:50
+msgid "Data will be stored in:"
+msgstr ""
+
+#: ../../source/outputs.rst:52
+msgid "``odm_dem/dtm.tif``"
+msgstr ""
+
+#: ../../source/outputs.rst:53
+msgid "``odm_dem/dsm.tif``"
+msgstr ""
+
+#: ../../source/outputs.rst:59
+msgid ""
+"*Digital surface model over State University Zanzibar, courtesy of* "
+"`Khadija Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-"
+"56b4044a/>`_"
+msgstr ""
+
+#: ../../source/outputs.rst:62
+msgid "List of all outputs"
+msgstr ""
+
+#: ../../source/outputs.rst:109
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/outputs.rst>`_"
+msgstr ""
+
