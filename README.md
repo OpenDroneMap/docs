@@ -10,7 +10,7 @@ Tips, tricks, hacks, datasets, lessons learned, best practices, every bit helps.
 
 # How To Make Your First Contribution
 
-If you don't have a GitHub account, [register](https://github.com/join?source=header-home) first. It's free and GitHhub is awesome.
+If you don't have a GitHub account, [register](https://github.com/join?source=header-home) first. It's free and GitHub is awesome.
 
 Once you have an account there are two ways to contribute. One is quick for small changes, the second takes a bit longer to setup but makes writing long parts of documentation much quicker.
 

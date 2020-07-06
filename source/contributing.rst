@@ -1,6 +1,6 @@
 .. contributing
 
-How to contribute
+How To Contribute
 =================
 
 OpenDroneMap relies on community contributions. You can contribute in many ways, even if you are not a programmer.
