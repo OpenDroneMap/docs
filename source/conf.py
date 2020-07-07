@@ -14,9 +14,9 @@ copyright = '2020, OpenDroneMap'
 author = 'OpenDroneMap'
 
 # The short X.Y version
-version = '0.9.9'
+version = '0.9.10'
 # The full version, including alpha/beta/rc tags
-release = '0.9.9'
+release = '0.9.10'
 
 
 # -- General configuration ---------------------------------------------------
@@ -32,6 +32,9 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx.ext.githubpages'
 ]
+#For internationalization:
+locale_dirs = ['locale/']
+gettext_compact = False
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']

@@ -32,10 +32,12 @@ Welcome to OpenDroneMap's documentation
     tutorials
     arguments
     outputs
+    gcp
     large
     resources
     flying
     multispectral
+    requesting-features
     contributing
 
 `Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/index.rst>`_

@@ -1,0 +1,181 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 0.9.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-06 21:47+0000\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.6.0\n"
+
+#: ../../source/gcp.rst:3
+msgid "Ground Control Points"
+msgstr ""
+
+#: ../../source/gcp.rst:5
+msgid ""
+"Ground control points are useful for correcting distortions in the data "
+"and referencing the data to know coordinate systems."
+msgstr ""
+
+#: ../../source/gcp.rst:7
+msgid "The format of the GCP file is simple."
+msgstr ""
+
+#: ../../source/gcp.rst:9
+msgid ""
+"The first line should contain the name of the projection used for the geo"
+" coordinates. This can be specified either as a PROJ string (e.g. "
+"``+proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), EPSG"
+" code (e.g. ``EPSG:4326``) or as a ``WGS84 UTM <zone>[N|S]`` value (eg. "
+"``WGS84 UTM 16N``)"
+msgstr ""
+
+#: ../../source/gcp.rst:10
+msgid ""
+"Subsequent lines are the X, Y & Z coordinates, your associated pixels, "
+"the image filename and optional extra fields, separated by tabs or "
+"spaces:"
+msgstr ""
+
+#: ../../source/gcp.rst:11
+msgid "Elevation values can be set to \"NaN\" to indicate no value"
+msgstr ""
+
+#: ../../source/gcp.rst:12
+msgid "The 7th column (optional) typically contains the label of the GCP."
+msgstr ""
+
+#: ../../source/gcp.rst:14
+msgid "GCP file format::"
+msgstr ""
+
+#: ../../source/gcp.rst:20
+msgid "Example::"
+msgstr ""
+
+#: ../../source/gcp.rst:27
+msgid ""
+"If you supply a GCP file called ``gcp_list.txt`` then ODM will "
+"automatically detect it. If it has another name you can specify using "
+"``--gcp <path>``. If you have a gcp file and want to do georeferencing "
+"with exif instead, then you can specify ``--use-exif``. If you have high "
+"precision GPS measurements in your images (RTK) and want to use that "
+"information along with a gcp file, you can specify ``--force-gps``."
+msgstr ""
+
+#: ../../source/gcp.rst:29
+msgid ""
+"`This post has some information about placing Ground Control Targets "
+"before a flight <http://diydrones.com/profiles/blogs/ground-control-"
+"points-gcps-for-aerial-photography>`_, but if you already have images, "
+"you can find your own points in the images post facto. It's important "
+"that you find high-contrast objects that are found in **at least** 3 "
+"photos, and that you find a minimum of 5 objects."
+msgstr ""
+
+#: ../../source/gcp.rst:31
+msgid ""
+"Sharp corners are good picks for GCPs. You should also place/find the "
+"GCPs evenly around your survey area."
+msgstr ""
+
+#: ../../source/gcp.rst:33
+msgid ""
+"The ``gcp_list.txt`` file must be created in the base of your project "
+"folder."
+msgstr ""
+
+#: ../../source/gcp.rst:35
+msgid ""
+"For good results your file should have a minimum of 15 lines after the "
+"header (5 points with 3 images to each point)."
+msgstr ""
+
+#: ../../source/gcp.rst:39
+msgid "User Interfaces"
+msgstr ""
+
+#: ../../source/gcp.rst:41
+msgid "You can use one of two user interfaces for creating GCP files:"
+msgstr ""
+
+#: ../../source/gcp.rst:43
+msgid "`POSM GCPi <https://github.com/posm/posm-gcpi>`_"
+msgstr ""
+
+#: ../../source/gcp.rst:44
+msgid "`GCP Editor Pro <https://github.com/uav4geo/GCPEditorPro>`_"
+msgstr ""
+
+#: ../../source/gcp.rst:48
+msgid "POSM GCPi"
+msgstr ""
+
+#: ../../source/gcp.rst:50
+msgid ""
+"The POSM GCPi is loaded by default on WebODM. An example is available at "
+"`the WebODM Demo <http://demo.webodm.org/plugins/posm-gcpi/>`_. To use "
+"this with known ground control XYZ values, one would do the following:"
+msgstr ""
+
+#: ../../source/gcp.rst:52
+msgid ""
+"Create a GCP list that only includes gcp name (this is the label that "
+"will be seen in the GCP interface), x, y, and z, with a header with a "
+"proj4 string of your GCPs (make sure they are in a planar coordinate "
+"system, such as UTM. It should look something like this:"
+msgstr ""
+
+#: ../../source/gcp.rst:63
+msgid ""
+"Then one can load this GCP list into the interface, load the images, and "
+"place each of the GCPs in the image."
+msgstr ""
+
+#: ../../source/gcp.rst:67
+msgid "GCP Editor Pro"
+msgstr ""
+
+#: ../../source/gcp.rst:69
+msgid ""
+"This app needs to be installed separately or can be loaded as a WebODM "
+"plugin from `https://github.com/uav4geo/GCPEditorPro "
+"<https://github.com/uav4geo/GCPEditorPro>`_"
+msgstr ""
+
+#: ../../source/gcp.rst:71
+msgid ""
+"Create a CSV file that includes the gcp name, northing, easting and "
+"elevation."
+msgstr ""
+
+#: ../../source/gcp.rst:80
+msgid ""
+"Then import the CSV from the main screen and type ``+proj=utm +zone=37 "
+"+south +ellps=WGS84 +datum=WGS84 +units=m +no_defs`` in the ``EPSG/PROJ``"
+" box."
+msgstr ""
+
+#: ../../source/gcp.rst:82
+msgid ""
+"The following screen will display a map from where to select the GCPs to "
+"tag and import the respective images."
+msgstr ""
+
+#: ../../source/gcp.rst:85
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_"
+msgstr ""
+

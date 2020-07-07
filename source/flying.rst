@@ -1,4 +1,4 @@
-Flying tips
+Flying Tips
 ===========
 
 The `Humanitarian OpenStreetMap team <https://www.hotosm.org/>`_ has guidelines on `flying for UAV mapping <https://uav-guidelines.openaerialmap.org/>`_:
