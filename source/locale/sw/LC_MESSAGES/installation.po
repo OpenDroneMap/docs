@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../source/installation.rst:4
 msgid "Installation and Getting Started"
-msgstr ""
+msgstr "Kuingiza na kuanza kutumia"
 
 #: ../../source/installation.rst:6
 msgid ""
@@ -28,7 +28,9 @@ msgid ""
 "`OpenDroneMap: The Missing Guide <https://odmbook.com>`_, by Piero "
 "Toffanin."
 msgstr ""
-
+"Kipengele hiki kimekubalika na kurahisishwa pamoja na ruhusa kutoka "
+"OpenDroneMap: Maelekezo yaliokosekana <https://odmbook.com>`_, by Piero "
+"Toffanin."
 #: ../../source/installation.rst:8
 msgid ""
 "Until recently OpenDroneMap was the term used to refer to a single "
@@ -38,45 +40,57 @@ msgid ""
 "analyze and display aerial data. This ecosystem is made of several "
 "components:"
 msgstr ""
-
+"Hadi sasa OpenDroneMap imekua ni term inayotumika kuwakilisha mstari mmoja "
+"wa camand application (ambayo sasa inajuulika kama ODM project). Pamoja na "
+"maendeleo ya sasaya we interface,ya API na tools nyengine, OpenDroneMap "
+"imekua tegemezi kwa application tofauti kwa kuchakata, kuchambua na "
+"kuonesha data za ardhini. Utegemeo huu umetengeneza baadhi ya vipengele.
 #: ../../source/installation.rst:14
 msgid ""
 "**ODM** is the processing engine, which can be used from the command "
 "line. It takes images as input and produces a variety of outputs, "
 "including point clouds, 3D models and orthophotos"
 msgstr ""
-
+"**ODM**  ni mashine ya kuchakata, ambayo inaweza kutumika kutoka camand "
+"line. itachukua picha kama kiingizio na kutoa matokeo tofauti, ikiwemo "
+"point clouds, 3D model na orthophotos."
 #: ../../source/installation.rst:20
 msgid ""
 "**NodeODM** is a light-weight API built on top of ODM. It allows users "
 "and applications to access the functions of ODM over a computer network"
 msgstr ""
-
+"**NodeODM** ni light-weight API iliojengwa juu ya ODM. Inaruhusu "
+"watumiaji na application kutumia function za ODM kwenye computer mtandao"
 #: ../../source/installation.rst:26
 msgid ""
 "**WebODM** is a friendly user interface that includes a map viewer, a 3D "
 "viewer, user logins, a plugin system and many other features that are "
 "expected of modern drone mapping platforms"
 msgstr ""
-
+"**WebODM** ni muonekano rahisi wa mtumiajiinayokusanya muonekano wa ramani, "
+"muonesho wa 3D, user login, mfumo wa plagin na vipengele vyengine ambavyo "
+"vinategemewa na drone mapping platform za kisasa."
 #: ../../source/installation.rst:32
 msgid ""
 "**CloudODM** is a small command line client to communicate with ODM via "
 "the NodeODM API"
 msgstr ""
-
+"**CloudODM** ni mtari mdogo wa camand ya mteja kwa kuwasiliana na ODM "
+"kupitia NodeODM API" 
 #: ../../source/installation.rst:38
 msgid ""
 "**PyODM** is a Python SDK for creating tasks via the NodeODM API. We "
 "cover it in more detail in the “Automated Processing With Python” chapter"
 msgstr ""
-
+"**PyODM** ni Python SDK kwa kutengeza kazi kupitia NodeODM API. Tunavalisha"
+" maelezo zaidi ndani ya “Automated Processing With Python” chapter" 
 #: ../../source/installation.rst:44
 msgid ""
 "**ClusterODM** is a load balancer for connecting together multiple "
 "NodeODM instances"
 msgstr ""
-
+"**ClusterODM** ni balance ya kubeba kwa kuunganisha pamoja NodeODM "
+"instance nyingi"
 #: ../../source/installation.rst:46
 msgid ""
 "ODM, NodeODM and WebODM are available on all major platforms (Windows, "
@@ -90,7 +104,16 @@ msgid ""
 "installed users do not have to worry much about docker, as it operates "
 "(almost) transparently."
 msgstr ""
-
+"ODM, NodeODM na WebODM zinapatika katika platform kuu (Windows,macOS na "
+"Linux) kupitia programu inayoitwa docker, ambayo unatakiwa ifanye kazi "
+"software. Docker  inatoa njia ya kutumia “containers”. Container "
+"zimekusanywa kukopiwa kwa system yote, ni software na inajitegemea."
+"Container hii inarun ndani ya mazingira ya virtual. Katika Linux "
+"mazingira ya virtual hii yanapatika ndani ya operating system na ni "
+"rahisi kwa macOS na Windows hio container inarun ndani ya VM, kwa "
+"hiyo kuna nafasi mbele. lakini bado ni sawa kutumia software. Mara "
+"ikiingizwa mtumiaji hana haja ya kujali kuhusu docker, kama inafanya "
+"kazi  sawa (kiujumla)."
 #: ../../source/installation.rst:48
 msgid ""
 "Without docker it would not be possible to run ODM on Windows or macOS. "
@@ -99,7 +122,11 @@ msgid ""
 " and the possibility to make a native port of all dependencies to macOS, "
 "which is going to make the installation much easier."
 msgstr ""
-
+"Bila ya docker itakuwa sio rahisi ODM na Windowsau macOS kufanya kazi. "
+"Katika platform hizi ODM haziwezi kurun inavyotakiwa. Maendeleo ya nguvu "
+"za baadae yatazingatia juu ya nguvu mpya za Windows subsystem kwa Linux "
+"(WSL) na rahisi kuanzisha port kwa tegemezi zote za macOS, ambazo "
+"zitafanya uingizwa software rahisi zaidi."
 #: ../../source/installation.rst:50
 msgid ""
 "On Ubuntu Linux 16.04 it’s feasible to run all OpenDroneMap software "
@@ -109,26 +136,31 @@ msgid ""
 "containerization far outweigh a tiny performance penalty. With docker "
 "users also get easy one-step updates of the software, so that’s nice."
 msgstr ""
-
+"Katika Ubuntu Linux 16.04 inawezekana kurun OpenDroneMap software zote "
+"wenyewe. Hata hivyo, kwa sababu kuna kuongezeka ufanisi kwa kufanya kazi"
+" docker kwenye Linux na docker ina njia nyepesi ya kupangilia katika "
+"platform hii, hatushauri hio. Katika Linux ya faida ya chombo kisichizidi"
+" uwezowe uliopewa.Kwa watumiaji wa docker pia wanapata urahisi katika "
+"kupangilia kuapdate software, kwa hio ni vizuri."
 #: ../../source/installation.rst:54
 msgid "Hardware Recommendations"
-msgstr ""
+msgstr "Sifa za Hardware"
 
 #: ../../source/installation.rst:56
 msgid "The bare minimum requirements for running the software are:"
-msgstr ""
+msgstr "Nafasi ndogo inayotakiwa kwa kutumia software ni:"
 
 #: ../../source/installation.rst:59
 msgid "64bit CPU manufactured on or after 2010"
-msgstr ""
+msgstr "64bit CPU iliotengenezwa sasa au baada ya 2010"
 
 #: ../../source/installation.rst:60
 msgid "20 GB of disk space"
-msgstr ""
+msgstr "20 GB ya kiendshi disk"
 
 #: ../../source/installation.rst:61
 msgid "4 GB RAM"
-msgstr ""
+msgstr "4 GB RAM"
 
 #: ../../source/installation.rst:63
 msgid ""
@@ -136,18 +168,20 @@ msgid ""
 "specifications (the software will run out of memory). Recommended "
 "requirements are:"
 msgstr ""
-
+" Si zaidi ya picha 100-200  zinaweza kuchakatwa kwa sifa hizo hapo "
+"juu (software itafanya kazi kinyume na nafasi). Mahitaji yafuatayo "
+"yanapendekezwa:"
 #: ../../source/installation.rst:65
 msgid "Latest Generation CPU"
-msgstr ""
+msgstr "Toleo la sasa la CPU"
 
 #: ../../source/installation.rst:66
 msgid "100 GB of disk space"
-msgstr ""
+msgstr "100 GB za kiendeshi disk"
 
 #: ../../source/installation.rst:67
 msgid "16 GB RAM"
-msgstr ""
+msgstr "16 GB RAM"
 
 #: ../../source/installation.rst:69
 msgid ""
@@ -157,30 +191,35 @@ msgid ""
 "processing more images, add more disk space and RAM linearly to the "
 "number of images you need to process."
 msgstr ""
-
+"sifa hizo zitaruhusu kwa picha kidogo mia mojakuchakatwa bina uzito mwingi."
+" CPU iliyo na core nyingi itaruhu kuchakata haraka, wakati kadi ya picha "
+"(CPU) kwa wakati huo haina faida juu ya utendaji kazi. Kwa kuchakata picha"
+" zaidi, engeza kiendshi diski na RAM kulingana na picha unzotaka kuchakata." 
 #: ../../source/installation.rst:75
 msgid "Installation"
-msgstr ""
+msgstr "Uingizaji"
 
 #: ../../source/installation.rst:77
 msgid ""
 "We recommend people use `docker <https://www.docker.com>`_ for running "
 "ODM, whether you are on Windows, macOS or Linux."
 msgstr ""
-
+"Tunapendekeza watu kutumia `docker <https://www.docker.com>`_ kwa kurun "
+"ODM, kama unatumia Windows,macOS au Linux."
 #: ../../source/installation.rst:80
 msgid "Windows"
-msgstr ""
+msgstr "Windows"
 
 #: ../../source/installation.rst:82
 msgid ""
 "To run OpenDroneMap you need at least Windows 7. Previous versions of "
 "Windows are not supported."
 msgstr ""
-
+"Kutumia OpenDroneMap unahitaji angalau Windows 7. Toleo la nyuma la "
+"windows halihimili."
 #: ../../source/installation.rst:86 ../../source/installation.rst:238
 msgid "Step 1. Check Virtualization Support"
-msgstr ""
+msgstr "Jia ya 1. Angalia msaada wa uvumbuzi"
 
 #: ../../source/installation.rst:88
 msgid ""
@@ -190,10 +229,14 @@ msgid ""
 " the **Task Manager** (press CTRL+SHIFT+ESC) and switch to the "
 "**Performance** tab."
 msgstr ""
-
+"Docker inahitaji vipengele kutoka kwenye CPU yako inayoitwa virtualization,"
+" ambayo inaruhusu kufanya kazi virtual mashine (VMs). Hakikisha unaweka "
+"enabled! baadhi ya muda huwa disabled. Kuangalia, katika windows 8 au ya "
+"juu zaidi unaweza kufungua **Task Manager** (Bonyeza CTRL+SHIFT+ESC) na washa"
+" **Performance** tab."
 #: ../../source/installation.rst:94
 msgid "*Virtualization should be enabled*"
-msgstr ""
+msgstr "virtualization lazima iruhusiwe"
 
 #: ../../source/installation.rst:96
 msgid ""
@@ -201,7 +244,9 @@ msgid ""
 "`Microsoft® Hardware-Assisted Virtualization Detection Tool <http:// "
 "www.microsoft.com/en-us/download/details.aspx?id=592>`_ instead."
 msgstr ""
-
+"Katika Window 7 kuangalia kama una virtualization ilioruhusiwa, unaweza "
+"kutumia `Microsoft® Hardware-Assisted Virtualization Detection Tool <http:// "
+"www.microsoft.com/en-us/download/details.aspx?id=592>`_ badala yake."
 #: ../../source/installation.rst:99
 msgid ""
 "If virtualization is disabled, you’ll need to enable it. The procedure "
@@ -212,72 +257,85 @@ msgid ""
 "boot menu and changing the settings to enable virtualization (often "
 "called “VT-X”)."
 msgstr ""
-
+"Ikiwa virtualization haijaruhusiwa, unahitajika uiruhusu. Kwa sasa watoaji"
+" ni tofauti kidogo kwa kila aina ya computer, Njia nzuri kufanya hivi ni "
+"kuangalia katika search engine “how to enable vtx for <type"
+" your computer model here>”. Kawaida muda hutegemea na kurestart computer,"
+" haraka bonyeza F2 au F12 wakati inawaka,angalia boot menu na badilisha "
+"mpangilo kwa kuruhusu virtualization (kawaida inaitwa "VT-X")."
 #: ../../source/installation.rst:105
 msgid ""
 "*Common keys to press at computer startup to access the boot menu for "
 "various PC vendors*"
 msgstr ""
-
+"*Key ilozoeleka kubonyeza kwa kuwasha computer kutumia boot menu kwa "
+"watengezaji wengi wa PC*"
 #: ../../source/installation.rst:108 ../../source/installation.rst:257
 msgid "Step 2. Install Requirements"
-msgstr ""
+msgstr "Njia ya 2. Ingiza Vinavyohitajika"
 
 #: ../../source/installation.rst:110
 msgid "First, you’ll need to install:"
-msgstr ""
+msgstr "Kwanza, Unahitaji kuingiza:"
 
 #: ../../source/installation.rst:112
 msgid "Git: https://git-scm.com/downloads"
-msgstr ""
+msgstr "Git: https://git-scm.com/downloads"
 
 #: ../../source/installation.rst:113
 msgid "Python (latest version 3): https://www.python.org/downloads/windows/"
-msgstr ""
+msgstr "Python (latest version 3): https://www.python.org/downloads/windows/"
 
 #: ../../source/installation.rst:115
 msgid ""
 "For Python 3, make sure you check **Add Python 3.x to PATH** during the "
 "installation."
 msgstr ""
-
+"Kwa Python 3, hakikisha unaangalia **Add Python 3.x to PATH** wakati "
+"wa uingizaji."
 #: ../../source/installation.rst:121
 msgid ""
 "*Don’t forget to add the Python executable to your PATH (so that you can "
 "run commands with it)*"
 msgstr ""
-
+"*Usisahau kuingiza Python executable katika PATH (kwa maana hio unaweza kurun "
+"camand pamoja)."
 #: ../../source/installation.rst:123
 msgid ""
 "Then, only if you are on Windows 10 Home, Windows 8 (any version) or "
 "Windows 7 (any version), install:"
 msgstr ""
-
+"Kisha,ikiwa upo katika Windows 10 home pekee, Windows 8 (toleo lolote)"
+" au Windows 7 (toleo lolote), ingiza:"
 #: ../../source/installation.rst:125
 msgid ""
 "Docker Toolbox: "
 "https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe"
 msgstr ""
-
+"Docker Toolbox: "
+"https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe"
 #: ../../source/installation.rst:127
 msgid ""
 "If you are on Windows 10 Professional or a newer version, you should "
 "install instead:"
 msgstr ""
-
+"Ikiwa upo katika Windows 10 Professional au toleo jipya, unaweza kuingiza"
+" badala yake:"
 #: ../../source/installation.rst:129
 #, python-format
 msgid ""
 "Docker for Windows: "
 "https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe"
 msgstr ""
-
+"Docker for Windows: "
+"https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe"
 #: ../../source/installation.rst:131
 msgid ""
 "Please do **NOT** install both docker programs. They are different and "
 "will create a mess if they are both installed."
 msgstr ""
-
+"Tafadhali **usingize** programu zote za docker. Ni tofauti na "
+"utatengeneza tatizo ikiwa zote zimeingizwa."
 #: ../../source/installation.rst:133
 msgid ""
 "After installing docker, launch it from the Desktop icon that is created "
@@ -286,10 +344,13 @@ msgid ""
 "important, do not skip this step. If there are errors, follow the prompts"
 " on screen to fix them."
 msgstr ""
-
+"Baada ya kuingiza docker, funguakutoka Desktop icon ambayo imetengenezwa "
+"ilipoingizwa (**Docker Quickstart** kwa Docker Toolbox, **Docker for "
+"Windows** kwa docker kwa ajili ya Windows). Hii ni muhimu, usikatishe "
+"stepu hii. ikiwa kuna makosa fuata haraka katika koo na uyatatue."
 #: ../../source/installation.rst:136 ../../source/installation.rst:299
 msgid "Step 3. Check Memory and CPU Allocation"
-msgstr ""
+msgstr "Njia ya 3. Angalia nafasi na mgao wa CPU"
 
 #: ../../source/installation.rst:138
 msgid ""
@@ -297,26 +358,31 @@ msgid ""
 "as a “computer emulator”). This VM has a certain amount of memory "
 "allocated and WebODM can only use as much memory as it’s allocated."
 msgstr ""
-
+"Docker katika Windows inafanya kazi kwa kufungua VM katika msingi "
+"(Fikiria VM kama “computer emulator”). VM hii ina kiwango fulani cha "
+"nafasi kilichogaiwa na WebODM, kinaweza kutumika tu kwa kiasi ambacho"
+" kimetengwa."
 #: ../../source/installation.rst:140
 msgid ""
 "If you installed Docker Toolbox (see below if you installed Docker for "
 "Windows instead):"
 msgstr ""
-
+"Ikiwa utaingiza Docker Toolbox (angalia chini ikiwa utaingiza Docker "
+"badala ya windows):"
 #: ../../source/installation.rst:142
 msgid "Open the **VirtualBox Manager** application"
-msgstr ""
+msgstr "Fungua **VirtualBox Manager** application"
 
 #: ../../source/installation.rst:143
 msgid ""
 "Right click the **default** VM and press **Close (ACPI Shutdown)** to "
 "stop the machine"
 msgstr ""
-
+"Right click **default** VM na bonyeza **Close (ACPI Shutdown)** "
+"kusimamisha mashine"
 #: ../../source/installation.rst:144
 msgid "Right click the **default** VM and press **Settings...**"
-msgstr ""
+msgstr "Right click **default** VM na bonyeza **Settings...**"
 
 #: ../../source/installation.rst:145
 #, python-format
@@ -325,26 +391,28 @@ msgid ""
 "60-70% of all available memory, optionally adding 50% of the available "
 "processors from the **Processor** tab also"
 msgstr ""
-
+"Endeleza **Base Memory** slider kutoka **System** panel na gawa 60%-70%"
+" ya nafasi yote ilobakia, chagua kuongeza 50% ya processors from"
+" **Processor** tab, pia"
 #: ../../source/installation.rst:151
 msgid "*VirtualBox default VM settings*"
-msgstr ""
+msgstr "*Chagua msingi la VirtualBox kwa Mpangilio wa VM*"
 
 #: ../../source/installation.rst:153
 msgid "Then press **OK**, right click the **default** VM and press **Start**."
-msgstr ""
+msgstr "Kisha bonyeza **OK**", right click **default** VM na bonyeza **Start**."
 
 #: ../../source/installation.rst:155
 msgid "If you installed Docker for Windows instead:"
-msgstr ""
+msgstr "Ikiwa umeingiza Docker kwa Windows badala yake:"
 
 #: ../../source/installation.rst:157
 msgid "Look in the system tray and right click the “white whale” icon."
-msgstr ""
+msgstr "Angalia mpangilo uteo na bonyeza kulia “white whale” icon."
 
 #: ../../source/installation.rst:158
 msgid "From the menu, press **Settings...**"
-msgstr ""
+msgstr "Kutoka menu, bonyeza **Settings...**"
 
 #: ../../source/installation.rst:159
 #, python-format
@@ -352,109 +420,119 @@ msgid ""
 "From the panel, click **Advanced** and use the sliders to allocate 60-70%"
 " of available memory and use half of all available CPUs."
 msgstr ""
-
+"kutokakwenye ubao, bonyeza **Advanced** na tumia sliders kuonesha 60-70% "
+"ya nafasi inayotumika na tumia nusu ya CPU ilobakia."
 #: ../../source/installation.rst:160
 msgid "Press **Apply**."
-msgstr ""
+msgstr "Bonyeza **Apply**."
 
 #: ../../source/installation.rst:166
 msgid "*Step 1 Docker icon*"
-msgstr ""
+msgstr "*Njia ya 1. Docker icon*"
 
 #: ../../source/installation.rst:172
 msgid "*Step 3 & 4 Docker settings*"
-msgstr ""
+msgstr "Njia ya 3 & 4 Mpangilo Docker"
 
 #: ../../source/installation.rst:175
 msgid "Step 4. Download WebODM"
-msgstr ""
+msgstr "Njia ya 4. Pakua WebODM"
 
 #: ../../source/installation.rst:177
 msgid "Open the **Git Gui** program that comes installed with Git. From there:"
-msgstr ""
+msgstr "Fungua **Git Gui** programu iliingizwa pamoja na Git. Kutoka hapo:"
 
 #: ../../source/installation.rst:179
 msgid "When Git Gui opens, click 'Clone Existing Repository' option"
-msgstr ""
+msgstr "Ikifunguka Git Gui, bonyeza 'Clone Existing Repository' option"
 
 #: ../../source/installation.rst:180
 msgid "In **Source Location** type: https://github.com/OpenDroneMap/WebODM"
-msgstr ""
+msgstr "Nani ya **Source Location** andika: https://github.com/OpenDroneMap/WebODM"
 
 #: ../../source/installation.rst:181
 msgid ""
 "In **Target Directory** click browse and navigate to a folder of your "
 "choosing (create one if necessary)"
 msgstr ""
-
+"Ndani ya **Target Directory** bonyeza browse na tembea hadi folder "
+"ulilochagua (tengeneza moja kama lazima)"
 #: ../../source/installation.rst:182
 msgid "Press **Clone**"
-msgstr ""
+msgstr "Bonyeza **Clone**"
 
 #: ../../source/installation.rst:188
 msgid "*Git Gui*"
-msgstr ""
+msgstr "*Git Gui*"
 
 #: ../../source/installation.rst:190
 msgid "If the download succeeded, you should now see this window:"
-msgstr ""
+msgstr "Ikiwa kupakua kumefanikiwa, unaweza kuona window ifuatayo:"
 
 #: ../../source/installation.rst:196
 msgid "*Git Gui after successful download (clone)*"
-msgstr ""
+msgstr "*Git Gui baada ya kufanikiwa kupakua (clone)*"
 
 #: ../../source/installation.rst:198
 msgid ""
 "Go to the **Repository** menu, then click **Create Desktop Icon**. This "
 "will allow you to come back to this application easily in the future."
 msgstr ""
-
+"Nenda hadi **Repository** menu, kisha bonyeza **Create Desktop Icon**. "
+"Hii itakuruhusu kurudi nyuma kwenda katika applicationhii kiurahisi "
+"zaidi baadae."
 #: ../../source/installation.rst:201
 msgid "Step 4. Launch WebODM"
-msgstr ""
+msgstr "Njia ya 4. Zindua WebODM"
 
 #: ../../source/installation.rst:203
 msgid ""
 "From Git Gui, go to the **Repository** menu, then click **Git Bash**. "
 "From the command line terminal type:"
 msgstr ""
-
+"Kutoka Git Gui, nenda kwenye **Repository** menu, kisha bonyeza **Git "
+"Bash**. Kutoka kwenye mstari wa camandaina ya terminal:"
 #: ../../source/installation.rst:209
 msgid ""
 "Several components will download to your machine at this point, including"
 " WebODM, NodeODM and ODM. After the download you should be greeted by the"
 " following screen:"
 msgstr ""
-
+"Vipengele tofauti vitapakuliwa katika mashine yako katika hatua hii, "
+"ikiwemo WebODM,NodeODM na ODM. Baada ya kupakua utapeleka kwa screen "
+"zifuatazo:"
 #: ../../source/installation.rst:215
 msgid "*Console output after starting WebODM for the first time*"
-msgstr ""
+msgstr "*Console output baada ya kuanzisha WebODM kwa mara ya mwanzo*"
 
 #: ../../source/installation.rst:217
 msgid ""
 "If you are using Docker for Windows, open a web browser to "
 "http://localhost:8000"
 msgstr ""
-
+"Ikiwa unatumia docker kwa Windows, fungua browser kwenda "
+"http://localhost:8000"
 #: ../../source/installation.rst:218
 msgid ""
 "If you are using Docker Toolbox, find the IP address to connect to by "
 "typing:"
 msgstr ""
-
+"Ikiwa unatumia docker Toolbox, tafuta anuani IP kuunganisha kwa "
+"kuandika:"
 #: ../../source/installation.rst:224
 msgid "You should get a result like the following:"
-msgstr ""
+msgstr "Utapata jawabu kama ifuatavyo:"
 
 #: ../../source/installation.rst:230
 msgid ""
 "Then connect to http://192.168.1.100:8000 (replacing the IP address with "
 "the proper one)."
 msgstr ""
-
+"Kisha utaunganisha kwa http://192.168.1.100:8000 (badilisha anuani IP "
+"kuweka iliosahihi zaidi)."
 #: ../../source/installation.rst:233
 msgid "macOS"
-msgstr ""
+msgstr "macOS"
 
 #: ../../source/installation.rst:235
 msgid ""
@@ -462,66 +540,72 @@ msgid ""
 "higher can run OpenDroneMap using docker, as long as hardware "
 "virtualization is supported (see below)."
 msgstr ""
-
+"Modem nyingi (post 2010) za Mac computer zinafanya kazi MacOS Sierra "
+"10.12 au kubwa inafanyakazi OpenDroneMap kutumia docker, ikiwa "
+"hardware virtualization inakubali (angalia chini)."
 #: ../../source/installation.rst:240
 msgid "Open a Terminal window and type:"
-msgstr ""
+msgstr "Fungua terminal window na andika:"
 
 #: ../../source/installation.rst:246
 msgid "You will get a response similar to the following:"
-msgstr ""
+msgstr "Utapata jawabu inayofanana na ifuatavyo:"
 
 #: ../../source/installation.rst:252
 msgid ""
 "If the result is *kern.hv_support: 1*, then your Mac is supported! "
 "Continue with Step 2."
 msgstr ""
-
+"Ikiwa jawabu ni *kern.hv_support: 1*, Mac yako inakuali! Endelea na "
+"step ya 2."
 #: ../../source/installation.rst:254
 msgid ""
 "If the result is *kern.hv_support: 0*, unfortunately it means your Mac is"
 " too old to run OpenDroneMap. :("
 msgstr ""
-
+"Ikiwa majibu ni *kern.hv_support: 0*,inamaanisha Mac yako ni ya zamani "
+"sana kwa kutumia OpenDroneMap. :("
 #: ../../source/installation.rst:259
 msgid "There are only two programs to install:"
-msgstr ""
+msgstr "Kuna programu mbili tu za kuingiza"
 
 #: ../../source/installation.rst:261
 msgid "Docker: https://download.docker.com/mac/stable/Docker.dmg"
-msgstr ""
+msgstr "Docker: https://download.docker.com/mac/stable/Docker.dmg"
 
 #: ../../source/installation.rst:262
 msgid "Git: https://sourceforge.net/projects/git-osx-installer/files/"
-msgstr ""
+msgstr "Git: https://sourceforge.net/projects/git-osx-installer/files/"
 
 #: ../../source/installation.rst:264
 msgid ""
 "After installing docker you should find an icon that looks like a whale "
 "in the task bar."
 msgstr ""
-
+"Baada ya kuingiza docker itaona icon ambyo muonekano wake kama nyumbani "
+"katika task bar."
 #: ../../source/installation.rst:270
 msgid "*Docker app running*"
-msgstr ""
+msgstr "Docker app running*"
 
 #: ../../source/installation.rst:272
 msgid ""
 "You can verify that docker is running properly by opening the "
 "**Terminal** app and typing:"
 msgstr ""
-
+"Unaweza kuhakikisha kwamba docker inafanya kazi sawa kwa kufungua"
+" **Terminal** app na kuanza kuandika:" 
 #: ../../source/installation.rst:278
 msgid "Which should return"
-msgstr ""
+msgstr "Ambayo itarejesha"
 
 #: ../../source/installation.rst:284
 msgid "To verify that git is installed, simply type:"
-msgstr ""
+msgstr "Kuhakikisha git imeingizwa, njia fupi:"
 
 #: ../../source/installation.rst:290
 msgid "Which should return something similar to the following:"
-msgstr ""
+msgstr "Ambayo itarejesha kitu sawa kwa ifuatavyo:"
 
 #: ../../source/installation.rst:296
 msgid ""
@@ -529,21 +613,25 @@ msgid ""
 "**Terminal** app and double-check for any errors during the install "
 "process."
 msgstr ""
-
+"Ikiwa umepata “bash: git: command not found”, jaribu kuwasha tena "
+"**Terminal** app yako na angalia kwa mara nyengine ikiwa kuna "
+"makosa wakati wa mchakato wa kuingiza."
 #: ../../source/installation.rst:301
 msgid ""
 "Docker on macOS works by running a VM in the background (think of it as a"
 " “computer emulator”). This VM has a certain amount of memory allocated "
 "and WebODM can only use as much memory as it’s allocated."
 msgstr ""
-
+"Docker katika macOS inafanya kazi kwa kuwasha VM katika background (fikiria"
+" hilo kama computer emulator”). VM hii ina kiwango cha nafsi kilichowekwa na"
+" WebODM inaweza kutumia nafasi ya kutosha iliotengwa."
 #: ../../source/installation.rst:303
 msgid "Right click the whale icon from the task bar and click **Preferences**..."
-msgstr ""
+msgstr "Right click ikoni ya nyumbani kutoka kwenye task bar na bonyeza **Preferences**... "
 
 #: ../../source/installation.rst:304
 msgid "Select the **Advanced** tab"
-msgstr ""
+msgstr "Chagua **Advanced** tab"
 
 #: ../../source/installation.rst:305
 #, python-format
@@ -551,30 +639,31 @@ msgid ""
 "Adjust the CPUs slider to use half of all available CPUs and the memory "
 "to use 60-70% of all available memory"
 msgstr ""
-
+"Rekebisha CPU slider kwa kutumia nusu ya CPU inayopatikana na nafasi ya "
+"kutumia 60-70% ya nafasi yote ilyobakia"
 #: ../../source/installation.rst:306
 msgid "Press **Apply & Restart**"
-msgstr ""
+msgstr "Bonyeza **Apply & Restart**"
 
 #: ../../source/installation.rst:312
 msgid "*Docker advanced settings*"
-msgstr ""
+msgstr "*Docker advanced settings*"
 
 #: ../../source/installation.rst:315
 msgid "Step 4. Download and Launch WebODM"
-msgstr ""
+msgstr "Pakua na fungua webodm"
 
 #: ../../source/installation.rst:317
 msgid "From a **Terminal** type:"
-msgstr ""
+msgstr "Kutoka **Terminal** andika:"
 
 #: ../../source/installation.rst:325 ../../source/installation.rst:426
 msgid "Then open a web browser to http://localhost:8000."
-msgstr ""
+msgstr "Kisha fungua web browser kwenda http://localhost:8000."
 
 #: ../../source/installation.rst:328
 msgid "Linux"
-msgstr ""
+msgstr "Linux"
 
 #: ../../source/installation.rst:330
 msgid ""
@@ -585,30 +674,35 @@ msgid ""
 " available for others. If you have to pick a distribution solely for "
 "running OpenDroneMap, Ubuntu is the recommended way to go."
 msgstr ""
-
+"OpenDroneMapinaweza kufanya kazi kwenye Linuz yoyote ambayo inaruhusu "
+"docker. Kwa mujibu wa `nyaraka za website ya docker "
+"<https://docs.docker.com/install/>`_ kwa mjibu wa msaada rasmi "
+"uliothibitishwa ni CentOS, Debian, Ubuntu na fedora, pamoja na bainari "
+"tuli zinazotumika kwa wengine. Ikiwa unataka kuchakua distribution peke "
+"yake kwa kumia OpenDroneMap, Ubuntu ni chaguo la kutumia."
 #: ../../source/installation.rst:333
 msgid "Step 1. Install Requirements"
-msgstr ""
+msgstr "Hatua 1. Mahitaji ya kuingiza"
 
 #: ../../source/installation.rst:335
 msgid "There are four programs that need to be installed:"
-msgstr ""
+msgstr "Kuna program nne ambazo zinahitaji kuingizwa:"
 
 #: ../../source/installation.rst:337
 msgid "Docker"
-msgstr ""
+msgstr "Docker"
 
 #: ../../source/installation.rst:338
 msgid "Git"
-msgstr ""
+msgstr "Git"
 
 #: ../../source/installation.rst:339
 msgid "Python (2 or 3)"
-msgstr ""
+msgstr "Python (2 or 3)"
 
 #: ../../source/installation.rst:340
 msgid "Pip"
-msgstr ""
+msgstr "Pip"
 
 #: ../../source/installation.rst:342
 msgid ""
@@ -617,31 +711,34 @@ msgid ""
 " distributions officially supported by docker. In all cases it’s just a "
 "matter of opening a terminal prompt and typing a few commands."
 msgstr ""
-
+"Hatuweza kuweza kumaliza mchakato wa uwingizaji kwa kila usambazaji wa "
+"Linux nje ya hapo, kwa hio tutazuiya maelekezo kwa wote kusambaza "
+"wanasaidiwa na docker. Katika kesi zote ni jambo la kufungua terminal "
+"prompt na kuandika comand."
 #: ../../source/installation.rst:345
 msgid "Install on Ubuntu / Debian"
-msgstr ""
+msgstr "Ingiza ndani ya Ubuntu / Debian"
 
 #: ../../source/installation.rst:347 ../../source/installation.rst:359
 #: ../../source/installation.rst:370 ../../source/installation.rst:381
 msgid "Commands to type:"
-msgstr ""
+msgstr "Camand za kuandika"
 
 #: ../../source/installation.rst:357
 msgid "Install on CentOS / RHEL"
-msgstr ""
+msgstr "Ingiza ndani ya CentOS / RHEL"
 
 #: ../../source/installation.rst:368
 msgid "Install on Fedora"
-msgstr ""
+msgstr "Ingiza ndani ya Fedora"
 
 #: ../../source/installation.rst:379
 msgid "Install on Arch"
-msgstr ""
+msgstr "Ingiza ndani ya Arch"         
 
 #: ../../source/installation.rst:388
 msgid "Step 2. Check Additional Requirements"
-msgstr ""
+msgstr "Angalia Mahitaji ya Ziada"
 
 #: ../../source/installation.rst:390
 msgid ""
@@ -649,30 +746,32 @@ msgid ""
 " needed. Sometimes it’s already installed with docker, but sometimes it "
 "isn’t. To verify if it’s installed try to type:"
 msgstr ""
-
+"Kwa kuongezea kwa programu tatu juu, dockercompose scriptpia inahitajika."
+" Baadhi ya muda inakuwa ishahifadhiwa ndani ya docker, lakini kuna muda "
+"'\/ haijaingizwa. Kuthibitisha kama imeingizwa jaribu kuandika:"
 #: ../../source/installation.rst:396
 msgid "You should see somethings similar to the following:"
-msgstr ""
+msgstr "Unaweza kuona kitu kinachofanana kwa ifuatavyo:"
 
 #: ../../source/installation.rst:402
 msgid "If instead you get something similar to the following:"
-msgstr ""
+msgstr "Ikiwa badala yake utapata kitu sawa:"
 
 #: ../../source/installation.rst:408
 msgid "you can install it by using pip:"
-msgstr ""
+msgstr "unaweza kuingiza kwa kutumia pip:"
 
 #: ../../source/installation.rst:416
 msgid "Step 3. Download and Launch WebODM"
-msgstr ""
+msgstr "Pakua na zindua WebODM"
 
 #: ../../source/installation.rst:418
 msgid "From a terminal type:"
-msgstr ""
+msgstr "Kutoka aina ya terminal:"
 
 #: ../../source/installation.rst:429
 msgid "Basic Commands and Troubleshooting"
-msgstr ""
+msgstr "Camand za msingi na utatuzi shida"
 
 #: ../../source/installation.rst:431
 #, python-format
@@ -681,14 +780,18 @@ msgid ""
 "need to perform while using WebODM can be done via the ./webodm.sh "
 "script. You have already encountered one of them:"
 msgstr ""
-
+"Kitu kizuri kuhusu kutumia docker ni 99% ya kazi unatahitaji kufanya ikiwa "
+"unatumia WebODM, inaweza kufanywa kwa kutumia ./webodm.sh script. unaweza "
+"kutimiza moja kati ya hizo:"
 #: ../../source/installation.rst:437
 msgid ""
 "which takes care of starting WebODM and setting up a default processing "
 "node (node-odm-1). If you want to stop WebODM, you can already guess what"
 " the command is:"
 msgstr ""
-
+"Kuwa makini kuanzisha WebODM na kupanga mpangilio wa msingi wa kuchakata "
+"node (node-odm-1). Ikiwa unahitaji kusimamisha WebODM, unaweza kukusia "
+"comand gani ya kutumuka:"
 #: ../../source/installation.rst:443
 msgid ""
 "There are several other commands you can use, along with different flags."
@@ -696,10 +799,12 @@ msgid ""
 " prefixed with “–”. The **port** flag for example instructs WebODM to use"
 " a different network port:"
 msgstr ""
-
+"Kuna camand tofautiunaweza kutumia, kutumia flag tofauti. Flag ni parameter "
+"ilipitia kwa ./webodm.sh command na kawaida prefixed with “–”. **port** flag "
+"kwa mfano kufundisha kutumia WebODM katika port za mitandao tofauti:"
 #: ../../source/installation.rst:449
 msgid "Other useful commands are listed below:"
-msgstr ""
+msgstr "Camand nyengine muhimu zimeorodheshwa chini:"
 
 #: ../../source/installation.rst:468
 msgid ""
@@ -707,10 +812,12 @@ msgid ""
 "place to ask for help if you     get stuck during any of the installation"
 " steps and for general questions on using the ./webodm.sh script."
 msgstr ""
-
+"`Jukwaa la kijamii <https://community.opendronemap.org>`_ ni sehemu nzuri "
+"kuomba msaada ikiwa umekwama wakati unapingiza kwa mpangilio na kwa maswali "
+"ya ujumla kutumia ./webodm.sh script."
 #: ../../source/installation.rst:471
 msgid "Hello, WebODM!"
-msgstr ""
+msgstr "Habari, WebODM!"
 
 #: ../../source/installation.rst:473
 msgid ""
@@ -719,10 +826,13 @@ msgid ""
 "first user. Take some time to familiarize yourself with the web interface"
 " and explore its various menus."
 msgstr ""
-
+"Baada kuwa inatumika ./webodm.sh ikianza na kufungua WebODM ndani ya "
+"browser, utasalimia pamoja na jumbe wa karibu na utaulizwa kutengeneza "
+"mtumiaji wa kwanza.Chukua mda kumalizia mwenyewe pamoja na web interface"
+" na kuchunguza menu tofauti."
 #: ../../source/installation.rst:479
 msgid "*WebODM Dashboard*"
-msgstr ""
+msgstr "*WebODM Dashboard*"
 
 #: ../../source/installation.rst:481
 msgid ""
@@ -731,16 +841,19 @@ msgid ""
 "been created automatically by WebODM. This node is running on the same "
 "machine as WebODM."
 msgstr ""
-
+"Tazama kwa **Processing Nodes** menu kuna \"node-odm-1\" node tayari "
+"zishapangwa kwa ajili yako kutumia. NodeODM node hii na imetengenezwa "
+"wenyewe kwa WebODM. Node hii inatumika katika mashine moja kama WebODM."
 #: ../../source/installation.rst:483
 msgid ""
 "If you’ve made it this far, congratulations! Now it’s time to start "
 "processing some data."
 msgstr ""
-
+"Ikiwa umefikia hapo, Hongera! Sasa ni mda wa kuanza kuchakata baadhi "
+"ya data."
 #: ../../source/installation.rst:490
 msgid "Running on more than one machine"
-msgstr ""
+msgstr "Kuendesha mashine zaidi ya moja"
 
 #: ../../source/installation.rst:492
 msgid ""
@@ -748,7 +861,9 @@ msgid ""
 "installation process (install docker, git, python, etc.) and launch a new"
 " NodeODM node by typing from a Terminal/Git Bash window:"
 msgstr ""
-
+"**Optionally:** Ikiwa una computer nyengine, unaweza kurejea mchakato wa "
+"uwingizaji (install docker, git, python, etc.) na anzisha NodeODM mpya kwa "
+"kuandika kutoka dirisha la Terminal/Git Bash:" 
 #: ../../source/installation.rst:498
 msgid ""
 "The above command asks docker to launch a new container using the "
@@ -757,7 +872,11 @@ msgid ""
 "to 1 and to protect the node from unauthorized access using the password "
 "\"secret\"."
 msgstr ""
-
+"Camand hio hapo juu inaiambia docker kuanzisha container mpya kutumia "
+"opendronemap/nodeodm picha kutoka docker Hub (toleo la sasa la NodeODM), "
+"kutumia port 3000, Panga namba ya juu ya kazi nyingi kwa wakati mmoja "
+"hadi moja na kulinda node kutoka kwenye matumizi yaliozuiwa kutumia "
+"password \"secret\"."
 #: ../../source/installation.rst:500
 msgid ""
 "From WebODM you can then press the **Add New** button under **Processing "
@@ -766,20 +885,26 @@ msgid ""
 "type “secret”. You can also add an optional **label** for your node, such"
 " as “second computer”. Then press **Save**."
 msgstr ""
-
+"Kutoka WebODM kisha unawesha kuwasha **Add New** button juu ya **Processing
+" Nodes** Kwa **hostname/IP** aina ya anuani ya field katika computer "
+"nyengine. Kwa **port** field type "3000". Kwa **token** field type "secret"."
+" Pia unaweza kuengeza **label** kwa node yako, kama vile "second computer. "
+"Kisha bonyeza **Save**."
 #: ../../source/installation.rst:502
 msgid ""
 "If everything went well, you should now have two processing nodes! You "
 "will be able to process multiple tasks in parallel using two different "
 "machines."
 msgstr ""
-
+"Ikiwa kila kitu kimmenda sawa, lazima uwe processing node mbili! Utaweza "
+"kuchakata kazi nyingi kwa wakati mmoja kwa kutumia mashine tofauti."
 #: ../../source/installation.rst:504
 msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst>`_"
 msgstr ""
-
+"`kwa msaada kurekebisha kitabu! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_"
 #~ msgid "In **Source Location** type: https://github.com/Open-DroneMap/WebODM"
 #~ msgstr ""
 

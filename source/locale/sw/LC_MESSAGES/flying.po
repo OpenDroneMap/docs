@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../source/flying.rst:2
 msgid "Flying Tips"
-msgstr ""
+msgstr "Kidokeza cha kurusha ndege nyuki"
 
 #: ../../source/flying.rst:4
 msgid ""
@@ -28,51 +28,62 @@ msgid ""
 "guidelines on `flying for UAV mapping <https://uav-"
 "guidelines.openaerialmap.org/>`_:"
 msgstr ""
-
+"The `Humanitarian OpenStreetMap team <https://www.hotosm.org/>`_ ina "
+"muongozo juu ya `kurusha UAV kwa ramani <https://uav-"
+"guidelines.openaerialmap.org/>`_:"
 #: ../../source/flying.rst:6
 msgid ""
 "`Choosing the right UAV <https://uav-"
 "guidelines.openaerialmap.org/pages/05-choosing-the-right-uav/>`_"
 msgstr ""
-
+"`Chakua UAV sahihi <https://uav-"
+"guidelines.openaerialmap.org/pages/05-choosing-the-right-uav/>`_"
 #: ../../source/flying.rst:8
 msgid ""
 "`Choosing the right sensor <https://uav-"
 "guidelines.openaerialmap.org/pages/06-choosing-the-sensor/>`_"
 msgstr ""
-
+"`Chagua sensa sahihi <https://uav-"
+"guidelines.openaerialmap.org/pages/06-choosing-the-sensor/>`_"
 #: ../../source/flying.rst:10
 msgid ""
 "`Mission preparation <https://uav-guidelines.openaerialmap.org/pages/07"
 "-preparing-for-the-uav-mission/>`_"
 msgstr ""
-
+"`Kuandaa mission <https://uav-guidelines.openaerialmap.org/pages/07"
+"-preparing-for-the-uav-mission/>`_"
 #: ../../source/flying.rst:12
 msgid ""
 "The guidelines are intended for drone mapping projects on islands, but "
 "have general use for all drone mappers."
 msgstr ""
-
+"Muongozo umekusudiwa kwa drone project za visiwa, lakini ina matumizi "
+"kwa ujumla ya watengeza ramani kwa drone."
 #: ../../source/flying.rst:14
 msgid ""
 "See also DroneDeploy's guide on `Making Successful Maps "
 "<https://support.dronedeploy.com/docs/making-successful-maps>`_, which "
 "provides great tips on mission planning."
 msgstr ""
-
+"Angalia pia DroneDeploy's muongozo juu ya `Kutengeza ramani yenye mafanikio "
+"<https://support.dronedeploy.com/docs/making-successful-maps>`_, ambayo "
+"inaelezea mambo muhimu juu ya kuandaa mission." 
 #: ../../source/flying.rst:16
 msgid ""
 "Finally, lens distortion is a challenge in projects requiring accurate 3D"
 " data. See our section in these docs on `Camera Calibration "
 "<tutorials.html#calibrating-the-camera>`_."
 msgstr ""
-
+"Mwisho, mvurugio lenzi ni changamoto katika project kuchukua data za 3B "
+"sahihi. Angalia kipande chetu katika kitabu hiki cha `Camera Calibration "
+"<tutorials.html#calibrating-the-camera>`_."`
 #: ../../source/flying.rst:18
 msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/flying.rst>`_"
 msgstr ""
-
+"`kwa msaada kurekebisha kitabu! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_"
 #~ msgid "Flying tips"
 #~ msgstr ""
 
