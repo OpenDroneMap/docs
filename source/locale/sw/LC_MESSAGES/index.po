@@ -20,11 +20,11 @@ msgstr ""
 
 #: ../../source/index.rst:8
 msgid "Welcome to OpenDroneMap's documentation"
-msgstr ""
+msgstr "Karibu OpenDroneMap Kitabu "
 
 #: ../../source/index.rst:40
 msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/index.rst>`_"
-msgstr ""
-
+msgstr "kwa msaada kurekebisha kitabu"
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/index.rst>`_"

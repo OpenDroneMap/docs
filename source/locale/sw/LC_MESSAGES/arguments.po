@@ -20,15 +20,15 @@ msgstr ""
 
 #: ../../source/arguments.rst:4
 msgid "Options and Flags"
-msgstr ""
+msgstr "Chagizi na Bendera"
 
 #: ../../source/arguments.rst:6
 msgid "Arguments::"
-msgstr ""
+msgstr "Hoja"
 
 #: ../../source/arguments.rst:289
 msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/using.rst>`_"
-msgstr ""
-
+msgstr "kwa msaada kurekebisha kitabu! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/using.rst>`_"

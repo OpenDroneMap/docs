@@ -20,7 +20,7 @@ msgstr ""
 
 #: ../../source/multispectral.rst:2
 msgid "Multispectral Support"
-msgstr ""
+msgstr "Msaada wa Multispectral"
 
 #: ../../source/multispectral.rst:4
 msgid ""
@@ -29,10 +29,13 @@ msgid ""
 "cameras. Multispectral cameras capture multiple shots of the scene using "
 "different band sensors."
 msgstr ""
-
+"Tangu toleo 0.9.9 ODM lina msaada wa msingi kwa uchambuaji radiometric, "
+"ambayo inaweza kutengeneza tashira picha kutoka multispectral camera. "
+"Multispectral camera inapiga picha nyingi za sehemu kutumia band "
+"sensor tofauti."
 #: ../../source/multispectral.rst:7
 msgid "Hardware"
-msgstr ""
+msgstr "Hardware"
 
 #: ../../source/multispectral.rst:9
 msgid ""
@@ -40,14 +43,16 @@ msgid ""
 "support has been developed using the following cameras, so they will work"
 " better:"
 msgstr ""
-
+"Wakati tumedhamiria kusaidia camera nyingi iwezekanavyo, msaada wa "
+"multispectral umekuzwa kwa kutumia camera zifuatazo, kwa hiyo "
+"zitafanya kazi vizuri:"
 #: ../../source/multispectral.rst:11
 msgid "`MicaSense RedEdge-MX and Altum <https://www.micasense.com/>`_"
-msgstr ""
+msgstr "`MicaSense RedEdge-MX na Altum <https://www.micasense.com/>`_"
 
 #: ../../source/multispectral.rst:12
 msgid "`Sentera 6X <https://sentera.com/6x/>`_"
-msgstr ""
+msgstr "`Sentera 6X <https://sentera.com/6x/>`_"
 
 #: ../../source/multispectral.rst:14
 msgid ""
@@ -55,10 +60,12 @@ msgid ""
 "`sharing datasets <https://community.opendronemap.org/c/datasets/10>`_ "
 "captured with other cameras."
 msgstr ""
-
+"Kamera nyengine zinaweza kufanya kazi. Unaweza kutusaidia kuengeza idadi "
+"hii ` kugawa dataseti <https://community.opendronemap.org/c/datasets/10>`_ "
+"zilopigwa na kamera nyengine."
 #: ../../source/multispectral.rst:17
 msgid "Usage"
-msgstr ""
+msgstr "Matumizi"
 
 #: ../../source/multispectral.rst:19
 msgid ""
@@ -68,10 +75,15 @@ msgid ""
 "camera setup, the resulting orthophoto will have N bands, one for each "
 "camera (+ alpha)."
 msgstr ""
-
+"Chakata picha zote kutoka band zote kwa pamoja (usitofautishe band katika "
+"mafolder tofauti) na ingiza `--radiometric-calibration` parameter "
+"kuruhusu radiometric normalization.Ikiwa picha ni sehemu ya mpangilio "
+"wa multi-camera, matokeo ya orthophoto yatakuwa na N band, kwa kila "
+"camera (+ alpha)."
 #: ../../source/multispectral.rst:25
 msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst>`_"
 msgstr ""
-
+"`kwa msaada kurekebisha kitabu! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_"
