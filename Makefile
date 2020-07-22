@@ -19,6 +19,7 @@ livehtml:
 	
 deploy:
 	@$(SPHINXBUILD) -M html "$(SOURCEDIR)" "$(BUILDDIR)" -nW
+	@$(SPHINXBUILD) -b html -D language='sw' "$(SOURCEDIR)" "$(BUILDDIR)/html/sw" -nW 
 	#  -n   Run in nit-picky mode. Currently, this generates warnings for all missing references.
 	#  -W   Turn warnings into errors that stop the build.
 	# for more details about the options see https://www.sphinx-doc.org/en/1.8/man/sphinx-build.html#options

@@ -119,6 +119,46 @@ You will be prompted for your GitHub credentials.
 
 Open https://github.com/OpenDroneMap/docs and you'll see a box asking you to open a pull request. Open a pull request by filling in a description of your changes and you're set! Somebody will review your changes and your contribution will be live on https://docs.opendronemap.org once approved.
 
+# Translations
+
+## Contributing translations
+
+_TODO_
+
+## Managing the translation process
+
+This project uses [Transifex](https://www.transifex.com/) and the [`transifex-client`](https://docs.transifex.com/client/introduction) tool to help people contribute translations. The `transifex-client` tool is included in the requirements.txt file and should be installed on your system during setup when you run `pip install -r requirements.txt`.
+
+You need to configure your account. For this, you need to create an API Token for your user to access this service through the command line. This can be done under your Transifex [User’s Settings](https://www.transifex.com/user/settings/api/). Set it up to use the token:
+
+```
+tx init --token $TOKEN --no-interactive
+```
+
+If there are changes in the English `*.rst` source files, you can update the `.pot` files: 
+`sphinx-build -b gettext source source/locale/en/pot`
+
+If there are **new** English `.rst` source files, you can map them by updating the `./.tx/config` file.
+
+To then update the English source on Transifex:
+
+```
+tx push --source
+```
+
+To fetch translations from Transifex:
+
+```
+tx pull --all
+```
+
+Alternatively, you can pull only a specific language. For example:
+
+```
+tx pull -l sw
+```
+
+To add a new language, do it through the Transifex interface and then add a new line to the Makefile `deploy` command.
 
 ### Questions?
 
