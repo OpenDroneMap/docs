@@ -1,3 +1,4 @@
 Sphinx==1.8.5
 sphinx-rtd-theme==0.2.4
 sphinx-autobuild==0.7.1
+transifex-client==0.13.11
