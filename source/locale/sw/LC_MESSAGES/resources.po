@@ -1,0 +1,109 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 0.9.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-21 17:01-0400\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sw\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# fd0399e9f29e43ee85f633fc5a7d9854
+#: ../../../resources.rst:2
+msgid "Additional References"
+msgstr ""
+
+# d3ba9250ce4b482c89983e02f0bb4d9d
+#: ../../../resources.rst:5
+msgid "For Users"
+msgstr ""
+
+# 2c54ff8efcbb4cd4a1d4426a677a668a
+#: ../../../resources.rst:7
+msgid "The following resources are a good place to start:"
+msgstr ""
+
+# 4d7432320ac74422a01020761eaf6f3a
+#: ../../../resources.rst:9
+msgid "`README page for ODM <https://github.com/OpenDroneMap/OpenDroneMap>`_"
+msgstr ""
+
+# 3bcf9ff9b6e3408f875a614e65332f9b
+#: ../../../resources.rst:10
+msgid "`README page for WebODM <https://github.com/OpenDroneMap/WebODM>`_"
+msgstr ""
+
+# 52d2e948eece4d0d8fe87e3f17bff6dd
+#: ../../../resources.rst:11
+msgid ""
+"`README page for NodeODM <https://github.com/OpenDroneMap/node-"
+"OpenDroneMap>`_"
+msgstr ""
+
+# 43b64684e93c41a08607bfd7318b8509
+#: ../../../resources.rst:12
+msgid ""
+"`Ground Control Points Format Specification "
+"<https://github.com/mapillary/OpenSfM/blob/master/doc/source/gcp.rst>`_"
+msgstr ""
+
+# b4bbfe51562c46d781908edf80c34abf
+#: ../../../resources.rst:13
+msgid "`OpenDroneMap: The Missing Guide <https://odmbook.com/>`_"
+msgstr ""
+
+# 60796eb1324b41d5b56f497960451872
+#: ../../../resources.rst:16
+msgid "For Developers"
+msgstr ""
+
+# 45473074a8b6436f9d842e2c9bb4ca87
+#: ../../../resources.rst:18
+msgid ""
+"In addition to user resources, we recommend to also read the following:"
+msgstr ""
+
+# cd3029204fde4dd2b6ece3cfe1a2bd6b
+#: ../../../resources.rst:20
+msgid "WebODM documentation: https://docs.webodm.org"
+msgstr ""
+
+# c6fe70ba85564f3e82f609e7df9f8227
+#: ../../../resources.rst:21
+msgid ""
+"NodeODM API specification: "
+"https://github.com/OpenDroneMap/NodeODM/blob/master/docs/index.adoc"
+msgstr ""
+
+# b282ab45d280415982d512c91e6b6719
+#: ../../../resources.rst:22
+msgid ""
+"Overview of the ODM pipeline: http://community.opendronemap.org/t/where-"
+"can-i-find-background-information-on-the-concepts-of-odm/665/2"
+msgstr ""
+
+# edc948c7e2d2431e8b888a7b1a733965
+#: ../../../resources.rst:23
+msgid ""
+"We keep a `section in our forum dedicated to research papers "
+"<http://community.opendronemap.org/c/ideas-proposals/research-papers>`_. "
+"This is a valuable place where to read more about state of the art research "
+"related to structure from motion, multi-view stereo, meshing, texturing, "
+"etc. which can be used to improve the software."
+msgstr ""
+
+# 9653eddbec1b4561addbaa46fe051e06
+#: ../../../resources.rst:26
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/api.rst>`_"
+msgstr ""

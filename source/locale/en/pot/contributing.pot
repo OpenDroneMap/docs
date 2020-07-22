@@ -1,0 +1,173 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 0.9.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-21 17:01-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../contributing.rst:4
+# 33a2711c05144f9582994fb626017045
+msgid "How To Contribute"
+msgstr ""
+
+#: ../../../contributing.rst:6
+# fd9047989963484db99d88e41c6a763c
+msgid "OpenDroneMap relies on community contributions. You can contribute in many ways, even if you are not a programmer."
+msgstr ""
+
+#: ../../../contributing.rst:9
+# d7a8cfb3ce1c4e789d9bc59089b7af33
+msgid "Community Forum"
+msgstr ""
+
+#: ../../../contributing.rst:11
+# 372bbf306f2e4a60a8915ed2441771d7
+msgid "If you are looking to get involved, are stuck on a problem, or want to reach out, `the forum <https://community.opendronemap.org/>`_ is a great place to start. You may find your questions already answered or else you can find other useful tips and resources. You can also contribute your open access datasets for others to explore. It is a good place go before submitting bug reports or getting in touch with developers before writing a new feature."
+msgstr ""
+
+#: ../../../contributing.rst:14
+# 925012996add420ca56b7ff53828e745
+msgid "Reporting Bugs"
+msgstr ""
+
+#: ../../../contributing.rst:16
+# cfa595af5c7748dea7c279ce2b09160f
+msgid "Bugs are tracked as Github issues. Please create an issue in the repository and tag it with the Bug tag."
+msgstr ""
+
+#: ../../../contributing.rst:18
+# f79279e13ea24b5e8196ae34fb77bb8c
+msgid "Explain the problem and include additional details to help maintainers reproduce the problem:"
+msgstr ""
+
+#: ../../../contributing.rst:20
+# 3957ae606cb0425d8a8d6fcb1e639faf
+msgid "**Use a clear and descriptive title** for the issue to identify the problem."
+msgstr ""
+
+#: ../../../contributing.rst:21
+# bdb253d1772f45e7a7ef73e96e4e2654
+msgid "**Describe the exact steps which reproduce the problem** in as many details as possible. For example, start by explaining how you run ODM (Docker, Vagrant, etc), e.g. which command exactly you used in the terminal. When listing steps, **don't just say what you did, but explain how you did it.**"
+msgstr ""
+
+#: ../../../contributing.rst:22
+# eebf5329d6344d08b8d6949880fca497
+msgid "**Provide specific examples to demonstrate the steps.** Include links to files or GitHub projects, or copy/pasteable snippets, which you use in those examples. If you're providing snippets in the issue, use `Markdown code blocks <https://help.github.com/articles/markdown-basics/#multiple-lines>`_."
+msgstr ""
+
+#: ../../../contributing.rst:23
+# c6dc25d3a3cc4b188e567e241d3f3a77
+msgid "**Describe the behavior you observed after following the steps** and point out what exactly is the problem with that behavior."
+msgstr ""
+
+#: ../../../contributing.rst:24
+# a4e3ccec200740a0854f45b8c9105728
+msgid "**Explain which behavior you expected to see instead and why.**"
+msgstr ""
+
+#: ../../../contributing.rst:25
+# 541a50043a9b4241a4b659662b6e1d30
+msgid "**Include screenshots and animated GIFs** which show you following the described steps and clearly demonstrate the problem. You can use `this tool to record GIFs on macOS and Windows <http://www.cockos.com/licecap/>`_, and `this tool <https://github.com/colinkeenan/silentcast>`_ or `this one <https://github.com/GNOME/byzanz>`_ on Linux."
+msgstr ""
+
+#: ../../../contributing.rst:26
+# 43f98a3d907e487d967f29497574f208
+msgid "**If the problem is related to performance,** please post your machine's specs (host and guest machine)."
+msgstr ""
+
+#: ../../../contributing.rst:27
+# 95d28b70f6c745269f2e101c9ebd7872
+msgid "**If the problem wasn't triggered by a specific action,** describe what you were doing before the problem happened and share more information using the guidelines below."
+msgstr ""
+
+#: ../../../contributing.rst:29
+# 7e3a9ff9bd6047cfbb353a9007c072de
+msgid "Include details about your configuration and environment:"
+msgstr ""
+
+#: ../../../contributing.rst:31
+# d0b284a2065049f5a2c78f914fd4ee97
+msgid "**Which version of ODM are you using?** A stable release? a clone of master?"
+msgstr ""
+
+#: ../../../contributing.rst:32
+# 2c6d40300ba9430a85a83dc23588debb
+msgid "**What's the name and version of the OS you're using?**"
+msgstr ""
+
+#: ../../../contributing.rst:33
+# 49f8184463b44d938e19609a806233ea
+msgid "**Are you running ODM in a virtual machine or Docker?** If so, which VM software are you using and which operating systems and versions are used for the host and the guest?"
+msgstr ""
+
+#: ../../../contributing.rst:36
+# 3135c11e453247179f8c1c65d5700c63
+msgid "Template For Submitting Bug Reports"
+msgstr ""
+
+#: ../../../contributing.rst:69
+# befb661ef483468296538486ee7c72a1
+msgid "Pull Requests"
+msgstr ""
+
+#: ../../../contributing.rst:71
+# 39056637eeed467b8451dd10998c0783
+msgid "Include screenshots and animated GIFs in your pull request whenever possible."
+msgstr ""
+
+#: ../../../contributing.rst:72
+# b7dbdbac90e84d6284edfd22f4d2b53b
+msgid "Follow the PEP8 Python Style Guide."
+msgstr ""
+
+#: ../../../contributing.rst:73
+# b679a0d7db6246c1a8c40720159e034b
+msgid "End files with a newline."
+msgstr ""
+
+#: ../../../contributing.rst:76
+# dc6b120a67bf4f9684e5bb653290c7cb
+msgid "Avoid platform-dependent code:"
+msgstr ""
+
+#: ../../../contributing.rst:75
+# e198baeffa1f4a919d039b18e11ec7f8
+msgid "Use require('fs-plus').getHomeDirectory() to get the home directory."
+msgstr ""
+
+#: ../../../contributing.rst:76
+# 5d00c0c8d3d24347bfaa26f0ebe1e063
+msgid "Use path.join() to concatenate filenames."
+msgstr ""
+
+#: ../../../contributing.rst:77
+# 00cddf0eb7bf4e4bb9a469313a778b3a
+msgid "Use os.tmpdir() rather than /tmp when you need to reference the temporary directory."
+msgstr ""
+
+#: ../../../contributing.rst:79
+# 60e9e81967354752b39a01541d5b2ccf
+msgid "Using a plain return when returning explicitly at the end of a function."
+msgstr ""
+
+#: ../../../contributing.rst:79
+# fc372ffc32604e90890111d4287b33a0
+msgid "Not return null, return undefined, null, or undefined"
+msgstr ""
+
+#: ../../../contributing.rst:81
+# cbb4ef102fb34a88bc3ccb04d7ff203c
+msgid "`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_"
+msgstr ""
+

@@ -1,0 +1,917 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 0.9.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-21 17:01-0400\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: sw\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+# ca7f5bc2eabd49cc96009728062ea54d
+#: ../../../installation.rst:4
+msgid "Installation and Getting Started"
+msgstr ""
+
+# 1ed7d87f513c4ec5b9a5279266a45b6d
+#: ../../../installation.rst:6
+msgid ""
+"This section is excerpted and modified with permission from `OpenDroneMap: "
+"The Missing Guide <https://odmbook.com>`_, by Piero Toffanin."
+msgstr ""
+
+# e31183e0021840e8af87079d21401d5a
+#: ../../../installation.rst:8
+msgid ""
+"Until recently OpenDroneMap was the term used to refer to a single command "
+"line application (what is now known as the ODM project).  With the recent "
+"development of a web interface, an API and other tools, OpenDroneMap has "
+"become an ecosystem of various applications to process, analyze and display "
+"aerial data. This ecosystem is made of several components:"
+msgstr ""
+
+# 3c4147a6684940ad928eed8ab8fb8e33
+#: ../../../installation.rst:14
+msgid ""
+"**ODM** is the processing engine, which can be used from the command line. "
+"It takes images as input and produces a variety of outputs, including point "
+"clouds, 3D models and orthophotos"
+msgstr ""
+
+# 2905a2f97f9b41d496b9f5715a0c7a5f
+#: ../../../installation.rst:20
+msgid ""
+"**NodeODM** is a light-weight API built on top of ODM. It allows users and "
+"applications to access the functions of ODM over a computer network"
+msgstr ""
+
+# eedbd7ab806e4960bd0bbbefea18ece3
+#: ../../../installation.rst:26
+msgid ""
+"**WebODM** is a friendly user interface that includes a map viewer, a 3D "
+"viewer, user logins, a plugin system and many other features that are "
+"expected of modern drone mapping platforms"
+msgstr ""
+
+# 0037799dfae54302a1ee5dcf53fb8717
+#: ../../../installation.rst:32
+msgid ""
+"**CloudODM** is a small command line client to communicate with ODM via the "
+"NodeODM API"
+msgstr ""
+
+# 5f7f36d13cbc4bab82813568eb13063c
+#: ../../../installation.rst:38
+msgid ""
+"**PyODM** is a Python SDK for creating tasks via the NodeODM API. We cover "
+"it in more detail in the “Automated Processing With Python” chapter"
+msgstr ""
+
+# 79fe7f6a04b244158a344f2ec45a80ad
+#: ../../../installation.rst:44
+msgid ""
+"**ClusterODM** is a load balancer for connecting together multiple NodeODM "
+"instances"
+msgstr ""
+
+# 3d4380c923f24a6c8c47776462ef6b43
+#: ../../../installation.rst:46
+msgid ""
+"ODM, NodeODM and WebODM are available on all major platforms (Windows, macOS"
+" and Linux) via a program called docker, which is required to run the "
+"software. Docker offers a way to run “containers”. Containers are packaged "
+"copies of an entire system, its software and its dependencies. These "
+"containers run within a virtual environment. On Linux this virtual "
+"environment is available from the operating system and is very efficient. On"
+" macOS and Windows the containers run within a VM, so there’s a bit of a "
+"overhead. but it’s still very suitable for running the software. Once "
+"installed users do not have to worry much about docker, as it operates "
+"(almost) transparently."
+msgstr ""
+
+# 159054486d614cbdbcf568d61e39da15
+#: ../../../installation.rst:48
+msgid ""
+"Without docker it would not be possible to run ODM on Windows or macOS. On "
+"these platforms ODM cannot run natively. Future development efforts are "
+"being focused on leveraging the new Windows Subsystem for Linux (WSL) and "
+"the possibility to make a native port of all dependencies to macOS, which is"
+" going to make the installation much easier."
+msgstr ""
+
+# 73af16f53c6b4b658517706a33eabf7f
+#: ../../../installation.rst:50
+msgid ""
+"On Ubuntu Linux 16.04 it’s feasible to run all OpenDroneMap software "
+"natively. However, because there’s very little performance penalty for "
+"running docker on Linux and docker is straightforward to setup on this "
+"platform, we don’t recommend it. On Linux the advantages of containerization"
+" far outweigh a tiny performance penalty. With docker users also get easy "
+"one-step updates of the software, so that’s nice."
+msgstr ""
+
+# 359d8630ea1647e097be5d4b34eb3ce4
+#: ../../../installation.rst:54
+msgid "Hardware Recommendations"
+msgstr ""
+
+# 18823c774c5e485591613ede3537aa91
+#: ../../../installation.rst:56
+msgid "The bare minimum requirements for running the software are:"
+msgstr ""
+
+# b9269e30b47548fb80ef20abc05b37a9
+#: ../../../installation.rst:59
+msgid "64bit CPU manufactured on or after 2010"
+msgstr ""
+
+# 99dfccc50a45405a87d7c7f3b0fcc36f
+#: ../../../installation.rst:60
+msgid "20 GB of disk space"
+msgstr ""
+
+# bb85e75db8de49cea35978868ce535f0
+#: ../../../installation.rst:61
+msgid "4 GB RAM"
+msgstr ""
+
+# 0ee5785cbbce46659999f9e1123c6632
+#: ../../../installation.rst:63
+msgid ""
+"No more than 100-200 images can be processed with the above specifications "
+"(the software will run out of memory). Recommended requirements are:"
+msgstr ""
+
+# 42e9b361c9f94967851b2af0e477ca87
+#: ../../../installation.rst:65
+msgid "Latest Generation CPU"
+msgstr ""
+
+# 0ed901a7dc214066a572808e38fca5c1
+#: ../../../installation.rst:66
+msgid "100 GB of disk space"
+msgstr ""
+
+# 2fb4ca503be345c9aec64d6043e56e56
+#: ../../../installation.rst:67
+msgid "16 GB RAM"
+msgstr ""
+
+# 60dc5f9c09c94797a3796e6d6ab429ea
+#: ../../../installation.rst:69
+msgid ""
+"The above will allow for a few hundred images to be processed without too "
+"many issues. A CPU with more cores will allow for faster processing, while a"
+" graphics card (GPU) currently has no impact on performance. For processing "
+"more images, add more disk space and RAM linearly to the number of images "
+"you need to process."
+msgstr ""
+
+# 0499c473d45e4600b8b286d034152a1e
+#: ../../../installation.rst:75
+msgid "Installation"
+msgstr ""
+
+# 6c957eef0a0947d9af44c5fdaae64eee
+#: ../../../installation.rst:77
+msgid ""
+"We recommend people use `docker <https://www.docker.com>`_ for running ODM, "
+"whether you are on Windows, macOS or Linux."
+msgstr ""
+
+# a221646a87e54ffca00f4faa9d484d8c
+#: ../../../installation.rst:80
+msgid "Windows"
+msgstr ""
+
+# 58413e3cb9ee4fa98e8a905682b84cd6
+#: ../../../installation.rst:82
+msgid ""
+"To run OpenDroneMap you need at least Windows 7. Previous versions of "
+"Windows are not supported."
+msgstr ""
+
+# 6e0d75c55ec64542aad5f8a07448f58a
+# e6caef46a77342c0bea685754f2e26ea
+#: ../../../installation.rst:86 ../../../installation.rst:238
+msgid "Step 1. Check Virtualization Support"
+msgstr ""
+
+# ee636e01fd9c4b95a10d784713c4df08
+#: ../../../installation.rst:88
+msgid ""
+"Docker requires a feature from your CPU called virtualization, which allows "
+"it to run virtual machines (VMs). Make sure you have it enabled! Sometimes "
+"this is disabled. To check, on Windows 8 or higher you can open the **Task "
+"Manager** (press CTRL+SHIFT+ESC) and switch to the **Performance** tab."
+msgstr ""
+
+# 54bfe40fdc294fe9b4ed0e950ea72b13
+#: ../../../installation.rst:94
+msgid "*Virtualization should be enabled*"
+msgstr ""
+
+# c3d505056c244fc498d98f269adcc407
+#: ../../../installation.rst:96
+msgid ""
+"On Windows 7 to see if you have virtualization enabled you can use the "
+"`Microsoft® Hardware-Assisted Virtualization Detection Tool <http:// "
+"www.microsoft.com/en-us/download/details.aspx?id=592>`_ instead."
+msgstr ""
+
+# 1798b11c83d84130a9f81911fb0b1117
+#: ../../../installation.rst:99
+msgid ""
+"If virtualization is disabled, you’ll need to enable it. The procedure "
+"unfortunately is a bit different for each computer model, so the best way to"
+" do this is to look up on a search engine “how to enable vtx for <type your "
+"computer model here>”. Often times it’s a matter of restarting the computer,"
+" immediately pressing F2 or F12 during startup, navigating the boot menu and"
+" changing the settings to enable virtualization (often called “VT-X”)."
+msgstr ""
+
+# d5409249d7cb4371aa9eb0e5bb869b8d
+#: ../../../installation.rst:105
+msgid ""
+"*Common keys to press at computer startup to access the boot menu for "
+"various PC vendors*"
+msgstr ""
+
+# a501c1bab3bf45e48bae750c27e1dd4d
+# b8293121ff6e49cd9863ec30d5fd14f4
+#: ../../../installation.rst:108 ../../../installation.rst:257
+msgid "Step 2. Install Requirements"
+msgstr ""
+
+# c982360ef2dd44fca54712ecadcbb06d
+#: ../../../installation.rst:110
+msgid "First, you’ll need to install:"
+msgstr ""
+
+# fdb9892340e64cb1b9c159e559288230
+#: ../../../installation.rst:112
+msgid "Git: https://git-scm.com/downloads"
+msgstr ""
+
+# b5affd70afdb494285672c4e9e5aed9e
+#: ../../../installation.rst:113
+msgid "Python (latest version 3): https://www.python.org/downloads/windows/"
+msgstr ""
+
+# 6a02317e616249b7b479fd89d0305d6b
+#: ../../../installation.rst:115
+msgid ""
+"For Python 3, make sure you check **Add Python 3.x to PATH** during the "
+"installation."
+msgstr ""
+
+# 62bb7db9c48c4a8ca31df2aeee1b64e9
+#: ../../../installation.rst:121
+msgid ""
+"*Don’t forget to add the Python executable to your PATH (so that you can run"
+" commands with it)*"
+msgstr ""
+
+# 4c2ae6a3e7c647308a1260de04df5d6a
+#: ../../../installation.rst:123
+msgid ""
+"Then, only if you are on Windows 10 Home, Windows 8 (any version) or Windows"
+" 7 (any version), install:"
+msgstr ""
+
+# 1ba2e1a8b1934fc8876c0fe60068fb0a
+#: ../../../installation.rst:125
+msgid ""
+"Docker Toolbox: "
+"https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe"
+msgstr ""
+
+# 8e2a6d327e614a99ad17905807f1963b
+#: ../../../installation.rst:127
+msgid ""
+"If you are on Windows 10 Professional or a newer version, you should install"
+" instead:"
+msgstr ""
+
+# 45cba2a6ac5140e19d78bb8ab794eafc
+#: ../../../installation.rst:129
+msgid ""
+"Docker for Windows: "
+"https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe"
+msgstr ""
+
+# 3ff00b319b51474fb26ab6cf937bcfe1
+#: ../../../installation.rst:131
+msgid ""
+"Please do **NOT** install both docker programs. They are different and will "
+"create a mess if they are both installed."
+msgstr ""
+
+# 3ae6dab12627446c96bac3dcf45fd4bc
+#: ../../../installation.rst:133
+msgid ""
+"After installing docker, launch it from the Desktop icon that is created "
+"from the installation (**Docker Quickstart** in the case of Docker Toolbox, "
+"**Docker for Windows** for Docker for Windows). This is important, do not "
+"skip this step. If there are errors, follow the prompts on screen to fix "
+"them."
+msgstr ""
+
+# e899fe5d4e634b3babcac69c7d85307f
+# 01b0ef2d25174ffba76ece0ea41b0473
+#: ../../../installation.rst:136 ../../../installation.rst:299
+msgid "Step 3. Check Memory and CPU Allocation"
+msgstr ""
+
+# 8c9d7577ecb14b98a69ba480b20356e3
+#: ../../../installation.rst:138
+msgid ""
+"Docker on Windows works by running a VM in the background (think of a VM as "
+"a “computer emulator”). This VM has a certain amount of memory allocated and"
+" WebODM can only use as much memory as it’s allocated."
+msgstr ""
+
+# a8030e1a9fd44ef6a87dc80a907dd405
+#: ../../../installation.rst:140
+msgid ""
+"If you installed Docker Toolbox (see below if you installed Docker for "
+"Windows instead):"
+msgstr ""
+
+# 9811cefad7c349479cf16dbd9172d2f0
+#: ../../../installation.rst:142
+msgid "Open the **VirtualBox Manager** application"
+msgstr ""
+
+# 0ac38ae9bc6c4815989efc5fefe16dc9
+#: ../../../installation.rst:143
+msgid ""
+"Right click the **default** VM and press **Close (ACPI Shutdown)** to stop "
+"the machine"
+msgstr ""
+
+# 8aa1268debcd489daffdc3abbf805df9
+#: ../../../installation.rst:144
+msgid "Right click the **default** VM and press **Settings...**"
+msgstr ""
+
+# 5923a15e0b664b6fa2577388188691c3
+#: ../../../installation.rst:145
+msgid ""
+"Move the **Base Memory** slider from the **System** paneland allocate 60-70%"
+" of all available memory, optionally adding 50% of the available processors "
+"from the **Processor** tab also"
+msgstr ""
+
+# 4f60c64419f8484da38deacc6254255b
+#: ../../../installation.rst:151
+msgid "*VirtualBox default VM settings*"
+msgstr ""
+
+# ac4a561c3245431a9e80eb44751786d0
+#: ../../../installation.rst:153
+msgid "Then press **OK**, right click the **default** VM and press **Start**."
+msgstr ""
+
+# 3d9f78a7a16145c99ec002738c1a5bdc
+#: ../../../installation.rst:155
+msgid "If you installed Docker for Windows instead:"
+msgstr ""
+
+# 40585ef1df7344fa8c4888a2e425a581
+#: ../../../installation.rst:157
+msgid "Look in the system tray and right click the “white whale” icon."
+msgstr ""
+
+# 42f607a04c8e41bc996c62680d11f4fc
+#: ../../../installation.rst:158
+msgid "From the menu, press **Settings...**"
+msgstr ""
+
+# 6f2f4e6960b74493aecfeaad483bf58a
+#: ../../../installation.rst:159
+msgid ""
+"From the panel, click **Advanced** and use the sliders to allocate 60-70% of"
+" available memory and use half of all available CPUs."
+msgstr ""
+
+# b513fa1aee18473d889250226efd6dd4
+#: ../../../installation.rst:160
+msgid "Press **Apply**."
+msgstr ""
+
+# 2c48a0140d4c4953862e354aea188136
+#: ../../../installation.rst:166
+msgid "*Step 1 Docker icon*"
+msgstr ""
+
+# c993ad5adff34fedb4f46e33ccfb649f
+#: ../../../installation.rst:172
+msgid "*Step 3 & 4 Docker settings*"
+msgstr ""
+
+# 3a089a31f50e421f82466a065623350e
+#: ../../../installation.rst:175
+msgid "Step 4. Download WebODM"
+msgstr ""
+
+# 2a32abb9131448199cf601d091dd07e2
+#: ../../../installation.rst:177
+msgid ""
+"Open the **Git Gui** program that comes installed with Git. From there:"
+msgstr ""
+
+# 375c2c96f1034b36b780d6e6c043ab6d
+#: ../../../installation.rst:179
+msgid "When Git Gui opens, click 'Clone Existing Repository' option"
+msgstr ""
+
+# 0b2e3b5a546c45c3a5d5a48dd4a1ac1e
+#: ../../../installation.rst:180
+msgid "In **Source Location** type: https://github.com/OpenDroneMap/WebODM"
+msgstr ""
+
+# fc8376d885d34eef9da5c7a852c3e921
+#: ../../../installation.rst:181
+msgid ""
+"In **Target Directory** click browse and navigate to a folder of your "
+"choosing (create one if necessary)"
+msgstr ""
+
+# c6cb98301024474ea30cea6f73aa684d
+#: ../../../installation.rst:182
+msgid "Press **Clone**"
+msgstr ""
+
+# 02e80960b8a7401985359b37d2fbab80
+#: ../../../installation.rst:188
+msgid "*Git Gui*"
+msgstr ""
+
+# f3c4770173dd40aa89181dc24544dedf
+#: ../../../installation.rst:190
+msgid "If the download succeeded, you should now see this window:"
+msgstr ""
+
+# 88351c8606484da9b20a8548138209e1
+#: ../../../installation.rst:196
+msgid "*Git Gui after successful download (clone)*"
+msgstr ""
+
+# 227a6f8c77a54c07b227c951f6dcfecb
+#: ../../../installation.rst:198
+msgid ""
+"Go to the **Repository** menu, then click **Create Desktop Icon**. This will"
+" allow you to come back to this application easily in the future."
+msgstr ""
+
+# e658938ab82c4d41a016add0e3d602e9
+#: ../../../installation.rst:201
+msgid "Step 4. Launch WebODM"
+msgstr ""
+
+# b6356f518c1546e0a1594d9b3fe504f9
+#: ../../../installation.rst:203
+msgid ""
+"From Git Gui, go to the **Repository** menu, then click **Git Bash**. From "
+"the command line terminal type:"
+msgstr ""
+
+# b767c438fd79457e9d994062bbe1f62b
+#: ../../../installation.rst:209
+msgid ""
+"Several components will download to your machine at this point, including "
+"WebODM, NodeODM and ODM. After the download you should be greeted by the "
+"following screen:"
+msgstr ""
+
+# 6a3a170a88af4dc9a7cac3fc4558fb68
+#: ../../../installation.rst:215
+msgid "*Console output after starting WebODM for the first time*"
+msgstr ""
+
+# 4cfaceb9d320457ca7f89347856e3c2b
+#: ../../../installation.rst:217
+msgid ""
+"If you are using Docker for Windows, open a web browser to "
+"http://localhost:8000"
+msgstr ""
+
+# d0358e745d3846d09636284486fe26b2
+#: ../../../installation.rst:218
+msgid ""
+"If you are using Docker Toolbox, find the IP address to connect to by "
+"typing:"
+msgstr ""
+
+# 8b51e7ea4f3e48d19584552449c5fdf0
+#: ../../../installation.rst:224
+msgid "You should get a result like the following:"
+msgstr ""
+
+# 60b2163a2ca944d5b561bf41f24f11fa
+#: ../../../installation.rst:230
+msgid ""
+"Then connect to http://192.168.1.100:8000 (replacing the IP address with the"
+" proper one)."
+msgstr ""
+
+# 442b43b52a3b454fbefb7e9437c9fb9a
+#: ../../../installation.rst:233
+msgid "macOS"
+msgstr ""
+
+# 97b76743b16e4d02a8d4a35a448cf42d
+#: ../../../installation.rst:235
+msgid ""
+"Most modern (post 2010) Mac computers running macOS Sierra 10.12 or higher "
+"can run OpenDroneMap using docker, as long as hardware virtualization is "
+"supported (see below)."
+msgstr ""
+
+# b8cfb91406bd47d79f56768fc001e166
+#: ../../../installation.rst:240
+msgid "Open a Terminal window and type:"
+msgstr ""
+
+# b88a2d67ee834aa9baeb0655aa62a8df
+#: ../../../installation.rst:246
+msgid "You will get a response similar to the following:"
+msgstr ""
+
+# 628d4c3aa2e44036b0deb1876d86b3f1
+#: ../../../installation.rst:252
+msgid ""
+"If the result is *kern.hv_support: 1*, then your Mac is supported! Continue "
+"with Step 2."
+msgstr ""
+
+# 2aa61f249135450e939d8080508e5746
+#: ../../../installation.rst:254
+msgid ""
+"If the result is *kern.hv_support: 0*, unfortunately it means your Mac is "
+"too old to run OpenDroneMap. :("
+msgstr ""
+
+# 0c78f31ed3f846f4ba1761936eb4721a
+#: ../../../installation.rst:259
+msgid "There are only two programs to install:"
+msgstr ""
+
+# e90623cdd26245dd91b46c7f3b72ccf3
+#: ../../../installation.rst:261
+msgid "Docker: https://download.docker.com/mac/stable/Docker.dmg"
+msgstr ""
+
+# fe8e0d7f80c24676abb9140e1090b6f4
+#: ../../../installation.rst:262
+msgid "Git: https://sourceforge.net/projects/git-osx-installer/files/"
+msgstr ""
+
+# a30ce5e119a846d0937509eabb900991
+#: ../../../installation.rst:264
+msgid ""
+"After installing docker you should find an icon that looks like a whale in "
+"the task bar."
+msgstr ""
+
+# 10d6273d82a04f1587c2d5fb20b2ef7f
+#: ../../../installation.rst:270
+msgid "*Docker app running*"
+msgstr ""
+
+# ac8be6bc43224ebdaa909843db7ce97b
+#: ../../../installation.rst:272
+msgid ""
+"You can verify that docker is running properly by opening the **Terminal** "
+"app and typing:"
+msgstr ""
+
+# 7f874c9eae5c4c67ab48ab48b4c85f56
+#: ../../../installation.rst:278
+msgid "Which should return"
+msgstr ""
+
+# 202a8d7848a84897bec59fc30d76ff96
+#: ../../../installation.rst:284
+msgid "To verify that git is installed, simply type:"
+msgstr ""
+
+# 727a35e6746443e38a4bb1a2530226f5
+#: ../../../installation.rst:290
+msgid "Which should return something similar to the following:"
+msgstr ""
+
+# 7ee7ce0fe3cf40d28edb2a88589aafc6
+#: ../../../installation.rst:296
+msgid ""
+"If you get a “bash: git: command not found”, try to restart your "
+"**Terminal** app and double-check for any errors during the install process."
+msgstr ""
+
+# c969a4655a6e41c78571f4f05006d199
+#: ../../../installation.rst:301
+msgid ""
+"Docker on macOS works by running a VM in the background (think of it as a "
+"“computer emulator”). This VM has a certain amount of memory allocated and "
+"WebODM can only use as much memory as it’s allocated."
+msgstr ""
+
+# e89322d22add432b8d00ef0da9910a6c
+#: ../../../installation.rst:303
+msgid ""
+"Right click the whale icon from the task bar and click **Preferences**..."
+msgstr ""
+
+# 73457306344148c0bc0c6382936ef870
+#: ../../../installation.rst:304
+msgid "Select the **Advanced** tab"
+msgstr ""
+
+# 6791fc129e16413983be624d46091da7
+#: ../../../installation.rst:305
+msgid ""
+"Adjust the CPUs slider to use half of all available CPUs and the memory to "
+"use 60-70% of all available memory"
+msgstr ""
+
+# 2fad355dfb504197bb70aded8fa643ec
+#: ../../../installation.rst:306
+msgid "Press **Apply & Restart**"
+msgstr ""
+
+# 339e99e54264491a83c530f1ed107050
+#: ../../../installation.rst:312
+msgid "*Docker advanced settings*"
+msgstr ""
+
+# a55d3812154e4abaadd608dfd4dfac08
+#: ../../../installation.rst:315
+msgid "Step 4. Download and Launch WebODM"
+msgstr ""
+
+# 0d5f531d78ac474db92ecc60012e4521
+#: ../../../installation.rst:317
+msgid "From a **Terminal** type:"
+msgstr ""
+
+# 20229f5dd3ae4bd381cf81c65c83c44e
+# 223a8ca53398448398153f94bc81075a
+#: ../../../installation.rst:325 ../../../installation.rst:426
+msgid "Then open a web browser to http://localhost:8000."
+msgstr ""
+
+# f6c373465d684dcebfbe6fe0633c4138
+#: ../../../installation.rst:328
+msgid "Linux"
+msgstr ""
+
+# 0e56e6e0eea343ffbf70bde692908cbe
+#: ../../../installation.rst:330
+msgid ""
+"OpenDroneMap can run on any Linux distribution that supports docker. "
+"According to `docker’s documentation website "
+"<https://docs.docker.com/install/>`_ the officially supported distributions "
+"are CentOS, Debian, Ubuntu and Fedora, with static binaries available for "
+"others. If you have to pick a distribution solely for running OpenDroneMap, "
+"Ubuntu is the recommended way to go."
+msgstr ""
+
+# 7c7a0719bfe142648c378c8abd3317c2
+#: ../../../installation.rst:333
+msgid "Step 1. Install Requirements"
+msgstr ""
+
+# 83171f74e0364d5980164438faf1521c
+#: ../../../installation.rst:335
+msgid "There are four programs that need to be installed:"
+msgstr ""
+
+# 7d44a185ed8b46abbda9303fb286486f
+#: ../../../installation.rst:337
+msgid "Docker"
+msgstr ""
+
+# f0ce43b8981d43c4bbfe1379c44c9321
+#: ../../../installation.rst:338
+msgid "Git"
+msgstr ""
+
+# 85d3b272b1024b99a987709a8a34ba3a
+#: ../../../installation.rst:339
+msgid "Python (2 or 3)"
+msgstr ""
+
+# a426ce10e416419ab1f4ddd2904af232
+#: ../../../installation.rst:340
+msgid "Pip"
+msgstr ""
+
+# 29d1fde6e7644164be8c8eefdf0b7129
+#: ../../../installation.rst:342
+msgid ""
+"We cannot possibly cover the installation process for every Linux "
+"distribution out there, so we’ll limit the instructions to those that are "
+"distributions officially supported by docker. In all cases it’s just a "
+"matter of opening a terminal prompt and typing a few commands."
+msgstr ""
+
+# 93f7ea63f0484dbcb52d9ac50eb6fb01
+#: ../../../installation.rst:345
+msgid "Install on Ubuntu / Debian"
+msgstr ""
+
+# fa55e97f3d5c459786ad246d4d44b8da
+# 0fe1276569a04b86a3e82a20598da5ee
+# 84aa59c42f794da1865fd8088086ce42
+# 16195dff5bf14d5bab2b2b0a69103c31
+#: ../../../installation.rst:347 ../../../installation.rst:359
+#: ../../../installation.rst:370 ../../../installation.rst:381
+msgid "Commands to type:"
+msgstr ""
+
+# bc2e9dcb5f8140958fc44d216ff18eb5
+#: ../../../installation.rst:357
+msgid "Install on CentOS / RHEL"
+msgstr ""
+
+# 9511489f5fbb43a6a4114e5997beb20c
+#: ../../../installation.rst:368
+msgid "Install on Fedora"
+msgstr ""
+
+# 46bbf3597fbe45d09b2975ada9ad0b1f
+#: ../../../installation.rst:379
+msgid "Install on Arch"
+msgstr ""
+
+# ef4b2e7dc3494eb09c3ce49495829580
+#: ../../../installation.rst:388
+msgid "Step 2. Check Additional Requirements"
+msgstr ""
+
+# 84f96b987b3740c790eeeaa996c576fa
+#: ../../../installation.rst:390
+msgid ""
+"In addition to the three programs above, the dockercompose script is also "
+"needed. Sometimes it’s already installed with docker, but sometimes it "
+"isn’t. To verify if it’s installed try to type:"
+msgstr ""
+
+# 0b00ac1f20674870b69a3d1f092d675a
+#: ../../../installation.rst:396
+msgid "You should see somethings similar to the following:"
+msgstr ""
+
+# 284cca281f614c648f919e885686fdb3
+#: ../../../installation.rst:402
+msgid "If instead you get something similar to the following:"
+msgstr ""
+
+# 983d0e6356a74275bd044ade12af08b9
+#: ../../../installation.rst:408
+msgid "you can install it by using pip:"
+msgstr ""
+
+# 5842e50886b64cc4be4e08cec0121061
+#: ../../../installation.rst:416
+msgid "Step 3. Download and Launch WebODM"
+msgstr ""
+
+# 29abff25121345dea6867519777717e3
+#: ../../../installation.rst:418
+msgid "From a terminal type:"
+msgstr ""
+
+# 57309bc02a884a288ae73c44e72ed08c
+#: ../../../installation.rst:429
+msgid "Basic Commands and Troubleshooting"
+msgstr ""
+
+# eb054dc2ff2e45869db94dfb3ad75aab
+#: ../../../installation.rst:431
+msgid ""
+"The cool thing about using docker is that 99% of the tasks you’ll ever need "
+"to perform while using WebODM can be done via the ./webodm.sh script. You "
+"have already encountered one of them:"
+msgstr ""
+
+# d2bcc76bb7214209a6f4ee623e96d412
+#: ../../../installation.rst:437
+msgid ""
+"which takes care of starting WebODM and setting up a default processing node"
+" (node-odm-1). If you want to stop WebODM, you can already guess what the "
+"command is:"
+msgstr ""
+
+# 3698ff42eb674c89b2d92629aba1ceac
+#: ../../../installation.rst:443
+msgid ""
+"There are several other commands you can use, along with different flags. "
+"Flags are parameters passed to the ./webodm.sh command and are typically "
+"prefixed with “–”. The **port** flag for example instructs WebODM to use a "
+"different network port:"
+msgstr ""
+
+# 959bbbb701f648aa9e3711d89f36f123
+#: ../../../installation.rst:449
+msgid "Other useful commands are listed below:"
+msgstr ""
+
+# 3c132782ccc54888bb8acf6806f4dbbf
+#: ../../../installation.rst:468
+msgid ""
+"`The community forum <https://community.opendronemap.org>`_ is a great place"
+" to ask for help if you     get stuck during any of the installation steps "
+"and for general questions on using the ./webodm.sh script."
+msgstr ""
+
+# fdbc2929c47444bc8817faac19077cc1
+#: ../../../installation.rst:471
+msgid "Hello, WebODM!"
+msgstr ""
+
+# 7ee17336350e4347afaa9f26185d0960
+#: ../../../installation.rst:473
+msgid ""
+"After running ./webodm.sh start and opening WebODM in the browser, you will "
+"be greeted with a welcome message and will be asked to create the first "
+"user. Take some time to familiarize yourself with the web interface and "
+"explore its various menus."
+msgstr ""
+
+# cc069aa0bca7429eae5ab21d4666909f
+#: ../../../installation.rst:479
+msgid "*WebODM Dashboard*"
+msgstr ""
+
+# 64e37b09ab6641718bde87e5e05b6c56
+#: ../../../installation.rst:481
+msgid ""
+"Notice that under the **Processing Nodes** menu there’s a \"node-odm-1\" "
+"node already configured for you to use. This is a NodeODM node and has been "
+"created automatically by WebODM. This node is running on the same machine as"
+" WebODM."
+msgstr ""
+
+# b450d1d7e6344be38bc3e77f2955948e
+#: ../../../installation.rst:483
+msgid ""
+"If you’ve made it this far, congratulations! Now it’s time to start "
+"processing some data."
+msgstr ""
+
+# 83d7a443ece94164aa76430eaefbd970
+#: ../../../installation.rst:490
+msgid "Running on more than one machine"
+msgstr ""
+
+# 0c2d75f28a854d92a9fe8c5c4c28a9e9
+#: ../../../installation.rst:492
+msgid ""
+"**Optionally:** If you have another computer, you can repeat the "
+"installation process (install docker, git, python, etc.) and launch a new "
+"NodeODM node by typing from a Terminal/Git Bash window:"
+msgstr ""
+
+# 4694bf64a88c48d7aad13c6bb1a1b316
+#: ../../../installation.rst:498
+msgid ""
+"The above command asks docker to launch a new container using the "
+"opendronemap/nodeodm image from Docker Hub (the latest version of NodeODM), "
+"using port 3000, setting a maximum number of concurrent tasks to 1 and to "
+"protect the node from unauthorized access using the password \"secret\"."
+msgstr ""
+
+# f76fc4c596a14f9b82f90ddca6b06cca
+#: ../../../installation.rst:500
+msgid ""
+"From WebODM you can then press the **Add New** button under **Processing "
+"Nodes**. For the **hostname/IP** field type the IP of the second computer. "
+"For the **port** field type “3000”. For the **token** field type “secret”. "
+"You can also add an optional **label** for your node, such as “second "
+"computer”. Then press **Save**."
+msgstr ""
+
+# 964b17d1817a4c7bbf72dd1ab2de029f
+#: ../../../installation.rst:502
+msgid ""
+"If everything went well, you should now have two processing nodes! You will "
+"be able to process multiple tasks in parallel using two different machines."
+msgstr ""
+
+# f77613f718494ac791af608ceafe2657
+#: ../../../installation.rst:504
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst>`_"
+msgstr ""
