@@ -166,6 +166,29 @@ tx pull -l sw
 
 To add a new language, do it through the Transifex interface and then add a new line to the Makefile `deploy` command.
 
+## The Travis CI build failed... 😞
+
+Don't panic! Unfortunately, Transifex doesn't protect the reST notation that Sphinx uses for things like formatting and links. It's possible that during translation, some of the syntax was broken.
+
+Start up your Python virtual environment if it's not already with `source venv/bin/activate` and then try a build of the language that you're trying to update, for example:
+
+``` 
+sphinx-build -b html -D language='sw' source "_build/html/sw/" -nW
+```
+
+The `-nW` (nitpicky) flag is important. You should see an output in your console such as:
+
+```
+Warning, treated as error:
+/path/to/my/project/OpenDroneMap/docs/source/multispectral.rst:25:<translated>:1:Inline interpreted text or phrase reference start-string without end-string.
+```
+
+Look at the source file and line that is mentioned. In this case the file is `source/multispectral.rst` and the line is the number after the colon after the filename (`25`). Looking at the file we see that line 25 is the last line and the "Help edit these docs!" link. 
+
+Go to Transifex, go to the resource, and got to the string. The warning/error message should help you understand what went wrong. In this case the link syntax wasn't matched correctly. Fix and save the translation.
+
+Pull the language down (e.g. `tx pull -l sw`) and then try the build again. Unfortunately, if there is more than one error, you'll have to fix them one at a time.
+
 ### Questions?
 
 Reach out to https://community.opendronemap.org, we'll help you get up and running with your first contribution if you get stuck!
