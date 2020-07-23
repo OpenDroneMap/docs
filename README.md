@@ -8,6 +8,8 @@ Even if you think your contribution might not be valuable, it might be for other
 
 Tips, tricks, hacks, datasets, lessons learned, best practices, every bit helps. We want to know! Share it.
 
+We also need help with translations! The translations are managed through Transifex and so can be done via a simple interface in your browser. Scroll down to "Contributing translations" for more details, or if you're familiar with Transifex you can click over to [this project on there](https://www.transifex.com/americanredcross/opendronemap_docs/).
+
 # How To Make Your First Contribution
 
 If you don't have a GitHub account, [register](https://github.com/join?source=header-home) first. It's free and GitHub is awesome.
@@ -123,7 +125,9 @@ Open https://github.com/OpenDroneMap/docs and you'll see a box asking you to ope
 
 ## Contributing translations
 
-_TODO_
+Transifex has a getting [started guide for translators](https://docs.transifex.com/getting-started-1/translators) that will walk you through the steps to setup an account.
+
+The ODM documentation Transifex project can be found at: https://www.transifex.com/americanredcross/opendronemap_docs/
 
 ## Managing the translation process
 
@@ -157,6 +161,8 @@ Alternatively, you can pull only a specific language. For example:
 ```
 tx pull -l sw
 ```
+
+**TODO:** figure out why it may be necessary to apply the force tag (for example, `tx pull -l sw -f`)
 
 To add a new language, do it through the Transifex interface and then add a new line to the Makefile `deploy` command.
 
