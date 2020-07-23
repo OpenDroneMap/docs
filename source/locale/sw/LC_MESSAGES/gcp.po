@@ -178,8 +178,8 @@ msgid ""
 "with known ground control XYZ values, one would do the following:"
 msgstr ""
 "POSM GCPi linabebwa na chaguo msingi la WebODM. Mfano unapatikana katika "
-"onesho `la WebODM http://demo.webodm.org/plugins/posm-gcpi/>`_. Kutumia hii "
-"ijulikanayo ground control XYZ value, Moja itafanya ifuatavyo:"
+"onesho `la WebODM <http://demo.webodm.org/plugins/posm-gcpi/>`_. Kutumia hii"
+" ijulikanayo ground control XYZ value, Moja itafanya ifuatavyo:"
 
 # b9a43cb0966f427fae9039e6aa420d36
 #: ../../../gcp.rst:52
