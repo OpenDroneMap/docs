@@ -32,11 +32,13 @@ msgid ""
 "OpenDroneMap relies on community contributions. You can contribute in many "
 "ways, even if you are not a programmer."
 msgstr ""
+"OpenDroneMap inategemea na ushiriki wa kijamii. unaweza kushiriki kwa xnjia "
+"nyingi, hata ukiwa sio programa."
 
 # d7a8cfb3ce1c4e789d9bc59089b7af33
 #: ../../../contributing.rst:9
 msgid "Community Forum"
-msgstr ""
+msgstr "Jukwaa la kijamii"
 
 # 372bbf306f2e4a60a8915ed2441771d7
 #: ../../../contributing.rst:11
@@ -48,11 +50,17 @@ msgid ""
 "datasets for others to explore. It is a good place go before submitting bug "
 "reports or getting in touch with developers before writing a new feature."
 msgstr ""
+"Ikiwa unataka kushiriki, katika matatizo yalioshinda, au yanayotaka "
+"kutatuliwa, `jukwaa <https://community.opendronemap.org/>`_ ni zuri sehemu "
+"ya kuanzia. unaweza kupata maswali yaliojibiwa au unaweza kupata njia "
+"zitakazokusaidia au rasilimali. Pia unaweza kushiriki data zako za wazi kwa "
+"wengine kutumia. Ni sehemu nzuri kabla kutuma makosa au kutumia pamoja na "
+"wasanifu kuandika vitu vipya."
 
 # 925012996add420ca56b7ff53828e745
 #: ../../../contributing.rst:14
 msgid "Reporting Bugs"
-msgstr ""
+msgstr "Kuwasilisha Bugs"
 
 # cfa595af5c7748dea7c279ce2b09160f
 #: ../../../contributing.rst:16
@@ -60,6 +68,8 @@ msgid ""
 "Bugs are tracked as Github issues. Please create an issue in the repository "
 "and tag it with the Bug tag."
 msgstr ""
+"Bugs ni kufuatilia kama suala la Github. Tafadhali tengeneza kitu ndani "
+"sehemu ya kuhifadhi na lebo na makosa."
 
 # f79279e13ea24b5e8196ae34fb77bb8c
 #: ../../../contributing.rst:18
@@ -67,12 +77,14 @@ msgid ""
 "Explain the problem and include additional details to help maintainers "
 "reproduce the problem:"
 msgstr ""
+"Elezea tatizo na uambatanishe maelezo ya ziada kuwasaidia wanaotengeneza "
+"kugundua tatizo:"
 
 # 3957ae606cb0425d8a8d6fcb1e639faf
 #: ../../../contributing.rst:20
 msgid ""
 "**Use a clear and descriptive title** for the issue to identify the problem."
-msgstr ""
+msgstr "**Tumia njia fupi na madainayojieleza** kwa kitu kuonesha tatizo."
 
 # bdb253d1772f45e7a7ef73e96e4e2654
 #: ../../../contributing.rst:21
@@ -82,6 +94,10 @@ msgid ""
 "Vagrant, etc), e.g. which command exactly you used in the terminal. When "
 "listing steps, **don't just say what you did, but explain how you did it.**"
 msgstr ""
+"**Elezea hatua sahihi ambayo inazalisha tatizo** kwa undani wote "
+"iwezekanavyo. Mfano,anza kwa kuelezea vipi unawasha ODM (Docker, Vagrant, "
+"etc), e.g ni camand gani unatumia ndani ya taminali. Wakati unasikiliza "
+"hatua, **usiseme tu umefanya, lakini elezea ni vipi umefanya.**"
 
 # eebf5329d6344d08b8d6949880fca497
 #: ../../../contributing.rst:22
@@ -91,6 +107,10 @@ msgid ""
 " examples. If you're providing snippets in the issue, use `Markdown code "
 "blocks <https://help.github.com/articles/markdown-basics/#multiple-lines>`_."
 msgstr ""
+"**Andaa mfano maalum kuonesha njia.**Ikiwemo kiunganishi kwenye mafaili au "
+"GitHub project, au sehemu copy/pasteable, ambayoumeitumia katika mifano "
+"yote. Ikiwa umetoa dondoo khwenye hili, tumia `Markdown code blocks "
+"<https://help.github.com/articles/markdown-basics/#multiple-lines>`_."
 
 # c6dc25d3a3cc4b188e567e241d3f3a77
 #: ../../../contributing.rst:23
@@ -98,11 +118,13 @@ msgid ""
 "**Describe the behavior you observed after following the steps** and point "
 "out what exactly is the problem with that behavior."
 msgstr ""
+"**Elezea tabia uligundua baada ya hatua zifuatazo** na onyesha kitu husika "
+"ni tatizo kwa tabia hio."
 
 # a4e3ccec200740a0854f45b8c9105728
 #: ../../../contributing.rst:24
 msgid "**Explain which behavior you expected to see instead and why.**"
-msgstr ""
+msgstr "**Elezea ni tabia ipi unategemea kuiona kutokea na kwa nini.**"
 
 # 541a50043a9b4241a4b659662b6e1d30
 #: ../../../contributing.rst:25
@@ -113,6 +135,11 @@ msgid ""
 "`this tool <https://github.com/colinkeenan/silentcast>`_ or `this one "
 "<https://github.com/GNOME/byzanz>`_ on Linux."
 msgstr ""
+"**Ikiwemo screenshots na animated GIF** ambayo inakuonesha hatua za maelezo "
+"yafuatayo na maelezo sahihi ya matatizo. Unaweza kutumia `Kifaa hichi cha "
+"kurekodi GIFs kwa macOS na Windows <http://www.cockos.com/licecap/>`_, na "
+"`this tool <https://github.com/colinkeenan/silentcast>`_ au `this one "
+"<https://github.com/GNOME/byzanz>`_ on Linux."
 
 # 43f98a3d907e487d967f29497574f208
 #: ../../../contributing.rst:26
@@ -120,6 +147,8 @@ msgid ""
 "**If the problem is related to performance,** please post your machine's "
 "specs (host and guest machine)."
 msgstr ""
+"**Ikiwa tatizo linaendana na utendaji kazi,** tafadhali tuma mashine yako "
+"maalum (host na guest mashine)."
 
 # 95d28b70f6c745269f2e101c9ebd7872
 #: ../../../contributing.rst:27
@@ -128,22 +157,25 @@ msgid ""
 "were doing before the problem happened and share more information using the "
 "guidelines below."
 msgstr ""
+"**Ikiwa tatizo halijaoneshwa kwa kitendo maalum,** eleze nini ulifanya kabla"
+" tatizo halijatoke na sambaza maelezo kutumia maelekezo yafuatayo."
 
 # 7e3a9ff9bd6047cfbb353a9007c072de
 #: ../../../contributing.rst:29
 msgid "Include details about your configuration and environment:"
-msgstr ""
+msgstr "Ikiwemo undani juu ya configuration and environment:"
 
 # d0b284a2065049f5a2c78f914fd4ee97
 #: ../../../contributing.rst:31
 msgid ""
 "**Which version of ODM are you using?** A stable release? a clone of master?"
 msgstr ""
+"**Ni vashani ya ODM unayotumia?** Imetolewa sahihi? ni baabara ya master?"
 
 # 2c6d40300ba9430a85a83dc23588debb
 #: ../../../contributing.rst:32
 msgid "**What's the name and version of the OS you're using?**"
-msgstr ""
+msgstr "**Ni jina gani na version ya OS unayotumia?**"
 
 # 49f8184463b44d938e19609a806233ea
 #: ../../../contributing.rst:33
@@ -152,16 +184,19 @@ msgid ""
 "software are you using and which operating systems and versions are used for"
 " the host and the guest?"
 msgstr ""
+"**Unatumia ODM katika virtual mashine au Docker?** Ikiwa ni hivyo, ni VM "
+"software unayotumia na opereting system gani na tolea unalotumia kwa host na"
+" guest?"
 
 # 3135c11e453247179f8c1c65d5700c63
 #: ../../../contributing.rst:36
 msgid "Template For Submitting Bug Reports"
-msgstr ""
+msgstr "Kigezo kwa kuwasilisha maelezo ya bug"
 
 # befb661ef483468296538486ee7c72a1
 #: ../../../contributing.rst:69
 msgid "Pull Requests"
-msgstr ""
+msgstr "Tatua maombi"
 
 # 39056637eeed467b8451dd10998c0783
 #: ../../../contributing.rst:71
@@ -169,21 +204,23 @@ msgid ""
 "Include screenshots and animated GIFs in your pull request whenever "
 "possible."
 msgstr ""
+"Ikiwemo screenshots na animated GIFs katika kutatua maombi yako "
+"iwezekanavyo."
 
 # b7dbdbac90e84d6284edfd22f4d2b53b
 #: ../../../contributing.rst:72
 msgid "Follow the PEP8 Python Style Guide."
-msgstr ""
+msgstr "Fuata PEP8 Python Style Guide."
 
 # b679a0d7db6246c1a8c40720159e034b
 #: ../../../contributing.rst:73
 msgid "End files with a newline."
-msgstr ""
+msgstr "Malizia file kwa mstari mpya."
 
 # dc6b120a67bf4f9684e5bb653290c7cb
 #: ../../../contributing.rst:76
 msgid "Avoid platform-dependent code:"
-msgstr ""
+msgstr "Epuka platform-dependent code:"
 
 # e198baeffa1f4a919d039b18e11ec7f8
 #: ../../../contributing.rst:75
@@ -193,7 +230,7 @@ msgstr ""
 # 5d00c0c8d3d24347bfaa26f0ebe1e063
 #: ../../../contributing.rst:76
 msgid "Use path.join() to concatenate filenames."
-msgstr ""
+msgstr "Tumia path.join() kwa kuunganisha majina."
 
 # 00cddf0eb7bf4e4bb9a469313a778b3a
 #: ../../../contributing.rst:77
@@ -201,17 +238,18 @@ msgid ""
 "Use os.tmpdir() rather than /tmp when you need to reference the temporary "
 "directory."
 msgstr ""
+"Tumia os.tmpdir() kuliko /tmp ukihitaji kumbukumbu ya anuani ya muda mfupi."
 
 # 60e9e81967354752b39a01541d5b2ccf
 #: ../../../contributing.rst:79
 msgid ""
 "Using a plain return when returning explicitly at the end of a function."
-msgstr ""
+msgstr "Tumia return tupu wakati return ya urahisi mwisho wa kazi."
 
 # fc372ffc32604e90890111d4287b33a0
 #: ../../../contributing.rst:79
 msgid "Not return null, return undefined, null, or undefined"
-msgstr ""
+msgstr "Sio return null, return undefined, null, au undefined"
 
 # cbb4ef102fb34a88bc3ccb04d7ff203c
 #: ../../../contributing.rst:81
@@ -219,3 +257,5 @@ msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_"
 msgstr ""
+"`kwa msaada kurekebisha kitabu! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_"
