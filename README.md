@@ -162,8 +162,6 @@ Alternatively, you can pull only a specific language. For example:
 tx pull -l sw
 ```
 
-**TODO:** figure out why it may be necessary to apply the force tag (for example, `tx pull -l sw -f`)
-
 To add a new language, do it through the Transifex interface and then add a new line to the Makefile `deploy` command.
 
 ## The Travis CI build failed... 😞
