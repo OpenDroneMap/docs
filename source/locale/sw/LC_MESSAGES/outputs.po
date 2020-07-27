@@ -3,6 +3,10 @@
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# danbjoseph <danbjoseph@gmail.com>, 2020
+# Khadija Abdulla <khastylez@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-21 17:01-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: Khadija Abdulla <khastylez@gmail.com>, 2020\n"
 "Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -30,7 +35,7 @@ msgstr ""
 # e4c5e56bafa147fab888836f5d3ee12d
 #: ../../../outputs.rst:7
 msgid "Point Cloud"
-msgstr ""
+msgstr "Point Cloud"
 
 # e5a47a5f7e9048b9a271385ca20dff58
 #: ../../../outputs.rst:9
@@ -58,6 +63,9 @@ msgid ""
 "``odm_texturing/odm_textured_model_geo.obj`` -- The georeferenced and "
 "textured surface mesh"
 msgstr ""
+"``odm_texturing/odm_textured_model.obj`` -- The textured surface mesh "
+"``odm_texturing/odm_textured_model_geo.obj`` -- The georeferenced na "
+"textured surface mesh"
 
 # ac92cff17c904762b2fd054257cf64d5
 #: ../../../outputs.rst:24
@@ -85,6 +93,8 @@ msgid ""
 "``odm_orthophoto/odm_orthphoto.png`` -- The orthophoto, but this is a simple"
 " png, which doesn't have any georeferencing information"
 msgstr ""
+"``odm_orthophoto/odm_orthphoto.png`` -- The orthophoto, lakini hii ni simple"
+" png, ambayo haina maelezo ya georeferencing"
 
 # 8487c7b9409e4549bdf74776d7c552b0
 #: ../../../outputs.rst:37
@@ -113,6 +123,9 @@ msgid ""
 "<https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-"
 "models>`_ for more options in creating."
 msgstr ""
+"DTM/DSM itatengenezwa ikiwa ``--dtm`` au ``--dsm`` zitatumika. Angalia "
+"`tutorial on elevation models <https://docs.opendronemap.org/tutorials.html"
+"#creating-digital-elevation-models>`_ kwa njia zaidi za kutengeneza."
 
 # 3d6a730458b14794bf7454b4f6e119e4
 #: ../../../outputs.rst:50

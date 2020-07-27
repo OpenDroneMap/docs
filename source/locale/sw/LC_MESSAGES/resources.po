@@ -3,6 +3,10 @@
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# danbjoseph <danbjoseph@gmail.com>, 2020
+# Khadija Abdulla <khastylez@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-21 17:01-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: Khadija Abdulla <khastylez@gmail.com>, 2020\n"
 "Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -36,11 +41,13 @@ msgstr ""
 #: ../../../resources.rst:9
 msgid "`README page for ODM <https://github.com/OpenDroneMap/OpenDroneMap>`_"
 msgstr ""
+"`Ukurasa wa README kwa ODM <https://github.com/OpenDroneMap/OpenDroneMap>`_"
 
 # 3bcf9ff9b6e3408f875a614e65332f9b
 #: ../../../resources.rst:10
 msgid "`README page for WebODM <https://github.com/OpenDroneMap/WebODM>`_"
 msgstr ""
+"`Ukurasa wa README  kwa WebODM <https://github.com/OpenDroneMap/WebODM>`_"
 
 # 52d2e948eece4d0d8fe87e3f17bff6dd
 #: ../../../resources.rst:11
@@ -48,6 +55,8 @@ msgid ""
 "`README page for NodeODM <https://github.com/OpenDroneMap/node-"
 "OpenDroneMap>`_"
 msgstr ""
+"`Ukurasa wa README kwa NodeODM <https://github.com/OpenDroneMap/node-"
+"OpenDroneMap>`_"
 
 # 43b64684e93c41a08607bfd7318b8509
 #: ../../../resources.rst:12
@@ -55,6 +64,8 @@ msgid ""
 "`Ground Control Points Format Specification "
 "<https://github.com/mapillary/OpenSfM/blob/master/doc/source/gcp.rst>`_"
 msgstr ""
+"`Uainishaji Muuwa wa Ground Control Points "
+"<https://github.com/mapillary/OpenSfM/blob/master/doc/source/gcp.rst>`_"
 
 # b4bbfe51562c46d781908edf80c34abf
 #: ../../../resources.rst:13
@@ -64,7 +75,7 @@ msgstr ""
 # 60796eb1324b41d5b56f497960451872
 #: ../../../resources.rst:16
 msgid "For Developers"
-msgstr ""
+msgstr "Kwa msanidi programu"
 
 # 45473074a8b6436f9d842e2c9bb4ca87
 #: ../../../resources.rst:18
@@ -75,7 +86,7 @@ msgstr ""
 # cd3029204fde4dd2b6ece3cfe1a2bd6b
 #: ../../../resources.rst:20
 msgid "WebODM documentation: https://docs.webodm.org"
-msgstr ""
+msgstr "Nyaraka za WebODM: https://docs.webodm.org"
 
 # c6fe70ba85564f3e82f609e7df9f8227
 #: ../../../resources.rst:21
@@ -90,6 +101,8 @@ msgid ""
 "Overview of the ODM pipeline: http://community.opendronemap.org/t/where-"
 "can-i-find-background-information-on-the-concepts-of-odm/665/2"
 msgstr ""
+"Muonekano wa ODM pipeline: http://community.opendronemap.org/t/where-can-i"
+"-find-background-information-on-the-concepts-of-odm/665/2"
 
 # edc948c7e2d2431e8b888a7b1a733965
 #: ../../../resources.rst:23
@@ -100,6 +113,11 @@ msgid ""
 "related to structure from motion, multi-view stereo, meshing, texturing, "
 "etc. which can be used to improve the software."
 msgstr ""
+"Tunaweka `sehemu katika jukwaa maalum kwa karatasi za utafiti "
+"<http://community.opendronemap.org/c/ideas-proposals/research-papers>`_. Hii"
+" ni sehemu ya thamani ambayo utasoma kuhusu tafiti za sanaa za vitu "
+"vinavyoshabihiana na umbile kutoka kwenye mwendo, multi-view sauti, mtandao,"
+" mifumo, etc. ambayo inaweza kutumia kuboresha software."
 
 # 9653eddbec1b4561addbaa46fe051e06
 #: ../../../resources.rst:26

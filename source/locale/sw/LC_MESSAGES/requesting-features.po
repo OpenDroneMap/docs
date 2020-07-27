@@ -3,6 +3,10 @@
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# danbjoseph <danbjoseph@gmail.com>, 2020
+# Khadija Abdulla <khastylez@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-21 17:01-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: Khadija Abdulla <khastylez@gmail.com>, 2020\n"
 "Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -20,7 +25,7 @@ msgstr ""
 # d940e31fefb34ecbb8d9be39288cd73c
 #: ../../../requesting-features.rst:2
 msgid "How To Request Features"
-msgstr ""
+msgstr "Vipi Utaomba Vipengele"
 
 # 95118bd8b9c649a598c5fe8bff033698
 #: ../../../requesting-features.rst:4
@@ -38,6 +43,11 @@ msgid ""
 "reasonable request is. From the inside of a project, they can feel very "
 "resource constrained: largely by time, money, and opportunity overload."
 msgstr ""
+"OpenDroneMap ni FOSS programu. Free and open source (FOSS) mradi wa "
+"kupendeza kutoka ndani na nje: kutoka nje, mafanikio zaidi hasa kama "
+"wanaweza kufanya kila kitu, na ni ngumu kujua ni yapi maombi ya msingi. "
+"Kutoka ndani ya mradi wanaweza kuhisi jambo zito: muda mkubwa, pesa na fursa"
+" nyingi."
 
 # 1b8acc2a7a29463ca0df0b5f454bc0b7
 #: ../../../requesting-features.rst:13
@@ -50,6 +60,12 @@ msgid ""
 "sources to see if someone else has already brought it up.  Sometimes a "
 "feature is already in the works, or has at least been discussed."
 msgstr ""
+"Maombi ya vipengele yanaweza kuwasilishwa kama jambo katika maombi ya anuani"
+" Github (mfano, `WebODM <https://github.com/OpenDroneMap/WebODM/issues>`_ au"
+" `ODM <https://github.com/OpenDroneMap/ODM/issues>`_ au sawa) au rahisi "
+"zaidi kama mada ya kujadiliwa ndani ya `jukwaa la kijamii "
+"<https://community.opendronemap.org/>`_. Jaribu kuwanza kwa kutafuta asili "
+"kuangalia ikiwa itafanya kazi, au angalau imejadiliwa."
 
 # 72a6e0d25ec84002b73a6810ffca914c
 #: ../../../requesting-features.rst:19
@@ -59,6 +75,9 @@ msgid ""
 "(or possibly a combination of the three) then there are two answers that "
 "work really well in response:"
 msgstr ""
+"Muhimu zaidi, njia ni kusikia: kiwa mtu ndani ya mradi kasema: \"Huu ni "
+"msaada mkubwa, tunahitaji PESA au MUDA au MTU KUSAIDIA CODE\" (au uwezekano "
+"wa hizo tatu) kisha kuna majibu mawili yanayofanya kazi vizuri zaidi kujibu:"
 
 # db0eaf87e7fa4f9f99538ed5dd6b2d66
 #: ../../../requesting-features.rst:23
@@ -67,11 +86,14 @@ msgid ""
 "with the necessary resources. As a community member, I would be happy to be "
 "an early user and tester!*"
 msgstr ""
+"*Sawa. Sijui yalikua maombi ya vipengele vikubwa! Natamani mtu atakuja na "
+"vitendea kazi muhimu. Miongoni mwa wanajamii, Nitafurahi kuwa mtumiaji wa "
+"mwanzo kujaribu!*"
 
 # d83e0f882cf640539bbdfca6d431241d
 #: ../../../requesting-features.rst:25
 msgid "or"
-msgstr ""
+msgstr "au"
 
 # eeb066ea19ea47398930c8e7c724c5a4
 #: ../../../requesting-features.rst:27
@@ -79,6 +101,8 @@ msgid ""
 "*Let’s figure out if we can put together the resources to get this done! "
 "Here’s what I can contribute toward it: …*"
 msgstr ""
+"*Wacha tuone ikiwa tutaunganisha pamoja rasilimali kulimaliza hili! Hapa "
+"naweza kushiriki kwa hili: ...*"
 
 # 22a7df06b14a4a30a09f34de5c834c28
 #: ../../../requesting-features.rst:29
@@ -96,3 +120,6 @@ msgid ""
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/requesting-"
 "features.rst>`_"
 msgstr ""
+"`Kwa msaada kurekebisha kitabu! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/requesting-"
+"features.rst>`_"
