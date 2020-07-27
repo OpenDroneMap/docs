@@ -39,7 +39,7 @@ msgstr ""
 # d7a8cfb3ce1c4e789d9bc59089b7af33
 #: ../../../contributing.rst:9
 msgid "Community Forum"
-msgstr ""
+msgstr "Jukwaa la kijamii"
 
 # 372bbf306f2e4a60a8915ed2441771d7
 #: ../../../contributing.rst:11
@@ -61,7 +61,7 @@ msgstr ""
 # 925012996add420ca56b7ff53828e745
 #: ../../../contributing.rst:14
 msgid "Reporting Bugs"
-msgstr ""
+msgstr "Kuwasilisha Bugs"
 
 # cfa595af5c7748dea7c279ce2b09160f
 #: ../../../contributing.rst:16
@@ -78,12 +78,14 @@ msgid ""
 "Explain the problem and include additional details to help maintainers "
 "reproduce the problem:"
 msgstr ""
+"Elezea tatizo na uambatanishe maelezo ya ziada kuwasaidia wanaotengeneza "
+"kugundua tatizo:"
 
 # 3957ae606cb0425d8a8d6fcb1e639faf
 #: ../../../contributing.rst:20
 msgid ""
 "**Use a clear and descriptive title** for the issue to identify the problem."
-msgstr ""
+msgstr "**Tumia njia fupi na madainayojieleza** kwa kitu kuonesha tatizo."
 
 # bdb253d1772f45e7a7ef73e96e4e2654
 #: ../../../contributing.rst:21
@@ -117,11 +119,13 @@ msgid ""
 "**Describe the behavior you observed after following the steps** and point "
 "out what exactly is the problem with that behavior."
 msgstr ""
+"**Elezea tabia uligundua baada ya hatua zifuatazo** na onyesha kitu husika "
+"ni tatizo kwa tabia hio."
 
 # a4e3ccec200740a0854f45b8c9105728
 #: ../../../contributing.rst:24
 msgid "**Explain which behavior you expected to see instead and why.**"
-msgstr ""
+msgstr "**Elezea ni tabia ipi unategemea kuiona kutokea na kwa nini.**"
 
 # 541a50043a9b4241a4b659662b6e1d30
 #: ../../../contributing.rst:25
@@ -144,6 +148,8 @@ msgid ""
 "**If the problem is related to performance,** please post your machine's "
 "specs (host and guest machine)."
 msgstr ""
+"**Ikiwa tatizo linaendana na utendaji kazi,** tafadhali tuma mashine yako "
+"maalum (host na guest mashine)."
 
 # 95d28b70f6c745269f2e101c9ebd7872
 #: ../../../contributing.rst:27
@@ -152,6 +158,8 @@ msgid ""
 "were doing before the problem happened and share more information using the "
 "guidelines below."
 msgstr ""
+"**Ikiwa tatizo halijaoneshwa kwa kitendo maalum,** eleze nini ulifanya kabla"
+" tatizo halijatoke na sambaza maelezo kutumia maelekezo yafuatayo."
 
 # 7e3a9ff9bd6047cfbb353a9007c072de
 #: ../../../contributing.rst:29
@@ -183,12 +191,12 @@ msgstr ""
 # 3135c11e453247179f8c1c65d5700c63
 #: ../../../contributing.rst:36
 msgid "Template For Submitting Bug Reports"
-msgstr ""
+msgstr "Kigezo kwa kuwasilisha maelezo ya bug"
 
 # befb661ef483468296538486ee7c72a1
 #: ../../../contributing.rst:69
 msgid "Pull Requests"
-msgstr ""
+msgstr "Tatua maombi"
 
 # 39056637eeed467b8451dd10998c0783
 #: ../../../contributing.rst:71
@@ -207,12 +215,12 @@ msgstr "Fuata maelekezo PEP8 Python Style."
 # b679a0d7db6246c1a8c40720159e034b
 #: ../../../contributing.rst:73
 msgid "End files with a newline."
-msgstr ""
+msgstr "Malizia file kwa mstari mpya."
 
 # dc6b120a67bf4f9684e5bb653290c7cb
 #: ../../../contributing.rst:76
 msgid "Avoid platform-dependent code:"
-msgstr ""
+msgstr "Epuka platform-dependent code:"
 
 # e198baeffa1f4a919d039b18e11ec7f8
 #: ../../../contributing.rst:75
@@ -223,7 +231,7 @@ msgstr ""
 # 5d00c0c8d3d24347bfaa26f0ebe1e063
 #: ../../../contributing.rst:76
 msgid "Use path.join() to concatenate filenames."
-msgstr ""
+msgstr "Tumia path.join() kwa kuunganisha majina."
 
 # 00cddf0eb7bf4e4bb9a469313a778b3a
 #: ../../../contributing.rst:77
@@ -231,17 +239,18 @@ msgid ""
 "Use os.tmpdir() rather than /tmp when you need to reference the temporary "
 "directory."
 msgstr ""
+"Tumia os.tmpdir() kuliko /tmp ukihitaji kumbukumbu ya anuani ya muda mfupi."
 
 # 60e9e81967354752b39a01541d5b2ccf
 #: ../../../contributing.rst:79
 msgid ""
 "Using a plain return when returning explicitly at the end of a function."
-msgstr ""
+msgstr "Tumia return tupu wakati return ya urahisi mwisho wa kazi."
 
 # fc372ffc32604e90890111d4287b33a0
 #: ../../../contributing.rst:79
 msgid "Not return null, return undefined, null, or undefined"
-msgstr ""
+msgstr "Sio return null, return undefined, null, au undefined"
 
 # cbb4ef102fb34a88bc3ccb04d7ff203c
 #: ../../../contributing.rst:81
@@ -249,3 +258,5 @@ msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_"
 msgstr ""
+"`kwa msaada kurekebisha kitabu! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_"

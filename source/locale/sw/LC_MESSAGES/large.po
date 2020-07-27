@@ -25,7 +25,7 @@ msgstr ""
 # 5ea5942cc4604baea3dc66a4ee841282
 #: ../../../large.rst:4
 msgid "Splitting Large Datasets"
-msgstr ""
+msgstr "Kugawa Database Kubwa"
 
 # 09b5af17439740d2b8a18993e6709da6
 #: ../../../large.rst:6
@@ -64,11 +64,13 @@ msgid ""
 "support split-merge, by enabling the ``--split`` option when creating a new "
 "task."
 msgstr ""
+"Split-merge inafanya kazi ndani ya ODM nje ya boxi ikiwa node zinasaidia "
+"split-merge, kwa kuruhusu chaguo la ``--split`` unapotengeneza njia mpya."
 
 # 7c1cb609f5c74801ba89894fb5974978
 #: ../../../large.rst:13
 msgid "Calibrate images"
-msgstr ""
+msgstr "Kurekebisha Picha"
 
 # a5852d851b3c4557a860c07a9a876368
 #: ../../../large.rst:15
@@ -96,7 +98,7 @@ msgstr ""
 # 0967d468c7144fc5bd2132400d045215
 #: ../../../large.rst:24
 msgid "Local Split-Merge"
-msgstr ""
+msgstr "Split-Merge ya Ndani"
 
 # 2e2ad9be96fa496bb5ab7db7b677f5df
 #: ../../../large.rst:26
@@ -117,6 +119,8 @@ msgid ""
 "If you already know how you want to split the dataset, you can provide that "
 "information and it will be used instead of the clustering algorithm."
 msgstr ""
+"Ikiwa unajua vipi unaweza kugawa dataseti, unaweza kutoa maelezo na "
+"itatumiaka badala ya cluster algorithim."
 
 # 175b97d3d6a44086be4f0cdabfb6fe95
 #: ../../../large.rst:34
@@ -126,6 +130,10 @@ msgid ""
 "should have two words: first the name of the image and second the name of "
 "the group it belongs to. For example::"
 msgstr ""
+"Kundi linaweza kupatika kwa kuengeza faili linaloitwa image_groups.txt "
+"katika folder kuu la dataseti. Faili lazima liwe na mstari mmoja kwa kila "
+"picha. Kila mstari lazima uwe na maneno mawili: La kwanza ni jina la picha "
+"na pili ni jina la kundi la picha. Kwa Mfano::"
 
 # 20c59dc7a68941e89e8369bd6026f2ff
 #: ../../../large.rst:42
@@ -133,11 +141,13 @@ msgid ""
 "will create 3 submodels. Make sure to pass ``--split-overlap 0`` if you "
 "manually provide a ``image_groups.txt`` file."
 msgstr ""
+"utatengeza submodel 3. Hakikisha unapitisha ``--split-overlap 0`` ikiwa "
+"unatengeneza mwenyewe ``image_groups.txt`` faili."
 
 # f821d7b1316a4f81830050135f38ec62
 #: ../../../large.rst:46
 msgid "Distributed Split-Merge"
-msgstr ""
+msgstr "Kugawanya Split-Merge"
 
 # f170f960ba414793b7f657bb74d70937
 #: ../../../large.rst:48
@@ -147,16 +157,19 @@ msgid ""
 "nodes, orchestrated via `ClusterODM "
 "<https://github.com/OpenDroneMap/ClusterODM>`_."
 msgstr ""
+"ODM pia inaweza kugawanya wenyewe mchakato wa kila submodel kwa mashine "
+"tofauti kupitia `NodeODM <https://github.com/OpenDroneMap/NodeODM>`_ nodes, "
+"orchestrated via `ClusterODM <https://github.com/OpenDroneMap/ClusterODM>`_."
 
 # 09a33b36dab54c42a8ce360deacaf649
 #: ../../../large.rst:55
 msgid "Getting Started with Distributed Split-Merge"
-msgstr ""
+msgstr "Kupata kuanza pamoja na kugawanya Split-Merge"
 
 # af83a83165d8401396aab49b8744a62b
 #: ../../../large.rst:57
 msgid "The first step is start ClusterODM"
-msgstr ""
+msgstr "Njia ya mwanzo ni kustart ClusterODM"
 
 # 6d4217467bf544e9a7ad1ac56e9f9973
 #: ../../../large.rst:63
@@ -164,6 +177,8 @@ msgid ""
 "Then on each machine you want to use for processing, launch a NodeODM "
 "instance via"
 msgstr ""
+"Kisha kwa kila mashine ambayo unataka kutumia kwa mchakato, zindua NodeODM "
+"instance kutumia"
 
 # f7f5d656ce9f46d89eaa1769c27ba6e5
 #: ../../../large.rst:69
@@ -193,7 +208,7 @@ msgstr ""
 # 1ff052ee47864108abd13c2ca2b6eeef
 #: ../../../large.rst:93
 msgid "Understanding the Cluster"
-msgstr ""
+msgstr "Kufahamu Cluster"
 
 # 18e376a78edf468088b5efbd939c0bbf
 #: ../../../large.rst:95
@@ -212,6 +227,8 @@ msgid ""
 "If, for example, the NodeODM instance wasn't active when ClusterODM started,"
 " we might list nodes and see something as follows"
 msgstr ""
+"Ikiwa, kwa mfano, NodeODM instance haifanyi kazi wakati ClusterODM "
+"ikiwashwa, tunaweza kuorodhesha node na tukaangalia kama ifuatavyo"
 
 # 20e68e67542e4049b232b7635d88760b
 #: ../../../large.rst:125
@@ -219,6 +236,8 @@ msgid ""
 "To address this, we can start up our local node (if not already started), "
 "and then perform a ``NODE UPDATE``"
 msgstr ""
+"Kulitambua hili, tunaweza kuanza na kuwasha node ya ndani (ikiwa "
+"haikuwashwa), na kisha tumia ``NODE UPDATE``"
 
 # 33eecf83e3124b59a7d0c13af09e04a2
 #: ../../../large.rst:135
@@ -231,6 +250,8 @@ msgid ""
 "While a process is running, it is also possible to list the tasks, and view "
 "the task output"
 msgstr ""
+"Wakati mchakato unaendelea, pia ni rahisi kuorodhesha kazi, na muonekano wa "
+"matokeo ya kazi"
 
 # 2a15305d8ba94ce0bdb2d07174a39b0f
 #: ../../../large.rst:145
@@ -253,23 +274,25 @@ msgstr ""
 # 62b6f826c2c643e0901155b8e13ae32b
 #: ../../../large.rst:149
 msgid "To setup autoscaling you must:"
-msgstr ""
+msgstr "Kupanga autoscaling lazima:"
 
 # 1f57a583ee064aadaa3feee9c394eafc
 #: ../../../large.rst:151
 msgid ""
 "Have a functioning version of NodeJS installed and then install ClusterODM"
 msgstr ""
+"Uwe na toleo linalofanya kazi NodeJS limeingizwa na kisha na ingiza "
+"ClusterODM"
 
 # 717a4e330335494bb0df832234fa0032
 #: ../../../large.rst:159
 msgid "Make sure docker-machine is installed."
-msgstr ""
+msgstr "Hakikisha docker-machine imeingizwa."
 
 # 199f29aa6b7f4f409bb92e6c3cb5bf16
 #: ../../../large.rst:160
 msgid "Setup a S3-compatible bucket for storing results."
-msgstr ""
+msgstr "Panga S3-compatible bucket kwa kuhifadhia."
 
 # 6326931fadb04511aeefe580135ad3a2
 #: ../../../large.rst:161
@@ -279,16 +302,20 @@ msgid ""
 " or `Amazon Web Services "
 "<https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/aws.md>`_."
 msgstr ""
+"Tengeneza configuration faili kwa `DigitalOcean "
+"<https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/digitalocean.md>`_"
+" au `Amazon Web Services "
+"<https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/aws.md>`_."
 
 # 24f1bc1a5a1045b5a066cb88d855dac6
 #: ../../../large.rst:163
 msgid "You can then launch ClusterODM with"
-msgstr ""
+msgstr "Kisha unaweza kuwasha ClusterODM pamoja"
 
 # cfd356de2d654bf891a32218437a3674
 #: ../../../large.rst:169
 msgid "You should see something similar to following messages in the console"
-msgstr ""
+msgstr "Utaona kitu kinachofanana kwa ujumbe ufuatao ndani ya console"
 
 # e70048dcf8f24f71bc79a7051c51a05f
 #: ../../../large.rst:177
@@ -313,12 +340,12 @@ msgstr ""
 # 534c507b01064a47810c210e1bb41569
 #: ../../../large.rst:187
 msgid "This way all tasks will be automatically forwarded to the autoscaler."
-msgstr ""
+msgstr "Njia hii hii kazi zote zinapelekwa wenyewe kwa autoscaler."
 
 # 69765d62d9bb44979d730a3aee0908c7
 #: ../../../large.rst:190
 msgid "Limitations"
-msgstr ""
+msgstr "Mipaka"
 
 # bf357933f5f442d2837b2682b0ad9bb2
 #: ../../../large.rst:192
@@ -326,6 +353,8 @@ msgid ""
 "The 3D textured meshes are currently not being merged as part of the "
 "workflow (only point clouds, DEMs and orthophotos are)."
 msgstr ""
+"Mfumo wa 3D meshes kwa sasa haijaunganishwa kama sehemu ya mpangilio kazi "
+"(Ni point cloud pekee, DEM na orthophoto)."
 
 # 8e1fa32d457445b489bc403442ae7fd5
 #: ../../../large.rst:194
@@ -337,11 +366,16 @@ msgid ""
 "``image_groups.txt`` file to accurately control the submodel split when "
 "using GCPs."
 msgstr ""
+"GCPs inasaidiwa kikamilifu, lakini kuna mahitaji angalau point 3 za GCP kwa "
+"kila submodel kwa georeferencing kuchukua nafasi. Ikiwa submodel ina unafuu "
+"kuliko GCP 3, muungano wa GCP zilobakia + EXIF data zitatumika badala yake "
+"(ambayo itakua na usahihi mdogo). Tunapendekeza kutumia ``image_groups.txt``"
+" faili kupelekea udhibiti sahihi wa mgawanyo wa submodel ukitumia GCP."
 
 # 1597b856001e4334a4df3555c8416ee1
 #: ../../../large.rst:197
 msgid "Acknowledgments"
-msgstr ""
+msgstr "Tunakiri"
 
 # ec973929d9d947be90f0859358cc398c
 #: ../../../large.rst:198
@@ -362,3 +396,5 @@ msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst>`_"
 msgstr ""
+"`kwa msaada kurekebisha kitabu! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst>`_"

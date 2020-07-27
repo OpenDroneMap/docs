@@ -33,6 +33,8 @@ msgid ""
 "All software needs user feedback and feature requests, to grow and maintain "
 "alignment with the needs of its users."
 msgstr ""
+"Programu zote zinahitaji mrejosho kutoka kwa watumiaji na vipengele vya "
+"kuomba, kwa kukuza na kuimarisha mahitaji ya mtumiaji."
 
 # 696e503999524f108ec4e69ad5c38b9a
 #: ../../../requesting-features.rst:7
@@ -112,6 +114,10 @@ msgid ""
 "best to help you understand where your request falls, and we appreciate any "
 "support you can provide."
 msgstr ""
+"Tunafurahi unahamu kuona vitu vipya vinaongezwa katika mradi. Baadhi ya vitu"
+" vipya vinahitaji msaada, na baadhi ni rahisi kuvitengeneza. Tutafanya "
+"tuwezalo kukusaidia wewe kufahamu wapi maombi yako hayakufanikiwa, na "
+"tunathamini msaada wowote utakaoweza kutupa."
 
 # 1dc7be048a46499292c8313b44ebbb79
 #: ../../../requesting-features.rst:33

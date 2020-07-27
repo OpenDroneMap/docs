@@ -25,17 +25,17 @@ msgstr ""
 # fd0399e9f29e43ee85f633fc5a7d9854
 #: ../../../resources.rst:2
 msgid "Additional References"
-msgstr ""
+msgstr "Kumbukumbu za ziada"
 
 # d3ba9250ce4b482c89983e02f0bb4d9d
 #: ../../../resources.rst:5
 msgid "For Users"
-msgstr ""
+msgstr "Kwa watumiaji"
 
 # 2c54ff8efcbb4cd4a1d4426a677a668a
 #: ../../../resources.rst:7
 msgid "The following resources are a good place to start:"
-msgstr ""
+msgstr "Rasilimali zifuatazo ni sehemu nzuri kuanzia:"
 
 # 4d7432320ac74422a01020761eaf6f3a
 #: ../../../resources.rst:9
@@ -70,7 +70,7 @@ msgstr ""
 # b4bbfe51562c46d781908edf80c34abf
 #: ../../../resources.rst:13
 msgid "`OpenDroneMap: The Missing Guide <https://odmbook.com/>`_"
-msgstr ""
+msgstr "`OpenDroneMap: Maelekezo yaliokosekana <https://odmbook.com/>`_"
 
 # 60796eb1324b41d5b56f497960451872
 #: ../../../resources.rst:16
@@ -82,6 +82,7 @@ msgstr "Kwa msanidi programu"
 msgid ""
 "In addition to user resources, we recommend to also read the following:"
 msgstr ""
+"Kwa kuongezea kwa mtumiaji rasilimali, tunapendekeza kusoma zifuatazo:"
 
 # cd3029204fde4dd2b6ece3cfe1a2bd6b
 #: ../../../resources.rst:20
@@ -94,6 +95,8 @@ msgid ""
 "NodeODM API specification: "
 "https://github.com/OpenDroneMap/NodeODM/blob/master/docs/index.adoc"
 msgstr ""
+"NodeODM API specification: "
+"https://github.com/OpenDroneMap/NodeODM/blob/master/docs/index.adoc"
 
 # b282ab45d280415982d512c91e6b6719
 #: ../../../resources.rst:22
@@ -125,3 +128,5 @@ msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/api.rst>`_"
 msgstr ""
+"`kwa msaada kurekebisha kitabu! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/api.rst>`_"

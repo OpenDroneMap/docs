@@ -33,6 +33,8 @@ msgid ""
 "Ground control points are useful for correcting distortions in the data and "
 "referencing the data to know coordinate systems."
 msgstr ""
+"Ground control points ni muhimu kurekebisha mzunguko wa taarifa na "
+"kumbukumbu data ili kujua mfumo wa muunganiko."
 
 # 8452104a74d646fd98667e75940154f9
 #: ../../../gcp.rst:7
@@ -66,7 +68,7 @@ msgstr ""
 # b14a4632f09d452987da341b4761ee93
 #: ../../../gcp.rst:11
 msgid "Elevation values can be set to \"NaN\" to indicate no value"
-msgstr ""
+msgstr "Thamani ya muinuko inaweza kuwekwa \"NaN\" kuonesha hapana kitu"
 
 # 326fc2b4a246402887eec024ee7dc44b
 #: ../../../gcp.rst:12
@@ -152,22 +154,22 @@ msgstr "interface ya mtumiaji"
 # 58a11feafc7641fca1250a9e80a9e9a2
 #: ../../../gcp.rst:41
 msgid "You can use one of two user interfaces for creating GCP files:"
-msgstr ""
+msgstr "Unaweza kutumia moja kati ya interface mbili kutengeneza GCP faili:"
 
 # 84afe5e0d2964247b972da99da981b86
 #: ../../../gcp.rst:43
 msgid "`POSM GCPi <https://github.com/posm/posm-gcpi>`_"
-msgstr ""
+msgstr "`POSM GCPi <https://github.com/posm/posm-gcpi>`_"
 
 # 60450f4c04ca4bac9bd654bd2ba83c35
 #: ../../../gcp.rst:44
 msgid "`GCP Editor Pro <https://github.com/uav4geo/GCPEditorPro>`_"
-msgstr ""
+msgstr "`GCP Editor Pro <https://github.com/uav4geo/GCPEditorPro>`_"
 
 # 397f2777c59948cc8c50fe7aaee405e1
 #: ../../../gcp.rst:48
 msgid "POSM GCPi"
-msgstr ""
+msgstr "POSM GCPi"
 
 # 927593a77dc84e74b137c4d439df6825
 #: ../../../gcp.rst:50
@@ -205,7 +207,7 @@ msgstr ""
 # ece94c1e7c6c44698893e57cf6c10c92
 #: ../../../gcp.rst:67
 msgid "GCP Editor Pro"
-msgstr ""
+msgstr "GCP Editor Pro"
 
 # 31a2f2c5d1614505b9b11f063ed8f8af
 #: ../../../gcp.rst:69
@@ -214,6 +216,9 @@ msgid ""
 "plugin from `https://github.com/uav4geo/GCPEditorPro "
 "<https://github.com/uav4geo/GCPEditorPro>`_"
 msgstr ""
+"Aplication nii inahitaji kuingizwa tofauti au inaweza kuingizwa kama WebODM "
+"plugin kutoka `https://github.com/uav4geo/GCPEditorPro "
+"<https://github.com/uav4geo/GCPEditorPro>`_"
 
 # 400a7b772b064992b58e256c4a86d802
 #: ../../../gcp.rst:71
@@ -221,6 +226,7 @@ msgid ""
 "Create a CSV file that includes the gcp name, northing, easting and "
 "elevation."
 msgstr ""
+"Tengeneza CSV faili litalochukua jina la gcp, kaskazini, kusini na muinuko."
 
 # e3be97e2b1d442f99df0adde4e1752cb
 #: ../../../gcp.rst:80
@@ -239,6 +245,8 @@ msgid ""
 "The following screen will display a map from where to select the GCPs to tag"
 " and import the respective images."
 msgstr ""
+"Screen zifuatazo zitaonesha ramani kutoka sehemu na kuiita GCP kwa jina na "
+"kuita picha nyengine zilipo."
 
 # 23911fa0503e4bb58ddc99f41c10b797
 #: ../../../gcp.rst:85
@@ -246,3 +254,5 @@ msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_"
 msgstr ""
+"`kwa msaada kurekebisha kitabu! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_"

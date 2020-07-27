@@ -25,7 +25,7 @@ msgstr ""
 # fa2f220d4f704404a75d0d9dd55f72b8
 #: ../../../index.rst:8
 msgid "Welcome to OpenDroneMap's documentation"
-msgstr ""
+msgstr "Karibu OpenDroneMap Kitabu"
 
 # 2b86dd77c9ca4fdbb3e5c3a362287930
 #: ../../../index.rst:43
