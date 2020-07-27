@@ -5,6 +5,7 @@
 # 
 # Translators:
 # danbjoseph <danbjoseph@gmail.com>, 2020
+# Khadija Abdulla <khastylez@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-21 17:01-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
-"Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
+"Last-Translator: Khadija Abdulla <khastylez@gmail.com>, 2020\n"
 "Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -43,9 +44,9 @@ msgid ""
 " speed and memory usage. If you want to get higher quality results, you need"
 " to tweak some parameters:"
 msgstr ""
-"Bila ya kuengeza paramiter, ODM inachagua nzuri baina yaubora, speed na "
-"nafasi ya kutumia. Ikiwa unataka kupata matokeo bora zaidi,utadadafua baadhi"
-" ya paramiter:"
+"Bila ya kuengeza paramiter, ODM inachagua nzuri baina ya ubora, kasi na "
+"nafasi ya kutumia. Ikiwa unataka kupata matokeo bora zaidi, utadadafua "
+"baadhi ya paramiter:"
 
 # bd6465ef1c014f89b19a45933fbc61cf
 #: ../../../tutorials.rst:19
@@ -54,7 +55,7 @@ msgid ""
 " Decrease this value for a higher resolution result."
 msgstr ""
 "``--orthophoto-resolution`` ni muonekano wa orthophoto ndani ya cm/pixel. "
-"Kupunguza hii value kwa muonekano mzuri zaidi."
+"Kupunguza hii thamani kwa muonekano mzuri zaidi."
 
 # 1aa11b4438b346ddbaa4a002e908e022
 #: ../../../tutorials.rst:20
@@ -115,14 +116,14 @@ msgid ""
 " minimize the distortion from self-calibration."
 msgstr ""
 "Kurekebisha Camera ni changamoto maalum pamoja na thamani ya camera. "
-"mabadiliko ya hali joto,mtetemeko, muelekeo, na na vitu vyengine vinavyoweza"
-" kuathiri data itakayopatikana. Automatic au matengenezo binafsi yanaweza "
-"kufanywa na kutakiwa na drone ukiruka, lakini inategemea na njia itakayopita"
-" ndege, marekebisho ya automatic haiwezi kuondosha njia zote kutoka mwanzo. "
-"James and Robson (2014) katika kitabu chao `Mitigating systematic error in "
-"topographic models derived from UAV and ground‐based image networks "
-"<https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609>`_ imeonyesha "
-"jinsi kupunguza makosa kweye marekebisho binafsi."
+"mabadiliko ya hali joto, mtetemeko, muelekeo, na na vitu vyengine "
+"vinavyoweza kuathiri data itakayopatikana. Automatic au matengenezo binafsi "
+"yanaweza kufanywa na kutakiwa na drone ukiruka, lakini inategemea na njia "
+"itakayopita ndege, marekebisho ya automatic haiwezi kuondosha njia zote "
+"kutoka mwanzo. James and Robson (2014) katika kitabu chao `Mitigating "
+"systematic error in topographic models derived from UAV and ground‐based "
+"image networks <https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609>`_"
+" imeonyesha jinsi kupunguza makosa kweye marekebisho binafsi."
 
 # 40cb75662eba4e36b6c3efdd75431b71
 #: ../../../tutorials.rst:35
@@ -131,7 +132,7 @@ msgid ""
 " Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, "
 "Tanzania.*"
 msgstr ""
-"*Athatri za shimo katika pointcloud kwa makundi ya picha zaidi ya 13,000 "
+"*Athatri za shimo katika point cloud kwa makundi ya picha zaidi ya 13,000 "
 "zilizokusanywa na benki ya dunia katika eneo la mafuriko Msimbasi Basin, Dar"
 " es Salaam, Tanzania.*"
 
@@ -142,9 +143,9 @@ msgid ""
 "follows: fly two patterns separated by 20°, and rather than having a nadir "
 "(straight down pointing) camera, use one that tilts forward by 5°."
 msgstr ""
-"Kupunguzaupunguza athari,kuna nyia kidogo lakini njioa rahisi ni kama: rusha"
-" njia mbili tofauti kwa 20°, kuliko kutumia nadir kamera (kuelekeza pont "
-"chini), tumia ambayo itainamisha camera kwa 5°."
+"Kupunguza athari,kuna njia kidogo lakini njia rahisi ni kama: rusha njia "
+"mbili tofauti kwa 20°, kuliko kutumia nadir kamera (kuelekeza pont chini), "
+"tumia ambayo itainamisha camera kwa 5°."
 
 # db74d99b40aa4952a60b2e4cf7bb1ef3
 #: ../../../tutorials.rst:45
@@ -155,10 +156,10 @@ msgid ""
 " be used to calibrate another flight that is more efficiently flown."
 msgstr ""
 "Kama itafikia kuruka drone itachukua muda mrefu kuliko kuruka kwa kawaida, "
-"rubani au kikundi kinaweza kinaweza kurusha drone kwa kumia njia hio hapo "
-"juu. OpenDroneMap itatengeneza file lilorekebishwa linaloitwa cameras.json "
-"ambayo baadae itachukuliwa kutumika kwa mruko mwengine, itakua ni mruko wa "
-"ufanisi zaidi."
+"rubani au kikundi kinaweza kurusha drone kwa kumia njia hio hapo juu. "
+"OpenDroneMap itatengeneza file lilorekebishwa linaloitwa cameras.json ambayo"
+" baadae itachukuliwa kutumika kwa mruko mwengine, itakua ni mruko wa ufanisi"
+" zaidi."
 
 # 526630b420ec44b0a0c13866269d2887
 #: ../../../tutorials.rst:47
@@ -167,7 +168,7 @@ msgid ""
 "much lower overlap, but two *crossgrid* flights (sometimes called "
 "crosshatch) separated by 20° with a 5° forward facing camera."
 msgstr ""
-"Vyenginevyo, njia za majaribia yafuatayo zinaweza kutumika: rusha drone kwa "
+"Vyenginevyo, njia za majaribio yafuatayo zinaweza kutumika: rusha drone kwa "
 "kupishanisha picha kidogo, lakini miruko crossgrid miwili (wakati mwengine "
 "huitwa crosshatch) iliotenganishwa kwa 20° na 5° moja kwa moja ikiangalia "
 "camera."
@@ -180,7 +181,7 @@ msgid ""
 "83% overlap and sidelap."
 msgstr ""
 "Crossgrid asilimia za kupishana zinaweza kuwa ndogo kuliko flight sambamba. "
-"Kwa kupata matakio mazuri ya 3D, utatakiwa 68% za kupishana na ubavuni "
+"Kwa kupata matukio mazuri ya 3D, utatakiwa 68% za kupishana na ubavuni "
 "kushabihiana na 83% kupishana na ubavuni."
 
 # 483b77a388c84386b94c19e0f2562522
@@ -198,8 +199,8 @@ msgid ""
 "Vertically separated flight lines also improve accuracy, but less so than a "
 "camera that is forward facing by 5°."
 msgstr ""
-"Vertically separated flight lines also improve accuracy, but less so than a "
-"camera that is forward facing by 5°."
+"Mistari ya kusimama iliyopishana ya njia ya kupitisha ndege pia inaongeza "
+"usahihi, lakini kidogo kwa hiyo camera iangalie moja kwa moja na 5°."
 
 # b537c02fe3634f62bcff294e00d4d16b
 #: ../../../tutorials.rst:62
@@ -207,7 +208,7 @@ msgid ""
 "From James and Robson (2014), `CC BY 4.0 "
 "<https://creativecommons.org/licenses/by/4.0>`_"
 msgstr ""
-"Kutoka James and Robson (2014),`CC BY 4.0 "
+"Kutoka James na Robson (2014),`CC BY 4.0 "
 "<https://creativecommons.org/licenses/by/4.0>`_"
 
 # f40b44f6f30d488ea908e57170e0acbd
@@ -223,7 +224,7 @@ msgid ""
 " to pass the ``--dsm`` flag."
 msgstr ""
 "Chaguo msingi ODM haitengenezi DEMs. Kutengeneza digital terrain model, "
-"hakikisha unatumia ``--dtm`` flag. tokutengeneza digital surface model, "
+"hakikisha unatumia ``--dtm`` flag. Kutengeneza digital surface model, "
 "hakikisha unatumia ``--dsm`` flag."
 
 # 8670708d10e948c2a81962297f5f22f3
@@ -264,7 +265,7 @@ msgid ""
 "``--smrf-threshold`` elevation threshold. Set this parameter to the minimum "
 "height (in meters) that you expect non-ground objects to be."
 msgstr ""
-"``--smrf-threshold`` elevation threshold. Set this parameter kwa kiwango cha"
+"``--smrf-threshold`` elevation threshold. Weka hii parameter kwa kiwango cha"
 " chini cha urefu (cha mita) ambayo unategemea kuwa non-ground object."
 
 # a80686f0f5d94d7fb7a023db4473f853
@@ -274,7 +275,7 @@ msgid ""
 "the size of the largest feature (building, trees, etc.) to be removed. "
 "Should be set to a value higher than 10."
 msgstr ""
-"``--smrf-window`` windowradius paramita (ya mita) ambayo inashabihiana na "
+"``--smrf-window`` window radius paramita (ya mita) ambayo inashabihiana na "
 "ukubwa wa kitu (jengo, mti, n.k) kwa kuondolewa. lazima lipangwe nambari "
 "kubwa zaidi ya 10."
 
@@ -289,7 +290,7 @@ msgid ""
 " (PDF freely available)."
 msgstr ""
 "Kubadilisha njia hizi kunaweza kubadilisha maana ya matokeo ya DTM. Mwanzo "
-"nzuri kusoma kwa kufahamu vipi paramita zinabadilisha matokeo ni kusoma pepa"
+"mzuri kusoma kwa kufahamu vipi paramita zinabadilisha matokeo ni kusoma pepa"
 " ya awali  `An improved simple morphological filter for the terrain "
 "classification of airborne LIDAR data "
 "<https://www.researchgate.net/publication/258333806_An_Improved_Simple_Morphological_Filter_for_the_Terrain_Classification_of_Airborne_LIDAR_Data>`_"
@@ -388,7 +389,7 @@ msgid ""
 "are running as follows:"
 msgstr ""
 "Tunaweza kuanza kwa kusikiliza docker zilizopo katika mashine ulionayo "
-"Tunaanza kama ifuatavyo:"
+"tunaanza kama ifuatavyo:"
 
 # 537c71956706401fb8e3c3124d44b653
 #: ../../../tutorials.rst:120
@@ -422,7 +423,7 @@ msgid ""
 msgstr ""
 "Hii inategemewa kuwa kubwa, lakini tunaweza kutumia pipe `|` character na "
 "tools nyengine kuondosha kile tunachotaka kutoka kwenye log. Kwa mfano "
-"tunaweza kuondosha kupitia log kidoogo kwa kutumia more command."
+"tunaweza kuondosha kupitia log kidogo kwa kutumia more command."
 
 # aa0b31cbf49b491fbd452fcf711a9d74
 #: ../../../tutorials.rst:157
@@ -465,7 +466,7 @@ msgid ""
 msgstr ""
 "Baadhi ya wakati tunataka kuenda ndani kidogo katika mchakato wa utafiti wa "
 "OpenDroneMap. Kwa hilitunaweza kupata kutumia mistari ya camand moja kwa "
-"moja kwenye mashine. Kwahili, tunawza kutumia `docker exec` kufikia na "
+"moja kwenye mashine. Kwa hili, tunawza kutumia `docker exec` kufikia na "
 "camand line `bash` muonekano ndani ya mashine kwa umuhimu ufuatao:"
 
 # 1b301286378848d195d8de77aedbdf74
@@ -501,7 +502,7 @@ msgid ""
 msgstr ""
 "Docker haina msaada kutumia nafasi na kawaida haiondoi kufanya kazi data na "
 "mashine mchakato ukimaliza. Hii inaweza kuwa faida ikiwa tunahitaji kutumia "
-"mchakatoambao ulikatika, lakini unachukua matatizo ya kuengeza matumizi ya "
+"mchakato ambao ulikatika, lakini unachukua matatizo ya kuengeza matumizi ya "
 "nafasi kwa mda. Maciej Łebkowski ana `mtazamo mzuri ya vipi kuongoza kutumia"
 " nafasi iliotumika kutumia ndani ya docker <https://lebkowski.name/docker-"
 "volumes/>`_."
@@ -509,12 +510,12 @@ msgstr ""
 # f96d9ce9d05d4f8881cd2e6a73a6dfa8
 #: ../../../tutorials.rst:190
 msgid "Using ODM from low-bandwidth location"
-msgstr "Tumia ODM kutoka low-bandwidth eneo"
+msgstr "Tumia ODM kutoka eneo lenye  low-bandwidth "
 
 # a26912094ee74fe0b94e0d4e9bb63a68
 #: ../../../tutorials.rst:193
 msgid "What is this and who is it for?"
-msgstr "Nini hiki na Kwa nani"
+msgstr "Nini hiki na kwa nani"
 
 # 9c1aeead615c41d58afe5baaaa2e9365
 #: ../../../tutorials.rst:195
@@ -536,7 +537,7 @@ msgid ""
 msgstr ""
 "`OpenDroneMap <https://www.opendronemap.org/>`__ haiwezi kuwa kawada "
 "kuingizwa local inataka mashine yenye nguvu kwa mchakato wa data nyingi—kwa "
-"hivyo cloud mashine inawezabaadhi ya wakati kujibu kwa watu wanotaka "
+"hivyo cloud mashine inaweza baadhi ya wakati kujibu kwa watu wanotaka "
 "kutumia. Hata hivyo nafasi ni tatizo kwa marekebisho ya kiwango cha chini. "
 "Kizuwizi hiki hakiwezi kuondoa tatizo moja kwa moja, bali njia zifuatazo "
 "zinaweza kuwa sababu za kupunguza mahitaji ya nafasi kwa kuchakata picha za "
@@ -559,7 +560,7 @@ msgstr ""
 "OpenDroneMap cloud mashine (*sio* CloudODM, kumbuka, ni cloud-based instance"
 " ya ODM ambayo unaweza kutumia kutoka kwa camand line) na tumia kuprocess "
 "kundi picha nyingi ukiwa mbali. Inahitaji ujuzi wa matumizi ya Unix camand "
-"line,ssh, Digital Ocean account (Amazon AWS inafanya kazi pia, inawezekana "
+"line, ssh, Digital Ocean account (Amazon AWS inafanya kazi pia, inawezekana "
 "ni tofauti ndogo katika mpangilio), njia ya kati na kati ya usomaji Computer"
 " kwa ujumla. Ikiwa huna computer nzuri na unataka kutumia njia ya slightly "
 "setup, `CloudODM <https://www.opendronemap.org/cloudodm/>`__ ni lazima "
@@ -573,10 +574,10 @@ msgid ""
 "in a field setting. Therefore it emphasizes a workflow intended to reduce "
 "bandwidth/data transfer, rather than just the simplest way of running ODM."
 msgstr ""
-"Mchakato wote huo umekusudiwakwa mtu anerusha ndege nyuki eneo kubwa ndani "
+"Mchakato wote huo umekusudiwa kwa mtu anerusha ndege nyuki eneo kubwa ndani "
 "ya Afrika au eneo linalofanana kutaka kuprocess data haraka wakati yupo eneo"
-" la kazi. Kwa hio itasaidia kazi iliopangwa kwa kupunguza nafasi/kusafirisha"
-" data, kuliko njia rahisi ya kutumia ODM."
+" la kazi. Kwa hio itasaidia kazi iliopangwa kwa kupunguza nafasi/ "
+"kusafirisha data, kuliko njia rahisi ya kutumia ODM."
 
 # d8d8597785b84f678cfaa8bcc310bfe2
 #: ../../../tutorials.rst:223
@@ -586,7 +587,7 @@ msgstr "Njia"
 # 323632131a7a475996e0f4157f28adf3
 #: ../../../tutorials.rst:226
 msgid "Install"
-msgstr "Ingiza"
+msgstr "Kuingiza"
 
 # 92fc4a7110ec42388c4ab2def52c2977
 #: ../../../tutorials.rst:228
@@ -599,11 +600,11 @@ msgid ""
 "droplet, at $5/month, comes with such a small drive that you can’t downsize "
 "back to it)."
 msgstr ""
-"Tengeneza Digital Ocean droplet yenye ukubwa angalau 4GB ya RAM. ambayo "
-"makisio gharama ni $20/mwezi.chini ya 4GB na haitakubali kuingia. Wakati "
+"Tengeneza Digital Ocean droplet yenye ukubwa angalau 4GB ya RAM. Ambayo "
+"makisio gharama ni $20/mwezi, chini ya 4GB na haitakubali kuingia. Wakati "
 "ukiwasha ODM process tutapunguza kuwa ukubwa na cloud mashine ya gharama, "
 "Lakini wakati ikitumika unaweza kupunguza kwa droplet ya pili rahisi zaidi "
-"ambayo inagharama ya $10/mwezi (ni dropletrahisi zaidi, at $5/mwezi , "
+"ambayo ina gharama ya $10/mwezi (ni droplet rahisi zaidi, at $5/mwezi , "
 "utatumia kwa nafasi ndogo ambayo huwezi kuirudisha mwanzo)."
 
 # 548dc42ce8ee453f9a7d4b501e7f3522
@@ -632,11 +633,11 @@ msgstr ""
 "server-setup-with-ubuntu-16-04>`__ itasaidia kujua. Katika kesi yetu "
 "tutaandaa mtumiaji aneitwa ``odm``, unganisha na kupitia camand ``ssh "
 "odm@xxx.xxx.xxx.xxx`` ( ambapo x's ina maana IPv4 anuani katika server "
-"yako).Ikiwa unataka kufata huu mfano kwa karibu , *do* tumia tumia jina "
+"yako). Ikiwa unataka kufata huu mfano kwa karibu , *do* tumia tumia jina "
 "``odm``; kisha path yako itakuwa ``/home/odm/ODM/`` na itafanana na mifano "
 "yote katika kitabu hichi, ukiingia server itakupa njia ya kuapgarade Ubuntu "
 "18.04. Nenda kutumia ``sudo apt update`` na ``sudo apt upgrade`` kuhakikisha"
-" server sio hatari wila kuapdate, lakini endelea kutumia Ubuntu 18.04."
+" server sio hatari wila kuapdate, lakini endelea kutumia Ubuntu 16.04."
 
 # 8893bbe316534e44935a919da6029759
 #: ../../../tutorials.rst:253
@@ -672,12 +673,12 @@ msgid ""
 msgstr ""
 "Kuna baadhi ya kibadilika mazingira zinatakiwa kuwekwa. Fungua ~/.bashrc "
 "file katika mashine yako na uingize mistari 3 ifuatayo mwisho (From `the ODM"
-" github <https://github.com/OpenDroneMap/ODM>`__). file linaweza kufunguka "
+" github <https://github.com/OpenDroneMap/ODM>`__). File linaweza kufunguka "
 "pamoja na ``nano ~/.bashrc`` (au katika programu unayochapa ndani lieu of "
 "nano). Kuwa na ukahika kuweka ``/home/odm/`` kwa anuani sahihi hadi katika "
 "eneo ambayo itaichambua OpenDroneMap ikiwa hukufanya kila kitu kwa uhakika "
-"kama kwenye mfano wetu (Mfano ukitumia username katika mipangilio ya "
-"server)."
+"kama kwenye mfano wetu (Mfano ukitumia jina la mtumiaji katika mipangilio ya"
+" server)."
 
 # 15cee43639104a5da7ef02613ebdf3da
 #: ../../../tutorials.rst:281
@@ -686,8 +687,8 @@ msgid ""
 "directory name will be ODM, not OpenDroneMap (you’ll see this if you compare"
 " the above instructions to the ones on the ODM GitHub)."
 msgstr ""
-"Zingatia kwamba ODM githubreadme imekusanya makosa mepesi, ingiza anuani "
-"jina itakuwa ODM, sio OpenDroneMap (utaona hiyvo ukiwautalinganisha na "
+"Zingatia kwamba ODM github readme imekusanya makosa mepesi, ingiza anuani "
+"jina itakuwa ODM, sio OpenDroneMap (utaona hiyvo ukiwa utalinganisha na "
 "maeleza hapo juu kwa moja ndani ya ODM GitHub)."
 
 # 9dc7c9d9047c45bea929642b5110b2c5
@@ -698,7 +699,7 @@ msgid ""
 "paths if you’ve set things up differently from our example):"
 msgstr ""
 "Kwa ajili ya kuepusha kutofanya kazi ikiwa split-merge itakataa kuonesha "
-"file lake,tunaengeza mistari ifuatayo kwa ``~/.bashrc`` ( weka sawa kama "
+"file lake, tunaengeza mistari ifuatayo kwa ``~/.bashrc`` ( weka sawa kama "
 "uliweka tofauti na mfano wetu):"
 
 # 10a2fdc7efb74df0acc55d38fe9514c6
@@ -713,9 +714,9 @@ msgid ""
 "point <https://www.digitalocean.com/docs/volumes/how-to/mount/>`__ (in this "
 "example we’re setting it to ``/mnt/odmdata/``)."
 msgstr ""
-"Sasa utahitajihard drive ya pili ( \"nafasi\" katika Digital Ocean jargon) "
-"inatosha kutengeneza project yako. Sheriaya thumb inaonesha kuwa mara 10 ya "
-"nafasi ya data picha, tumepata 100GB hadi kufikia ukubwa wa 1000GB "
+"Sasa utahitaji hard drive ya pili (\"nafasi\" katika Digital Ocean jargon) "
+"inatosha kutengeneza project yako. Sheria ya thumb inaonesha kuwa mara 10 ya"
+" nafasi ya data picha, tumepata 100GB hadi kufikia ukubwa wa 1000GB "
 "(ukimaliza kurun unaweza kusafisha nafasi kubwa , lakini inahitajika "
 "kumaliza mchakato wote). Panga hadi nafasi ikifika, weka katika droplet "
 "yako, na `configure hio nafasi uitakayo "
@@ -725,7 +726,7 @@ msgstr ""
 # 20f755d7f03341529e48b584e1b0e55e
 #: ../../../tutorials.rst:306
 msgid "Prep data and project"
-msgstr ""
+msgstr "Kuandaa data na project"
 
 # cef334da8d1d41d4ba595fdfcba1f97b
 #: ../../../tutorials.rst:308
@@ -755,7 +756,7 @@ msgid ""
 "This will take some bandwidth. No way around the size of the files.\\ `1 "
 "<#footnote1>`__, \\ `2 <#footnote2>`__\\"
 msgstr ""
-"Hii itachukua nafasi. Hakuwa njia katika ukubwa wa file.\\ `1 "
+"Hii itachukua nafasi. Hakuna njia katika ukubwa wa file.\\ `1 "
 "<#footnote1>`__, \\ `2 <#footnote2>`__\\"
 
 # 1f8557711eb34544ba19af21e5684d3a
@@ -771,7 +772,7 @@ msgid ""
 "``/home/odm/ODM/``) and the project folder (i.e. "
 "``/mnt/odmdata/myproject/``)"
 msgstr ""
-"ODM inahitaji kuandaliwa nafasi orodha ndani ya mshine. Nafasi ngumu ni "
+"ODM inahitaji kuandaliwa nafasi ya orodha ndani ya mshine. Nafasi ngumu ni "
 "kuingiza folder (Ikiwa utahifadhi kama hapo juu ni \"``/home/odm/ODM/``) na "
 "folder la project (i.e. ``/mnt/odmdata/myproject/``)"
 
@@ -813,7 +814,7 @@ msgid ""
 "because they’re already in the directory that ODM wants them in."
 msgstr ""
 "Folder la picha, i.e ``/mnt/odmdata/myproject/images/`` linakuwa na picha "
-"zote. Ikiwa utarekebisha kama hivi , picha hazitakopiwa tena kwa sababu "
+"zote. Ikiwa utarekebisha kama hivi, picha hazitakopiwa tena kwa sababu "
 "tayari zipo kwenye anuani ambayo ODM inaitaka."
 
 # 1f80a38663eb41a1afb1d36a39f237d9
@@ -860,11 +861,11 @@ msgid ""
 "ODM to keep track of which images belong to the same batch, even though "
 "they’re all in a single directory."
 msgstr ""
-"Ikiwa una picha katika mafolder tofautikwa kila mabloki AOI au flight (ikiwa"
-" mpangilio wa flight zako utapangika)unaweza kutengeneza picha kwenye file "
-"image_groups.txt pamoja na ``for i in *; do cd $i; for j in *; do echo "
-"\\\"$j $i\\\" >> ../$i.txt; done; cd ../; done;`` and ``cd ../``, ``for i in"
-" myproject/*.txt; do cat $i >> image_groups.txt; done;``. Hio itatengenea "
+"Ikiwa una picha katika mafolder tofauti kwa kila mabloki AOI au flight "
+"(ikiwa mpangilio wa flight zako utapangika) unaweza kutengeneza picha kwenye"
+" file image_groups.txt pamoja na ``for i in *; do cd $i; for j in *; do echo"
+" \\\"$j $i\\\" >> ../$i.txt; done; cd ../; done;`` and ``cd ../``, ``for i "
+"in myproject/*.txt; do cat $i >> image_groups.txt; done;``. Hio itatengenea "
 "file na \"group name\" baada kila moja (kwa kesi hii itakuwa rahisi kuandika"
 " jina la folder llkotoka). Kisha ondosha file zote za picha katika anuani "
 "moja inayoitwa images ndani ya anuani ya project dir (kwa "
@@ -886,7 +887,7 @@ msgid ""
 "fast, it’s over $1000/month). Restart, and get to work quickly so as not to "
 "waste expensive big-droplet time."
 msgstr ""
-"zima na badilisha mashine yako kwa mpangilio maalum wa CPU na lkiasi cha "
+"Zima na badilisha mashine yako kwa mpangilio maalum wa CPU na lkiasi cha "
 "kumbukumbu. Natumia memory-optimized mashine kiasi 24 vCPUs na 192GB ya RAM "
 "(ghara yake ni kiasi $1.60/hr ambayo itaengeza haraka, ni juu $1000/mwezi). "
 "Washa upya na fanya kazi kwa haraka ili usipoteze mda big-droplet."
@@ -915,8 +916,8 @@ msgstr ""
 "haitasimama hana mawasiliano yakikatika; Zindua ``screen``, na tumia "
 "``<ctrl> a <ctrl> d`` kwenye detach, ``screen -r`` hadi re-attach. Lakini "
 "kutumia haitakupa file la log ya muonekano wa console isipokuwa utafanya "
-"kitu maalum kusanifu hili,ikiwa nohup itakupa file pamoja na muonekano wote "
-"wa console, ikiwemo ujumbe wa makosa, bure."
+"kitu maalum kusanifu hili, ikiwa nohup itakupa file pamoja na muonekano wote"
+" wa console, ikiwemo ujumbe wa makosa, bure."
 
 # 3c35097b84c648e7a3454804588d8411
 #: ../../../tutorials.rst:387
@@ -965,7 +966,7 @@ msgstr ""
 "mchanganyiko halisi wa namba utakataliwa baada ya image_groups.txt file "
 "kuonekana (Nafikiria ni kawaida kuzuiya makundi mangapiyatavunjwa kwa seti "
 "ya picha ndani yake, lakini kwa kesi yetu tunajaaliapicha zishapangwa kwa "
-"uweledi). Ikiwa huna data seti nyingi (>1000 picha),Acha kuchagua "
+"uweledi). Ikiwa huna data seti nyingi (>1000 picha). Acha kuchagua "
 "``--split`` na ``--split-overlap``."
 
 # 5d4a1c95f8cb4b8faea6418a8427c318
@@ -979,7 +980,7 @@ msgid ""
 "You may want to keep an eye on htop (to get a sense of the resource usage so"
 " that in future you can only spin up a machine as large as necessary)"
 msgstr ""
-"Unaweza kuangalia htop ( ili kupata kujua matumizi uliotumia kwa maana siku "
+"Unaweza kuangalia htop (ili kupata kujua matumizi uliotumia kwa maana siku "
 "za usoni unaweza kuongeza ukubwa wa mashine)"
 
 # 4622af635b084049888da4994e2577cd
@@ -993,12 +994,12 @@ msgid ""
 "As soon as processing is done, shut down the machine and resize it back down"
 " to the inexpensive minimum capacity."
 msgstr ""
-"Mara tu processing ikimaliza, zima mashine na rudisha chinikwa uwezo mdogo."
+"Mara tu processing ikimaliza, zima mashine na rudisha chini kwa uwezo mdogo."
 
 # ff4a20334b164e7fb3f66717203e1046
 #: ../../../tutorials.rst:429
 msgid "Start the machine back up, and log in via ssh."
-msgstr "Washa mashine ya kuhifadhi, na ingia kutumia ssh."
+msgstr "Washa mashine ya kuhifadhi, na ingia ndani kutumia ssh."
 
 # 2fe88a5e5c7a4cf9a6a0d4cf7eeeb75e
 #: ../../../tutorials.rst:430
@@ -1008,7 +1009,7 @@ msgid ""
 "making the file bigger before downloading it."
 msgstr ""
 "Ikiwa unataka kuhifadhi nafasi uliopakua, unaweza compress orthophoto "
-"kutumia GDAL. Usiingize overviews, fanya hivyo kwenye computer yako kuepusha"
+"kutumia GDAL. Usiingize muonekano, fanya hivyo kwenye computer yako kuepusha"
 " kufanya file kuwa kubwa kabla ya kupakua."
 
 # cf523f232f6642deafbb485c5b243486
@@ -1029,9 +1030,9 @@ msgid ""
 "overviews (“pyramids”) or use the GDAL command ``gdaladdo -r average "
 "/path/to/image.tif 2 4 8 16 32 64 128 256 512 1024``."
 msgstr ""
-"Ukipata file kwenye computer yako, unaweza kuumia QGIS kuingiza overviews "
-"(“pyramids”) au tumia GDAL command ``gdaladdo -r average /path/to/image.tif "
-"2 4 8 16 32 64 128 256 512 1024``."
+"Mara tu ukipata file kwenye computer yako, unaweza kuumia QGIS kuingiza "
+"muonekano (“pyramids”) au tumia GDAL command ``gdaladdo -r average "
+"/path/to/image.tif 2 4 8 16 32 64 128 256 512 1024``."
 
 # 2611b4d17c384fee8d1d9905c7a52525
 #: ../../../tutorials.rst:446
@@ -1040,4 +1041,4 @@ msgid ""
 "using tar to make them easier to download in one piece (and maybe smaller)."
 msgstr ""
 "Unaweza kuhifadhi odm_texturing, odm_georeferencing, na odm-dem Mafile tumia"
-" tar kwa urahisi wa kupakua kwa sehemu moja ( na maybe smaller)."
+" tar kwa urahisi wa kupakua kwa sehemu moja (na pengine ndogo zaidi)."

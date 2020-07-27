@@ -5,6 +5,7 @@
 # 
 # Translators:
 # danbjoseph <danbjoseph@gmail.com>, 2020
+# Khadija Abdulla <khastylez@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-07-21 17:01-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
-"Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
+"Last-Translator: Khadija Abdulla <khastylez@gmail.com>, 2020\n"
 "Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -24,7 +25,7 @@ msgstr ""
 # 911f0a51699040bbbac8fd6336625beb
 #: ../../../gcp.rst:3
 msgid "Ground Control Points"
-msgstr ""
+msgstr "Pointi za Udhibiti wa chini"
 
 # 022d5bddc65e48618d8dcfa0a4c6f73d
 #: ../../../gcp.rst:5
@@ -38,7 +39,7 @@ msgstr ""
 # 8452104a74d646fd98667e75940154f9
 #: ../../../gcp.rst:7
 msgid "The format of the GCP file is simple."
-msgstr "Mfangilio wa GCP file ni mwepesi."
+msgstr "Muundo wa GCP file ni mwepesi."
 
 # dce0e96292f14671b20009aff56908eb
 #: ../../../gcp.rst:9
@@ -52,7 +53,7 @@ msgstr ""
 " Mstari wa mwanzo lazima ubebe jina la muelekeo uliotumika kwa muunganiko wa"
 " eneo. Hii inaweza kurahisisha vile vile kama ni PROJ string (e.g "
 "``+proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), EPSG "
-"code (e.g. ``EPSG:4326``) au kama ``WGS84 UTM <zone>[N|S]`` thamani (eg. "
+"code (e.g. ``EPSG:4326``) au kama ``WGS84 UTM <zone>[N|S]`` thamani (mfano. "
 "``WGS84 UTM 16N``)"
 
 # b2b962c0b86148d0baa20170f21a4809
@@ -62,7 +63,7 @@ msgid ""
 "image filename and optional extra fields, separated by tabs or spaces:"
 msgstr ""
 "Mstari wa mbele ni muungano wa X, Y & Z, muungano elementi picha wa jina la "
-"file na njia za taarifa za ziada,zilizotenganishwa na kichupo au nafasi:"
+"file na njia za taarifa za ziada, zilizotenganishwa na kichupo au nafasi:"
 
 # b14a4632f09d452987da341b4761ee93
 #: ../../../gcp.rst:11
@@ -72,17 +73,17 @@ msgstr "Thamani ya muinuko inaweza kuwekwa \"NaN\" kuonesha hapana kitu"
 # 326fc2b4a246402887eec024ee7dc44b
 #: ../../../gcp.rst:12
 msgid "The 7th column (optional) typically contains the label of the GCP."
-msgstr "7th column (optional) kawaida inachukua lebo ya GCP."
+msgstr "safu ya 7  (chaguo) kawaida inachukua lebo ya GCP."
 
 # 7e516e234f5d48b6bdf2452c90949a1e
 #: ../../../gcp.rst:14
 msgid "GCP file format::"
-msgstr "Mpangilio wa GCP faili::"
+msgstr "Muundo wa GCP faili::"
 
 # cfc779a9cd644757ac87736911a5cb2c
 #: ../../../gcp.rst:20
 msgid "Example::"
-msgstr "Example::"
+msgstr "Mfano::"
 
 # af0d955959494dfea9d3d9efbb90d333
 #: ../../../gcp.rst:27
@@ -99,7 +100,7 @@ msgstr ""
 "Ikiwa una gcp faili na unataka kufanya georeferensing pamoja na exif file "
 "baada yake, unaweza kukadiria ``--use-exif``. Ikiwa una usahihi mkubwa wa "
 "vipimo vya GPS katika (RTK) picha zako na unataka kutumia maelezo hayo "
-"pamoja n gcp faili, inaweza kutumia ``--force-gps``."
+"pamoja na gcp faili, unaweza kutumia ``--force-gps``."
 
 # bbde94c6d77e4ebcb74ecec6b26d4752
 #: ../../../gcp.rst:29
@@ -114,8 +115,8 @@ msgstr ""
 "`Posti hii ina baadhi ya maelezo kuhusu kuweka Ground Control Target kabla "
 "ya flight <http://diydrones.com/profiles/blogs/ground-control-points-gcps-"
 "for-aerial-photography>`_, lakini tayari una picha, unaweza kiutafuta alama "
-"yako mwenyewe katika picha ulizonazo, unaweza kutautisha eneo ambalo "
-"linapatikana ndani ya **at least** picha 3, \"na hapo utapata kiasi maeneo "
+"yako mwenyewe katika picha ulizonazo, unaweza kutafautisha eneo ambalo "
+"linapatikana ndani ya picha 3 **angalau** , na hapo utapata kiasi maeneo "
 "matano."
 
 # 6b99ba39e0ba4be98be0cf9089458f19
@@ -124,8 +125,8 @@ msgid ""
 "Sharp corners are good picks for GCPs. You should also place/find the GCPs "
 "evenly around your survey area."
 msgstr ""
-"Pembe zilizokaa vizuri ni nzuri kuchagua kwa GCP. Pia unaweza "
-"kuweka/kutafuta GCP hata katika eneo lako la utafiti."
+"Pembe zenye ncha kali ni nzuri kuchagua kwa GCP. Pia unaweza kuweka/kutafuta"
+" GCP hata katika eneo lako la utafiti."
 
 # 2022c1e3d9074c80bc5988fb77630231
 #: ../../../gcp.rst:33
@@ -133,7 +134,7 @@ msgid ""
 "The ``gcp_list.txt`` file must be created in the base of your project "
 "folder."
 msgstr ""
-"Faili la ``gcp_list.txt`` lazima litengenezwe wakati ukitengeza older la "
+"Faili la ``gcp_list.txt`` lazima litengenezwe wakati ukitengeza folder la "
 "project yako."
 
 # d053ffc6a0b44e60be90864b1d0ad399
@@ -142,13 +143,13 @@ msgid ""
 "For good results your file should have a minimum of 15 lines after the "
 "header (5 points with 3 images to each point)."
 msgstr ""
-"Kwa matokeo mazuri faili lako liwe na mistari iziozidi 15 baada ya ufunguzi "
-"(point 5 pamoja na picha 3 kwa kila point)."
+"Kwa matokeo mazuri, faili lako liwe na mistari iziozidi 15 baada ya ufunguzi"
+" (point 5 pamoja na picha 3 kwa kila point)."
 
 # 9712bfa7df5343f8b383155a9eee015c
 #: ../../../gcp.rst:39
 msgid "User Interfaces"
-msgstr ""
+msgstr "interface ya mtumiaji"
 
 # 58a11feafc7641fca1250a9e80a9e9a2
 #: ../../../gcp.rst:41
@@ -178,8 +179,8 @@ msgid ""
 "with known ground control XYZ values, one would do the following:"
 msgstr ""
 "POSM GCPi linabebwa na chaguo msingi la WebODM. Mfano unapatikana katika "
-"onesho `la WebODM <http://demo.webodm.org/plugins/posm-gcpi/>`_. Kutumia hii"
-" ijulikanayo ground control XYZ value, Moja itafanya ifuatavyo:"
+"onesho `la WebODM <http://demo.webodm.org/plugins/posm-gcpi/>`_. Kutumia "
+"thamani hii ijulikanayo na udhibiti wa ardhi XYZ, Moja itafanya ifuatavyo:"
 
 # b9a43cb0966f427fae9039e6aa420d36
 #: ../../../gcp.rst:52
@@ -191,8 +192,8 @@ msgid ""
 msgstr ""
 "Tengeneza idadi ya GCP ambazo zitakuwa na majina gcp (hii itaandikwa amabyo "
 "itaonekana katika kiwasilishi cha GCP),x,y,na z, pamoja na utangulizicha "
-"proj4 string ya GCP yako (hakikisha zipo katika mfumo wa ramani, kama "
-"UTM.Lazima ionekane ka hivi:"
+"proj4 string ya GCP yako (hakikisha zipo katika mfumo wa ramani, kama UTM. "
+"Lazima ionekane ka hivi:"
 
 # c193a1ce8f7a4da2b796010be7fc9521
 #: ../../../gcp.rst:63
@@ -200,7 +201,7 @@ msgid ""
 "Then one can load this GCP list into the interface, load the images, and "
 "place each of the GCPs in the image."
 msgstr ""
-"Kisha inaweza pakia idadi ya GCP hii katika kiwasilishwa,pakia picha, na "
+"Kisha inaweza pakia idadi ya GCP hii katika kiwasilishwa, pakia picha, na "
 "weka kila GCP katika picha."
 
 # ece94c1e7c6c44698893e57cf6c10c92
@@ -235,7 +236,8 @@ msgid ""
 "box."
 msgstr ""
 "Kisha ingiza CSV kutoka screen kuu na andika ``+proj=utm +zone=37 +south "
-"+ellps=WGS84 +datum=WGS84 +units=m +no_defs`` in the ``EPSG/PROJ`` box."
+"+ellps=WGS84 +datum=WGS84 +units=m +no_defs`` ndani ya sanduku la "
+"``EPSG/PROJ``."
 
 # e90ba38338ef409792e454d071bbcc16
 #: ../../../gcp.rst:82

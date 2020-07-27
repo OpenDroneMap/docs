@@ -4,6 +4,7 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
+# Khadija Abdulla <khastylez@gmail.com>, 2020
 # danbjoseph <danbjoseph@gmail.com>, 2020
 # 
 #, fuzzy
@@ -29,7 +30,7 @@ msgstr "Chagizi na Bendera"
 # 22dcd4f93de143d4be348424b5141abe
 #: ../../../arguments.rst:6
 msgid "Arguments::"
-msgstr "Hoja::"
+msgstr "Majadiliano::"
 
 # 3ce8631539bc46c5a0823cb6065ddf2d
 #: ../../../arguments.rst:382
@@ -37,5 +38,5 @@ msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/using.rst>`_"
 msgstr ""
-"`kwa msaada kurekebisha kitabu! "
+"kwa msaada kurekebisha kitabu! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/using.rst>`_"
