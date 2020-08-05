@@ -183,7 +183,7 @@ Look at the source file and line that is mentioned. In this case the file is `so
 
 Go to Transifex, go to the resource, and go to the string. The warning/error message should help you understand what went wrong. In this case the link syntax wasn't matched correctly. Fix and save the translation.
 
-![Transifex screen grab](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/readme-img/reST_syntax_err_transifex.png)
+![Transifex screen grab](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_err_transifex.png)
 
 Pull the language down (e.g. `tx pull -l sw`) and then try the build again. Unfortunately, if there is more than one error, you'll have to fix them one at a time.
 
