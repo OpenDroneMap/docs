@@ -1,0 +1,391 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Khadija Abdulla <khastylez@gmail.com>, 2020
+# danbjoseph <danbjoseph@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 0.9.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-21 17:01-0400\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
+"Language-Team: Arabic (https://www.transifex.com/americanredcross/teams/111882/ar/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+# 5ea5942cc4604baea3dc66a4ee841282
+#: ../../../large.rst:4
+msgid "Splitting Large Datasets"
+msgstr "تقسيم مجموعات البيانات الكبيرة"
+
+# 09b5af17439740d2b8a18993e6709da6
+#: ../../../large.rst:6
+msgid ""
+"Starting with ODM version ``0.6.0`` you can split up very large datasets "
+"into manageable chunks (called submodels), running the pipeline on each "
+"chunk, and then producing merged DEMs, orthophotos and point clouds. The "
+"process is referred to as \"split-merge\"."
+msgstr ""
+"بدءًا من إصدار ODM `` 0.6.0  ، يمكنك تقسيم مجموعات البيانات الكبيرة جدًا إلى"
+" قطع قابلة للإدارة (تسمى النماذج الفرعية) ، وتشغيل خط الأنابيب على كل قطعة ،"
+" ثم إنتاج DEMs مدمجة ، وتقويم الصور ، وسحب النقاط. يشار إلى العملية باسم "
+"\"الدمج المقسم\"."
+
+# 0c58eb496d8d456ca011011549f430a8
+#: ../../../large.rst:8
+msgid ""
+"Why might you use the split-merge pipeline? If you have a very large number "
+"of images in your dataset, split-merge will help make the processing more "
+"manageable on a large machine (it will require less memory). If you have "
+"many machines all connected to the same network you can also process the "
+"submodels in parallel, thus allowing for horizontal scaling and processing "
+"thousands of images more quickly."
+msgstr ""
+"لماذا قد تستخدم خط أنابيب الدمج المقسم؟ إذا كان لديك عدد كبير جدًا من الصور "
+"في مجموعة البيانات الخاصة بك ، سيساعد الدمج المقسم على جعل المعالجة أكثر "
+"قابلية للإدارة على جهاز كبير (سيتطلب ذاكرة أقل). إذا كان لديك العديد من "
+"الأجهزة المتصلة جميعها بالشبكة نفسها ، فيمكنك أيضًا معالجة النماذج الفرعية "
+"بشكل متوازٍ ، مما يسمح بالقياس الأفقي ومعالجة آلاف الصور بسرعة أكبر."
+
+# d3a6bf47796e4775bfb53066d0d51dce
+#: ../../../large.rst:10
+msgid ""
+"Split-merge works in WebODM out of the box as long as the processing nodes "
+"support split-merge, by enabling the ``--split`` option when creating a new "
+"task."
+msgstr ""
+"تعمل ميزة Split-merge في WebODM من خارج الصندوق طالما أن عقد المعالجة تدعم "
+"الدمج المقسم ، من خلال تمكين خيار `` -split '' عند إنشاء مهمة جديدة."
+
+# 7c1cb609f5c74801ba89894fb5974978
+#: ../../../large.rst:13
+msgid "Calibrate images"
+msgstr "معايرة الصور"
+
+# a5852d851b3c4557a860c07a9a876368
+#: ../../../large.rst:15
+msgid ""
+"Image calibration is recommended (but not required) for large datasets "
+"because error propagation due to image distortion could cause a bowl effect "
+"on the models. Calibration instructions can be found at      `Calibrate "
+"Images <tutorials.html#calibrating-the-camera>`_."
+msgstr ""
+"يوصى بمعايرة الصورة (ولكن ليس مطلوبًا) لمجموعات البيانات الكبيرة لأن انتشار "
+"الخطأ بسبب تشوه الصورة يمكن أن يسبب تأثير الوعاء على النماذج. يمكن العثور "
+"على تعليمات المعايرة في `Calibrate Images  <tutorials.html#calibrating-the-"
+"camera>`_."
+
+# bb110a174c5f40ec9d3517e5eabbd887
+#: ../../../large.rst:21
+msgid ""
+"Bowling effect on point cloud over 13,000+ image dataset collected by World "
+"Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania."
+msgstr ""
+"تأثير البولينج على السحابة النقطية أكثر من 13000 مجموعة بيانات للصور تم "
+"جمعها من قبل البنك الدولي في تنزانيا حول حوض الفيضانات المعرض للفيضانات ، "
+"دار السلام ، تنزانيا."
+
+# 0967d468c7144fc5bd2132400d045215
+#: ../../../large.rst:24
+msgid "Local Split-Merge"
+msgstr "دمج التجزئة المحلية"
+
+# 2e2ad9be96fa496bb5ab7db7b677f5df
+#: ../../../large.rst:26
+msgid ""
+"Splitting a dataset into more manageable submodels and sequentially "
+"processing all submodels on the same machine is easy! Just use ``--split`` "
+"and ``--split-overlap`` to decide the the average number of images per "
+"submodels and the overlap (in meters) between submodels respectively"
+msgstr ""
+"إن تقسيم مجموعة البيانات إلى نماذج فرعية أكثر قابلية للإدارة ومعالجة جميع "
+"النماذج الفرعية على نفس الجهاز بالتتابع أمر سهل! ما عليك سوى استخدام \"--"
+"split\" و \"--split-interap\" لتحديد متوسط ​​عدد الصور لكل نماذج فرعية "
+"والتداخل (بالأمتار) بين النماذج الفرعية على التوالي"
+
+# 0aeee1b4863b45729bc6cbf63b6b1d84
+#: ../../../large.rst:32
+msgid ""
+"If you already know how you want to split the dataset, you can provide that "
+"information and it will be used instead of the clustering algorithm."
+msgstr ""
+"إذا كنت تعرف بالفعل كيف تريد تقسيم مجموعة البيانات ، يمكنك تقديم هذه "
+"المعلومات وسيتم استخدامها بدلاً من خوارزمية التجميع."
+
+# 175b97d3d6a44086be4f0cdabfb6fe95
+#: ../../../large.rst:34
+msgid ""
+"The grouping can be provided by adding a file named image_groups.txt in the "
+"main dataset folder. The file should have one line per image. Each line "
+"should have two words: first the name of the image and second the name of "
+"the group it belongs to. For example::"
+msgstr ""
+"مكن توفير التجميع عن طريق إضافة ملف باسم image_groups.txt في مجلد مجموعة "
+"البيانات الرئيسي. يجب أن يحتوي الملف على سطر واحد لكل صورة. يجب أن يحتوي كل "
+"سطر على كلمتين: أولاً اسم الصورة وثانيًا اسم المجموعة التي تنتمي إليها. "
+"فمثلا::"
+
+# 20c59dc7a68941e89e8369bd6026f2ff
+#: ../../../large.rst:42
+msgid ""
+"will create 3 submodels. Make sure to pass ``--split-overlap 0`` if you "
+"manually provide a ``image_groups.txt`` file."
+msgstr ""
+"سيتم إنشاء 3 نماذج فرعية. تأكد من تمرير \"--split-overap 0\" إذا قدمت يدويًا"
+" ملف `` image_groups.txt ''."
+
+# f821d7b1316a4f81830050135f38ec62
+#: ../../../large.rst:46
+msgid "Distributed Split-Merge"
+msgstr "دمج سبليت الموزعة"
+
+# f170f960ba414793b7f657bb74d70937
+#: ../../../large.rst:48
+msgid ""
+"ODM can also automatically distribute the processing of each submodel to "
+"multiple machines via `NodeODM <https://github.com/OpenDroneMap/NodeODM>`_ "
+"nodes, orchestrated via `ClusterODM "
+"<https://github.com/OpenDroneMap/ClusterODM>`_."
+msgstr ""
+"يمكن لـ ODM أيضًا توزيع معالجة كل نموذج فرعي تلقائيًا على أجهزة متعددة عبر "
+"`NodeODM <https://github.com/OpenDroneMap/NodeODM>`_ nodes, مدبرة عبر "
+"`ClusterODM <https://github.com/OpenDroneMap/ClusterODM>`_."
+
+# 09a33b36dab54c42a8ce360deacaf649
+#: ../../../large.rst:55
+msgid "Getting Started with Distributed Split-Merge"
+msgstr "الشروع في البدء في عملية دمج التجزئة الموزعة"
+
+# af83a83165d8401396aab49b8744a62b
+#: ../../../large.rst:57
+msgid "The first step is start ClusterODM"
+msgstr "الخطوة الأولى هي بدء ClusterODM"
+
+# 6d4217467bf544e9a7ad1ac56e9f9973
+#: ../../../large.rst:63
+msgid ""
+"Then on each machine you want to use for processing, launch a NodeODM "
+"instance via"
+msgstr "ثم على كل جهاز تريد استخدامه للمعالجة ، قم بتشغيل مثيل NodeODM عبر"
+
+# f7f5d656ce9f46d89eaa1769c27ba6e5
+#: ../../../large.rst:69
+msgid ""
+"Connect via telnet to ClusterODM and add the IP addresses/port of the "
+"machines running NodeODM"
+msgstr ""
+"اتصل عبر Telnet بـ ClusterODM وأضف عناوين IP / منفذ الأجهزة التي تعمل بـ "
+"NodeODM"
+
+# b6440814204a44fd9b9cbde1ff322cc3
+#: ../../../large.rst:84
+msgid ""
+"Make sure you are running version ``1.5.1`` or higher of the NodeODM API."
+msgstr "تأكد من تشغيل الإصدار 1.5.1 أو أعلى من NodeODM API"
+
+# 42d5b57f70b54515892481ba4875365b
+#: ../../../large.rst:86
+msgid ""
+"At this point, simply use the ``--sm-cluster`` option to enable distributed "
+"split-merge"
+msgstr ""
+"عند هذه النقطة ، ما عليك سوى استخدام خيار ``--sm-cluster`` لتمكين دمج "
+"التقسيم الموزع"
+
+# 1ff052ee47864108abd13c2ca2b6eeef
+#: ../../../large.rst:93
+msgid "Understanding the Cluster"
+msgstr "فهم الكتلة"
+
+# 18e376a78edf468088b5efbd939c0bbf
+#: ../../../large.rst:95
+msgid ""
+"When connected via telnet, it is possible to interrogate what is happening "
+"on the cluster. For example, we can use the command HELP to find out "
+"available commands"
+msgstr ""
+"ند الاتصال عبر telnet ، من الممكن استجواب ما يحدث على الكتلة. على سبيل "
+"المثال ، يمكننا استخدام الأمر HELP لمعرفة الأوامر المتاحة"
+
+# 1494dbd111a64a7e9075a9c20a0c12d9
+#: ../../../large.rst:118
+msgid ""
+"If, for example, the NodeODM instance wasn't active when ClusterODM started,"
+" we might list nodes and see something as follows"
+msgstr ""
+"إذا ، على سبيل المثال ، لم يكن مثيل NodeODM نشطًا عند بدء ClusterODM ، فقد "
+"ندرج العقد ونرى شيئًا كالتالي"
+
+# 20e68e67542e4049b232b7635d88760b
+#: ../../../large.rst:125
+msgid ""
+"To address this, we can start up our local node (if not already started), "
+"and then perform a ``NODE UPDATE``"
+msgstr ""
+"لمعالجة هذا ، يمكننا بدء العقدة المحلية الخاصة بنا (إذا لم تكن قد بدأت "
+"بالفعل) ، ثم إجراء ``تحديث العقدة``"
+
+# 33eecf83e3124b59a7d0c13af09e04a2
+#: ../../../large.rst:135
+msgid "Accessing the Logs"
+msgstr "الوصول إلى السجلات"
+
+# def6c238d7864b5382c8a0c925a3c6e3
+#: ../../../large.rst:137
+msgid ""
+"While a process is running, it is also possible to list the tasks, and view "
+"the task output"
+msgstr "أثناء تشغيل العملية ، من الممكن أيضًا سرد المهام ، وعرض إخراج المهمة"
+
+# 2a15305d8ba94ce0bdb2d07174a39b0f
+#: ../../../large.rst:145
+msgid "Autoscaling ClusterODM"
+msgstr "أوتوسكالينج  ClusterODM"
+
+# 9ec4019144e94b0eb0ab5f4325320568
+#: ../../../large.rst:147
+msgid ""
+"ClusterODM also includes the option to autoscale on multiple platforms, "
+"including, to date, Amazon and Digital Ocean. This allows users to reduce "
+"costs associated with always-on instances as well as being able to scale "
+"processing based on demand."
+msgstr ""
+"يتضمن ClusterODM أيضًا خيار القياس التلقائي على منصات متعددة ، بما في ذلك "
+"حتى الآن ، أمازون والمحيط الرقمي. يسمح ذلك للمستخدمين بتقليل التكاليف "
+"المرتبطة بالمثيلات التي تعمل دائمًا بالإضافة إلى القدرة على توسيع نطاق "
+"المعالجة بناءً على الطلب."
+
+# 62b6f826c2c643e0901155b8e13ae32b
+#: ../../../large.rst:149
+msgid "To setup autoscaling you must:"
+msgstr "لإعداد القياس التلقائي ، يجب عليك:"
+
+# 1f57a583ee064aadaa3feee9c394eafc
+#: ../../../large.rst:151
+msgid ""
+"Have a functioning version of NodeJS installed and then install ClusterODM"
+msgstr "قم بتثبيت إصدار فعال من NodeJS ثم قم بتثبيت ClusterODM"
+
+# 717a4e330335494bb0df832234fa0032
+#: ../../../large.rst:159
+msgid "Make sure docker-machine is installed."
+msgstr "تأكد من تثبيت آلة عامل الميناء."
+
+# 199f29aa6b7f4f409bb92e6c3cb5bf16
+#: ../../../large.rst:160
+msgid "Setup a S3-compatible bucket for storing results."
+msgstr "قم بإعداد دلو متوافق مع S3 لتخزين النتائج."
+
+# 6326931fadb04511aeefe580135ad3a2
+#: ../../../large.rst:161
+msgid ""
+"Create a configuration file for `DigitalOcean "
+"<https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/digitalocean.md>`_"
+" or `Amazon Web Services "
+"<https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/aws.md>`_."
+msgstr ""
+"قم بإنشاء ملف تكوين لـ  `DigitalOcean "
+"<https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/digitalocean.md>`_"
+" or `Amazon Web Services "
+"<https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/aws.md>`_."
+
+# 24f1bc1a5a1045b5a066cb88d855dac6
+#: ../../../large.rst:163
+msgid "You can then launch ClusterODM with"
+msgstr "يمكنك بعد ذلك تشغيل ClusterODM باستخدام"
+
+# cfd356de2d654bf891a32218437a3674
+#: ../../../large.rst:169
+msgid "You should see something similar to following messages in the console"
+msgstr "من المفترض أن ترى شيئًا مشابهًا للرسائل التالية في وحدة التحكم"
+
+# e70048dcf8f24f71bc79a7051c51a05f
+#: ../../../large.rst:177
+msgid ""
+"You should always have at least one static NodeODM node attached to "
+"ClusterODM, even if you plan to use the autoscaler for all processing. If "
+"you setup auto scaling, you can't have zero nodes and rely 100% on the "
+"autoscaler. You need to attach a NodeODM node to act as the \"reference "
+"node\" otherwise ClusterODM will not know how to handle certain requests "
+"(for the forwarding the UI, for validating options prior to spinning up an "
+"instance, etc.). For this purpose, you should add a \"dummy\" NodeODM node "
+"and lock it"
+msgstr ""
+"يجب أن يكون لديك دائمًا عقدة NodeODM ثابتة واحدة على الأقل متصلة بـ "
+"ClusterODM ، حتى إذا كنت تخطط لاستخدام أداة autoscaler لجميع عمليات "
+"المعالجة. إذا قمت بإعداد التحجيم التلقائي ، فلا يمكن أن يكون لديك صفر عقد "
+"وتعتمد 100٪ على أداة القسط الآلي. تحتاج إلى إرفاق عقدة NodeODM لتكون بمثابة "
+"\"العقدة المرجعية\" وإلا فلن يعرف ClusterODM كيفية التعامل مع طلبات معينة "
+"(لإعادة توجيه واجهة المستخدم ، للتحقق من صحة الخيارات قبل تدوير مثيل ، وما "
+"إلى ذلك). لهذا الغرض ، يجب عليك إضافة عقدة NodeODM \"وهمية\" وقفلها"
+
+# 534c507b01064a47810c210e1bb41569
+#: ../../../large.rst:187
+msgid "This way all tasks will be automatically forwarded to the autoscaler."
+msgstr "بهذه الطريقة ستتم إعادة توجيه جميع المهام تلقائيًا إلى أوتوسكالر."
+
+# 69765d62d9bb44979d730a3aee0908c7
+#: ../../../large.rst:190
+msgid "Limitations"
+msgstr "محددات"
+
+# bf357933f5f442d2837b2682b0ad9bb2
+#: ../../../large.rst:192
+msgid ""
+"The 3D textured meshes are currently not being merged as part of the "
+"workflow (only point clouds, DEMs and orthophotos are)."
+msgstr ""
+"لا يتم دمج الشبكات ثلاثية الأبعاد في الوقت الحالي كجزء من سير العمل (فقط "
+"الغيوم النقطية ، DEMs و orthophotos هي)."
+
+# 8e1fa32d457445b489bc403442ae7fd5
+#: ../../../large.rst:194
+msgid ""
+"GCPs are fully supported, however, there needs to be at least 3 GCP points "
+"on each submodel for the georeferencing to take place. If a submodel has "
+"fewer than 3 GCPs, a combination of the remaining GCPs + EXIF data will be "
+"used instead (which is going to be less accurate). We recommend using the "
+"``image_groups.txt`` file to accurately control the submodel split when "
+"using GCPs."
+msgstr ""
+"يتم دعم GCP بشكل كامل ، ومع ذلك ، يجب أن يكون هناك 3 نقاط GCP على الأقل في "
+"كل نموذج فرعي حتى يتم إجراء الإشارة الجغرافية. إذا كان النموذج الفرعي يحتوي "
+"على أقل من 3 من نقاط Google Cloud Platform ، فسيتم استخدام مجموعة من بيانات "
+"GCPs + EXIF ​​المتبقية بدلاً من ذلك (والتي ستكون أقل دقة). نوصي باستخدام ملف"
+" `` image_groups.txt '' للتحكم بدقة في تقسيم النموذج الفرعي عند استخدام GCP."
+
+# 1597b856001e4334a4df3555c8416ee1
+#: ../../../large.rst:197
+msgid "Acknowledgments"
+msgstr "شكر وتقدير"
+
+# ec973929d9d947be90f0859358cc398c
+#: ../../../large.rst:198
+msgid ""
+"Huge props to Pau and the folks at Mapillary for their amazing contributions"
+" to OpenDroneMap through their OpenSfM code, which is a key component of the"
+" split-merge pipeline. We look forward to further pushing the limits of "
+"OpenDroneMap and seeing how big a dataset we can process."
+msgstr ""
+"الدعائم الضخمة لباو والناس في Mapillary لمساهماتهم المذهلة في OpenDroneMap "
+"من خلال كود OpenSfM الخاص بهم ، والذي يعد مكونًا رئيسيًا لخط الأنابيب "
+"المدمج. نحن نتطلع إلى زيادة حدود OpenDroneMap ومعرفة مدى ضخامة مجموعة "
+"البيانات التي يمكننا معالجتها."
+
+# 87ebd0f900e74e17b1cdb97ea39eafe1
+#: ../../../large.rst:200
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst>`_"
+msgstr ""
+"`ساعد في تحرير هذه المستندات! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst>`_"
