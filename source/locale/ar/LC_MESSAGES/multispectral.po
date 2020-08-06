@@ -1,0 +1,103 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Khadija Abdulla <khastylez@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 0.9.10\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-07-21 17:01-0400\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: Khadija Abdulla <khastylez@gmail.com>, 2020\n"
+"Language-Team: Arabic (https://www.transifex.com/americanredcross/teams/111882/ar/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+# 87c9cb4a7b2b478387fd990c81927150
+#: ../../../multispectral.rst:2
+msgid "Multispectral Support"
+msgstr "دعم متعدد الأطياف "
+
+# 067b863268c2477bb94a7b6aaebab68f
+#: ../../../multispectral.rst:4
+msgid ""
+"Since version 0.9.9 ODM has basic support for radiometric normalization, "
+"which is able to generate reflectance orthophotos from multispectral "
+"cameras. Multispectral cameras capture multiple shots of the scene using "
+"different band sensors."
+msgstr ""
+"منذ الإصدار 0.9.9 ODM لديه دعم أساسي للتطبيع الإشعاعي ، وهو قادر على توليد "
+"صور انعكاسية من الكاميرات متعددة الأطياف. تلتقط الكاميرات متعددة الأطياف "
+"لقطات متعددة للمشهد باستخدام مستشعرات نطاق مختلفة."
+
+# b8dcb9bc7b7f4fffa0a8c9d75c0da9ca
+#: ../../../multispectral.rst:7
+msgid "Hardware"
+msgstr "المعدات"
+
+# 1c8ec56af3bc4fe5afdcb43f8b1fb149
+#: ../../../multispectral.rst:9
+msgid ""
+"While we aim to support as many cameras as possible, multispectral support "
+"has been developed using the following cameras, so they will work better:"
+msgstr ""
+"بينما نهدف إلى دعم أكبر عدد ممكن من الكاميرات ، فقد تم تطوير دعم متعدد "
+"الأطياف باستخدام الكاميرات التالية ، لذا ستعمل بشكل أفضل:"
+
+# 2b3e96533ded49da9ef461dc8f54d720
+#: ../../../multispectral.rst:11
+msgid "`MicaSense RedEdge-MX and Altum <https://www.micasense.com/>`_"
+msgstr "`MicaSense RedEdge-MX and Altum <https://www.micasense.com/>`_"
+
+# ce4bd2fe479f45c9a851203698d34a39
+#: ../../../multispectral.rst:12
+msgid "`Sentera 6X <https://sentera.com/6x/>`_"
+msgstr "`Sentera 6X <https://sentera.com/6x/>`_"
+
+# 3acaad56c8ed48aba2f6bbb7e7963587
+#: ../../../multispectral.rst:14
+msgid ""
+"Other cameras might also work. You can help us expand this list by `sharing "
+"datasets <https://community.opendronemap.org/c/datasets/10>`_ captured with "
+"other cameras."
+msgstr ""
+"قد تعمل الكاميرات الأخرى أيضًا. يمكنك مساعدتنا في توسيع هذه القائمة من خلال "
+"`مشاركة مجموعات البيانات "
+"<https://community.opendronemap.org/c/datasets/10>`_  تم التقاطها بكاميرات "
+"أخرى."
+
+# 95652e4bd93440a098146431e52dbfbd
+#: ../../../multispectral.rst:17
+msgid "Usage"
+msgstr "الاستخدام"
+
+# c7362ff9d6ae4d6bbfc4b41bcbd7d0b4
+#: ../../../multispectral.rst:19
+msgid ""
+"Process all the images from all bands at once (do not separate the bands "
+"into multiple folders) and pass the `--radiometric-calibration` parameter to"
+" enable radiometric normalization. If the images are part of a multi-camera "
+"setup, the resulting orthophoto will have N bands, one for each camera (+ "
+"alpha)."
+msgstr ""
+"قم بمعالجة جميع الصور من جميع النطاقات دفعة واحدة (لا تفصل النطاقات إلى "
+"مجلدات متعددة) واجتاز المعلمة \"- معايرة قياس الإشعاع\" لتمكين التطبيع "
+"الإشعاعي. إذا كانت الصور جزءًا من إعداد متعدد الكاميرات ، فستحتوي الصورة "
+"المنتخبة الناتجة على نطاقات N ، واحدة لكل كاميرا (+ ألفا)."
+
+# a36abb316e2d4fbfa64247b874763e70
+#: ../../../multispectral.rst:25
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst>`_"
+msgstr ""
+"`ساعد في تحرير هذه المستندات! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst>`_"
