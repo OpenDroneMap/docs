@@ -44,7 +44,7 @@ msgid ""
 "`Choosing the right UAV <https://uav-guidelines.openaerialmap.org/pages/05"
 "-choosing-the-right-uav/>`_"
 msgstr ""
-"`Chakua UAV sahihi <https://uav-guidelines.openaerialmap.org/pages/05"
+"`Chagua UAV sahihi <https://uav-guidelines.openaerialmap.org/pages/05"
 "-choosing-the-right-uav/>`_"
 
 # fe7f09d545684117aba61ff9860a51d2
