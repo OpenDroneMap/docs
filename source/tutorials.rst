@@ -175,6 +175,7 @@ Command line access to instances
 Sometimes we need to go a little deeper in our exploration of the process for OpenDroneMap. For this, we can get direct command line access to the machines. For this, we can use `docker exec` to execute a `bash` command line shell in the machine of interest as follows:
 
 ::
+
     > docker exec -ti 2518817537ce bash
     root@2518817537ce:/code#
 
