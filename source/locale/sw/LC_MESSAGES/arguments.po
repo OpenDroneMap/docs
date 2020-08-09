@@ -1,34 +1,42 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, OpenDroneMap
-# This file is distributed under the same license as the OpenDroneMap
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
-#
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Khadija Abdulla <khastylez@gmail.com>, 2020
+# danbjoseph <danbjoseph@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 0.6\n"
+"Project-Id-Version: OpenDroneMap 0.9.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-06 21:01+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2020-07-21 17:01-0400\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
+"Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Language: sw\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/arguments.rst:4
+# 3c050a6e28a542979ddc0687deabc8e3
+#: ../../../arguments.rst:4
 msgid "Options and Flags"
-msgstr ""
+msgstr "Chagizi na Bendera"
 
-#: ../../source/arguments.rst:6
+# 22dcd4f93de143d4be348424b5141abe
+#: ../../../arguments.rst:6
 msgid "Arguments::"
-msgstr ""
+msgstr "Majadiliano::"
 
-#: ../../source/arguments.rst:289
+# 3ce8631539bc46c5a0823cb6065ddf2d
+#: ../../../arguments.rst:382
 msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/using.rst>`_"
 msgstr ""
-
+"kwa msaada kurekebisha kitabu! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/using.rst>`_"

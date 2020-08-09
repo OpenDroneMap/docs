@@ -119,6 +119,73 @@ You will be prompted for your GitHub credentials.
 
 Open https://github.com/OpenDroneMap/docs and you'll see a box asking you to open a pull request. Open a pull request by filling in a description of your changes and you're set! Somebody will review your changes and your contribution will be live on https://docs.opendronemap.org once approved.
 
+# Translations
+
+## Contributing translations
+
+Transifex has a getting [started guide for translators](https://docs.transifex.com/getting-started-1/translators) that will walk you through the steps to setup an account.
+
+The ODM documentation Transifex project can be found at: https://www.transifex.com/americanredcross/opendronemap_docs/
+
+## Managing the translation process
+
+This project uses [Transifex](https://www.transifex.com/) and the [`transifex-client`](https://docs.transifex.com/client/introduction) tool to help people contribute translations. The `transifex-client` tool is included in the requirements.txt file and should be installed on your system during setup when you run `pip install -r requirements.txt`.
+
+You need to configure your account. For this, you need to create an API Token for your user to access this service through the command line. This can be done under your Transifex [User’s Settings](https://www.transifex.com/user/settings/api/). Set it up to use the token:
+
+```
+tx init --token $TOKEN --no-interactive
+```
+
+If there are changes in the English `*.rst` source files, you can update the `.pot` files: 
+`sphinx-build -b gettext source source/locale/en/pot`
+
+If there are **new** English `.rst` source files, you can map them by updating the `./.tx/config` file.
+
+To then update the English source on Transifex:
+
+```
+tx push --source
+```
+
+To fetch translations from Transifex:
+
+```
+tx pull --all
+```
+
+Alternatively, you can pull only a specific language. For example:
+
+```
+tx pull -l sw
+```
+
+To add a new language, do it through the Transifex interface and then add a new line to the Makefile `deploy` command.
+
+## The Travis CI build failed... 😞
+
+Don't panic! Unfortunately, Transifex doesn't protect the reST notation that Sphinx uses for things like formatting and links. It's possible that during translation, some of the syntax was broken.
+
+Start up your Python virtual environment if it's not already with `source venv/bin/activate` and then try a build of the language that you're trying to update, for example:
+
+``` 
+sphinx-build -b html -D language='sw' source "_build/html/sw/" -nW
+```
+
+The `-nW` (nitpicky) flag is important. You should see an output in your console such as:
+
+```
+Warning, treated as error:
+/path/to/my/project/OpenDroneMap/docs/source/multispectral.rst:25:<translated>:1:Inline interpreted text or phrase reference start-string without end-string.
+```
+
+Look at the source file and line that is mentioned. In this case the file is `source/multispectral.rst` and the line is the number after the colon after the filename (`25`). Looking at the file we see that line 25 is the last line and the "Help edit these docs!" link. 
+
+Go to Transifex, go to the resource, and go to the string. The warning/error message should help you understand what went wrong. In this case the link syntax wasn't matched correctly. Fix and save the translation.
+
+![Transifex screen grab](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_err_transifex.png)
+
+Pull the language down (e.g. `tx pull -l sw`) and then try the build again. Unfortunately, if there is more than one error, you'll have to fix them one at a time.
 
 ### Questions?
 

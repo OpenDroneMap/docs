@@ -1,141 +1,179 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, OpenDroneMap
-# This file is distributed under the same license as the OpenDroneMap
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
-#
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# danbjoseph <danbjoseph@gmail.com>, 2020
+# Khadija Abdulla <khastylez@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 0.6\n"
+"Project-Id-Version: OpenDroneMap 0.9.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-06 21:47+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2020-07-21 17:01-0400\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: Khadija Abdulla <khastylez@gmail.com>, 2020\n"
+"Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Language: sw\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/outputs.rst:2
+# 0363274eec9a4b9c82318f91f7138fa8
+#: ../../../outputs.rst:2
 msgid "OpenDroneMap Outputs"
-msgstr ""
+msgstr "OpenDroneMap Matokeo"
 
-#: ../../source/outputs.rst:4
+# 4d0105590a224be8b3366a34b3ca7dcf
+#: ../../../outputs.rst:4
 msgid "Listed below are some of the useful outputs ODM produces."
-msgstr ""
+msgstr "Vilivyo orodheshwa chini ni matumizi ya matokeo ya ODM."
 
-#: ../../source/outputs.rst:7
+# e4c5e56bafa147fab888836f5d3ee12d
+#: ../../../outputs.rst:7
 msgid "Point Cloud"
-msgstr ""
+msgstr "Point Cloud"
 
-#: ../../source/outputs.rst:9
+# e5a47a5f7e9048b9a271385ca20dff58
+#: ../../../outputs.rst:9
 msgid ""
 "``odm_georeferencing/odm_georeferenced_model.ply/laz/csv`` -- The "
 "georeferenced point cloud in different file formats"
 msgstr ""
+"``odm_georeferencing/odm_georeferenced_model.ply/laz/csv`` -- Ni "
+"georeferenced point cloud katika format tofauti"
 
-#: ../../source/outputs.rst:15
+# c255fdbb5e244cc59984eeb5c1411b57
+#: ../../../outputs.rst:15
 msgid ""
-"*Point cloud over State University Zanzibar, courtesy of* `Khadija "
-"Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-"
-"56b4044a/>`_"
+"*Point cloud over State University Zanzibar, courtesy of* `Khadija Abdullah "
+"Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
 msgstr ""
+"*Picha za anga katika State University Zanzibar, zilizoandaliwa na* `Khadija"
+" Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
 
-#: ../../source/outputs.rst:19
+# ef280b4664614efb95892f9f3d86a3d0
+#: ../../../outputs.rst:19
 msgid "3D Textured Model"
-msgstr ""
+msgstr "3D Textured Model"
 
-#: ../../source/outputs.rst:21
+# 83eaf395dd13452abe2885162d0d16e6
+#: ../../../outputs.rst:21
 msgid ""
 "``odm_texturing/odm_textured_model.obj`` -- The textured surface mesh "
 "``odm_texturing/odm_textured_model_geo.obj`` -- The georeferenced and "
 "textured surface mesh"
 msgstr ""
+"``odm_texturing/odm_textured_model.obj`` -- The textured surface mesh "
+"``odm_texturing/odm_textured_model_geo.obj`` -- The georeferenced na "
+"textured surface mesh"
 
-#: ../../source/outputs.rst:24
+# ac92cff17c904762b2fd054257cf64d5
+#: ../../../outputs.rst:24
 msgid ""
 "You can access the point cloud and textured meshes using MeshLab. Open "
-"MeshLab, and choose File:Import Mesh and choose your textured mesh from a"
-" location similar to the following: "
-"``odm_texturing\\odm_textured_model.obj``"
+"MeshLab, and choose File:Import Mesh and choose your textured mesh from a "
+"location similar to the following: ``odm_texturing\\odm_textured_model.obj``"
 msgstr ""
+"Unaweza kupata pointcloud na textured mesh kutumia MeshLab. Fungua MeshLab, "
+"na chagua file:Ingiza Mesh na chagua textured mesh yako kutoka eneo sawa na "
+"lifuatalo: ``odm_texturing\\odm_textured_model.obj``"
 
-#: ../../source/outputs.rst:30
+# f452c086297841c6b18804010bbf394d
+#: ../../../outputs.rst:30
 msgid ""
 "*Textured mesh courtesy of* `OpenDroneMap "
 "<https://twitter.com/opendronemap>`_"
 msgstr ""
+"*Textured mesh courtesy of* `OpenDroneMap "
+"<https://twitter.com/opendronemap>`_"
 
-#: ../../source/outputs.rst:33
+# e7762f4764a944549f8fb90991214af0
+#: ../../../outputs.rst:33
 msgid "Orthophoto"
-msgstr ""
+msgstr "Orthophoto"
 
-#: ../../source/outputs.rst:35
+# 55a73a43fc1e443e8f90f27c4562f1ca
+#: ../../../outputs.rst:35
 msgid ""
-"``odm_orthophoto/odm_orthphoto.png`` -- The orthophoto, but this is a "
-"simple png, which doesn't have any georeferencing information"
+"``odm_orthophoto/odm_orthphoto.png`` -- The orthophoto, but this is a simple"
+" png, which doesn't have any georeferencing information"
 msgstr ""
+"``odm_orthophoto/odm_orthphoto.png`` -- The orthophoto, lakini hii ni simple"
+" png, ambayo haina maelezo ya georeferencing"
 
-#: ../../source/outputs.rst:37
+# 8487c7b9409e4549bdf74776d7c552b0
+#: ../../../outputs.rst:37
 msgid ""
-"``odm_orthophoto/odm_orthphoto.tif`` -- GeoTIFF Orthophoto. You can use "
-"it in QGIS as a raster layer."
+"``odm_orthophoto/odm_orthphoto.tif`` -- GeoTIFF Orthophoto. You can use it "
+"in QGIS as a raster layer."
 msgstr ""
+"``odm_orthophoto/odm_orthphoto.tif`` -- GeoTIFF Orthophoto. Unaweza kuitumia"
+" kwenye QGIS kama tabaka la rasta."
 
-#: ../../source/outputs.rst:43
+# f96d614393b3411299358ed2ac8847bd
+#: ../../../outputs.rst:43
 msgid ""
-"*Orthophoto over State University Zanzibar, courtesy of* `Khadija "
-"Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-"
-"56b4044a/>`_"
+"*Orthophoto over State University Zanzibar, courtesy of* `Khadija Abdullah "
+"Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
 msgstr ""
+"Picha juu ya State University Zanzibar, courtesy of* `Khadija Abdullah Ali "
+"<https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
 
-#: ../../source/outputs.rst:46
+# 97a9f77304ae4ce487ea62415fbe0e5a
+#: ../../../outputs.rst:46
 msgid "DTM/DSM"
-msgstr ""
+msgstr "DTM/DSM"
 
-#: ../../source/outputs.rst:48
+# cc432c908f294d6a87d3c47274b32de8
+#: ../../../outputs.rst:48
 msgid ""
-"DTM/DSM will only be created if the ``--dtm`` or ``--dsm`` options are "
-"used. See `tutorial on elevation models "
+"DTM/DSM will only be created if the ``--dtm`` or ``--dsm`` options are used."
+" See `tutorial on elevation models "
 "<https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-"
 "models>`_ for more options in creating."
 msgstr ""
+"DTM/DSM itatengenezwa ikiwa ``--dtm`` au ``--dsm`` zitatumika. Angalia "
+"`tutorial on elevation models <https://docs.opendronemap.org/tutorials.html"
+"#creating-digital-elevation-models>`_ kwa njia zaidi za kutengeneza."
 
-#: ../../source/outputs.rst:50
+# 3d6a730458b14794bf7454b4f6e119e4
+#: ../../../outputs.rst:50
 msgid "Data will be stored in:"
-msgstr ""
+msgstr "Data zitahifadhiwa ndani ya:"
 
-#: ../../source/outputs.rst:52
+# abad74d908c04802b1be22686908379e
+#: ../../../outputs.rst:52
 msgid "``odm_dem/dtm.tif``"
-msgstr ""
+msgstr "``odm_dem/dtm.tif``"
 
-#: ../../source/outputs.rst:53
+# d5483e2a7881435c91539b04f55ce113
+#: ../../../outputs.rst:53
 msgid "``odm_dem/dsm.tif``"
-msgstr ""
+msgstr "``odm_dem/dsm.tif``"
 
-#: ../../source/outputs.rst:59
+# 879bdeaa3d8a43519e2552ae4830a3e0
+#: ../../../outputs.rst:59
 msgid ""
-"*Digital surface model over State University Zanzibar, courtesy of* "
-"`Khadija Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-"
-"56b4044a/>`_"
+"*Digital surface model over State University Zanzibar, courtesy of* `Khadija"
+" Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
 msgstr ""
+"*Digital surface model over State University Zanzibar, courtesy of* `Khadija"
+" Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
 
-#: ../../source/outputs.rst:62
+# fe6b51da6c9f47a39b7437e0cdfcee35
+#: ../../../outputs.rst:62
 msgid "List of all outputs"
-msgstr ""
+msgstr "Mpangilo wa matokeo yote"
 
-#: ../../source/outputs.rst:109
+# 664796b76ddc4919ad9ea2c81918aa6c
+#: ../../../outputs.rst:109
 msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/outputs.rst>`_"
 msgstr ""
-
-#~ msgid ""
-#~ "*Textured mesh over State University "
-#~ "Zanzibar, courtesy of* `Khadija Abdullah "
-#~ "Ali <https://www.linkedin.com/in/khadija-abdulla-"
-#~ "ali-56b4044a/>`_"
-#~ msgstr ""
-
+"`kwa msaada kurekebisha kitabu! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/outputs.rst>`_"

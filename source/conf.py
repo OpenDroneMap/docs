@@ -30,11 +30,13 @@ release = '0.9.10'
 # ones.
 extensions = [
     'sphinx.ext.todo',
+    'sphinx_rtd_theme',
     'sphinx.ext.githubpages'
 ]
 #For internationalization:
 locale_dirs = ['locale/']
 gettext_compact = False
+gettext_uuid = True
 
 # Add any paths that contain templates here, relative to this directory.
 templates_path = ['_templates']
@@ -53,7 +55,7 @@ master_doc = 'index'
 #
 # This is also used if you do content translation via gettext catalogs.
 # Usually you set "language" from the command line for these cases.
-language = None
+language = 'en'
 
 # List of patterns, relative to source directory, that match files and
 # directories to ignore when looking for source files.

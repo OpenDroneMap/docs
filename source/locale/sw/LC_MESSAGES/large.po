@@ -1,275 +1,400 @@
 # SOME DESCRIPTIVE TITLE.
-# Copyright (C) 2018, OpenDroneMap
-# This file is distributed under the same license as the OpenDroneMap
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
-#
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# danbjoseph <danbjoseph@gmail.com>, 2020
+# Khadija Abdulla <khastylez@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 0.6\n"
+"Project-Id-Version: OpenDroneMap 0.9.10\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-06 21:01+0000\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"POT-Creation-Date: 2020-07-21 17:01-0400\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: Khadija Abdulla <khastylez@gmail.com>, 2020\n"
+"Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.6.0\n"
+"Language: sw\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../source/large.rst:4
+# 5ea5942cc4604baea3dc66a4ee841282
+#: ../../../large.rst:4
 msgid "Splitting Large Datasets"
-msgstr ""
+msgstr "Kugawa Database Kubwa"
 
-#: ../../source/large.rst:6
+# 09b5af17439740d2b8a18993e6709da6
+#: ../../../large.rst:6
 msgid ""
 "Starting with ODM version ``0.6.0`` you can split up very large datasets "
 "into manageable chunks (called submodels), running the pipeline on each "
 "chunk, and then producing merged DEMs, orthophotos and point clouds. The "
 "process is referred to as \"split-merge\"."
 msgstr ""
+"Anza na toleo la ODM ``0.6.0`` unaweza kugawa group kubwa la data linaloweza"
+" kudhibitiwa (liitwalo submodels), kutumia pipeline katika kila kundi, na "
+"kisha zalisha DEM itakayounganisha, orthophoto na pointcloud. Mchakato "
+"utawekwa kama \"split-merge.\""
 
-#: ../../source/large.rst:8
+# 0c58eb496d8d456ca011011549f430a8
+#: ../../../large.rst:8
 msgid ""
-"Why might you use the split-merge pipeline? If you have a very large "
-"number of images in your dataset, split-merge will help make the "
-"processing more manageable on a large machine (it will require less "
-"memory). If you have many machines all connected to the same network you "
-"can also process the submodels in parallel, thus allowing for horizontal "
-"scaling and processing thousands of images more quickly."
+"Why might you use the split-merge pipeline? If you have a very large number "
+"of images in your dataset, split-merge will help make the processing more "
+"manageable on a large machine (it will require less memory). If you have "
+"many machines all connected to the same network you can also process the "
+"submodels in parallel, thus allowing for horizontal scaling and processing "
+"thousands of images more quickly."
 msgstr ""
+"Kwa nini unaweza kutumia split-merge pipeline? Ikiwa una idadi ya picha "
+"nyingi kwenye dataseti yako, split-merge itasaidia mchakato kuongozwa vizuri"
+" katika mashine kubwa (itahitaji nafasi ndogo). Ikiwa una mashine nyingi "
+"zilizounganishwa katika mtandao mmoja pia unaweza kuchakata submodel kwa "
+"pamoja, ndivyo itakavyoruhu kuongeza mstari mlalo na kuchakata maelfu ya "
+"picha kwa urahisi zaidi."
 
-#: ../../source/large.rst:10
+# d3a6bf47796e4775bfb53066d0d51dce
+#: ../../../large.rst:10
 msgid ""
-"Split-merge works in WebODM out of the box as long as the processing "
-"nodes support split-merge, by enabling the ``--split`` option when "
-"creating a new task."
+"Split-merge works in WebODM out of the box as long as the processing nodes "
+"support split-merge, by enabling the ``--split`` option when creating a new "
+"task."
 msgstr ""
+"Split-merge inafanya kazi ndani ya ODM nje ya boxi ikiwa node zinasaidia "
+"split-merge, kwa kuruhusu chaguo la ``--split`` unapotengeneza njia mpya."
 
-#: ../../source/large.rst:13
+# 7c1cb609f5c74801ba89894fb5974978
+#: ../../../large.rst:13
 msgid "Calibrate images"
-msgstr ""
+msgstr "Kurekebisha Picha"
 
-#: ../../source/large.rst:15
+# a5852d851b3c4557a860c07a9a876368
+#: ../../../large.rst:15
 msgid ""
 "Image calibration is recommended (but not required) for large datasets "
-"because error propagation due to image distortion could cause a bowl "
-"effect on the models. Calibration instructions can be found at      "
-"`Calibrate Images <tutorials.html#calibrating-the-camera>`_."
+"because error propagation due to image distortion could cause a bowl effect "
+"on the models. Calibration instructions can be found at      `Calibrate "
+"Images <tutorials.html#calibrating-the-camera>`_."
 msgstr ""
+"Kurekebisha picha ni kupendekeza (lakini sio lazima) kwa dataset nyingi, kwa"
+" sababu upatikanaji wa makosa wakati wa kuvuruga picha kunaweza kusababisha "
+"kubonyea katika muundo. Maelezo ya muinuko yanapatika kwenye `Calibrate "
+"Images <tutorials.html#calibrating-the-camera>`_."
 
-#: ../../source/large.rst:21
+# bb110a174c5f40ec9d3517e5eabbd887
+#: ../../../large.rst:21
 msgid ""
-"Bowling effect on point cloud over 13,000+ image dataset collected by "
-"World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, "
-"Tanzania."
+"Bowling effect on point cloud over 13,000+ image dataset collected by World "
+"Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania."
 msgstr ""
+"Madhara ya kubonyea picha juu ya point cloudi kwa kundi kubwa la picha zaidi"
+" ya 13,000+ zilizokusanywa na World Bank Tanzania katika maeneo ya mafuriko "
+"Msimbasi Basin, Dar es Salaam, Tanzania."
 
-#: ../../source/large.rst:24
+# 0967d468c7144fc5bd2132400d045215
+#: ../../../large.rst:24
 msgid "Local Split-Merge"
-msgstr ""
+msgstr "Split-Merge ya Ndani"
 
-#: ../../source/large.rst:26
+# 2e2ad9be96fa496bb5ab7db7b677f5df
+#: ../../../large.rst:26
 msgid ""
 "Splitting a dataset into more manageable submodels and sequentially "
-"processing all submodels on the same machine is easy! Just use "
-"``--split`` and ``--split-overlap`` to decide the the average number of "
-"images per submodels and the overlap (in meters) between submodels "
-"respectively"
+"processing all submodels on the same machine is easy! Just use ``--split`` "
+"and ``--split-overlap`` to decide the the average number of images per "
+"submodels and the overlap (in meters) between submodels respectively"
 msgstr ""
+"Mgawio wa kundi data katika submodel, urahisi na katika kuchakata wepesi "
+"zaidi ndani ya mashine moja kwa wepesi! Tumia ``--split`` na ``--split-"
+"overlap`` kuchagua nambari ya picha inayotakiwa kwa kila submodel na "
+"mpishano (katika meters) baina ya submodel mfululizo"
 
-#: ../../source/large.rst:32
+# 0aeee1b4863b45729bc6cbf63b6b1d84
+#: ../../../large.rst:32
 msgid ""
-"If you already know how you want to split the dataset, you can provide "
-"that information and it will be used instead of the clustering algorithm."
+"If you already know how you want to split the dataset, you can provide that "
+"information and it will be used instead of the clustering algorithm."
 msgstr ""
+"Ikiwa unajua vipi unaweza kugawa dataseti, unaweza kutoa maelezo na "
+"itatumiaka badala ya cluster algorithim."
 
-#: ../../source/large.rst:34
+# 175b97d3d6a44086be4f0cdabfb6fe95
+#: ../../../large.rst:34
 msgid ""
-"The grouping can be provided by adding a file named image_groups.txt in "
-"the main dataset folder. The file should have one line per image. Each "
-"line should have two words: first the name of the image and second the "
-"name of the group it belongs to. For example::"
+"The grouping can be provided by adding a file named image_groups.txt in the "
+"main dataset folder. The file should have one line per image. Each line "
+"should have two words: first the name of the image and second the name of "
+"the group it belongs to. For example::"
 msgstr ""
+"Kundi linaweza kupatika kwa kuengeza faili linaloitwa image_groups.txt "
+"katika folder kuu la dataseti. Faili lazima liwe na mstari mmoja kwa kila "
+"picha. Kila mstari lazima uwe na maneno mawili: La kwanza ni jina la picha "
+"na pili ni jina la kundi la picha. Kwa Mfano::"
 
-#: ../../source/large.rst:42
+# 20c59dc7a68941e89e8369bd6026f2ff
+#: ../../../large.rst:42
 msgid ""
 "will create 3 submodels. Make sure to pass ``--split-overlap 0`` if you "
 "manually provide a ``image_groups.txt`` file."
 msgstr ""
+"utatengeza submodel 3. Hakikisha unapitisha ``--split-overlap 0`` ikiwa "
+"unatengeneza mwenyewe ``image_groups.txt`` faili."
 
-#: ../../source/large.rst:46
+# f821d7b1316a4f81830050135f38ec62
+#: ../../../large.rst:46
 msgid "Distributed Split-Merge"
-msgstr ""
+msgstr "Kugawanya Split-Merge"
 
-#: ../../source/large.rst:48
+# f170f960ba414793b7f657bb74d70937
+#: ../../../large.rst:48
 msgid ""
 "ODM can also automatically distribute the processing of each submodel to "
-"multiple machines via `NodeODM "
-"<https://github.com/OpenDroneMap/NodeODM>`_ nodes, orchestrated via "
-"`ClusterODM <https://github.com/OpenDroneMap/ClusterODM>`_."
+"multiple machines via `NodeODM <https://github.com/OpenDroneMap/NodeODM>`_ "
+"nodes, orchestrated via `ClusterODM "
+"<https://github.com/OpenDroneMap/ClusterODM>`_."
 msgstr ""
+"ODM pia inaweza kugawanya wenyewe mchakato wa kila submodel kwa mashine "
+"tofauti kupitia `NodeODM <https://github.com/OpenDroneMap/NodeODM>`_ nodes, "
+"orchestrated via `ClusterODM <https://github.com/OpenDroneMap/ClusterODM>`_."
 
-#: ../../source/large.rst:55
+# 09a33b36dab54c42a8ce360deacaf649
+#: ../../../large.rst:55
 msgid "Getting Started with Distributed Split-Merge"
-msgstr ""
+msgstr "Kupata kuanza pamoja na kugawanya Split-Merge"
 
-#: ../../source/large.rst:57
+# af83a83165d8401396aab49b8744a62b
+#: ../../../large.rst:57
 msgid "The first step is start ClusterODM"
-msgstr ""
+msgstr "Njia ya mwanzo ni kustart ClusterODM"
 
-#: ../../source/large.rst:63
+# 6d4217467bf544e9a7ad1ac56e9f9973
+#: ../../../large.rst:63
 msgid ""
 "Then on each machine you want to use for processing, launch a NodeODM "
 "instance via"
 msgstr ""
+"Kisha kwa kila mashine ambayo unataka kutumia kwa mchakato, zindua NodeODM "
+"instance kutumia"
 
-#: ../../source/large.rst:69
+# f7f5d656ce9f46d89eaa1769c27ba6e5
+#: ../../../large.rst:69
 msgid ""
 "Connect via telnet to ClusterODM and add the IP addresses/port of the "
 "machines running NodeODM"
 msgstr ""
+"Connect kupitia telnet hadi ClusterODM na ongeza IP addresses/port katika "
+"mashine inayotumia NodeODM"
 
-#: ../../source/large.rst:84
-msgid "Make sure you are running version ``1.5.1`` or higher of the NodeODM API."
-msgstr ""
-
-#: ../../source/large.rst:86
+# b6440814204a44fd9b9cbde1ff322cc3
+#: ../../../large.rst:84
 msgid ""
-"At this point, simply use the ``--sm-cluster`` option to enable "
-"distributed split-merge"
+"Make sure you are running version ``1.5.1`` or higher of the NodeODM API."
 msgstr ""
+"Make sure you are running toleo ``1.5.1`` or higher of the NodeODM API."
 
-#: ../../source/large.rst:93
+# 42d5b57f70b54515892481ba4875365b
+#: ../../../large.rst:86
+msgid ""
+"At this point, simply use the ``--sm-cluster`` option to enable distributed "
+"split-merge"
+msgstr ""
+"Ukifikia hapo, ni rahisi kutumia njia ya  ``--sm-cluster`` kuruhusu "
+"kugawanya split-merge"
+
+# 1ff052ee47864108abd13c2ca2b6eeef
+#: ../../../large.rst:93
 msgid "Understanding the Cluster"
-msgstr ""
+msgstr "Kufahamu Cluster"
 
-#: ../../source/large.rst:95
+# 18e376a78edf468088b5efbd939c0bbf
+#: ../../../large.rst:95
 msgid ""
-"When connected via telnet, it is possible to interrogate what is "
-"happening on the cluster. For example, we can use the command HELP to "
-"find out available commands"
+"When connected via telnet, it is possible to interrogate what is happening "
+"on the cluster. For example, we can use the command HELP to find out "
+"available commands"
 msgstr ""
+"Ukiunganisha kupitia telnet, ni rahisi kufahamu nini kinaendelea ndani ya "
+"cluster. Kwa Mfano, tunaweza kutumia camand HELP kutafuta camand "
+"zinazopatika"
 
-#: ../../source/large.rst:118
+# 1494dbd111a64a7e9075a9c20a0c12d9
+#: ../../../large.rst:118
 msgid ""
-"If, for example, the NodeODM instance wasn't active when ClusterODM "
-"started, we might list nodes and see something as follows"
+"If, for example, the NodeODM instance wasn't active when ClusterODM started,"
+" we might list nodes and see something as follows"
 msgstr ""
+"Ikiwa, kwa mfano, NodeODM instance haifanyi kazi wakati ClusterODM "
+"ikiwashwa, tunaweza kuorodhesha node na tukaangalia kama ifuatavyo"
 
-#: ../../source/large.rst:125
+# 20e68e67542e4049b232b7635d88760b
+#: ../../../large.rst:125
 msgid ""
-"To address this, we can start up our local node (if not already started),"
-" and then perform a ``NODE UPDATE``"
+"To address this, we can start up our local node (if not already started), "
+"and then perform a ``NODE UPDATE``"
 msgstr ""
+"Kulitambua hili, tunaweza kuanza na kuwasha node ya ndani (ikiwa "
+"haikuwashwa), na kisha tumia ``NODE UPDATE``"
 
-#: ../../source/large.rst:135
+# 33eecf83e3124b59a7d0c13af09e04a2
+#: ../../../large.rst:135
 msgid "Accessing the Logs"
-msgstr ""
+msgstr "Kutumia Logs"
 
-#: ../../source/large.rst:137
+# def6c238d7864b5382c8a0c925a3c6e3
+#: ../../../large.rst:137
 msgid ""
-"While a process is running, it is also possible to list the tasks, and "
-"view the task output"
+"While a process is running, it is also possible to list the tasks, and view "
+"the task output"
 msgstr ""
+"Wakati mchakato unaendelea, pia ni rahisi kuorodhesha kazi, na muonekano wa "
+"matokeo ya kazi"
 
-#: ../../source/large.rst:145
+# 2a15305d8ba94ce0bdb2d07174a39b0f
+#: ../../../large.rst:145
 msgid "Autoscaling ClusterODM"
-msgstr ""
+msgstr "Kuongeza kiotomatiki ClusterODM"
 
-#: ../../source/large.rst:147
+# 9ec4019144e94b0eb0ab5f4325320568
+#: ../../../large.rst:147
 msgid ""
 "ClusterODM also includes the option to autoscale on multiple platforms, "
-"including, to date, Amazon and Digital Ocean. This allows users to reduce"
-" costs associated with always-on instances as well as being able to scale"
-" processing based on demand."
+"including, to date, Amazon and Digital Ocean. This allows users to reduce "
+"costs associated with always-on instances as well as being able to scale "
+"processing based on demand."
 msgstr ""
+"ClusterODM pia inakusanya njia za kujipima wenyewe platform tofauti, "
+"ikiwemo, to date, Amazon na digital Ocean. Hii inawezesha watumiaji "
+"kupunguza gharama zitokanazo na always-on instance vile vile kuweza kupima "
+"mchakano kutokana na mahitaji."
 
-#: ../../source/large.rst:149
+# 62b6f826c2c643e0901155b8e13ae32b
+#: ../../../large.rst:149
 msgid "To setup autoscaling you must:"
-msgstr ""
+msgstr "Kupanga autoscaling lazima:"
 
-#: ../../source/large.rst:151
-msgid "Have a functioning version of NodeJS installed and then install ClusterODM"
+# 1f57a583ee064aadaa3feee9c394eafc
+#: ../../../large.rst:151
+msgid ""
+"Have a functioning version of NodeJS installed and then install ClusterODM"
 msgstr ""
+"Uwe na toleo linalofanya kazi NodeJS limeingizwa na kisha na ingiza "
+"ClusterODM"
 
-#: ../../source/large.rst:159
+# 717a4e330335494bb0df832234fa0032
+#: ../../../large.rst:159
 msgid "Make sure docker-machine is installed."
-msgstr ""
+msgstr "Hakikisha docker-machine imeingizwa."
 
-#: ../../source/large.rst:160
+# 199f29aa6b7f4f409bb92e6c3cb5bf16
+#: ../../../large.rst:160
 msgid "Setup a S3-compatible bucket for storing results."
-msgstr ""
+msgstr "Panga S3-compatible bucket kwa kuhifadhia."
 
-#: ../../source/large.rst:161
+# 6326931fadb04511aeefe580135ad3a2
+#: ../../../large.rst:161
 msgid ""
 "Create a configuration file for `DigitalOcean "
 "<https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/digitalocean.md>`_"
 " or `Amazon Web Services "
 "<https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/aws.md>`_."
 msgstr ""
+"Tengeneza configuration faili kwa `DigitalOcean "
+"<https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/digitalocean.md>`_"
+" au `Amazon Web Services "
+"<https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/aws.md>`_."
 
-#: ../../source/large.rst:163
+# 24f1bc1a5a1045b5a066cb88d855dac6
+#: ../../../large.rst:163
 msgid "You can then launch ClusterODM with"
-msgstr ""
+msgstr "Kisha unaweza kuwasha ClusterODM pamoja"
 
-#: ../../source/large.rst:169
+# cfd356de2d654bf891a32218437a3674
+#: ../../../large.rst:169
 msgid "You should see something similar to following messages in the console"
-msgstr ""
+msgstr "Utaona kitu kinachofanana kwa ujumbe ufuatao ndani ya console"
 
-#: ../../source/large.rst:177
-#, python-format
+# e70048dcf8f24f71bc79a7051c51a05f
+#: ../../../large.rst:177
 msgid ""
 "You should always have at least one static NodeODM node attached to "
-"ClusterODM, even if you plan to use the autoscaler for all processing. If"
-" you setup auto scaling, you can't have zero nodes and rely 100% on the "
+"ClusterODM, even if you plan to use the autoscaler for all processing. If "
+"you setup auto scaling, you can't have zero nodes and rely 100% on the "
 "autoscaler. You need to attach a NodeODM node to act as the \"reference "
 "node\" otherwise ClusterODM will not know how to handle certain requests "
-"(for the forwarding the UI, for validating options prior to spinning up "
-"an instance, etc.). For this purpose, you should add a \"dummy\" NodeODM "
-"node and lock it"
+"(for the forwarding the UI, for validating options prior to spinning up an "
+"instance, etc.). For this purpose, you should add a \"dummy\" NodeODM node "
+"and lock it"
 msgstr ""
+"kawaida unaweza kuwa na angalau static NodeODM node moja iliyoungana na "
+"ClusterODM, hata kama umepanga kutumia autoscaler kwa michakato yote. Ikiwa "
+"umepanga auto scaling, huwezi kuwa na zero node na inategemea 100% ya "
+"autoscaler. Unahitaji kuambatanisha NodeODM kuwa kama \"reference node\" au "
+"vyenginevyo ClusterODM haitajua jinsi ya kushuhulikia baadhi ya maombi (kwa "
+"kupeleka UI, kwa kuruhusu njia za mwanzo kuzunguruka instance, etc.). Kwa "
+"malengo haya utaweka \"dummy\" NodeODM node na kuifunga"
 
-#: ../../source/large.rst:187
+# 534c507b01064a47810c210e1bb41569
+#: ../../../large.rst:187
 msgid "This way all tasks will be automatically forwarded to the autoscaler."
-msgstr ""
+msgstr "Njia hii hii kazi zote zinapelekwa wenyewe kwa autoscaler."
 
-#: ../../source/large.rst:190
+# 69765d62d9bb44979d730a3aee0908c7
+#: ../../../large.rst:190
 msgid "Limitations"
-msgstr ""
+msgstr "Mipaka"
 
-#: ../../source/large.rst:192
+# bf357933f5f442d2837b2682b0ad9bb2
+#: ../../../large.rst:192
 msgid ""
 "The 3D textured meshes are currently not being merged as part of the "
 "workflow (only point clouds, DEMs and orthophotos are)."
 msgstr ""
+"Mfumo wa 3D meshes kwa sasa haijaunganishwa kama sehemu ya mpangilio kazi "
+"(Ni point cloud pekee, DEM na orthophoto)."
 
-#: ../../source/large.rst:194
+# 8e1fa32d457445b489bc403442ae7fd5
+#: ../../../large.rst:194
 msgid ""
-"GCPs are fully supported, however, there needs to be at least 3 GCP "
-"points on each submodel for the georeferencing to take place. If a "
-"submodel has fewer than 3 GCPs, a combination of the remaining GCPs + "
-"EXIF data will be used instead (which is going to be less accurate). We "
-"recommend using the ``image_groups.txt`` file to accurately control the "
-"submodel split when using GCPs."
+"GCPs are fully supported, however, there needs to be at least 3 GCP points "
+"on each submodel for the georeferencing to take place. If a submodel has "
+"fewer than 3 GCPs, a combination of the remaining GCPs + EXIF data will be "
+"used instead (which is going to be less accurate). We recommend using the "
+"``image_groups.txt`` file to accurately control the submodel split when "
+"using GCPs."
 msgstr ""
+"GCPs inasaidiwa kikamilifu, lakini kuna mahitaji angalau point 3 za GCP kwa "
+"kila submodel kwa georeferencing kuchukua nafasi. Ikiwa submodel ina unafuu "
+"kuliko GCP 3, muungano wa GCP zilobakia + EXIF data zitatumika badala yake "
+"(ambayo itakua na usahihi mdogo). Tunapendekeza kutumia ``image_groups.txt``"
+" faili kupelekea udhibiti sahihi wa mgawanyo wa submodel ukitumia GCP."
 
-#: ../../source/large.rst:197
+# 1597b856001e4334a4df3555c8416ee1
+#: ../../../large.rst:197
 msgid "Acknowledgments"
-msgstr ""
+msgstr "Tunakiri"
 
-#: ../../source/large.rst:198
+# ec973929d9d947be90f0859358cc398c
+#: ../../../large.rst:198
 msgid ""
-"Huge props to Pau and the folks at Mapillary for their amazing "
-"contributions to OpenDroneMap through their OpenSfM code, which is a key "
-"component of the split-merge pipeline. We look forward to further pushing"
-" the limits of OpenDroneMap and seeing how big a dataset we can process."
+"Huge props to Pau and the folks at Mapillary for their amazing contributions"
+" to OpenDroneMap through their OpenSfM code, which is a key component of the"
+" split-merge pipeline. We look forward to further pushing the limits of "
+"OpenDroneMap and seeing how big a dataset we can process."
 msgstr ""
+"Sifa kubwa kwa Pau na folks kwa Mapillary kushiriki kwema kwa OpenDroneMap "
+"kupitia OpenSfM code, ambacho ni kijenzi cha msingi kwa split-merge "
+"pipeline. Tunaangalia mbele kwa kusukuma zaidi upeo wa OpenDroneMap na "
+"kuangalia vipi dataset kubwa zinaweza kuchakatwa."
 
-#: ../../source/large.rst:200
+# 87ebd0f900e74e17b1cdb97ea39eafe1
+#: ../../../large.rst:200
 msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst>`_"
 msgstr ""
-
+"`kwa msaada kurekebisha kitabu! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst>`_"
