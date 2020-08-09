@@ -341,11 +341,6 @@ critical bits are the install folder (if you installed as above, it’s
    all of the images. If you set it up like this, the images don’t get
    re-copied because they’re already in the directory that ODM wants
    them in.
--  If you’ve got images with GPS info on them (as from an Ebee), use
-   exiftool to massage the GPS information
-   ``exiftool "-GPSDOP<GPSZAccuracy" .``.\ `3 <#footnote3>`__\  To do so
-   you’ll need to install exiftool. The command for that is probably
-   ``sudo apt install libimage-exiftool-perl``.
 -  Modify settings.yaml to specify the parent directory of the project
    folder (in this case the Volume we created, ``/mnt/odmdata/``). Make
    sure the images are in the correct spot,
