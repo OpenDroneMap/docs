@@ -127,6 +127,55 @@ Transifex has a getting [started guide for translators](https://docs.transifex.c
 
 The ODM documentation Transifex project can be found at: https://www.transifex.com/americanredcross/opendronemap_docs/
 
+The documentation uses a formatting known as [reStructuredTest (reST)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) to add links, formatting, and other styling. reST uses plain text to annotate the documentation and identify to the system how to process the different page items. Unfortunately, the translation management process doesn't hide the reST markup. It is important that you keep the reST markup when translating.
+
+### Italic
+
+```plain
+An `italic section of text` will have a single backtick on either side.
+```
+
+Italic text needs to have a space before, then a backtick or grave accent (\`) that touches the first character of the italic text, then the italic text, then a backtick or grave accent (\`)that touches the last character of the italic text, then a space.
+
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_italic_transifex.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_italic_en.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_italic_sw.png)
+
+
+### Bold
+
+```plain
+A **bold section of text** will have double asterisks on either side.
+```
+
+Bold text needs to have a space before, then a double asterisk (`**`) that touches the first character of the bold text, then the bold text, then a double asterisk (`**`) that touches the last character of the bold text, then a space.
+
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_bold_transifex.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_bold_en.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_bold_sw.png)
+
+### Link
+
+```plain
+Check out the `ODM documentation <https://docs.opendronemap.org/>`_!
+```
+Links need to have a space before, then a backtick or grave accent (\`), then the text that will become the link on the page (in the above example: "ODM documentation"), then a space, then a less than symbol (`<`), then the complete URL, then a greater than symbol and underscore (`>_`). 
+
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_link_transifex.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_link_en.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_link_sw.png)
+
+### Code
+
+Code snippets need to have a space before, then a double backtick or grave accent (\`\`) that touches the first character of the code text, then the code text, then a double backtick or grave accent (\`\`) that touches the last character of the code text, then a space. 
+
+**NOTE:** Code snippets may be referring to specific software commands and so often should NOT be translated.
+
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code_transifex.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code_en.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code_sw.png)
+
+
 ## Managing the translation process
 
 This project uses [Transifex](https://www.transifex.com/) and the [`transifex-client`](https://docs.transifex.com/client/introduction) tool to help people contribute translations. The `transifex-client` tool is included in the requirements.txt file and should be installed on your system during setup when you run `pip install -r requirements.txt`.
