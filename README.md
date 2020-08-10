@@ -135,7 +135,7 @@ The documentation uses a formatting known as [reStructuredTest (reST)](https://w
 An `italic section of text` will have a single backtick on either side.
 ```
 
-Italic text needs to have a space before, then a backtick or grave accent (\`) that touches the first character of the italic text, then the italic text, then a backtick or grave accent (\`)that touches the last character of the italic text, then a space.
+Italic text needs to have a space before, then a backtick or grave accent (\`) that touches the first character of the italic text, then the italic text, then a backtick or grave accent (\`) that touches the last character of the italic text, then a space.
 
 ![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_italic_transifex.png)
 ![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_italic_en.png)
