@@ -590,8 +590,8 @@ msgstr ""
 
 # 548dc42ce8ee453f9a7d4b501e7f3522
 #: ../../../tutorials.rst:237
-msgid "Should be an Ubuntu 16.04 instance to ensure dependency compatibility"
-msgstr "يجب أن يكون نسخة Ubuntu 16.04 لضمان توافق التبعية"
+msgid "Should be an Ubuntu 18.04 instance to ensure dependency compatibility"
+msgstr "يجب أن يكون نسخة Ubuntu 18.04 لضمان توافق التبعية"
 
 # 7f25f7675fe04c2d8a4e7f52011f99e1
 #: ../../../tutorials.rst:239
@@ -607,7 +607,7 @@ msgid ""
 "it will offer you the option to upgrade to Ubuntu 18.04, a more recent "
 "version. Don’t. ODM native install doesn’t work smoothly on 18.04. Go ahead "
 "and execute ``sudo apt update`` and ``sudo apt upgrade`` to ensure your "
-"server isn’t dangerously without updates, but stay with Ubuntu 16.04."
+"server isn’t dangerously without updates, but stay with Ubuntu 18.04."
 msgstr ""
 "قم بإنشاء مستخدم بامتيازات sudo. \"وثائق Digital Ocean الجيدة بجنون "
 "<https://www.digitalocean.com/community/tutorials/initial-server-setup-with-"
@@ -619,7 +619,7 @@ msgstr ""
 " المستند. -عند تسجيل الدخول إلى الخادم ، سيقدم لك خيار الترقية إلى Ubuntu "
 "18.04 ، وهو إصدار أحدث. لا تفعل. التثبيت الأصلي لـ ODM لا يعمل بسلاسة في "
 "18.04. انطلق وقم بتنفيذ `` تحديث sudo apt '' و `` sudo apt Upgrade '' للتأكد"
-" من أن خادمك ليس بدون تحديثات بشكل خطير ، ولكن ابق مع Ubuntu 16.04."
+" من أن خادمك ليس بدون تحديثات بشكل خطير ، ولكن ابق مع Ubuntu 18.04."
 
 # 8893bbe316534e44935a919da6029759
 #: ../../../tutorials.rst:254

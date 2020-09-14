@@ -600,8 +600,8 @@ msgstr ""
 
 # 548dc42ce8ee453f9a7d4b501e7f3522
 #: ../../../tutorials.rst:237
-msgid "Should be an Ubuntu 16.04 instance to ensure dependency compatibility"
-msgstr "Lazima Ubuntu 16.04 instance kuhakikisha uwiano"
+msgid "Should be an Ubuntu 18.04 instance to ensure dependency compatibility"
+msgstr "Lazima Ubuntu 18.04 instance kuhakikisha uwiano"
 
 # 7f25f7675fe04c2d8a4e7f52011f99e1
 #: ../../../tutorials.rst:239
@@ -617,7 +617,7 @@ msgid ""
 "it will offer you the option to upgrade to Ubuntu 18.04, a more recent "
 "version. Don’t. ODM native install doesn’t work smoothly on 18.04. Go ahead "
 "and execute ``sudo apt update`` and ``sudo apt upgrade`` to ensure your "
-"server isn’t dangerously without updates, but stay with Ubuntu 16.04."
+"server isn’t dangerously without updates, but stay with Ubuntu 18.04."
 msgstr ""
 "Tengeneza mtumiaji kwa sudo privileges\" `Digital Ocean’s insanely good "
 "documentation <https://www.digitalocean.com/community/tutorials/initial-"
@@ -628,7 +628,7 @@ msgstr ""
 "``odm``; kisha path yako itakuwa ``/home/odm/ODM/`` na itafanana na mifano "
 "yote katika kitabu hichi, ukiingia server itakupa njia ya kuapgarade Ubuntu "
 "18.04. Nenda kutumia ``sudo apt update`` na ``sudo apt upgrade`` kuhakikisha"
-" server sio hatari wila kuapdate, lakini endelea kutumia Ubuntu 16.04."
+" server sio hatari wila kuapdate, lakini endelea kutumia Ubuntu 18.04."
 
 # 8893bbe316534e44935a919da6029759
 #: ../../../tutorials.rst:254
