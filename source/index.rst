@@ -33,6 +33,8 @@ Welcome to OpenDroneMap's documentation
     arguments
     outputs
     gcp
+    geo
+    masks
     large
     resources
     flying

@@ -14,9 +14,9 @@ copyright = '2020, OpenDroneMap'
 author = 'OpenDroneMap'
 
 # The short X.Y version
-version = '0.9.10'
+version = '2.0.0'
 # The full version, including alpha/beta/rc tags
-release = '0.9.10'
+release = '2.0.0'
 
 
 # -- General configuration ---------------------------------------------------
