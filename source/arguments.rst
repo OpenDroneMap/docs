@@ -43,6 +43,11 @@ Arguments::
                         Minimum number of features to extract per image. More
                         features leads to better results but slower execution.
                         Default: 8000
+			
+  --feature-quality     Automatically adjusts the image sizes for feature extraction
+			based on predetermined ratios instead of relying on the user
+			input or making assumptions about the image size.
+			Default: False
 
   --matcher-neighbors <integer>
                         Number of nearest images to pre-match based on GPS
