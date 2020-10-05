@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 0.9.10\n"
+"Project-Id-Version: OpenDroneMap 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-21 17:01-0400\n"
+"POT-Creation-Date: 2020-10-05 12:56-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,7 +26,7 @@ msgstr ""
 msgid "Arguments::"
 msgstr ""
 
-#: ../../../arguments.rst:382
+#: ../../../arguments.rst:387
 # 3ce8631539bc46c5a0823cb6065ddf2d
 msgid "`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/using.rst>`_"
 msgstr ""
