@@ -237,7 +237,7 @@ Install
    -  Should be an Ubuntu 18.04 instance to ensure dependency
       compatibility
    -  Create a user with sudo privileges. `Digital Ocean’s insanely good
-      documentation <https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-16-04>`__
+      documentation <https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04>`__
       can help you figure this out. In our case we set up a user called
       ``odm``, so connecting to it is via the command
       ``ssh odm@xxx.xxx.xxx.xxx`` (where the x’s stand for the IPv4
