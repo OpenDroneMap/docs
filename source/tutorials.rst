@@ -244,11 +244,9 @@ Install
       address of your server). If you want to follow this example
       closely, *do* use the username ``odm``; then your install path
       will be ``/home/odm/ODM/`` and will match all of the examples in
-      this document. -When you log into the server, it will offer you
-      the option to upgrade to Ubuntu 18.04, a more recent version.
-      Don’t. ODM native install doesn’t work smoothly on 18.04. Go ahead
-      and execute ``sudo apt update`` and ``sudo apt upgrade`` to ensure
-      your server isn’t dangerously without updates, but stay with
+      this document. 
+   -  Go ahead and execute ``sudo apt update`` and ``sudo apt upgrade`` to ensure
+      your server isn’t dangerously without updates. Make sure to stay with
       Ubuntu 18.04.
 
 -  Download and install ODM on it from the `ODM
