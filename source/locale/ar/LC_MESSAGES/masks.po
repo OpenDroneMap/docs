@@ -1,0 +1,66 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-05 12:56-0400\n"
+"PO-Revision-Date: 2020-10-05 17:13+0000\n"
+"Language-Team: Arabic (https://www.transifex.com/americanredcross/teams/111882/ar/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: ar\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+
+# f802bfb33e1b4aec8deb372ffdf37110
+#: ../../../masks.rst:3
+msgid "Using Image Masks"
+msgstr ""
+
+# 93d8755b57534311b90754654f06f4b6
+#: ../../../masks.rst:5
+msgid ""
+"Starting from ODM ``2.0`` people can supply image masks to inform the "
+"software to skip reconstruction over certain areas. This is useful for cases"
+" where the sky was accidentally included in the input photos from oblique "
+"shots, or simply to limit the reconstruction of a single subject."
+msgstr ""
+
+# f663a782236e4e81aea72f6640221790
+#: ../../../masks.rst:7
+msgid ""
+"To add a mask, simply create a new black and white image of the same "
+"dimension as the target image you want to mask (you can use a program such "
+"as GIMP to do this). Color in black the areas to exclude from the "
+"reconstruction."
+msgstr ""
+
+# 918162f197fa4fd5b4e105857d83a3cd
+#: ../../../masks.rst:22
+msgid "Name your file:"
+msgstr ""
+
+# c0dc947ff69445d8bd6928ea447067d5
+#: ../../../masks.rst:24
+msgid "``<filename>_mask.JPG``"
+msgstr ""
+
+# 357e67312ee240f3ae641f57a7db793b
+#: ../../../masks.rst:26
+msgid ""
+"For example, ``DJI_0018.JPG`` can have a mask by creating a "
+"``DJI_0018_mask.JPG`` file and include that in the list of images. You can "
+"use ``.JPG``, ``.PNG``, ``.BMP`` and ``.TIF`` formats for image masks."
+msgstr ""
+
+# 2fccb71b93d546708d50657fd908fe12
+#: ../../../masks.rst:29
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_"
+msgstr ""

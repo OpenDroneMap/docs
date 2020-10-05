@@ -237,18 +237,16 @@ Install
    -  Should be an Ubuntu 18.04 instance to ensure dependency
       compatibility
    -  Create a user with sudo privileges. `Digital Ocean’s insanely good
-      documentation <https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-16-04>`__
+      documentation <https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04>`__
       can help you figure this out. In our case we set up a user called
       ``odm``, so connecting to it is via the command
       ``ssh odm@xxx.xxx.xxx.xxx`` (where the x’s stand for the IPv4
       address of your server). If you want to follow this example
       closely, *do* use the username ``odm``; then your install path
       will be ``/home/odm/ODM/`` and will match all of the examples in
-      this document. -When you log into the server, it will offer you
-      the option to upgrade to Ubuntu 18.04, a more recent version.
-      Don’t. ODM native install doesn’t work smoothly on 18.04. Go ahead
-      and execute ``sudo apt update`` and ``sudo apt upgrade`` to ensure
-      your server isn’t dangerously without updates, but stay with
+      this document. 
+   -  Go ahead and execute ``sudo apt update`` and ``sudo apt upgrade`` to ensure
+      your server isn’t dangerously without updates. Make sure to stay with
       Ubuntu 18.04.
 
 -  Download and install ODM on it from the `ODM
