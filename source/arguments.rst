@@ -16,7 +16,7 @@ Arguments::
   --resize-to <integer>
                         resizes images by the largest side for opensfm. Set to
                         -1 to disable.
-			Default: 2048
+                        Default: 2048
 
   --end-with <string>, -e <string>
                         Can be one of:dataset | split | merge | opensfm | mve
