@@ -33,7 +33,7 @@ Welcome to OpenDroneMap's documentation
     arguments
     outputs
     gcp
-    GCPaccuracy
+    map-accuracy
     geo
     masks
     large
