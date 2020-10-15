@@ -1,6 +1,12 @@
 [main]
 host = https://www.transifex.com
 
+[opendronemap_docs.map-accuracy]
+file_filter = source/locale/<lang>/LC_MESSAGES/map-accuracy.po
+source_file = source/locale/en/pot/map-accuracy.pot
+source_lang = en
+type = PO
+
 [opendronemap_docs.geo]
 file_filter = source/locale/<lang>/LC_MESSAGES/geo.po
 source_file = source/locale/en/pot/geo.pot
