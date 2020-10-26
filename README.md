@@ -215,13 +215,17 @@ To add a new language, do it through the Transifex interface and then add a new 
 
 Don't panic! Unfortunately, Transifex doesn't protect the reST notation that Sphinx uses for things like formatting and links. It's possible that during translation, some of the syntax was broken.
 
-Start up your Python virtual environment if it's not already with `source venv/bin/activate` and then try a build of the language that you're trying to update, for example:
+Start up your Python virtual environment if it's not already with `source venv/bin/activate` and then run `make allerr`. This does the same thing as `make deploy` but removes the nit-picky mode so that it logs all errors and doesn't stop the build after hitting the first one.
+
+You can also run the build for just one specific language, for example:
 
 ``` 
-sphinx-build -b html -D language='sw' source "_build/html/sw/" -nW
+sphinx-build -b html -D language='sw' source "_build/html/sw/"
 ```
 
-The `-nW` (nitpicky) flag is important. You should see an output in your console such as:
+![build errors logged to the terminal](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/sphinx-build_errors_in_terminal.png)
+
+You should see output in your console such as:
 
 ```
 Warning, treated as error:
@@ -234,7 +238,7 @@ Go to Transifex, go to the resource, and go to the string. The warning/error mes
 
 ![Transifex screen grab](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_err_transifex.png)
 
-Pull the language down (e.g. `tx pull -l sw`) and then try the build again. Unfortunately, if there is more than one error, you'll have to fix them one at a time.
+Pull the language down (for example, `tx pull -l sw`) and then try the build again.
 
 ### Questions?
 

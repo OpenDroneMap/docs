@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 12:56-0400\n"
+"POT-Creation-Date: 2020-10-26 14:39-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,47 +17,46 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../../flying.rst:2
-# 846d8a3f9d9646e5a43911942183b8c8
+#: 846d8a3f9d9646e5a43911942183b8c8
 msgid "Flying Tips"
 msgstr ""
 
 #: ../../../flying.rst:4
-# c96becee56f94efca8b3de336db9d844
+#: c96becee56f94efca8b3de336db9d844
 msgid "The `Humanitarian OpenStreetMap team <https://www.hotosm.org/>`_ has guidelines on `flying for UAV mapping <https://uav-guidelines.openaerialmap.org/>`_:"
 msgstr ""
 
 #: ../../../flying.rst:6
-# 4a6f4c2edee741ddac135447436976f7
+#: 4a6f4c2edee741ddac135447436976f7
 msgid "`Choosing the right UAV <https://uav-guidelines.openaerialmap.org/pages/05-choosing-the-right-uav/>`_"
 msgstr ""
 
 #: ../../../flying.rst:8
-# fe7f09d545684117aba61ff9860a51d2
+#: fe7f09d545684117aba61ff9860a51d2
 msgid "`Choosing the right sensor <https://uav-guidelines.openaerialmap.org/pages/06-choosing-the-sensor/>`_"
 msgstr ""
 
 #: ../../../flying.rst:10
-# 6c7947d1197147df9d63e165d11924cb
+#: 6c7947d1197147df9d63e165d11924cb
 msgid "`Mission preparation <https://uav-guidelines.openaerialmap.org/pages/07-preparing-for-the-uav-mission/>`_"
 msgstr ""
 
 #: ../../../flying.rst:12
-# 9b557a1da5cc46af807bcaaa6faee6dd
+#: 9b557a1da5cc46af807bcaaa6faee6dd
 msgid "The guidelines are intended for drone mapping projects on islands, but have general use for all drone mappers."
 msgstr ""
 
 #: ../../../flying.rst:14
-# 44b1eacc4ff2499a8a4e74651b9443e1
+#: 44b1eacc4ff2499a8a4e74651b9443e1
 msgid "See also DroneDeploy's guide on `Making Successful Maps <https://support.dronedeploy.com/docs/making-successful-maps>`_, which provides great tips on mission planning."
 msgstr ""
 
 #: ../../../flying.rst:16
-# 790dc47dea524f9589ab6de072d0febc
+#: 790dc47dea524f9589ab6de072d0febc
 msgid "Finally, lens distortion is a challenge in projects requiring accurate 3D data. See our section in these docs on `Camera Calibration <tutorials.html#calibrating-the-camera>`_."
 msgstr ""
 
 #: ../../../flying.rst:18
-# 96453509d0ed4fcf97681fe2c9bb7385
+#: 96453509d0ed4fcf97681fe2c9bb7385
 msgid "`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/flying.rst>`_"
 msgstr ""
-

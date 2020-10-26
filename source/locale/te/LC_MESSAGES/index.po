@@ -1,0 +1,63 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020\n"
+"Language-Team: Telugu (https://www.transifex.com/americanredcross/teams/111882/te/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: te\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../../index.rst:8 fa2f220d4f704404a75d0d9dd55f72b8
+msgid "Welcome to OpenDroneMap's documentation"
+msgstr "OpenDroneMap యొక్క డాక్యుమెంటేషన్‌కు స్వాగతం"
+
+#: ../../../index.rst:13 ff1b3e1fb8404f56878e737c1909cfcf
+msgid ""
+"The documentation is available in several languages. Some translations are "
+"incomplete and will still display in English. The below languages are at "
+"least 20 percent translated. You can help us translate those languages (and "
+"other languages!) via Transifex. There is a `getting started guide on GitHub"
+" <https://github.com/opendronemap/docs#translations>`_."
+msgstr ""
+
+#: ../../../index.rst:15 dd42376621d64b6d86648e1c87101e31
+msgid "`English <https://docs.opendronemap.org/>`_"
+msgstr ""
+
+#: ../../../index.rst:16 2ae77e832f9f40fdbb17f72d04369b04
+msgid "`French <https://docs.opendronemap.org/fr>`_"
+msgstr ""
+
+#: ../../../index.rst:17 2b86dd77c9ca4fdbb3e5c3a362287930
+msgid "`Spanish <https://docs.opendronemap.org/es>`_"
+msgstr ""
+
+#: ../../../index.rst:18 bdc10bb2b2904d7886f3128bf90cbf72
+msgid "`Swahili <https://docs.opendronemap.org/sw>`_"
+msgstr ""
+
+#: ../../../index.rst:19 41b56ac8133b4a35a02b95db07be553b
+msgid "`Telugu <https://docs.opendronemap.org/te>`_"
+msgstr ""
+
+#: ../../../index.rst:57 2b86dd77c9ca4fdbb3e5c3a362287930
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/index.rst>`_"
+msgstr ""
+"`ఈ పత్రాలను సవరించడానికి సహాయం చెయ్యండి! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/index.rst>`_"
