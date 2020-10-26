@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Bertrand RUKUNDO <rukundo_bertrand@yahoo.fr>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: Bertrand RUKUNDO <rukundo_bertrand@yahoo.fr>, 2020\n"
+"Language-Team: French (https://www.transifex.com/americanredcross/teams/111882/fr/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fr\n"
+"Plural-Forms: nplurals=2; plural=(n > 1);\n"
+
+#: ../../../arguments.rst:4 3c050a6e28a542979ddc0687deabc8e3
+msgid "Options and Flags"
+msgstr "Options et indicateurs"
+
+#: ../../../arguments.rst:6 22dcd4f93de143d4be348424b5141abe
+msgid "Arguments::"
+msgstr "Arguments : :"
+
+#: ../../../arguments.rst:387 3ce8631539bc46c5a0823cb6065ddf2d
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/using.rst>`_"
+msgstr ""
+"Aidez-nous à éditer ces documents ! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/using.rst>`_"

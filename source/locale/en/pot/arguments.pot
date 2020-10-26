@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 12:56-0400\n"
+"POT-Creation-Date: 2020-10-26 14:39-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -17,17 +17,16 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 
 #: ../../../arguments.rst:4
-# 3c050a6e28a542979ddc0687deabc8e3
+#: 3c050a6e28a542979ddc0687deabc8e3
 msgid "Options and Flags"
 msgstr ""
 
 #: ../../../arguments.rst:6
-# 22dcd4f93de143d4be348424b5141abe
+#: 22dcd4f93de143d4be348424b5141abe
 msgid "Arguments::"
 msgstr ""
 
 #: ../../../arguments.rst:387
-# 3ce8631539bc46c5a0823cb6065ddf2d
+#: 3ce8631539bc46c5a0823cb6065ddf2d
 msgid "`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/using.rst>`_"
 msgstr ""
-

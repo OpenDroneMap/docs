@@ -1,0 +1,113 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"PO-Revision-Date: 2020-10-05 17:13+0000\n"
+"Last-Translator: Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020\n"
+"Language-Team: Telugu (https://www.transifex.com/americanredcross/teams/111882/te/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: te\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../../geo.rst:3 0563bcbd52c748af8866a06b5b486c42
+msgid "Image Geolocation Files"
+msgstr "చిత్రం జియోలొకేషన్ ఫైల్స్"
+
+#: ../../../geo.rst:5 b3b1b7f636264519b0e60be8157352f4
+msgid ""
+"By default ODM will use the GPS information embedded in the images, if it is"
+" available. Sometimes images do not contain GPS information, or a user "
+"wishes to override the information with more accurate data (such as RTK)."
+msgstr ""
+"డిఫాల్ట్‌గా ODM అందుబాటులో ఉంటే చిత్రాలలో పొందుపరిచిన GPS సమాచారాన్ని "
+"ఉపయోగిస్తుంది. కొన్నిసార్లు చిత్రాలలో GPS సమాచారం ఉండదు, లేదా వినియోగదారు "
+"మరింత ఖచ్చితమైన డేటాతో (RTK వంటివి) సమాచారాన్ని ఓవర్‌రైడ్ చేయాలని "
+"కోరుకుంటారు."
+
+#: ../../../geo.rst:7 2201f022ed724677aa5b1b59badcaa05
+msgid ""
+"Starting from ODM ``2.0`` people can supply an image geolocation file (geo) "
+"for this purpose."
+msgstr ""
+"ODM `` 2.0`` నుండి ప్రారంభించి ప్రజలు ఈ ప్రయోజనం కోసం ఇమేజ్ జియోలొకేషన్ ఫైల్"
+" (జియో) ను సరఫరా చేయవచ్చు."
+
+#: ../../../geo.rst:9 3d2e14f3f5ae438e8014ae81aab317f8
+msgid "The format of the image geolocation file is simple."
+msgstr "ఇమేజ్ జియోలొకేషన్ ఫైల్ యొక్క ఫార్మాట్ సులభం."
+
+#: ../../../geo.rst:11 e3fc5f8924ca46dab7b2ee32c7f116fe
+msgid ""
+"The first line should contain the name of the projection used for the geo "
+"coordinates. This can be specified either as a PROJ string (e.g. ``+proj=utm"
+" +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), EPSG code (e.g. "
+"``EPSG:4326``) or as a ``WGS84 UTM <zone>[N|S]`` value (eg. ``WGS84 UTM "
+"16N``)"
+msgstr ""
+"మొదటి పంక్తిలో జియో కోఆర్డినేట్‌లకు ఉపయోగించే ప్రొజెక్షన్ పేరు ఉండాలి. "
+"దీనిని PROJ స్ట్రింగ్‌గా పేర్కొనవచ్చు (ఉదా. `` ప్రోజ్ = యుటిఎమ్ జోన్ = 10 "
+"ఎల్ప్స్ = డబ్ల్యుజిఎస్ 84 డాటమ్ = డబ్ల్యుజిఎస్ 84 యూనిట్లు = ఎమ్ "
+"నో_డెఫ్స్``), ఇపిఎస్‌జి కోడ్ (ఉదా. `PSEPSG: 4326``) లేదా` ` WGS84 UTM 1 [N |"
+" S] `` విలువ (ఉదా. `` WGS84 UTM 16N``)"
+
+#: ../../../geo.rst:12 05d202d1fc2440dcbdf68aebcd1ee590
+msgid ""
+"Subsequent lines are the image filename, X, Y & Z (optional) coordinates, "
+"the camera angles (optional, currently used only for radiometric "
+"calibration) and the horizontal/vertical accuracy (optional):"
+msgstr ""
+"తదుపరి పంక్తులు ఇమేజ్ ఫైల్ పేరు, X, Y, Z (ఐచ్ఛిక) అక్షాంశాలు, కెమెరా కోణాలు "
+"(ఐచ్ఛికం, ప్రస్తుతం రేడియోమెట్రిక్ క్రమాంకనం కోసం మాత్రమే ఉపయోగించబడతాయి) "
+"మరియు క్షితిజ సమాంతర / నిలువు ఖచ్చితత్వం (ఐచ్ఛికం):"
+
+#: ../../../geo.rst:13 1054fe81584c41d29f59ee2424a08568
+msgid "Camera angles can be set to ``0`` if they are not available."
+msgstr "కెమెరా కోణాలు అందుబాటులో లేకపోతే `` 0`` కు సెట్ చేయవచ్చు."
+
+#: ../../../geo.rst:14 61c28685a74f44acba7b3cbdc185dce7
+msgid "The 10th column (optional) can contain extra fields, such as a label."
+msgstr "10 వ కాలమ్ (ఐచ్ఛికం) లేబుల్ వంటి అదనపు ఫీల్డ్‌లను కలిగి ఉంటుంది."
+
+#: ../../../geo.rst:16 219799d71e254ead88ccc11b023e735b
+msgid "File format::"
+msgstr "ఫైల్ ఫార్మాట్::"
+
+#: ../../../geo.rst:22 9117cc8740914dbb96a4d525c7502d7b
+msgid "Example::"
+msgstr "ఉదాహరణ::"
+
+#: ../../../geo.rst:30 479ec91cff6740768ef2d2a553f9d3e6
+msgid ""
+"If you supply a file called ``geo.txt`` then ODM will automatically detect "
+"it. If it has another name you can specify using ``--geo <path>``."
+msgstr ""
+"మీరు `` ge.txt`` అనే ఫైల్‌ను సరఫరా చేస్తే, ODM స్వయంచాలకంగా దాన్ని "
+"కనుగొంటుంది. దీనికి మరొక పేరు ఉంటే మీరు `` --geo 1`` ని ఉపయోగించి "
+"పేర్కొనవచ్చు."
+
+#: ../../../geo.rst:32 48a7ceb6fb384dffa5fd80d13285da60
+msgid ""
+"The ``geo.txt`` file must be created in the base of your project folder."
+msgstr ""
+"`` జియో.టెక్స్ట్`` ఫైల్ మీ ప్రాజెక్ట్ ఫోల్డర్ యొక్క బేస్ లో తప్పక "
+"సృష్టించబడాలి."
+
+#: ../../../geo.rst:34 2e39d38eeba345119513e1f36974c888
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_"
+msgstr ""
+"`ఈ పత్రాలను సవరించడానికి సహాయం చెయ్యండి! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_"

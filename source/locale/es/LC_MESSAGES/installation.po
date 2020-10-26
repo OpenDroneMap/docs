@@ -1,0 +1,993 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Mauricio Quitigüiña <mauroql.ec@gmail.com>, 2020
+# ypyelab <yepayebe@hotmail.com>, 2020
+# Israel Barragán <israelbar@gmail.com>, 2020
+# danbjoseph <danbjoseph@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
+"Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../../installation.rst:4 ca7f5bc2eabd49cc96009728062ea54d
+msgid "Installation and Getting Started"
+msgstr "Instalación y Guía de Introducción"
+
+#: ../../../installation.rst:6 1ed7d87f513c4ec5b9a5279266a45b6d
+msgid ""
+"This section is excerpted and modified with permission from `OpenDroneMap: "
+"The Missing Guide <https://odmbook.com>`_, by Piero Toffanin."
+msgstr ""
+"Esta sección es extraída y modificada con el permiso de `OpenDroneMap: The "
+"Missing Guide <https://odmbook.com>`_, realizada por Piero Toffanin."
+
+#: ../../../installation.rst:8 e31183e0021840e8af87079d21401d5a
+msgid ""
+"Until recently OpenDroneMap was the term used to refer to a single command "
+"line application (what is now known as the ODM project).  With the recent "
+"development of a web interface, an API and other tools, OpenDroneMap has "
+"become an ecosystem of various applications to process, analyze and display "
+"aerial data. This ecosystem is made of several components:"
+msgstr ""
+"Hasta hace poco OpenDroneMap era el término usado para referirse a una "
+"aplicación de comando único (que ahora es conocido como el proyecto ODM). "
+"Con el reciente desarrollo de una interfaz web, una API y otras "
+"herramientas, OpenDroneMap se ha convertido en un ecosistema de varias "
+"aplicaciones para procesar, analizar y mostrar datos aéreos. Este ecosistema"
+" es hecho de varios componentes:"
+
+#: ../../../installation.rst:14 3c4147a6684940ad928eed8ab8fb8e33
+msgid ""
+"**ODM** is the processing engine, which can be used from the command line. "
+"It takes images as input and produces a variety of outputs, including point "
+"clouds, 3D models and orthophotos"
+msgstr ""
+"**ODM** es un motor de procesamiento, que puede ser usado desde la línea de "
+"comando. Este toma imágenes como datos de entrada y produce una variedad de "
+"datos de salida, incluyendo nubes de puntos, modelos 3D y ortofotografías"
+
+#: ../../../installation.rst:20 2905a2f97f9b41d496b9f5715a0c7a5f
+msgid ""
+"**NodeODM** is a light-weight API built on top of ODM. It allows users and "
+"applications to access the functions of ODM over a computer network"
+msgstr ""
+"**NodeODM** es una aplicación ligera construida sobre ODM. Esta permite a "
+"usuarios y aplicaciones tener acceso a las funciones de ODM en una red de "
+"computadores"
+
+#: ../../../installation.rst:26 eedbd7ab806e4960bd0bbbefea18ece3
+msgid ""
+"**WebODM** is a friendly user interface that includes a map viewer, a 3D "
+"viewer, user logins, a plugin system and many other features that are "
+"expected of modern drone mapping platforms"
+msgstr ""
+"**WebODM** es una interfaz fácil de usar que incluye un visualizador de "
+"mapas, un visualizador 3D, registros de los usuarios, un sistema de "
+"complementos y muchos más elementos que son esperados de las plataformas de "
+"cartografía con dron modernas"
+
+#: ../../../installation.rst:32 0037799dfae54302a1ee5dcf53fb8717
+msgid ""
+"**CloudODM** is a small command line client to communicate with ODM via the "
+"NodeODM API"
+msgstr ""
+"**CloudODM** es un pequeño cliente de la línea de comandos para comunicarse "
+"con ODM vía la API NodeODM"
+
+#: ../../../installation.rst:38 5f7f36d13cbc4bab82813568eb13063c
+msgid ""
+"**PyODM** is a Python SDK for creating tasks via the NodeODM API. We cover "
+"it in more detail in the “Automated Processing With Python” chapter"
+msgstr ""
+"**PyODM** es un Python SDK para crear tareas vía la API NodeODM. Cubrimos "
+"este aspecto en mayor detalle en el capítulo  “Procesamiento Automático con "
+"Python”"
+
+#: ../../../installation.rst:44 79fe7f6a04b244158a344f2ec45a80ad
+msgid ""
+"**ClusterODM** is a load balancer for connecting together multiple NodeODM "
+"instances"
+msgstr ""
+"**ClusterODM** es un equilibrador de carga para conectar varias instancias "
+"de NodeODM"
+
+#: ../../../installation.rst:46 3d4380c923f24a6c8c47776462ef6b43
+msgid ""
+"ODM, NodeODM and WebODM are available on all major platforms (Windows, macOS"
+" and Linux) via a program called docker, which is required to run the "
+"software. Docker offers a way to run “containers”. Containers are packaged "
+"copies of an entire system, its software and its dependencies. These "
+"containers run within a virtual environment. On Linux this virtual "
+"environment is available from the operating system and is very efficient. On"
+" macOS and Windows the containers run within a VM, so there’s a bit of a "
+"overhead. but it’s still very suitable for running the software. Once "
+"installed users do not have to worry much about docker, as it operates "
+"(almost) transparently."
+msgstr ""
+"ODM, NodeODM y WebODM están disponibles en todas las plataformas más "
+"importantes (Windows, macOS y Linux) vía un programa llamado docker, el cuál"
+" es requerido para hacer funcionar el software. Docker ofrece una manera de "
+"correr \"contenedores\". Los contenedores son copias empaquetadas de un "
+"sistema completo, su software y sus dependencias. Estos contenedores "
+"funcionan dentro de un ambiente virtual. En Linux este ambiente virtual está"
+" disponible desde el sistema operativo y es muy eficiente. En macOS y "
+"Windows, estos contenedores funcionan dentro de una máquina virtual, así que"
+" hay un poco de sobrecarga, sin embargo, es todavía muy adecuado para "
+"ejecutar el software. Una vez instalado los usuarios no deben preocuparse "
+"mucho acerca del docker, ya que este opera (casi) transparentemente."
+
+#: ../../../installation.rst:48 159054486d614cbdbcf568d61e39da15
+msgid ""
+"Without docker it would not be possible to run ODM on Windows or macOS. On "
+"these platforms ODM cannot run natively. Future development efforts are "
+"being focused on leveraging the new Windows Subsystem for Linux (WSL) and "
+"the possibility to make a native port of all dependencies to macOS, which is"
+" going to make the installation much easier."
+msgstr ""
+"Sin Docker, no sería posible ejecutar ODM en Windows o macOS. En estas "
+"plataformas, ODM no se puede ejecutar de forma nativa. Los esfuerzos de "
+"desarrollo futuros se están centrando en aprovechar el nuevo Sub sistema de "
+"Windows para Linux (WSL) y la posibilidad de hacer un puerto nativo de todas"
+" las dependencias para macOS, lo que facilitará mucho la instalación."
+
+#: ../../../installation.rst:50 73af16f53c6b4b658517706a33eabf7f
+msgid ""
+"On Ubuntu Linux 18.04 it’s feasible to run all OpenDroneMap software "
+"natively. However, because there’s very little performance penalty for "
+"running docker on Linux and docker is straightforward to setup on this "
+"platform, we don’t recommend it. On Linux the advantages of containerization"
+" far outweigh a tiny performance penalty. With docker users also get easy "
+"one-step updates of the software, so that’s nice."
+msgstr ""
+"En Ubuntu Linux 18.04 es posible ejecutar todo el software OpenDroneMap de "
+"forma nativa. Sin embargo, como hay muy poca penalización de rendimiento por"
+" ejecutar Docker en Linux y Docker es fácil de configurar en esta "
+"plataforma, no lo recomendamos. En Linux, las ventajas de usar contenedores "
+"superan con creces la pequeña penalización de rendimiento. Con Docker los "
+"usuarios también obtienen fáciles actualizaciones del software, lo que está "
+"muy bien."
+
+#: ../../../installation.rst:54 359d8630ea1647e097be5d4b34eb3ce4
+msgid "Hardware Recommendations"
+msgstr "Recomendaciones de Hardware"
+
+#: ../../../installation.rst:56 18823c774c5e485591613ede3537aa91
+msgid "The bare minimum requirements for running the software are:"
+msgstr "Los requisitos mínimos para ejecutar el software son:"
+
+#: ../../../installation.rst:59 b9269e30b47548fb80ef20abc05b37a9
+msgid "64bit CPU manufactured on or after 2010"
+msgstr "CPU de 64bit manufacturada durante o después del 2010"
+
+#: ../../../installation.rst:60 99dfccc50a45405a87d7c7f3b0fcc36f
+msgid "20 GB of disk space"
+msgstr "20GB de espacio en el disco"
+
+#: ../../../installation.rst:61 bb85e75db8de49cea35978868ce535f0
+msgid "4 GB RAM"
+msgstr "4GB de RAM"
+
+#: ../../../installation.rst:63 0ee5785cbbce46659999f9e1123c6632
+msgid ""
+"No more than 100-200 images can be processed with the above specifications "
+"(the software will run out of memory). Recommended requirements are:"
+msgstr ""
+"No más de 100-200 imágenes pueden ser procesadas con las especificaciones "
+"descritas arribas (el software se quedaría sin memoria). Los requisitos "
+"recomendados son:"
+
+#: ../../../installation.rst:65 42e9b361c9f94967851b2af0e477ca87
+msgid "Latest Generation CPU"
+msgstr "CPU de última generación"
+
+#: ../../../installation.rst:66 0ed901a7dc214066a572808e38fca5c1
+msgid "100 GB of disk space"
+msgstr "100GB de espacio en disco"
+
+#: ../../../installation.rst:67 2fb4ca503be345c9aec64d6043e56e56
+msgid "16 GB RAM"
+msgstr "16GB de RAM"
+
+#: ../../../installation.rst:69 60dc5f9c09c94797a3796e6d6ab429ea
+msgid ""
+"The above will allow for a few hundred images to be processed without too "
+"many issues. A CPU with more cores will allow for faster processing, while a"
+" graphics card (GPU) currently has no impact on performance. For processing "
+"more images, add more disk space and RAM linearly to the number of images "
+"you need to process."
+msgstr ""
+"Las especificaciones de arriba permitirán que unos cuantos cientos de "
+"imágenes sean procesados sin muchos problemas. Una CPU con más cores "
+"permitirán un procesamiento más rápido, mientras que una tarjeta gráfica "
+"(GPU) en el momento no tiene impacto alguno en el desempeño. Para procesar "
+"más imágenes, agregue más espacio en el disco y agregue más RAM de manera "
+"lineal con respecto al número de imágenes que necesita procesar"
+
+#: ../../../installation.rst:75 0499c473d45e4600b8b286d034152a1e
+msgid "Installation"
+msgstr "Instalación"
+
+#: ../../../installation.rst:77 6c957eef0a0947d9af44c5fdaae64eee
+msgid ""
+"We recommend people use `docker <https://www.docker.com>`_ for running ODM, "
+"whether you are on Windows, macOS or Linux."
+msgstr ""
+"Recomendamos utilizar `docker <https://www.docker.com>`_ para ejecutar ODM, "
+"ya sea si está utilizando Windows, macOS o Linux."
+
+#: ../../../installation.rst:80 a221646a87e54ffca00f4faa9d484d8c
+msgid "Windows"
+msgstr "Windows"
+
+#: ../../../installation.rst:82 58413e3cb9ee4fa98e8a905682b84cd6
+msgid ""
+"To run OpenDroneMap you need at least Windows 7. Previous versions of "
+"Windows are not supported."
+msgstr ""
+"Para ejecutar OpenDroneMap necesita al menos Windows 7. Versiones anteriores"
+" de Windows no están soportadas."
+
+#: ../../../installation.rst:86 ../../../installation.rst:238
+#: 6e0d75c55ec64542aad5f8a07448f58a e6caef46a77342c0bea685754f2e26ea
+msgid "Step 1. Check Virtualization Support"
+msgstr "Paso 1. Verificar el Soporte de Virtualización"
+
+#: ../../../installation.rst:88 ee636e01fd9c4b95a10d784713c4df08
+msgid ""
+"Docker requires a feature from your CPU called virtualization, which allows "
+"it to run virtual machines (VMs). Make sure you have it enabled! Sometimes "
+"this is disabled. To check, on Windows 8 or higher you can open the **Task "
+"Manager** (press CTRL+SHIFT+ESC) and switch to the **Performance** tab."
+msgstr ""
+"Docker requiere una función de la CPU llamada virtualización, la que permite"
+" ejecutar máquinas virtuales (VMs). Asegúrese de que la tiene activada! Ya "
+"que algunas veces está desactivada. En Windows 8 o versiones más actuales, "
+"esto se puede verificar abriendo el  **Administrador de Tareas** (presionar "
+"CTRL+SHIFT+ESC) y cambiando a la ventana de **Rendimiento**."
+
+#: ../../../installation.rst:94 54bfe40fdc294fe9b4ed0e950ea72b13
+msgid "*Virtualization should be enabled*"
+msgstr "*Virtualización debería estar activada*"
+
+#: ../../../installation.rst:96 c3d505056c244fc498d98f269adcc407
+msgid ""
+"On Windows 7 to see if you have virtualization enabled you can use the "
+"`Microsoft® Hardware-Assisted Virtualization Detection Tool <http:// "
+"www.microsoft.com/en-us/download/details.aspx?id=592>`_ instead."
+msgstr ""
+"En Windows 7 para ver si la opción de virtualización está activada, se puede"
+" usar la herramienta `Microsoft® Hardware-Assisted Virtualization Detection "
+"Tool <http:// www.microsoft.com/en-us/download/details.aspx?id=592>`."
+
+#: ../../../installation.rst:99 1798b11c83d84130a9f81911fb0b1117
+msgid ""
+"If virtualization is disabled, you’ll need to enable it. The procedure "
+"unfortunately is a bit different for each computer model, so the best way to"
+" do this is to look up on a search engine “how to enable vtx for <type your "
+"computer model here>”. Often times it’s a matter of restarting the computer,"
+" immediately pressing F2 or F12 during startup, navigating the boot menu and"
+" changing the settings to enable virtualization (often called “VT-X”)."
+msgstr ""
+"Si Ia opción de virtualización está desactivada, necesitará activarla. El "
+"procedimiento desafortunamente es un poco diferente para cada modelo de "
+"computador, así que la mejor manera de hacerlo es  averiguando en un motor "
+"de búsqueda “cómo activar vtx para <type your computer model here>\". Muchas"
+" veces es una cuestión de reiniciar el computador, inmediatamente "
+"presionando F2 o F12 durante el arranque, navegando por el menú de arranque "
+"y cambiando las configuraciones para activar la opción de virtualización "
+"(frecuentemente llamada “VT-X”)."
+
+#: ../../../installation.rst:105 d5409249d7cb4371aa9eb0e5bb869b8d
+msgid ""
+"*Common keys to press at computer startup to access the boot menu for "
+"various PC vendors*"
+msgstr ""
+"*Teclas comunes para presionar en el momento de arranque del computador, "
+"para acceder al menú de arranque para varios vendedores de PCs*"
+
+#: ../../../installation.rst:108 ../../../installation.rst:257
+#: a501c1bab3bf45e48bae750c27e1dd4d b8293121ff6e49cd9863ec30d5fd14f4
+msgid "Step 2. Install Requirements"
+msgstr "Paso 2. Requisitos de instalación"
+
+#: ../../../installation.rst:110 c982360ef2dd44fca54712ecadcbb06d
+msgid "First, you’ll need to install:"
+msgstr "Primero, deberá instalar:"
+
+#: ../../../installation.rst:112 fdb9892340e64cb1b9c159e559288230
+msgid "Git: https://git-scm.com/downloads"
+msgstr "Git: https://git-scm.com/downloads"
+
+#: ../../../installation.rst:113 b5affd70afdb494285672c4e9e5aed9e
+msgid "Python (latest version 3): https://www.python.org/downloads/windows/"
+msgstr ""
+"Python (la última versión 3): https://www.python.org/downloads/windows/"
+
+#: ../../../installation.rst:115 6a02317e616249b7b479fd89d0305d6b
+msgid ""
+"For Python 3, make sure you check **Add Python 3.x to PATH** during the "
+"installation."
+msgstr ""
+"Para Phyton 3, asegurese de marcar **Agregar Phyton 3 a la ruta** durante la"
+" instalación."
+
+#: ../../../installation.rst:121 62bb7db9c48c4a8ca31df2aeee1b64e9
+msgid ""
+"*Don’t forget to add the Python executable to your PATH (so that you can run"
+" commands with it)*"
+msgstr ""
+"*No olvides agregar el ejecutable de Phyton 3 a la ruta (para que puedas "
+"correr los comandos  con el)*"
+
+#: ../../../installation.rst:123 4c2ae6a3e7c647308a1260de04df5d6a
+msgid ""
+"Then, only if you are on Windows 10 Home, Windows 8 (any version) or Windows"
+" 7 (any version), install:"
+msgstr ""
+"Luego, solo si estas en Windows 10 Home, Windows 8 (cualquier versión) o "
+"Windows 7 (cualquier versión), instalar:"
+
+#: ../../../installation.rst:125 1ba2e1a8b1934fc8876c0fe60068fb0a
+msgid ""
+"Docker Toolbox: "
+"https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe"
+msgstr ""
+"Caja de Herramientas Docker: "
+"https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe"
+
+#: ../../../installation.rst:127 8e2a6d327e614a99ad17905807f1963b
+msgid ""
+"If you are on Windows 10 Professional or a newer version, you should install"
+" instead:"
+msgstr ""
+"Si estas en Windows 10 Professional o una versión más reciente, deberias "
+"instalar en su lugar:"
+
+#: ../../../installation.rst:129 45cba2a6ac5140e19d78bb8ab794eafc
+msgid ""
+"Docker for Windows: "
+"https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe"
+msgstr ""
+"Docker para Windows: "
+"https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe"
+
+#: ../../../installation.rst:131 3ff00b319b51474fb26ab6cf937bcfe1
+msgid ""
+"Please do **NOT** install both docker programs. They are different and will "
+"create a mess if they are both installed."
+msgstr ""
+"Por favor **NO** instalar ambos programas de Docker. Ellos son diferentes y "
+"crearán conflictos si están ambos instalados. "
+
+#: ../../../installation.rst:133 3ae6dab12627446c96bac3dcf45fd4bc
+msgid ""
+"After installing docker, launch it from the Desktop icon that is created "
+"from the installation (**Docker Quickstart** in the case of Docker Toolbox, "
+"**Docker for Windows** for Docker for Windows). This is important, do not "
+"skip this step. If there are errors, follow the prompts on screen to fix "
+"them."
+msgstr ""
+"Después de instalar Docker, ábrelo desde el ícono en el Escritorio que es "
+"creado desde la instalación (**Inicio Rápido de Docker** en el caso de la "
+"caja de herramientas Docker, **Docker para Windows** en el caso de Docker "
+"para Windows)."
+
+#: ../../../installation.rst:136 ../../../installation.rst:299
+#: e899fe5d4e634b3babcac69c7d85307f 01b0ef2d25174ffba76ece0ea41b0473
+msgid "Step 3. Check Memory and CPU Allocation"
+msgstr "Paso 3. Revisa la memoria y la asignación del procesador"
+
+#: ../../../installation.rst:138 8c9d7577ecb14b98a69ba480b20356e3
+msgid ""
+"Docker on Windows works by running a VM in the background (think of a VM as "
+"a “computer emulator”). This VM has a certain amount of memory allocated and"
+" WebODM can only use as much memory as it’s allocated."
+msgstr ""
+"Docker en Windows funciona ejecutando una VM en segundo plano (piensa en una"
+" VM como un \"emulador de computador\"). Esta VM tiene una cierta cantidad "
+"de memoria asignada y WebODM sólo puede usar tanta memoria como esté "
+"asignada."
+
+#: ../../../installation.rst:140 a8030e1a9fd44ef6a87dc80a907dd405
+msgid ""
+"If you installed Docker Toolbox (see below if you installed Docker for "
+"Windows instead):"
+msgstr ""
+"Si instalaste la Caja de Herramientas Docker (observa abajo si instalaste "
+"Docker para Windows):"
+
+#: ../../../installation.rst:142 9811cefad7c349479cf16dbd9172d2f0
+msgid "Open the **VirtualBox Manager** application"
+msgstr "Abra la aplicación **Administrador de VirtualBox**"
+
+#: ../../../installation.rst:143 0ac38ae9bc6c4815989efc5fefe16dc9
+msgid ""
+"Right click the **default** VM and press **Close (ACPI Shutdown)** to stop "
+"the machine"
+msgstr ""
+"Haga clic con el botón derecho en la **VM predeterminada** y presione "
+"**Cerrar (Apagar ACPI)** para deterner la máquina."
+
+#: ../../../installation.rst:144 8aa1268debcd489daffdc3abbf805df9
+msgid "Right click the **default** VM and press **Settings...**"
+msgstr ""
+"Haga clic con el botón derecho en la ** VM predeterminada ** y presione ** "
+"Configuración...**"
+
+#: ../../../installation.rst:145 5923a15e0b664b6fa2577388188691c3
+msgid ""
+"Move the **Base Memory** slider from the **System** paneland allocate 60-70%"
+" of all available memory, optionally adding 50% of the available processors "
+"from the **Processor** tab also"
+msgstr ""
+"Mueva el control deslizante ** Memoria base ** del panel ** Sistema ** y "
+"asigne el 60-70% de toda la memoria disponible, agregando opcionalmente el "
+"50% de los procesadores disponibles desde la pestaña ** Procesador **"
+
+#: ../../../installation.rst:151 4f60c64419f8484da38deacc6254255b
+msgid "*VirtualBox default VM settings*"
+msgstr "*Configuración predeterminada de la VM de VirtualBox*"
+
+#: ../../../installation.rst:153 ac4a561c3245431a9e80eb44751786d0
+msgid "Then press **OK**, right click the **default** VM and press **Start**."
+msgstr ""
+"Luego presione **OK**, haga clic derecho en la VM **predeterminada** y "
+"presione **Iniciar**."
+
+#: ../../../installation.rst:155 3d9f78a7a16145c99ec002738c1a5bdc
+msgid "If you installed Docker for Windows instead:"
+msgstr "Si instalaste Docker para Windows en su lugar:"
+
+#: ../../../installation.rst:157 40585ef1df7344fa8c4888a2e425a581
+msgid "Look in the system tray and right click the “white whale” icon."
+msgstr "Busca el ícono de la \"ballena blanca\" en la bandeja del sistema."
+
+#: ../../../installation.rst:158 42f607a04c8e41bc996c62680d11f4fc
+msgid "From the menu, press **Settings...**"
+msgstr "Desde el menú, presione **Configuraciones...**"
+
+#: ../../../installation.rst:159 6f2f4e6960b74493aecfeaad483bf58a
+msgid ""
+"From the panel, click **Advanced** and use the sliders to allocate 60-70% of"
+" available memory and use half of all available CPUs."
+msgstr ""
+"Desde el panel, haga clic en **Avanzado** y use los controles deslizantes "
+"para asignar el 60-70% de la memoria disponible y utilice la mitad de los "
+"CPUs disponibles."
+
+#: ../../../installation.rst:160 b513fa1aee18473d889250226efd6dd4
+msgid "Press **Apply**."
+msgstr "Clic en **Aplicar**"
+
+#: ../../../installation.rst:166 2c48a0140d4c4953862e354aea188136
+msgid "*Step 1 Docker icon*"
+msgstr "*Paso 1 Ícono de Docker*"
+
+#: ../../../installation.rst:172 c993ad5adff34fedb4f46e33ccfb649f
+msgid "*Step 3 & 4 Docker settings*"
+msgstr "*Paso 3 y 4 Configuración de Docker*"
+
+#: ../../../installation.rst:175 3a089a31f50e421f82466a065623350e
+msgid "Step 4. Download WebODM"
+msgstr "Paso 4. Descarga WebODM"
+
+#: ../../../installation.rst:177 2a32abb9131448199cf601d091dd07e2
+msgid ""
+"Open the **Git Gui** program that comes installed with Git. From there:"
+msgstr "Abra el programa **Git GUI** que viene instalado con Git. Desde ahí:"
+
+#: ../../../installation.rst:179 375c2c96f1034b36b780d6e6c043ab6d
+msgid "When Git Gui opens, click 'Clone Existing Repository' option"
+msgstr ""
+"Cuando Git Gui se abra, haga clic en la opción 'Clone Existing Repository'"
+
+#: ../../../installation.rst:180 0b2e3b5a546c45c3a5d5a48dd4a1ac1e
+msgid "In **Source Location** type: https://github.com/OpenDroneMap/WebODM"
+msgstr "En **Source Location** teclee: https://github.com/OpenDroneMap/WebODM"
+
+#: ../../../installation.rst:181 fc8376d885d34eef9da5c7a852c3e921
+msgid ""
+"In **Target Directory** click browse and navigate to a folder of your "
+"choosing (create one if necessary)"
+msgstr ""
+"En **Target Directory** haga clic en Browse y navegue a la carpeta que elija"
+" (cree una si es necesario)"
+
+#: ../../../installation.rst:182 c6cb98301024474ea30cea6f73aa684d
+msgid "Press **Clone**"
+msgstr "Presione **Clone**"
+
+#: ../../../installation.rst:188 02e80960b8a7401985359b37d2fbab80
+msgid "*Git Gui*"
+msgstr "*Git Gui*"
+
+#: ../../../installation.rst:190 f3c4770173dd40aa89181dc24544dedf
+msgid "If the download succeeded, you should now see this window:"
+msgstr ""
+"Si la descarga se realizó correctamente, ahora debería ver esta ventana:"
+
+#: ../../../installation.rst:196 88351c8606484da9b20a8548138209e1
+msgid "*Git Gui after successful download (clone)*"
+msgstr "*Git Gui después de una descarga exitosa (clone)*"
+
+#: ../../../installation.rst:198 227a6f8c77a54c07b227c951f6dcfecb
+msgid ""
+"Go to the **Repository** menu, then click **Create Desktop Icon**. This will"
+" allow you to come back to this application easily in the future."
+msgstr ""
+"Vaya al menú **Repository**, luego haga clic en **Create Desktop Icon**. "
+"Esto le permitirá volver fácilmente a esta aplicación en el futuro."
+
+#: ../../../installation.rst:201 e658938ab82c4d41a016add0e3d602e9
+msgid "Step 4. Launch WebODM"
+msgstr "Paso 4. Inicie WebODM"
+
+#: ../../../installation.rst:203 b6356f518c1546e0a1594d9b3fe504f9
+msgid ""
+"From Git Gui, go to the **Repository** menu, then click **Git Bash**. From "
+"the command line terminal type:"
+msgstr ""
+"Desde Git Gui, vaya al menú **Repository**, luego haga clic en **Git Bash**."
+" Desde la terminal de línea de comando teclee:"
+
+#: ../../../installation.rst:209 b767c438fd79457e9d994062bbe1f62b
+msgid ""
+"Several components will download to your machine at this point, including "
+"WebODM, NodeODM and ODM. After the download you should be greeted by the "
+"following screen:"
+msgstr ""
+"En este punto, se descargarán varios componentes en su máquina, incluidos "
+"WebODM, NodeODM y ODM. Después de la descarga, debería aparecer la siguiente"
+" pantalla:"
+
+#: ../../../installation.rst:215 6a3a170a88af4dc9a7cac3fc4558fb68
+msgid "*Console output after starting WebODM for the first time*"
+msgstr "*Salida de consola después de iniciar WebODM por primera vez*"
+
+#: ../../../installation.rst:217 4cfaceb9d320457ca7f89347856e3c2b
+msgid ""
+"If you are using Docker for Windows, open a web browser to "
+"http://localhost:8000"
+msgstr ""
+"Si está utilizando Docker para Windows, abra un navegador web en "
+"http://localhost:8000"
+
+#: ../../../installation.rst:218 d0358e745d3846d09636284486fe26b2
+msgid ""
+"If you are using Docker Toolbox, find the IP address to connect to by "
+"typing:"
+msgstr ""
+"Si está utilizando Docker Toolbox, busque la dirección IP a la que "
+"conectarse escribiendo:"
+
+#: ../../../installation.rst:224 8b51e7ea4f3e48d19584552449c5fdf0
+msgid "You should get a result like the following:"
+msgstr "Debería obtener un resultado como el siguiente:"
+
+#: ../../../installation.rst:230 60b2163a2ca944d5b561bf41f24f11fa
+msgid ""
+"Then connect to http://192.168.1.100:8000 (replacing the IP address with the"
+" proper one)."
+msgstr ""
+"Luego conéctese a http://192.168.1.100:8000 (reemplazando la dirección IP "
+"por la correcta)."
+
+#: ../../../installation.rst:233 442b43b52a3b454fbefb7e9437c9fb9a
+msgid "macOS"
+msgstr "macOS"
+
+#: ../../../installation.rst:235 97b76743b16e4d02a8d4a35a448cf42d
+msgid ""
+"Most modern (post 2010) Mac computers running macOS Sierra 10.12 or higher "
+"can run OpenDroneMap using docker, as long as hardware virtualization is "
+"supported (see below)."
+msgstr ""
+"La mayoría de las computadoras Mac modernas (posteriores a 2010) que "
+"ejecutan macOS Sierra 10.12 o superior pueden ejecutar OpenDroneMap mediante"
+" la ventana acoplable, siempre que se admita la virtualización de hardware "
+"(ver más abajo)."
+
+#: ../../../installation.rst:240 b8cfb91406bd47d79f56768fc001e166
+msgid "Open a Terminal window and type:"
+msgstr "Abre una ventana de Terminal y teclea:"
+
+#: ../../../installation.rst:246 b88a2d67ee834aa9baeb0655aa62a8df
+msgid "You will get a response similar to the following:"
+msgstr "Obtendrás una respuesta similar a la siguiente:"
+
+#: ../../../installation.rst:252 628d4c3aa2e44036b0deb1876d86b3f1
+msgid ""
+"If the result is *kern.hv_support: 1*, then your Mac is supported! Continue "
+"with Step 2."
+msgstr ""
+"Si el resultado es *kern.hv_support: 1*, ¡tu Mac es compatible! Continúa con"
+" el paso 2."
+
+#: ../../../installation.rst:254 2aa61f249135450e939d8080508e5746
+msgid ""
+"If the result is *kern.hv_support: 0*, unfortunately it means your Mac is "
+"too old to run OpenDroneMap. :("
+msgstr ""
+"Si el resultado es *kern.hv_support: 0*, desafortunadamente significa que tu"
+" Mac es demasiado vieja para ejecutar OpenDroneMap. :("
+
+#: ../../../installation.rst:259 0c78f31ed3f846f4ba1761936eb4721a
+msgid "There are only two programs to install:"
+msgstr "Solo hay dos programas para instalar:"
+
+#: ../../../installation.rst:261 e90623cdd26245dd91b46c7f3b72ccf3
+msgid "Docker: https://download.docker.com/mac/stable/Docker.dmg"
+msgstr "Docker: https://download.docker.com/mac/stable/Docker.dmg"
+
+#: ../../../installation.rst:262 fe8e0d7f80c24676abb9140e1090b6f4
+msgid "Git: https://sourceforge.net/projects/git-osx-installer/files/"
+msgstr "Git: https://sourceforge.net/projects/git-osx-installer/files/"
+
+#: ../../../installation.rst:264 a30ce5e119a846d0937509eabb900991
+msgid ""
+"After installing docker you should find an icon that looks like a whale in "
+"the task bar."
+msgstr ""
+"Después de instalar Docker, deberías encontrar un icono que parece una "
+"ballena en la barra de tareas."
+
+#: ../../../installation.rst:270 10d6273d82a04f1587c2d5fb20b2ef7f
+msgid "*Docker app running*"
+msgstr "*Aplicación Docker en ejecución*"
+
+#: ../../../installation.rst:272 ac8be6bc43224ebdaa909843db7ce97b
+msgid ""
+"You can verify that docker is running properly by opening the **Terminal** "
+"app and typing:"
+msgstr ""
+"Puedes verificar que la ventana acoplable se esté ejecutando correctamente "
+"abriendo la aplicación **Terminal** y escribiendo:"
+
+#: ../../../installation.rst:278 7f874c9eae5c4c67ab48ab48b4c85f56
+msgid "Which should return"
+msgstr "Que debería devolver"
+
+#: ../../../installation.rst:284 202a8d7848a84897bec59fc30d76ff96
+msgid "To verify that git is installed, simply type:"
+msgstr "Para verificar que Git está instalado, solo teclee:"
+
+#: ../../../installation.rst:290 727a35e6746443e38a4bb1a2530226f5
+msgid "Which should return something similar to the following:"
+msgstr "Que debería devolver algo similar a lo siguiente:"
+
+#: ../../../installation.rst:296 7ee7ce0fe3cf40d28edb2a88589aafc6
+msgid ""
+"If you get a “bash: git: command not found”, try to restart your "
+"**Terminal** app and double-check for any errors during the install process."
+msgstr ""
+"Si obtiene un \"bash: git: comando no encontrado\", intente reiniciar su "
+"aplicación **Terminal** y verifique si hay errores durante el proceso de "
+"instalación."
+
+#: ../../../installation.rst:301 c969a4655a6e41c78571f4f05006d199
+msgid ""
+"Docker on macOS works by running a VM in the background (think of it as a "
+"“computer emulator”). This VM has a certain amount of memory allocated and "
+"WebODM can only use as much memory as it’s allocated."
+msgstr ""
+"Docker en macOS funciona ejecutando una VM en segundo plano (considérelo "
+"como un \"emulador de computadora\"). Esta VM tiene una cierta cantidad de "
+"memoria asignada y WebODM solo puede usar la cantidad de memoria asignada."
+
+#: ../../../installation.rst:303 e89322d22add432b8d00ef0da9910a6c
+msgid ""
+"Right click the whale icon from the task bar and click **Preferences**..."
+msgstr ""
+"Haga clic derecho en el icono de la ballena de la barra de tareas y haga "
+"clic en **Preferencias** ..."
+
+#: ../../../installation.rst:304 73457306344148c0bc0c6382936ef870
+msgid "Select the **Advanced** tab"
+msgstr "Seleccione la pestaña **Avanzado**"
+
+#: ../../../installation.rst:305 6791fc129e16413983be624d46091da7
+msgid ""
+"Adjust the CPUs slider to use half of all available CPUs and the memory to "
+"use 60-70% of all available memory"
+msgstr ""
+"Ajuste el control deslizante de las CPU para usar la mitad de todas las CPU "
+"disponibles y la memoria para usar el 60-70% de toda la memoria disponible"
+
+#: ../../../installation.rst:306 2fad355dfb504197bb70aded8fa643ec
+msgid "Press **Apply & Restart**"
+msgstr "Presione **Aplicar y reiniciar**"
+
+#: ../../../installation.rst:312 339e99e54264491a83c530f1ed107050
+msgid "*Docker advanced settings*"
+msgstr "*Configuración avanzada de Docker*"
+
+#: ../../../installation.rst:315 a55d3812154e4abaadd608dfd4dfac08
+msgid "Step 4. Download and Launch WebODM"
+msgstr "Paso 4. Descargue y ejecute WebODM"
+
+#: ../../../installation.rst:317 0d5f531d78ac474db92ecc60012e4521
+msgid "From a **Terminal** type:"
+msgstr "Desde la **Terminal** teclee:"
+
+#: ../../../installation.rst:325 ../../../installation.rst:426
+#: 20229f5dd3ae4bd381cf81c65c83c44e 223a8ca53398448398153f94bc81075a
+msgid "Then open a web browser to http://localhost:8000."
+msgstr "Luego abra un navegador web en http://localhost:8000."
+
+#: ../../../installation.rst:328 f6c373465d684dcebfbe6fe0633c4138
+msgid "Linux"
+msgstr "Linux"
+
+#: ../../../installation.rst:330 0e56e6e0eea343ffbf70bde692908cbe
+msgid ""
+"OpenDroneMap can run on any Linux distribution that supports docker. "
+"According to `docker’s documentation website "
+"<https://docs.docker.com/install/>`_ the officially supported distributions "
+"are CentOS, Debian, Ubuntu and Fedora, with static binaries available for "
+"others. If you have to pick a distribution solely for running OpenDroneMap, "
+"Ubuntu is the recommended way to go."
+msgstr ""
+"OpenDroneMap puede ejecutarse en cualquier distribución de Linux que admita "
+"Docker. Según el sitio web de documentación de `docker "
+"<https://docs.docker.com/install/>` _ las distribuciones oficialmente "
+"soportadas son CentOS, Debian, Ubuntu y Fedora, con binarios estáticos "
+"disponibles para otros. Si tiene que elegir una distribución únicamente para"
+" ejecutar OpenDroneMap, Ubuntu es la distribución recomendada."
+
+#: ../../../installation.rst:333 7c7a0719bfe142648c378c8abd3317c2
+msgid "Step 1. Install Requirements"
+msgstr "Paso 1. Requerimientos de instalación"
+
+#: ../../../installation.rst:335 83171f74e0364d5980164438faf1521c
+msgid "There are four programs that need to be installed:"
+msgstr "Hay cuatro programas que deben instalarse:"
+
+#: ../../../installation.rst:337 7d44a185ed8b46abbda9303fb286486f
+msgid "Docker"
+msgstr "Docker"
+
+#: ../../../installation.rst:338 f0ce43b8981d43c4bbfe1379c44c9321
+msgid "Git"
+msgstr "Git"
+
+#: ../../../installation.rst:339 85d3b272b1024b99a987709a8a34ba3a
+msgid "Python (2 or 3)"
+msgstr "Python (2 o 3)"
+
+#: ../../../installation.rst:340 a426ce10e416419ab1f4ddd2904af232
+msgid "Pip"
+msgstr "Pip"
+
+#: ../../../installation.rst:342 29d1fde6e7644164be8c8eefdf0b7129
+msgid ""
+"We cannot possibly cover the installation process for every Linux "
+"distribution out there, so we’ll limit the instructions to those that are "
+"distributions officially supported by docker. In all cases it’s just a "
+"matter of opening a terminal prompt and typing a few commands."
+msgstr ""
+"No podemos cubrir el proceso de instalación de todas las distribuciones de "
+"Linux que existen, por lo que limitaremos las instrucciones a aquellas que "
+"son distribuciones oficialmente compatibles con Docker. En todos los casos, "
+"solo es cuestión de abrir un indicador de terminal y escribir algunos "
+"comandos."
+
+#: ../../../installation.rst:345 93f7ea63f0484dbcb52d9ac50eb6fb01
+msgid "Install on Ubuntu / Debian"
+msgstr "Instalar en Ubuntu / Debian"
+
+#: ../../../installation.rst:347 ../../../installation.rst:359
+#: ../../../installation.rst:370 ../../../installation.rst:381
+#: fa55e97f3d5c459786ad246d4d44b8da 0fe1276569a04b86a3e82a20598da5ee
+#: 84aa59c42f794da1865fd8088086ce42 16195dff5bf14d5bab2b2b0a69103c31
+msgid "Commands to type:"
+msgstr "Comandos para escribir:"
+
+#: ../../../installation.rst:357 bc2e9dcb5f8140958fc44d216ff18eb5
+msgid "Install on CentOS / RHEL"
+msgstr "Instalar en CentOS / RHEL"
+
+#: ../../../installation.rst:368 9511489f5fbb43a6a4114e5997beb20c
+msgid "Install on Fedora"
+msgstr "Instalar en Fedora"
+
+#: ../../../installation.rst:379 46bbf3597fbe45d09b2975ada9ad0b1f
+msgid "Install on Arch"
+msgstr "Instalar en Arch"
+
+#: ../../../installation.rst:388 ef4b2e7dc3494eb09c3ce49495829580
+msgid "Step 2. Check Additional Requirements"
+msgstr "Paso 2. Verifique los requisitos adicionales"
+
+#: ../../../installation.rst:390 84f96b987b3740c790eeeaa996c576fa
+msgid ""
+"In addition to the three programs above, the dockercompose script is also "
+"needed. Sometimes it’s already installed with docker, but sometimes it "
+"isn’t. To verify if it’s installed try to type:"
+msgstr ""
+"Además de los tres programas anteriores, también se necesita el script de "
+"Dockercompose. A veces, ya está instalado con Docker, pero a veces no. Para "
+"verificar si está instalado, intente escribir:"
+
+#: ../../../installation.rst:396 0b00ac1f20674870b69a3d1f092d675a
+msgid "You should see somethings similar to the following:"
+msgstr "Debería ver algo similar a lo siguiente:"
+
+#: ../../../installation.rst:402 284cca281f614c648f919e885686fdb3
+msgid "If instead you get something similar to the following:"
+msgstr "Si, en cambio, obtiene algo similar a lo siguiente:"
+
+#: ../../../installation.rst:408 983d0e6356a74275bd044ade12af08b9
+msgid "you can install it by using pip:"
+msgstr "puedes instalarlo usando pip:"
+
+#: ../../../installation.rst:416 5842e50886b64cc4be4e08cec0121061
+msgid "Step 3. Download and Launch WebODM"
+msgstr "Paso 3. Descargue y ejecute WebODM"
+
+#: ../../../installation.rst:418 29abff25121345dea6867519777717e3
+msgid "From a terminal type:"
+msgstr "Desde la Terminal escriba:"
+
+#: ../../../installation.rst:429 57309bc02a884a288ae73c44e72ed08c
+msgid "Basic Commands and Troubleshooting"
+msgstr "Comandos básicos y resolución de problemas"
+
+#: ../../../installation.rst:431 eb054dc2ff2e45869db94dfb3ad75aab
+msgid ""
+"The cool thing about using docker is that 99% of the tasks you’ll ever need "
+"to perform while using WebODM can be done via the ./webodm.sh script. You "
+"have already encountered one of them:"
+msgstr ""
+"Lo bueno de usar Docker es que el 99% de las tareas que necesitará realizar "
+"mientras usa WebODM se pueden realizar a través del script ./webodm.sh. Ya "
+"te has encontrado con uno de ellos:"
+
+#: ../../../installation.rst:437 d2bcc76bb7214209a6f4ee623e96d412
+msgid ""
+"which takes care of starting WebODM and setting up a default processing node"
+" (node-odm-1). If you want to stop WebODM, you can already guess what the "
+"command is:"
+msgstr ""
+"que se encarga de iniciar WebODM y configurar un nodo de procesamiento "
+"predeterminado (node-odm-1). Si desea detener WebODM, ya puede adivinar cuál"
+" es el comando:"
+
+#: ../../../installation.rst:443 3698ff42eb674c89b2d92629aba1ceac
+msgid ""
+"There are several other commands you can use, along with different flags. "
+"Flags are parameters passed to the ./webodm.sh command and are typically "
+"prefixed with “–”. The **port** flag for example instructs WebODM to use a "
+"different network port:"
+msgstr ""
+"Hay otros varios comandos que puede usar, junto con diferentes banderas. Los"
+" indicadores son parámetros que se pasan al comando ./webodm.sh y suelen "
+"tener el prefijo \"-\". El indicador **port**, por ejemplo, indica a WebODM "
+"que utilice un puerto de red diferente:"
+
+#: ../../../installation.rst:449 959bbbb701f648aa9e3711d89f36f123
+msgid "Other useful commands are listed below:"
+msgstr "A continuación se enumeran otros comandos útiles:"
+
+#: ../../../installation.rst:468 3c132782ccc54888bb8acf6806f4dbbf
+msgid ""
+"`The community forum <https://community.opendronemap.org>`_ is a great place"
+" to ask for help if you     get stuck during any of the installation steps "
+"and for general questions on using the ./webodm.sh script."
+msgstr ""
+"El foro de la comunidad `The community forum "
+"<https://community.opendronemap.org>` _ es un gran lugar para pedir ayuda si"
+" tiene dificultades durante cualquiera de los pasos de instalación y si "
+"tiene preguntas generales sobre el uso del script ./webodm.sh."
+
+#: ../../../installation.rst:471 fdbc2929c47444bc8817faac19077cc1
+msgid "Hello, WebODM!"
+msgstr "¡Hola WebODM!"
+
+#: ../../../installation.rst:473 7ee17336350e4347afaa9f26185d0960
+msgid ""
+"After running ./webodm.sh start and opening WebODM in the browser, you will "
+"be greeted with a welcome message and will be asked to create the first "
+"user. Take some time to familiarize yourself with the web interface and "
+"explore its various menus."
+msgstr ""
+"Después de ejecutar ./webodm.sh start y abrir WebODM en el navegador, se le "
+"dará la bienvenida con un mensaje de bienvenida y se le pedirá que cree el "
+"primer usuario. Tómese un tiempo para familiarizarse con la interfaz web y "
+"explorar sus diversos menús."
+
+#: ../../../installation.rst:479 cc069aa0bca7429eae5ab21d4666909f
+msgid "*WebODM Dashboard*"
+msgstr "*WebODM Dashboard*"
+
+#: ../../../installation.rst:481 64e37b09ab6641718bde87e5e05b6c56
+msgid ""
+"Notice that under the **Processing Nodes** menu there’s a \"node-odm-1\" "
+"node already configured for you to use. This is a NodeODM node and has been "
+"created automatically by WebODM. This node is running on the same machine as"
+" WebODM."
+msgstr ""
+"Tenga en cuenta que en el menú **Processing Nodes** hay un nodo \"node-"
+"odm-1\" ya configurado para su uso. Este es un nodo NodeODM y ha sido creado"
+" automáticamente por WebODM. Este nodo se ejecuta en la misma máquina que "
+"WebODM."
+
+#: ../../../installation.rst:483 b450d1d7e6344be38bc3e77f2955948e
+msgid ""
+"If you’ve made it this far, congratulations! Now it’s time to start "
+"processing some data."
+msgstr ""
+"Si has llegado hasta aquí, ¡felicitaciones! Ahora es el momento de comenzar "
+"a procesar algunos datos."
+
+#: ../../../installation.rst:490 83d7a443ece94164aa76430eaefbd970
+msgid "Running on more than one machine"
+msgstr "Ejecutando en más de una máquina"
+
+#: ../../../installation.rst:492 0c2d75f28a854d92a9fe8c5c4c28a9e9
+msgid ""
+"**Optionally:** If you have another computer, you can repeat the "
+"installation process (install docker, git, python, etc.) and launch a new "
+"NodeODM node by typing from a Terminal/Git Bash window:"
+msgstr ""
+"**Opcionalmente:** Si tiene otra computadora, puede repetir el proceso de "
+"instalación (instalar docker, git, python, etc.) y lanzar un nuevo nodo "
+"NodeODM escribiendo desde una ventana Terminal / Git Bash:"
+
+#: ../../../installation.rst:498 4694bf64a88c48d7aad13c6bb1a1b316
+msgid ""
+"The above command asks docker to launch a new container using the "
+"opendronemap/nodeodm image from Docker Hub (the latest version of NodeODM), "
+"using port 3000, setting a maximum number of concurrent tasks to 1 and to "
+"protect the node from unauthorized access using the password \"secret\"."
+msgstr ""
+"El comando anterior le pide a Docker que lance un nuevo contenedor usando la"
+" imagen opendronemap/nodeodm de Docker Hub (la última versión de NodeODM), "
+"usando el puerto 3000, estableciendo un número máximo de tareas concurrentes"
+" en 1 y para proteger el nodo del acceso no autorizado usando el contraseña "
+"\"secret\"."
+
+#: ../../../installation.rst:500 f76fc4c596a14f9b82f90ddca6b06cca
+msgid ""
+"From WebODM you can then press the **Add New** button under **Processing "
+"Nodes**. For the **hostname/IP** field type the IP of the second computer. "
+"For the **port** field type “3000”. For the **token** field type “secret”. "
+"You can also add an optional **label** for your node, such as “second "
+"computer”. Then press **Save**."
+msgstr ""
+"Desde WebODM, puede presionar el botón **Add new** debajo de **Processing "
+"Nodes**. En el campo **hostname/IP **, escriba la IP de la segunda "
+"computadora. Para el campo **port**, escriba \"3000\". Para el campo "
+"**token**, escriba \"secret\". También puede agregar una etiqueta **label** "
+"opcional para su nodo, como \"segunda computadora\". Luego presione **Save**"
+" para guardar."
+
+#: ../../../installation.rst:502 964b17d1817a4c7bbf72dd1ab2de029f
+msgid ""
+"If everything went well, you should now have two processing nodes! You will "
+"be able to process multiple tasks in parallel using two different machines."
+msgstr ""
+"Si todo salió bien, ¡ahora debería tener dos nodos de procesamiento! Podrá "
+"procesar múltiples tareas en paralelo utilizando dos máquinas diferentes."
+
+#: ../../../installation.rst:504 f77613f718494ac791af608ceafe2657
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst>`_"
+msgstr ""
+"`Ayuda a editar estos documentos! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst>`_"

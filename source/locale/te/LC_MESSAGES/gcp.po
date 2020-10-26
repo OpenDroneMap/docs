@@ -1,0 +1,295 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020\n"
+"Language-Team: Telugu (https://www.transifex.com/americanredcross/teams/111882/te/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: te\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../../gcp.rst:3 911f0a51699040bbbac8fd6336625beb
+msgid "Ground Control Points"
+msgstr "గ్రౌండ్ కంట్రోల్ పాయింట్లు"
+
+#: ../../../gcp.rst:5 022d5bddc65e48618d8dcfa0a4c6f73d
+msgid ""
+"Ground control points are useful for correcting distortions in the data and "
+"referencing the data to know coordinate systems."
+msgstr ""
+"డేటాలోని వక్రీకరణలను సరిదిద్దడానికి మరియు సమన్వయ వ్యవస్థలను తెలుసుకోవడానికి "
+"డేటాను సూచించడానికి గ్రౌండ్ కంట్రోల్ పాయింట్లు ఉపయోగపడతాయి."
+
+#: ../../../gcp.rst:7 ad17511e7ca64fbda395e4f953e80eea
+msgid ""
+"A Ground Control Point (GCP) is a position measurement made on the ground, "
+"typically using a high precision GPS. (Toffanin 2019)"
+msgstr ""
+
+#: ../../../gcp.rst:9 3ea9ac611d3a42a78eb928b9cebb8fe7
+msgid ""
+"Ground control points can be set existing structures like pavement corners, "
+"lines on a parking lot or contrasting color floor tiles, otherwise can be "
+"set using targets placed on the ground."
+msgstr ""
+
+#: ../../../gcp.rst:11 7e9458665b944639b07049fb14aaa585
+msgid ""
+"Targets can be purchased or build with an ample variety of materials ranging"
+" from bucket lids to floor tiles."
+msgstr ""
+
+#: ../../../gcp.rst:15 58d694776d2944069f23706d57db7f03
+msgid "Recommended practices for GCP setting"
+msgstr ""
+
+#: ../../../gcp.rst:17 be9453643db74c3dbce9cb60114879b8
+msgid ""
+"Keep ground control points visible for all camera locations. Consider the "
+"expected ground sampling distance, illumination, vegetation, buildings and "
+"all the existing obstacles."
+msgstr ""
+
+#: ../../../gcp.rst:19 b8ca322401f44845bcd07bab7d07c0a6
+msgid ""
+"Procure an evenly horizontal distribution of the GCPs within the project, "
+"covering high and low elevations. A minimum of 5 GCP works for most of the "
+"jobs, and for larger projects 8 – 10 are sufficient. Locate some points near"
+" the corners and others in the center, considering that GCP spacing should "
+"be larger than the image footprint so that you can’t see more than one GCP "
+"in a single image."
+msgstr ""
+
+#: ../../../gcp.rst:21 ac223f7550cd411da9e36fd8784fba34
+msgid ""
+"In order to ensure each GCP are found in at least 5 images, separate the "
+"points 10 to 30 meters from the perimeter of the project. This distance is "
+"dependent of the overlapping, so increasing overlapping should reduce the "
+"required distance from the perimeter."
+msgstr ""
+
+#: ../../../gcp.rst:25 7e516e234f5d48b6bdf2452c90949a1e
+msgid "GCP file format"
+msgstr ""
+
+#: ../../../gcp.rst:27 8452104a74d646fd98667e75940154f9
+msgid "The format of the GCP file is simple."
+msgstr "GCP ఫైల్ యొక్క ఆకృతి సులభం."
+
+#: ../../../gcp.rst:29 dce0e96292f14671b20009aff56908eb
+msgid ""
+"The first line should contain the name of the projection used for the geo "
+"coordinates. This can be specified either as a PROJ string (e.g. ``+proj=utm"
+" +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), EPSG code (e.g. "
+"``EPSG:4326``) or as a ``WGS84 UTM <zone>[N|S]`` value (eg. ``WGS84 UTM "
+"16N``)"
+msgstr ""
+"మొదటి పంక్తిలో జియో కోఆర్డినేట్‌లకు ఉపయోగించే ప్రొజెక్షన్ పేరు ఉండాలి. "
+"దీనిని PROJ స్ట్రింగ్‌గా పేర్కొనవచ్చు (ఉదా. `` ప్రోజ్ = యుటిఎమ్ జోన్ = 10 "
+"ఎల్ప్స్ = డబ్ల్యుజిఎస్ 84 డాటమ్ = డబ్ల్యుజిఎస్ 84 యూనిట్లు = ఎమ్ "
+"నో_డెఫ్స్``), ఇపిఎస్‌జి కోడ్ (ఉదా. `PSEPSG: 4326``) లేదా` ` WGS84 UTM 1 [N |"
+" S] `` విలువ (ఉదా. `` WGS84 UTM 16N``)"
+
+#: ../../../gcp.rst:30 b2b962c0b86148d0baa20170f21a4809
+msgid ""
+"Subsequent lines are the X, Y & Z coordinates, your associated pixels, the "
+"image filename and optional extra fields, separated by tabs or spaces:"
+msgstr ""
+"తదుపరి పంక్తులు X, Y. మీ అనుబంధ పిక్సెల్‌లు, ఇమేజ్ ఫైల్ పేరు మరియు ఐచ్ఛిక "
+"అదనపు ఫీల్డ్‌లు, ట్యాబ్‌లు లేదా ఖాళీలతో వేరు చేయబడతాయి:"
+
+#: ../../../gcp.rst:31 b14a4632f09d452987da341b4761ee93
+msgid "Elevation values can be set to \"NaN\" to indicate no value"
+msgstr "విలువ లేదని సూచించడానికి ఎలివేషన్ విలువలను \"NaN\" కు సెట్ చేయవచ్చు"
+
+#: ../../../gcp.rst:32 326fc2b4a246402887eec024ee7dc44b
+msgid "The 7th column (optional) typically contains the label of the GCP."
+msgstr "7 వ కాలమ్ (ఐచ్ఛికం) సాధారణంగా GCP యొక్క లేబుల్‌ను కలిగి ఉంటుంది."
+
+#: ../../../gcp.rst:34 7e516e234f5d48b6bdf2452c90949a1e
+msgid "GCP file format::"
+msgstr "GCP ఫైల్ ఫార్మాట్ ::"
+
+#: ../../../gcp.rst:40 cfc779a9cd644757ac87736911a5cb2c
+msgid "Example::"
+msgstr "ఉదాహరణ::"
+
+#: ../../../gcp.rst:47 af0d955959494dfea9d3d9efbb90d333
+msgid ""
+"If you supply a GCP file called ``gcp_list.txt`` then ODM will automatically"
+" detect it. If it has another name you can specify using ``--gcp <path>``. "
+"If you have a gcp file and want to do georeferencing with exif instead, then"
+" you can specify ``--use-exif``. If you have high precision GPS measurements"
+" in your images (RTK) and want to use that information along with a gcp "
+"file, you can specify ``--force-gps``."
+msgstr ""
+"మీరు `` gcp_list.txt`` అనే GCP ఫైల్‌ను సరఫరా చేస్తే, ODM స్వయంచాలకంగా దాన్ని"
+" కనుగొంటుంది. దీనికి మరొక పేరు ఉంటే మీరు `` --gcp 1`` ని ఉపయోగించి "
+"పేర్కొనవచ్చు. మీకు జిసిపి ఫైల్ ఉంటే మరియు బదులుగా ఎక్సిఫ్ తో "
+"జియోరెఫరెన్సింగ్ చేయాలనుకుంటే, మీరు `` --use-exif`` ని పేర్కొనవచ్చు. మీరు మీ"
+" చిత్రాలలో (RTK) అధిక ఖచ్చితత్వంతో GPS కొలతలు కలిగి ఉంటే మరియు ఆ సమాచారాన్ని"
+" gcp ఫైల్‌తో పాటు ఉపయోగించాలనుకుంటే, మీరు `` --force-gps`` ని పేర్కొనవచ్చు."
+
+#: ../../../gcp.rst:49 bbde94c6d77e4ebcb74ecec6b26d4752
+msgid ""
+"`This post has some information about placing Ground Control Targets before "
+"a flight <http://diydrones.com/profiles/blogs/ground-control-points-gcps-"
+"for-aerial-photography>`_, but if you already have images, you can find your"
+" own points in the images post facto. It's important that you find high-"
+"contrast objects that are found in **at least** 3 photos, and that you find "
+"a minimum of 5 objects."
+msgstr ""
+"`ఈ పోస్ట్‌లో విమానానికి ముందు గ్రౌండ్ కంట్రోల్ టార్గెట్‌లను ఉంచడం గురించి "
+"కొంత సమాచారం ఉంది <http://diydrones.com/profiles/blogs/ground-control-"
+"points-gcps-for-aerial-photography>` _, కానీ మీకు ఇప్పటికే చిత్రాలు ఉంటే , "
+"మీరు మీ స్వంత పాయింట్లను చిత్రాల పోస్ట్ ఫాక్టోలో కనుగొనవచ్చు. ** కనీసం ** 3 "
+"ఫోటోలలో కనిపించే అధిక-విరుద్ధ వస్తువులను మీరు కనుగొనడం చాలా ముఖ్యం మరియు "
+"మీరు కనీసం 5 వస్తువులను కనుగొంటారు."
+
+#: ../../../gcp.rst:51 6b99ba39e0ba4be98be0cf9089458f19
+msgid ""
+"Sharp corners are good picks for GCPs. You should also place/find the GCPs "
+"evenly around your survey area."
+msgstr ""
+"పదునైన మూలలు జిసిపిలకు మంచి ఎంపికలు. మీరు మీ సర్వే ప్రాంతం చుట్టూ సమానంగా "
+"GCP లను కూడా ఉంచాలి / కనుగొనాలి."
+
+#: ../../../gcp.rst:53 2022c1e3d9074c80bc5988fb77630231
+msgid ""
+"The ``gcp_list.txt`` file must be created in the base of your project "
+"folder."
+msgstr ""
+"మీ ప్రాజెక్ట్ ఫోల్డర్ యొక్క బేస్ లో `` gcp_list.txt`` ఫైల్ తప్పక "
+"సృష్టించబడాలి."
+
+#: ../../../gcp.rst:55 d053ffc6a0b44e60be90864b1d0ad399
+msgid ""
+"For good results your file should have a minimum of 15 lines after the "
+"header (5 points with 3 images to each point)."
+msgstr ""
+"మంచి ఫలితాల కోసం మీ ఫైల్‌లో హెడర్ తర్వాత కనీసం 15 పంక్తులు ఉండాలి (ప్రతి "
+"పాయింట్‌కు 3 చిత్రాలతో 5 పాయింట్లు)."
+
+#: ../../../gcp.rst:59 9712bfa7df5343f8b383155a9eee015c
+msgid "User Interfaces"
+msgstr "వినియోగదారు ఇంటర్‌ఫేస్‌లు"
+
+#: ../../../gcp.rst:61 58a11feafc7641fca1250a9e80a9e9a2
+msgid "You can use one of two user interfaces for creating GCP files:"
+msgstr ""
+"GCP ఫైళ్ళను సృష్టించడానికి మీరు రెండు యూజర్ ఇంటర్ఫేస్లలో ఒకదాన్ని "
+"ఉపయోగించవచ్చు:"
+
+#: ../../../gcp.rst:63 84afe5e0d2964247b972da99da981b86
+msgid "`POSM GCPi <https://github.com/posm/posm-gcpi>`_"
+msgstr "`POSM GCPi <https://github.com/posm/posm-gcpi>`_"
+
+#: ../../../gcp.rst:64 60450f4c04ca4bac9bd654bd2ba83c35
+msgid "`GCP Editor Pro <https://github.com/uav4geo/GCPEditorPro>`_"
+msgstr "`జిసిపి ఎడిటర్ ప్రో  <https://github.com/uav4geo/GCPEditorPro>`_"
+
+#: ../../../gcp.rst:68 397f2777c59948cc8c50fe7aaee405e1
+msgid "POSM GCPi"
+msgstr "POSM GCPi"
+
+#: ../../../gcp.rst:70 927593a77dc84e74b137c4d439df6825
+msgid ""
+"The POSM GCPi is loaded by default on WebODM. An example is available at "
+"`the WebODM Demo <http://demo.webodm.org/plugins/posm-gcpi/>`_. To use this "
+"with known ground control XYZ values, one would do the following:"
+msgstr ""
+"POSM GCPi అప్రమేయంగా WebODM లో లోడ్ అవుతుంది. `WebODM డెమో "
+"<http://demo.webodm.org/plugins/posm-gcpi/>` _ వద్ద ఒక ఉదాహరణ అందుబాటులో "
+"ఉంది. తెలిసిన గ్రౌండ్ కంట్రోల్ XYZ విలువలతో దీన్ని ఉపయోగించడానికి, ఈ క్రింది"
+" వాటిని చేస్తారు:"
+
+#: ../../../gcp.rst:72 b9a43cb0966f427fae9039e6aa420d36
+msgid ""
+"Create a GCP list that only includes gcp name (this is the label that will "
+"be seen in the GCP interface), x, y, and z, with a header with a proj4 "
+"string of your GCPs (make sure they are in a planar coordinate system, such "
+"as UTM. It should look something like this:"
+msgstr ""
+"మీ జిసిపిల యొక్క ప్రొజె 4 స్ట్రింగ్‌తో హెడర్‌తో జిసిపి పేరు (జిసిపి "
+"ఇంటర్‌ఫేస్‌లో కనిపించే లేబుల్ ఇది), x, y మరియు z మాత్రమే ఉండే జిసిపి "
+"జాబితాను సృష్టించండి (అవి ప్లానార్ కోఆర్డినేట్‌లో ఉన్నాయని నిర్ధారించుకోండి "
+"UTM వంటి వ్యవస్థ. ఇది ఇలా ఉండాలి:"
+
+#: ../../../gcp.rst:83 c193a1ce8f7a4da2b796010be7fc9521
+msgid ""
+"Then one can load this GCP list into the interface, load the images, and "
+"place each of the GCPs in the image."
+msgstr ""
+"అప్పుడు ఈ జిసిపి జాబితాను ఇంటర్‌ఫేస్‌లోకి లోడ్ చేయవచ్చు, చిత్రాలను లోడ్ "
+"చేయవచ్చు మరియు ప్రతి జిసిపిలను చిత్రంలో ఉంచవచ్చు."
+
+#: ../../../gcp.rst:87 ece94c1e7c6c44698893e57cf6c10c92
+msgid "GCP Editor Pro"
+msgstr "జిసిపి ఎడిటర్ ప్రో"
+
+#: ../../../gcp.rst:89 31a2f2c5d1614505b9b11f063ed8f8af
+msgid ""
+"This app needs to be installed separately or can be loaded as a WebODM "
+"plugin from `https://github.com/uav4geo/GCPEditorPro "
+"<https://github.com/uav4geo/GCPEditorPro>`_"
+msgstr ""
+"ఈ అనువర్తనాన్ని విడిగా ఇన్‌స్టాల్ చేయాలి లేదా "
+"`https://github.com/uav4geo/GCPEditorPro "
+"<https://github.com/uav4geo/GCPEditorPro>`_` నుండి వెబ్‌ఓడిఎం ప్లగిన్‌గా "
+"లోడ్ చేయవచ్చు."
+
+#: ../../../gcp.rst:91 400a7b772b064992b58e256c4a86d802
+msgid ""
+"Create a CSV file that includes the gcp name, northing, easting and "
+"elevation."
+msgstr ""
+"Gcp పేరు, నార్తింగ్, ఈస్టింగ్ మరియు ఎలివేషన్ ఉన్న CSV ఫైల్‌ను సృష్టించండి."
+
+#: ../../../gcp.rst:100 e3be97e2b1d442f99df0adde4e1752cb
+msgid ""
+"Then import the CSV from the main screen and type ``+proj=utm +zone=37 "
+"+south +ellps=WGS84 +datum=WGS84 +units=m +no_defs`` in the ``EPSG/PROJ`` "
+"box."
+msgstr ""
+"అప్పుడు ప్రధాన స్క్రీన్ నుండి CSV ని దిగుమతి చేసి, `ʻEPSG / PROJ`` పెట్టెలో`"
+" `proj = utm zone = 37 south ellps = WGS84 datum = WGS84 units = m no_defs``"
+" అని టైప్ చేయండి."
+
+#: ../../../gcp.rst:102 e90ba38338ef409792e454d071bbcc16
+msgid ""
+"The following screen will display a map from where to select the GCPs to tag"
+" and import the respective images."
+msgstr ""
+"కింది స్క్రీన్ సంబంధిత చిత్రాలను ట్యాగ్ చేయడానికి మరియు దిగుమతి చేయడానికి "
+"GCP లను ఎన్నుకోవాల్సిన మ్యాప్‌ను ప్రదర్శిస్తుంది."
+
+#: ../../../gcp.rst:106 9712bfa7df5343f8b383155a9eee015c
+msgid "References"
+msgstr ""
+
+#: ../../../gcp.rst:108 00d0a4cc5f3441b09095b9e4c3d1805f
+msgid ""
+"Toffanin, Piero. `Open Drone Map: The Missing Guide. "
+"<https://odmbook.com/>`_ MasseranoLabs LLC, 2019."
+msgstr ""
+
+#: ../../../gcp.rst:111 23911fa0503e4bb58ddc99f41c10b797
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_"
+msgstr ""
+"`ఈ పత్రాలను సవరించడానికి సహాయం చేయండి\n"
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_"
