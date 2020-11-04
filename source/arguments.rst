@@ -22,6 +22,13 @@ Arguments::
                         Can be one of:dataset | split | merge | opensfm | mve
                         | odm_filterpoints | odm_meshing | mvs_texturing |
                         odm_georeferencing | odm_dem | odm_orthophoto
+			
+  --pc-ept
+  			Generates Entwine Point Cloud. Useful on it's own,
+			this flag is automatically added when running in WebODM
+			and useful for creating the correct directory structure
+			when running on NodeODM or command line for import into
+			WebODM.
 
   --rerun <string>, -r <string>
                         Can be one of:dataset | split | merge | opensfm | mve
