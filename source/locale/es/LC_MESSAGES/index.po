@@ -34,26 +34,32 @@ msgid ""
 "other languages!) via Transifex. There is a `getting started guide on GitHub"
 " <https://github.com/opendronemap/docs#translations>`_."
 msgstr ""
+"La documentación está disponible en varios idiomas. Algunas traducciones "
+"están incompletas y aún se mostrarán en inglés. Los siguientes idiomas están"
+" traducidos al menos en un 20 por ciento. Puede ayudarnos a traducir esos "
+"idiomas (¡y otros idiomas!) a través de Transifex. Hay una `guía de "
+"introducción en GitHub. "
+"<https://github.com/opendronemap/docs#translations>`_."
 
 #: ../../../index.rst:15 dd42376621d64b6d86648e1c87101e31
 msgid "`English <https://docs.opendronemap.org/>`_"
-msgstr ""
+msgstr "`Inglés <https://docs.opendronemap.org/>`_"
 
 #: ../../../index.rst:16 2ae77e832f9f40fdbb17f72d04369b04
 msgid "`French <https://docs.opendronemap.org/fr>`_"
-msgstr ""
+msgstr "`Francés <https://docs.opendronemap.org/fr>`_"
 
 #: ../../../index.rst:17 2b86dd77c9ca4fdbb3e5c3a362287930
 msgid "`Spanish <https://docs.opendronemap.org/es>`_"
-msgstr ""
+msgstr "`Español <https://docs.opendronemap.org/es>`_"
 
 #: ../../../index.rst:18 bdc10bb2b2904d7886f3128bf90cbf72
 msgid "`Swahili <https://docs.opendronemap.org/sw>`_"
-msgstr ""
+msgstr "`Suajili <https://docs.opendronemap.org/sw>`_"
 
 #: ../../../index.rst:19 41b56ac8133b4a35a02b95db07be553b
 msgid "`Telugu <https://docs.opendronemap.org/te>`_"
-msgstr ""
+msgstr "`Télugu <https://docs.opendronemap.org/te>`_"
 
 #: ../../../index.rst:57 2b86dd77c9ca4fdbb3e5c3a362287930
 msgid ""

@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020
+# danbjoseph <danbjoseph@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-26 14:39-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
-"Last-Translator: Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020\n"
+"Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Telugu (https://www.transifex.com/americanredcross/teams/111882/te/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -38,6 +39,8 @@ msgid ""
 "A Ground Control Point (GCP) is a position measurement made on the ground, "
 "typically using a high precision GPS. (Toffanin 2019)"
 msgstr ""
+"గ్రౌండ్ కంట్రోల్ పాయింట్ (జిసిపి) అనేది భూమిపై చేసిన స్థానం కొలత, సాధారణంగా "
+"అధిక ఖచ్చితత్వంతో కూడిన జిపిఎస్‌ను ఉపయోగిస్తుంది. (టోఫానిన్ 2019)"
 
 #: ../../../gcp.rst:9 3ea9ac611d3a42a78eb928b9cebb8fe7
 msgid ""
@@ -45,6 +48,9 @@ msgid ""
 "lines on a parking lot or contrasting color floor tiles, otherwise can be "
 "set using targets placed on the ground."
 msgstr ""
+"గ్రౌండ్ కంట్రోల్ పాయింట్లను పేవ్మెంట్ కార్నర్స్, పార్కింగ్ స్థలంలో లైన్లు "
+"లేదా కలర్ ఫ్లోర్ టైల్స్ వంటి ప్రస్తుత నిర్మాణాలను సెట్ చేయవచ్చు, లేకపోతే "
+"భూమిపై ఉంచిన లక్ష్యాలను ఉపయోగించి సెట్ చేయవచ్చు."
 
 #: ../../../gcp.rst:11 7e9458665b944639b07049fb14aaa585
 msgid ""
@@ -98,10 +104,9 @@ msgid ""
 "16N``)"
 msgstr ""
 "మొదటి పంక్తిలో జియో కోఆర్డినేట్‌లకు ఉపయోగించే ప్రొజెక్షన్ పేరు ఉండాలి. "
-"దీనిని PROJ స్ట్రింగ్‌గా పేర్కొనవచ్చు (ఉదా. `` ప్రోజ్ = యుటిఎమ్ జోన్ = 10 "
-"ఎల్ప్స్ = డబ్ల్యుజిఎస్ 84 డాటమ్ = డబ్ల్యుజిఎస్ 84 యూనిట్లు = ఎమ్ "
-"నో_డెఫ్స్``), ఇపిఎస్‌జి కోడ్ (ఉదా. `PSEPSG: 4326``) లేదా` ` WGS84 UTM 1 [N |"
-" S] `` విలువ (ఉదా. `` WGS84 UTM 16N``)"
+"దీనిని PROJ స్ట్రింగ్‌గా పేర్కొనవచ్చు (ఉదా.``+proj=utm +zone=10 +ellps=WGS84"
+" +datum=WGS84 +units=m +no_defs``), ఇపిఎస్‌జి కోడ్ (ఉదా. ``EPSG: 4326``) "
+"లేదా ``WGS84 UTM 1 [N | S]`` విలువ (ఉదా. ``WGS84 UTM 16N``)"
 
 #: ../../../gcp.rst:30 b2b962c0b86148d0baa20170f21a4809
 msgid ""
@@ -264,9 +269,9 @@ msgid ""
 "+south +ellps=WGS84 +datum=WGS84 +units=m +no_defs`` in the ``EPSG/PROJ`` "
 "box."
 msgstr ""
-"అప్పుడు ప్రధాన స్క్రీన్ నుండి CSV ని దిగుమతి చేసి, `ʻEPSG / PROJ`` పెట్టెలో`"
-" `proj = utm zone = 37 south ellps = WGS84 datum = WGS84 units = m no_defs``"
-" అని టైప్ చేయండి."
+"అప్పుడు ప్రధాన స్క్రీన్ నుండి CSV ని దిగుమతి చేసి, ``ʻEPSG / PROJ`` "
+"పెట్టెలో` ``+proj=utm +zone=37 +south +ellps=WGS84 +datum=WGS84 +units=m "
+"+no_defs`` అని టైప్ చేయండి."
 
 #: ../../../gcp.rst:102 e90ba38338ef409792e454d071bbcc16
 msgid ""
@@ -278,18 +283,20 @@ msgstr ""
 
 #: ../../../gcp.rst:106 9712bfa7df5343f8b383155a9eee015c
 msgid "References"
-msgstr ""
+msgstr "ప్రస్తావనలు"
 
 #: ../../../gcp.rst:108 00d0a4cc5f3441b09095b9e4c3d1805f
 msgid ""
 "Toffanin, Piero. `Open Drone Map: The Missing Guide. "
 "<https://odmbook.com/>`_ MasseranoLabs LLC, 2019."
 msgstr ""
+"టోఫానిన్, పియరో. `ఓపెన్ డ్రోన్ మ్యాప్: ది మిస్సింగ్ గైడ్. "
+"<https://odmbook.com/>`_ మాస్సెరానో లాబ్స్ LLC, 2019."
 
 #: ../../../gcp.rst:111 23911fa0503e4bb58ddc99f41c10b797
 msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_"
 msgstr ""
-"`ఈ పత్రాలను సవరించడానికి సహాయం చేయండి\n"
+"`ఈ పత్రాలను సవరించడానికి సహాయం చేయండి "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_"
