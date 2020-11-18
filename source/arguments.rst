@@ -50,9 +50,11 @@ Arguments
   Default: ``8000``
 		
 --feature-quality     
-  Automatically adjusts the image sizes for feature extraction based on predetermined ratios instead of relying on the user input or making assumptions about the image size.
+  Set feature extraction quality. Higher quality generates better features, but requires more memory and takes longer.
+  
+  Options: ``ultra`` | ``high`` | ``medium`` | ``low`` | ``lowest``
 	
-  Default: ``False``
+  Default: ``high``
 
 --matcher-neighbors <integer>
   Number of nearest images to pre-match based on GPS exif data. Set to ``0`` to skip pre-matching. Neighbors works together with Distance parameter, set both to 0 to not use pre-matching. OpenSFM uses both parameters at the same time, Bundler uses only one which has value, prefering the Neighbors parameter.
