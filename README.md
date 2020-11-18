@@ -202,6 +202,10 @@ To fetch translations from Transifex:
 ```
 tx pull --all
 ```
+or 
+```
+tx pull -l "sw,ar,es,fr,te"
+```
 
 Alternatively, you can pull only a specific language. For example:
 
