@@ -25,7 +25,7 @@ msgstr ""
 
 #: ../../../gcp.rst:3 911f0a51699040bbbac8fd6336625beb
 msgid "Ground Control Points"
-msgstr "Puntos de Control Terestre"
+msgstr "Puntos de Control Terrestre"
 
 #: ../../../gcp.rst:5 022d5bddc65e48618d8dcfa0a4c6f73d
 msgid ""
@@ -50,8 +50,8 @@ msgid ""
 "lines on a parking lot or contrasting color floor tiles, otherwise can be "
 "set using targets placed on the ground."
 msgstr ""
-"Los puntos de control del suelo se pueden colocar en estructuras existentes "
-"como esquinas de pavimento, líneas en un estacionamiento o baldosas de "
+"Los puntos de control terrestres se pueden colocar en estructuras existentes"
+" como esquinas de pavimento, líneas en un estacionamiento o baldosas de "
 "colores contrastantes; de otra manera, se pueden configurar utilizando "
 "objetivos colocados en el suelo."
 

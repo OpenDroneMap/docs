@@ -200,11 +200,11 @@ tx push --source
 To fetch translations from Transifex:
 
 ```
-tx pull --all
+tx pull --use-git-timestamps --all
 ```
 or 
 ```
-tx pull -l "sw,ar,es,fr,te"
+tx pull --use-git-timestamps -l "sw,ar,es,fr,te"
 ```
 
 Alternatively, you can pull only a specific language. For example:
