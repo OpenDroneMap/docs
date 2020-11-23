@@ -1,0 +1,128 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Language-Team: Telugu (https://www.transifex.com/americanredcross/teams/111882/te/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: te\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../../outputs.rst:2 0363274eec9a4b9c82318f91f7138fa8
+msgid "OpenDroneMap Outputs"
+msgstr ""
+
+#: ../../../outputs.rst:4 4d0105590a224be8b3366a34b3ca7dcf
+msgid "Listed below are some of the useful outputs ODM produces."
+msgstr ""
+
+#: ../../../outputs.rst:7 e4c5e56bafa147fab888836f5d3ee12d
+msgid "Point Cloud"
+msgstr ""
+
+#: ../../../outputs.rst:9 e5a47a5f7e9048b9a271385ca20dff58
+msgid ""
+"``odm_georeferencing/odm_georeferenced_model.ply/laz/csv`` -- The "
+"georeferenced point cloud in different file formats"
+msgstr ""
+
+#: ../../../outputs.rst:15 c255fdbb5e244cc59984eeb5c1411b57
+msgid ""
+"*Point cloud over State University Zanzibar, courtesy of* `Khadija Abdullah "
+"Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
+msgstr ""
+
+#: ../../../outputs.rst:19 ef280b4664614efb95892f9f3d86a3d0
+msgid "3D Textured Model"
+msgstr ""
+
+#: ../../../outputs.rst:21 83eaf395dd13452abe2885162d0d16e6
+msgid ""
+"``odm_texturing/odm_textured_model.obj`` -- The textured surface mesh "
+"``odm_texturing/odm_textured_model_geo.obj`` -- The georeferenced and "
+"textured surface mesh"
+msgstr ""
+
+#: ../../../outputs.rst:24 ac92cff17c904762b2fd054257cf64d5
+msgid ""
+"You can access the point cloud and textured meshes using MeshLab. Open "
+"MeshLab, and choose File:Import Mesh and choose your textured mesh from a "
+"location similar to the following: ``odm_texturing\\odm_textured_model.obj``"
+msgstr ""
+
+#: ../../../outputs.rst:30 f452c086297841c6b18804010bbf394d
+msgid ""
+"*Textured mesh courtesy of* `OpenDroneMap "
+"<https://twitter.com/opendronemap>`_"
+msgstr ""
+
+#: ../../../outputs.rst:33 e7762f4764a944549f8fb90991214af0
+msgid "Orthophoto"
+msgstr ""
+
+#: ../../../outputs.rst:35 55a73a43fc1e443e8f90f27c4562f1ca
+msgid ""
+"``odm_orthophoto/odm_orthphoto.png`` -- The orthophoto, but this is a simple"
+" png, which doesn't have any georeferencing information"
+msgstr ""
+
+#: ../../../outputs.rst:37 8487c7b9409e4549bdf74776d7c552b0
+msgid ""
+"``odm_orthophoto/odm_orthphoto.tif`` -- GeoTIFF Orthophoto. You can use it "
+"in QGIS as a raster layer."
+msgstr ""
+
+#: ../../../outputs.rst:43 f96d614393b3411299358ed2ac8847bd
+msgid ""
+"*Orthophoto over State University Zanzibar, courtesy of* `Khadija Abdullah "
+"Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
+msgstr ""
+
+#: ../../../outputs.rst:46 97a9f77304ae4ce487ea62415fbe0e5a
+msgid "DTM/DSM"
+msgstr ""
+
+#: ../../../outputs.rst:48 cc432c908f294d6a87d3c47274b32de8
+msgid ""
+"DTM/DSM will only be created if the ``--dtm`` or ``--dsm`` options are used."
+" See `tutorial on elevation models "
+"<https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-"
+"models>`_ for more options in creating."
+msgstr ""
+
+#: ../../../outputs.rst:50 3d6a730458b14794bf7454b4f6e119e4
+msgid "Data will be stored in:"
+msgstr ""
+
+#: ../../../outputs.rst:52 abad74d908c04802b1be22686908379e
+msgid "``odm_dem/dtm.tif``"
+msgstr ""
+
+#: ../../../outputs.rst:53 d5483e2a7881435c91539b04f55ce113
+msgid "``odm_dem/dsm.tif``"
+msgstr ""
+
+#: ../../../outputs.rst:59 879bdeaa3d8a43519e2552ae4830a3e0
+msgid ""
+"*Digital surface model over State University Zanzibar, courtesy of* `Khadija"
+" Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
+msgstr ""
+
+#: ../../../outputs.rst:62 fe6b51da6c9f47a39b7437e0cdfcee35
+msgid "List of all outputs"
+msgstr ""
+
+#: ../../../outputs.rst:109 664796b76ddc4919ad9ea2c81918aa6c
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/outputs.rst>`_"
+msgstr ""

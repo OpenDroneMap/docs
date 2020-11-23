@@ -4,6 +4,26 @@ Ground Control Points
 
 Ground control points are useful for correcting distortions in the data and referencing the data to know coordinate systems.
 
+A Ground Control Point (GCP) is a position measurement made on the ground, typically using a high precision GPS. (Toffanin 2019) 
+
+Ground control points can be set existing structures like pavement corners, lines on a parking lot or contrasting color floor tiles, otherwise can be set using targets placed on the ground. 
+
+Targets can be purchased or build with an ample variety of materials ranging from bucket lids to floor tiles.
+
+*************************************
+Recommended practices for GCP setting
+*************************************
+
+Keep ground control points visible for all camera locations. Consider the expected ground sampling distance, illumination, vegetation, buildings and all the existing obstacles. 
+
+Procure an evenly horizontal distribution of the GCPs within the project, covering high and low elevations. A minimum of 5 GCP works for most of the jobs, and for larger projects 8 – 10 are sufficient. Locate some points near the corners and others in the center, considering that GCP spacing should be larger than the image footprint so that you can’t see more than one GCP in a single image. 
+
+In order to ensure each GCP are found in at least 5 images, separate the points 10 to 30 meters from the perimeter of the project. This distance is dependent of the overlapping, so increasing overlapping should reduce the required distance from the perimeter. 
+
+***************
+GCP file format
+***************
+
 The format of the GCP file is simple.
 
 	 * The first line should contain the name of the projection used for the geo coordinates. This can be specified either as a PROJ string (e.g. ``+proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), EPSG code (e.g. ``EPSG:4326``) or as a ``WGS84 UTM <zone>[N|S]`` value (eg. ``WGS84 UTM 16N``)
@@ -80,6 +100,12 @@ Create a CSV file that includes the gcp name, northing, easting and elevation.
 Then import the CSV from the main screen and type ``+proj=utm +zone=37 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs`` in the ``EPSG/PROJ`` box.
 
 The following screen will display a map from where to select the GCPs to tag and import the respective images.
+
+**********
+References
+**********
+
+Toffanin, Piero. `Open Drone Map: The Missing Guide. <https://odmbook.com/>`_ MasseranoLabs LLC, 2019.
 
 
 `Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_

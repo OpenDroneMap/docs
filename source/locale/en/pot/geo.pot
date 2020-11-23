@@ -1,0 +1,82 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../geo.rst:3
+#: 0563bcbd52c748af8866a06b5b486c42
+msgid "Image Geolocation Files"
+msgstr ""
+
+#: ../../../geo.rst:5
+#: b3b1b7f636264519b0e60be8157352f4
+msgid "By default ODM will use the GPS information embedded in the images, if it is available. Sometimes images do not contain GPS information, or a user wishes to override the information with more accurate data (such as RTK)."
+msgstr ""
+
+#: ../../../geo.rst:7
+#: 2201f022ed724677aa5b1b59badcaa05
+msgid "Starting from ODM ``2.0`` people can supply an image geolocation file (geo) for this purpose."
+msgstr ""
+
+#: ../../../geo.rst:9
+#: 3d2e14f3f5ae438e8014ae81aab317f8
+msgid "The format of the image geolocation file is simple."
+msgstr ""
+
+#: ../../../geo.rst:11
+#: e3fc5f8924ca46dab7b2ee32c7f116fe
+msgid "The first line should contain the name of the projection used for the geo coordinates. This can be specified either as a PROJ string (e.g. ``+proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), EPSG code (e.g. ``EPSG:4326``) or as a ``WGS84 UTM <zone>[N|S]`` value (eg. ``WGS84 UTM 16N``)"
+msgstr ""
+
+#: ../../../geo.rst:12
+#: 05d202d1fc2440dcbdf68aebcd1ee590
+msgid "Subsequent lines are the image filename, X, Y & Z (optional) coordinates, the camera angles (optional, currently used only for radiometric calibration) and the horizontal/vertical accuracy (optional):"
+msgstr ""
+
+#: ../../../geo.rst:13
+#: 1054fe81584c41d29f59ee2424a08568
+msgid "Camera angles can be set to ``0`` if they are not available."
+msgstr ""
+
+#: ../../../geo.rst:14
+#: 61c28685a74f44acba7b3cbdc185dce7
+msgid "The 10th column (optional) can contain extra fields, such as a label."
+msgstr ""
+
+#: ../../../geo.rst:16
+#: 219799d71e254ead88ccc11b023e735b
+msgid "File format::"
+msgstr ""
+
+#: ../../../geo.rst:22
+#: 9117cc8740914dbb96a4d525c7502d7b
+msgid "Example::"
+msgstr ""
+
+#: ../../../geo.rst:30
+#: 479ec91cff6740768ef2d2a553f9d3e6
+msgid "If you supply a file called ``geo.txt`` then ODM will automatically detect it. If it has another name you can specify using ``--geo <path>``."
+msgstr ""
+
+#: ../../../geo.rst:32
+#: 48a7ceb6fb384dffa5fd80d13285da60
+msgid "The ``geo.txt`` file must be created in the base of your project folder."
+msgstr ""
+
+#: ../../../geo.rst:34
+#: 2e39d38eeba345119513e1f36974c888
+msgid "`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_"
+msgstr ""

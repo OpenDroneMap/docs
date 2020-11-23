@@ -127,6 +127,65 @@ Transifex has a getting [started guide for translators](https://docs.transifex.c
 
 The ODM documentation Transifex project can be found at: https://www.transifex.com/americanredcross/opendronemap_docs/
 
+The documentation uses a formatting known as [reStructuredTest (reST)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) to add links, formatting, and other styling. reST uses plain text to annotate the documentation and identify to the system how to process the different page items. Unfortunately, the translation management process doesn't hide the reST markup. It is important that you keep the reST markup when translating.
+
+There are special characters used for:
+- [Italic](https://github.com/OpenDroneMap/docs#italic)
+- [Bold](https://github.com/OpenDroneMap/docs#bold)
+- [Links](https://github.com/OpenDroneMap/docs#link)
+- [Code](https://github.com/OpenDroneMap/docs#code) (Additionally, code snippets should NOT be translated - only translate the surrounding words.)
+
+### Italic
+
+```plain
+An `italic section of text` will have a single backtick on either side.
+```
+
+Italic text needs to have a space before, then a backtick or grave accent (\`) that touches the first character of the italic text, then the italic text, then a backtick or grave accent (\`) that touches the last character of the italic text, then a space.
+
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_italic_transifex.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_italic_en.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_italic_sw.png)
+
+
+### Bold
+
+```plain
+A **bold section of text** will have double asterisks on either side.
+```
+
+Bold text needs to have a space before, then a double asterisk (`**`) that touches the first character of the bold text, then the bold text, then a double asterisk (`**`) that touches the last character of the bold text, then a space.
+
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_bold_transifex.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_bold_en.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_bold_sw.png)
+
+### Link
+
+```plain
+Check out the `ODM documentation <https://docs.opendronemap.org/>`_!
+```
+Links need to have a space before, then a backtick or grave accent (\`), then the text that will become the link on the page (in the above example: "ODM documentation"), then a space, then a less than symbol (`<`), then the complete URL, then a greater than symbol and underscore (`>_`). 
+
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_link_transifex.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_link_en.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_link_sw.png)
+
+### Code
+
+Code snippets need to have a space before, then a double backtick or grave accent (\`\`) that touches the first character of the code text, then the code text, then a double backtick or grave accent (\`\`) that touches the last character of the code text, then a space. 
+
+**NOTE:** Code snippets may be referring to specific software commands and so often should NOT be translated.
+
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code_transifex.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code_en.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code_sw.png)
+
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code2_transifex.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code2_en.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code2_es.png)
+
+
 ## Managing the translation process
 
 This project uses [Transifex](https://www.transifex.com/) and the [`transifex-client`](https://docs.transifex.com/client/introduction) tool to help people contribute translations. The `transifex-client` tool is included in the requirements.txt file and should be installed on your system during setup when you run `pip install -r requirements.txt`.
@@ -151,7 +210,11 @@ tx push --source
 To fetch translations from Transifex:
 
 ```
-tx pull --all
+tx pull --use-git-timestamps --all
+```
+or 
+```
+tx pull --use-git-timestamps -l "sw,ar,es,fr,te"
 ```
 
 Alternatively, you can pull only a specific language. For example:
@@ -166,13 +229,17 @@ To add a new language, do it through the Transifex interface and then add a new 
 
 Don't panic! Unfortunately, Transifex doesn't protect the reST notation that Sphinx uses for things like formatting and links. It's possible that during translation, some of the syntax was broken.
 
-Start up your Python virtual environment if it's not already with `source venv/bin/activate` and then try a build of the language that you're trying to update, for example:
+Start up your Python virtual environment if it's not already with `source venv/bin/activate` and then run `make allerr`. This does the same thing as `make deploy` but removes the nit-picky mode so that it logs all errors and doesn't stop the build after hitting the first one.
+
+You can also run the build for just one specific language, for example:
 
 ``` 
-sphinx-build -b html -D language='sw' source "_build/html/sw/" -nW
+sphinx-build -b html -D language='sw' source "_build/html/sw/"
 ```
 
-The `-nW` (nitpicky) flag is important. You should see an output in your console such as:
+![build errors logged to the terminal](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/sphinx-build_errors_in_terminal.png)
+
+You should see output in your console such as:
 
 ```
 Warning, treated as error:
@@ -185,7 +252,7 @@ Go to Transifex, go to the resource, and go to the string. The warning/error mes
 
 ![Transifex screen grab](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_err_transifex.png)
 
-Pull the language down (e.g. `tx pull -l sw`) and then try the build again. Unfortunately, if there is more than one error, you'll have to fix them one at a time.
+Pull the language down (for example, `tx pull -l sw`) and then try the build again.
 
 ### Questions?
 

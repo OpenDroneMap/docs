@@ -4,17 +4,17 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# danbjoseph <danbjoseph@gmail.com>, 2020
 # Khadija Abdulla <khastylez@gmail.com>, 2020
+# danbjoseph <danbjoseph@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 0.9.10\n"
+"Project-Id-Version: OpenDroneMap 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-21 17:01-0400\n"
+"POT-Creation-Date: 2020-10-05 12:56-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
-"Last-Translator: Khadija Abdulla <khastylez@gmail.com>, 2020\n"
+"Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -152,14 +152,14 @@ msgstr ""
 # 73af16f53c6b4b658517706a33eabf7f
 #: ../../../installation.rst:50
 msgid ""
-"On Ubuntu Linux 16.04 it’s feasible to run all OpenDroneMap software "
+"On Ubuntu Linux 18.04 it’s feasible to run all OpenDroneMap software "
 "natively. However, because there’s very little performance penalty for "
 "running docker on Linux and docker is straightforward to setup on this "
 "platform, we don’t recommend it. On Linux the advantages of containerization"
 " far outweigh a tiny performance penalty. With docker users also get easy "
 "one-step updates of the software, so that’s nice."
 msgstr ""
-"Katika Ubuntu Linux 16.04 inawezekana kurun OpenDroneMap software zote "
+"Katika Ubuntu Linux 18.04 inawezekana kurun OpenDroneMap software zote "
 "wenyewe. Hata hivyo, kwa sababu kuna kuongezeka ufanisi kwa kufanya kazi "
 "docker kwenye Linux na docker ina njia nyepesi ya kupangilia katika platform"
 " hii, hatushauri hio. Katika Linux ya faida ya chombo kisichozidi uwezowe "
