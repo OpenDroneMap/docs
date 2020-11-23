@@ -129,6 +129,12 @@ The ODM documentation Transifex project can be found at: https://www.transifex.c
 
 The documentation uses a formatting known as [reStructuredTest (reST)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) to add links, formatting, and other styling. reST uses plain text to annotate the documentation and identify to the system how to process the different page items. Unfortunately, the translation management process doesn't hide the reST markup. It is important that you keep the reST markup when translating.
 
+There are special characters used for:
+- [Italic](https://github.com/OpenDroneMap/docs#italic)
+- [Bold](https://github.com/OpenDroneMap/docs#bold)
+- [Links](https://github.com/OpenDroneMap/docs#link)
+- [Code](https://github.com/OpenDroneMap/docs#code) (Additionally, code snippets should NOT be translated - only translate the surrounding words.)
+
 ### Italic
 
 ```plain
@@ -174,6 +180,10 @@ Code snippets need to have a space before, then a double backtick or grave accen
 ![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code_transifex.png)
 ![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code_en.png)
 ![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code_sw.png)
+
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code2_transifex.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code2_en.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code2_es.png)
 
 
 ## Managing the translation process
