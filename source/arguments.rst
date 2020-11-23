@@ -145,7 +145,7 @@ Arguments
   Default: ``9``
 
 --mesh-samples <float ≥ 1.0>
-  Number of points per octree node.
+  Number of points per octree node. For relatively low noise, values in the range of [1-5] can be used. For noisier datasets, large values in the range of [15-20] may be employed.
   
   Default: ``1.0``
 
