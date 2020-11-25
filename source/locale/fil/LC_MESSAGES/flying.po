@@ -1,0 +1,100 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020
+# Nicole Cruz <nicole.cruz@srdp.com.ph>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: Nicole Cruz <nicole.cruz@srdp.com.ph>, 2020\n"
+"Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fil\n"
+"Plural-Forms: nplurals=2; plural=(n == 1 || n==2 || n==3) || (n % 10 != 4 || n % 10 != 6 || n % 10 != 9);\n"
+
+#: ../../../flying.rst:2 846d8a3f9d9646e5a43911942183b8c8
+msgid "Flying Tips"
+msgstr "Mga Paalala sa Pagpapalipad"
+
+#: ../../../flying.rst:4 c96becee56f94efca8b3de336db9d844
+msgid ""
+"The `Humanitarian OpenStreetMap team <https://www.hotosm.org/>`_ has "
+"guidelines on `flying for UAV mapping <https://uav-"
+"guidelines.openaerialmap.org/>`_:"
+msgstr ""
+"Ang `Humanitarian OpenStreetMap na pangkat <https://www.hotosm.org/>`_ ay "
+"may mga patnubay tungkol sa 'pagpapalipad ng UAV mapping <https://uav-"
+"guidelines.openaerialmap.org/>`_:"
+
+#: ../../../flying.rst:6 4a6f4c2edee741ddac135447436976f7
+msgid ""
+"`Choosing the right UAV <https://uav-guidelines.openaerialmap.org/pages/05"
+"-choosing-the-right-uav/>`_"
+msgstr ""
+"'Pagpili ng nararapat na UAV <https://uav-"
+"guidelines.openaerialmap.org/pages/05-choosing-the-right-uav/>`_"
+
+#: ../../../flying.rst:8 fe7f09d545684117aba61ff9860a51d2
+msgid ""
+"`Choosing the right sensor <https://uav-"
+"guidelines.openaerialmap.org/pages/06-choosing-the-sensor/>`_"
+msgstr ""
+"`Pagpili ng tamang sensor <https://uav-guidelines.openaerialmap.org/pages/06"
+"-choosing-the-sensor/>`_"
+
+#: ../../../flying.rst:10 6c7947d1197147df9d63e165d11924cb
+msgid ""
+"`Mission preparation <https://uav-guidelines.openaerialmap.org/pages/07"
+"-preparing-for-the-uav-mission/>`_"
+msgstr ""
+"`Preparasiyon para sa misyon <https://uav-"
+"guidelines.openaerialmap.org/pages/07-preparing-for-the-uav-mission/>`_"
+
+#: ../../../flying.rst:12 9b557a1da5cc46af807bcaaa6faee6dd
+msgid ""
+"The guidelines are intended for drone mapping projects on islands, but have "
+"general use for all drone mappers."
+msgstr ""
+"Ang mga nailahad na patnubay ay nilalayon sa paggamit ng drone mapping ng "
+"mga isla, ngunit ito rin ay magagamit bilang pangkalahatan na sanggunian ng "
+"mga drone mappers."
+
+#: ../../../flying.rst:14 44b1eacc4ff2499a8a4e74651b9443e1
+msgid ""
+"See also DroneDeploy's guide on `Making Successful Maps "
+"<https://support.dronedeploy.com/docs/making-successful-maps>`_, which "
+"provides great tips on mission planning."
+msgstr ""
+"Maaari lamang na tingnan din and patnubay ng DroneDeploy sa `Paggawa ng "
+"matagumpay na mapa <https://support.dronedeploy.com/docs/making-successful-"
+"maps>`_, ito ay nagbibigay ng mga karagdagang kaalaman tungkol sa pagpaplano"
+" ng nga misyon."
+
+#: ../../../flying.rst:16 790dc47dea524f9589ab6de072d0febc
+msgid ""
+"Finally, lens distortion is a challenge in projects requiring accurate 3D "
+"data. See our section in these docs on `Camera Calibration <tutorials.html"
+"#calibrating-the-camera>`_."
+msgstr ""
+"Ang pagbaluktot dahil sa lente ay isang hamon sa mga proyekto na "
+"nangangailangan ng tumpak na datos ng 3D. Tingnan ang aming seksyon sa mga "
+"dokumentong ito sa `Camera Calibration <tutorials.html # calibrating-the-"
+"camera>` _."
+
+#: ../../../flying.rst:18 96453509d0ed4fcf97681fe2c9bb7385
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/flying.rst>`_"
+msgstr ""
+"`Tumulong sa pagayos ng mga dokumentong ito! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_"

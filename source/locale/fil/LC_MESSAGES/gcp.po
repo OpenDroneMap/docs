@@ -1,0 +1,322 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Nicole Cruz <nicole.cruz@srdp.com.ph>, 2020
+# Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020\n"
+"Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fil\n"
+"Plural-Forms: nplurals=2; plural=(n == 1 || n==2 || n==3) || (n % 10 != 4 || n % 10 != 6 || n % 10 != 9);\n"
+
+#: ../../../gcp.rst:3 911f0a51699040bbbac8fd6336625beb
+msgid "Ground Control Points"
+msgstr "Ground Control Points"
+
+#: ../../../gcp.rst:5 022d5bddc65e48618d8dcfa0a4c6f73d
+msgid ""
+"Ground control points are useful for correcting distortions in the data and "
+"referencing the data to know coordinate systems."
+msgstr ""
+"Ang mga GCP ay kapaki-pakinabang para sa pagwawasto ng mga pagbaluktot sa "
+"datos at pagtukoy sa datos upang malaman ang mga coordinate system."
+
+#: ../../../gcp.rst:7 ad17511e7ca64fbda395e4f953e80eea
+msgid ""
+"A Ground Control Point (GCP) is a position measurement made on the ground, "
+"typically using a high precision GPS. (Toffanin 2019)"
+msgstr ""
+"Ang Ground Control Point (GCP) ay isang pagsukat sa posisyon na ginawa sa "
+"lupa, karaniwang ginagamitan ng isang mataas na katumpakan na GPS. (Toffanin"
+" 2019)"
+
+#: ../../../gcp.rst:9 3ea9ac611d3a42a78eb928b9cebb8fe7
+msgid ""
+"Ground control points can be set existing structures like pavement corners, "
+"lines on a parking lot or contrasting color floor tiles, otherwise can be "
+"set using targets placed on the ground."
+msgstr ""
+"Ang mga GCP ay maaaring itakda sa mga istraktura tulad ng mga sulok ng "
+"simento, mga linya sa isang paradahan o mga tile sa sahig na nagsasalitan "
+"ang kulay, kung hindi man ay maitatakda gamit ang mga target na nakalagay sa"
+" lupa."
+
+#: ../../../gcp.rst:11 7e9458665b944639b07049fb14aaa585
+msgid ""
+"Targets can be purchased or build with an ample variety of materials ranging"
+" from bucket lids to floor tiles."
+msgstr ""
+"Maaaring mabili o gumawa ang mga target gamit ang samut-saring mga "
+"materyales tuland ng mga takip ng timba at ng mga tile sa sahig."
+
+#: ../../../gcp.rst:15 58d694776d2944069f23706d57db7f03
+msgid "Recommended practices for GCP setting"
+msgstr "Mga nirerekumendang gawi para sa paglagay ng GCP"
+
+#: ../../../gcp.rst:17 be9453643db74c3dbce9cb60114879b8
+msgid ""
+"Keep ground control points visible for all camera locations. Consider the "
+"expected ground sampling distance, illumination, vegetation, buildings and "
+"all the existing obstacles."
+msgstr ""
+"Panatilihing nakikita ang mga GCP para sa lahat ng mga lokasyon ng camera. "
+"Isaalang-alang ang inaasahang  ng lupa, pag-iilaw, halaman,ground sampling "
+"distance, mga gusali at lahat ng mga hadlang."
+
+#: ../../../gcp.rst:19 b8ca322401f44845bcd07bab7d07c0a6
+msgid ""
+"Procure an evenly horizontal distribution of the GCPs within the project, "
+"covering high and low elevations. A minimum of 5 GCP works for most of the "
+"jobs, and for larger projects 8 – 10 are sufficient. Locate some points near"
+" the corners and others in the center, considering that GCP spacing should "
+"be larger than the image footprint so that you can’t see more than one GCP "
+"in a single image."
+msgstr ""
+"Kumuha ng pantay-pantay na distribusyon ng GCPs sa loob ng proyekto, na "
+"sinasakupan ang mataas at mababa na elevation. Ang pinakamaliit na value na "
+"pwede ay 5 GCP para sa mga karaniwan na trabaho. Para naman sa malalaking "
+"proyekto, ang 8-10 ay sapat na. I-locate ang mga points na malapit sa mga "
+"kanto at ang iba naman ay sa gitna habang isinasangalang-alang ang GCP na "
+"dapat ay mas malalaki kesa sa image footprint para mas makakita ng mahigit "
+"sa isang GCP sa isang imahe."
+
+#: ../../../gcp.rst:21 ac223f7550cd411da9e36fd8784fba34
+msgid ""
+"In order to ensure each GCP are found in at least 5 images, separate the "
+"points 10 to 30 meters from the perimeter of the project. This distance is "
+"dependent of the overlapping, so increasing overlapping should reduce the "
+"required distance from the perimeter."
+msgstr ""
+"Para masiguro na lahat ng GCP ay makikita sa 5 na imahe, ihiwalay ang points"
+" 10 to 30 meters mula sa perimeter ng proyekto. Ang distansiya na ito ay "
+"dependent sa overlapping, kung kaya ang pagdagdag ng overlapping ay "
+"makakabawas sa required na distansiya mula sa perimeter."
+
+#: ../../../gcp.rst:25 7e516e234f5d48b6bdf2452c90949a1e
+msgid "GCP file format"
+msgstr "GCP file format"
+
+#: ../../../gcp.rst:27 8452104a74d646fd98667e75940154f9
+msgid "The format of the GCP file is simple."
+msgstr "Ang format ng GCP file ay simple lamang."
+
+#: ../../../gcp.rst:29 dce0e96292f14671b20009aff56908eb
+msgid ""
+"The first line should contain the name of the projection used for the geo "
+"coordinates. This can be specified either as a PROJ string (e.g. ``+proj=utm"
+" +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), EPSG code (e.g. "
+"``EPSG:4326``) or as a ``WGS84 UTM <zone>[N|S]`` value (eg. ``WGS84 UTM "
+"16N``)"
+msgstr ""
+"Ang projection para sa geo coordinates ay dapat na mapunta sa unang linya. "
+"Eto ay maaaring matukoy bilang PROJ string (e.g. ``+proj=utm +zone=10 "
+"+ellps=WGS84 +datum=WGS84 +units=m +no_defs``), EPSG code (e.g. "
+"``EPSG:4326``) o bilang ``WGS84 UTM 1[N|S]`` value (eg. ``WGS84 UTM 16N``)"
+
+#: ../../../gcp.rst:30 b2b962c0b86148d0baa20170f21a4809
+msgid ""
+"Subsequent lines are the X, Y & Z coordinates, your associated pixels, the "
+"image filename and optional extra fields, separated by tabs or spaces:"
+msgstr ""
+"Ang mga subsequent lines na  X, Y & Z coordinates, ang associated pixels, "
+"ang image filename at optional extra fields, hiwalay by tabs o space."
+
+#: ../../../gcp.rst:31 b14a4632f09d452987da341b4761ee93
+msgid "Elevation values can be set to \"NaN\" to indicate no value"
+msgstr ""
+"Ang elevation values ay mase-set sa \"NaN\" para ma-indicate na ito ay "
+"walang value."
+
+#: ../../../gcp.rst:32 326fc2b4a246402887eec024ee7dc44b
+msgid "The 7th column (optional) typically contains the label of the GCP."
+msgstr "Ang ika-7 na column (optional) ay madalas naglalaman ng label ng GCP."
+
+#: ../../../gcp.rst:34 7e516e234f5d48b6bdf2452c90949a1e
+msgid "GCP file format::"
+msgstr "GCP file format::"
+
+#: ../../../gcp.rst:40 cfc779a9cd644757ac87736911a5cb2c
+msgid "Example::"
+msgstr "Halimbawa::"
+
+#: ../../../gcp.rst:47 af0d955959494dfea9d3d9efbb90d333
+msgid ""
+"If you supply a GCP file called ``gcp_list.txt`` then ODM will automatically"
+" detect it. If it has another name you can specify using ``--gcp <path>``. "
+"If you have a gcp file and want to do georeferencing with exif instead, then"
+" you can specify ``--use-exif``. If you have high precision GPS measurements"
+" in your images (RTK) and want to use that information along with a gcp "
+"file, you can specify ``--force-gps``."
+msgstr ""
+"Kung ikaw ay nagsupply ng GCP file na tinatawag na  ang ODM ay automatic na "
+"madedetect ito. Kung ito naman ay may ibang pangalan, maaari mong maspecify "
+"ito gamit ang ``--gcp 1``. Kung ikaw ay may gcp file at nais gumawa ng "
+"georeferencing sa exif, pwede mong i-specify ang ``--use-exif``. Kung ikaw "
+"naman ay may high precision GPS na sukat sa iyong imahe (RTK) at gustong "
+"gamiting ang impormasyon na ito kasama ng gcp file, pwede mo itong i-specify"
+" bilang ``--force-gps``."
+
+#: ../../../gcp.rst:49 bbde94c6d77e4ebcb74ecec6b26d4752
+msgid ""
+"`This post has some information about placing Ground Control Targets before "
+"a flight <http://diydrones.com/profiles/blogs/ground-control-points-gcps-"
+"for-aerial-photography>`_, but if you already have images, you can find your"
+" own points in the images post facto. It's important that you find high-"
+"contrast objects that are found in **at least** 3 photos, and that you find "
+"a minimum of 5 objects."
+msgstr ""
+"`Ang post na ito ay may impormasyon tungkol sa paglagay ng Ground Control "
+"Targets bago ang paglipad <http://diydrones.com/profiles/blogs/ground-"
+"control-points-gcps-for-aerial-photography>`_, ngutin kung ikaw ay meroon ng"
+" mga imahe, makikita ang mga points sa imahe post facto. Importante na "
+"humanap ng high-contrast objects na makikita sa **at least** 3 litrato, at "
+"makakakita ng minimum na 5 objoects."
+
+#: ../../../gcp.rst:51 6b99ba39e0ba4be98be0cf9089458f19
+msgid ""
+"Sharp corners are good picks for GCPs. You should also place/find the GCPs "
+"evenly around your survey area."
+msgstr ""
+"Ang sharp corners ay magandang option para sa GCPs. DApat ilagay/hanapin ang"
+" GCPs ng pantay pantay sa paligid ng isu-survey na area."
+
+#: ../../../gcp.rst:53 2022c1e3d9074c80bc5988fb77630231
+msgid ""
+"The ``gcp_list.txt`` file must be created in the base of your project "
+"folder."
+msgstr "Ang ``gcp_list.txt`` file ay dapat gawin sa base ng project folder."
+
+#: ../../../gcp.rst:55 d053ffc6a0b44e60be90864b1d0ad399
+msgid ""
+"For good results your file should have a minimum of 15 lines after the "
+"header (5 points with 3 images to each point)."
+msgstr ""
+"Para sa mas magandang resulta, ang iyong file ay dapat na magkaroon ng "
+"minimum na 15 na linya pagkatapos ng header (5 points na may 3 imahe kada "
+"point)."
+
+#: ../../../gcp.rst:59 9712bfa7df5343f8b383155a9eee015c
+msgid "User Interfaces"
+msgstr "User Interfaces"
+
+#: ../../../gcp.rst:61 58a11feafc7641fca1250a9e80a9e9a2
+msgid "You can use one of two user interfaces for creating GCP files:"
+msgstr ""
+"Maaaring gumamit ng isa or dalawang user interfaces para sa paggawa ng GCP "
+"files:"
+
+#: ../../../gcp.rst:63 84afe5e0d2964247b972da99da981b86
+msgid "`POSM GCPi <https://github.com/posm/posm-gcpi>`_"
+msgstr "`POSM GCPi <https://github.com/posm/posm-gcpi>`_"
+
+#: ../../../gcp.rst:64 60450f4c04ca4bac9bd654bd2ba83c35
+msgid "`GCP Editor Pro <https://github.com/uav4geo/GCPEditorPro>`_"
+msgstr "`GCP Editor Pro <https://github.com/uav4geo/GCPEditorPro>`_"
+
+#: ../../../gcp.rst:68 397f2777c59948cc8c50fe7aaee405e1
+msgid "POSM GCPi"
+msgstr "POSM GCPi"
+
+#: ../../../gcp.rst:70 927593a77dc84e74b137c4d439df6825
+msgid ""
+"The POSM GCPi is loaded by default on WebODM. An example is available at "
+"`the WebODM Demo <http://demo.webodm.org/plugins/posm-gcpi/>`_. To use this "
+"with known ground control XYZ values, one would do the following:"
+msgstr ""
+"Ang POSM GCPi ay loaded by default sa WebODM. Isang halimbawa dito ay "
+"mahahanap sa `the WebODM Demo <http://demo.webodm.org/plugins/posm-gcpi/>`_."
+" Para gamitin ito sa ground control XYZ values, dapat gawin ang mga "
+"sumusunod:"
+
+#: ../../../gcp.rst:72 b9a43cb0966f427fae9039e6aa420d36
+msgid ""
+"Create a GCP list that only includes gcp name (this is the label that will "
+"be seen in the GCP interface), x, y, and z, with a header with a proj4 "
+"string of your GCPs (make sure they are in a planar coordinate system, such "
+"as UTM. It should look something like this:"
+msgstr ""
+"Gumawa ng GCP na listahan na may kasamang gcp names (ito ang label na "
+"makikita sa GCP interface), x, y, and z, na may header na proj4 string sa "
+"GCPs (siguraduhin na may planar coordinate system tulad ng UTM. Ganito ang "
+"magiging itsura dapat:"
+
+#: ../../../gcp.rst:83 c193a1ce8f7a4da2b796010be7fc9521
+msgid ""
+"Then one can load this GCP list into the interface, load the images, and "
+"place each of the GCPs in the image."
+msgstr ""
+"Pwedeng i-load ang GCP list sa interface, i-load ang imahe, at ilagay ang "
+"mga GPCs sa imahe."
+
+#: ../../../gcp.rst:87 ece94c1e7c6c44698893e57cf6c10c92
+msgid "GCP Editor Pro"
+msgstr "GCP Editor Pro"
+
+#: ../../../gcp.rst:89 31a2f2c5d1614505b9b11f063ed8f8af
+msgid ""
+"This app needs to be installed separately or can be loaded as a WebODM "
+"plugin from `https://github.com/uav4geo/GCPEditorPro "
+"<https://github.com/uav4geo/GCPEditorPro>`_"
+msgstr ""
+"Ang aplikasyon na ito ay dapat i-install ng hiwalay o di kaya naman ay "
+"pwedeng i-load bilang WebODM plugin mula sa "
+"`https://github.com/uav4geo/GCPEditorPro "
+"<https://github.com/uav4geo/GCPEditorPro>`_"
+
+#: ../../../gcp.rst:91 400a7b772b064992b58e256c4a86d802
+msgid ""
+"Create a CSV file that includes the gcp name, northing, easting and "
+"elevation."
+msgstr ""
+"Gumawa ng CSV file na kasama ang GCP name, northing, easting and elevation."
+
+#: ../../../gcp.rst:100 e3be97e2b1d442f99df0adde4e1752cb
+msgid ""
+"Then import the CSV from the main screen and type ``+proj=utm +zone=37 "
+"+south +ellps=WGS84 +datum=WGS84 +units=m +no_defs`` in the ``EPSG/PROJ`` "
+"box."
+msgstr ""
+"I-import ang CSV mula sa main screen at i-type ang ``+proj=utm +zone=37 "
+"+south +ellps=WGS84 +datum=WGS84 +units=m +no_defs`` mula sa ``EPSG/PROJ`` "
+"box."
+
+#: ../../../gcp.rst:102 e90ba38338ef409792e454d071bbcc16
+msgid ""
+"The following screen will display a map from where to select the GCPs to tag"
+" and import the respective images."
+msgstr ""
+"Ang susunod na screen ay magdi-display ng map kung saan pipiliin ang GCPs "
+"para ma-tag at ma-import ang mga imahe."
+
+#: ../../../gcp.rst:106 9712bfa7df5343f8b383155a9eee015c
+msgid "References"
+msgstr "References"
+
+#: ../../../gcp.rst:108 00d0a4cc5f3441b09095b9e4c3d1805f
+msgid ""
+"Toffanin, Piero. `Open Drone Map: The Missing Guide. "
+"<https://odmbook.com/>`_ MasseranoLabs LLC, 2019."
+msgstr ""
+"Toffanin, Piero. `Open Drone Map: The Missing Guide. "
+"<https://odmbook.com/>`_ MasseranoLabs LLC, 2019."
+
+#: ../../../gcp.rst:111 23911fa0503e4bb58ddc99f41c10b797
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_"
+msgstr ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_"
