@@ -87,6 +87,10 @@ source venv/bin/activate
 pip install -r requirements.txt
 ```
 
+After running `source venv/bin/activate` there should be some indication that the Python virtual environment is active (see the `(venv)` that appears at the start of terminal prompt in the screengrab below). **Note:** The next time you can `cd` into the docs folder and just run `source venv/bin/activate`. There should be no need to rerun the `pip install` and `virtualenv` commands.
+
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/terminal_venv.png)
+
 Then if there are no errors, run:
 
 ```
