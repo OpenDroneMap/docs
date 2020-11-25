@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-26 14:39-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020\n"
 "Language-Team: Telugu (https://www.transifex.com/americanredcross/teams/111882/te/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +23,7 @@ msgstr ""
 
 #: ../../../large.rst:4 5ea5942cc4604baea3dc66a4ee841282
 msgid "Splitting Large Datasets"
-msgstr ""
+msgstr "పెద్ద డేటాసెట్లను విభజించడం"
 
 #: ../../../large.rst:6 09b5af17439740d2b8a18993e6709da6
 msgid ""
@@ -28,6 +32,10 @@ msgid ""
 "chunk, and then producing merged DEMs, orthophotos and point clouds. The "
 "process is referred to as \"split-merge\"."
 msgstr ""
+"ODM సంస్కరణ `` 0.6.0`` తో ప్రారంభించి, మీరు చాలా పెద్ద డేటాసెట్లను "
+"నిర్వహించదగిన భాగాలుగా విభజించవచ్చు (సబ్‌మోడల్స్ అని పిలుస్తారు), ప్రతి భాగం"
+" పైప్‌లైన్‌ను నడుపుతుంది, ఆపై విలీనం చేసిన DEM లు, ఆర్థోఫోటోలు మరియు పాయింట్"
+" మేఘాలను ఉత్పత్తి చేస్తుంది. ఈ ప్రక్రియను \"స్ప్లిట్-విలీనం\" గా సూచిస్తారు."
 
 #: ../../../large.rst:8 0c58eb496d8d456ca011011549f430a8
 msgid ""
@@ -38,6 +46,12 @@ msgid ""
 "submodels in parallel, thus allowing for horizontal scaling and processing "
 "thousands of images more quickly."
 msgstr ""
+"మీరు స్ప్లిట్-విలీన పైప్‌లైన్‌ను ఎందుకు ఉపయోగించవచ్చు? మీ డేటాసెట్‌లో మీకు "
+"చాలా ఎక్కువ సంఖ్యలో చిత్రాలు ఉంటే, స్ప్లిట్-విలీనం పెద్ద మెషీన్‌లో "
+"ప్రాసెసింగ్‌ను మరింత నిర్వహించగలిగేలా చేస్తుంది (దీనికి తక్కువ మెమరీ అవసరం)."
+" ఒకే నెట్‌వర్క్‌తో అనుసంధానించబడిన అనేక యంత్రాలు మీకు ఉంటే, మీరు "
+"సబ్‌మోడల్‌లను సమాంతరంగా ప్రాసెస్ చేయవచ్చు, తద్వారా క్షితిజ సమాంతర స్కేలింగ్ "
+"మరియు వేలాది చిత్రాలను మరింత త్వరగా ప్రాసెస్ చేయడానికి అనుమతిస్తుంది."
 
 #: ../../../large.rst:10 d3a6bf47796e4775bfb53066d0d51dce
 msgid ""

@@ -4,8 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020
 # danbjoseph <danbjoseph@gmail.com>, 2020
+# Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-26 14:39-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
-"Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
+"Last-Translator: Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020\n"
 "Language-Team: Telugu (https://www.transifex.com/americanredcross/teams/111882/te/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -57,10 +57,12 @@ msgid ""
 "Targets can be purchased or build with an ample variety of materials ranging"
 " from bucket lids to floor tiles."
 msgstr ""
+"లక్ష్యాలను బకెట్ మూతలు నుండి నేల పలకలు వరకు అనేక రకాల పదార్థాలతో కొనుగోలు "
+"చేయవచ్చు లేదా నిర్మించవచ్చు."
 
 #: ../../../gcp.rst:15 58d694776d2944069f23706d57db7f03
 msgid "Recommended practices for GCP setting"
-msgstr ""
+msgstr "జిసిపి సెట్టింగ్ కోసం సిఫార్సు చేసిన పద్ధతులు"
 
 #: ../../../gcp.rst:17 be9453643db74c3dbce9cb60114879b8
 msgid ""
@@ -68,6 +70,9 @@ msgid ""
 "expected ground sampling distance, illumination, vegetation, buildings and "
 "all the existing obstacles."
 msgstr ""
+"అన్ని కెమెరా స్థానాల కోసం గ్రౌండ్ కంట్రోల్ పాయింట్లను కనిపించేలా ఉంచండి. "
+"Ground హించిన భూమి నమూనా దూరం, ప్రకాశం, వృక్షసంపద, భవనాలు మరియు ప్రస్తుతం "
+"ఉన్న అన్ని అడ్డంకులను పరిగణించండి."
 
 #: ../../../gcp.rst:19 b8ca322401f44845bcd07bab7d07c0a6
 msgid ""
@@ -78,6 +83,11 @@ msgid ""
 "be larger than the image footprint so that you can’t see more than one GCP "
 "in a single image."
 msgstr ""
+"అధిక మరియు తక్కువ ఎత్తులను కప్పి, ప్రాజెక్ట్‌లోని జిసిపిల సమాన సమాంతర "
+"పంపిణీని సేకరించండి. చాలా ఉద్యోగాలకు కనీసం 5 జిసిపి పనిచేస్తుంది, మరియు "
+"పెద్ద ప్రాజెక్టులకు 8 - 10 సరిపోతాయి. GCP అంతరం చిత్ర పాదముద్ర కంటే "
+"పెద్దదిగా ఉండాలని భావించి, మూలల్లో మరియు మధ్యలో కొన్ని పాయింట్లను "
+"గుర్తించండి, తద్వారా మీరు ఒకే చిత్రంలో ఒకటి కంటే ఎక్కువ GCP ని చూడలేరు."
 
 #: ../../../gcp.rst:21 ac223f7550cd411da9e36fd8784fba34
 msgid ""
@@ -86,10 +96,14 @@ msgid ""
 "dependent of the overlapping, so increasing overlapping should reduce the "
 "required distance from the perimeter."
 msgstr ""
+"ప్రతి జిసిపి కనీసం 5 చిత్రాలలో కనబడుతుందని నిర్ధారించడానికి, ప్రాజెక్ట్ "
+"చుట్టుకొలత నుండి 10 నుండి 30 మీటర్ల పాయింట్లను వేరు చేయండి. ఈ దూరం "
+"అతివ్యాప్తిపై ఆధారపడి ఉంటుంది, కాబట్టి అతివ్యాప్తి పెరగడం చుట్టుకొలత నుండి "
+"అవసరమైన దూరాన్ని తగ్గిస్తుంది."
 
 #: ../../../gcp.rst:25 7e516e234f5d48b6bdf2452c90949a1e
 msgid "GCP file format"
-msgstr ""
+msgstr "GCP ఫైల్ ఫార్మాట్ "
 
 #: ../../../gcp.rst:27 8452104a74d646fd98667e75940154f9
 msgid "The format of the GCP file is simple."
