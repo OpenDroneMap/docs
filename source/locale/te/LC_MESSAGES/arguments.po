@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-18 09:25-0500\n"
+"POT-Creation-Date: 2020-11-25 08:47-0500\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020\n"
 "Language-Team: Telugu (https://www.transifex.com/americanredcross/teams/111882/te/)\n"
@@ -27,28 +27,30 @@ msgstr "ఎంపికలు మరియు ఫ్లాగ్స్"
 
 #: ../../../arguments.rst:7 22dcd4f93de143d4be348424b5141abe
 msgid "Arguments"
-msgstr ""
+msgstr "ఆర్గుమెంట్స్"
 
 #: ../../../arguments.rst:10 5bf00306225e4afa8acc0ae52e820ffa
 msgid "Show help message and exit."
-msgstr ""
+msgstr "సహాయ సందేశాన్ని చూపించి నిష్క్రమించండి."
 
 #: ../../../arguments.rst:13 a1296b7297cb4362997eb832a4df44e6
 msgid "Path to input images."
-msgstr ""
+msgstr "చిత్రాలను ఇన్పుట్ చేయడానికి మార్గం."
 
 #: ../../../arguments.rst:16 37df17e52b914b818d46a0c89b4f1ad4
 msgid "Path to the project folder."
-msgstr ""
+msgstr "ప్రాజెక్ట్ ఫోల్డర్‌కు మార్గం."
 
 #: ../../../arguments.rst:19 81b4ca1825f34d81bb833d45ec323fea
 msgid ""
 "Resizes images by the largest side for opensfm. Set to ``-1`` to disable."
 msgstr ""
+"Openfm కోసం అతిపెద్ద వైపు చిత్రాలను పున izes పరిమాణం చేస్తుంది. "
+"నిలిపివేయడానికి `` -1`` కు సెట్ చేయండి."
 
 #: ../../../arguments.rst:21 296ffc1175094be5b9ba9414fbe9ba27
 msgid "Default: ``2048``"
-msgstr ""
+msgstr "డిఫాల్ట్: ``2048``"
 
 #: ../../../arguments.rst:24 ../../../arguments.rst:32
 #: ../../../arguments.rst:40 0ba8d09f4960491984c531e8c335e737
@@ -58,6 +60,9 @@ msgid ""
 "``odm_filterpoints`` | ``odm_meshing`` | ``mvs_texturing`` | "
 "``odm_georeferencing`` | ``odm_dem`` | ``odm_orthophoto``"
 msgstr ""
+"ఎంపికలు: `` డేటాసెట్`` | `` స్ప్లిట్`` | `` విలీనం`` | `` ఓపెన్‌ఎఫ్‌ఎమ్`` | "
+"`` mve`` | `` odm_filterpoints`` | `` odm_meshing`` | `` mvs_texturing`` | "
+"`` odm_georeferencing`` | `` odm_dem`` | `` odm_orthophoto``"
 
 #: ../../../arguments.rst:29 762d8ff9c3b94ba6a7f0786bc7636272
 msgid ""
@@ -65,38 +70,47 @@ msgid ""
 " added when running in WebODM and useful for creating the correct directory "
 "structure when running on NodeODM or command line for import into WebODM."
 msgstr ""
+"ఎంట్వైన్ పాయింట్ క్లౌడ్‌ను ఉత్పత్తి చేస్తుంది. వెబ్‌ఓడిఎమ్‌లో "
+"నడుస్తున్నప్పుడు ఈ జెండా స్వయంచాలకంగా జతచేయబడుతుంది మరియు వెబ్‌ఓడిఎమ్‌లోకి "
+"దిగుమతి కోసం నోడ్ఓడిఎమ్ లేదా కమాండ్ లైన్‌లో నడుస్తున్నప్పుడు సరైన డైరెక్టరీ "
+"నిర్మాణాన్ని సృష్టించడానికి ఉపయోగపడుతుంది."
 
 #: ../../../arguments.rst:37 dc45a84aa0ec40d48e3443c426129216
 msgid "Force rerun of all tasks."
-msgstr ""
+msgstr "అన్ని పనులను తిరిగి ప్రారంభించండి."
 
 #: ../../../arguments.rst:45 9d06f59e5740440e91ad0f2236d658a4
 msgid "Projection used to transform the model into geographic coordinates."
-msgstr ""
+msgstr "మోడల్‌ను భౌగోళిక కోఆర్డినేట్‌లుగా మార్చడానికి ఉపయోగించే ప్రొజెక్షన్."
 
 #: ../../../arguments.rst:48 2a7871f5589e456d9b5fcc7a8a9020ce
 msgid ""
 "Minimum number of features to extract per image. More features leads to "
 "better results but slower execution."
 msgstr ""
+"ప్రతి చిత్రానికి సంగ్రహించడానికి కనీస సంఖ్య లక్షణాలు. మరిన్ని లక్షణాలు మంచి "
+"ఫలితాలకు దారితీస్తాయి కాని నెమ్మదిగా అమలు చేస్తాయి."
 
 #: ../../../arguments.rst:50 59109fac84e543a8be486179ed45f5e1
 msgid "Default: ``8000``"
-msgstr ""
+msgstr "డిఫాల్ట్: ``8000``"
 
 #: ../../../arguments.rst:53 1307a9ff8ab1493aaf883db2b1801f32
 msgid ""
 "Set feature extraction quality. Higher quality generates better features, "
 "but requires more memory and takes longer."
 msgstr ""
+"ఫీచర్ వెలికితీత నాణ్యతను సెట్ చేయండి. అధిక నాణ్యత మంచి లక్షణాలను ఉత్పత్తి "
+"చేస్తుంది, కానీ ఎక్కువ మెమరీ అవసరం మరియు ఎక్కువ సమయం పడుతుంది."
 
 #: ../../../arguments.rst:55 faa596867966454081ab3acf1c08c2b5
 msgid "Options: ``ultra`` | ``high`` | ``medium`` | ``low`` | ``lowest``"
 msgstr ""
+"ఎంపికలు: `` అల్ట్రా`` | `` అధిక`` | `` మీడియం`` | `` తక్కువ`` | `` అత్యల్ప``"
 
 #: ../../../arguments.rst:57 f48456d917dc4fe293ec9de5378245d8
 msgid "Default: ``high``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` అధిక``"
 
 #: ../../../arguments.rst:60 bf8055bdda8d44ddb0c8348371fbe36c
 msgid ""
@@ -106,26 +120,37 @@ msgid ""
 "time, Bundler uses only one which has value, prefering the Neighbors "
 "parameter."
 msgstr ""
+"GPS ఎగ్జిఫ్ డేటా ఆధారంగా ప్రీ-మ్యాచ్ చేయడానికి సమీప చిత్రాల సంఖ్య. ముందస్తు "
+"సరిపోలికను దాటవేయడానికి `` 0`` కు సెట్ చేయండి. పొరుగువారు దూర పరామితితో "
+"కలిసి పనిచేస్తారు, ముందస్తు సరిపోలికను ఉపయోగించకుండా రెండింటినీ 0 గా సెట్ "
+"చేయండి. OpenSFM రెండు పారామితులను ఒకేసారి ఉపయోగిస్తుంది, బండ్లర్ విలువను "
+"కలిగి ఉన్న ఒకదాన్ని మాత్రమే ఉపయోగిస్తుంది, నైబర్స్ పరామితికి ప్రాధాన్యత "
+"ఇస్తుంది."
 
 #: ../../../arguments.rst:62 99db7bbf5b844d28952836a394e84dce
 msgid "Default: ``8``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` 8``"
 
 #: ../../../arguments.rst:65 8c651291470445e1ae0faa1db8cd2853
 msgid ""
 "Distance threshold in meters to find pre-matching images based on GPS exif "
 "data. Set both ``matcher-neighbors`` and this to ``0`` to skip pre-matching."
 msgstr ""
+"GPS ఎగ్జిఫ్ డేటా ఆధారంగా ప్రీ-మ్యాచింగ్ చిత్రాలను కనుగొనడానికి మీటర్లలో దూర "
+"ప్రవేశం. ముందస్తు సరిపోలికను దాటవేయడానికి `` సరిపోలిక-పొరుగువారి`` మరియు ఇది"
+" `` 0`` కు సెట్ చేయండి."
 
 #: ../../../arguments.rst:67 99db7bbf5b844d28952836a394e84dce
 msgid "Default: ``0``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` 0``"
 
 #: ../../../arguments.rst:70 f0a500ac7c3843c88e988e7955ef8f8b
 msgid ""
 "Turn off camera parameter optimization during bundler. Off by default unless"
 " ``--camera`` parameter used."
 msgstr ""
+"బండ్లర్ సమయంలో కెమెరా పారామితి ఆప్టిమైజేషన్‌ను ఆపివేయండి. `` - కెమెరా`` "
+"పరామితి ఉపయోగించకపోతే డిఫాల్ట్‌గా ఆఫ్."
 
 #: ../../../arguments.rst:73 de4fe5a4a091417c819c08966866004a
 msgid ""
@@ -133,16 +158,20 @@ msgid ""
 "geometric undistortion. By default the application tries to determine a lens"
 " type from the images metadata."
 msgstr ""
+"కెమెరా ప్రొజెక్షన్ రకాన్ని సెట్ చేయండి. విలువను మాన్యువల్‌గా సెట్ చేయడం "
+"రేఖాగణిత తొలగింపును మెరుగుపరచడంలో సహాయపడుతుంది. డిఫాల్ట్‌గా అనువర్తనం "
+"చిత్రాల మెటాడేటా నుండి లెన్స్ రకాన్ని నిర్ణయించడానికి ప్రయత్నిస్తుంది."
 
 #: ../../../arguments.rst:75 faa596867966454081ab3acf1c08c2b5
 msgid ""
 "Options: ``auto`` | ``perspective`` | ``brown`` | ``fisheye`` | "
 "``spherical``"
 msgstr ""
+"ఎంపికలు: `` ఆటో`` | `` దృక్పథం`` | `` బ్రౌన్`` | `` ఫిషీ`` | `` గోళాకార``"
 
 #: ../../../arguments.rst:77 f48456d917dc4fe293ec9de5378245d8
 msgid "Default: ``auto``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` ఆటో``"
 
 #: ../../../arguments.rst:80 0946c0a572ac4cf1a2a47e697b30e69c
 msgid ""
@@ -150,12 +179,18 @@ msgid ""
 "multispectral images you should set this option to obtain reflectance values"
 " (otherwise you will get digital number (DN) values)."
 msgstr ""
+"చిత్రాలపై ప్రదర్శించడానికి రేడియోమెట్రిక్ క్రమాంకనాన్ని సెట్ చేయండి. "
+"మల్టీస్పెక్ట్రల్ చిత్రాలను ప్రాసెస్ చేస్తున్నప్పుడు మీరు ప్రతిబింబ విలువలను "
+"పొందటానికి ఈ ఎంపికను సెట్ చేయాలి (లేకపోతే మీరు డిజిటల్ సంఖ్య (DN) విలువలను "
+"పొందుతారు)."
 
 #: ../../../arguments.rst:82 e2cc797facab45aaba4b4093a6d7040d
 msgid ""
 "[``camera``] applies black level, vignetting, row gradient gain/exposure "
 "compensation (if appropriate EXIF tags are found)."
 msgstr ""
+"[`` కెమెరా``] బ్లాక్ లెవల్, విగ్నేటింగ్, రో గ్రేడియంట్ లాభం / ఎక్స్‌పోజర్ "
+"పరిహారం (తగిన ఎక్సిఫ్ ట్యాగ్‌లు కనుగొనబడితే) వర్తిస్తుంది."
 
 #: ../../../arguments.rst:84 3723fa6b8b9140e7ba0001085406d907
 msgid ""
@@ -164,25 +199,31 @@ msgid ""
 "via a downwelling light sensor (DLS) taking in consideration the angle of "
 "the sun."
 msgstr ""
+"[```కెమెరా + సూర్యుడు``] ప్రయోగాత్మకమైనది, [```కెమెరా``] యొక్క అన్ని "
+"దిద్దుబాట్లను వర్తిస్తుంది మరియు అదనంగా సూర్యుని కోణాన్ని పరిగణనలోకి "
+"తీసుకొని డౌన్‌వెల్లింగ్ లైట్ సెన్సార్ (DLS) ద్వారా నమోదు చేయబడిన స్పెక్ట్రల్"
+" రేడియన్స్‌కు పరిహారం ఇస్తుంది."
 
 #: ../../../arguments.rst:86 7c68f43305ef409b9e486a720f31d27a
 msgid "Options: ``none`` | ``camera`` | ``camera+sun``"
-msgstr ""
+msgstr "ఎంపికలు: `` ఏదీ`` | `` కెమెరా`` | `` కెమెరా + సూర్యుడు``"
 
 #: ../../../arguments.rst:88 ../../../arguments.rst:252
 #: c819e79f060c43c0b84a275e7ec8a9b1 c819e79f060c43c0b84a275e7ec8a9b1
 msgid "Default: ``none``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` ఏదీ``"
 
 #: ../../../arguments.rst:91 6fdb3ebaafb942dfbe048a54a368b90d
 msgid ""
 "The maximum number of processes to use in various processes. Peak memory "
 "requirement is ~1GB per thread and 2 megapixel image resolution."
 msgstr ""
+"వివిధ ప్రక్రియలలో ఉపయోగించాల్సిన గరిష్ట సంఖ్యల ప్రక్రియలు. పీక్ మెమరీ అవసరం "
+"థ్రెడ్‌కు GB 1GB మరియు 2 మెగాపిక్సెల్ ఇమేజ్ రిజల్యూషన్."
 
 #: ../../../arguments.rst:93 5aa1625a41d043deb323e8ff45c164b0
 msgid "Default: *number of cores*"
-msgstr ""
+msgstr "డిఫాల్ట్: * కోర్ల సంఖ్య *"
 
 #: ../../../arguments.rst:96 4e64c9eadbcf405bb0f49b8225d41208
 msgid ""
@@ -190,10 +231,13 @@ msgid ""
 "depthmap images. Higher values take longer to compute and more memory but "
 "produce denser point clouds."
 msgstr ""
+"లోతు మ్యాప్ చిత్రాల రిజల్యూషన్‌ను సెట్ చేయడం ద్వారా పాయింట్ క్లౌడ్ యొక్క "
+"సాంద్రతను నియంత్రిస్తుంది. అధిక విలువలు గణించడానికి ఎక్కువ సమయం పడుతుంది "
+"మరియు ఎక్కువ మెమరీ కానీ దట్టమైన పాయింట్ మేఘాలను ఉత్పత్తి చేస్తాయి."
 
 #: ../../../arguments.rst:98 838dbab7a7494f4bb4c944a756a143ab
 msgid "Default: ``640``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` 640``"
 
 #: ../../../arguments.rst:101 4b52e771e75a43529a99dd342b8ad2c1
 msgid ""
@@ -202,12 +246,16 @@ msgid ""
 "denser point clouds but with more noise. Only applies if using OpenSfM for "
 "dense matching."
 msgstr ""
+"ఒక పాయింట్ చెల్లుబాటు అయ్యేలా పునర్నిర్మించాల్సిన కనీస వీక్షణలు. మీ చిత్రాలు"
+" తక్కువ అతివ్యాప్తి కలిగి ఉంటే తక్కువ విలువలను ఉపయోగించండి. తక్కువ విలువలు "
+"దట్టమైన పాయింట్ మేఘాలకు కారణమవుతాయి కాని ఎక్కువ శబ్దంతో ఉంటాయి. దట్టమైన "
+"సరిపోలిక కోసం OpenSfM ఉపయోగిస్తే మాత్రమే వర్తిస్తుంది."
 
 #: ../../../arguments.rst:103 ../../../arguments.rst:163
 #: ../../../arguments.rst:271 88b99b17996c4c8b9554e430c0eee071
 #: 88b99b17996c4c8b9554e430c0eee071 88b99b17996c4c8b9554e430c0eee071
 msgid "Default: ``3``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` 3``"
 
 #: ../../../arguments.rst:106 7c3f161dbf274fe9b97cd4262d7211b2
 msgid ""
@@ -215,14 +263,19 @@ msgid ""
 "``PATCH_MATCH_SAMPLE`` are faster, but might miss some valid points. "
 "``BRUTE_FORCE`` takes longer but produces denser reconstructions."
 msgstr ""
+"ముడి లోతు మ్యాప్ గణన అల్గోరిథం. `` PATCH_MATCH`` మరియు `` "
+"PATCH_MATCH_SAMPLE`` వేగంగా ఉంటాయి, కానీ కొన్ని చెల్లుబాటు అయ్యే పాయింట్లను "
+"కోల్పోవచ్చు. `` BRUTE_FORCE`` ఎక్కువ సమయం తీసుకుంటుంది కాని దట్టమైన "
+"పునర్నిర్మాణాలను ఉత్పత్తి చేస్తుంది."
 
 #: ../../../arguments.rst:108 714c9041cdfa4887af9f5413243158d0
 msgid "Options: ``PATCH_MATCH`` | ``PATCH_MATCH_SAMPLE`` | ``BRUTE_FORCE``"
 msgstr ""
+"ఎంపికలు: `` PATCH_MATCH`` | `` PATCH_MATCH_SAMPLE`` | `` BRUTE_FORCE``"
 
 #: ../../../arguments.rst:110 cbaf82df4af94c03a1e734d8cbefd61f
 msgid "Default: ``PATCH_MATCH``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` PATCH_MATCH```"
 
 #: ../../../arguments.rst:113 f49be03c757c4de8b073101786dcd711
 msgid ""
@@ -230,11 +283,14 @@ msgid ""
 "deviation threshold to include patches. Patches with lower standard "
 "deviation are ignored."
 msgstr ""
+"`` PATCH_MATCH`` లేదా `` PATCH_MATCH_SAMPLE`` ఉపయోగిస్తున్నప్పుడు, పాచెస్‌ను"
+" చేర్చడానికి ప్రామాణిక విచలనం ప్రవేశాన్ని నియంత్రిస్తుంది. తక్కువ ప్రామాణిక "
+"విచలనం కలిగిన పాచెస్ విస్మరించబడతాయి."
 
 #: ../../../arguments.rst:115 ../../../arguments.rst:281
 #: 790534700a5344a8a73575bee28f9174 790534700a5344a8a73575bee28f9174
 msgid "Default: ``1``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` 1``"
 
 #: ../../../arguments.rst:118 a9fb769c318440028d0ca29420819c59
 msgid ""
@@ -242,6 +298,9 @@ msgid ""
 "a global adjustment every 100 images. Speeds up reconstruction for very "
 "large datasets."
 msgstr ""
+"పునర్నిర్మాణానికి జోడించిన ప్రతి చిత్రం కోసం స్థానిక బండిల్ సర్దుబాటు మరియు "
+"ప్రతి 100 చిత్రాలకు ప్రపంచ సర్దుబాటును అమలు చేయండి. చాలా పెద్ద డేటాసెట్ల "
+"కోసం పునర్నిర్మాణాన్ని వేగవంతం చేస్తుంది."
 
 #: ../../../arguments.rst:121 64df57356a944e0cb0cc840ca4ec2e93
 msgid ""
@@ -249,26 +308,36 @@ msgid ""
 " affects dense reconstructions performed with MVE. Higher values discard "
 "more points."
 msgstr ""
+"నిర్దిష్ట విశ్వాస పరిమితి కంటే తక్కువ ఉన్న పాయింట్లను విస్మరించండి. ఇది MVE "
+"తో చేసిన దట్టమైన పునర్నిర్మాణాలను మాత్రమే ప్రభావితం చేస్తుంది. అధిక విలువలు "
+"ఎక్కువ పాయింట్లను విస్మరిస్తాయి."
 
 #: ../../../arguments.rst:123 296ffc1175094be5b9ba9414fbe9ba27
 msgid "Default: ``0.6``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` 0.6``"
 
 #: ../../../arguments.rst:126 b14d87ed9f84456ea2de1cd4d061e889
 msgid ""
 "Use a full 3D mesh to compute the orthophoto instead of a 2.5D mesh. This "
 "option is a bit faster and provides similar results in planar areas."
 msgstr ""
+"2.5 డి మెష్‌కు బదులుగా ఆర్థోఫోటోను లెక్కించడానికి పూర్తి 3D మెష్‌ను "
+"ఉపయోగించండి. ఈ ఐచ్చికము కొంచెం వేగంగా ఉంటుంది మరియు ప్లానార్ ప్రాంతాలలో "
+"ఇలాంటి ఫలితాలను అందిస్తుంది."
 
 #: ../../../arguments.rst:129 28fb4b48d9f84e92baf1267bd703f416
 msgid ""
 "Skip generation of a full 3D model. This can save time if you only need 2D "
 "results such as orthophotos and DEMs."
 msgstr ""
+"పూర్తి 3D మోడల్ యొక్క తరం దాటవేయి. మీకు ఆర్థోఫోటోస్ మరియు DEM లు వంటి 2D "
+"ఫలితాలు మాత్రమే అవసరమైతే ఇది సమయాన్ని ఆదా చేస్తుంది."
 
 #: ../../../arguments.rst:132 5696e15ae6724efa8bd43d816bc01a8c
 msgid "Use opensfm to compute dense point cloud alternatively."
 msgstr ""
+"ప్రత్యామ్నాయంగా దట్టమైన పాయింట్ క్లౌడ్‌ను లెక్కించడానికి opensfm ని "
+"ఉపయోగించండి."
 
 #: ../../../arguments.rst:135 6b032069d7964c869dac6cf41e078919
 msgid ""
@@ -277,32 +346,42 @@ msgid ""
 "processing and lower memory usage. Since GSD is an estimate, sometimes "
 "ignoring it can result in slightly better image output quality."
 msgstr ""
+"గ్రౌండ్ సాంప్లింగ్ దూరాన్ని (జిఎస్‌డి) విస్మరించండి. GSD ఇమేజ్ అవుట్‌పుట్‌ల "
+"యొక్క గరిష్ట రిజల్యూషన్‌ను క్యాప్ చేస్తుంది మరియు అవసరమైనప్పుడు చిత్రాల "
+"పరిమాణాన్ని మారుస్తుంది, దీని ఫలితంగా వేగంగా ప్రాసెసింగ్ మరియు తక్కువ మెమరీ "
+"వినియోగం జరుగుతుంది. GSD ఒక అంచనా కాబట్టి, కొన్నిసార్లు దీనిని విస్మరించడం "
+"వలన ఇమేజ్ అవుట్పుట్ నాణ్యత కొంచెం మెరుగ్గా ఉంటుంది."
 
 #: ../../../arguments.rst:138 12d1473fca734ff49083c522edf55d93
 msgid "The maximum vertex count of the output mesh."
-msgstr ""
+msgstr "అవుట్పుట్ మెష్ యొక్క గరిష్ట శీర్ష గణన."
 
 #: ../../../arguments.rst:140 59109fac84e543a8be486179ed45f5e1
 msgid "Default: ``100000``"
-msgstr ""
+msgstr "డిఫాల్ట్: ``100000``"
 
 #: ../../../arguments.rst:143 40de47aa4aef438695d8c62d122819ef
 msgid ""
 "Oct-tree depth used in the mesh reconstruction, increase to get more "
 "vertices, recommended values are 8-12."
 msgstr ""
+"మెష్ పునర్నిర్మాణంలో ఉపయోగించే అక్టోబర్-చెట్టు లోతు, ఎక్కువ శీర్షాలను "
+"పొందడానికి పెంచండి, సిఫార్సు చేసిన విలువలు 8-12."
 
 #: ../../../arguments.rst:145 cad75861c95745388ee1e6fc567a02d7
 msgid "Default: ``9``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` 9``"
 
-#: ../../../arguments.rst:148 c2246d86e4f643fc85735dbd119473ce
-msgid "Number of points per octree node."
+#: ../../../arguments.rst:148 c21570663a6849b98141d3937754cf70
+msgid ""
+"Number of points per octree node. For relatively low noise, values in the "
+"range of [1-5] can be used. For noisier datasets, large values in the range "
+"of [15-20] may be employed."
 msgstr ""
 
 #: ../../../arguments.rst:150 838dbab7a7494f4bb4c944a756a143ab
 msgid "Default: ``1.0``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` 1.0``"
 
 #: ../../../arguments.rst:153 71b0bdbffd204e608b21bc9b0f561717
 msgid ""
@@ -311,10 +390,14 @@ msgid ""
 " The results of the original (unscreened) Poisson Reconstruction can be "
 "obtained by setting this value to ``0``."
 msgstr ""
+"ఈ ఫ్లోటింగ్ పాయింట్ విలువ స్క్రీన్డ్ పాయిసన్ సమీకరణం యొక్క సూత్రీకరణలో "
+"పాయింట్ నమూనాల ఇంటర్‌పోలేషన్ ఇవ్వబడిన ప్రాముఖ్యతను తెలుపుతుంది. ఈ విలువను ``"
+" 0`` కు సెట్ చేయడం ద్వారా అసలు (స్క్రీన్‌ చేయని) పాయిజన్ పునర్నిర్మాణం యొక్క"
+" ఫలితాలను పొందవచ్చు."
 
 #: ../../../arguments.rst:155 88b99b17996c4c8b9554e430c0eee071
 msgid "Default: ``4``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` 4``"
 
 #: ../../../arguments.rst:158 94373544199649c3808ebb5a69aba34b
 msgid ""
@@ -322,12 +405,19 @@ msgid ""
 "generates an orthophoto directly from the sparse reconstruction. If you just"
 " need an orthophoto and do not need a full 3D model, turn on this option."
 msgstr ""
+"** ప్రయోగాత్మక. ** దట్టమైన పునర్నిర్మాణం మరియు 3D మోడల్ ఉత్పత్తిని "
+"దాటవేస్తుంది. ఇది చిన్న పునర్నిర్మాణం నుండి నేరుగా ఆర్థోఫోటోను ఉత్పత్తి "
+"చేస్తుంది. మీకు ఆర్థోఫోటో అవసరమైతే మరియు పూర్తి 3D మోడల్ అవసరం లేకపోతే, ఈ "
+"ఎంపికను ప్రారంభించండి."
 
 #: ../../../arguments.rst:161 8b4d9a13cb32444a8417051b37c03a4c
 msgid ""
 "Automatically crop image outputs by creating a smooth buffer around the "
 "dataset boundaries, shrinked by N meters. Use ``0`` to disable cropping."
 msgstr ""
+"డేటాసెట్ సరిహద్దుల చుట్టూ మృదువైన బఫర్‌ను సృష్టించడం ద్వారా ఇమేజ్ "
+"అవుట్‌పుట్‌లను స్వయంచాలకంగా కత్తిరించండి, ఇది N మీటర్లతో కుదించబడుతుంది. "
+"పంటను నిలిపివేయడానికి `` 0`` ఉపయోగించండి."
 
 #: ../../../arguments.rst:166 7555e78dc4864a339dcb00377e041e3a
 msgid ""
@@ -335,6 +425,9 @@ msgid ""
 "can control the behavior of this option by tweaking the ``--dem-*`` "
 "parameters."
 msgstr ""
+"సింపుల్ మోర్ఫోలాజికల్ ఫిల్టర్ ఉపయోగించి పాయింట్ క్లౌడ్ అవుట్‌పుట్‌లను "
+"వర్గీకరించండి. `` --Dem- * `` పారామితులను సర్దుబాటు చేయడం ద్వారా మీరు ఈ "
+"ఎంపిక యొక్క ప్రవర్తనను నియంత్రించవచ్చు."
 
 #: ../../../arguments.rst:168 ../../../arguments.rst:173
 #: ../../../arguments.rst:178 ../../../arguments.rst:225
@@ -351,65 +444,68 @@ msgstr ""
 #: 32a642af8b09499eaa7c97156944c2f0 32a642af8b09499eaa7c97156944c2f0
 #: 32a642af8b09499eaa7c97156944c2f0 32a642af8b09499eaa7c97156944c2f0
 msgid "Default: ``False``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` తప్పు``"
 
 #: ../../../arguments.rst:171 4db75f783b534a05bf95f0813bb2aba2
 msgid "Export the georeferenced point cloud in CSV format."
-msgstr ""
+msgstr "CSV ఆకృతిలో జియోరెఫరెన్స్ పాయింట్ క్లౌడ్‌ను ఎగుమతి చేయండి."
 
 #: ../../../arguments.rst:176 3f5c13cf79924ee3a8e3eff6a4913371
 msgid "Export the georeferenced point cloud in LAS format."
-msgstr ""
+msgstr "జియోరెఫరెన్స్ పాయింట్ క్లౌడ్‌ను లాస్ ఆకృతిలో ఎగుమతి చేయండి."
 
 #: ../../../arguments.rst:181 73ce042a4b61474ab14c094da92c40e0
 msgid ""
 "Filters the point cloud by removing points that deviate more than N standard"
 " deviations from the local mean. Set to ``0`` to disable filtering."
 msgstr ""
+"స్థానిక సగటు నుండి N ప్రామాణిక విచలనాల కంటే ఎక్కువ వ్యత్యాసమయ్యే పాయింట్లను "
+"తొలగించడం ద్వారా పాయింట్ క్లౌడ్‌ను ఫిల్టర్ చేస్తుంది. వడపోతను "
+"నిలిపివేయడానికి `` 0`` కు సెట్ చేయండి."
 
 #: ../../../arguments.rst:183 e215ef9e523d48d6a9095173ec7d8ca8
 msgid "Default: ``2.5``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` 2.5``"
 
 #: ../../../arguments.rst:186 6767f66d91ee444f914592c3ffe1b5fc
 msgid "Simple Morphological Filter elevation scalar parameter."
-msgstr ""
+msgstr "సింపుల్ మోర్ఫోలాజికల్ ఫిల్టర్ ఎలివేషన్ స్కేలార్ పరామితి."
 
 #: ../../../arguments.rst:188 1640b0261c2f417990fa3dbd044fdf1b
 msgid "Default: ``1.25``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` 1.25``"
 
 #: ../../../arguments.rst:191 487501610a594d46b6e93f6be4aa4028
 msgid "Simple Morphological Filter slope parameter (rise over run)."
-msgstr ""
+msgstr "సింపుల్ మోర్ఫోలాజికల్ ఫిల్టర్ వాలు పరామితి (రన్ ఓవర్ రైజ్)."
 
 #: ../../../arguments.rst:193 a6af052a02404796a51daa6a6658e4d1
 msgid "Default: ``0.15``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` 0.15``"
 
 #: ../../../arguments.rst:196 9d6cdf2437274d6c999b7a8037ea3d71
 msgid "Simple Morphological Filter elevation threshold parameter (meters)."
-msgstr ""
+msgstr "సింపుల్ మోర్ఫోలాజికల్ ఫిల్టర్ ఎలివేషన్ థ్రెషోల్డ్ పరామితి (మీటర్లు)."
 
 #: ../../../arguments.rst:198 e47ce61e154b4426901776f04dda70cb
 msgid "Default: ``0.5``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` 0.5``"
 
 #: ../../../arguments.rst:201 2471158a569f49049b62242481e59514
 msgid "Simple Morphological Filter window radius parameter (meters)."
-msgstr ""
+msgstr "సింపుల్ మోర్ఫోలాజికల్ ఫిల్టర్ విండో వ్యాసార్థ పరామితి (మీటర్లు)."
 
 #: ../../../arguments.rst:203 838dbab7a7494f4bb4c944a756a143ab
 msgid "Default: ``18.0``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` 18.0``"
 
 #: ../../../arguments.rst:206 c21e85528cdb4d1fa0cdff3fc69195fb
 msgid "Options: ``area`` | ``gmi``"
-msgstr ""
+msgstr "ఎంపికలు: `` ప్రాంతం`` | `` జిమి``"
 
 #: ../../../arguments.rst:208 72b70173fa334afcaad9cff80c183d08
 msgid "Default: ``gmi``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` gmi``"
 
 #: ../../../arguments.rst:211 cd809e7d61ad437e8c4e512430454d9f
 msgid ""
@@ -418,14 +514,18 @@ msgid ""
 "and higher values for urban areas. The default value works well for most "
 "scenarios."
 msgstr ""
+"ఆర్థోఫోటోస్‌ను మాత్రమే ప్రభావితం చేస్తుంది. అధిక విలువలు పదునైన మూలలకు "
+"కారణమవుతాయి, కానీ రంగు పంపిణీ మరియు అస్పష్టతను ప్రభావితం చేస్తాయి. ప్లానార్ "
+"ప్రాంతాలకు తక్కువ విలువలు మరియు పట్టణ ప్రాంతాలకు అధిక విలువలను ఉపయోగించండి. "
+"డిఫాల్ట్ విలువ చాలా సందర్భాలలో బాగా పనిచేస్తుంది."
 
 #: ../../../arguments.rst:213 04be46ac9a0c48eebc2e5590eaa26c12
 msgid "Default: ``16``"
-msgstr ""
+msgstr "డిఫాల్ట్: `` 16``"
 
 #: ../../../arguments.rst:216 0156d40a28134e82a8ae8076128250b7
 msgid "Type of photometric outlier removal method."
-msgstr ""
+msgstr "ఫోటోమెట్రిక్ అవుట్‌లియర్ తొలగింపు పద్ధతి రకం."
 
 #: ../../../arguments.rst:218 0156d40a28134e82a8ae8076128250b7
 msgid "Options: ``none`` | ``gauss_damping`` | ``gauss_clamping``"

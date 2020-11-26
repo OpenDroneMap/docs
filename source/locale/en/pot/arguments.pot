@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-18 09:25-0500\n"
+"POT-Creation-Date: 2020-11-25 08:47-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -284,8 +284,8 @@ msgid "Default: ``9``"
 msgstr ""
 
 #: ../../../arguments.rst:148
-#: c2246d86e4f643fc85735dbd119473ce
-msgid "Number of points per octree node."
+#: c21570663a6849b98141d3937754cf70
+msgid "Number of points per octree node. For relatively low noise, values in the range of [1-5] can be used. For noisier datasets, large values in the range of [15-20] may be employed."
 msgstr ""
 
 #: ../../../arguments.rst:150

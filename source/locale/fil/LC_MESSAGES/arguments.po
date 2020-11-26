@@ -1,0 +1,801 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020
+# Nicole Cruz <nicole.cruz@srdp.com.ph>, 2020
+# danbjoseph <danbjoseph@gmail.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-11-25 08:47-0500\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
+"Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fil\n"
+"Plural-Forms: nplurals=2; plural=(n == 1 || n==2 || n==3) || (n % 10 != 4 || n % 10 != 6 || n % 10 != 9);\n"
+
+#: ../../../arguments.rst:4 3c050a6e28a542979ddc0687deabc8e3
+msgid "Options and Flags"
+msgstr "Mga Opsyon at Tanda"
+
+#: ../../../arguments.rst:7 22dcd4f93de143d4be348424b5141abe
+msgid "Arguments"
+msgstr "Mga Argumento"
+
+#: ../../../arguments.rst:10 5bf00306225e4afa8acc0ae52e820ffa
+msgid "Show help message and exit."
+msgstr "Ipakita ang help message at mag-exit."
+
+#: ../../../arguments.rst:13 a1296b7297cb4362997eb832a4df44e6
+msgid "Path to input images."
+msgstr "Kawing patungo sa mga imahe."
+
+#: ../../../arguments.rst:16 37df17e52b914b818d46a0c89b4f1ad4
+msgid "Path to the project folder."
+msgstr "Kawing patungo sa mga proyekto."
+
+#: ../../../arguments.rst:19 81b4ca1825f34d81bb833d45ec323fea
+msgid ""
+"Resizes images by the largest side for opensfm. Set to ``-1`` to disable."
+msgstr ""
+"Binabago ang laki ng imahe mula sa pinakamalaki na sukat para sa opensfm. "
+"I-set sa ``-1`` para ma-disable."
+
+#: ../../../arguments.rst:21 296ffc1175094be5b9ba9414fbe9ba27
+msgid "Default: ``2048``"
+msgstr "Default: ``2048``"
+
+#: ../../../arguments.rst:24 ../../../arguments.rst:32
+#: ../../../arguments.rst:40 0ba8d09f4960491984c531e8c335e737
+#: 0ba8d09f4960491984c531e8c335e737 0ba8d09f4960491984c531e8c335e737
+msgid ""
+"Options: ``dataset`` | ``split`` | ``merge`` | ``opensfm`` | ``mve`` | "
+"``odm_filterpoints`` | ``odm_meshing`` | ``mvs_texturing`` | "
+"``odm_georeferencing`` | ``odm_dem`` | ``odm_orthophoto``"
+msgstr ""
+"Opsyon: ``dataset`` | ``split`` | ``merge`` | ``opensfm`` | ``mve`` | "
+"``odm_filterpoints`` | ``odm_meshing`` | ``mvs_texturing`` | "
+"``odm_georeferencing`` | ``odm_dem`` | ``odm_orthophoto``"
+
+#: ../../../arguments.rst:29 762d8ff9c3b94ba6a7f0786bc7636272
+msgid ""
+"Generates Entwine Point Cloud. Useful on its own, this flag is automatically"
+" added when running in WebODM and useful for creating the correct directory "
+"structure when running on NodeODM or command line for import into WebODM."
+msgstr ""
+"Generates Entwine Point Cloud. Ang flag na ito ay automatikong nadadagdag "
+"kapag sinimulan ang WebODM at magagamit kapag bumubuo ng tamang directory "
+"structure kapag nagpapatakbo ng NodeODM o sa pagimport ng command line para "
+"maging WebODM."
+
+#: ../../../arguments.rst:37 dc45a84aa0ec40d48e3443c426129216
+msgid "Force rerun of all tasks."
+msgstr "Pagulit sa lahat ng tasks."
+
+#: ../../../arguments.rst:45 9d06f59e5740440e91ad0f2236d658a4
+msgid "Projection used to transform the model into geographic coordinates."
+msgstr ""
+"Prodyeksyon na ginagamit sa pagtransform ng model sa mga heyograpikong "
+"coordinate."
+
+#: ../../../arguments.rst:48 2a7871f5589e456d9b5fcc7a8a9020ce
+msgid ""
+"Minimum number of features to extract per image. More features leads to "
+"better results but slower execution."
+msgstr ""
+"Pinakamababang bilang ng pwede i-extract na imahe. Mas maraming tampok ay "
+"magreresulta ng mas magandang resulta ngutin mas mabagal na "
+"pagsasakatuparan."
+
+#: ../../../arguments.rst:50 59109fac84e543a8be486179ed45f5e1
+msgid "Default: ``8000``"
+msgstr "Default: ``8000``"
+
+#: ../../../arguments.rst:53 1307a9ff8ab1493aaf883db2b1801f32
+msgid ""
+"Set feature extraction quality. Higher quality generates better features, "
+"but requires more memory and takes longer."
+msgstr ""
+"I-set ang feature extraction quality. Ang mas mataas na quality ay "
+"naggegenerate ng mas magandang features, ngunit ang mas kumakain ito ng mas "
+"malaking memorya at mas matagal ang proseso."
+
+#: ../../../arguments.rst:55 faa596867966454081ab3acf1c08c2b5
+msgid "Options: ``ultra`` | ``high`` | ``medium`` | ``low`` | ``lowest``"
+msgstr "Mga Opsiyon: ``ultra`` | ``high`` | ``medium`` | ``low`` | ``lowest``"
+
+#: ../../../arguments.rst:57 f48456d917dc4fe293ec9de5378245d8
+msgid "Default: ``high``"
+msgstr "Default: ``high``"
+
+#: ../../../arguments.rst:60 bf8055bdda8d44ddb0c8348371fbe36c
+msgid ""
+"Number of nearest images to pre-match based on GPS exif data. Set to ``0`` "
+"to skip pre-matching. Neighbors works together with Distance parameter, set "
+"both to 0 to not use pre-matching. OpenSFM uses both parameters at the same "
+"time, Bundler uses only one which has value, prefering the Neighbors "
+"parameter."
+msgstr ""
+"Bilang ng pinakamalapit na imahe na i-prematch base sa GPS exif data. I-set "
+"sa ``0`` para malagpasan anf pre-matching. Ang Neighbors ay gumagana sa "
+"pamamagitan ng Distance parameter, i-set pareho sa 0 para hindi na gamitin "
+"ang pre-matching. Ang OpenSFM ay gumagamit ng parehong parameters ng sabay, "
+"Ang Bundler naman ay gumagamit lamang ng isa na may value, mas preferred "
+"nito ang Neighbors parameter."
+
+#: ../../../arguments.rst:62 99db7bbf5b844d28952836a394e84dce
+msgid "Default: ``8``"
+msgstr "Default: ``8``"
+
+#: ../../../arguments.rst:65 8c651291470445e1ae0faa1db8cd2853
+msgid ""
+"Distance threshold in meters to find pre-matching images based on GPS exif "
+"data. Set both ``matcher-neighbors`` and this to ``0`` to skip pre-matching."
+msgstr ""
+"Ang distance threshold sa meters para hanapin ang pre-matching na imahe base"
+" sa GPS exif data. I-set pareho sa ``matcher-neighbors`` at ``0`` ito para "
+"malagpasan ang pre-matching."
+
+#: ../../../arguments.rst:67 99db7bbf5b844d28952836a394e84dce
+msgid "Default: ``0``"
+msgstr "Default: ``0``"
+
+#: ../../../arguments.rst:70 f0a500ac7c3843c88e988e7955ef8f8b
+msgid ""
+"Turn off camera parameter optimization during bundler. Off by default unless"
+" ``--camera`` parameter used."
+msgstr ""
+"Patayin ang camera paremeter optimization habang ginagamit ang blunder. Off "
+"ang default maliban kung ``--camera`` parameter ang gamit."
+
+#: ../../../arguments.rst:73 de4fe5a4a091417c819c08966866004a
+msgid ""
+"Set a camera projection type. Manually setting a value can help improve "
+"geometric undistortion. By default the application tries to determine a lens"
+" type from the images metadata."
+msgstr ""
+"i-set ang klase ng camera projection. Ang manual na pagaayos ng value ay "
+"makakatulong sa pagpapa-improve ng geometric undistortion. By default, ang "
+"aplikasyon ay sinusubukan na i-determine ang lens type galing sa image "
+"metadata."
+
+#: ../../../arguments.rst:75 faa596867966454081ab3acf1c08c2b5
+msgid ""
+"Options: ``auto`` | ``perspective`` | ``brown`` | ``fisheye`` | "
+"``spherical``"
+msgstr ""
+"Mga Opsiyon: ``auto`` | ``perspective`` | ``brown`` | ``fisheye`` | "
+"``spherical``"
+
+#: ../../../arguments.rst:77 f48456d917dc4fe293ec9de5378245d8
+msgid "Default: ``auto``"
+msgstr "Default: ``auto``"
+
+#: ../../../arguments.rst:80 0946c0a572ac4cf1a2a47e697b30e69c
+msgid ""
+"Set the radiometric calibration to perform on images. When processing "
+"multispectral images you should set this option to obtain reflectance values"
+" (otherwise you will get digital number (DN) values)."
+msgstr ""
+"Magset ng radiometric calibration na gagamitin sa mga imahe. kapag "
+"nagpaprocess ng multispectral images, kailangan na i-set ang opsiyon para "
+"maobtain ang reflectance values (kung hindi ay makukuha lamang ang digital "
+"number (DN) values)."
+
+#: ../../../arguments.rst:82 e2cc797facab45aaba4b4093a6d7040d
+msgid ""
+"[``camera``] applies black level, vignetting, row gradient gain/exposure "
+"compensation (if appropriate EXIF tags are found)."
+msgstr ""
+"[``camera``] ay nagaapply ng black level, vignetting, row gradient "
+"gain/exposure compensation (kung sapat na EXIF tags ang mayroon)."
+
+#: ../../../arguments.rst:84 3723fa6b8b9140e7ba0001085406d907
+msgid ""
+"[``camera+sun``] is experimental, applies all the corrections of "
+"[``camera``] and additionally compensates for spectral radiance registered "
+"via a downwelling light sensor (DLS) taking in consideration the angle of "
+"the sun."
+msgstr ""
+"Ang [``camera+sun``] ay experiemental, inaapply lahat ng correction ng "
+"[``camera``] at dinadagdagan ng spectral radiance na registered via a "
+"downdwelling light sensor (DLS) na pinagsasaalang-alang ang anggulo ng araw."
+
+#: ../../../arguments.rst:86 7c68f43305ef409b9e486a720f31d27a
+msgid "Options: ``none`` | ``camera`` | ``camera+sun``"
+msgstr "Mga Opsiyon: ``none`` | ``camera`` | ``camera+sun``"
+
+#: ../../../arguments.rst:88 ../../../arguments.rst:252
+#: c819e79f060c43c0b84a275e7ec8a9b1 c819e79f060c43c0b84a275e7ec8a9b1
+msgid "Default: ``none``"
+msgstr "Default: ``none``"
+
+#: ../../../arguments.rst:91 6fdb3ebaafb942dfbe048a54a368b90d
+msgid ""
+"The maximum number of processes to use in various processes. Peak memory "
+"requirement is ~1GB per thread and 2 megapixel image resolution."
+msgstr ""
+"Ang pinakamalaking bilang ng proseso na gagamitin sa ibat-ibang proseso. Ang"
+" peak memory requirement ay ~1GB per thread at 2 megapixel na resolusyon ng "
+"imahe."
+
+#: ../../../arguments.rst:93 5aa1625a41d043deb323e8ff45c164b0
+msgid "Default: *number of cores*"
+msgstr "Default: *number of cores*"
+
+#: ../../../arguments.rst:96 4e64c9eadbcf405bb0f49b8225d41208
+msgid ""
+"Controls the density of the point cloud by setting the resolution of the "
+"depthmap images. Higher values take longer to compute and more memory but "
+"produce denser point clouds."
+msgstr ""
+"Maaaring macontrol ang density ng point cloud sa pamamagitan ng pag-set ng "
+"resolusyon ng depthmap images. Ang mas mataas na value ay mas matagal "
+"macompute at mas malaking memorya ang mapo-produce ng denser point clouds."
+
+#: ../../../arguments.rst:98 838dbab7a7494f4bb4c944a756a143ab
+msgid "Default: ``640``"
+msgstr "Default: ``640``"
+
+#: ../../../arguments.rst:101 4b52e771e75a43529a99dd342b8ad2c1
+msgid ""
+"Minimum number of views that should reconstruct a point for it to be valid. "
+"Use lower values if your images have less overlap. Lower values result in "
+"denser point clouds but with more noise. Only applies if using OpenSfM for "
+"dense matching."
+msgstr ""
+"Pinakakonti na bilang ng view na dapat magreconstruct sa point para ito ay "
+"maging valid. Gumamit ng mas mababang values kung ang imahe ay may mas konti"
+" na overlap. Ang mas mababang values ay nagreresulta ng mas dense na point "
+"clouds ngunit mas maraming noise. Ito ay nagaapply lamang kung ikaw ay "
+"gumagamit ng OpenSfM para sa dense matching."
+
+#: ../../../arguments.rst:103 ../../../arguments.rst:163
+#: ../../../arguments.rst:271 88b99b17996c4c8b9554e430c0eee071
+#: 88b99b17996c4c8b9554e430c0eee071 88b99b17996c4c8b9554e430c0eee071
+msgid "Default: ``3``"
+msgstr "Default: ``3``"
+
+#: ../../../arguments.rst:106 7c3f161dbf274fe9b97cd4262d7211b2
+msgid ""
+"Raw depthmap computation algorithm. ``PATCH_MATCH`` and "
+"``PATCH_MATCH_SAMPLE`` are faster, but might miss some valid points. "
+"``BRUTE_FORCE`` takes longer but produces denser reconstructions."
+msgstr ""
+"Raw depthmap computation algorithm. ``PATCH_MATCH`` at "
+"``PATCH_MATCH_SAMPLE`` ay mas mabilis, ngunit baka maka-miss ng valid "
+"points. Ang ``BRUTE_FORCE`` ay mas matagal ngunit nagreresulta ng desnser "
+"reconstructions."
+
+#: ../../../arguments.rst:108 714c9041cdfa4887af9f5413243158d0
+msgid "Options: ``PATCH_MATCH`` | ``PATCH_MATCH_SAMPLE`` | ``BRUTE_FORCE``"
+msgstr ""
+"Mga Opsiyon: ``PATCH_MATCH`` | ``PATCH_MATCH_SAMPLE`` | ``BRUTE_FORCE``"
+
+#: ../../../arguments.rst:110 cbaf82df4af94c03a1e734d8cbefd61f
+msgid "Default: ``PATCH_MATCH``"
+msgstr "Default: ``PATCH_MATCH``"
+
+#: ../../../arguments.rst:113 f49be03c757c4de8b073101786dcd711
+msgid ""
+"When using ``PATCH_MATCH`` or ``PATCH_MATCH_SAMPLE``, controls the standard "
+"deviation threshold to include patches. Patches with lower standard "
+"deviation are ignored."
+msgstr ""
+"Kapag gumagamit ng ``PATCH_MATCH`` o ``PATCH_MATCH_SAMPLE``, ang "
+"nagcocontrol ng standard deviation threshold para maisama ang mga patches. "
+"Ang mga patches na may mas mababang standard deviation ay ini-ignore."
+
+#: ../../../arguments.rst:115 ../../../arguments.rst:281
+#: 790534700a5344a8a73575bee28f9174 790534700a5344a8a73575bee28f9174
+msgid "Default: ``1``"
+msgstr "Default: ``1``"
+
+#: ../../../arguments.rst:118 a9fb769c318440028d0ca29420819c59
+msgid ""
+"Run local bundle adjustment for every image added to the reconstruction and "
+"a global adjustment every 100 images. Speeds up reconstruction for very "
+"large datasets."
+msgstr ""
+"Mag-run ng local bundle adjustment kada imahe na dinadagdag sa "
+"reconstruction at global adjustment kada 100 na imahe. Pinapabilis nito ang "
+"reconstruction ng mga malalaking datasets."
+
+#: ../../../arguments.rst:121 64df57356a944e0cb0cc840ca4ec2e93
+msgid ""
+"Discard points that have less than a certain confidence threshold. This only"
+" affects dense reconstructions performed with MVE. Higher values discard "
+"more points."
+msgstr ""
+"I-discard ang mga points na may hindi siguradong threshold. Makakaapekto "
+"lamang ito sa dense reconstruction ng MVE. Ang higher values ay "
+"pinapagsawalang bahala ang mga points."
+
+#: ../../../arguments.rst:123 296ffc1175094be5b9ba9414fbe9ba27
+msgid "Default: ``0.6``"
+msgstr "Default: ``0.6``"
+
+#: ../../../arguments.rst:126 b14d87ed9f84456ea2de1cd4d061e889
+msgid ""
+"Use a full 3D mesh to compute the orthophoto instead of a 2.5D mesh. This "
+"option is a bit faster and provides similar results in planar areas."
+msgstr ""
+"Gumamit ng full 3d mesh upang macompute ang orthophoto kesa sa 2.5D mesh. "
+"Ang opsyon na ito ay mas mabilis at nagbibigay ng resulta sa planar areas."
+
+#: ../../../arguments.rst:129 28fb4b48d9f84e92baf1267bd703f416
+msgid ""
+"Skip generation of a full 3D model. This can save time if you only need 2D "
+"results such as orthophotos and DEMs."
+msgstr ""
+"Lagpasan ang generation ng full 3d model. Makakatipid ka ng oras kung ang "
+"resulta na kailangan mo lang ay 2D tulad ng orthophotos at DEMs."
+
+#: ../../../arguments.rst:132 5696e15ae6724efa8bd43d816bc01a8c
+msgid "Use opensfm to compute dense point cloud alternatively."
+msgstr ""
+"Buksan ang opensfm para macompute ang dense point cloud alternatively."
+
+#: ../../../arguments.rst:135 6b032069d7964c869dac6cf41e078919
+msgid ""
+"Ignore Ground Sampling Distance (GSD). GSD caps the maximum resolution of "
+"image outputs and resizes images when necessary, resulting in faster "
+"processing and lower memory usage. Since GSD is an estimate, sometimes "
+"ignoring it can result in slightly better image output quality."
+msgstr ""
+"Wag pansinin ang Ground Sampling Distance (GSD). Ang GSD ay nagcacap ng "
+"pinakamaraming bilang ng imahe at nagreresize ng imahe kung kinakailangan na"
+" nagreresulta ng mas mabilis na pagproseso at mas kaunti na memory usage. "
+"Bilang ang GSD ay estimate lamang, ang hindi pagbigay pansin dito ay "
+"magreresulta ng medyo mas mabuting quality ng imahe."
+
+#: ../../../arguments.rst:138 12d1473fca734ff49083c522edf55d93
+msgid "The maximum vertex count of the output mesh."
+msgstr "Ang pinakamaraming bilang ng vertex ng output mesh."
+
+#: ../../../arguments.rst:140 59109fac84e543a8be486179ed45f5e1
+msgid "Default: ``100000``"
+msgstr "Default: ``100000``"
+
+#: ../../../arguments.rst:143 40de47aa4aef438695d8c62d122819ef
+msgid ""
+"Oct-tree depth used in the mesh reconstruction, increase to get more "
+"vertices, recommended values are 8-12."
+msgstr ""
+"Oct-tree depth used in the mesh reconstruction, increase to get more "
+"vertices, recommended values are 8-12."
+
+#: ../../../arguments.rst:145 cad75861c95745388ee1e6fc567a02d7
+msgid "Default: ``9``"
+msgstr "Default: ``9``"
+
+#: ../../../arguments.rst:148 c21570663a6849b98141d3937754cf70
+msgid ""
+"Number of points per octree node. For relatively low noise, values in the "
+"range of [1-5] can be used. For noisier datasets, large values in the range "
+"of [15-20] may be employed."
+msgstr ""
+
+#: ../../../arguments.rst:150 838dbab7a7494f4bb4c944a756a143ab
+msgid "Default: ``1.0``"
+msgstr "Default: ``1.0``"
+
+#: ../../../arguments.rst:153 71b0bdbffd204e608b21bc9b0f561717
+msgid ""
+"This floating point value specifies the importance that interpolation of the"
+" point samples is given in the formulation of the screened Poisson equation."
+" The results of the original (unscreened) Poisson Reconstruction can be "
+"obtained by setting this value to ``0``."
+msgstr ""
+"Tinutukoy ng floating point value ang kahalagahan na ang pag-interpolate ng "
+"mga muwestra ng mga punto ay ibinigay sa pagbabalangkas ng na-screen na "
+"Poisson equation. Ang mga resulta ng orihinal (unscreened) Poisson "
+"Reconstruction ay maaaring makuha sa pamamagitan ng pagtatakda ng halagang "
+"ito sa \"0\"."
+
+#: ../../../arguments.rst:155 88b99b17996c4c8b9554e430c0eee071
+msgid "Default: ``4``"
+msgstr "Default: ``4``"
+
+#: ../../../arguments.rst:158 94373544199649c3808ebb5a69aba34b
+msgid ""
+"**Experimental.** Skips dense reconstruction and 3D model generation. It "
+"generates an orthophoto directly from the sparse reconstruction. If you just"
+" need an orthophoto and do not need a full 3D model, turn on this option."
+msgstr ""
+"** Eksperimental. ** Nilaktawan ang masinsin na pagyari at pagbuo ng "
+"modelong 3D. Bumubuo ito ng isang orthophoto nang direkta mula sa kalat-"
+"kalat na pagyari. Kung orthophoto lamang ang kailangan, at hindi isang buong"
+" 3D na modelo, i-on ang opsyong ito."
+
+#: ../../../arguments.rst:161 8b4d9a13cb32444a8417051b37c03a4c
+msgid ""
+"Automatically crop image outputs by creating a smooth buffer around the "
+"dataset boundaries, shrinked by N meters. Use ``0`` to disable cropping."
+msgstr ""
+"Awtomatikong i-crop ang mga imahe sa pamamagitan ng paglikha ng isang "
+"makinis na buffer sa paligid ng mga hangganan ng dataset, na lumiliit ng "
+"\"N\" na metro. Gamitin ang \"0\" para hindi paganahin ang pag-crop."
+
+#: ../../../arguments.rst:166 7555e78dc4864a339dcb00377e041e3a
+msgid ""
+"Classify the point cloud outputs using a Simple Morphological Filter. You "
+"can control the behavior of this option by tweaking the ``--dem-*`` "
+"parameters."
+msgstr ""
+"Uriin ang mga point cloud output gamit ang isang Simple Morphological "
+"Filter. Maaari mong kontrolin ang mga katangian ng opsyong ito sa "
+"pamamagitan ng pag-aayos ng mga parametrong ``--dem-*``."
+
+#: ../../../arguments.rst:168 ../../../arguments.rst:173
+#: ../../../arguments.rst:178 ../../../arguments.rst:225
+#: ../../../arguments.rst:230 ../../../arguments.rst:235
+#: ../../../arguments.rst:240 ../../../arguments.rst:245
+#: ../../../arguments.rst:286 ../../../arguments.rst:296
+#: ../../../arguments.rst:315 ../../../arguments.rst:323
+#: ../../../arguments.rst:328 ../../../arguments.rst:342
+#: 32a642af8b09499eaa7c97156944c2f0 32a642af8b09499eaa7c97156944c2f0
+#: 32a642af8b09499eaa7c97156944c2f0 32a642af8b09499eaa7c97156944c2f0
+#: 32a642af8b09499eaa7c97156944c2f0 32a642af8b09499eaa7c97156944c2f0
+#: 32a642af8b09499eaa7c97156944c2f0 32a642af8b09499eaa7c97156944c2f0
+#: 32a642af8b09499eaa7c97156944c2f0 32a642af8b09499eaa7c97156944c2f0
+#: 32a642af8b09499eaa7c97156944c2f0 32a642af8b09499eaa7c97156944c2f0
+#: 32a642af8b09499eaa7c97156944c2f0 32a642af8b09499eaa7c97156944c2f0
+msgid "Default: ``False``"
+msgstr "Default: ``False``"
+
+#: ../../../arguments.rst:171 4db75f783b534a05bf95f0813bb2aba2
+msgid "Export the georeferenced point cloud in CSV format."
+msgstr "I-export ang georeferenced point cloud sa CSV format."
+
+#: ../../../arguments.rst:176 3f5c13cf79924ee3a8e3eff6a4913371
+msgid "Export the georeferenced point cloud in LAS format."
+msgstr "I-export ang georeferenced point loud sa LAS format."
+
+#: ../../../arguments.rst:181 73ce042a4b61474ab14c094da92c40e0
+msgid ""
+"Filters the point cloud by removing points that deviate more than N standard"
+" deviations from the local mean. Set to ``0`` to disable filtering."
+msgstr ""
+"Sinasala ang cloud point sa pamamagitan ng pag-alis ng mga puntos na lumihis"
+" nang higit sa N standard deviation mula sa local mean. Itakda sa \"0\" "
+"upang hindi paganahin ang pag-filter."
+
+#: ../../../arguments.rst:183 e215ef9e523d48d6a9095173ec7d8ca8
+msgid "Default: ``2.5``"
+msgstr "Default: ``2.5``"
+
+#: ../../../arguments.rst:186 6767f66d91ee444f914592c3ffe1b5fc
+msgid "Simple Morphological Filter elevation scalar parameter."
+msgstr "Simple Morphological Filter elevation scalar parameter."
+
+#: ../../../arguments.rst:188 1640b0261c2f417990fa3dbd044fdf1b
+msgid "Default: ``1.25``"
+msgstr "Default: ``1.25``"
+
+#: ../../../arguments.rst:191 487501610a594d46b6e93f6be4aa4028
+msgid "Simple Morphological Filter slope parameter (rise over run)."
+msgstr "Simple Morphological Filter slope parameter (rise over run)."
+
+#: ../../../arguments.rst:193 a6af052a02404796a51daa6a6658e4d1
+msgid "Default: ``0.15``"
+msgstr "Default: ``0.15``"
+
+#: ../../../arguments.rst:196 9d6cdf2437274d6c999b7a8037ea3d71
+msgid "Simple Morphological Filter elevation threshold parameter (meters)."
+msgstr "Simple Morphological Filter elevation threshold parameter (meters)."
+
+#: ../../../arguments.rst:198 e47ce61e154b4426901776f04dda70cb
+msgid "Default: ``0.5``"
+msgstr "Default: ``0.5``"
+
+#: ../../../arguments.rst:201 2471158a569f49049b62242481e59514
+msgid "Simple Morphological Filter window radius parameter (meters)."
+msgstr "Simple Morphological Filter window radius parameter (meters)."
+
+#: ../../../arguments.rst:203 838dbab7a7494f4bb4c944a756a143ab
+msgid "Default: ``18.0``"
+msgstr "Default: ``18.0``"
+
+#: ../../../arguments.rst:206 c21e85528cdb4d1fa0cdff3fc69195fb
+msgid "Options: ``area`` | ``gmi``"
+msgstr "Mga Opsiyon: ``area`` | ``gmi``"
+
+#: ../../../arguments.rst:208 72b70173fa334afcaad9cff80c183d08
+msgid "Default: ``gmi``"
+msgstr "Default: ``gmi``"
+
+#: ../../../arguments.rst:211 cd809e7d61ad437e8c4e512430454d9f
+msgid ""
+"Affects orthophotos only. Higher values result in sharper corners, but can "
+"affect color distribution and blurriness. Use lower values for planar areas "
+"and higher values for urban areas. The default value works well for most "
+"scenarios."
+msgstr ""
+"Mga orthophoto lang ang naaapektohan. Ang mga mas mataas na halaga ay "
+"nagreresulta sa mas matalas na sulok, ngunit maaaring makaapekto sa "
+"pamamahagi ng kulay at pagkalabo. Gumamit ng mas mababang halaga para sa mga"
+" planar area at mas mataas na halaga para sa mga urban area. Ang default na "
+"halaga ay mabuti para sa karamihan ng mga sitwasyon."
+
+#: ../../../arguments.rst:213 04be46ac9a0c48eebc2e5590eaa26c12
+msgid "Default: ``16``"
+msgstr "Default: ``16``"
+
+#: ../../../arguments.rst:216 0156d40a28134e82a8ae8076128250b7
+msgid "Type of photometric outlier removal method."
+msgstr "Klase ng photometric outlier removal method."
+
+#: ../../../arguments.rst:218 0156d40a28134e82a8ae8076128250b7
+msgid "Options: ``none`` | ``gauss_damping`` | ``gauss_clamping``"
+msgstr "Mga Opsiyon: ``none`` | ``gauss_damping`` | ``gauss_clamping``"
+
+#: ../../../arguments.rst:220 4e80902fc03a4074916db7497283dac9
+msgid "Default: ``gauss_clamping``"
+msgstr "Default: ``gauss_clamping``"
+
+#: ../../../arguments.rst:223 2b0d994b3a7e44ecbf5b50adbaab9c84
+msgid "Skip geometric visibility test."
+msgstr "Lagpasan ang geometric visibility test."
+
+#: ../../../arguments.rst:228 19b6d40be5ae4d238626898dd0a2791f
+msgid "Skip global seam leveling. Useful for IR data."
+msgstr "Lagpasan ang global seam leveling. Magagamit ito sa IR data."
+
+#: ../../../arguments.rst:233 2f649a237f7449508accae950338b29f
+msgid "Skip local seam blending."
+msgstr "Lagpasan ang local seam blending."
+
+#: ../../../arguments.rst:238 dd6809d05ee5494483c7ad55cc80e97d
+msgid "Skip filling of holes in the mesh."
+msgstr "Lagpasan ang pagpuno ng butas sa mga mesh."
+
+#: ../../../arguments.rst:243 349afe09612c4c229fbdbb1a5b75bf51
+msgid "Keep faces in the mesh that are not seen in any camera."
+msgstr "Itago ang mga mukha sa mesh na hindi makikita sa camera."
+
+#: ../../../arguments.rst:248 1c9a12e2b86a4742bbcbf3d64400d423
+msgid "Turn on gamma tone mapping or none for no tone mapping."
+msgstr "I-turn on ang gamma tone mapping o wag para sa no tone mapping."
+
+#: ../../../arguments.rst:250 c21e85528cdb4d1fa0cdff3fc69195fb
+msgid "Options: ``gamma`` | ``none``"
+msgstr "Mga Opsiyon: ``gamma`` | ``none``"
+
+#: ../../../arguments.rst:255 ed6a8b2a17334ad4988c9253abc45166
+msgid ""
+"Path to the file containing the ground control points used for "
+"georeferencing. The file needs to have the following line format: ``easting "
+"northing height pixelrow pixelcol imagename``"
+msgstr ""
+"Ang path na naglalaman ng ground control points gamit sa georeferencing. Ang"
+" file ay kailangan ng mga sumusunod na line format: ``easting northing "
+"height pixelrow pixelcol imagename``"
+
+#: ../../../arguments.rst:257 c819e79f060c43c0b84a275e7ec8a9b1
+msgid "Default: None."
+msgstr "Default: None."
+
+#: ../../../arguments.rst:260 e1de6ea392d64c34bc658c15174f417e
+msgid ""
+"Use this tag if you have a gcp_list.txt but want to use the exif geotags "
+"instead."
+msgstr ""
+"Gamitin ang tag na ito kung mayroong gcp_list.txt ngunit gustong gumamit ng "
+"exit geotags."
+
+#: ../../../arguments.rst:263 5b14f88eb2cb44f287ba191ea800bc0c
+msgid ""
+"Use this tag to build a DTM (Digital Terrain Model, ground only) using a "
+"simple morphological filter. Check the ``--dem*`` and ``--smrf*`` parameters"
+" for finer tuning."
+msgstr ""
+"Gamitin ang tag na ito para bumuo ng DTM (Digital Terrain Model, ground "
+"only) gamit ang simpleng morphological filter. I-check ang ``--dem*`` at "
+"``--smrf*`` na parameters para sa mas-finer na tuning."
+
+#: ../../../arguments.rst:266 d997af9f85ef43d5a73f648cba817c67
+msgid ""
+"Use this tag to build a DSM (Digital Surface Model, ground + objects) using "
+"a progressive morphological filter. Check the ``--dem*`` parameters for "
+"finer tuning."
+msgstr ""
+"Gamitin ang tag na ito para bumuo ng DSM (Digital Surface Model, ground + "
+"objects) gamit ang PROGRESIBONG morphological filter. I-check ang ``--dem*``"
+" na parameters para sa mas-finer na tuning."
+
+#: ../../../arguments.rst:269 aa383ac21fd942abbb06a05fa2cd4c59
+msgid ""
+"Number of steps used to fill areas with gaps. Set to ``0`` to disable gap "
+"filling. Starting with a radius equal to the output resolution, N different "
+"DEMs are generated with progressively bigger radius using the inverse "
+"distance weighted (IDW) algorithm and merged together. Remaining gaps are "
+"then merged using nearest neighbor interpolation."
+msgstr ""
+"Bilang ng mga hakbang na ginamit upang punan ang mga lugar ng mga puwang. "
+"Itakda sa \"0\" upang hindi paganahin ang pagpuno ng puwang. Magsimula sa "
+"isang radius na katumbas ng resolusyon ng output, N ang bilang ng iba't "
+"ibang mga DEM na nabubuo, na may progresibong lumalaki na bilang ng radius "
+"gamit ang inverse distance weighted (IDW) na algorithm at pinagsama. Ang mga"
+" natitirang puwang ay pinagsasama gamit ang pinakamalapit na interpolation "
+"ng kapitbahay."
+
+#: ../../../arguments.rst:274 ac318faea29f451380d8acbd133ca514
+msgid "DSM/DTM resolution in cm / pixel."
+msgstr "Resolusyon ng DSM/DTM sa cm / pixel."
+
+#: ../../../arguments.rst:276 ../../../arguments.rst:291
+#: 421b09a84da24e0cbd3366a07e7898a0 421b09a84da24e0cbd3366a07e7898a0
+msgid "Default: ``5``"
+msgstr "Default: ``5``"
+
+#: ../../../arguments.rst:279 6c60cd14b1ca4862b7c29fffc0c6cb0b
+msgid ""
+"Decimate the points before generating the DEM. ``1`` is no decimation (full "
+"quality). ``100`` decimates ~99% of the points. Useful for speeding up "
+"generation."
+msgstr ""
+"Tanggalin ang mga puntos bago bumuo ng DEM. Ang \"1\" ay walang pagkabulok "
+"(buong kalidad). Ang \"100\" naman ay ~ 99% na pagkabulok ng mga puntos. "
+"Kapaki-pakinabang para sa pagpapabilis ng henerasyon."
+
+#: ../../../arguments.rst:284 4c51400122124407833740ea33c6d938
+msgid ""
+"Computes an euclidean raster map for each DEM. The map reports the distance "
+"from each cell to the nearest NODATA value (before any hole filling takes "
+"place). This can be useful to isolate the areas that have been filled."
+msgstr ""
+"Ang map ay nagrereport ng distansiya sa pagitan ng mga cell sa pinakamalapit"
+" na NODATA value (bago magkaron ng hole filling). Ito ay magagamit sa pag-"
+"isolate ng mga areas na na-fill na."
+
+#: ../../../arguments.rst:289 9f50aec10dd248e79caeb45f71fb5770
+msgid "Orthophoto resolution in cm / pixel."
+msgstr "Resolusyon ng orthopoto sa cm/pixel."
+
+#: ../../../arguments.rst:294 96eda73c55b344769b046cf828a47fe8
+msgid "Set this parameter if you want a stripped geoTIFF."
+msgstr "I-set ang parameter na ito kung nais ng stripped geoTIFF."
+
+#: ../../../arguments.rst:299 fa9586d8c9964d12af506e7fbaba211e
+msgid ""
+"Set the compression to use. Note that this could break gdal_translate if you"
+" don't know what you are doing."
+msgstr ""
+"I-set ang compression na gagamitin. Tandaan na maaari nitong ma-break ang "
+"gdal_translate kung hindi pamilyar sa iyong ginagawa."
+
+#: ../../../arguments.rst:301 2ccae1354a9244789fbbbe356ba5495d
+msgid ""
+"Options: ``JPEG`` | ``LZW`` | ``PACKBITS`` | ``DEFLATE`` | ``LZMA`` | "
+"``NONE``"
+msgstr ""
+"Mga Opsiyon: ``JPEG`` | ``LZW`` | ``PACKBITS`` | ``DEFLATE`` | ``LZMA`` | "
+"``NONE``"
+
+#: ../../../arguments.rst:303 32a642af8b09499eaa7c97156944c2f0
+msgid "Default: ``DEFLATE``"
+msgstr "Default: ``DEFLATE``"
+
+#: ../../../arguments.rst:306 e92e6a0667dc46878c0b0498ada4e122
+msgid ""
+"Control whether the created orthophoto is a BigTIFF or classic TIFF. BigTIFF"
+" is a variant for files larger than 4GiB of data. See GDAL specs: "
+"https://www.gdal.org/frmt_gtiff.html for more info."
+msgstr ""
+"I-control kung ang nagawa na orthophoto ay ang BigTIFF o ang classic TIFF. "
+"Ang BigTIFF ay para sa files na mas malaki sa 4GB and data. Tignan ang link "
+"para sa specs ng GDAL: https://www.gdal.org/frmt_gtiff.html for more info."
+
+#: ../../../arguments.rst:308 86d76a2a998d4759b1a3535742b1bf55
+msgid "Options: ``YES`` | ``NO`` | ``IF_NEEDED`` | ``IF_SAFER``"
+msgstr "Mga Opsiyon: ``YES`` | ``NO`` | ``IF_NEEDED`` | ``IF_SAFER``"
+
+#: ../../../arguments.rst:310 32a642af8b09499eaa7c97156944c2f0
+msgid "Default: ``IF_SAFER``"
+msgstr "Default: ``IF_SAFER``"
+
+#: ../../../arguments.rst:313 faaeac2cec784a968418b021ed02370d
+msgid ""
+"Generates a polygon around the cropping area that cuts the orthophoto around"
+" the edges of features. This polygon can be useful for stitching seamless "
+"mosaics with multiple overlapping orthophotos."
+msgstr ""
+"Nag-generate ng poligon sa palligid ng cropping area na nag-cut ng "
+"orthophoto sa paligid ng features. ANg poligon na ito ay makakatulong sa "
+"pagtatahi ng mossaics na may multiple overlapping orthophotos."
+
+#: ../../../arguments.rst:318 b964b921de144bab8c1c267587fcdee4
+msgid "Build orthophoto overviews using gdaladdo."
+msgstr "Gumawa ng orthophoto overviews gamit ang gdaladdo."
+
+#: ../../../arguments.rst:321 51f0cf7bc32e43c890dd228311b6b506
+msgid "Print additional messages to the console."
+msgstr "Magprint ng karagdagang mensahe sa console."
+
+#: ../../../arguments.rst:326 48cda389a70d421491d077f52f77e63e
+msgid "Generates a benchmark file with runtime info."
+msgstr "Mag-generate ng benchmark file sa runtime info."
+
+#: ../../../arguments.rst:331 5aa1625a41d043deb323e8ff45c164b0
+msgid "Displays software version number and exits."
+msgstr "Dinidisplay ang bersiyon ng software number at exits."
+
+#: ../../../arguments.rst:334 1a8ae22a06b44437aa7bbe4d6bce0b9b
+msgid ""
+"Average number of images per submodel. When splitting a large dataset into "
+"smaller submodels, images are grouped into clusters. This value regulates "
+"the number of images that each cluster should have on average."
+msgstr ""
+"Ang average na bilang ng imahe kada submodel. kapag naghihiwalay ng malaking"
+" dataset sa mas maliit na submodels, ang mga imahe ay ginugrupo sa clusters."
+" Ang value na ito ay nireregulate ang bilang ng imahe kung saan ang mga "
+"cluster ay dapat na may average."
+
+#: ../../../arguments.rst:337 fd09fd44205449a28ce84e0f3411e902
+msgid ""
+"Radius of the overlap between submodels. After grouping images into "
+"clusters, images that are closer than this radius to a cluster are added to "
+"the cluster. This is done to ensure that neighboring submodels overlap."
+msgstr ""
+"Radius ng overlap sa pagitan ng submodels. Matapos pagsamasamahin ang mga "
+"imahe sa isang cluster, ang mga imahe na mas malapit sa cluster ay "
+"nadaragdag agad sa cluster. Ito ay nangyayari para siguraduhin na ang "
+"magkakalapit na submodel ay magoverlap."
+
+#: ../../../arguments.rst:340 678212a55dd4442294d64fe32ba38696
+msgid ""
+"Delete heavy intermediate files (such as original orthos, dtm, dsm) to "
+"optimize disk space usage, while keeping the compressed versions. This "
+"affects the ability to restart the pipeline from an intermediate stage, but "
+"allows datasets to be processed on machines that don't have sufficient disk "
+"space available. Also, in this mode, the \"reports\" does not get written "
+"under the output 'opensfm' folder."
+msgstr ""
+"Magdelete ng mabibigat na intermediate files (katulad ng original orthos, "
+"dtm, dsm) para magamit ng husto ang disk space habang naitatabi ang mga "
+"compressed na bersyon.  Nakakaapekto ito sa abilidad na magrestart ng  ng "
+"pipeline mula sa intermediate stage, nagaallow ito ng datasets na magprocess"
+" sa machines na walng sapat na space na available. Also, sa mode na ito, ang"
+" mga \"reports\" ay hindi naisusulat sa output 'opensfm' folder."
+
+#: ../../../arguments.rst:345 304030bea2384fdfa754ce9cce82a522
+msgid ""
+"URL to a ClusterODM instance for distributing a split-merge workflow on "
+"multiple nodes in parallel."
+msgstr ""
+"URL to a ClusterODM instance for distributing a split-merge workflow on "
+"multiple nodes in parallel."
+
+#: ../../../arguments.rst:347 c819e79f060c43c0b84a275e7ec8a9b1
+msgid "Default: *None*"
+msgstr "Default: *None*"
+
+#: ../../../arguments.rst:350 fc4735a7c39345cb9107ca459957bb80
+msgid ""
+"Choose what to merge in the merge step in a split dataset. By default all "
+"available outputs are merged."
+msgstr ""
+"Piliin ang mga imemerge sa merge step ng split dataset. By default, lahat ng"
+" output ay minemerge nito."
+
+#: ../../../arguments.rst:352 32a642af8b09499eaa7c97156944c2f0
+msgid "Default: ``all``"
+msgstr "Default: ``all``"
+
+#: ../../../arguments.rst:354 3ce8631539bc46c5a0823cb6065ddf2d
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments.rst>`_"
+msgstr ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments.rst>`_"

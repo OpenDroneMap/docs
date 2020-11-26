@@ -1,0 +1,114 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"PO-Revision-Date: 2020-10-05 17:13+0000\n"
+"Last-Translator: Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020\n"
+"Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fil\n"
+"Plural-Forms: nplurals=2; plural=(n == 1 || n==2 || n==3) || (n % 10 != 4 || n % 10 != 6 || n % 10 != 9);\n"
+
+#: ../../../geo.rst:3 0563bcbd52c748af8866a06b5b486c42
+msgid "Image Geolocation Files"
+msgstr "Image Geolocation Files"
+
+#: ../../../geo.rst:5 b3b1b7f636264519b0e60be8157352f4
+msgid ""
+"By default ODM will use the GPS information embedded in the images, if it is"
+" available. Sometimes images do not contain GPS information, or a user "
+"wishes to override the information with more accurate data (such as RTK)."
+msgstr ""
+"By default, ginagamit ng ODM ang impormasyon na kasasam sa mga mahe kung ito"
+" ay available. Minsan ang mga imahe ay walang kasama na GPS na impormasyon o"
+" di kaya naman ay mas pinipili ng gagamit na palitan ang impormasyon ng mas "
+"sigurado na data (tulad ng RTK)"
+
+#: ../../../geo.rst:7 2201f022ed724677aa5b1b59badcaa05
+msgid ""
+"Starting from ODM ``2.0`` people can supply an image geolocation file (geo) "
+"for this purpose."
+msgstr ""
+"Simula sa ODM ``2.0`` pwedeng magsupply ng image geolocation file (geo) para"
+" sa purpose."
+
+#: ../../../geo.rst:9 3d2e14f3f5ae438e8014ae81aab317f8
+msgid "The format of the image geolocation file is simple."
+msgstr "Ang format ng image geolocation file ay simple lamang."
+
+#: ../../../geo.rst:11 e3fc5f8924ca46dab7b2ee32c7f116fe
+msgid ""
+"The first line should contain the name of the projection used for the geo "
+"coordinates. This can be specified either as a PROJ string (e.g. ``+proj=utm"
+" +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), EPSG code (e.g. "
+"``EPSG:4326``) or as a ``WGS84 UTM <zone>[N|S]`` value (eg. ``WGS84 UTM "
+"16N``)"
+msgstr ""
+"Ang unang linya ay dapat maglaman ng projection na ginagamit para sa geo "
+"coordinates. Ito ay ma-specify bilang PROJ string (e.g. ``+proj=utm +zone=10"
+" +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), EPSG code (e.g. "
+"``EPSG:4326``) o bilang ``WGS84 UTM 1[N|S]`` value (eg. ``WGS84 UTM 16N``)"
+
+#: ../../../geo.rst:12 05d202d1fc2440dcbdf68aebcd1ee590
+msgid ""
+"Subsequent lines are the image filename, X, Y & Z (optional) coordinates, "
+"the camera angles (optional, currently used only for radiometric "
+"calibration) and the horizontal/vertical accuracy (optional):"
+msgstr ""
+"Ang magkakasunod na linya ay ang imahe na may filename na X, Y & Z "
+"(optional) coordinates, anggulo ng camera (optional, kasalukuyan na "
+"ginagamit lamang para sa rediometric calibration) at ang patayo or pahalang "
+"na accuracy (optional):"
+
+#: ../../../geo.rst:13 1054fe81584c41d29f59ee2424a08568
+msgid "Camera angles can be set to ``0`` if they are not available."
+msgstr ""
+"Ang naggulo ng camera ay pwedeng i-set sa ``0`` kung hindi ito available."
+
+#: ../../../geo.rst:14 61c28685a74f44acba7b3cbdc185dce7
+msgid "The 10th column (optional) can contain extra fields, such as a label."
+msgstr ""
+"Ang pang-10 na column (optional) ay maaaring magkaroon ng extra fileds "
+"katulad ng label."
+
+#: ../../../geo.rst:16 219799d71e254ead88ccc11b023e735b
+msgid "File format::"
+msgstr "File format::"
+
+#: ../../../geo.rst:22 9117cc8740914dbb96a4d525c7502d7b
+msgid "Example::"
+msgstr "Halimbawa::"
+
+#: ../../../geo.rst:30 479ec91cff6740768ef2d2a553f9d3e6
+msgid ""
+"If you supply a file called ``geo.txt`` then ODM will automatically detect "
+"it. If it has another name you can specify using ``--geo <path>``."
+msgstr ""
+"Kung ikaw ay nagsupply ng imahe na tinatawag na ``geo.txt`` awtomatikong "
+"madedetect ito ng ODM. KUng ito ay may ibang pangalan, maaaring specify ito "
+"gamit ang ``--geo 1``."
+
+#: ../../../geo.rst:32 48a7ceb6fb384dffa5fd80d13285da60
+msgid ""
+"The ``geo.txt`` file must be created in the base of your project folder."
+msgstr "Sa base ng project folder dapat gawin ang ``geo.txt``."
+
+#: ../../../geo.rst:34 2e39d38eeba345119513e1f36974c888
+msgid ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_"
+msgstr ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_"

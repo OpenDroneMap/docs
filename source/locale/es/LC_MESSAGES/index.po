@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"POT-Creation-Date: 2020-11-25 14:06-0500\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: Israel Barragán <israelbar@gmail.com>, 2020\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
@@ -46,22 +46,26 @@ msgid "`English <https://docs.opendronemap.org/>`_"
 msgstr "`Inglés <https://docs.opendronemap.org/>`_"
 
 #: ../../../index.rst:16 2ae77e832f9f40fdbb17f72d04369b04
+msgid "`Filipino <https://docs.opendronemap.org/fil>`_"
+msgstr ""
+
+#: ../../../index.rst:17 2ae77e832f9f40fdbb17f72d04369b04
 msgid "`French <https://docs.opendronemap.org/fr>`_"
 msgstr "`Francés <https://docs.opendronemap.org/fr>`_"
 
-#: ../../../index.rst:17 2b86dd77c9ca4fdbb3e5c3a362287930
+#: ../../../index.rst:18 2b86dd77c9ca4fdbb3e5c3a362287930
 msgid "`Spanish <https://docs.opendronemap.org/es>`_"
 msgstr "`Español <https://docs.opendronemap.org/es>`_"
 
-#: ../../../index.rst:18 bdc10bb2b2904d7886f3128bf90cbf72
+#: ../../../index.rst:19 bdc10bb2b2904d7886f3128bf90cbf72
 msgid "`Swahili <https://docs.opendronemap.org/sw>`_"
 msgstr "`Suajili <https://docs.opendronemap.org/sw>`_"
 
-#: ../../../index.rst:19 41b56ac8133b4a35a02b95db07be553b
+#: ../../../index.rst:20 41b56ac8133b4a35a02b95db07be553b
 msgid "`Telugu <https://docs.opendronemap.org/te>`_"
 msgstr "`Télugu <https://docs.opendronemap.org/te>`_"
 
-#: ../../../index.rst:57 2b86dd77c9ca4fdbb3e5c3a362287930
+#: ../../../index.rst:58 2b86dd77c9ca4fdbb3e5c3a362287930
 msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/index.rst>`_"

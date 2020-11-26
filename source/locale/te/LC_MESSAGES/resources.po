@@ -3,6 +3,10 @@
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020
+# danbjoseph <danbjoseph@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-26 14:39-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Telugu (https://www.transifex.com/americanredcross/teams/111882/te/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,64 +24,72 @@ msgstr ""
 
 #: ../../../resources.rst:2 fd0399e9f29e43ee85f633fc5a7d9854
 msgid "Additional References"
-msgstr ""
+msgstr "అదనపు సూచనలు"
 
 #: ../../../resources.rst:5 d3ba9250ce4b482c89983e02f0bb4d9d
 msgid "For Users"
-msgstr ""
+msgstr "వినియోగదారుల కోసం"
 
 #: ../../../resources.rst:7 2c54ff8efcbb4cd4a1d4426a677a668a
 msgid "The following resources are a good place to start:"
-msgstr ""
+msgstr "కింది వనరులు ప్రారంభించడానికి మంచి ప్రదేశం:"
 
 #: ../../../resources.rst:9 4d7432320ac74422a01020761eaf6f3a
 msgid "`README page for ODM <https://github.com/OpenDroneMap/OpenDroneMap>`_"
-msgstr ""
+msgstr "`ODM కోసం <https://github.com/OpenDroneMap/OpenDroneMap>`_"
 
 #: ../../../resources.rst:10 3bcf9ff9b6e3408f875a614e65332f9b
 msgid "`README page for WebODM <https://github.com/OpenDroneMap/WebODM>`_"
-msgstr ""
+msgstr "`WebODM <https://github.com/OpenDroneMap/WebODM>`_ కోసం README పేజీ"
 
 #: ../../../resources.rst:11 52d2e948eece4d0d8fe87e3f17bff6dd
 msgid ""
 "`README page for NodeODM <https://github.com/OpenDroneMap/node-"
 "OpenDroneMap>`_"
-msgstr ""
+msgstr "`NodeODM కోసం <https://github.com/OpenDroneMap/node-OpenDroneMap>`_"
 
 #: ../../../resources.rst:12 43b64684e93c41a08607bfd7318b8509
 msgid ""
 "`Ground Control Points Format Specification "
 "<https://github.com/mapillary/OpenSfM/blob/master/doc/source/gcp.rst>`_"
 msgstr ""
+"`గ్రౌండ్ కంట్రోల్ పాయింట్స్ ఫార్మాట్ స్పెసిఫికేషన్ "
+"<https://github.com/mapillary/OpenSfM/blob/master/doc/source/gcp.rst>`_"
 
 #: ../../../resources.rst:13 b4bbfe51562c46d781908edf80c34abf
 msgid "`OpenDroneMap: The Missing Guide <https://odmbook.com/>`_"
-msgstr ""
+msgstr "`ఓపెన్‌డ్రోన్‌మ్యాప్: తప్పిపోయిన గైడ్ <https://odmbook.com/>`_"
 
 #: ../../../resources.rst:16 60796eb1324b41d5b56f497960451872
 msgid "For Developers"
-msgstr ""
+msgstr "డెవలపర్ల కోసం"
 
 #: ../../../resources.rst:18 45473074a8b6436f9d842e2c9bb4ca87
 msgid ""
 "In addition to user resources, we recommend to also read the following:"
 msgstr ""
+"వినియోగదారు వనరులతో పాటు, ఈ క్రింది వాటిని కూడా చదవమని మేము సిఫార్సు "
+"చేస్తున్నాము:"
 
 #: ../../../resources.rst:20 cd3029204fde4dd2b6ece3cfe1a2bd6b
 msgid "WebODM documentation: https://docs.webodm.org"
-msgstr ""
+msgstr "WebODM డాక్యుమెంటేషన్: https://docs.webodm.org"
 
 #: ../../../resources.rst:21 c6fe70ba85564f3e82f609e7df9f8227
 msgid ""
 "NodeODM API specification: "
 "https://github.com/OpenDroneMap/NodeODM/blob/master/docs/index.adoc"
 msgstr ""
+"NodeODM API స్పెసిఫికేషన్: "
+"https://github.com/OpenDroneMap/NodeODM/blob/master/docs/index.adoc"
 
 #: ../../../resources.rst:22 b282ab45d280415982d512c91e6b6719
 msgid ""
 "Overview of the ODM pipeline: http://community.opendronemap.org/t/where-"
 "can-i-find-background-information-on-the-concepts-of-odm/665/2"
 msgstr ""
+"ODM పైప్‌లైన్ యొక్క అవలోకనం: http://community.opendronemap.org/t/where-can-i"
+"-find-background-information-on-the-concepts-of-odm/665/2"
 
 #: ../../../resources.rst:23 edc948c7e2d2431e8b888a7b1a733965
 msgid ""
@@ -86,9 +99,16 @@ msgid ""
 "related to structure from motion, multi-view stereo, meshing, texturing, "
 "etc. which can be used to improve the software."
 msgstr ""
+"మేము `మా ఫోరమ్‌లో <http://community.opendronemap.org/c/ideas-proposals"
+"/research-papers>`_ కు అంకితమైన విభాగాన్ని ఉంచుతాము. సాఫ్ట్‌వేర్‌ను "
+"మెరుగుపరచడానికి ఉపయోగపడే మోషన్, మల్టీ-వ్యూ స్టీరియో, మెషింగ్, టెక్స్‌టరింగ్ "
+"మొదలైన వాటి నుండి నిర్మాణానికి సంబంధించిన ఆర్ట్ రీసెర్చ్ గురించి మరింత "
+"చదవడానికి ఇది ఒక విలువైన ప్రదేశం."
 
 #: ../../../resources.rst:26 9653eddbec1b4561addbaa46fe051e06
 msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/api.rst>`_"
 msgstr ""
+"`ఈ పత్రాలను సవరించడానికి సహాయం చెయ్యండి! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/api.rst>`_"
