@@ -23,4 +23,4 @@ In addition to user resources, we recommend to also read the following:
 * We keep a `section in our forum dedicated to research papers <http://community.opendronemap.org/c/ideas-proposals/research-papers>`_. This is a valuable place where to read more about state of the art research related to structure from motion, multi-view stereo, meshing, texturing, etc. which can be used to improve the software.
 
 
-`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/api.rst>`_
+`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/resources.rst>`_!

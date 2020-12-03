@@ -142,7 +142,7 @@ If you installed Docker Toolbox (see below if you installed Docker for Windows i
 1. Open the **VirtualBox Manager** application
 2. Right click the **default** VM and press **Close (ACPI Shutdown)** to stop the machine
 3. Right click the **default** VM and press **Settings...**
-4. Move the **Base Memory** slider from the **System** paneland allocate 60-70% of all available memory, optionally adding 50% of the available processors from the **Processor** tab also
+4. Move the **Base Memory** slider from the **System** panel and allocate 60-70% of all available memory, optionally adding 50% of the available processors from the **Processor** tab also
 
 .. figure:: images/virtualboxsettings.png
    :alt: Screenshot of VirtualBox Settings
@@ -501,4 +501,5 @@ From WebODM you can then press the **Add New** button under **Processing Nodes**
 
 If everything went well, you should now have two processing nodes! You will be able to process multiple tasks in parallel using two different machines.
 
-`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst>`_
+
+`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst>`_!

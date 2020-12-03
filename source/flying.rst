@@ -15,4 +15,5 @@ See also DroneDeploy's guide on `Making Successful Maps <https://support.dronede
 
 Finally, lens distortion is a challenge in projects requiring accurate 3D data. See our section in these docs on `Camera Calibration <tutorials.html#calibrating-the-camera>`_.
 
-`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/flying.rst>`_
+
+`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/flying.rst>`_!

@@ -10,6 +10,8 @@ Welcome to OpenDroneMap's documentation
 | 
 | 
 
+There is a `guide <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ on using GitHub to contribute. Anyone is welcome to share their knowledge and improve our documentation. You can also report problems using `GitHub issues <https://github.com/OpenDroneMap/docs/issues>`_.
+
 The documentation is available in several languages. Some translations are incomplete and will still display in English. The below languages are at least 20 percent translated. You can help us translate those languages (and other languages!) via Transifex. There is a `getting started guide on GitHub <https://github.com/opendronemap/docs#translations>`_.
 
 - `English <https://docs.opendronemap.org/>`_
@@ -54,5 +56,3 @@ The documentation is available in several languages. Some translations are incom
     multispectral
     requesting-features
     contributing
-
-`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/index.rst>`_

@@ -197,4 +197,5 @@ Acknowledgments
 ---------------
 Huge props to Pau and the folks at Mapillary for their amazing contributions to OpenDroneMap through their OpenSfM code, which is a key component of the split-merge pipeline. We look forward to further pushing the limits of OpenDroneMap and seeing how big a dataset we can process.
 
-`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst>`_
+
+`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst>`_!

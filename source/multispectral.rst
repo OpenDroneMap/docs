@@ -19,7 +19,4 @@ Usage
 Process all the images from all bands at once (do not separate the bands into multiple folders) and pass the `--radiometric-calibration` parameter to enable radiometric normalization. If the images are part of a multi-camera setup, the resulting orthophoto will have N bands, one for each camera (+ alpha).
 
 
-
-
-
-`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst>`_
+`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst>`_!
