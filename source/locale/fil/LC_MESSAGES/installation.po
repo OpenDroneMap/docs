@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020
+# danbjoseph <danbjoseph@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-26 14:39-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
-"Last-Translator: Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020\n"
+"Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -425,8 +426,8 @@ msgid ""
 " of all available memory, optionally adding 50% of the available processors "
 "from the **Processor** tab also"
 msgstr ""
-"I-move ang **Base Memory**nslider mula sa **System** panel at magallocate ng"
-" 60-70% ng available na memory, optionally dinadagdagan din ng 50% ng "
+"I-move ang **Base Memory** nslider mula sa **System** panel at magallocate "
+"ng 60-70% ng available na memory, optionally dinadagdagan din ng 50% ng "
 "available processors mula sa **Processor** tab"
 
 #: ../../../installation.rst:151 4f60c64419f8484da38deacc6254255b

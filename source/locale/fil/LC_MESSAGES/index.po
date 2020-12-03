@@ -4,8 +4,8 @@
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
 # Translators:
-# danbjoseph <danbjoseph@gmail.com>, 2020
 # Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020
+# danbjoseph <danbjoseph@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -14,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-11-25 14:06-0500\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
-"Last-Translator: Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020\n"
+"Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -47,7 +47,7 @@ msgstr "`Ingles <https://docs.opendronemap.org/>`_"
 
 #: ../../../index.rst:16 2ae77e832f9f40fdbb17f72d04369b04
 msgid "`Filipino <https://docs.opendronemap.org/fil>`_"
-msgstr "Filipino <https://docs.opendronemap.org/fil>`_"
+msgstr "`Filipino <https://docs.opendronemap.org/fil>`_"
 
 #: ../../../index.rst:17 2ae77e832f9f40fdbb17f72d04369b04
 msgid "`French <https://docs.opendronemap.org/fr>`_"
