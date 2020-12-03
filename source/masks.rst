@@ -26,4 +26,4 @@ Name your file:
 For example, ``DJI_0018.JPG`` can have a mask by creating a ``DJI_0018_mask.JPG`` file and include that in the list of images. You can use ``.JPG``, ``.PNG``, ``.BMP`` and ``.TIF`` formats for image masks.
 
 
-`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_
+`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/masks.rst>`_!

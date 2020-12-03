@@ -31,4 +31,5 @@ If you supply a file called ``geo.txt`` then ODM will automatically detect it. I
 
 The ``geo.txt`` file must be created in the base of your project folder.
 
-`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_
+
+`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/geo.rst>`_!
