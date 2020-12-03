@@ -218,7 +218,7 @@ tx pull --use-git-timestamps --all
 ```
 or 
 ```
-tx pull --use-git-timestamps -l "sw,ar,es,fr,te"
+tx pull --use-git-timestamps -l "sw,ar,es,fr,te,fil"
 ```
 
 Alternatively, you can pull only a specific language. For example:

@@ -381,6 +381,9 @@ msgid ""
 "range of [1-5] can be used. For noisier datasets, large values in the range "
 "of [15-20] may be employed."
 msgstr ""
+"Número de puntos por nodo octree. Para un ruido relativamente bajo, se "
+"pueden usar valores en el rango de [1-5]. Para conjuntos de datos con mas "
+"ruido, se pueden usar valores mas grandes en el rango de [15-20]."
 
 #: ../../../arguments.rst:150 838dbab7a7494f4bb4c944a756a143ab
 msgid "Default: ``1.0``"

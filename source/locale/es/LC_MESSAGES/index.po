@@ -47,7 +47,7 @@ msgstr "`Inglés <https://docs.opendronemap.org/>`_"
 
 #: ../../../index.rst:16 2ae77e832f9f40fdbb17f72d04369b04
 msgid "`Filipino <https://docs.opendronemap.org/fil>`_"
-msgstr ""
+msgstr "`Filipino <https://docs.opendronemap.org/fil>`_"
 
 #: ../../../index.rst:17 2ae77e832f9f40fdbb17f72d04369b04
 msgid "`French <https://docs.opendronemap.org/fr>`_"

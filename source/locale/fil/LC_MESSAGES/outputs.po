@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020
+# danbjoseph <danbjoseph@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-26 14:39-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
-"Last-Translator: Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020\n"
+"Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -71,6 +72,9 @@ msgid ""
 "MeshLab, and choose File:Import Mesh and choose your textured mesh from a "
 "location similar to the following: ``odm_texturing\\odm_textured_model.obj``"
 msgstr ""
+"Maaaccess ang point cloud at textured meshes gamit ang Meshlab. Buksan ang "
+"Meshlab at piliin ang File:Import Mesh at piliin ang textured mesh mula sa "
+"lokasyon  tulad ng mga sumusunod: ``odm_texturing\\odm_textured_model.obj``"
 
 #: ../../../outputs.rst:30 f452c086297841c6b18804010bbf394d
 msgid ""
@@ -89,18 +93,24 @@ msgid ""
 "``odm_orthophoto/odm_orthphoto.png`` -- The orthophoto, but this is a simple"
 " png, which doesn't have any georeferencing information"
 msgstr ""
+"``odm_orthophoto/odm_orthphoto.png`` -- The orthophoto, pero eto ay simpleng"
+" png na walang georeferencing information."
 
 #: ../../../outputs.rst:37 8487c7b9409e4549bdf74776d7c552b0
 msgid ""
 "``odm_orthophoto/odm_orthphoto.tif`` -- GeoTIFF Orthophoto. You can use it "
 "in QGIS as a raster layer."
 msgstr ""
+"``odm_orthophoto/odm_orthphoto.tif`` -- GeoTIFF Orthophoto. Maaaring gamitin"
+" ito sa QGIS bilang raster layer."
 
 #: ../../../outputs.rst:43 f96d614393b3411299358ed2ac8847bd
 msgid ""
 "*Orthophoto over State University Zanzibar, courtesy of* `Khadija Abdullah "
 "Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
 msgstr ""
+"*Orthophoto over State University Zanzibar, courtesy of* `Khadija Abdullah "
+"Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
 
 #: ../../../outputs.rst:46 97a9f77304ae4ce487ea62415fbe0e5a
 msgid "DTM/DSM"
@@ -113,6 +123,10 @@ msgid ""
 "<https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-"
 "models>`_ for more options in creating."
 msgstr ""
+"Ang DTM/DSM ay magagawa lamang kapag ang  ``--dtm`` o ``--dsm`` na opsiyon "
+"ang ginamit. Tignan ang `tutorial on elevation models "
+"<https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-"
+"models>`_ para sa mas maraming opsiyon ng paggawa."
 
 #: ../../../outputs.rst:50 3d6a730458b14794bf7454b4f6e119e4
 msgid "Data will be stored in:"
@@ -131,6 +145,8 @@ msgid ""
 "*Digital surface model over State University Zanzibar, courtesy of* `Khadija"
 " Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
 msgstr ""
+"*Digital surface model over State University Zanzibar, courtesy of* `Khadija"
+" Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
 
 #: ../../../outputs.rst:62 fe6b51da6c9f47a39b7437e0cdfcee35
 msgid "List of all outputs"
@@ -141,3 +157,5 @@ msgid ""
 "`Help edit these docs! "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/outputs.rst>`_"
 msgstr ""
+"`Help edit these docs! "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/outputs.rst>`_"

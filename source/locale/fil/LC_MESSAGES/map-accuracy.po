@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020
+# danbjoseph <danbjoseph@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-10-26 14:39-0400\n"
 "PO-Revision-Date: 2020-10-15 13:38+0000\n"
-"Last-Translator: Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020\n"
+"Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../../../map-accuracy.rst:3 d4e2d7d317d34b208e768f689ad692b0
 msgid "Map accuracy"
-msgstr ""
+msgstr "Kawastuan ng Mapa"
 
 #: ../../../map-accuracy.rst:5 674abb654cf7448cac13ea47971e80d2
 msgid ""
@@ -32,6 +33,10 @@ msgid ""
 "accuracy, we are talking about quality of data and about number of errors "
 "contained in a certain dataset (Pascual 2011)."
 msgstr ""
+"Ang accuracy ay matutukoy sa digri o lapit kung saan ang impormasyon ng mapa"
+" ay kapareho ng halaga sa totoong buhay. Sa madalit sabi, kapag accuracy ang"
+" pinaguusapan, kalidad ng datos at bilang ng mga mali na naipon sa isang "
+"dataset ang tinutukoy (Pascual 2011)."
 
 #: ../../../map-accuracy.rst:8 c23ea9314c134c8ba5671054b7e3c057
 msgid "**Relative or Local accuracy**"
@@ -43,6 +48,9 @@ msgid ""
 "distances between two points on a map correspond to the actually distances "
 "between those points in the real world."
 msgstr ""
+"Ang lokal o relative accuracy ay matutukoy bilang digri kung saan ang "
+"distansiya sa pagitan ng dalawang puntos sa mapa ay katumbas ng aktuwal na "
+"distansiya sa pagitan ng mga puntos sa totoong buhay."
 
 #: ../../../map-accuracy.rst:12 5463e74ce3b246a4a690fcc476f95536
 msgid ""
@@ -50,12 +58,17 @@ msgid ""
 " a map can have a high relative accuracy (in size and shape) but its "
 "position in the world can be shifted (Figure 1)."
 msgstr ""
+"Ang relative accuracy ay independiente sa lokasyon sa mapa ng mundo, ang "
+"mapa ay maaaring may mataas na relative accuracy (sa laki at korte) ngunit "
+"ang posisyon sa mundo ay pwedeng baguhin (Figure1)."
 
 #: ../../../map-accuracy.rst:18 1d4253e1796842319b7dcbd23384343c
 msgid ""
 "*Figure 1. Model showing high relative accuracy but misplaced according to "
 "its real world position*"
 msgstr ""
+"*Figure 1. Ang modelo ay pinapakita ang mataas na relative accuracy ngunit "
+"hindi wasto ang lokasyon ayon sa totoong posisyon nito sa mundo.*"
 
 #: ../../../map-accuracy.rst:22 754655b1d1d840fbbc8c2d8980a876fb
 msgid "**Absolute or global Accuracy**"
@@ -68,12 +81,18 @@ msgid ""
 "absolute accurate model, as the points are correctly placed according to its"
 " real world position."
 msgstr ""
+"Ang absolute accuracy ay ang kawastuan ng reconstruction kaugnay ng totoong "
+"posisyon sa planeta (Pix4D 2019). ANg Figure 2 ay pinapakita ang relative at"
+" absolute accurate na modelo, ang mga puntos ay tama ang posisyon ayon sa "
+"totoong buhay."
 
 #: ../../../map-accuracy.rst:30 9d73ff2d96b14f37b5f6166e2baf2695
 msgid ""
 "*Figure 2. Model showing high relative and absolute accuracy. Placed "
 "correctly according to its real world position*"
 msgstr ""
+"*Figure 2. Ang modelo ay pinapakita ang mataas na relative at absolute "
+"accuracy. Nakalagay ayon sa totoong posisyon nito sa totoong buhay*"
 
 #: ../../../map-accuracy.rst:33 b73218309c99474abc6119f6bfffdf61
 msgid "**An Accuracy level for each project**"
@@ -88,10 +107,14 @@ msgid ""
 "accuracy is critical, for example project compliance evaluations and land "
 "title surveying, which require a higher relative and absolute accuracy."
 msgstr ""
+"Ang bawat proyekto ay may partikular na accuracy na pangangailangan. "
+"Halimbawa ang pagtukoy ng progresyon sa construction site o pagsukat ng "
+"apektadong lugar ng sunog ay hindi nangangailangan ng GCP, bilang ang "
+"absolute accuracy ang hindi makakaapekto sa proseso ng pagdedesisyon."
 
 #: ../../../map-accuracy.rst:39 cc37e2d221b5438597d9284f2f6b18ff
 msgid "What to expect"
-msgstr ""
+msgstr "Mga Dapat I-expect"
 
 #: ../../../map-accuracy.rst:41 0a236f8f8a584a588a68484240ee6551
 msgid ""
@@ -102,6 +125,12 @@ msgid ""
 "range of 2 to 6 meters and the vertical accuracy between 3 to 4 times the "
 "horizontal accuracy."
 msgstr ""
+"sa pangkalahatan na palatuntunin, asahan ang relative accuracy ay nasa order"
+" na 1 to 3 times ng average ng GSD para sa dataset. At para naman sa "
+"absolute accuracy, kaiilangan asahan na ito ay dumedepende sa GPS units na "
+"nakakabit sa UAV pero ang horizontal accuracy ng standard GPS ay madalas "
+"nasa 2 to 6 meters at ang vertical accuracy sa pagitan naman ng 3 to 4 times"
+" ng horizontal accuracy."
 
 #: ../../../map-accuracy.rst:43 60659f189c6143b6bd94cb23d28105d6
 msgid ""
@@ -109,6 +138,9 @@ msgid ""
 "horizontal accuracy and 4 times the GSD for the vertical accuracy "
 "(Madawalagama 2016)."
 msgstr ""
+"Kapag ginagamit ang GCP, ang absolute accuracy ay mas mas mas mapapahusay ng"
+" 2.5 times GSD para sa horizontal accuracy at 4 times na GSD para sa "
+"vertical accuracy (Madawalagama 2016)."
 
 #: ../../../map-accuracy.rst:45 7f9656e94e544adf807d480168874da7
 msgid ""
@@ -116,6 +148,9 @@ msgid ""
 "1:200 scales according to NSDI & FGDC mapping accuracy standards during sub-"
 "optimal conditions (Barry 2013)."
 msgstr ""
+"Sa GSD na 1cm, ang accuracy ay katulad ng sa RTK GNSS, at nasa loob ng 1:200"
+" na scale ayon sa NSDI & FGDC mapping accuracy standards habang nasa sub-"
+"optimal na kondisyon (Barry 2013)."
 
 #: ../../../map-accuracy.rst:49 3e9dd6b536884dd38b143069f710f1ab
 msgid "Aspects impacting map accuracy"
@@ -132,6 +167,10 @@ msgid ""
 "altitude and other factors influencing the UAV stability and terrain "
 "illumination."
 msgstr ""
+"Ang kondisyon ng panahon ay may direk na epekto sa resulta ng photogrammetry"
+" kaya importante na ipagsaalang-alang ang cloud coverage, wind speed, "
+"humidity, sun's altitude at iba pang factor na nagiimpluwensiya sa UAV "
+"stability at terrain illumination."
 
 #: ../../../map-accuracy.rst:55 dd609d1a79b64f2590b9d786fa83e5f1
 msgid "**Cameras**"
@@ -144,6 +183,10 @@ msgid ""
 "when the UAV is moving, so global or mechanical shutter cameras are advised "
 "for mapping jobs."
 msgstr ""
+"ANg mas malaki at mas mahusay na sensor ay gumagawa ng less noise at mas "
+"malinaw na focused images. Ikonsider din na ang rolling shutter camera ay "
+"nagreresulta ng  baluktot na imahe kapag ang UAV ay gumagalaw, kaya ang "
+"global o mechanical shutter cameras ay nirerekomenda sa mapping jobs."
 
 #: ../../../map-accuracy.rst:60 e4f17c5a5c184b5691fa3a8c08bb8543
 msgid "**Flight altitude**"
@@ -156,6 +199,10 @@ msgid ""
 "detail in the recognizable features. When a smaller GSD is required an "
 "altitude of 3 to 4 times the height of the highest point is recommended."
 msgstr ""
+"Mas mataas na flight altitude, mas malaki ang image footprint at GSD. Mas "
+"malaki na GSD, mas nababawasan ang linaw at kawastuan ng imahe gawa ng mas "
+"kaunti ang detalye na makikita. Kapag ang mas maliit na GSD ay kailangan ng "
+"altitude na 3 to 4 times ng taas ng pinaka mataas na point ang rekomendado."
 
 #: ../../../map-accuracy.rst:65 1555b7ec782a49c6a7460f0e32d578e0
 msgid "**Flight speed**"
@@ -171,10 +218,17 @@ msgid ""
 "be limited by two factors: the speed at which you are moving multiplied by "
 "the 1 second increments of RTK (Mather 2020)."
 msgstr ""
+"ANg flight speed ay may ispesyal na epekto sa cameras na nilagyan ng rolling"
+" shutter, habang ang may global o mechanical shutter naman ay mababa ang "
+"epekto. Ang UAV na nilagyan ng RTK positioning system ay apektado rin ng "
+"bilis ngunit ang paghover sa kada imahe na kinukunan ay maaaring makakuha ng"
+" maayos na accuracy. Kung gumagalaw kada kuha ng photo, ang accuracy ay "
+"malilimitahan ng dalawang factor: ang bilis kung saan ikaw ay gumagalaw "
+"multiplied sa 1 second increments ng RTK (Mather 2020)."
 
 #: ../../../map-accuracy.rst:72 d2ef9f75f3624fd18cc2d2e7e0f9afee
 msgid "References"
-msgstr ""
+msgstr "Mga Sanggunian"
 
 #: ../../../map-accuracy.rst:74 9b8c9e6151824c24a592ec6ae333ff61
 msgid ""
@@ -234,6 +288,9 @@ msgid ""
 "2019. https://www.pix4d.com/blog/accuracy-aerial-mapping (accessed 10 13, "
 "2020)."
 msgstr ""
+"Pix4D. «What is accuracy in an aerial mapping project?» Pix4D. 25 de 05 de "
+"2019. https://www.pix4d.com/blog/accuracy-aerial-mapping (accessed 10 13, "
+"2020)."
 
 #: ../../../map-accuracy.rst:87 ef00360d240e421696b89cd720808a3e
 msgid ""
