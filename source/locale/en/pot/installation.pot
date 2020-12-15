@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"POT-Creation-Date: 2020-12-15 09:17-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -274,7 +274,7 @@ msgstr ""
 
 #: ../../../installation.rst:145
 #: 5923a15e0b664b6fa2577388188691c3
-msgid "Move the **Base Memory** slider from the **System** paneland allocate 60-70% of all available memory, optionally adding 50% of the available processors from the **Processor** tab also"
+msgid "Move the **Base Memory** slider from the **System** panel and allocate 60-70% of all available memory, optionally adding 50% of the available processors from the **Processor** tab also"
 msgstr ""
 
 #: ../../../installation.rst:151
@@ -730,7 +730,7 @@ msgstr ""
 msgid "If everything went well, you should now have two processing nodes! You will be able to process multiple tasks in parallel using two different machines."
 msgstr ""
 
-#: ../../../installation.rst:504
-#: f77613f718494ac791af608ceafe2657
-msgid "`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst>`_"
+#: ../../../installation.rst:505
+#: b43697578b6e4d798aa51eddc14c5136
+msgid "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst>`_!"
 msgstr ""

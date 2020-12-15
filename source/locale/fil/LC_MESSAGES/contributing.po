@@ -13,7 +13,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"POT-Creation-Date: 2020-12-15 09:17-0500\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
@@ -227,7 +227,7 @@ msgstr ""
 "Gamitin ang os.tmpdir() imbis ang /tmp tuwing kailangan ng reperensiya sa "
 "pansamantalang direktoryo."
 
-#: ../../../contributing.rst:79 60e9e81967354752b39a01541d5b2ccf
+#: ../../../contributing.rst:80 60e9e81967354752b39a01541d5b2ccf
 msgid ""
 "Using a plain return when returning explicitly at the end of a function."
 msgstr "Gamitin ang return option pagkatapos ng bawat punsyon."
@@ -236,10 +236,9 @@ msgstr "Gamitin ang return option pagkatapos ng bawat punsyon."
 msgid "Not return null, return undefined, null, or undefined"
 msgstr "Hindi return null, return undefined, null, o undefined"
 
-#: ../../../contributing.rst:81 cbb4ef102fb34a88bc3ccb04d7ff203c
+#: ../../../contributing.rst:82 1bbd9476f992444fa2c635b3d02ce8f4
 msgid ""
-"`Help edit these docs! "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_"
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
+"contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_!"
 msgstr ""
-"`Tumulong sa pagayos ng mga dokumentong ito! "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_"

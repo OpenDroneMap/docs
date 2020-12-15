@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"POT-Creation-Date: 2020-12-15 09:17-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,7 +61,7 @@ msgstr ""
 msgid "We are glad you are excited to see new features added to the project.  Some new features need support, and some are easier to implement.  We'll do our best to help you understand where your request falls, and we appreciate any support you can provide."
 msgstr ""
 
-#: ../../../requesting-features.rst:33
-#: 1dc7be048a46499292c8313b44ebbb79
-msgid "`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/requesting-features.rst>`_"
+#: ../../../requesting-features.rst:34
+#: 7da56259db894bdd9321b4c1357c70ae
+msgid "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/requesting-features.rst>`_!"
 msgstr ""

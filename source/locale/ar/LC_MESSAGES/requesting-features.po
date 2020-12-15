@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 0.9.10\n"
+"Project-Id-Version: OpenDroneMap 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-07-21 17:01-0400\n"
+"POT-Creation-Date: 2020-12-15 09:17-0500\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Arabic (https://www.transifex.com/americanredcross/teams/111882/ar/)\n"
@@ -22,13 +22,11 @@ msgstr ""
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-# d940e31fefb34ecbb8d9be39288cd73c
-#: ../../../requesting-features.rst:2
+#: ../../../requesting-features.rst:2 d940e31fefb34ecbb8d9be39288cd73c
 msgid "How To Request Features"
 msgstr "كيفية طلب الميزات"
 
-# 95118bd8b9c649a598c5fe8bff033698
-#: ../../../requesting-features.rst:4
+#: ../../../requesting-features.rst:4 95118bd8b9c649a598c5fe8bff033698
 msgid ""
 "All software needs user feedback and feature requests, to grow and maintain "
 "alignment with the needs of its users."
@@ -36,8 +34,7 @@ msgstr ""
 "تحتاج جميع البرامج إلى تعليقات المستخدمين وطلبات الميزات ، لزيادة النمو "
 "والحفاظ على التوافق مع احتياجات المستخدمين."
 
-# 696e503999524f108ec4e69ad5c38b9a
-#: ../../../requesting-features.rst:7
+#: ../../../requesting-features.rst:7 696e503999524f108ec4e69ad5c38b9a
 msgid ""
 "OpenDroneMap is FOSS software.  Free and open source (FOSS) projects are "
 "interesting from the inside and outside: from the outside, successful ones "
@@ -51,8 +48,7 @@ msgstr ""
 "المشروع ، يمكن أن يشعروا بالقيود الكبيرة على الموارد: إلى حد كبير بالوقت "
 "والمال والفرص الزائدة."
 
-# 1b8acc2a7a29463ca0df0b5f454bc0b7
-#: ../../../requesting-features.rst:13
+#: ../../../requesting-features.rst:13 1b8acc2a7a29463ca0df0b5f454bc0b7
 msgid ""
 "A feature request can be submitted as issues on the applicable Github "
 "repository (e.g., `WebODM <https://github.com/OpenDroneMap/WebODM/issues>`_ "
@@ -69,8 +65,7 @@ msgstr ""
 "بالبحث في هذه المصادر لمعرفة ما إذا كان شخص آخر قد أثارها بالفعل. في بعض "
 "الأحيان تكون الميزة قيد العمل بالفعل ، أو تمت مناقشتها على الأقل."
 
-# 72a6e0d25ec84002b73a6810ffca914c
-#: ../../../requesting-features.rst:19
+#: ../../../requesting-features.rst:19 72a6e0d25ec84002b73a6810ffca914c
 msgid ""
 "And importantly, the trick is to listen: if someone within the project says:"
 " \"This is a big lift, we need MONEY or TIME or SOMEONE TO HELP CODE IT\" "
@@ -81,8 +76,7 @@ msgstr ""
 " رفع كبير ، فنحن بحاجة إلى المال أو الوقت أو شخص ما للمساعدة في ترميزها\" "
 "(أو ربما مزيج من الثلاثة) ، فهناك إجابتان تعمل بشكل جيد في الاستجابة"
 
-# db0eaf87e7fa4f9f99538ed5dd6b2d66
-#: ../../../requesting-features.rst:23
+#: ../../../requesting-features.rst:23 db0eaf87e7fa4f9f99538ed5dd6b2d66
 msgid ""
 "*Ok. I didn’t know it was a big feature request! I hope someone comes along "
 "with the necessary resources. As a community member, I would be happy to be "
@@ -91,22 +85,19 @@ msgstr ""
 "*حسنا. لم أكن أعلم أنه كان طلب ميزة كبيرة! آمل أن يأتي شخص ما مع الموارد "
 "اللازمة. كعضو في المجتمع ، يسعدني أن أكون مستخدمًا ومُختبِرًا مبكرًا!*"
 
-# d83e0f882cf640539bbdfca6d431241d
-#: ../../../requesting-features.rst:25
+#: ../../../requesting-features.rst:25 d83e0f882cf640539bbdfca6d431241d
 msgid "or"
 msgstr "أو"
 
-# eeb066ea19ea47398930c8e7c724c5a4
-#: ../../../requesting-features.rst:27
+#: ../../../requesting-features.rst:27 eeb066ea19ea47398930c8e7c724c5a4
 msgid ""
 "*Let’s figure out if we can put together the resources to get this done! "
 "Here’s what I can contribute toward it: …*"
 msgstr ""
-"* دعنا نكتشف ما إذا كان بإمكاننا تجميع الموارد لإنجاز ذلك! إليك ما يمكنني "
-"المساهمة فيه: ... *"
+"*دعنا نكتشف ما إذا كان بإمكاننا تجميع الموارد لإنجاز ذلك! إليك ما يمكنني "
+"المساهمة فيه: ...*"
 
-# 22a7df06b14a4a30a09f34de5c834c28
-#: ../../../requesting-features.rst:29
+#: ../../../requesting-features.rst:29 22a7df06b14a4a30a09f34de5c834c28
 msgid ""
 "We are glad you are excited to see new features added to the project.  Some "
 "new features need support, and some are easier to implement.  We'll do our "
@@ -117,13 +108,10 @@ msgstr ""
 "الميزات الجديدة إلى الدعم ، وبعضها أسهل في التنفيذ. سنبذل قصارى جهدنا "
 "لمساعدتك على فهم مكان سقوط طلبك ، ونقدر أي دعم يمكنك تقديمه."
 
-# 1dc7be048a46499292c8313b44ebbb79
-#: ../../../requesting-features.rst:33
+#: ../../../requesting-features.rst:34 7da56259db894bdd9321b4c1357c70ae
 msgid ""
-"`Help edit these docs! "
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
+"contribution>`_ and help improve `this page "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/requesting-"
-"features.rst>`_"
+"features.rst>`_!"
 msgstr ""
-"`ساعد في تحرير هذه المستندات! "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/requesting-"
-"features.rst>`_"

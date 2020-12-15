@@ -16,7 +16,7 @@ Arguments
   Path to the project folder.
   
 --resize-to <integer>
-  Resizes images by the largest side for opensfm. Set to ``-1`` to disable. 
+  Resizes images by the largest side for opensfm. Set to ``-1`` to disable. Disabling is useful for deriving maximum quality from imagery, but can be computationally expensive.
   
   Default: ``2048``
 

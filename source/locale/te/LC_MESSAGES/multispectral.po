@@ -5,16 +5,15 @@
 # 
 # Translators:
 # Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020
-# danbjoseph <danbjoseph@gmail.com>, 2020
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"POT-Creation-Date: 2020-12-15 09:17-0500\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
-"Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
+"Last-Translator: Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020\n"
 "Language-Team: Telugu (https://www.transifex.com/americanredcross/teams/111882/te/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -88,10 +87,9 @@ msgstr ""
 "చిత్రాలు బహుళ-కెమెరా సెటప్‌లో భాగమైతే, ఫలితంగా వచ్చే ఆర్థోఫోటోలో N "
 "బ్యాండ్‌లు ఉంటాయి, ప్రతి కెమెరాకు ఒకటి (+ ఆల్ఫా)."
 
-#: ../../../multispectral.rst:25 a36abb316e2d4fbfa64247b874763e70
+#: ../../../multispectral.rst:22 8231fc0c092840a0a328b0d094c3dfe1
 msgid ""
-"`Help edit these docs! "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst>`_"
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
+"contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst>`_!"
 msgstr ""
-"`ఈ పత్రాలను సవరించడానికి సహాయం చెయ్యండి! "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst>`_"

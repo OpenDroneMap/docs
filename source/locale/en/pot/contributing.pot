@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"POT-Creation-Date: 2020-12-15 09:17-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -156,7 +156,7 @@ msgstr ""
 msgid "Use os.tmpdir() rather than /tmp when you need to reference the temporary directory."
 msgstr ""
 
-#: ../../../contributing.rst:79
+#: ../../../contributing.rst:80
 #: 60e9e81967354752b39a01541d5b2ccf
 msgid "Using a plain return when returning explicitly at the end of a function."
 msgstr ""
@@ -166,7 +166,7 @@ msgstr ""
 msgid "Not return null, return undefined, null, or undefined"
 msgstr ""
 
-#: ../../../contributing.rst:81
-#: cbb4ef102fb34a88bc3ccb04d7ff203c
-msgid "`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_"
+#: ../../../contributing.rst:82
+#: 1bbd9476f992444fa2c635b3d02ce8f4
+msgid "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_!"
 msgstr ""

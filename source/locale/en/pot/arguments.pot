@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-11-25 08:47-0500\n"
+"POT-Creation-Date: 2020-12-15 09:17-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -42,8 +42,8 @@ msgid "Path to the project folder."
 msgstr ""
 
 #: ../../../arguments.rst:19
-#: 81b4ca1825f34d81bb833d45ec323fea
-msgid "Resizes images by the largest side for opensfm. Set to ``-1`` to disable."
+#: fd5788e1572640119083c454a7e6f0af
+msgid "Resizes images by the largest side for opensfm. Set to ``-1`` to disable. Disabling is useful for deriving maximum quality from imagery, but can be computationally expensive."
 msgstr ""
 
 #: ../../../arguments.rst:21
@@ -631,7 +631,7 @@ msgstr ""
 msgid "Default: ``all``"
 msgstr ""
 
-#: ../../../arguments.rst:354
-#: 3ce8631539bc46c5a0823cb6065ddf2d
-msgid "`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments.rst>`_"
+#: ../../../arguments.rst:355
+#: 4f1460a174624a2baad4687622e2d5c7
+msgid "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments.rst>`_!"
 msgstr ""

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-05 12:56-0400\n"
+"POT-Creation-Date: 2020-12-15 09:17-0500\n"
 "PO-Revision-Date: 2020-10-05 17:13+0000\n"
 "Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
 "MIME-Version: 1.0\n"
@@ -17,13 +17,11 @@ msgstr ""
 "Language: sw\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-# f802bfb33e1b4aec8deb372ffdf37110
-#: ../../../masks.rst:3
+#: ../../../masks.rst:3 f802bfb33e1b4aec8deb372ffdf37110
 msgid "Using Image Masks"
 msgstr ""
 
-# 93d8755b57534311b90754654f06f4b6
-#: ../../../masks.rst:5
+#: ../../../masks.rst:5 93d8755b57534311b90754654f06f4b6
 msgid ""
 "Starting from ODM ``2.0`` people can supply image masks to inform the "
 "software to skip reconstruction over certain areas. This is useful for cases"
@@ -31,8 +29,7 @@ msgid ""
 "shots, or simply to limit the reconstruction of a single subject."
 msgstr ""
 
-# f663a782236e4e81aea72f6640221790
-#: ../../../masks.rst:7
+#: ../../../masks.rst:7 f663a782236e4e81aea72f6640221790
 msgid ""
 "To add a mask, simply create a new black and white image of the same "
 "dimension as the target image you want to mask (you can use a program such "
@@ -40,27 +37,24 @@ msgid ""
 "reconstruction."
 msgstr ""
 
-# 918162f197fa4fd5b4e105857d83a3cd
-#: ../../../masks.rst:22
+#: ../../../masks.rst:22 918162f197fa4fd5b4e105857d83a3cd
 msgid "Name your file:"
 msgstr ""
 
-# c0dc947ff69445d8bd6928ea447067d5
-#: ../../../masks.rst:24
+#: ../../../masks.rst:24 c0dc947ff69445d8bd6928ea447067d5
 msgid "``<filename>_mask.JPG``"
 msgstr ""
 
-# 357e67312ee240f3ae641f57a7db793b
-#: ../../../masks.rst:26
+#: ../../../masks.rst:26 357e67312ee240f3ae641f57a7db793b
 msgid ""
 "For example, ``DJI_0018.JPG`` can have a mask by creating a "
 "``DJI_0018_mask.JPG`` file and include that in the list of images. You can "
 "use ``.JPG``, ``.PNG``, ``.BMP`` and ``.TIF`` formats for image masks."
 msgstr ""
 
-# 2fccb71b93d546708d50657fd908fe12
-#: ../../../masks.rst:29
+#: ../../../masks.rst:29 6975ed58096d465cb3ab901995933344
 msgid ""
-"`Help edit these docs! "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_"
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
+"contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/masks.rst>`_!"
 msgstr ""
