@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"POT-Creation-Date: 2020-12-15 09:17-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -61,7 +61,7 @@ msgstr ""
 msgid "Process all the images from all bands at once (do not separate the bands into multiple folders) and pass the `--radiometric-calibration` parameter to enable radiometric normalization. If the images are part of a multi-camera setup, the resulting orthophoto will have N bands, one for each camera (+ alpha)."
 msgstr ""
 
-#: ../../../multispectral.rst:25
-#: a36abb316e2d4fbfa64247b874763e70
-msgid "`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst>`_"
+#: ../../../multispectral.rst:22
+#: 8231fc0c092840a0a328b0d094c3dfe1
+msgid "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst>`_!"
 msgstr ""

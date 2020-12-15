@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.0.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-10-26 14:39-0400\n"
+"POT-Creation-Date: 2020-12-15 09:17-0500\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -87,6 +87,6 @@ msgid "We keep a `section in our forum dedicated to research papers <http://comm
 msgstr ""
 
 #: ../../../resources.rst:26
-#: 9653eddbec1b4561addbaa46fe051e06
-msgid "`Help edit these docs! <https://github.com/OpenDroneMap/docs/blob/publish/source/api.rst>`_"
+#: 4a9612627f3e47fc91f6031800f26d26
+msgid "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/resources.rst>`_!"
 msgstr ""
