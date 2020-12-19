@@ -77,6 +77,7 @@ for opt in options:
         h = h.replace("\n", "")
         h = h.replace('%(default)s', ('``' + options[opt].get('default', '') + '``').replace('````', '``'))
         h = h.replace("Can be one of: %(choices)s", "")
+        h = h.replace("Can be one of: %(choices)s.", "")
         h = h.replace('%(choices)s', options[opt].get('choices', ''))
         options[opt]['help'] = h
     else:
