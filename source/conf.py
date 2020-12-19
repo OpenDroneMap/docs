@@ -13,10 +13,12 @@ project = 'OpenDroneMap'
 copyright = '2020, OpenDroneMap'
 author = 'OpenDroneMap'
 
-# The short X.Y version
-version = '2.0.0'
+import urllib.request
+res = urllib.request.urlopen("https://raw.githubusercontent.com/OpenDroneMap/ODM/master/VERSION")
+version = res.read().decode('utf-8').strip()
+
 # The full version, including alpha/beta/rc tags
-release = '2.0.0'
+release = version
 
 
 # -- General configuration ---------------------------------------------------

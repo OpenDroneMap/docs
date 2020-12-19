@@ -14,10 +14,13 @@ help:
 
 .PHONY: help Makefile
 
-livehtml:
+autogenerate:
+	python scripts/extract_odm_strings.py https://raw.githubusercontent.com/OpenDroneMap/ODM/master/opendm/config.py scripts/arguments.template.rst source/arguments.rst
+
+livehtml: autogenerate
 	sphinx-autobuild --open-browser -H 0.0.0.0 -b html "$(SOURCEDIR)" "$(BUILDDIR)"
 	
-deploy:
+deploy: autogenerate
 	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html" -nW
 	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html/sw" -D language='sw' -nW 
 	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html/ar" -D language='ar' -nW 
