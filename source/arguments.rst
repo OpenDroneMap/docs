@@ -9,11 +9,11 @@ Arguments
 ``--build-overviews`` 
   Build orthophoto overviews using gdaladdo.
 
-``--camera-lens`` <string>
+``--camera-lens`` auto |  perspective |  brown |  fisheye |  spherical
   Set a camera projection type. Manually setting a value can help improve geometric undistortion. By default the application tries to determine a lens type from the images metadata. Can be set to one of: ['auto', 'perspective', 'brown', 'fisheye', 'spherical']. Default: ``auto``
 
 ``--cameras`` <json>
-  Use the camera parameters computed from another dataset instead of calculating them. Can be specified either as path to a cameras.json file or as a JSON string representing the contents of a cameras.json file. Default: `"`
+  Use the camera parameters computed from another dataset instead of calculating them. Can be specified either as path to a cameras.json file or as a JSON string representing the contents of a cameras.json file. Default: ``
 
 ``--crop`` <positive float>
   Automatically crop image outputs by creating a smooth buffer around the dataset boundaries, shrinked by N meters. Use 0 to disable cropping. Default: ``3``
@@ -42,17 +42,17 @@ Arguments
 ``--dtm`` 
   Use this tag to build a DTM (Digital Terrain Model, ground only) using a simple morphological filter. Check the --dem* and --smrf* parameters for finer tuning.
 
-``--end-with,-e`` <string>
+``--end-with,-e`` dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report
   Can be one of:dataset | split | merge | opensfm | openmvs | odm_filterpoints | odm_meshing | mvs_texturing | odm_georeferencing | odm_dem | odm_orthophoto | odm_report
 
 ``--fast-orthophoto`` 
   Skips dense reconstruction and 3D model generation. It generates an orthophoto directly from the sparse reconstruction. If you just need an orthophoto and do not need a full 3D model, turn on this option.
 
-``--feature-quality`` <string>
-  Set feature extraction quality. Higher quality generates better features, but requires more memory and takes longer. Can be one of: ['ultra', 'high', 'medium', 'low', 'lowest']. Default: ``high``
+``--feature-quality`` ultra |  high |  medium |  low |  lowest
+  Set feature extraction quality. Higher quality generates better features, but requires more memory and takes longer. . Default: ``high``
 
-``--feature-type`` <string>
-  Choose the algorithm for extracting keypoints and computing descriptors. Can be one of: ['sift', 'hahog']. Default: ``sift``
+``--feature-type`` sift |  hahog
+  Choose the algorithm for extracting keypoints and computing descriptors. . Default: ``sift``
 
 ``--force-gps`` 
   Use images' GPS exif data for reconstruction, even if there are GCPs present.This flag is useful if you have high precision GPS measurements. If there are no GCPs, this flag does nothing. Default: ``False``
@@ -78,13 +78,13 @@ Arguments
 ``--matcher-neighbors`` <integer>
   Number of nearest images to pre-match based on GPS exif data. Set to 0 to skip pre-matching. Neighbors works together with Distance parameter, set both to 0 to not use pre-matching. OpenSFM uses both parameters at the same time, Bundler uses only one which has value, prefering the Neighbors parameter. Default: ``8``
 
-``--matcher-type`` <string>
-  Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of Words. FLANN is slower, but more stable. BOW is faster, but can sometimes miss valid matches. Can be one of: ['flann', 'bow']. Default: ``flann``
+``--matcher-type`` flann |  bow
+  Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of Words. FLANN is slower, but more stable. BOW is faster, but can sometimes miss valid matches. . Default: ``flann``
 
 ``--max-concurrency`` <positive integer>
   The maximum number of processes to use in various processes. Peak memory requirement is ~1GB per thread and 2 megapixel image resolution. Default: ``4``
 
-``--merge`` <string>
+``--merge`` all |  pointcloud |  orthophoto |  dem
   Choose what to merge in the merge step in a split dataset. By default all available outputs are merged. Options: ['all', 'pointcloud', 'orthophoto', 'dem']. Default: ``all``
 
 ``--mesh-octree-depth`` <positive integer>
@@ -105,7 +105,7 @@ Arguments
 ``name`` <project name>
   Name of Project (i.e subdirectory of projects folder)
 
-``--opensfm-depthmap-method`` <string>
+``--opensfm-depthmap-method`` PATCH_MATCH |  BRUTE_FORCE |  PATCH_MATCH_SAMPLE
   Raw depthmap computation algorithm. PATCH_MATCH and PATCH_MATCH_SAMPLE are faster, but might miss some valid points. BRUTE_FORCE takes longer but produces denser reconstructions. Default: ``PATCH_MATCH``
 
 ``--opensfm-depthmap-min-consistent-views`` <integer: 2 <= x <= 9>
@@ -117,7 +117,7 @@ Arguments
 ``--optimize-disk-space`` 
   Delete heavy intermediate files to optimize disk space usage. This affects the ability to restart the pipeline from an intermediate stage, but allows datasets to be processed on machines that don't have sufficient disk space available. Default: ``False``
 
-``--orthophoto-compression`` <string>
+``--orthophoto-compression`` JPEG |  LZW |  PACKBITS |  DEFLATE |  LZMA |  NONE
   Set the compression to use for orthophotos. Options: ['JPEG', 'LZW', 'PACKBITS', 'DEFLATE', 'LZMA', 'NONE'].Default: ``DEFLATE``
 
 ``--orthophoto-cutline`` 
@@ -147,8 +147,8 @@ Arguments
 ``--pc-las`` 
   Export the georeferenced point cloud in LAS format. Default:  ``False``
 
-``--pc-quality`` <string>
-  Set point cloud quality. Higher quality generates better, denser point clouds, but requires more memory and takes longer. Each step up in quality increases processing time roughly by a factor of 4x.Can be one of: ['ultra', 'high', 'medium', 'low', 'lowest']. Default: ``medium``
+``--pc-quality`` ultra |  high |  medium |  low |  lowest
+  Set point cloud quality. Higher quality generates better, denser point clouds, but requires more memory and takes longer. Each step up in quality increases processing time roughly by a factor of 4x.. Default: ``medium``
 
 ``--pc-rectify`` 
   Perform ground rectification on the point cloud. This means that wrongly classified ground points will be re-classified and gaps will be filled. Useful for generating DTMs. Default: ``False``
@@ -162,16 +162,16 @@ Arguments
 ``--project-path`` <path>
   Path to the project folder
 
-``--radiometric-calibration`` <string>
+``--radiometric-calibration`` none |  camera |  camera+sun
   Set the radiometric calibration to perform on images. When processing multispectral images you should set this option to obtain reflectance values (otherwise you will get digital number values). [camera] applies black level, vignetting, row gradient gain/exposure compensation (if appropriate EXIF tags are found). [camera+sun] is experimental, applies all the corrections of [camera], plus compensates for spectral radiance registered via a downwelling light sensor (DLS) taking in consideration the angle of the sun. Can be set to one of: ['none', 'camera', 'camera+sun']. Default: ``none``
 
-``--rerun,-r`` <string>
+``--rerun,-r`` dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report
   Can be one of:dataset | split | merge | opensfm | openmvs | odm_filterpoints | odm_meshing | mvs_texturing | odm_georeferencing | odm_dem | odm_orthophoto | odm_report
 
 ``--rerun-all`` 
   force rerun of all tasks
 
-``--rerun-from`` <string>
+``--rerun-from`` dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report
   Can be one of:dataset | split | merge | opensfm | openmvs | odm_filterpoints | odm_meshing | mvs_texturing | odm_georeferencing | odm_dem | odm_orthophoto | odm_report
 
 ``--resize-to`` <integer>
@@ -207,10 +207,10 @@ Arguments
 ``--split-overlap`` <positive integer>
   Radius of the overlap between submodels. After grouping images into clusters, images that are closer than this radius to a cluster are added to the cluster. This is done to ensure that neighboring submodels overlap.
 
-``--texturing-data-term`` <string>
+``--texturing-data-term`` gmi |  area
   Data term: [area, gmi]. Default: ``gmi``
 
-``--texturing-outlier-removal-type`` <string>
+``--texturing-outlier-removal-type`` none |  gauss_clamping |  gauss_damping
   Type of photometric outlier removal method: [none, gauss_damping, gauss_clamping]. Default: ``gauss_clamping``
 
 ``--texturing-skip-global-seam-leveling`` 
@@ -219,7 +219,7 @@ Arguments
 ``--texturing-skip-local-seam-leveling`` 
   Skip local seam blending. Default:  ``False``
 
-``--texturing-tone-mapping`` <string>
+``--texturing-tone-mapping`` none |  gamma
   Turn on gamma tone mapping or none for no tone mapping. Choices are  'gamma' or 'none'. Default: ``none`` 
 
 ``--tiles`` 

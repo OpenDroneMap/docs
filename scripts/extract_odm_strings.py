@@ -76,6 +76,7 @@ for opt in options:
     if h:
         h = h.replace("\n", "")
         h = h.replace('%(default)s', ('``' + options[opt].get('default', '') + '``').replace('````', '``'))
+        h = h.replace("Can be one of: %(choices)s", "")
         h = h.replace('%(choices)s', options[opt].get('choices', ''))
         options[opt]['help'] = h
     else:
@@ -93,7 +94,7 @@ if len(options) > 0:
         subst += "``%s%s`` %s\n  %s\n\n" % (
             opt,
             "," + ",".join(args_map[opt]) if len(args_map[opt]) > 0 else "",
-            options[opt].get('metavar', ''),
+            options[opt].get('choices', options[opt].get('metavar', '')).replace('[', '').replace(']', '').replace(',', ' | ').replace('\'', ''),
             options[opt].get('help', '')
         )
 
