@@ -13,7 +13,7 @@ Arguments
   Set a camera projection type. Manually setting a value can help improve geometric undistortion. By default the application tries to determine a lens type from the images metadata. Can be set to one of: ['auto', 'perspective', 'brown', 'fisheye', 'spherical']. Default: ``auto``
 
 ``--cameras`` <json>
-  Use the camera parameters computed from another dataset instead of calculating them. Can be specified either as path to a cameras.json file or as a JSON string representing the contents of a cameras.json file. Default: ````
+  Use the camera parameters computed from another dataset instead of calculating them. Can be specified either as path to a cameras.json file or as a JSON string representing the contents of a cameras.json file. Default: `"`
 
 ``--crop`` <positive float>
   Automatically crop image outputs by creating a smooth buffer around the dataset boundaries, shrinked by N meters. Use 0 to disable cropping. Default: ``3``
