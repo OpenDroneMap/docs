@@ -27,7 +27,7 @@ update: autogenerate
 livehtml:
 	sphinx-autobuild --open-browser -H 0.0.0.0 -b html "$(SOURCEDIR)" "$(BUILDDIR)"
 
-production:
+deploy:
 	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html" -nW
 	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html/sw" -D language='sw' -nW 
 	@$(SPHINXBUILD) -b html "$(SOURCEDIR)" "$(BUILDDIR)/html/ar" -D language='ar' -nW 
