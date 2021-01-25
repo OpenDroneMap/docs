@@ -21,38 +21,31 @@ The documentation is available in several languages. Some translations are incom
 - `Swahili <https://docs.opendronemap.org/sw>`_
 - `Telugu <https://docs.opendronemap.org/te>`_
 
-| 
-| 
-
 .. figure:: images/seedling.png
     :alt: image of seedling
     :align: right
     :height: 70
     :width: 70
 
+| 
 .. toctree::
 
     installation
-
-
-.. figure:: images/pencil.png
-    :alt: image of pencil
-    :align: right
-    :height: 60
-    :width: 60
-		
-.. toctree::
-
-    tutorials
-    arguments
-    outputs
-    gcp
-    map-accuracy
-    geo
-    masks
-    large
-    resources
-    flying
-    multispectral
-    requesting-features
+    basic-processing
+    advanced-processing
+    data-collection
+    additional-resources
     contributing
+    'tutorials
+    'arguments
+    'outputs
+    'gcp
+    'map-accuracy
+    'geo
+    'masks
+    'large
+    'resources
+    'flying
+    'multispectral
+    'requesting-features
+    'contributing

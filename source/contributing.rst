@@ -1,17 +1,17 @@
 .. contributing
 
 How To Contribute
-=================
+=========================================
 
 OpenDroneMap relies on community contributions. You can contribute in many ways, even if you are not a programmer.
 
 Community Forum
----------------
+-----------------------------------------
 
 If you are looking to get involved, are stuck on a problem, or want to reach out, `the forum <https://community.opendronemap.org/>`_ is a great place to start. You may find your questions already answered or else you can find other useful tips and resources. You can also contribute your open access datasets for others to explore. It is a good place go before submitting bug reports or getting in touch with developers before writing a new feature.
 
 Reporting Bugs
---------------
+-----------------------------------------
 
 Bugs are tracked as Github issues. Please create an issue in the repository and tag it with the Bug tag.
 
@@ -33,7 +33,7 @@ Include details about your configuration and environment:
 * **Are you running ODM in a virtual machine or Docker?** If so, which VM software are you using and which operating systems and versions are used for the host and the guest?
 
 Template For Submitting Bug Reports
-```````````````````````````````````
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 ::
 
     [Short description of problem here]
@@ -65,8 +65,12 @@ Template For Submitting Bug Reports
     * Problem can be reliably reproduced, doesn't happen randomly: [Yes/No]
     * Problem happens with all datasets and projects, not only some datasets or projects: [Yes/No]
 
+For Developers 
+-----------------------------------------
+(...)
+
 Pull Requests
--------------
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 * Include screenshots and animated GIFs in your pull request whenever possible.
 * Follow the PEP8 Python Style Guide.
@@ -78,5 +82,6 @@ Pull Requests
 * Using a plain return when returning explicitly at the end of a function.
     * Not return null, return undefined, null, or undefined
 
-
-`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_!
+Contributing to Docs
+-----------------------------------------
+`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/requesting-features.rst>`_!

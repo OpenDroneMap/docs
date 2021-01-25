@@ -10,7 +10,7 @@
 
 # General information about the project.
 project = 'OpenDroneMap'
-copyright = '2020, OpenDroneMap'
+copyright = '2021, OpenDroneMap'
 author = 'OpenDroneMap'
 
 import urllib.request
