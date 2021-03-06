@@ -99,15 +99,6 @@ Arguments
 ``name`` <project name>
   Name of dataset (i.e subfolder name within project folder). Default: ``code``
 
-``--opensfm-depthmap-method`` PATCH_MATCH |  BRUTE_FORCE |  PATCH_MATCH_SAMPLE
-  Raw depthmap computation algorithm. PATCH_MATCH and PATCH_MATCH_SAMPLE are faster, but might miss some valid points. BRUTE_FORCE takes longer but produces denser reconstructions. Default: ``PATCH_MATCH``
-
-``--opensfm-depthmap-min-consistent-views`` <integer: 2 <= x <= 9>
-  Minimum number of views that should reconstruct a point for it to be valid. Use lower values if your images have less overlap. Lower values result in denser point clouds but with more noise. Default: ``3``
-
-``--opensfm-depthmap-min-patch-sd`` <positive float>
-  When using PATCH_MATCH or PATCH_MATCH_SAMPLE, controls the standard deviation threshold to include patches. Patches with lower standard deviation are ignored. Default: ``1``
-
 ``--optimize-disk-space`` 
   Delete heavy intermediate files to optimize disk space usage. This affects the ability to restart the pipeline from an intermediate stage, but allows datasets to be processed on machines that don't have sufficient disk space available. Default: ``False``
 
@@ -148,7 +139,10 @@ Arguments
   Perform ground rectification on the point cloud. This means that wrongly classified ground points will be re-classified and gaps will be filled. Useful for generating DTMs. Default: ``False``
 
 ``--pc-sample`` <positive float>
-  Filters the point cloud by keeping only a single point around a radius N (in meters). This can be useful to limit the output resolution of the point cloud. Set to 0 to disable sampling. Default: ``0``
+  Filters the point cloud by keeping only a single point around a radius N (in meters). This can be useful to limit the output resolution of the point cloud and remove duplicate points. Set to 0 to disable sampling. Default: ``0``
+
+``--pc-tile`` 
+  Reduce the memory usage needed for depthmap fusion by splitting large scenes into tiles. Turn this on if your machine doesn't have much RAM and/or you've set --pc-quality to high or ultra. Experimental. Default: ``False``
 
 ``--primary-band`` <string>
   When processing multispectral datasets, you can specify the name of the primary band that will be used for reconstruction. It's recommended to choose a band which has sharp details and is in focus. Default: ``auto``
@@ -177,6 +171,9 @@ Arguments
 ``--skip-band-alignment`` 
   When processing multispectral datasets, ODM will automatically align the images for each band. If the images have been postprocessed and are already aligned, use this option. Default: ``False``
 
+``--skip-report`` 
+  Skip generation of PDF report. This can save time if you don't need a report. Default: ``False``
+
 ``--sm-cluster`` <string>
   URL to a ClusterODM instance for distributing a split-merge workflow on multiple nodes in parallel. Default: ``None``
 
@@ -194,6 +191,9 @@ Arguments
 
 ``--split`` <positive integer>
   Average number of images per submodel. When splitting a large dataset into smaller submodels, images are grouped into clusters. This value regulates the number of images that each cluster should have on average. Default: ``999999``
+
+``--split-image-groups`` <path string>
+  Path to the image groups file that controls how images should be split into groups. The file needs to use the following format: image_name group_nameDefault: ``None``
 
 ``--split-overlap`` <positive integer>
   Radius of the overlap between submodels. After grouping images into clusters, images that are closer than this radius to a cluster are added to the cluster. This is done to ensure that neighboring submodels overlap. Default: ``150``
@@ -230,9 +230,6 @@ Arguments
 
 ``--use-hybrid-bundle-adjustment`` 
   Run local bundle adjustment for every image added to the reconstruction and a global adjustment every 100 images. Speeds up reconstruction for very large datasets. Default: ``False``
-
-``--use-opensfm-dense`` 
-  Use OpenSfM to compute the dense point cloud instead of OpenMVS. Default: ``False``
 
 ``--verbose,-v`` 
   Print additional messages to the console. Default: ``False``
