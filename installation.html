@@ -1,0 +1,740 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Installation and Getting Started &mdash; OpenDroneMap 2.4.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Tutorials" href="tutorials.html" />
+    <link rel="prev" title="Welcome to OpenDroneMap’s documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> OpenDroneMap
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.4.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Installation and Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hardware-recommendations">Hardware Recommendations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-check-virtualization-support">Step 1. Check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-install-requirements">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-check-memory-and-cpu-allocation">Step 3. Check Memory and CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-download-webodm">Step 4. Download WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-launch-webodm">Step 4. Launch WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Step 1. Check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Step 3. Check Memory and CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-download-and-launch-webodm">Step 4. Download and Launch WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-install-requirements">Step 1. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-check-additional-requirements">Step 2. Check Additional Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-download-and-launch-webodm">Step 3. Download and Launch WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-commands-and-troubleshooting">Basic Commands and Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hello-webodm">Hello, WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#running-on-more-than-one-machine">Running on more than one machine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-high-quality-orthophotos">Creating High Quality Orthophotos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#calibrating-the-camera">Calibrating the Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-digital-elevation-models">Creating Digital Elevation Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-docker">Using Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#listing-docker-machines">Listing Docker Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#accessing-logs-on-the-instance">Accessing logs on the instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#command-line-access-to-instances">Command line access to instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#cleaning-up-after-docker">Cleaning up after Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-odm-from-low-bandwidth-location">Using ODM from low-bandwidth location</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#what-is-this-and-who-is-it-for">What is this and who is it for?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#steps">Steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#install">Install</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#prep-data-and-project">Prep data and project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#resize-droplet-pull-pin-run-away">Resize droplet, pull pin, run away</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#after-it-finishes-assuming-you-survive-that-long">After it finishes (assuming you survive that long)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arguments.html">Options and Flags</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#id1">Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">OpenDroneMap Outputs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#point-cloud">Point Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#d-textured-model">3D Textured Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#orthophoto">Orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#list-of-all-outputs">List of all outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gcp.html">Ground Control Points</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#recommended-practices-for-gcp-setting">Recommended practices for GCP setting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#gcp-file-format">GCP file format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#user-interfaces">User Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="map-accuracy.html">Map accuracy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#what-to-expect">What to expect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="map-accuracy.html#aspects-impacting-map-accuracy">Aspects impacting map accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geo.html">Image Geolocation Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="masks.html">Using Image Masks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large.html">Splitting Large Datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="large.html#calibrate-images">Calibrate images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#local-split-merge">Local Split-Merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#distributed-split-merge">Distributed Split-Merge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="large.html#getting-started-with-distributed-split-merge">Getting Started with Distributed Split-Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#understanding-the-cluster">Understanding the Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#accessing-the-logs">Accessing the Logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#autoscaling-clusterodm">Autoscaling ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#acknowledgments">Acknowledgments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Additional References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-users">For Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-developers">For Developers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flying.html">Flying Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multispectral.html">Multispectral Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#hardware">Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requesting-features.html">How To Request Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">How To Contribute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#community-forum">Community Forum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#reporting-bugs">Reporting Bugs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#template-for-submitting-bug-reports">Template For Submitting Bug Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#pull-requests">Pull Requests</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenDroneMap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Installation and Getting Started</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation-and-getting-started">
+<h1>Installation and Getting Started<a class="headerlink" href="#installation-and-getting-started" title="Permalink to this headline">¶</a></h1>
+<p>This section is excerpted and modified with permission from <a class="reference external" href="https://odmbook.com">OpenDroneMap: The Missing Guide</a>, by Piero Toffanin.</p>
+<p>Until recently OpenDroneMap was the term used to refer to a single command line application (what is now known as the ODM project).  With the recent development of a web interface, an API and other tools, OpenDroneMap has become an ecosystem of various applications to process, analyze and display aerial data. This ecosystem is made of several components:</p>
+<div class="figure align-center">
+<img alt="ODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/odm-logo-64x64.png" />
+</div>
+<ul class="simple">
+<li><p><strong>ODM</strong> is the processing engine, which can be used from the command line. It takes images as input and produces a variety of outputs, including point clouds, 3D models and orthophotos</p></li>
+</ul>
+<div class="figure align-center">
+<img alt="NodeODM Logo" src="_images/NodeODMLogo.png" />
+</div>
+<ul class="simple">
+<li><p><strong>NodeODM</strong> is a light-weight API built on top of ODM. It allows users and applications to access the functions of ODM over a computer network</p></li>
+</ul>
+<div class="figure align-center">
+<img alt="WebODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/webodm-icon-64x64.png" />
+</div>
+<ul class="simple">
+<li><p><strong>WebODM</strong> is a friendly user interface that includes a map viewer, a 3D viewer, user logins, a plugin system and many other features that are expected of modern drone mapping platforms</p></li>
+</ul>
+<div class="figure align-center">
+<img alt="CloudODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2019/01/cloudodm-64x64.png" />
+</div>
+<ul class="simple">
+<li><p><strong>CloudODM</strong> is a small command line client to communicate with ODM via the NodeODM API</p></li>
+</ul>
+<div class="figure align-center">
+<img alt="PyODM Logo" src="_images/PyODMLogo.png" />
+</div>
+<ul class="simple">
+<li><p><strong>PyODM</strong> is a Python SDK for creating tasks via the NodeODM API. We cover it in more detail in the “Automated Processing With Python” chapter</p></li>
+</ul>
+<div class="figure align-center">
+<img alt="ClusterODM Logo" src="_images/ClusterODMLogo.png" />
+</div>
+<ul class="simple">
+<li><p><strong>ClusterODM</strong> is a load balancer for connecting together multiple NodeODM instances</p></li>
+</ul>
+<p>ODM, NodeODM and WebODM are available on all major platforms (Windows, macOS and Linux) via a program called docker, which is required to run the software. Docker offers a way to run “containers”. Containers are packaged copies of an entire system, its software and its dependencies. These containers run within a virtual environment. On Linux this virtual environment is available from the operating system and is very efficient. On macOS and Windows the containers run within a VM, so there’s a bit of a overhead. but it’s still very suitable for running the software. Once installed users do not have to worry much about docker, as it operates (almost) transparently.</p>
+<p>Without docker it would not be possible to run ODM on Windows or macOS. On these platforms ODM cannot run natively. Future development efforts are being focused on leveraging the new Windows Subsystem for Linux (WSL) and the possibility to make a native port of all dependencies to macOS, which is going to make the installation much easier.</p>
+<p>On Ubuntu Linux 18.04 it’s feasible to run all OpenDroneMap software natively. However, because there’s very little performance penalty for running docker on Linux and docker is straightforward to setup on this platform, we don’t recommend it. On Linux the advantages of containerization far outweigh a tiny performance penalty. With docker users also get easy one-step updates of the software, so that’s nice.</p>
+<div class="section" id="hardware-recommendations">
+<h2>Hardware Recommendations<a class="headerlink" href="#hardware-recommendations" title="Permalink to this headline">¶</a></h2>
+<p>The bare minimum requirements for running the software
+are:</p>
+<ul class="simple">
+<li><p>64bit CPU manufactured on or after 2010</p></li>
+<li><p>20 GB of disk space</p></li>
+<li><p>4 GB RAM</p></li>
+</ul>
+<p>No more than 100-200 images can be processed with the above specifications (the software will run out of memory). Recommended requirements are:</p>
+<ul class="simple">
+<li><p>Latest Generation CPU</p></li>
+<li><p>100 GB of disk space</p></li>
+<li><p>16 GB RAM</p></li>
+</ul>
+<p>The above will allow for a few hundred images to be processed without too many issues. A CPU with more cores will allow for faster processing, while a graphics card (GPU) currently has no impact on performance. For processing more images, add more disk space and RAM linearly to the number of images you need to process.</p>
+</div>
+<div class="section" id="installation">
+<span id="docker-installation"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>We recommend people use <a class="reference external" href="https://www.docker.com">docker</a> for running ODM, whether you are on Windows, macOS or Linux.</p>
+<div class="section" id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<p>To run OpenDroneMap you need at least Windows 7. Previous
+versions of Windows are not supported.</p>
+<div class="section" id="step-1-check-virtualization-support">
+<h4>Step 1. Check Virtualization Support<a class="headerlink" href="#step-1-check-virtualization-support" title="Permalink to this headline">¶</a></h4>
+<p>Docker requires a feature from your CPU called virtualization, which allows it to run virtual machines (VMs). Make sure you have it enabled! Sometimes this is disabled. To check, on Windows 8 or higher you can open the <strong>Task Manager</strong> (press CTRL+SHIFT+ESC) and switch to the <strong>Performance</strong> tab.</p>
+<div class="figure align-center">
+<img alt="Image of checking virtualization in Windows 8 or higher" src="_images/virtualizationcheck.png" />
+</div>
+<p><em>Virtualization should be enabled</em></p>
+<p>On Windows 7 to see if you have virtualization enabled you can use the <a class="reference external" href="http://www.microsoft.com/en-us/download/details.aspx?id=592">Microsoft® Hardware-Assisted Virtualization Detection Tool</a> instead.</p>
+<p>If virtualization is disabled, you’ll need to enable it. The procedure unfortunately is a bit different for each computer model, so the best way to do this is to look up on a search engine “how to enable vtx for &lt;type your computer model here&gt;”. Often times it’s a matter of restarting the computer, immediately pressing F2 or F12 during startup, navigating the boot menu and changing the settings to enable virtualization (often called “VT-X”).</p>
+<div class="figure align-center">
+<img alt="Table of different bios keys" src="_images/bioskeys.png" />
+</div>
+<p><em>Common keys to press at computer startup to access the boot menu for various PC vendors</em></p>
+</div>
+<div class="section" id="step-2-install-requirements">
+<h4>Step 2. Install Requirements<a class="headerlink" href="#step-2-install-requirements" title="Permalink to this headline">¶</a></h4>
+<p>First, you’ll need to install:</p>
+<ul class="simple">
+<li><p>Git: <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p></li>
+<li><p>Python (latest version 3): <a class="reference external" href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a></p></li>
+</ul>
+<p>For Python 3, make sure you check <strong>Add Python 3.x to PATH</strong> during the installation.</p>
+<div class="figure align-center">
+<img alt="Screenshot of Python3 installation process" src="_images/installpython3.png" />
+</div>
+<p><em>Don’t forget to add the Python executable to your PATH (so that you can run commands with it)</em></p>
+<p>Then, only if you are on Windows 10 Home, Windows 8 (any version) or Windows 7 (any version), install:</p>
+<ul class="simple">
+<li><p>Docker Toolbox: <a class="reference external" href="https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe">https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe</a></p></li>
+</ul>
+<p>If you are on Windows 10 Professional or a newer version, you should install instead:</p>
+<ul class="simple">
+<li><p>Docker for Windows: <a class="reference external" href="https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe">https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe</a></p></li>
+</ul>
+<p>Please do <strong>NOT</strong> install both docker programs. They are different and will create a mess if they are both installed.</p>
+<p>After installing docker, launch it from the Desktop icon that is created from the installation (<strong>Docker Quickstart</strong> in the case of Docker Toolbox, <strong>Docker for Windows</strong> for Docker for Windows). This is important, do not skip this step. If there are errors, follow the prompts on screen to fix them.</p>
+</div>
+<div class="section" id="step-3-check-memory-and-cpu-allocation">
+<h4>Step 3. Check Memory and CPU Allocation<a class="headerlink" href="#step-3-check-memory-and-cpu-allocation" title="Permalink to this headline">¶</a></h4>
+<p>Docker on Windows works by running a VM in the background (think of a VM as a “computer emulator”). This VM has a certain amount of memory allocated and WebODM can only use as much memory as it’s allocated.</p>
+<p>If you installed Docker Toolbox (see below if you installed Docker for Windows instead):</p>
+<ol class="arabic simple">
+<li><p>Open the <strong>VirtualBox Manager</strong> application</p></li>
+<li><p>Right click the <strong>default</strong> VM and press <strong>Close (ACPI Shutdown)</strong> to stop the machine</p></li>
+<li><p>Right click the <strong>default</strong> VM and press <strong>Settings…</strong></p></li>
+<li><p>Move the <strong>Base Memory</strong> slider from the <strong>System</strong> panel and allocate 60-70% of all available memory, optionally adding 50% of the available processors from the <strong>Processor</strong> tab also</p></li>
+</ol>
+<div class="figure align-center">
+<img alt="Screenshot of VirtualBox Settings" src="_images/virtualboxsettings.png" />
+</div>
+<p><em>VirtualBox default VM settings</em></p>
+<p>Then press <strong>OK</strong>, right click the <strong>default</strong> VM and press <strong>Start</strong>.</p>
+<p>If you installed Docker for Windows instead:</p>
+<ol class="arabic simple">
+<li><p>Look in the system tray and right click the “white whale” icon.</p></li>
+<li><p>From the menu, press <strong>Settings…</strong></p></li>
+<li><p>From the panel, click <strong>Advanced</strong> and use the sliders to allocate 60-70% of available memory and use half of all available CPUs.</p></li>
+<li><p>Press <strong>Apply</strong>.</p></li>
+</ol>
+<div class="figure align-center">
+<img alt="Screenshot of Docker Icon" src="_images/dockericon.png" />
+</div>
+<p><em>Step 1 Docker icon</em></p>
+<div class="figure align-center">
+<img alt="Screenshot of Docker Settings" src="_images/dockersettings.png" />
+</div>
+<p><em>Step 3 &amp; 4 Docker settings</em></p>
+</div>
+<div class="section" id="step-4-download-webodm">
+<h4>Step 4. Download WebODM<a class="headerlink" href="#step-4-download-webodm" title="Permalink to this headline">¶</a></h4>
+<p>Open the <strong>Git Gui</strong> program that comes installed with Git. From there:</p>
+<ul class="simple">
+<li><p>When Git Gui opens, click ‘Clone Existing Repository’ option</p></li>
+<li><p>In <strong>Source Location</strong> type: <a class="reference external" href="https://github.com/OpenDroneMap/WebODM">https://github.com/OpenDroneMap/WebODM</a></p></li>
+<li><p>In <strong>Target Directory</strong> click browse and navigate to a folder of your choosing (create one if necessary)</p></li>
+<li><p>Press <strong>Clone</strong></p></li>
+</ul>
+<div class="figure align-center">
+<img alt="Screenshot of Git Gui" src="_images/gitgui.png" />
+</div>
+<p><em>Git Gui</em></p>
+<p>If the download succeeded, you should now see this window:</p>
+<div class="figure align-center">
+<img alt="Screenshot of Git Gui after successful download" src="_images/gitguisuccess.png" />
+</div>
+<p><em>Git Gui after successful download (clone)</em></p>
+<p>Go to the <strong>Repository</strong> menu, then click <strong>Create Desktop Icon</strong>. This will allow you to come back to this application easily in the future.</p>
+</div>
+<div class="section" id="step-4-launch-webodm">
+<h4>Step 4. Launch WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Permalink to this headline">¶</a></h4>
+<p>From Git Gui, go to the <strong>Repository</strong> menu, then click <strong>Git Bash</strong>. From the command line terminal type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start<span class="p">&amp;</span>
+</pre></div>
+</div>
+<p>Several components will download to your machine at this point, including WebODM, NodeODM and ODM. After the download you should be greeted by the following screen:</p>
+<div class="figure align-center">
+<img alt="Screenshot of after successfully downloading WebODM" src="_images/webodmsuccess.png" />
+</div>
+<p><em>Console output after starting WebODM for the first time</em></p>
+<ul class="simple">
+<li><p>If you are using Docker for Windows, open a web browser to <a class="reference external" href="http://localhost:8000">http://localhost:8000</a></p></li>
+<li><p>If you are using Docker Toolbox, find the IP address to connect to by typing:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker-machine ip
+</pre></div>
+</div>
+<p>You should get a result like the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">192</span>.168.1.100
+</pre></div>
+</div>
+<p>Then connect to <a class="reference external" href="http://192.168.1.100:8000">http://192.168.1.100:8000</a> (replacing the IP address with the proper one).</p>
+</div>
+</div>
+<div class="section" id="macos">
+<h3>macOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h3>
+<p>Most modern (post 2010) Mac computers running macOS Sierra 10.12 or higher can run OpenDroneMap using docker, as long as hardware virtualization is supported (see below).</p>
+<div class="section" id="id1">
+<h4>Step 1. Check Virtualization Support<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>Open a Terminal window and type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sysctl kern.hv_support
+</pre></div>
+</div>
+<p>You will get a response similar to the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kern.hv_support: <span class="m">1</span>
+</pre></div>
+</div>
+<p>If the result is <em>kern.hv_support: 1</em>, then your Mac is supported! Continue with Step 2.</p>
+<p>If the result is <em>kern.hv_support: 0</em>, unfortunately it means your Mac is too old to run OpenDroneMap. :(</p>
+</div>
+<div class="section" id="id2">
+<h4>Step 2. Install Requirements<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>There are only two programs to install:</p>
+<ol class="arabic simple">
+<li><p>Docker: <a class="reference external" href="https://download.docker.com/mac/stable/Docker.dmg">https://download.docker.com/mac/stable/Docker.dmg</a></p></li>
+<li><p>Git: <a class="reference external" href="https://sourceforge.net/projects/git-osx-installer/files/">https://sourceforge.net/projects/git-osx-installer/files/</a></p></li>
+</ol>
+<p>After installing docker you should find an icon that looks like a whale in the task bar.</p>
+<div class="figure align-center">
+<img alt="Screenshot of Docker whale" src="_images/macwhale.png" />
+</div>
+<p><em>Docker app running</em></p>
+<p>You can verify that docker is running properly by opening the <strong>Terminal</strong> app and typing:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker run hello-world
+</pre></div>
+</div>
+<p>Which should return</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Hello from Docker!
+</pre></div>
+</div>
+<p>To verify that git is installed, simply type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git --version
+</pre></div>
+</div>
+<p>Which should return something similar to the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git version <span class="m">2</span>.20.1 <span class="o">(</span>Apple Git-117<span class="o">)</span>
+</pre></div>
+</div>
+<p>If you get a “bash: git: command not found”, try to restart your <strong>Terminal</strong> app and double-check for any errors during the install process.</p>
+</div>
+<div class="section" id="id3">
+<h4>Step 3. Check Memory and CPU Allocation<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>Docker on macOS works by running a VM in the background (think of it as a “computer emulator”). This VM has a certain amount of memory allocated and WebODM can only use as much memory as it’s allocated.</p>
+<ol class="arabic simple">
+<li><p>Right click the whale icon from the task bar and click <strong>Preferences</strong>…</p></li>
+<li><p>Select the <strong>Advanced</strong> tab</p></li>
+<li><p>Adjust the CPUs slider to use half of all available CPUs and the memory to use 60-70% of all available memory</p></li>
+<li><p>Press <strong>Apply &amp; Restart</strong></p></li>
+</ol>
+<div class="figure align-center">
+<img alt="Screenshot of Docker advanced settings" src="_images/dockeradvanced.png" />
+</div>
+<p><em>Docker advanced settings</em></p>
+</div>
+<div class="section" id="step-4-download-and-launch-webodm">
+<h4>Step 4. Download and Launch WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Permalink to this headline">¶</a></h4>
+<p>From a <strong>Terminal</strong> type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
+$ <span class="nb">cd</span> WebODM
+$ ./webodm.sh start
+</pre></div>
+</div>
+<p>Then open a web browser to <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
+</div>
+</div>
+<div class="section" id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<p>OpenDroneMap can run on any Linux distribution that supports docker. According to <a class="reference external" href="https://docs.docker.com/install/">docker’s documentation website</a> the officially supported distributions are CentOS, Debian, Ubuntu and Fedora, with static binaries available for others. If you have to pick a distribution solely for running OpenDroneMap, Ubuntu is the recommended way to go.</p>
+<div class="section" id="step-1-install-requirements">
+<h4>Step 1. Install Requirements<a class="headerlink" href="#step-1-install-requirements" title="Permalink to this headline">¶</a></h4>
+<p>There are four programs that need to be installed:</p>
+<ol class="arabic simple">
+<li><p>Docker</p></li>
+<li><p>Git</p></li>
+<li><p>Python (2 or 3)</p></li>
+<li><p>Pip</p></li>
+</ol>
+<p>We cannot possibly cover the installation process for every Linux distribution out there, so we’ll limit the instructions to those that are distributions officially supported by docker. In all cases it’s just a matter of opening a terminal prompt and typing a few commands.</p>
+<div class="section" id="install-on-ubuntu-debian">
+<h5>Install on Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Permalink to this headline">¶</a></h5>
+<p>Commands to type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt update
+$ curl -fsSL https://get.docker.com -o get-docker.sh
+$ sh get-docker.sh
+$ sudo apt install -y git python python-pip
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-on-centos-rhel">
+<h5>Install on CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Permalink to this headline">¶</a></h5>
+<p>Commands to type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
+$ sh get-docker.sh
+$ sudo yum -y install git python python-pip
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-on-fedora">
+<h5>Install on Fedora<a class="headerlink" href="#install-on-fedora" title="Permalink to this headline">¶</a></h5>
+<p>Commands to type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
+$ sh get-docker.sh
+$ sudo dnf install git python python-pip
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-on-arch">
+<h5>Install on Arch<a class="headerlink" href="#install-on-arch" title="Permalink to this headline">¶</a></h5>
+<p>Commands to type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pacman -Sy docker git python python-pip
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="step-2-check-additional-requirements">
+<h4>Step 2. Check Additional Requirements<a class="headerlink" href="#step-2-check-additional-requirements" title="Permalink to this headline">¶</a></h4>
+<p>In addition to the three programs above, the dockercompose script is also needed. Sometimes it’s already installed with docker, but sometimes it isn’t. To verify if it’s installed try to type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker-compose --version
+</pre></div>
+</div>
+<p>You should see somethings similar to the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose version <span class="m">1</span>.22.0, build f46880f
+</pre></div>
+</div>
+<p>If instead you get something similar to the following:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose: <span class="nb">command</span> not found
+</pre></div>
+</div>
+<p>you can install it by using pip:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pip install docker-compose
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-3-download-and-launch-webodm">
+<h4>Step 3. Download and Launch WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Permalink to this headline">¶</a></h4>
+<p>From a terminal type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
+$ <span class="nb">cd</span> WebODM
+$ ./webodm.sh start
+</pre></div>
+</div>
+<p>Then open a web browser to <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="basic-commands-and-troubleshooting">
+<h2>Basic Commands and Troubleshooting<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>The cool thing about using docker is that 99% of the tasks you’ll ever need to perform while using WebODM can be done via the ./webodm.sh script. You have already encountered one of them:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start
+</pre></div>
+</div>
+<p>which takes care of starting WebODM and setting up a default processing node (node-odm-1). If you want to stop WebODM, you can already guess what the command is:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh stop
+</pre></div>
+</div>
+<p>There are several other commands you can use, along with different flags. Flags are parameters passed to the ./webodm.sh command and are typically prefixed with “–”. The <strong>port</strong> flag for example instructs WebODM to use a different network port:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start --port <span class="m">80</span>
+</pre></div>
+</div>
+<p>Other useful commands are listed below:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Restart WebODM (useful if things get stuck)</span>
+$ ./webodm.sh restart
+
+<span class="c1"># Reset the admin user&#39;s password if you forget it</span>
+$ ./webodm.sh resetadminpassword newpass
+
+<span class="c1"># Update everything to the latest version</span>
+$ ./webodm.sh update
+
+<span class="c1"># Store processing results in the specified folder instead of the default location (inside docker)</span>
+$ ./webodm.sh restart --media-dir /path/to/webodm_results
+
+<span class="c1"># See all options</span>
+$ ./webodm.sh --help
+</pre></div>
+</div>
+<p><a class="reference external" href="https://community.opendronemap.org">The community forum</a> is a great place to ask for help if you     get stuck during any of the installation steps and for general questions on using the ./webodm.sh script.</p>
+</div>
+<div class="section" id="hello-webodm">
+<h2>Hello, WebODM!<a class="headerlink" href="#hello-webodm" title="Permalink to this headline">¶</a></h2>
+<p>After running ./webodm.sh start and opening WebODM in the browser, you will be greeted with a welcome message and will be asked to create the first user. Take some time to familiarize yourself with the web interface and explore its various menus.</p>
+<div class="figure align-center">
+<img alt="Screenshot of WebODM Dashboard" src="_images/webodmdashboard.png" />
+</div>
+<p><em>WebODM Dashboard</em></p>
+<p>Notice that under the <strong>Processing Nodes</strong> menu there’s a “node-odm-1” node already configured for you to use. This is a NodeODM node and has been created automatically by WebODM. This node is running on the same machine as WebODM.</p>
+<p>If you’ve made it this far, congratulations! Now it’s time to start processing some data.</p>
+<div class="figure align-center">
+<img alt="Image of celebratory dance" src="_images/congratulations.png" />
+</div>
+<div class="section" id="running-on-more-than-one-machine">
+<h3>Running on more than one machine<a class="headerlink" href="#running-on-more-than-one-machine" title="Permalink to this headline">¶</a></h3>
+<p><strong>Optionally:</strong> If you have another computer, you can repeat the installation process (install docker, git, python, etc.) and launch a new NodeODM node by typing from a Terminal/Git Bash window:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --rm -it -p <span class="m">3000</span>:3000 opendronemap/nodeodm -q <span class="m">1</span> --token secret
+</pre></div>
+</div>
+<p>The above command asks docker to launch a new container using the opendronemap/nodeodm image from Docker Hub (the latest version of NodeODM), using port 3000, setting a maximum number of concurrent tasks to 1 and to protect the node from unauthorized access using the password “secret”.</p>
+<p>From WebODM you can then press the <strong>Add New</strong> button under <strong>Processing Nodes</strong>. For the <strong>hostname/IP</strong> field type the IP of the second computer. For the <strong>port</strong> field type “3000”. For the <strong>token</strong> field type “secret”. You can also add an optional <strong>label</strong> for your node, such as “second computer”. Then press <strong>Save</strong>.</p>
+<p>If everything went well, you should now have two processing nodes! You will be able to process multiple tasks in parallel using two different machines.</p>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst">this page</a>!</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tutorials.html" class="btn btn-neutral float-right" title="Tutorials" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Welcome to OpenDroneMap’s documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, OpenDroneMap
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

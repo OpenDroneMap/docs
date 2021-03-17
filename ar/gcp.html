@@ -1,0 +1,437 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ar" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>نقاط التحكم الأرضية &mdash; OpenDroneMap 2.4.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Map accuracy" href="map-accuracy.html" />
+    <link rel="prev" title="مخرجات OpenDroneMap" href="outputs.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> OpenDroneMap
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.4.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">التثبيت والبدء</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hardware-recommendations">توصيات الأجهزة</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation">التركيب</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-check-virtualization-support">الخطوة 1. تحقق من دعم المحاكاة الافتراضية</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-install-requirements">الخطوة 2. تثبيت المتطلبات</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-check-memory-and-cpu-allocation">الخطوة 3. تحقق من تخصيص الذاكرة ووحدة المعالجة المركزية</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-webodm">الخطوة 4. قم بتنزيل WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-launch-webodm">الخطوة 4. قم بتشغيل WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id1">الخطوة 1. تحقق من دعم المحاكاة الافتراضية</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id2">الخطوة 2. تثبيت المتطلبات</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id3">الخطوة 3. تحقق من تخصيص الذاكرة ووحدة المعالجة المركزية</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-and-launch-webodm">الخطوة 4. قم بتحميل وتشغيل WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-install-requirements">الخطوة 1. تثبيت المتطلبات</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-check-additional-requirements">الخطوة 2. تحقق من المتطلبات الإضافية</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-download-and-launch-webodm">الخطوة 3. قم بتحميل وتشغيل WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#basic-commands-and-troubleshooting">الأوامر الأساسية واستكشاف الأخطاء وإصلاحها</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hello-webodm">مرحبًا WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#running-on-more-than-one-machine">يعمل على أكثر من جهاز</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">دروس</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-high-quality-orthophotos">إنشاء Orthophotos عالية الجودة</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#calibrating-the-camera">معايرة الكاميرا</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-digital-elevation-models">إنشاء نماذج الارتفاعات الرقمية</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-docker">باستخدام  Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#listing-docker-machines">ادراج Docker ماكينات</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#accessing-logs-on-the-instance">الوصول إلى السجلات على سبيل المثال</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#command-line-access-to-instances">وصول سطر الأوامر إلى المثيلات</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#cleaning-up-after-docker">التنظيف بعد Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-odm-from-low-bandwidth-location">استخدام ODM من موقع النطاق الترددي المنخفض</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#what-is-this-and-who-is-it-for">ما هذا ومن هو؟</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#steps">خطوات</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#install">تثبيت</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#prep-data-and-project">إعداد البيانات والمشروع</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#resize-droplet-pull-pin-run-away">تغيير حجم القطرة ، وسحب دبوس ، والهروب</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#after-it-finishes-assuming-you-survive-that-long">بعد الانتهاء (بافتراض أنك تعيش طويلاً)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arguments.html">الخيارات والإعلام</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#id1">Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">مخرجات OpenDroneMap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#point-cloud">سحابة نقطة</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#d-textured-model">نموذج محكم ثلاثي الأبعاد</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#orthophoto">Orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#list-of-all-outputs">قائمة بجميع المخرجات</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">نقاط التحكم الأرضية</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#recommended-practices-for-gcp-setting">Recommended practices for GCP setting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gcp-file-format">GCP file format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-interfaces">واجهات المستخدم</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="map-accuracy.html">Map accuracy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#what-to-expect">What to expect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="map-accuracy.html#aspects-impacting-map-accuracy">Aspects impacting map accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geo.html">Image Geolocation Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="masks.html">Using Image Masks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large.html">تقسيم مجموعات البيانات الكبيرة</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="large.html#calibrate-images">معايرة الصور</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#local-split-merge">دمج التجزئة المحلية</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#distributed-split-merge">دمج سبليت الموزعة</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="large.html#getting-started-with-distributed-split-merge">الشروع في البدء في عملية دمج التجزئة الموزعة</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#understanding-the-cluster">فهم الكتلة</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#accessing-the-logs">الوصول إلى السجلات</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#autoscaling-clusterodm">أوتوسكالينج  ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#limitations">محددات</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#acknowledgments">شكر وتقدير</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">مراجع إضافية</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-users">للمستخدمين</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-developers">للمطورين</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flying.html">نصائح طيران</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multispectral.html">دعم متعدد الأطياف</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#hardware">المعدات</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#usage">الاستخدام</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requesting-features.html">كيفية طلب الميزات</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">.كيفية المشاركة</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#community-forum">جو الإجتماعي</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#reporting-bugs">البق للتقرير</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#template-for-submitting-bug-reports">نموذج لتقديم تقارير الأخطاء</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#pull-requests">سحب الطلبات</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenDroneMap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>نقاط التحكم الأرضية</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/gcp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ground-control-points">
+<h1>نقاط التحكم الأرضية<a class="headerlink" href="#ground-control-points" title="Permalink to this headline">¶</a></h1>
+<p>نقاط التحكم الأرضية مفيدة لتصحيح التشوهات في البيانات والإشارة إلى البيانات لمعرفة أنظمة الإحداثيات.</p>
+<p>A Ground Control Point (GCP) is a position measurement made on the ground, typically using a high precision GPS. (Toffanin 2019)</p>
+<p>Ground control points can be set existing structures like pavement corners, lines on a parking lot or contrasting color floor tiles, otherwise can be set using targets placed on the ground.</p>
+<p>Targets can be purchased or build with an ample variety of materials ranging from bucket lids to floor tiles.</p>
+<div class="section" id="recommended-practices-for-gcp-setting">
+<h2>Recommended practices for GCP setting<a class="headerlink" href="#recommended-practices-for-gcp-setting" title="Permalink to this headline">¶</a></h2>
+<p>Keep ground control points visible for all camera locations. Consider the expected ground sampling distance, illumination, vegetation, buildings and all the existing obstacles.</p>
+<p>Procure an evenly horizontal distribution of the GCPs within the project, covering high and low elevations. A minimum of 5 GCP works for most of the jobs, and for larger projects 8 – 10 are sufficient. Locate some points near the corners and others in the center, considering that GCP spacing should be larger than the image footprint so that you can’t see more than one GCP in a single image.</p>
+<p>In order to ensure each GCP are found in at least 5 images, separate the points 10 to 30 meters from the perimeter of the project. This distance is dependent of the overlapping, so increasing overlapping should reduce the required distance from the perimeter.</p>
+</div>
+<div class="section" id="gcp-file-format">
+<h2>GCP file format<a class="headerlink" href="#gcp-file-format" title="Permalink to this headline">¶</a></h2>
+<p>تنسيق ملف GCP بسيط</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>يجب أن يحتوي السطر الأول على اسم الإسقاط المستخدم للإحداثيات الجغرافية. مكن تحديد ذلك إما كسلسلة PROJ (e.g. <code class="docutils literal notranslate"><span class="pre">+proj=utm</span> <span class="pre">+zone=10</span> <span class="pre">+ellps=WGS84</span> <span class="pre">+datum=WGS84</span> <span class="pre">+units=m</span> <span class="pre">+no_defs</span></code>), EPSG code (e.g. <code class="docutils literal notranslate"><span class="pre">EPSG:4326</span></code>) or as a <code class="docutils literal notranslate"><span class="pre">WGS84</span> <span class="pre">UTM</span> <span class="pre">1[N|S]</span></code> value (eg. <code class="docutils literal notranslate"><span class="pre">WGS84</span> <span class="pre">UTM</span> <span class="pre">16N</span></code>)</p></li>
+<li><p>الخطوط اللاحقة هي إحداثيات X و Y و Z ، وحدات البكسل المرتبطة ، اسم ملف الصورة والحقول الإضافية الاختيارية ، مفصولة بعلامات تبويب أو مسافات:</p></li>
+<li><p>مكن ضبط قيم الارتفاع على &quot;NaN&quot; للإشارة إلى عدم وجود قيمة</p></li>
+<li><p>يحتوي العمود السابع (اختياري) يحتوي عادة GCP تسمية.</p></li>
+</ul>
+</div></blockquote>
+<p>تنسيق ملف GCP</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">projection</span><span class="o">&gt;</span>
+<span class="n">geo_x</span> <span class="n">geo_y</span> <span class="n">geo_z</span> <span class="n">im_x</span> <span class="n">im_y</span> <span class="n">image_name</span> <span class="p">[</span><span class="n">gcp_name</span><span class="p">]</span> <span class="p">[</span><span class="n">extra1</span><span class="p">]</span> <span class="p">[</span><span class="n">extra2</span><span class="p">]</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>مثال:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="n">proj</span><span class="o">=</span><span class="n">utm</span> <span class="o">+</span><span class="n">zone</span><span class="o">=</span><span class="mi">10</span> <span class="o">+</span><span class="n">ellps</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">datum</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">units</span><span class="o">=</span><span class="n">m</span> <span class="o">+</span><span class="n">no_defs</span>
+<span class="mf">544256.7</span> <span class="mf">5320919.9</span> <span class="mi">5</span> <span class="mi">3044</span> <span class="mi">2622</span> <span class="n">IMG_0525</span><span class="o">.</span><span class="n">jpg</span>
+<span class="mf">544157.7</span> <span class="mf">5320899.2</span> <span class="mi">5</span> <span class="mi">4193</span> <span class="mi">1552</span> <span class="n">IMG_0585</span><span class="o">.</span><span class="n">jpg</span>
+<span class="mf">544033.4</span> <span class="mf">5320876.0</span> <span class="mi">5</span> <span class="mi">1606</span> <span class="mi">2763</span> <span class="n">IMG_0690</span><span class="o">.</span><span class="n">jpg</span>
+</pre></div>
+</div>
+<p>إذا قمت بتوفير ملف GCP يسمى <code class="docutils literal notranslate"><span class="pre">gcp_list.txt</span></code> ثم سيكتشف ODM ذلك تلقائيًا.  إذا كان له اسم آخر يمكنك تحديده باستخدام <code class="docutils literal notranslate"><span class="pre">--gcp</span> <span class="pre">&lt;path&gt;</span></code>. إذا كان لديك ملف gcp وتريد إجراء مرجع جغرافي باستخدام exif بدلاً من ذلك ، فيمكنك تحديد &quot;--use-exif&quot;. إذا كانت لديك قياسات GPS عالية الدقة في صورك (RTK) وتريد استخدام هذه المعلومات مع ملف gcp ، يمكنك تحديد &quot;--force-gps&quot;.</p>
+<p><a class="reference external" href="http://diydrones.com/profiles/blogs/ground-control-points-gcps-for-aerial-photography">تحتوي هذه المشاركة على بعض المعلومات حول وضع أهداف التحكم الأرضي قبل الرحلة</a>, ولكن إذا كان لديك صور بالفعل ، يمكنك العثور على نقاطك الخاصة في الصور بعد الواقع. من المهم أن تجد كائنات عالية التباين موجودة في ** 3 صور على الأقل ** ، وأن تعثر على 5 كائنات على الأقل.</p>
+<p>تعد الزوايا الحادة اختيارات جيدة لـ GCP. يجب عليك أيضًا وضع / العثور على نقاط المراقبة الحرجة بشكل متساوٍ حول منطقة المسح.</p>
+<p>يجب إنشاء ملف `` gcp_list.txt '' في قاعدة مجلد المشروع.</p>
+<p>للحصول على نتائج جيدة ، يجب أن يحتوي ملفك على 15 سطرًا على الأقل بعد الرأس (5 نقاط مع 3 صور لكل نقطة).</p>
+</div>
+<div class="section" id="user-interfaces">
+<h2>واجهات المستخدم<a class="headerlink" href="#user-interfaces" title="Permalink to this headline">¶</a></h2>
+<p>يمكنك استخدام واحدة من واجهات المستخدم لإنشاء ملفات GCP:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/posm/posm-gcpi">POSM GCPi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/uav4geo/GCPEditorPro">GCP Editor Pro</a></p></li>
+</ul>
+</div></blockquote>
+<div class="section" id="id1">
+<h3>POSM GCPi<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>يتم تحميل POSM GCPi بشكل افتراضي على WebODM. يتوفر مثال في <a class="reference external" href="http://demo.webodm.org/plugins/posm-gcpi/">WebODM Demo</a>. استخدام هذا مع قيم XYZ المعروفة للتحكم الأرضي ، يمكن للمرء القيام بما يلي:</p>
+<p>إنشاء قائمة GCP تتضمن فقط اسم gcp (هذا هو الملصق الذي سيظهر في واجهة GCP) و x و y و z ، مع رأس بسلسلة proj4 من GCP (تأكد من وجودها في إحداثيات مستوية النظام ، مثل UTM. يجب أن يبدو شيء مثل هذا:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="n">proj</span><span class="o">=</span><span class="n">utm</span> <span class="o">+</span><span class="n">zone</span><span class="o">=</span><span class="mi">37</span> <span class="o">+</span><span class="n">south</span> <span class="o">+</span><span class="n">ellps</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">datum</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">units</span><span class="o">=</span><span class="n">m</span> <span class="o">+</span><span class="n">no_defs</span>
+<span class="n">gcp01</span> <span class="mf">529356.250827686</span> <span class="mf">9251137.5643209</span> <span class="mf">8.465</span>
+<span class="n">gcp02</span> <span class="mf">530203.125367657</span> <span class="mf">9250140.80991621</span> <span class="mf">15.781</span>
+<span class="n">gcp03</span> <span class="mf">530292.136003818</span> <span class="mf">9250745.02372435</span> <span class="mf">11.977</span>
+<span class="n">gcp04</span> <span class="mf">530203.125367657</span> <span class="mf">9250140.80991621</span> <span class="mf">15.781</span>
+<span class="n">gcp05</span> <span class="mf">530292.136003818</span> <span class="mf">9250745.02372435</span> <span class="mf">11.977</span>
+</pre></div>
+</div>
+<p>ثم يمكن للمرء تحميل قائمة GCP هذه في الواجهة ، وتحميل الصور ، ووضع كل من GCP في الصورة.</p>
+</div>
+<div class="section" id="id2">
+<h3>GCP Editor Pro<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>يجب تثبيت هذا التطبيق بشكل منفصل أو يمكن تحميله كبرنامج مساعد WebODM من <a class="reference external" href="https://github.com/uav4geo/GCPEditorPro">https://github.com/uav4geo/GCPEditorPro</a></p>
+<p>أنشئ ملف CSV يتضمن اسم gcp والشمال والشرق والارتفاع.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GCP</span> <span class="n">Label</span><span class="p">,</span><span class="n">Northing</span><span class="p">,</span><span class="n">Easting</span><span class="p">,</span><span class="n">Elevation</span>
+<span class="n">gcp01</span><span class="p">,</span><span class="mf">529356.250827686</span><span class="p">,</span><span class="mf">9251137.5643209</span><span class="p">,</span><span class="mf">8.465</span>
+<span class="n">gcp02</span><span class="p">,</span><span class="mf">530203.125367657</span><span class="p">,</span><span class="mf">9250140.80991621</span><span class="p">,</span><span class="mf">15.781</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>م قم باستيراد ملف CSV من الشاشة الرئيسية واكتب <cite>+proj=utm +zone=37 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs`</cite> in the <code class="docutils literal notranslate"><span class="pre">EPSG/PROJ</span></code> صندوق.</p>
+<p>سيتم عرض الشاشة التالية خريطة من أين تختار GCP وضع علامة على الصور ذات الصلة واستيرادها.</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>Toffanin, Piero. <a class="reference external" href="https://odmbook.com/">Open Drone Map: The Missing Guide.</a> MasseranoLabs LLC, 2019.</p>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/gcp.rst">this page</a>!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="map-accuracy.html" class="btn btn-neutral float-right" title="Map accuracy" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="outputs.html" class="btn btn-neutral float-left" title="مخرجات OpenDroneMap" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, OpenDroneMap
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

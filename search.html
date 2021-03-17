@@ -1,0 +1,358 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="en" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Search &mdash; OpenDroneMap 2.4.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+    
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <script type="text/javascript" src="_static/searchtools.js"></script>
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="#" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> OpenDroneMap
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.4.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="#" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hardware-recommendations">Hardware Recommendations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-check-virtualization-support">Step 1. Check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-install-requirements">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-check-memory-and-cpu-allocation">Step 3. Check Memory and CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-webodm">Step 4. Download WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-launch-webodm">Step 4. Launch WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id1">Step 1. Check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id2">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id3">Step 3. Check Memory and CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-and-launch-webodm">Step 4. Download and Launch WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-install-requirements">Step 1. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-check-additional-requirements">Step 2. Check Additional Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-download-and-launch-webodm">Step 3. Download and Launch WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#basic-commands-and-troubleshooting">Basic Commands and Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hello-webodm">Hello, WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#running-on-more-than-one-machine">Running on more than one machine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-high-quality-orthophotos">Creating High Quality Orthophotos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#calibrating-the-camera">Calibrating the Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-digital-elevation-models">Creating Digital Elevation Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-docker">Using Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#listing-docker-machines">Listing Docker Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#accessing-logs-on-the-instance">Accessing logs on the instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#command-line-access-to-instances">Command line access to instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#cleaning-up-after-docker">Cleaning up after Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-odm-from-low-bandwidth-location">Using ODM from low-bandwidth location</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#what-is-this-and-who-is-it-for">What is this and who is it for?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#steps">Steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#install">Install</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#prep-data-and-project">Prep data and project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#resize-droplet-pull-pin-run-away">Resize droplet, pull pin, run away</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#after-it-finishes-assuming-you-survive-that-long">After it finishes (assuming you survive that long)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arguments.html">Options and Flags</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#id1">Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">OpenDroneMap Outputs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#point-cloud">Point Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#d-textured-model">3D Textured Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#orthophoto">Orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#list-of-all-outputs">List of all outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gcp.html">Ground Control Points</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#recommended-practices-for-gcp-setting">Recommended practices for GCP setting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#gcp-file-format">GCP file format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#user-interfaces">User Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="map-accuracy.html">Map accuracy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#what-to-expect">What to expect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="map-accuracy.html#aspects-impacting-map-accuracy">Aspects impacting map accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geo.html">Image Geolocation Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="masks.html">Using Image Masks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large.html">Splitting Large Datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="large.html#calibrate-images">Calibrate images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#local-split-merge">Local Split-Merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#distributed-split-merge">Distributed Split-Merge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="large.html#getting-started-with-distributed-split-merge">Getting Started with Distributed Split-Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#understanding-the-cluster">Understanding the Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#accessing-the-logs">Accessing the Logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#autoscaling-clusterodm">Autoscaling ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#acknowledgments">Acknowledgments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Additional References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-users">For Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-developers">For Developers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flying.html">Flying Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multispectral.html">Multispectral Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#hardware">Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#usage">Usage</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requesting-features.html">How To Request Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">How To Contribute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#community-forum">Community Forum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#reporting-bugs">Reporting Bugs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#template-for-submitting-bug-reports">Template For Submitting Bug Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#pull-requests">Pull Requests</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenDroneMap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Search</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <noscript>
+  <div id="fallback" class="admonition warning">
+    <p class="last">
+      Please activate JavaScript to enable the search functionality.
+    </p>
+  </div>
+  </noscript>
+
+  
+  <div id="search-results">
+  
+  </div>
+
+           </div>
+           
+          </div>
+          <footer>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, OpenDroneMap
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+  
+  <script type="text/javascript">
+    jQuery(function() { Search.loadIndex("searchindex.js"); });
+  </script>
+  
+  <script type="text/javascript" id="searchindexloader"></script>
+   
+
+
+</body>
+</html>

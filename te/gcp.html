@@ -1,0 +1,437 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="te" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>గ్రౌండ్ కంట్రోల్ పాయింట్లు &mdash; OpenDroneMap 2.4.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="మ్యాప్ ఖచ్చితత్వం" href="map-accuracy.html" />
+    <link rel="prev" title="OpenDroneMap అవుట్‌పుట్‌లు" href="outputs.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> OpenDroneMap
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.4.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Installation and Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hardware-recommendations">Hardware Recommendations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-check-virtualization-support">Step 1. Check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-install-requirements">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-check-memory-and-cpu-allocation">Step 3. Check Memory and CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-webodm">Step 4. Download WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-launch-webodm">Step 4. Launch WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id1">Step 1. Check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id2">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id3">Step 3. Check Memory and CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-and-launch-webodm">Step 4. Download and Launch WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-install-requirements">Step 1. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-check-additional-requirements">Step 2. Check Additional Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-download-and-launch-webodm">Step 3. Download and Launch WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#basic-commands-and-troubleshooting">Basic Commands and Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hello-webodm">Hello, WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#running-on-more-than-one-machine">Running on more than one machine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-high-quality-orthophotos">Creating High Quality Orthophotos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#calibrating-the-camera">Calibrating the Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-digital-elevation-models">Creating Digital Elevation Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-docker">Using Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#listing-docker-machines">Listing Docker Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#accessing-logs-on-the-instance">Accessing logs on the instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#command-line-access-to-instances">Command line access to instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#cleaning-up-after-docker">Cleaning up after Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-odm-from-low-bandwidth-location">Using ODM from low-bandwidth location</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#what-is-this-and-who-is-it-for">What is this and who is it for?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#steps">Steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#install">Install</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#prep-data-and-project">Prep data and project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#resize-droplet-pull-pin-run-away">Resize droplet, pull pin, run away</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#after-it-finishes-assuming-you-survive-that-long">After it finishes (assuming you survive that long)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arguments.html">ఎంపికలు మరియు ఫ్లాగ్స్</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#id1">ఆర్గుమెంట్స్</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">OpenDroneMap అవుట్‌పుట్‌లు</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#point-cloud">పాయింట్ క్లౌడ్</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#d-textured-model">3D ఆకృతి మోడల్</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#orthophoto">ఆర్థోఫోటో</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#dtm-dsm">DTM / DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#list-of-all-outputs">అన్ని ఉత్పాదనల జాబితా</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">గ్రౌండ్ కంట్రోల్ పాయింట్లు</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#recommended-practices-for-gcp-setting">జిసిపి సెట్టింగ్ కోసం సిఫార్సు చేసిన పద్ధతులు</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gcp-file-format">GCP ఫైల్ ఫార్మాట్</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-interfaces">వినియోగదారు ఇంటర్‌ఫేస్‌లు</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">జిసిపి ఎడిటర్ ప్రో</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#references">ప్రస్తావనలు</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="map-accuracy.html">మ్యాప్ ఖచ్చితత్వం</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#what-to-expect">ఏమి ఆశించను</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="map-accuracy.html#aspects-impacting-map-accuracy">మ్యాప్ ఖచ్చితత్వాన్ని ప్రభావితం చేసే అంశాలు</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#references">ప్రస్తావనలు</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geo.html">చిత్రం జియోలొకేషన్ ఫైల్స్</a></li>
+<li class="toctree-l1"><a class="reference internal" href="masks.html">ఇమేజ్ మాస్క్‌లను ఉపయోగించడం</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large.html">పెద్ద డేటాసెట్లను విభజించడం</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="large.html#calibrate-images">Calibrate images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#local-split-merge">Local Split-Merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#distributed-split-merge">Distributed Split-Merge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="large.html#getting-started-with-distributed-split-merge">Getting Started with Distributed Split-Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#understanding-the-cluster">Understanding the Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#accessing-the-logs">Accessing the Logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#autoscaling-clusterodm">Autoscaling ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#acknowledgments">Acknowledgments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">అదనపు సూచనలు</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-users">వినియోగదారుల కోసం</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-developers">డెవలపర్ల కోసం</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flying.html">ఎగిరే చిట్కాలు</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multispectral.html">మల్టీస్పెక్ట్రల్ సపోర్ట్</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#hardware">హార్డ్వేర్</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#usage">వాడుక</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requesting-features.html">ఫీచర్లను ఎలా అభ్యర్థించాలి</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">ఎలా సహకరించాలి</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#community-forum">కమ్యూనిటీ ఫోరం</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#reporting-bugs">దోషాలు నివేదించడం</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#template-for-submitting-bug-reports">బగ్ నివేదికలను సమర్పించడానికి మూస</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#pull-requests">అభ్యర్థనలను లాగండి</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenDroneMap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>గ్రౌండ్ కంట్రోల్ పాయింట్లు</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/gcp.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="ground-control-points">
+<h1>గ్రౌండ్ కంట్రోల్ పాయింట్లు<a class="headerlink" href="#ground-control-points" title="Permalink to this headline">¶</a></h1>
+<p>డేటాలోని వక్రీకరణలను సరిదిద్దడానికి మరియు సమన్వయ వ్యవస్థలను తెలుసుకోవడానికి డేటాను సూచించడానికి గ్రౌండ్ కంట్రోల్ పాయింట్లు ఉపయోగపడతాయి.</p>
+<p>గ్రౌండ్ కంట్రోల్ పాయింట్ (జిసిపి) అనేది భూమిపై చేసిన స్థానం కొలత, సాధారణంగా అధిక ఖచ్చితత్వంతో కూడిన జిపిఎస్‌ను ఉపయోగిస్తుంది. (టోఫానిన్ 2019)</p>
+<p>గ్రౌండ్ కంట్రోల్ పాయింట్లను పేవ్మెంట్ కార్నర్స్, పార్కింగ్ స్థలంలో లైన్లు లేదా కలర్ ఫ్లోర్ టైల్స్ వంటి ప్రస్తుత నిర్మాణాలను సెట్ చేయవచ్చు, లేకపోతే భూమిపై ఉంచిన లక్ష్యాలను ఉపయోగించి సెట్ చేయవచ్చు.</p>
+<p>లక్ష్యాలను బకెట్ మూతలు నుండి నేల పలకలు వరకు అనేక రకాల పదార్థాలతో కొనుగోలు చేయవచ్చు లేదా నిర్మించవచ్చు.</p>
+<div class="section" id="recommended-practices-for-gcp-setting">
+<h2>జిసిపి సెట్టింగ్ కోసం సిఫార్సు చేసిన పద్ధతులు<a class="headerlink" href="#recommended-practices-for-gcp-setting" title="Permalink to this headline">¶</a></h2>
+<p>అన్ని కెమెరా స్థానాల కోసం గ్రౌండ్ కంట్రోల్ పాయింట్లను కనిపించేలా ఉంచండి. Ground హించిన భూమి నమూనా దూరం, ప్రకాశం, వృక్షసంపద, భవనాలు మరియు ప్రస్తుతం ఉన్న అన్ని అడ్డంకులను పరిగణించండి.</p>
+<p>అధిక మరియు తక్కువ ఎత్తులను కప్పి, ప్రాజెక్ట్‌లోని జిసిపిల సమాన సమాంతర పంపిణీని సేకరించండి. చాలా ఉద్యోగాలకు కనీసం 5 జిసిపి పనిచేస్తుంది, మరియు పెద్ద ప్రాజెక్టులకు 8 - 10 సరిపోతాయి. GCP అంతరం చిత్ర పాదముద్ర కంటే పెద్దదిగా ఉండాలని భావించి, మూలల్లో మరియు మధ్యలో కొన్ని పాయింట్లను గుర్తించండి, తద్వారా మీరు ఒకే చిత్రంలో ఒకటి కంటే ఎక్కువ GCP ని చూడలేరు.</p>
+<p>ప్రతి జిసిపి కనీసం 5 చిత్రాలలో కనబడుతుందని నిర్ధారించడానికి, ప్రాజెక్ట్ చుట్టుకొలత నుండి 10 నుండి 30 మీటర్ల పాయింట్లను వేరు చేయండి. ఈ దూరం అతివ్యాప్తిపై ఆధారపడి ఉంటుంది, కాబట్టి అతివ్యాప్తి పెరగడం చుట్టుకొలత నుండి అవసరమైన దూరాన్ని తగ్గిస్తుంది.</p>
+</div>
+<div class="section" id="gcp-file-format">
+<h2>GCP ఫైల్ ఫార్మాట్<a class="headerlink" href="#gcp-file-format" title="Permalink to this headline">¶</a></h2>
+<p>GCP ఫైల్ యొక్క ఆకృతి సులభం.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>మొదటి పంక్తిలో జియో కోఆర్డినేట్‌లకు ఉపయోగించే ప్రొజెక్షన్ పేరు ఉండాలి. దీనిని PROJ స్ట్రింగ్‌గా పేర్కొనవచ్చు (ఉదా.``+proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), ఇపిఎస్‌జి కోడ్ (ఉదా. <code class="docutils literal notranslate"><span class="pre">EPSG:</span> <span class="pre">4326</span></code>) లేదా <code class="docutils literal notranslate"><span class="pre">WGS84</span> <span class="pre">UTM</span> <span class="pre">1</span> <span class="pre">[N</span> <span class="pre">|</span> <span class="pre">S]</span></code> విలువ (ఉదా. <code class="docutils literal notranslate"><span class="pre">WGS84</span> <span class="pre">UTM</span> <span class="pre">16N</span></code>)</p></li>
+<li><p>తదుపరి పంక్తులు X, Y. మీ అనుబంధ పిక్సెల్‌లు, ఇమేజ్ ఫైల్ పేరు మరియు ఐచ్ఛిక అదనపు ఫీల్డ్‌లు, ట్యాబ్‌లు లేదా ఖాళీలతో వేరు చేయబడతాయి:</p></li>
+<li><p>విలువ లేదని సూచించడానికి ఎలివేషన్ విలువలను &quot;NaN&quot; కు సెట్ చేయవచ్చు</p></li>
+<li><p>7 వ కాలమ్ (ఐచ్ఛికం) సాధారణంగా GCP యొక్క లేబుల్‌ను కలిగి ఉంటుంది.</p></li>
+</ul>
+</div></blockquote>
+<p>GCP ఫైల్ ఫార్మాట్</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">projection</span><span class="o">&gt;</span>
+<span class="n">geo_x</span> <span class="n">geo_y</span> <span class="n">geo_z</span> <span class="n">im_x</span> <span class="n">im_y</span> <span class="n">image_name</span> <span class="p">[</span><span class="n">gcp_name</span><span class="p">]</span> <span class="p">[</span><span class="n">extra1</span><span class="p">]</span> <span class="p">[</span><span class="n">extra2</span><span class="p">]</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>ఉదాహరణ:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="n">proj</span><span class="o">=</span><span class="n">utm</span> <span class="o">+</span><span class="n">zone</span><span class="o">=</span><span class="mi">10</span> <span class="o">+</span><span class="n">ellps</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">datum</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">units</span><span class="o">=</span><span class="n">m</span> <span class="o">+</span><span class="n">no_defs</span>
+<span class="mf">544256.7</span> <span class="mf">5320919.9</span> <span class="mi">5</span> <span class="mi">3044</span> <span class="mi">2622</span> <span class="n">IMG_0525</span><span class="o">.</span><span class="n">jpg</span>
+<span class="mf">544157.7</span> <span class="mf">5320899.2</span> <span class="mi">5</span> <span class="mi">4193</span> <span class="mi">1552</span> <span class="n">IMG_0585</span><span class="o">.</span><span class="n">jpg</span>
+<span class="mf">544033.4</span> <span class="mf">5320876.0</span> <span class="mi">5</span> <span class="mi">1606</span> <span class="mi">2763</span> <span class="n">IMG_0690</span><span class="o">.</span><span class="n">jpg</span>
+</pre></div>
+</div>
+<p>మీరు `` gcp_list.txt`` అనే GCP ఫైల్‌ను సరఫరా చేస్తే, ODM స్వయంచాలకంగా దాన్ని కనుగొంటుంది. దీనికి మరొక పేరు ఉంటే మీరు `` --gcp 1`` ని ఉపయోగించి పేర్కొనవచ్చు. మీకు జిసిపి ఫైల్ ఉంటే మరియు బదులుగా ఎక్సిఫ్ తో జియోరెఫరెన్సింగ్ చేయాలనుకుంటే, మీరు `` --use-exif`` ని పేర్కొనవచ్చు. మీరు మీ చిత్రాలలో (RTK) అధిక ఖచ్చితత్వంతో GPS కొలతలు కలిగి ఉంటే మరియు ఆ సమాచారాన్ని gcp ఫైల్‌తో పాటు ఉపయోగించాలనుకుంటే, మీరు `` --force-gps`` ని పేర్కొనవచ్చు.</p>
+<p><cite>ఈ పోస్ట్‌లో విమానానికి ముందు గ్రౌండ్ కంట్రోల్ టార్గెట్‌లను ఉంచడం గురించి కొంత సమాచారం ఉంది &lt;http://diydrones.com/profiles/blogs/ground-control-points-gcps-for-aerial-photography&gt;</cite> _, కానీ మీకు ఇప్పటికే చిత్రాలు ఉంటే , మీరు మీ స్వంత పాయింట్లను చిత్రాల పోస్ట్ ఫాక్టోలో కనుగొనవచ్చు. ** కనీసం ** 3 ఫోటోలలో కనిపించే అధిక-విరుద్ధ వస్తువులను మీరు కనుగొనడం చాలా ముఖ్యం మరియు మీరు కనీసం 5 వస్తువులను కనుగొంటారు.</p>
+<p>పదునైన మూలలు జిసిపిలకు మంచి ఎంపికలు. మీరు మీ సర్వే ప్రాంతం చుట్టూ సమానంగా GCP లను కూడా ఉంచాలి / కనుగొనాలి.</p>
+<p>మీ ప్రాజెక్ట్ ఫోల్డర్ యొక్క బేస్ లో `` gcp_list.txt`` ఫైల్ తప్పక సృష్టించబడాలి.</p>
+<p>మంచి ఫలితాల కోసం మీ ఫైల్‌లో హెడర్ తర్వాత కనీసం 15 పంక్తులు ఉండాలి (ప్రతి పాయింట్‌కు 3 చిత్రాలతో 5 పాయింట్లు).</p>
+</div>
+<div class="section" id="user-interfaces">
+<h2>వినియోగదారు ఇంటర్‌ఫేస్‌లు<a class="headerlink" href="#user-interfaces" title="Permalink to this headline">¶</a></h2>
+<p>GCP ఫైళ్ళను సృష్టించడానికి మీరు రెండు యూజర్ ఇంటర్ఫేస్లలో ఒకదాన్ని ఉపయోగించవచ్చు:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/posm/posm-gcpi">POSM GCPi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/uav4geo/GCPEditorPro">జిసిపి ఎడిటర్ ప్రో</a></p></li>
+</ul>
+</div></blockquote>
+<div class="section" id="id1">
+<h3>POSM GCPi<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<p>POSM GCPi అప్రమేయంగా WebODM లో లోడ్ అవుతుంది. <cite>WebODM డెమో &lt;http://demo.webodm.org/plugins/posm-gcpi/&gt;</cite> _ వద్ద ఒక ఉదాహరణ అందుబాటులో ఉంది. తెలిసిన గ్రౌండ్ కంట్రోల్ XYZ విలువలతో దీన్ని ఉపయోగించడానికి, ఈ క్రింది వాటిని చేస్తారు:</p>
+<p>మీ జిసిపిల యొక్క ప్రొజె 4 స్ట్రింగ్‌తో హెడర్‌తో జిసిపి పేరు (జిసిపి ఇంటర్‌ఫేస్‌లో కనిపించే లేబుల్ ఇది), x, y మరియు z మాత్రమే ఉండే జిసిపి జాబితాను సృష్టించండి (అవి ప్లానార్ కోఆర్డినేట్‌లో ఉన్నాయని నిర్ధారించుకోండి UTM వంటి వ్యవస్థ. ఇది ఇలా ఉండాలి:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="n">proj</span><span class="o">=</span><span class="n">utm</span> <span class="o">+</span><span class="n">zone</span><span class="o">=</span><span class="mi">37</span> <span class="o">+</span><span class="n">south</span> <span class="o">+</span><span class="n">ellps</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">datum</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">units</span><span class="o">=</span><span class="n">m</span> <span class="o">+</span><span class="n">no_defs</span>
+<span class="n">gcp01</span> <span class="mf">529356.250827686</span> <span class="mf">9251137.5643209</span> <span class="mf">8.465</span>
+<span class="n">gcp02</span> <span class="mf">530203.125367657</span> <span class="mf">9250140.80991621</span> <span class="mf">15.781</span>
+<span class="n">gcp03</span> <span class="mf">530292.136003818</span> <span class="mf">9250745.02372435</span> <span class="mf">11.977</span>
+<span class="n">gcp04</span> <span class="mf">530203.125367657</span> <span class="mf">9250140.80991621</span> <span class="mf">15.781</span>
+<span class="n">gcp05</span> <span class="mf">530292.136003818</span> <span class="mf">9250745.02372435</span> <span class="mf">11.977</span>
+</pre></div>
+</div>
+<p>అప్పుడు ఈ జిసిపి జాబితాను ఇంటర్‌ఫేస్‌లోకి లోడ్ చేయవచ్చు, చిత్రాలను లోడ్ చేయవచ్చు మరియు ప్రతి జిసిపిలను చిత్రంలో ఉంచవచ్చు.</p>
+</div>
+<div class="section" id="id2">
+<h3>జిసిపి ఎడిటర్ ప్రో<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+<p>ఈ అనువర్తనాన్ని విడిగా ఇన్‌స్టాల్ చేయాలి లేదా <cite>https://github.com/uav4geo/GCPEditorPro &lt;https://github.com/uav4geo/GCPEditorPro&gt;`_</cite> నుండి వెబ్‌ఓడిఎం ప్లగిన్‌గా లోడ్ చేయవచ్చు.</p>
+<p>Gcp పేరు, నార్తింగ్, ఈస్టింగ్ మరియు ఎలివేషన్ ఉన్న CSV ఫైల్‌ను సృష్టించండి.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GCP</span> <span class="n">Label</span><span class="p">,</span><span class="n">Northing</span><span class="p">,</span><span class="n">Easting</span><span class="p">,</span><span class="n">Elevation</span>
+<span class="n">gcp01</span><span class="p">,</span><span class="mf">529356.250827686</span><span class="p">,</span><span class="mf">9251137.5643209</span><span class="p">,</span><span class="mf">8.465</span>
+<span class="n">gcp02</span><span class="p">,</span><span class="mf">530203.125367657</span><span class="p">,</span><span class="mf">9250140.80991621</span><span class="p">,</span><span class="mf">15.781</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>అప్పుడు ప్రధాన స్క్రీన్ నుండి CSV ని దిగుమతి చేసి, <code class="docutils literal notranslate"><span class="pre">ʻEPSG</span> <span class="pre">/</span> <span class="pre">PROJ</span></code> పెట్టెలో` <code class="docutils literal notranslate"><span class="pre">+proj=utm</span> <span class="pre">+zone=37</span> <span class="pre">+south</span> <span class="pre">+ellps=WGS84</span> <span class="pre">+datum=WGS84</span> <span class="pre">+units=m</span> <span class="pre">+no_defs</span></code> అని టైప్ చేయండి.</p>
+<p>కింది స్క్రీన్ సంబంధిత చిత్రాలను ట్యాగ్ చేయడానికి మరియు దిగుమతి చేయడానికి GCP లను ఎన్నుకోవాల్సిన మ్యాప్‌ను ప్రదర్శిస్తుంది.</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>ప్రస్తావనలు<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+<p>టోఫానిన్, పియరో. <a class="reference external" href="https://odmbook.com/">ఓపెన్ డ్రోన్ మ్యాప్: ది మిస్సింగ్ గైడ్.</a> మాస్సెరానో లాబ్స్ LLC, 2019.</p>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/gcp.rst">this page</a>!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="map-accuracy.html" class="btn btn-neutral float-right" title="మ్యాప్ ఖచ్చితత్వం" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="outputs.html" class="btn btn-neutral float-left" title="OpenDroneMap అవుట్‌పుట్‌లు" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, OpenDroneMap
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

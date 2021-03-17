@@ -1,0 +1,694 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="sw" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Somo &mdash; OpenDroneMap 2.4.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Chagizi na Bendera" href="arguments.html" />
+    <link rel="prev" title="Kuingiza na kuanza kutumia" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> OpenDroneMap
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.4.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Kuingiza na kuanza kutumia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hardware-recommendations">Sifa za Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation">Uingizaji</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-check-virtualization-support">Jia ya 1. Angalia msaada wa uvumbuzi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-install-requirements">Njia ya 2. Ingiza Vinavyohitajika</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-check-memory-and-cpu-allocation">Njia ya 3. Angalia nafasi na mgao wa CPU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-webodm">Njia ya 4. Pakua WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-launch-webodm">Njia ya 4. Zindua WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id1">Jia ya 1. Angalia msaada wa uvumbuzi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id2">Njia ya 2. Ingiza Vinavyohitajika</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id3">Njia ya 3. Angalia nafasi na mgao wa CPU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-and-launch-webodm">Njia ya 4. Pakua na fungua WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-install-requirements">Hatua 1. Mahitaji ya kuingiza</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-check-additional-requirements">Njia ya 2. Angalia Mahitaji ya Ziada</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-download-and-launch-webodm">Njia ya 3. Pakua na zindua WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#basic-commands-and-troubleshooting">Camand za msingi na utatuzi shida</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hello-webodm">Habari, WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#running-on-more-than-one-machine">Kuendesha mashine zaidi ya moja</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Somo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-high-quality-orthophotos">Tengeneza Orthophotos ya kitaalamu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calibrating-the-camera">Kurekebisha Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-digital-elevation-models">Kutengeneza Digital Elevation Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-docker">Kutumia Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#listing-docker-machines">Kutumia Docker mashine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-logs-on-the-instance">Tumia logs kwenye instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#command-line-access-to-instances">Matumizy ya camand line kwa mifano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cleaning-up-after-docker">Safisha juu baada ya Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-odm-from-low-bandwidth-location">Tumia ODM kutoka eneo lenye  low-bandwidth</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-this-and-who-is-it-for">Nini hiki na kwa nani</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#steps">Njia</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install">Kuingiza</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prep-data-and-project">Kuandaa data na project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resize-droplet-pull-pin-run-away">Kubadilisha droplet, kuvuta pini, pekua</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#after-it-finishes-assuming-you-survive-that-long">Baada kumaliza (kisia utachukua mda mkubwa)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arguments.html">Chagizi na Bendera</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#id1">Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">OpenDroneMap Matokeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#point-cloud">Point Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#d-textured-model">3D Textured Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#orthophoto">Orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#list-of-all-outputs">Mpangilo wa matokeo yote</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gcp.html">Pointi za Udhibiti wa chini</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#recommended-practices-for-gcp-setting">Recommended practices for GCP setting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#gcp-file-format">GCP file format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#user-interfaces">interface ya mtumiaji</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="map-accuracy.html">Map accuracy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#what-to-expect">What to expect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="map-accuracy.html#aspects-impacting-map-accuracy">Aspects impacting map accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geo.html">Image Geolocation Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="masks.html">Using Image Masks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large.html">Kugawa Database Kubwa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="large.html#calibrate-images">Kurekebisha Picha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#local-split-merge">Split-Merge ya Ndani</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#distributed-split-merge">Kugawanya Split-Merge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="large.html#getting-started-with-distributed-split-merge">Kupata kuanza pamoja na kugawanya Split-Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#understanding-the-cluster">Kufahamu Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#accessing-the-logs">Kutumia Logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#autoscaling-clusterodm">Kuongeza kiotomatiki ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#limitations">Mipaka</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#acknowledgments">Tunakiri</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Kumbukumbu za ziada</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-users">Kwa watumiaji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-developers">Kwa msanidi programu</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flying.html">Kidokeza cha kurusha ndege nyuki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multispectral.html">Msaada wa Multispectral</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#hardware">Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#usage">Matumizi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requesting-features.html">Vipi Utaomba Vipengele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Jinsi ya kushiriki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#community-forum">Jukwaa la kijamii</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#reporting-bugs">Kuwasilisha Bugs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#template-for-submitting-bug-reports">Kigezo kwa kuwasilisha maelezo ya bug</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#pull-requests">Tatua maombi</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenDroneMap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Somo</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/tutorials.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorials">
+<h1>Somo<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h1>
+<p>Hapo chini utapata maelezo kwa baadhi ya mifano muhimu.</p>
+<div class="section" id="creating-high-quality-orthophotos">
+<h2>Tengeneza Orthophotos ya kitaalamu<a class="headerlink" href="#creating-high-quality-orthophotos" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center">
+<img alt="image of OpenDroneMap orthophoto" src="_images/orthophoto.png" />
+</div>
+<p>Bila ya kuengeza paramiter, ODM inachagua nzuri baina ya ubora, kasi na nafasi ya kutumia. Ikiwa unataka kupata matokeo bora zaidi, utadadafua baadhi ya paramiter:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--orthophoto-resolution</span></code> ni muonekano wa orthophoto ndani ya cm/pixel. Kupunguza hii thamani kwa muonekano mzuri zaidi.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--ignore-gsd</span></code> ni bendera inayoagiza ODM kuacha nafasi na kasi ya matumaini ya kuathiri orthophoto. Kutumia hii bendera itaengeza uwezo wa kufanya kazi na matumizi ya nafasi, lakini yanaweza kuleta matokeo ya haraka.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--texturing-nadir-weight</span></code> lazima iongezeke hadi kufikia <code class="docutils literal notranslate"><span class="pre">29-32</span></code> kwa maeneo ya mjini ili kupata picha nzuri ya juu. Lazima ipunguzwe hadi <code class="docutils literal notranslate"><span class="pre">0-6</span></code> katika majani/ eneo tambarare.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--texturing-data-term</span></code> lazima itegeshwe hadi <cite>area</cite> katika misitu.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--mesh-size</span></code> lazima iongezeke hadi <code class="docutils literal notranslate"><span class="pre">300000-600000</span></code> na <code class="docutils literal notranslate"><span class="pre">--mesh-octree-depth</span></code> lazima iongezeke hadi <code class="docutils literal notranslate"><span class="pre">10-11</span></code> mjini kwa kutengeneza upya majengo mazuri/ mapaa.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="calibrating-the-camera">
+<h2>Kurekebisha Camera<a class="headerlink" href="#calibrating-the-camera" title="Permalink to this headline">¶</a></h2>
+<p>Kurekebisha Camera ni changamoto maalum pamoja na thamani ya camera. mabadiliko ya hali joto, mtetemeko, muelekeo, na na vitu vyengine vinavyoweza kuathiri data itakayopatikana. Automatic au matengenezo binafsi yanaweza kufanywa na kutakiwa na drone ukiruka, lakini inategemea na njia itakayopita ndege, marekebisho ya automatic haiwezi kuondosha njia zote kutoka mwanzo. James and Robson (2014) katika kitabu chao <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609">Mitigating systematic error in topographic models derived from UAV and ground‐based image networks</a> imeonyesha jinsi kupunguza makosa kweye marekebisho binafsi.</p>
+<div class="figure align-center">
+<img alt="image of lens distortion effect on bowling of data" src="_images/msimbasi_bowling.png" />
+</div>
+<p><em>Athatri za shimo katika point cloud kwa makundi ya picha zaidi ya 13,000 zilizokusanywa na benki ya dunia katika eneo la mafuriko Msimbasi Basin, Dar es Salaam, Tanzania.</em></p>
+<p>Kupunguza athari,kuna njia kidogo lakini njia rahisi ni kama: rusha njia mbili tofauti kwa 20°, kuliko kutumia nadir kamera (kuelekeza pont chini), tumia ambayo itainamisha camera kwa 5°.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/flightplanning.gif"><img alt="animation showing optimum" src="_images/flightplanning.gif" style="width: 640px; height: 480px;" /></a>
+</div>
+<p>Kama itafikia kuruka drone itachukua muda mrefu kuliko kuruka kwa kawaida, rubani au kikundi kinaweza kurusha drone kwa kumia njia hio hapo juu. OpenDroneMap itatengeneza file lilorekebishwa linaloitwa cameras.json ambayo baadae itachukuliwa kutumika kwa mruko mwengine, itakua ni mruko wa ufanisi zaidi.</p>
+<p>Vyenginevyo, njia za majaribio yafuatayo zinaweza kutumika: rusha drone kwa kupishanisha picha kidogo, lakini miruko crossgrid miwili (wakati mwengine huitwa crosshatch) iliotenganishwa kwa 20° na 5° moja kwa moja ikiangalia camera.</p>
+<ul class="simple">
+<li><p>Crossgrid asilimia za kupishana zinaweza kuwa ndogo kuliko flight sambamba. Kwa kupata matukio mazuri ya 3D, utatakiwa 68% za kupishana na ubavuni kushabihiana na 83% kupishana na ubavuni.</p></li>
+<li><p>Kupata matokeo ya 2D na 2.5D (digital elevation model), unatakiwa 42% mpishano na msimamo kwa mshabihiano 70% overlap na sidelap.</p></li>
+</ul>
+<div class="figure align-center">
+<img alt="animation showing experimental optimum" src="_images/rotation.gif" />
+</div>
+<p>Mistari ya kusimama iliyopishana ya njia ya kupitisha ndege pia inaongeza usahihi, lakini kidogo kwa hiyo camera iangalie moja kwa moja na 5°.</p>
+<div class="figure align-center">
+<img alt="figure showing effect of vertically separated flight lines and forward facing cameras on improving self calibration" src="_images/forward_facing.png" />
+</div>
+<p>Kutoka James na Robson (2014),`CC BY 4.0 &lt;<a class="reference external" href="https://creativecommons.org/licenses/by/4.0">https://creativecommons.org/licenses/by/4.0</a>&gt;`_</p>
+</div>
+<div class="section" id="creating-digital-elevation-models">
+<h2>Kutengeneza Digital Elevation Model<a class="headerlink" href="#creating-digital-elevation-models" title="Permalink to this headline">¶</a></h2>
+<p>Chaguo msingi ODM haitengenezi DEMs. Kutengeneza digital terrain model, hakikisha unatumia <code class="docutils literal notranslate"><span class="pre">--dtm</span></code> flag. Kutengeneza digital surface model, hakikisha unatumia <code class="docutils literal notranslate"><span class="pre">--dsm</span></code> flag.</p>
+<div class="figure align-center">
+<img alt="image of OpenDroneMap derived digital surface model" src="_images/digitalsurfacemodel.png" />
+</div>
+<p>Kizazi cha DTM, Simple Morphological Filter (smrf) inatumika kugawa point katika ground na non-ground pia ground point pekee inatumika. Ni <code class="docutils literal notranslate"><span class="pre">smrf</span></code> kichujo kinaweza kidhibitiwa kutumia mihimili tofauti:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--smrf-scalar</span></code> kipimo halisi. engeza hii paramiter kwa terrain kwa badiliko la urefu mkubwa.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--smrf-slope</span></code> mteremko parameter, ambayo imepimwa kwa &quot;slope tolerance&quot;. Increase inaengeza parameter kwa terrain kwa urefu mwingi variation. Lazima ipangwe kwa kitu kikubwa kuliko 0.1 na isiwe kubwa kuliko 1.2.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--smrf-threshold</span></code> elevation threshold. Weka hii parameter kwa kiwango cha chini cha urefu (cha mita) ambayo unategemea kuwa non-ground object.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--smrf-window</span></code> window radius paramita (ya mita) ambayo inashabihiana na ukubwa wa kitu (jengo, mti, n.k) kwa kuondolewa. lazima lipangwe nambari kubwa zaidi ya 10.</p></li>
+</ul>
+</div></blockquote>
+<p>Kubadilisha njia hizi kunaweza kubadilisha maana ya matokeo ya DTM. Mwanzo mzuri kusoma kwa kufahamu vipi paramita zinabadilisha matokeo ni kusoma pepa ya awali  <a class="reference external" href="https://www.researchgate.net/publication/258333806_An_Improved_Simple_Morphological_Filter_for_the_Terrain_Classification_of_Airborne_LIDAR_Data">An improved simple morphological filter for the terrain classification of airborne LIDAR data</a> (Inapatikana bure PDF).</p>
+<p>Majumuisho ya njia <code class="docutils literal notranslate"><span class="pre">smrf-threshold</span></code> yanaleta matokeo makubwa.</p>
+<p>SMRF ni nzuri kwa kupunguza makosa ya uwandishi (nambari ndogo ya makosa ya groundpoint imegawanywa kama non-ground) lakini &quot;acceptable&quot; pekee kuepuka makosa Type II (nambari kubwa ya non grond point kimakosa imegaiwa kama ground). Mahitaji haya yanachukuwa kwa uwangalifu wakati inatengenezwa DTM ambayo ilikusudiwa kutumika kuonekana, tangu makosa ya kitu kwa muonekano wa ground mfano mdogo katika DTM ya mwisho.</p>
+<div class="figure align-center">
+<img alt="image of lens distortion effect on bowling of data" src="_images/smrf.png" />
+</div>
+<p>Paramita nyengine mbili zinabadilisha kizazi cha DEM:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--dem-resolution</span></code> ambayo inaseti muonekano wa matokeo ya rasta DEM  (cm/pixel)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--dem-gapfill-steps</span></code> inayotambua namba ya maendeleo ya matabaka ya DEM kutumika. Katika maeneo ya miji engeza idadi hii hadi <cite>4-5</cite> inaweza kusaidia kutoa matokeo katika eneo lililoachwa wazi kwa SMRF mchujo.</p></li>
+</ul>
+</div></blockquote>
+<p>Mfano wa kutengeneza DEM:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">ti</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">my</span><span class="o">/</span><span class="n">project</span><span class="p">:</span><span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span> <span class="o">&lt;</span><span class="n">my_odm_image</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">project</span><span class="o">-</span><span class="n">path</span> <span class="o">/</span><span class="n">datasets</span> <span class="o">--</span><span class="n">dtm</span> <span class="o">--</span><span class="n">dem</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">2</span> <span class="o">--</span><span class="n">smrf</span><span class="o">-</span><span class="n">threshold</span> <span class="mf">0.4</span> <span class="o">--</span><span class="n">smrf</span><span class="o">-</span><span class="n">window</span> <span class="mi">24</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="measuring-stockpile-volume">
+<h2>Measuring stockpile volume<a class="headerlink" href="#measuring-stockpile-volume" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fieldwork-planning">
+<h3>Fieldwork planning<a class="headerlink" href="#fieldwork-planning" title="Permalink to this headline">¶</a></h3>
+<p>Weather conditions modify illumination and thus impact the photography results. Best results are obtained with evenly overcast or clear skies. Also look for low wind speeds that allow the camera to remain stable during the data collection process.
+In order to avoid shadows which on one side of the stockpile can obstruct feature detection and lessen the number of resulting points, always prefer the flights during the midday, when the sun is at the nadir so everything is consistently illuminated.
+Also ensure that your naked eye horizontal visibility distance is congruent with the planned flight distances for the specific project, so image quality is not adversely impacted by dust, fog, smoke, volcanic ash or pollution.</p>
+</div>
+<div class="section" id="flight-pattern">
+<h3>Flight pattern<a class="headerlink" href="#flight-pattern" title="Permalink to this headline">¶</a></h3>
+<p>Most stockpile measurement jobs does not require a crosshatch pattern or angled gimbal as the resting angle of stockpile materials allows the camera to capture the entire stockpile sides. Only some special cases where erosion or machinery operations causes steep angles on the faces of the stockpile would benefit of the crosshatch flight pattern and angled camera gimbal but consider that these additional recognized features come at a cost, (in field labor and processing time) and the resulting improvements are sometimes negligible.</p>
+<p>In most of the cases a lawn mower flight pattern is capable of producing highly accurate stockpile models.</p>
+<div class="figure align-center">
+<img alt="a simple lawnmower flight pattern can produce accurate results" src="_images/lawnmower_pattern.png" />
+</div>
+<p>Recommended overlap would be between 75% and 80% with a sidelap in the order of 65% to 70%. It is also recommended to slightly increase overlap and sidelap as the flight height is increased.</p>
+</div>
+<div class="section" id="flight-height">
+<h3>Flight height<a class="headerlink" href="#flight-height" title="Permalink to this headline">¶</a></h3>
+<p>Flight height can be influenced by different camera models, but in a general way and in order to ensure a balance between image quality and flight optimization, it is recommended to be executed at heights 3 to 4 times the tallest stockpile height. So for a 10 meter stockpile, images can be captured at a height of 40 meters.
+As the flight height is increased, it is also recommended to increase overlap, so for a 40 meter height flight you can set a 65% sidelap and 75% overlap, but for a planned height of 80 meters a 70% sidelap and 80% overlap allowing features to be recognized and properly processed.</p>
+</div>
+<div class="section" id="gcps">
+<h3>GCPs<a class="headerlink" href="#gcps" title="Permalink to this headline">¶</a></h3>
+<p>To achieve accuracy levels better than 3%, the use of GCP’s is advised. Typically 5 distributed GCP are sufficient to ensure accurate results.
+When placing or measuring GCP, equipment accuracy should be greater than the GSD. Survey grade GNSS and total stations  are intended to provide the required millimetric accuracy.</p>
+<p>For further information on the use of GCPs, please refer to the <a class="reference external" href="https://docs.opendronemap.org/gcp.html">Ground Control Points section</a>.</p>
+</div>
+<div class="section" id="processing-parameters">
+<h3>Processing parameters<a class="headerlink" href="#processing-parameters" title="Permalink to this headline">¶</a></h3>
+<p>A highly accurate model can be achieved using WebODM high resolution predefined settings. Then you can further adjust some parameters as necessary.</p>
+<p>If using ODM, these this reference values can help you configure the process settings.</p>
+<p>--dsm: true</p>
+<p>--dem-resolution 2.0</p>
+<p>--orthophoto-resolution 1.0</p>
+<p>--feature-quality high</p>
+<p>--pc-quality high</p>
+</div>
+<div class="section" id="measuring">
+<h3>Measuring<a class="headerlink" href="#measuring" title="Permalink to this headline">¶</a></h3>
+<p>As almost 50% of the material will be found in the first 20% of the stockpile height, special care should be taken in adequately defining the base plane.</p>
+<div class="figure align-center">
+<img alt="almost 50% of the material will be found in the first 20% of the stockpile height" src="_images/stockpile.png" />
+</div>
+<p>In WebODM Dashboard, clic on &quot;view map&quot; to start a 2D view of your project.</p>
+<p>Once in the 2D map view, clic on the &quot;Measure volume, area and length&quot; button.</p>
+<div class="figure align-center">
+<img alt="clic on the &quot;Measure volume, area and length&quot; button" src="_images/measurement1.png" />
+</div>
+<p>then clic on &quot;Create a new measurement&quot;</p>
+<div class="figure align-center">
+<img alt="clic on &quot;Create a new measurement&quot;" src="_images/measurement2.png" />
+</div>
+<p>Start placing the points to define the stockpile base plane</p>
+<div class="figure align-center">
+<img alt="Define the stockpile base plane" src="_images/measurement3.png" />
+</div>
+<p>Clic on &quot;Finish measurement&quot; to finish the process.</p>
+<div class="figure align-center">
+<img alt="Clic on &quot;Finish measurement&quot; to finish the process" src="_images/measurement4.png" />
+</div>
+<p>Dialog box will show the  message &quot;Computing ...&quot; for a few seconds, and after the computing is finished the volume measurement value will be displayed.</p>
+<div class="figure align-center">
+<img alt="Clic on &quot;Finish measurement&quot; to finish the process" src="_images/measurement7.png" />
+</div>
+<p>If you are using the command line OpenDroneMap you can use the dsm files to measure the stockpile volumes using other programs.</p>
+<p>Also consider that once the limits of the stockpile are set in software like <a class="reference external" href="https://www.qgis.org">QGis</a>, you will find there are some ways to determine the base plane. So for isolated stockpiles which boundaries are mostly visible, a linear approach can be used. While for stockpiles set in slopes or in bins, the base plane is better defined by the lowest point.
+Creation of a triangulated 3D surface to define the base plane is advised for large stockpiles. This is also valid for stockpiles paced on irregular surfaces.</p>
+</div>
+<div class="section" id="expected-accuracy">
+<h3>Expected accuracy<a class="headerlink" href="#expected-accuracy" title="Permalink to this headline">¶</a></h3>
+<p>For carefully planned and executed projects, and specially when GSD is less than 1 cm, the expected accuracy should be in the range of 1% to 2%.
+The resulting accuracy is comparable to the commercially available photogrammetry software and the obtained using survey grade GNSS equipment.</p>
+</div>
+</div>
+<div class="section" id="using-docker">
+<h2>Kutumia Docker<a class="headerlink" href="#using-docker" title="Permalink to this headline">¶</a></h2>
+<p>Tangu watumiaji wengi kutumia docker kuingiza OpenDroneMap itakua ni vizuri kufanhamu camandi za msingi kuitathmini mifano ya docker wakati ikitokea makosa, au tukiwa na wasiwasi wa matokeo. Docker ni mkusanyiko wa muonekano uliopangwa, miongoni mwa vitu vyengine kufanya urahisi wa kuingiza software kwa kujitegemea kwenye mazingira ya nyumbani. Kwa njia hii ni sawa na virtual mashine.</p>
+<p>Comand chache rahisi zinaweza kufanya docker yetu kwa nzuri zaidi.</p>
+<div class="section" id="listing-docker-machines">
+<h3>Kutumia Docker mashine<a class="headerlink" href="#listing-docker-machines" title="Permalink to this headline">¶</a></h3>
+<p>Tunaweza kuanza kwa kusikiliza docker zilizopo katika mashine ulionayo tunaanza kama ifuatavyo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">ps</span>
+<span class="n">CONTAINER</span> <span class="n">ID</span>        <span class="n">IMAGE</span>                  <span class="n">COMMAND</span>                  <span class="n">CREATED</span>             <span class="n">STATUS</span>              <span class="n">PORTS</span>                    <span class="n">NAMES</span>
+<span class="mi">2518817537</span><span class="n">ce</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">36</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">36</span> <span class="n">hours</span>                                  <span class="n">zen_wright</span>
+<span class="mi">1</span><span class="n">cdc7fadf688</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">37</span> <span class="n">hours</span>         <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">flamboyant_dhawan</span>
+</pre></div>
+</div>
+<p>Ikiwa tunataka kuona mashine ambayo haifanyi kazi lakini docker inapatikana, tunaingiza <cite>-a</cite> flag:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">ps</span> <span class="o">-</span><span class="n">a</span>
+<span class="n">CONTAINER</span> <span class="n">ID</span>        <span class="n">IMAGE</span>                  <span class="n">COMMAND</span>                  <span class="n">CREATED</span>             <span class="n">STATUS</span>                    <span class="n">PORTS</span>                    <span class="n">NAMES</span>
+<span class="mi">2518817537</span><span class="n">ce</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">36</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">36</span> <span class="n">hours</span>                                        <span class="n">zen_wright</span>
+<span class="mi">1</span><span class="n">cdc7fadf688</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">37</span> <span class="n">hours</span>               <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">flamboyant_dhawan</span>
+<span class="n">cd7b9585b8f6</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>                            <span class="n">nostalgic_lederberg</span>
+<span class="n">e31010c00b9a</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;python /code/run.py…&quot;</span>   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>                              <span class="n">suspicious_kepler</span>
+<span class="n">c44e0d0b8448</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>                            <span class="n">wonderful_burnell</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="accessing-logs-on-the-instance">
+<h3>Tumia logs kwenye instance<a class="headerlink" href="#accessing-logs-on-the-instance" title="Permalink to this headline">¶</a></h3>
+<p>Au tumia <cite>CONTAINER ID</cite> au jina, tunamia logs pekee inapatika kwenye mashine kama ifuatavyo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">logs</span> <span class="mi">2518817537</span><span class="n">ce</span>
+</pre></div>
+</div>
+<p>Hii inategemewa kuwa kubwa, lakini tunaweza kutumia pipe <cite>|</cite> character na tools nyengine kuondosha kile tunachotaka kutoka kwenye log. Kwa mfano tunaweza kuondosha kupitia log kidogo kwa kutumia more command.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">logs</span> <span class="mi">2518817537</span><span class="n">ce</span> <span class="o">|</span> <span class="n">more</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">DTM</span> <span class="ow">is</span> <span class="n">turned</span> <span class="n">on</span><span class="p">,</span> <span class="n">automatically</span> <span class="n">turning</span> <span class="n">on</span> <span class="n">point</span> <span class="n">cloud</span> <span class="n">classification</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">Initializing</span> <span class="n">OpenDroneMap</span> <span class="n">app</span> <span class="o">-</span> <span class="n">Mon</span> <span class="n">Sep</span> <span class="mi">23</span> <span class="mi">01</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">33</span>  <span class="mi">2019</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="o">==============</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">build_overviews</span><span class="p">:</span> <span class="kc">False</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">camera_lens</span><span class="p">:</span> <span class="n">auto</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">crop</span><span class="p">:</span> <span class="mi">3</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">debug</span><span class="p">:</span> <span class="kc">False</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">dem_decimation</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">dem_euclidean_map</span><span class="p">:</span> <span class="kc">False</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Kubonyeza <cite>Enter</cite> or <cite>Space</cite>, arrow key au <cite>Page Up</cite> or <cite>Page Down</cite> key itatusaidia kuelekeza kupitia log. Herufu ndogo ya <cite>Q</cite> itaturejesha nyuma kwenye comand line.</p>
+<p>Tunaweza kuondosha mwisho wa log kwa kutumia <cite>tail</cite> camand kama ifuatavyo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">logs</span> <span class="mi">2518817537</span><span class="n">ce</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="mi">5</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">Cropping</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">tif</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">running</span> <span class="n">gdalwarp</span> <span class="o">-</span><span class="n">cutline</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_georeferencing</span><span class="o">/</span><span class="n">odm_georeferenced_model</span><span class="o">.</span><span class="n">bounds</span><span class="o">.</span><span class="n">gpkg</span> <span class="o">-</span><span class="n">crop_to_cutline</span> <span class="o">-</span><span class="n">co</span> <span class="n">NUM_THREADS</span><span class="o">=</span><span class="mi">8</span> <span class="o">-</span><span class="n">co</span> <span class="n">BIGTIFF</span><span class="o">=</span><span class="n">IF_SAFER</span> <span class="o">-</span><span class="n">co</span> <span class="n">BLOCKYSIZE</span><span class="o">=</span><span class="mi">512</span> <span class="o">-</span><span class="n">co</span> <span class="n">COMPRESS</span><span class="o">=</span><span class="n">DEFLATE</span> <span class="o">-</span><span class="n">co</span> <span class="n">BLOCKXSIZE</span><span class="o">=</span><span class="mi">512</span> <span class="o">-</span><span class="n">co</span> <span class="n">TILED</span><span class="o">=</span><span class="n">YES</span> <span class="o">-</span><span class="n">co</span> <span class="n">PREDICTOR</span><span class="o">=</span><span class="mi">2</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">original</span><span class="o">.</span><span class="n">tif</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">tif</span> <span class="o">--</span><span class="n">config</span> <span class="n">GDAL_CACHEMAX</span> <span class="mf">48.95</span><span class="o">%</span>
+<span class="n">Using</span> <span class="n">band</span> <span class="mi">4</span> <span class="n">of</span> <span class="n">source</span> <span class="n">image</span> <span class="k">as</span> <span class="n">alpha</span><span class="o">.</span>
+<span class="n">Creating</span> <span class="n">output</span> <span class="n">file</span> <span class="n">that</span> <span class="ow">is</span> <span class="mi">111567</span><span class="n">P</span> <span class="n">x</span> <span class="mi">137473</span><span class="n">L</span><span class="o">.</span>
+<span class="n">Processing</span> <span class="nb">input</span> <span class="n">file</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">original</span><span class="o">.</span><span class="n">tif</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Nambari <cite>-5</cite> inaiambia tail camand kutupa mistari 5 ya mwisho ya log.</p>
+</div>
+<div class="section" id="command-line-access-to-instances">
+<h3>Matumizy ya camand line kwa mifano<a class="headerlink" href="#command-line-access-to-instances" title="Permalink to this headline">¶</a></h3>
+<p>Baadhi ya wakati tunataka kuenda ndani kidogo katika mchakato wa utafiti wa OpenDroneMap. Kwa hilitunaweza kupata kutumia mistari ya camand moja kwa moja kwenye mashine. Kwa hili, tunawza kutumia <cite>docker exec</cite> kufikia na camand line <cite>bash</cite> muonekano ndani ya mashine kwa umuhimu ufuatao:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">ti</span> <span class="mi">2518817537</span><span class="n">ce</span> <span class="n">bash</span>
+<span class="n">root</span><span class="o">@</span><span class="mi">2518817537</span><span class="n">ce</span><span class="p">:</span><span class="o">/</span><span class="n">code</span><span class="c1">#</span>
+</pre></div>
+</div>
+<p>Sasa tumeingia ndani ya kundi docker na mashine itaonesha.</p>
+</div>
+<div class="section" id="cleaning-up-after-docker">
+<h3>Safisha juu baada ya Docker<a class="headerlink" href="#cleaning-up-after-docker" title="Permalink to this headline">¶</a></h3>
+<p>Docker haina msaada kutumia nafasi na kawaida haiondoi kufanya kazi data na mashine mchakato ukimaliza. Hii inaweza kuwa faida ikiwa tunahitaji kutumia mchakato ambao ulikatika, lakini unachukua matatizo ya kuengeza matumizi ya nafasi kwa mda. Maciej Łebkowski ana <a class="reference external" href="https://lebkowski.name/docker-volumes/">mtazamo mzuri ya vipi kuongoza kutumia nafasi iliotumika kutumia ndani ya docker</a>.</p>
+</div>
+</div>
+<div class="section" id="using-odm-from-low-bandwidth-location">
+<h2>Tumia ODM kutoka eneo lenye  low-bandwidth<a class="headerlink" href="#using-odm-from-low-bandwidth-location" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-is-this-and-who-is-it-for">
+<h3>Nini hiki na kwa nani<a class="headerlink" href="#what-is-this-and-who-is-it-for" title="Permalink to this headline">¶</a></h3>
+<p>Kutoka kwa <a class="reference external" href="https://github.com/ivangayton/GDAL_scripts/">Ivan Gayton's repo</a>.</p>
+<p><a class="reference external" href="https://www.opendronemap.org/">OpenDroneMap</a> haiwezi kuwa kawada kuingizwa local inataka mashine yenye nguvu kwa mchakato wa data nyingi—kwa hivyo cloud mashine inaweza baadhi ya wakati kujibu kwa watu wanotaka kutumia. Hata hivyo nafasi ni tatizo kwa marekebisho ya kiwango cha chini. Kizuwizi hiki hakiwezi kuondoa tatizo moja kwa moja, bali njia zifuatazo zinaweza kuwa sababu za kupunguza mahitaji ya nafasi kwa kuchakata picha za ndege nyuki katika claud kutoka maeneo ya Afrika.</p>
+<p>Hapa tutawakilisha wepesi lakini mchakato unaofanya kazi wa kutengeneza OpenDroneMap cloud mashine (<em>sio</em> CloudODM, kumbuka, ni cloud-based instance ya ODM ambayo unaweza kutumia kutoka kwa camand line) na tumia kuprocess kundi picha nyingi ukiwa mbali. Inahitaji ujuzi wa matumizi ya Unix camand line, ssh, Digital Ocean account (Amazon AWS inafanya kazi pia, inawezekana ni tofauti ndogo katika mpangilio), njia ya kati na kati ya usomaji Computer kwa ujumla. Ikiwa huna computer nzuri na unataka kutumia njia ya slightly setup, <a class="reference external" href="https://www.opendronemap.org/cloudodm/">CloudODM</a> ni lazima kuiangalia.</p>
+<p>Mchakato wote huo umekusudiwa kwa mtu anerusha ndege nyuki eneo kubwa ndani ya Afrika au eneo linalofanana kutaka kuprocess data haraka wakati yupo eneo la kazi. Kwa hio itasaidia kazi iliopangwa kwa kupunguza nafasi/ kusafirisha data, kuliko njia rahisi ya kutumia ODM.</p>
+</div>
+<div class="section" id="steps">
+<h3>Njia<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="install">
+<h4>Kuingiza<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Tengeneza Digital Ocean droplet yenye ukubwa angalau 4GB ya RAM. Ambayo makisio gharama ni $20/mwezi, chini ya 4GB na haitakubali kuingia. Wakati ukiwasha ODM process tutapunguza kuwa ukubwa na cloud mashine ya gharama, Lakini wakati ikitumika unaweza kupunguza kwa droplet ya pili rahisi zaidi ambayo ina gharama ya $10/mwezi (ni droplet rahisi zaidi, at $5/mwezi , utatumia kwa nafasi ndogo ambayo huwezi kuirudisha mwanzo).</p>
+<ul>
+<li><p>Lazima Ubuntu 18.04 instance kuhakikisha uwiano</p></li>
+<li><p>Tengeneza mtumiaji kwa sudo privileges&quot; <a class="reference external" href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04">Digital Ocean’s insanely good documentation</a> itasaidia kujua. Katika kesi yetu tutaandaa mtumiaji aneitwa <code class="docutils literal notranslate"><span class="pre">odm</span></code>, unganisha na kupitia camand <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">odm&#64;xxx.xxx.xxx.xxx</span></code> ( ambapo x's ina maana IPv4 anuani katika server yako). Ikiwa unataka kufata huu mfano kwa karibu , <em>do</em> tumia tumia jina <code class="docutils literal notranslate"><span class="pre">odm</span></code>; kisha path yako itakuwa <code class="docutils literal notranslate"><span class="pre">/home/odm/ODM/</span></code> na itafanana na mifano yote katika kitabu hichi.</p></li>
+<li><p>Nenda kutumia <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code> na <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">upgrade</span></code> kuhakikisha server sio hatari wila kuapdate, lakini endelea kutumia Ubuntu 18.04.</p></li>
+</ul>
+</li>
+<li><p>Pakua na uingize ODM ndani yake kutoka <a class="reference external" href="https://github.com/OpenDroneMap/ODM">ODM GitHub</a> (regular, not WebODM) kutumia camand zifuatazo:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">OpenDroneMap</span><span class="o">/</span><span class="n">ODM</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">ODM</span>
+<span class="n">bash</span> <span class="n">configure</span><span class="o">.</span><span class="n">sh</span> <span class="n">install</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ikiwa utafanya hivi kuanzia kawaida home folder ya user yako (i.e <code class="docutils literal notranslate"><span class="pre">odm</span></code>) sehemu ya kuingiza itakua <code class="docutils literal notranslate"><span class="pre">/home/odm/ODM</span></code> (kiufupikama <code class="docutils literal notranslate"><span class="pre">~/ODM/</span></code>).</p></li>
+<li><p>Kuna baadhi ya kibadilika mazingira zinatakiwa kuwekwa. Fungua ~/.bashrc file katika mashine yako na uingize mistari 3 ifuatayo mwisho (From <a class="reference external" href="https://github.com/OpenDroneMap/ODM">the ODM github</a>). File linaweza kufunguka pamoja na <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">~/.bashrc</span></code> (au katika programu unayochapa ndani lieu of nano). Kuwa na ukahika kuweka <code class="docutils literal notranslate"><span class="pre">/home/odm/</span></code> kwa anuani sahihi hadi katika eneo ambayo itaichambua OpenDroneMap ikiwa hukufanya kila kitu kwa uhakika kama kwenye mfano wetu (Mfano ukitumia jina la mtumiaji katika mipangilio ya server).</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PYTHONPATH=$PYTHONPATH:/home/odm/ODM/SuperBuild/install/lib/python2.7/dist-packages
+export PYTHONPATH=$PYTHONPATH:/home/odm/ODM/SuperBuild/src/opensfm
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/odm/ODM/SuperBuild/install/lib
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Zingatia kwamba ODM github readme imekusanya makosa mepesi, ingiza anuani jina itakuwa ODM, sio OpenDroneMap (utaona hiyvo ukiwa utalinganisha na maeleza hapo juu kwa moja ndani ya ODM GitHub).</p></li>
+<li><p>Kwa ajili ya kuepusha kutofanya kazi ikiwa split-merge itakataa kuonesha file lake, tunaengeza mistari ifuatayo kwa <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> ( weka sawa kama uliweka tofauti na mfano wetu):</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PYTHONPATH=$PYTHONPATH:/home/odm/ODM/
+export PATH=$PATH:/home/odm/ODM/
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Sasa utahitaji hard drive ya pili (&quot;nafasi&quot; katika Digital Ocean jargon) inatosha kutengeneza project yako. Sheria ya thumb inaonesha kuwa mara 10 ya nafasi ya data picha, tumepata 100GB hadi kufikia ukubwa wa 1000GB (ukimaliza kurun unaweza kusafisha nafasi kubwa , lakini inahitajika kumaliza mchakato wote). Panga hadi nafasi ikifika, weka katika droplet yako, na <a class="reference external" href="https://www.digitalocean.com/docs/volumes/how-to/mount/">configure hio nafasi uitakayo</a> (katika mfano huu tunapanga ndani ya <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>).</p></li>
+</ul>
+</div>
+<div class="section" id="prep-data-and-project">
+<h4>Kuandaa data na project<a class="headerlink" href="#prep-data-and-project" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Sasa peleka picha zako ndani ya server. Unaweza kutumia <a class="reference external" href="https://en.wikipedia.org/wiki/Secure_copy">Secure Copy (scp)</a> Mfano: <code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">-r</span> <span class="pre">/path/to/my/imagefolder</span> <span class="pre">odm&#64;xxx.xxx.xxx.xxx:/mnt/odmdata/</span></code>.</p>
+<ul>
+<li><p>Hii inapelekea folder lilojaa picha (ambayo itafanya njia <code class="docutils literal notranslate"><span class="pre">r</span></code>, &quot;recursive&quot;) ndani ya eneo lililoondolewa ( Katika mfano wetu, ndani ya nafasi tulioweka katika cloud mashine ya <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>.</p></li>
+<li><p>Hii itachukua nafasi. Hakuna njia katika ukubwa wa file.<a class="reference external" href="#footnote1">1</a>, <a class="reference external" href="#footnote2">2</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="directory-structure">
+<h5>Muundo wa Anuani<a class="headerlink" href="#directory-structure" title="Permalink to this headline">¶</a></h5>
+<p>ODM inahitaji kuandaliwa nafasi ya orodha ndani ya mshine. Nafasi ngumu ni kuingiza folder (Ikiwa utahifadhi kama hapo juu ni &quot;<code class="docutils literal notranslate"><span class="pre">/home/odm/ODM/</span></code>) na folder la project (i.e. <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code>)</p>
+<ul class="simple">
+<li><p>ODM settings.yaml file inaonesha anuani kuu iliokusanya project yote. Hivi ndivyo ilivyo katika msatari wa anuani project settings.yaml file (inachanganya kidogo, hii ni anuani yenyewe <em>parent</em> ya anuani ya kila project, ambayo ataoneshwa na jina la project ukiita ODM). hariri settings.yaml na weka <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>, ambayo katika kesi hii katika nafasi tuliotengeneza. Anuani ya project husika imetengenezwa na hilo.</p></li>
+<li><p>Anuani ya project husika, i.e <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code> imekusanya gcp_list.txt file, image_groups.txt file, na na folder la picha kwa kila project```</p></li>
+<li><p>Folder la picha, i.e <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images/</span></code> linakuwa na picha zote. Ikiwa utarekebisha kama hivi, picha hazitakopiwa tena kwa sababu tayari zipo kwenye anuani ambayo ODM inaitaka.</p></li>
+<li><p>Badilisha settings.yaml kurahisisha anuani kuu ya file project (katika kesi kama hii nafasi tuliotengeneza, <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>). Hakikisha picha zipo katika sehemu husika, i.e <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images</span></code> na mafile mengine ya ziada (gcp_list.txt and image_groups.txt) imo katika semu ya folder <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code></p></li>
+<li><p>Ikiwa una picha katika mafolder tofauti kwa kila mabloki AOI au flight (ikiwa mpangilio wa flight zako utapangika) unaweza kutengeneza picha kwenye file image_groups.txt pamoja na <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">*;</span> <span class="pre">do</span> <span class="pre">cd</span> <span class="pre">$i;</span> <span class="pre">for</span> <span class="pre">j</span> <span class="pre">in</span> <span class="pre">*;</span> <span class="pre">do</span> <span class="pre">echo</span> <span class="pre">\&quot;$j</span> <span class="pre">$i\&quot;</span> <span class="pre">&gt;&gt;</span> <span class="pre">../$i.txt;</span> <span class="pre">done;</span> <span class="pre">cd</span> <span class="pre">../;</span> <span class="pre">done;</span></code> and <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">../</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">myproject/*.txt;</span> <span class="pre">do</span> <span class="pre">cat</span> <span class="pre">$i</span> <span class="pre">&gt;&gt;</span> <span class="pre">image_groups.txt;</span> <span class="pre">done;</span></code>. Hio itatengenea file na &quot;group name&quot; baada kila moja (kwa kesi hii itakuwa rahisi kuandika jina la folder llkotoka). Kisha ondosha file zote za picha katika anuani moja inayoitwa images ndani ya anuani ya project dir (kwa <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images/</span></code>). file la image_groups.txt litaruhusu ODM kujua kila picha itokapo kutoka kundi moa,hata ikiwa zimetoka katika anuani moja.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="resize-droplet-pull-pin-run-away">
+<h4>Kubadilisha droplet, kuvuta pini, pekua<a class="headerlink" href="#resize-droplet-pull-pin-run-away" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Zima na badilisha mashine yako kwa mpangilio maalum wa CPU na lkiasi cha kumbukumbu. Natumia memory-optimized mashine kiasi 24 vCPUs na 192GB ya RAM (ghara yake ni kiasi $1.60/hr ambayo itaengeza haraka, ni juu $1000/mwezi). Washa upya na fanya kazi kwa haraka ili usipoteze mda big-droplet.</p></li>
+<li><p>Zindua mchakato wa ODM kupitia ssh kutumia nohup (kwa hiyo ikiwa utaikata, mchakato utakatika)</p>
+<ul>
+<li><p>Badala ya kutumia kioo cha GNU kuzindua mchakato kutoka kwenye kioo ambayo haitasimama hana mawasiliano yakikatika; Zindua <code class="docutils literal notranslate"><span class="pre">screen</span></code>, na tumia <code class="docutils literal notranslate"><span class="pre">&lt;ctrl&gt;</span> <span class="pre">a</span> <span class="pre">&lt;ctrl&gt;</span> <span class="pre">d</span></code> kwenye detach, <code class="docutils literal notranslate"><span class="pre">screen</span> <span class="pre">-r</span></code> hadi re-attach. Lakini kutumia haitakupa file la log ya muonekano wa console isipokuwa utafanya kitu maalum kusanifu hili, ikiwa nohup itakupa file pamoja na muonekano wote wa console, ikiwemo ujumbe wa makosa, bure.</p></li>
+<li><p>Zingatia kama 2020-03 maneno ya kawaida <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">run.py</span> <span class="pre">-i</span> <span class="pre">/path/to/image/folder</span> <span class="pre">project_name</span></code> seems <em>not</em> to work; the <code class="docutils literal notranslate"><span class="pre">-i</span></code> or <code class="docutils literal notranslate"><span class="pre">--image</span></code> parameter inasababisha kosa la ajabu. Kwa hio tunafuta -i paramiter, na kutegemea mstari wa anuani ya project katika folder settings.yaml kuongoza ODM katika nafsi husika.Sasa tumia (ikiwemo split-merge):</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nohup</span> <span class="n">python</span> <span class="n">run</span><span class="o">.</span><span class="n">py</span> <span class="n">myproject</span> <span class="o">--</span><span class="n">split</span> <span class="mi">1</span> <span class="o">--</span><span class="n">split</span><span class="o">-</span><span class="n">overlap</span> <span class="mi">0</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">gsd</span> <span class="o">--</span><span class="n">depthmap</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">1000</span> <span class="o">--</span><span class="n">orthophoto</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">5</span> <span class="o">--</span><span class="n">dem</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">15</span> <span class="o">--</span><span class="n">pc</span><span class="o">-</span><span class="n">las</span> <span class="o">--</span><span class="n">dsm</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Alama ODM katika folder (kwa Mfano) <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code>. Kutoa image_groups.txt na gcp_list.txt zinapatikana ndani ya folder, picha zinapatikana <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images/</span></code>, na anuani project ndani ya settings.yaml ni <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code> haitapoteza muda na nafasi ya kukupia picha.</p></li>
+<li><p>Zingatia kwamba unakisia utakua na file image_groups.txt. Ukikosa hilo``-split-overlap 0`` litaleta athari, na <code class="docutils literal notranslate"><span class="pre">--split</span> <span class="pre">l</span></code> bila shaka mchanganyiko halisi wa namba utakataliwa baada ya image_groups.txt file kuonekana (Nafikiria ni kawaida kuzuiya makundi mangapiyatavunjwa kwa seti ya picha ndani yake, lakini kwa kesi yetu tunajaaliapicha zishapangwa kwa uweledi). Ikiwa huna data seti nyingi (&gt;1000 picha). Acha kuchagua <code class="docutils literal notranslate"><span class="pre">--split</span></code> na <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code>.</p></li>
+<li><p>Fuata muoendelezo kwa kutumia tail (ili uweze kujua ikimaliza)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tail</span> <span class="o">-</span><span class="n">f</span> <span class="n">nohup</span><span class="o">.</span><span class="n">out</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Unaweza kuangalia htop (ili kupata kujua matumizi uliotumia kwa maana siku za usoni unaweza kuongeza ukubwa wa mashine)</p></li>
+</ul>
+</div>
+<div class="section" id="after-it-finishes-assuming-you-survive-that-long">
+<h4>Baada kumaliza (kisia utachukua mda mkubwa)<a class="headerlink" href="#after-it-finishes-assuming-you-survive-that-long" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Mara tu processing ikimaliza, zima mashine na rudisha chini kwa uwezo mdogo.</p></li>
+<li><p>Washa mashine ya kuhifadhi, na ingia ndani kutumia ssh.</p></li>
+<li><p>Ikiwa unataka kuhifadhi nafasi uliopakua, unaweza compress orthophoto kutumia GDAL. Usiingize muonekano, fanya hivyo kwenye computer yako kuepusha kufanya file kuwa kubwa kabla ya kupakua.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gdal_translate</span> <span class="o">-</span><span class="n">co</span> <span class="n">COMPRESS</span><span class="o">=</span><span class="n">JPEG</span> <span class="o">-</span><span class="n">co</span> <span class="n">PHOTOMETRIC</span><span class="o">=</span><span class="n">YCBCR</span> <span class="o">-</span><span class="n">co</span> <span class="n">TILED</span><span class="o">=</span><span class="n">YES</span> <span class="o">-</span><span class="n">b</span> <span class="mi">1</span> <span class="o">-</span><span class="n">b</span> <span class="mi">2</span> <span class="o">-</span><span class="n">b</span> <span class="mi">3</span> <span class="o">-</span><span class="n">mask</span> <span class="mi">4</span> <span class="o">--</span><span class="n">config</span> <span class="n">GDAL_TIFF_INTERNAL_MASK</span> <span class="n">YES</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">original</span><span class="o">/</span><span class="n">filename</span><span class="o">.</span><span class="n">extension</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">output</span><span class="o">.</span><span class="n">tif</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Pakua tumia scp: <code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">odm&#64;xxx.xxx.xxx.xxx:/mnt/odmdata/myproject/odm_orthophoto/odm_orthophoto.tif</span></code> (au chukua compressed version uliotengeneza mwisho)</p></li>
+<li><p>Mara tu ukipata file kwenye computer yako, unaweza kuumia QGIS kuingiza muonekano (“pyramids”) au tumia GDAL command <code class="docutils literal notranslate"><span class="pre">gdaladdo</span> <span class="pre">-r</span> <span class="pre">average</span> <span class="pre">/path/to/image.tif</span> <span class="pre">2</span> <span class="pre">4</span> <span class="pre">8</span> <span class="pre">16</span> <span class="pre">32</span> <span class="pre">64</span> <span class="pre">128</span> <span class="pre">256</span> <span class="pre">512</span> <span class="pre">1024</span></code>.</p></li>
+<li><p>Unaweza kuhifadhi odm_texturing, odm_georeferencing, na odm-dem Mafile tumia tar kwa urahisi wa kupakua kwa sehemu moja (na pengine ndogo zaidi).</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">zcvf</span> <span class="n">archivename</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">folder</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst">this page</a>!</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arguments.html" class="btn btn-neutral float-right" title="Chagizi na Bendera" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral float-left" title="Kuingiza na kuanza kutumia" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, OpenDroneMap
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

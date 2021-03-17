@@ -1,0 +1,437 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Como contribuir &mdash; documentación de OpenDroneMap - 2.4.7</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="prev" title="Cómo solicitar funciones" href="requesting-features.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Inicio de Documentación"> OpenDroneMap
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.4.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Instalación y Guía de Introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hardware-recommendations">Recomendaciones de Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation">Instalación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-check-virtualization-support">Paso 1. Verificar el Soporte de Virtualización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-install-requirements">Paso 2. Requisitos de instalación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-check-memory-and-cpu-allocation">Paso 3. Revisa la memoria y la asignación del procesador</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-webodm">Paso 4. Descarga WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-launch-webodm">Paso 4. Inicie WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id1">Paso 1. Verificar el Soporte de Virtualización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id2">Paso 2. Requisitos de instalación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id3">Paso 3. Revisa la memoria y la asignación del procesador</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-and-launch-webodm">Paso 4. Descargue y ejecute WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-install-requirements">Paso 1. Requerimientos de instalación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-check-additional-requirements">Paso 2. Verifique los requisitos adicionales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-download-and-launch-webodm">Paso 3. Descargue y ejecute WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#basic-commands-and-troubleshooting">Comandos básicos y resolución de problemas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hello-webodm">¡Hola WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#running-on-more-than-one-machine">Ejecutando en más de una máquina</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Tutoriales</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-high-quality-orthophotos">Creación de Ortofotos de Alta Calidad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#calibrating-the-camera">Calibrar la cámara</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-digital-elevation-models">Creación de modelos de elevación digitales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-docker">Usando Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#listing-docker-machines">Listado de máquinas Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#accessing-logs-on-the-instance">Accediendo a los registros en la instancia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#command-line-access-to-instances">Acceso de línea de comando a las instancias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#cleaning-up-after-docker">Limpieza de Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-odm-from-low-bandwidth-location">Usando ODM desde una ubicación de ancho de banda bajo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#what-is-this-and-who-is-it-for">¿Qué es esto y para quién es?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#steps">Pasos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#install">Instalación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#prep-data-and-project">Datos de preparación y proyecto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#resize-droplet-pull-pin-run-away">Cambie el tamaño del Droplet, quite el seguro, huya</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#after-it-finishes-assuming-you-survive-that-long">Después de que termine (suponiendo que sobrevivas tanto tiempo)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arguments.html">Opciones e indicadores</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#id1">Argumentos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">Salidas de OpenDroneMap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#point-cloud">Nube de puntos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#d-textured-model">Modelo texturizado 3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#orthophoto">Ortofoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#list-of-all-outputs">Lista de todas las salidas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gcp.html">Puntos de Control Terrestre</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#recommended-practices-for-gcp-setting">Prácticas recomendadas para la colocación de GCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#gcp-file-format">Formato del archivo GCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#user-interfaces">Interfaces de Usuario</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#references">Referencias</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="map-accuracy.html">Precisión del Mapa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#what-to-expect">Que esperar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="map-accuracy.html#aspects-impacting-map-accuracy">Aspectos que impactan la precisión del mapa</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#references">Referencias</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geo.html">Archivos de geolocalización de imagen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="masks.html">Usar máscaras de imagen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large.html">División de grandes conjuntos de datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="large.html#calibrate-images">Calibrar imágenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#local-split-merge">Split-merge local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#distributed-split-merge">Split-Merge distribuido</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="large.html#getting-started-with-distributed-split-merge">Introducción a split-merge distribuido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#understanding-the-cluster">Entendiendo el Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#accessing-the-logs">Acceder a los registros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#autoscaling-clusterodm">Ajuste de escala automático de ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#limitations">Limitaciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#acknowledgments">Agradecimientos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Referencias adicionales</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-users">Para usuarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-developers">Para desarrolladores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flying.html">Consejos de vuelo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multispectral.html">Soporte multiespectral</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#hardware">Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#usage">Uso</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requesting-features.html">Cómo solicitar funciones</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Como contribuir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#community-forum">Foro comunitario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#reporting-bugs">Reportando Errores</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#template-for-submitting-bug-reports">Plantilla Para Enviar Informes de Errores</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#pull-requests">Solicitudes de Extraxion</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenDroneMap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Como contribuir</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/contributing.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-contribute">
+<h1>Como contribuir<a class="headerlink" href="#how-to-contribute" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>OpenDroneMap depende de las contribuciones de la comunidad. Puedes contribuir de muchas formas, aunque no seas programador.</p>
+<div class="section" id="community-forum">
+<h2>Foro comunitario<a class="headerlink" href="#community-forum" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Si quieres involucrarte, tienes un porblema o quieres conectarte, <a class="reference external" href="https://community.opendronemap.org/">el foro</a> es un excelente lugar para comenzar. Es posible que que encuentres tus preguntas ya respondidas o puedes encontrar consejos utiles y recursos. Tambien puedes contribuir con tus conjuntos de datos de acceso abierto para que otros los puedan explorar. Es un buen lugar para revisar antes de enviar informes de errores oponerse ne contacto con los desarrolladores antes de escribir una nueva caracterisitca.</p>
+</div>
+<div class="section" id="reporting-bugs">
+<h2>Reportando Errores<a class="headerlink" href="#reporting-bugs" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Errores son rastreados como problemas de Github. Por favor crea un porblema en el repositorio y etiquetalo con la etiqueta del error.</p>
+<p>Explica el problema e incluye detalles adicionales para ayudar a los mantenedores a reproducir el problema:</p>
+<ul class="simple">
+<li><p><strong>Usa un titulo claro y descriptivo</strong> para identificar el problema.</p></li>
+<li><p><strong>Describe los pasos exactos que reproducen el problema</strong> lo mas detalladamente posible. Por ejemplo, comienza por explicar como corres ODM (Docker, Vagrant, etc), exactamente que comando usaste en el terminal. Al listar los pasos, <strong>no solo digas que hiciste, explica como lo hiciste.</strong></p></li>
+<li><p><strong>Provee ejemplos especificos para demonstrar los pasos</strong> Incluye links a archivos o proyectos de GitHub, o snippets que puedan ser copiados y pegados, que usaste en los ejemplos. Si vas a proveer snippets en el problema, usa <a class="reference external" href="https://help.github.com/articles/markdown-basics/#multiple-lines">Markdown code blocks</a>.</p></li>
+<li><p><strong>Describe el comportamiento que observaste al seguir los pasos</strong> y señala cual es exactamente el problema en ese comportamiento.</p></li>
+<li><p><strong>Explica que comportamiento esperabas observar y porque</strong></p></li>
+<li><p><strong>Incluye capturas de pantalla y GIF animados</strong> que muestren como seguiste los pasos descritos y demuestren claramente el problema. Puedes usar <a class="reference external" href="http://www.cockos.com/licecap/">esta herramienta para grabar GIFs en macOS y Windows</a>, y <a class="reference external" href="https://github.com/colinkeenan/silentcast">esta herramienta</a> o <a class="reference external" href="https://github.com/GNOME/byzanz">esta</a> en Linux.</p></li>
+<li><p><strong>Si el problema es relacionado a rendimiento,</strong> por favor postea las especificaciones de tu maquina (maquina host y guest).</p></li>
+<li><p><strong>Si el problema no fue desencadenado por una accion especifica,</strong> describe lo que estabas haciendo antes de que el problema pasara y comparte mas informacion usando las pautas de abajo.</p></li>
+</ul>
+<p>Incluye detalles de tu configuracion y ambiente:</p>
+<ul class="simple">
+<li><p><strong>Que version de ODM estas usando?</strong>
+Un lanzamiento estable? un clon de un master?</p></li>
+<li><p><strong>Cual es el nombre y la version del sistema operativo que estas usando?</strong></p></li>
+<li><p><strong>Estas usando ODM en una maquina virtual o Docker?</strong> Si es asi, que software de maquina virtualestas usando y que sistema operativo y versiones estas usando para el host y el guest?</p></li>
+</ul>
+<div class="section" id="template-for-submitting-bug-reports">
+<h3>Plantilla Para Enviar Informes de Errores<a class="headerlink" href="#template-for-submitting-bug-reports" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[Short description of problem here]
+
+**Reproduction Steps:**
+
+1. [First Step]
+2. [Second Step]
+3. [Other Steps...]
+
+**Expected behavior:**
+
+[Describe expected behavior here]
+
+**Observed behavior:**
+
+[Describe observed behavior here]
+
+**Screenshots and GIFs**
+
+![Screenshots and GIFs which follow reproduction steps to demonstrate the problem](url)
+
+**ODM version:** [Enter ODM version here]
+**OS and version:** [Enter OS name and version here]
+
+**Additional information:**
+
+* Problem started happening recently, didn&#39;t happen in an older version of ODM: [Yes/No]
+* Problem can be reliably reproduced, doesn&#39;t happen randomly: [Yes/No]
+* Problem happens with all datasets and projects, not only some datasets or projects: [Yes/No]
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="pull-requests">
+<h2>Solicitudes de Extraxion<a class="headerlink" href="#pull-requests" title="Enlazar permanentemente con este título">¶</a></h2>
+<ul class="simple">
+<li><p>Incluye capturas de pantalla y GIFs animados en tus solicitudes de extraccion siempre que sea posible.</p></li>
+<li><p>Sigue la guia de estilo de PEP8 Python.</p></li>
+<li><p>Finaliza archivos con una nueva linea.</p></li>
+<li><dl class="simple">
+<dt>Evita codigo dependiente de la plataforma.</dt><dd><ul>
+<li><p>Usa require(“fs-plus”).getHomeDirectory() para ir al directorio de inicio.</p></li>
+<li><p>Usa pth.join() para concatenar nombres de archivos.</p></li>
+<li><p>Usa os.tmpdir() en lugar de /tmp cuando necesites referenciar al directorio temporal.</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+<li><dl class="simple">
+<dt>Usando un retorno plano cuando retorna al final de una funcion.</dt><dd><ul>
+<li><p>No reotrnar null, retornar indefinido, null o undefinido</p></li>
+</ul>
+</dd>
+</dl>
+</li>
+</ul>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst">esta página</a>!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+      
+        <a href="requesting-features.html" class="btn btn-neutral float-left" title="Cómo solicitar funciones" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, OpenDroneMap
+
+    </p>
+  </div>
+    
+    
+    
+    Construido con <a href="http://sphinx-doc.org/">Sphinx</a> usando un
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">tema</a>
+    
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

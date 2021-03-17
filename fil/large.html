@@ -1,0 +1,509 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fil" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Splitting Large Datasets &mdash; OpenDroneMap 2.4.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Karagdagang Sanggunian" href="resources.html" />
+    <link rel="prev" title="Gamit ang Image Masks" href="masks.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> OpenDroneMap
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.4.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Instalasyon at Paano Simulan</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hardware-recommendations">Hardware Recommendations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-check-virtualization-support">Step 1. I-check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-install-requirements">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-check-memory-and-cpu-allocation">Step 3. I-check ang Memory at CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-webodm">Step 4. Download WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-launch-webodm">Step 4. Launch WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id1">Step 1. I-check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id2">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id3">Step 3. I-check ang Memory at CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-and-launch-webodm">Step 4. I-download at i-launch ang WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-install-requirements">Step 1. Mga kailangan bago maginstall.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-check-additional-requirements">Step 2. I-check ang mga karagdagan na requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-download-and-launch-webodm">Step 3. Download and Launch WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#basic-commands-and-troubleshooting">Basic na mga cCommands at Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hello-webodm">Hello, WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#running-on-more-than-one-machine">Pagpapatakbo sa dalawa o mas marami pang machine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Mga Tutoryal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-high-quality-orthophotos">Paglikha ng Mataas na Kalidad ng Orthophotos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#calibrating-the-camera">Pag-kalibrate ng Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-digital-elevation-models">Paglikha ng Digital Elevation Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-docker">Using Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#listing-docker-machines">Listing Docker Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#accessing-logs-on-the-instance">Accessing logs on the instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#command-line-access-to-instances">Command line access to instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#cleaning-up-after-docker">Cleaning up after Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-odm-from-low-bandwidth-location">Paggamit ng ODM para sa low-bandwidth na lokasyon.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#what-is-this-and-who-is-it-for">Ano ito at para kanino ito?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#steps">Steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#install">Install</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#prep-data-and-project">Prep data and project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#resize-droplet-pull-pin-run-away">I-resize ang droplet, hatakin ang pin at i-proseso ito.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#after-it-finishes-assuming-you-survive-that-long">Matapos ang lahat (assuming na ikaw ay nagsurvive ng ganoon katagal)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arguments.html">Mga Opsyon at Tanda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#id1">Mga Argumento</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">OpenDroneMap Outputs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#point-cloud">Point Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#d-textured-model">3D Textured Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#orthophoto">Orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#list-of-all-outputs">Listahan ng mga output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gcp.html">Ground Control Points</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#recommended-practices-for-gcp-setting">Mga nirerekumendang gawi para sa paglagay ng GCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#gcp-file-format">GCP file format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#user-interfaces">User Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="map-accuracy.html">Kawastuan ng Mapa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#what-to-expect">Mga Dapat I-expect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="map-accuracy.html#aspects-impacting-map-accuracy">Mga aspeto na may impact sa map accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#references">Mga Sanggunian</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geo.html">Image Geolocation Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="masks.html">Gamit ang Image Masks</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Splitting Large Datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#calibrate-images">Calibrate images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#local-split-merge">Local Split-Merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#distributed-split-merge">Distributed Split-Merge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getting-started-with-distributed-split-merge">Paano simulan ang Distributed Split-Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#understanding-the-cluster">Pagkaunawa sa Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-the-logs">Pag-access sa Logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#autoscaling-clusterodm">Autoscaling ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#limitations">Mga limitasyon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#acknowledgments">Acknowledgments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Karagdagang Sanggunian</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-users">Para sa gagamit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-developers">Para sa mga taga-buo.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flying.html">Mga Paalala sa Pagpapalipad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multispectral.html">Multispectral Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#hardware">Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#usage">Paggamit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requesting-features.html">Paano Magrequest ng Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Paano makadaragdag</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#community-forum">Pagtitipon ng Komunidad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#reporting-bugs">Pagsumite ng mga Sira</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#template-for-submitting-bug-reports">Template para sa pagpapasa ng Bug Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#pull-requests">Ipakita ang mga Request</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenDroneMap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Splitting Large Datasets</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/large.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="splitting-large-datasets">
+<h1>Splitting Large Datasets<a class="headerlink" href="#splitting-large-datasets" title="Permalink to this headline">¶</a></h1>
+<p>sa ODM bersiyon <code class="docutils literal notranslate"><span class="pre">0.6.0</span></code>, maaaring hatiin ang malalaking datasets sa mas maliliit na grupo na tinatawag na submodels</p>
+<p>Bakit gagamitin ang split-merge pipeline? Kung may napakalaking bilang ng imahe sa dataset, split-merge ang makaktulong sa pagpaparocess na maging mas maayos sa malaking machine (mangangailangan ito ng mas maliit na memory). Kung maraming machine ang nakakonekta sa iisang network, pwede i-proseso ang submodels ng parallel, papayagan nito ang horizontal scaling at pagproseso ng libong imahe ng mabilis.</p>
+<p>Ang split-merge ay gumagana sa WebODM sa labas ng box basta ang process nodes ay sumosoporta sa slit-merge, sa pagenable ng <code class="docutils literal notranslate"><span class="pre">--split</span></code> option kapag gumagawa ng bagong task.</p>
+<div class="section" id="calibrate-images">
+<h2>Calibrate images<a class="headerlink" href="#calibrate-images" title="Permalink to this headline">¶</a></h2>
+<p>Ang image calibration ay rekomendado (pero hindi required) para sa large datasets dahil ang error propagation dahilan ng image distortion ay maaaring magsanhi ng bowl effect sa mga models. Ang image calibration instruction ay makikita sa <a class="reference external" href="tutorials.html#calibrating-the-camera">Calibrate Images</a>.</p>
+<div class="figure align-center">
+<img alt="image of lens distortion effect on bowling of data" src="_images/msimbasi_bowling.png" />
+</div>
+<p>Bowling effect sa point cloud over 13,000+ na image dataset na nakolekta ng World Bank Tanzania sa flood prone Msimbasi Basin, Dar es Salaam, Tanzania.</p>
+</div>
+<div class="section" id="local-split-merge">
+<h2>Local Split-Merge<a class="headerlink" href="#local-split-merge" title="Permalink to this headline">¶</a></h2>
+<p>Ang pagsplit ng dataset sa mas maayos na submodels at sunod-sunod na pagproseso n lahat ng submodels sa iisang machine ay madali lamang! Gamitin lang ang <code class="docutils literal notranslate"><span class="pre">--split</span></code> at <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code> para mapagdesisyunan ang karaniwan na bilang ng mga imahe kada submodel at i-overlap (sa metro) sa pagitan ng submodels ayon sa pagkakabanggit.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split <span class="m">400</span> --split-overlap <span class="m">100</span>
+</pre></div>
+</div>
+<p>Kung alam mo na kung papaano mo gusto hatiin ang dataset, maaaring maglaan ng impormasyon at ito ay magagamit sa halip na clustering algorithm.</p>
+<p>Ang pagpapangkat ay maibibigay sa pamamagitan ng pagdagdag ng file name na image_groups.txt sa main dataset folder. Ang file ay dapat maglaman ng isang linya kada imahe. Ang kada linya ay dapat may dalawang salita: una, ang pangalan ng imahe at pangalawa, ang pangalan ng pangkat ng nakakasakop dito. Halimbawa:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">01.</span><span class="n">jpg</span> <span class="n">A</span>
+<span class="mf">02.</span><span class="n">jpg</span> <span class="n">A</span>
+<span class="mf">03.</span><span class="n">jpg</span> <span class="n">B</span>
+<span class="mf">04.</span><span class="n">jpg</span> <span class="n">B</span>
+<span class="mf">05.</span><span class="n">jpg</span> <span class="n">C</span>
+</pre></div>
+</div>
+<p>gagawa ng 3 submodels. Siguraduhin na daanan ang <code class="docutils literal notranslate"><span class="pre">--split-overlap</span> <span class="pre">0</span></code> kung mano-mano na magbibigay ng <code class="docutils literal notranslate"><span class="pre">image_groups.txt</span></code> file.</p>
+</div>
+<div class="section" id="distributed-split-merge">
+<h2>Distributed Split-Merge<a class="headerlink" href="#distributed-split-merge" title="Permalink to this headline">¶</a></h2>
+<p>Ang ODM ay awtomatikong namamahagi ng proseso kada submodel sa maramihan na machines sa pamamagitan ng <a class="reference external" href="https://github.com/OpenDroneMap/NodeODM">NodeODM</a> nodes, na inayos sa pamamagitan ng <a class="reference external" href="https://github.com/OpenDroneMap/ClusterODM">ClusterODM</a>.</p>
+<div class="figure align-center">
+<img alt="image of lens distortion effect on bowling of data" src="_images/clusterodm.png" />
+</div>
+<div class="section" id="getting-started-with-distributed-split-merge">
+<h3>Paano simulan ang Distributed Split-Merge<a class="headerlink" href="#getting-started-with-distributed-split-merge" title="Permalink to this headline">¶</a></h3>
+<p>Ang unang hakbang ay ang simulan ang ClusterODM</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti -p <span class="m">3001</span>:3000 -p <span class="m">8080</span>:8080 opendronemap/clusterodm
+</pre></div>
+</div>
+<p>Tapos, sa mga machine na gusto mong gamitin, i-launch ang NodeODM instance via</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti -p <span class="m">3000</span>:3000 opendronemap/nodeodm
+</pre></div>
+</div>
+<p>Kumonekta via telnet to CLusterODM at i-add ang IP adresses/port ng machine na gumagamit ng NodeODM</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ telnet &lt;cluster-odm-ip&gt; <span class="m">8080</span>
+Connected to &lt;cluster-odm-ip&gt;.
+Escape character is <span class="s1">&#39;^]&#39;</span>.
+<span class="o">[</span>...<span class="o">]</span>
+<span class="c1"># node add &lt;node-odm-ip-1&gt; 3000</span>
+<span class="c1"># node add &lt;node-odm-ip-2&gt; 3000</span>
+<span class="o">[</span>...<span class="o">]</span>
+<span class="c1"># node list</span>
+<span class="m">1</span><span class="o">)</span> &lt;node-odm-ip-1&gt;:3000 <span class="o">[</span>online<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.1&gt;
+<span class="m">2</span><span class="o">)</span> &lt;node-odm-ip-2&gt;:3000 <span class="o">[</span>online<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.1&gt;
+</pre></div>
+</div>
+<p>Siguraduhin na ikaw ay gumagamit ng bersiyon <code class="docutils literal notranslate"><span class="pre">1.5.1</span></code> o mas mataas pa na NodeODM API.</p>
+<p>Sa puntong ito, gamitin ang <code class="docutils literal notranslate"><span class="pre">--sm-cluster</span></code> na opsiyon para ma-enable ang distributed split-merge</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split <span class="m">800</span> --split-overlap <span class="m">120</span> --sm-cluster http://&lt;cluster-odm-ip&gt;:3001
+</pre></div>
+</div>
+</div>
+<div class="section" id="understanding-the-cluster">
+<h3>Pagkaunawa sa Cluster<a class="headerlink" href="#understanding-the-cluster" title="Permalink to this headline">¶</a></h3>
+<p>Kapag konektado via telnet, posible na magtanong sa kung ano na ang kalagayan ng cluster. Halimbawa, pwedeng gamitin ang command na HELP para hanapin ang mga available na commands.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># HELP</span>
+NODE ADD &lt;hostname&gt; &lt;port&gt; <span class="o">[</span>token<span class="o">]</span> - Add new node
+NODE DEL &lt;node number&gt; - Remove a node
+NODE INFO &lt;node number&gt; - View node info
+NODE LIST - List nodes
+NODE LOCK &lt;node number&gt; - Stop forwarding tasks to this node
+NODE UNLOCK &lt;node number&gt; - Resume forwarding tasks to this node
+NODE UPDATE - Update all nodes info
+NODE BEST &lt;number of images&gt; - Show best node <span class="k">for</span> the number of images
+ROUTE INFO &lt;taskId&gt; - Find route information <span class="k">for</span> task
+ROUTE LIST <span class="o">[</span>node number<span class="o">]</span> - List routes
+TASK LIST <span class="o">[</span>node number<span class="o">]</span> - List tasks
+TASK INFO &lt;taskId&gt; - View task info
+TASK OUTPUT &lt;taskId&gt; <span class="o">[</span>lines<span class="o">]</span> - View task output
+TASK CANCEL &lt;taskId&gt; - Cancel task
+TASK REMOVE &lt;taskId&gt; - Remove task
+ASR VIEWCMD &lt;number of images&gt; - View <span class="nb">command</span> used to create a machine
+!! - Repeat last <span class="nb">command</span>
+</pre></div>
+</div>
+<p>Kung halimbawa naman ay ang Node ODM instance ay hindi aktibo kapag sinimulan ang ClusterODM, maglilista kami ng nodesat makikita ang mga sumusunod:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># NODE LIST</span>
+<span class="m">1</span><span class="o">)</span> localhost:3000 <span class="o">[</span>offline<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.3&gt; <span class="o">[</span>L<span class="o">]</span>
+</pre></div>
+</div>
+<p>Para maresolusyonan ito, maaaring magsimula ang lokal na node (kung hindi pa nasisimulan) at magperform ng <code class="docutils literal notranslate"><span class="pre">NODE</span> <span class="pre">UPDATE</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># NODE UPDATE</span>
+OK
+<span class="c1"># NODE LIST</span>
+<span class="m">1</span><span class="o">)</span> localhost:3000 <span class="o">[</span>online<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.3&gt; <span class="o">[</span>L<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="accessing-the-logs">
+<h3>Pag-access sa Logs<a class="headerlink" href="#accessing-the-logs" title="Permalink to this headline">¶</a></h3>
+<p>Habang ang proseso ay umaandar, posible rin na ilista ang mga task at tignan ang mga task output.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># TASK LIST</span>
+<span class="c1"># TASK OUTPUT &lt;taskId&gt; [lines]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="autoscaling-clusterodm">
+<h3>Autoscaling ClusterODM<a class="headerlink" href="#autoscaling-clusterodm" title="Permalink to this headline">¶</a></h3>
+<p>Ang ClusterODM ay mayroon din opsiyon na autoscalesa maramihan na plataporma kasama ng, hanggang ngayon, Amazon at Digital Ocean. Tinutulungan nito ang user na mababaan ang presyo na nauugnay sa always-on na mga pagkakataon pati na rin ang kakayanan na scale ang proseso base sa demand.</p>
+<p>Para i-set up ang autoscaling, dapat na:</p>
+<ul class="simple">
+<li><p>Mag-install ng gumaganang bersiyon ng NodeJS tsaka maginstall ng ClusterODM</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/OpenDroneMap/ClusterODM
+<span class="nb">cd</span> ClusterODM
+npm install
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Siguraduhin na ang docker-machine ay installed.</p></li>
+<li><p>I-set up ang S3-compatible bucket para maitago ang mga resulta.</p></li>
+<li><p>Gumawa ng file para sa <a class="reference external" href="https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/digitalocean.md">DigitalOcean</a> o <a class="reference external" href="https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/aws.md">Amazon Web Services</a>.</p></li>
+</ul>
+<p>Maaari ng simulan ang ClusterODM</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>node index.js --asr configuration.json
+</pre></div>
+</div>
+<p>Dapat makita ang similar na mensahe sa console</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>info: ASR: DigitalOceanAsrProvider
+info: Can write to S3
+info: Found docker-machine executable
+</pre></div>
+</div>
+<p>Dapat ay mayroon kang kahit man lamang isang static NodeODM node na nakakabit sa ClusterODM, kahit na plano mo na gamitin ang autoscaler sa lahat ng proseso. Kapag naset-up ang autoscaling, hindi na pwedeng magka-zero nodes at umasa sa autoscaler ng 100%. Kailangan kabitan ng NodeODM node para kumilos bilang &quot;reference node&quot; kung hindi ma'y ang ClusterODM ay hindi malalaman kung paano pangasiwaan ng mga ilang hiling (sa pagforward ng UI, sa validating options bago sa spinning up ng instance, etc.). Sa kadahilanan na ito, kailangan idagdag ang &quot;dummy&quot; NodeODM node at i-lock ito.</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>telnet localhost <span class="m">8080</span>
+&gt; NODE ADD localhost <span class="m">3001</span>
+&gt; NODE LOCK <span class="m">1</span>
+&gt; NODE LIST
+<span class="m">1</span><span class="o">)</span> localhost:3001 <span class="o">[</span>online<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.1&gt; <span class="o">[</span>L<span class="o">]</span>
+</pre></div>
+</div>
+<p>Sa paraan na ito, ang lahat ng tasks ay awtomatikong napapadala sa autoscaler.</p>
+</div>
+</div>
+<div class="section" id="limitations">
+<h2>Mga limitasyon<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+<p>Ang 3D textured meshes ay kasalukuyan na hindi name-merge bilang parte ng workflow (pino-point out lamang ang clouds, DEMS at orthophotos are).</p>
+<p>Ang GCPs ay suportado ng buo pero kailangan ng kahit man lang 3 GCP points kada submodel para sa georeferencing na magsimula.  Kung ang submodel ay may mas kaunti sa 3 GCPs, ang kombinasyon ng natitirang GCPs + EXIF data ang gagamitin (na medyo hindi kasing eksakto). Nirerekomenda na gamitin ang <code class="docutils literal notranslate"><span class="pre">image_groups.txt</span></code> file para eksaktong macontrol ang submodel split habang ginagamit ang GCPs.</p>
+</div>
+<div class="section" id="acknowledgments">
+<h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h2>
+<p>Malaking pagpugay kay Pau at sa mga tao ng Mapillary para sa kanilang kamangha-mangha na kontribusyon sa OpenDroneMap sa pamamagitan ng kanilang OpenSfM code, na isang pangunahing sangkap ng split-merge pipeline. Inaabangan namin ang kaunlaran at pagtulak sa mga limitasyon ng OpenDronMap at  makita kung gaano kalaki ang dataset na mapa-process.</p>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst">this page</a>!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="resources.html" class="btn btn-neutral float-right" title="Karagdagang Sanggunian" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="masks.html" class="btn btn-neutral float-left" title="Gamit ang Image Masks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, OpenDroneMap
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

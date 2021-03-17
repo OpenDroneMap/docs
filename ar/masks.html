@@ -1,0 +1,370 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ar" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Using Image Masks &mdash; OpenDroneMap 2.4.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="تقسيم مجموعات البيانات الكبيرة" href="large.html" />
+    <link rel="prev" title="Image Geolocation Files" href="geo.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> OpenDroneMap
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.4.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">التثبيت والبدء</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hardware-recommendations">توصيات الأجهزة</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation">التركيب</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-check-virtualization-support">الخطوة 1. تحقق من دعم المحاكاة الافتراضية</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-install-requirements">الخطوة 2. تثبيت المتطلبات</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-check-memory-and-cpu-allocation">الخطوة 3. تحقق من تخصيص الذاكرة ووحدة المعالجة المركزية</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-webodm">الخطوة 4. قم بتنزيل WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-launch-webodm">الخطوة 4. قم بتشغيل WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id1">الخطوة 1. تحقق من دعم المحاكاة الافتراضية</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id2">الخطوة 2. تثبيت المتطلبات</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id3">الخطوة 3. تحقق من تخصيص الذاكرة ووحدة المعالجة المركزية</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-and-launch-webodm">الخطوة 4. قم بتحميل وتشغيل WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-install-requirements">الخطوة 1. تثبيت المتطلبات</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-check-additional-requirements">الخطوة 2. تحقق من المتطلبات الإضافية</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-download-and-launch-webodm">الخطوة 3. قم بتحميل وتشغيل WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#basic-commands-and-troubleshooting">الأوامر الأساسية واستكشاف الأخطاء وإصلاحها</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hello-webodm">مرحبًا WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#running-on-more-than-one-machine">يعمل على أكثر من جهاز</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">دروس</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-high-quality-orthophotos">إنشاء Orthophotos عالية الجودة</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#calibrating-the-camera">معايرة الكاميرا</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-digital-elevation-models">إنشاء نماذج الارتفاعات الرقمية</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-docker">باستخدام  Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#listing-docker-machines">ادراج Docker ماكينات</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#accessing-logs-on-the-instance">الوصول إلى السجلات على سبيل المثال</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#command-line-access-to-instances">وصول سطر الأوامر إلى المثيلات</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#cleaning-up-after-docker">التنظيف بعد Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-odm-from-low-bandwidth-location">استخدام ODM من موقع النطاق الترددي المنخفض</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#what-is-this-and-who-is-it-for">ما هذا ومن هو؟</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#steps">خطوات</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#install">تثبيت</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#prep-data-and-project">إعداد البيانات والمشروع</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#resize-droplet-pull-pin-run-away">تغيير حجم القطرة ، وسحب دبوس ، والهروب</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#after-it-finishes-assuming-you-survive-that-long">بعد الانتهاء (بافتراض أنك تعيش طويلاً)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arguments.html">الخيارات والإعلام</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#id1">Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">مخرجات OpenDroneMap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#point-cloud">سحابة نقطة</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#d-textured-model">نموذج محكم ثلاثي الأبعاد</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#orthophoto">Orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#list-of-all-outputs">قائمة بجميع المخرجات</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gcp.html">نقاط التحكم الأرضية</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#recommended-practices-for-gcp-setting">Recommended practices for GCP setting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#gcp-file-format">GCP file format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#user-interfaces">واجهات المستخدم</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="map-accuracy.html">Map accuracy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#what-to-expect">What to expect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="map-accuracy.html#aspects-impacting-map-accuracy">Aspects impacting map accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geo.html">Image Geolocation Files</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Using Image Masks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large.html">تقسيم مجموعات البيانات الكبيرة</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="large.html#calibrate-images">معايرة الصور</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#local-split-merge">دمج التجزئة المحلية</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#distributed-split-merge">دمج سبليت الموزعة</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="large.html#getting-started-with-distributed-split-merge">الشروع في البدء في عملية دمج التجزئة الموزعة</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#understanding-the-cluster">فهم الكتلة</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#accessing-the-logs">الوصول إلى السجلات</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#autoscaling-clusterodm">أوتوسكالينج  ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#limitations">محددات</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#acknowledgments">شكر وتقدير</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">مراجع إضافية</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-users">للمستخدمين</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-developers">للمطورين</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flying.html">نصائح طيران</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multispectral.html">دعم متعدد الأطياف</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#hardware">المعدات</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#usage">الاستخدام</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requesting-features.html">كيفية طلب الميزات</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">.كيفية المشاركة</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#community-forum">جو الإجتماعي</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#reporting-bugs">البق للتقرير</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#template-for-submitting-bug-reports">نموذج لتقديم تقارير الأخطاء</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#pull-requests">سحب الطلبات</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenDroneMap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Using Image Masks</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/masks.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="using-image-masks">
+<h1>Using Image Masks<a class="headerlink" href="#using-image-masks" title="Permalink to this headline">¶</a></h1>
+<p>Starting from ODM <code class="docutils literal notranslate"><span class="pre">2.0</span></code> people can supply image masks to inform the software to skip reconstruction over certain areas. This is useful for cases where the sky was accidentally included in the input photos from oblique shots, or simply to limit the reconstruction of a single subject.</p>
+<p>To add a mask, simply create a new black and white image of the same dimension as the target image you want to mask (you can use a program such as GIMP to do this). Color in black the areas to exclude from the reconstruction.</p>
+<div class="figure align-center">
+<img alt="Target image" src="https://user-images.githubusercontent.com/1951843/93247037-ade87a00-f75b-11ea-8b42-25bc1d89279d.png" />
+</div>
+<div class="figure align-center">
+<img alt="Image mask" src="https://user-images.githubusercontent.com/1951843/93247007-a2954e80-f75b-11ea-87b3-4f04bd1737b9.png" />
+</div>
+<div class="figure align-center">
+<img alt="3D result (building is masked)" src="https://user-images.githubusercontent.com/1951843/93246970-8f827e80-f75b-11ea-8179-5a8fdd9f5193.png" />
+</div>
+<p>Name your file:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;_mask.JPG</span></code></p>
+<p>For example, <code class="docutils literal notranslate"><span class="pre">DJI_0018.JPG</span></code> can have a mask by creating a <code class="docutils literal notranslate"><span class="pre">DJI_0018_mask.JPG</span></code> file and include that in the list of images. You can use <code class="docutils literal notranslate"><span class="pre">.JPG</span></code>, <code class="docutils literal notranslate"><span class="pre">.PNG</span></code>, <code class="docutils literal notranslate"><span class="pre">.BMP</span></code> and <code class="docutils literal notranslate"><span class="pre">.TIF</span></code> formats for image masks.</p>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/masks.rst">this page</a>!</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="large.html" class="btn btn-neutral float-right" title="تقسيم مجموعات البيانات الكبيرة" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="geo.html" class="btn btn-neutral float-left" title="Image Geolocation Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, OpenDroneMap
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

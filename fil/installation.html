@@ -1,0 +1,738 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fil" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Instalasyon at Paano Simulan &mdash; OpenDroneMap 2.4.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Mga Tutoryal" href="tutorials.html" />
+    <link rel="prev" title="Malugod na pagtanggap mula sa OpenDroneMap&#39;s Documentation" href="index.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> OpenDroneMap
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.4.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Instalasyon at Paano Simulan</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hardware-recommendations">Hardware Recommendations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-check-virtualization-support">Step 1. I-check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-install-requirements">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-check-memory-and-cpu-allocation">Step 3. I-check ang Memory at CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-download-webodm">Step 4. Download WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-launch-webodm">Step 4. Launch WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Step 1. I-check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Step 3. I-check ang Memory at CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-download-and-launch-webodm">Step 4. I-download at i-launch ang WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-install-requirements">Step 1. Mga kailangan bago maginstall.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-check-additional-requirements">Step 2. I-check ang mga karagdagan na requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-download-and-launch-webodm">Step 3. Download and Launch WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-commands-and-troubleshooting">Basic na mga cCommands at Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hello-webodm">Hello, WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#running-on-more-than-one-machine">Pagpapatakbo sa dalawa o mas marami pang machine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="tutorials.html">Mga Tutoryal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-high-quality-orthophotos">Paglikha ng Mataas na Kalidad ng Orthophotos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#calibrating-the-camera">Pag-kalibrate ng Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-digital-elevation-models">Paglikha ng Digital Elevation Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-docker">Using Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#listing-docker-machines">Listing Docker Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#accessing-logs-on-the-instance">Accessing logs on the instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#command-line-access-to-instances">Command line access to instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#cleaning-up-after-docker">Cleaning up after Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-odm-from-low-bandwidth-location">Paggamit ng ODM para sa low-bandwidth na lokasyon.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#what-is-this-and-who-is-it-for">Ano ito at para kanino ito?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#steps">Steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#install">Install</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#prep-data-and-project">Prep data and project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#resize-droplet-pull-pin-run-away">I-resize ang droplet, hatakin ang pin at i-proseso ito.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="tutorials.html#after-it-finishes-assuming-you-survive-that-long">Matapos ang lahat (assuming na ikaw ay nagsurvive ng ganoon katagal)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arguments.html">Mga Opsyon at Tanda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#id1">Mga Argumento</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">OpenDroneMap Outputs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#point-cloud">Point Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#d-textured-model">3D Textured Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#orthophoto">Orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#list-of-all-outputs">Listahan ng mga output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gcp.html">Ground Control Points</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#recommended-practices-for-gcp-setting">Mga nirerekumendang gawi para sa paglagay ng GCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#gcp-file-format">GCP file format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#user-interfaces">User Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="map-accuracy.html">Kawastuan ng Mapa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#what-to-expect">Mga Dapat I-expect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="map-accuracy.html#aspects-impacting-map-accuracy">Mga aspeto na may impact sa map accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#references">Mga Sanggunian</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geo.html">Image Geolocation Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="masks.html">Gamit ang Image Masks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large.html">Splitting Large Datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="large.html#calibrate-images">Calibrate images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#local-split-merge">Local Split-Merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#distributed-split-merge">Distributed Split-Merge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="large.html#getting-started-with-distributed-split-merge">Paano simulan ang Distributed Split-Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#understanding-the-cluster">Pagkaunawa sa Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#accessing-the-logs">Pag-access sa Logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#autoscaling-clusterodm">Autoscaling ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#limitations">Mga limitasyon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#acknowledgments">Acknowledgments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Karagdagang Sanggunian</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-users">Para sa gagamit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-developers">Para sa mga taga-buo.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flying.html">Mga Paalala sa Pagpapalipad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multispectral.html">Multispectral Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#hardware">Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#usage">Paggamit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requesting-features.html">Paano Magrequest ng Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Paano makadaragdag</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#community-forum">Pagtitipon ng Komunidad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#reporting-bugs">Pagsumite ng mga Sira</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#template-for-submitting-bug-reports">Template para sa pagpapasa ng Bug Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#pull-requests">Ipakita ang mga Request</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenDroneMap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Instalasyon at Paano Simulan</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="installation-and-getting-started">
+<h1>Instalasyon at Paano Simulan<a class="headerlink" href="#installation-and-getting-started" title="Permalink to this headline">¶</a></h1>
+<p>Ang seksiyon na ito ay binago ng bahagya ng may permisyon galing sa <a class="reference external" href="https://odmbook.com">OpenDroneMap: The Missing Guide</a>, na gawa ni Piero Toffanin.</p>
+<p>Ang OpenDroneMap ay isang salita na ginagamit patukoy sa isang single command line na programa (na kilala rin bilang ODM na proyekto). Sa kamakailan lamang na progreso ng web interface, ang API ay ibang tools, pati na rin ang OpenDroneMap ang naging pinagmulan ng iba't-ibang programa upang ma-proseso, ma-suri at makita ang aerial data. ang ekosistem na ito ay ginawa para sa iilang  component:</p>
+<div class="figure align-center">
+<img alt="ODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/odm-logo-64x64.png" />
+</div>
+<ul class="simple">
+<li><p>Ang <strong>ODM</strong> ay ang processing engine, na pwedeng gamitin sa command line. Tinatanggap nito ang mga imahe bilang input at nagpo-produce ng iba't-ibang outputs katulad ng point clouds, 3D models at orthophotos.</p></li>
+</ul>
+<div class="figure align-center">
+<img alt="NodeODM Logo" src="_images/NodeODMLogo.png" />
+</div>
+<ul class="simple">
+<li><p>Ang <strong>NodeODM</strong> ay isang light-weight API na nasa taas ng ODM. Ina-allow nito ang gumagamit ng aplikasyon na ma-access ang mga functions ng ODM sa computer network.</p></li>
+</ul>
+<div class="figure align-center">
+<img alt="WebODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/webodm-icon-64x64.png" />
+</div>
+<ul class="simple">
+<li><p>Ang <strong>WebODM</strong> ay isang friendly user na interface na may kasamang map viewer, 3D viewer, user logins, plugin system at marami pang iba na ine-expect sa modern drone mapping platforms.</p></li>
+</ul>
+<div class="figure align-center">
+<img alt="CloudODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2019/01/cloudodm-64x64.png" />
+</div>
+<ul class="simple">
+<li><p>Ang <strong>CloudODM</strong> ay isang maliit na command line client na nagcocommunicate sa ODM via NodeODM API</p></li>
+</ul>
+<div class="figure align-center">
+<img alt="PyODM Logo" src="_images/PyODMLogo.png" />
+</div>
+<ul class="simple">
+<li><p>Ang <strong>PyODM</strong> ay Python SDK na gumagawa ng tasks via NodeODM API. Mababasa ang detalye sa “Automated Processing With Python” na chapter</p></li>
+</ul>
+<div class="figure align-center">
+<img alt="ClusterODM Logo" src="_images/ClusterODMLogo.png" />
+</div>
+<ul class="simple">
+<li><p>Ang <strong>ClusterODM</strong> ay isang load balancer na pang connect ng multiple NodeODM instances</p></li>
+</ul>
+<p>Ang ODM, NoteODM at WebODM ay mayroon sa lahat ng pangunahin na plataporma (Windows, macOS at Linux) sa pamamagitan ng programang docker, na kailangan para patakbuhin ang software. Ang docker ay naghahandog ng paraan kung paano patatakbuhin ang “containers”. Ang containers ay kaha ng mga kopya ng kabuoan na sisyema, ang software nito at ang dependencies. Ang mga container na ito ay tumatakbo sa loob ng virtual environment. Sa linux, mayroong virtual environment sa operating system at ito ay mahusay na klase. Sa macOS at Windows naman, ang container ay napapatakbo sa pamamagitan ng VM, so may kaunting oberhed ngunit naaangkop pa rin sa pagpapatakbo ng software. Kapag na-install, ang gagamit ay hindi na kelangan magalala sa docker dahil ito ay gumagana (madalas) ng malinaw.</p>
+<p>Kung walang docker, hindi posible na magpatakbo ng ODM sa macOS at Windows. Sa mga plataporma na ito, ang ODM ay hindi tatakbo ng kusa. Ang paghahanada para sa susunod na debelopment ay nakatuon sa pagkilos sa makabagong Windows Subsystem para sa Linux (WSL) at ang posibilidad na gawing native port ng lahat ng dependencies sa macOS na makakapagpadali sa pagi-install.</p>
+<p>Sa Ubuntu Linux 18.04 kaya patakbuhin ang lahat ng OpenDroneMap software. Ngutin, sa kadahilanan na may maliit na performance penalty sa pagpapatakbo ng docker sa Linux, and docker ay diretso sa pagset-up sa plataporma nito. Ito ay hindi inirerekomenda. Sa Linux, ang kalamangan ng containerization ay higit na malaki sa maliit na performance penalty. Sa docker, ang gagamit ay makakakuha ng mas madali na one-step updates ng software so ito ay maganda.</p>
+<div class="section" id="hardware-recommendations">
+<h2>Hardware Recommendations<a class="headerlink" href="#hardware-recommendations" title="Permalink to this headline">¶</a></h2>
+<p>Ang pinakakonti na bilang ng requirements para patakbuhin ang software ay:</p>
+<ul class="simple">
+<li><p>64bit CPU manufactured on or after 2010</p></li>
+<li><p>20 GB of disk space</p></li>
+<li><p>4 GB RAM</p></li>
+</ul>
+<p>Hindi hihigit sa 100-200 na imahe ang kayang iprocess ng nabanggit na specification sa taas (mauubusan ng memory ang software). Ang mga rekomendado na requirement ay:</p>
+<ul class="simple">
+<li><p>Pinakabago na Generation CPU</p></li>
+<li><p>100 GB of disk space</p></li>
+<li><p>16 GB RAM</p></li>
+</ul>
+<p>Ang nasa taas ay papayagan ang ilang daan na imahe na maprocess ng walang masyadong issue. Ang CPU na maraming core ay papahintulutan ang mas mabilis na pagproseso, samantalang ang graphics card (GPU) naman ay kasalukuyan na walang epekto sa performance. para sa pagprocess ng mas maraming imahe, magdagdag ng mas maraming disk space sa RAM linearly para sa bilang ng imahe na kailangan iprocess.</p>
+</div>
+<div class="section" id="installation">
+<span id="docker-installation"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
+<p>Nirerekomenda  na gamitin ang <a class="reference external" href="https://www.docker.com">docker</a> para patakbuhin ang ODM, ikaw man ay gumagamit ng Windows, macOS o Linux.</p>
+<div class="section" id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
+<p>Para patakbuhin ang OpenDroneMap, kailangan mo ng kahit man lang Windows 7. Ang mga mas luma na bersiyon ng Windows ay hindi suportado.</p>
+<div class="section" id="step-1-check-virtualization-support">
+<h4>Step 1. I-check Virtualization Support<a class="headerlink" href="#step-1-check-virtualization-support" title="Permalink to this headline">¶</a></h4>
+<p>Ang docker ay nangangailangan ng feature sa CPU na tinatawag na virtualization, ina-allow nito na patakbuhin ang virtual machines (VMs). Siguraduhin na ito ay enabled! Minsan ito ay disabled. Para i-check sa Windows 8 o mas mataas na bersiyon, buksan ang <strong>Task Manager</strong> (press CTRL+SHIFT+ESC) at i-switch sa <strong>Performance</strong> tab.</p>
+<div class="figure align-center">
+<img alt="Image of checking virtualization in Windows 8 or higher" src="_images/virtualizationcheck.png" />
+</div>
+<p><em>Virtualization should be enabled</em></p>
+<p>Sa Windows 7, para makita kung naka-enable ang virtualization,</p>
+<p>Kung ang virtualization ay hindi gumagana, kailangan paganahin ito. Bagamat ang proseso ay higit na iba kada modelo ng komputer. Ang pinakamainam na paraan para gawin ito ay ang hanapin sa search engine ang “how to enable vtx for 1”. Kadalasan, kailangan ire-start ang kompyuter, mabilis na pagpindot ng F2 o F12 habang start-up, ang pag-navigate ng boot menu at pagpalit ng settings para mapahintulot ang virtualization (madals na tinatawag na “VT-X”).</p>
+<div class="figure align-center">
+<img alt="Table of different bios keys" src="_images/bioskeys.png" />
+</div>
+<p><em>Common keys to press at computer startup to access the boot menu for various PC vendors</em></p>
+</div>
+<div class="section" id="step-2-install-requirements">
+<h4>Step 2. Install Requirements<a class="headerlink" href="#step-2-install-requirements" title="Permalink to this headline">¶</a></h4>
+<p>Una, kailangan mong ma-install:</p>
+<ul class="simple">
+<li><p>Git: <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p></li>
+<li><p>Python (latest version 3): <a class="reference external" href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a></p></li>
+</ul>
+<p>Para sa Python 3, siguraduhin na i-check ang <strong>Add Python 3.x to PATH</strong> habang iniinstall.</p>
+<div class="figure align-center">
+<img alt="Screenshot of Python3 installation process" src="_images/installpython3.png" />
+</div>
+<p><em>Don’t forget to add the Python executable to your PATH (so that you can run commands with it)</em></p>
+<p>Kapag ikaw ay nasa Windows 10 Home, Windows 8 (kahit anong bersiyon) o WIndows 7 (kahit anong bersiyon), i-install:</p>
+<ul class="simple">
+<li><p>Docker Toolbox: <a class="reference external" href="https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe">https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe</a></p></li>
+</ul>
+<p>Kung ang gamit ay Windows 10 Professional o mas bagong bersiyon, dapat i-install ito:</p>
+<ul class="simple">
+<li><p>Docker for Windows: <a class="reference external" href="https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe">https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe</a></p></li>
+</ul>
+<p><strong>HUWAG</strong> i-install ng sabay ang dalawang docker na programa. Sila ay magkaiba at maaring mahdulot ng gulo sa sistema.</p>
+<p>Matapos i-install ang docker, simulan ito mula sa Desktop icon na ginawa mula sa installation (<strong>Docker Quickstart</strong> sa kaso ng Docker Toolbox, <strong>Docker for Windows</strong> para sa Docker na pang-Windows). Ito ay importante, wag lagpasan ang hakbang na ito. Kung may kamalian, sundan ang mga nakadikta sa screen para ayusin ito.</p>
+</div>
+<div class="section" id="step-3-check-memory-and-cpu-allocation">
+<h4>Step 3. I-check ang Memory at CPU Allocation<a class="headerlink" href="#step-3-check-memory-and-cpu-allocation" title="Permalink to this headline">¶</a></h4>
+<p>Ang docker sa Windows ay tumatakbo sa pamamagitan ng VM sa likod (isipin ang VM bilang “computer emulator”). Ang VM na ito ay may sapat ng laki ng memory na nakasubi at ang WebODM ay makakagamit lamang ng sapat na memorya na nakatabi para sa kanya.</p>
+<p>Kung Docker Toolbox ang naka-install (tignan ang nasa ibaba kung Docker ang naka-install sa Windows):</p>
+<ol class="arabic simple">
+<li><p>Buksan ang <strong>VirtualBox Manager</strong> application</p></li>
+<li><p>i-right click ang <strong>default</strong> ang VM at pindutin ang <strong>Close (ACPI Shutdown)</strong> para tumigil ang machine</p></li>
+<li><p>i-right click ang <strong>default</strong> ang VM at pindutin ang <strong>Settings...</strong></p></li>
+<li><p>Move the <strong>Base Memory</strong> slider from the <strong>System</strong> panel and allocate 60-70% of all available memory, optionally adding 50% of the available processors from the <strong>Processor</strong> tab also</p></li>
+</ol>
+<div class="figure align-center">
+<img alt="Screenshot of VirtualBox Settings" src="_images/virtualboxsettings.png" />
+</div>
+<p><em>VirtualBox default VM settings</em></p>
+<p>Pindutin ang <strong>OK</strong>, i-right click ang <strong>default</strong> VM at pindutin ang <strong>Start</strong>.</p>
+<p>Kung Docker para sa Windows ang naka-install:</p>
+<ol class="arabic simple">
+<li><p>Tignan ang system tray at i-right click ang &quot;white whale&quot; na icon.</p></li>
+<li><p>Mula sa menue, i-press ang <strong>Settings...</strong></p></li>
+<li><p>Mula sa panel, i-click ang <strong>Advanced</strong> at gamitin ang sliders para maisubi ang 60-70% na memory at gamitin ang kalahati ng available sa CPUs.</p></li>
+<li><p>Pindutin ang <strong>Apply</strong>.</p></li>
+</ol>
+<div class="figure align-center">
+<img alt="Screenshot of Docker Icon" src="_images/dockericon.png" />
+</div>
+<p><em>Step 1 Docker icon</em></p>
+<div class="figure align-center">
+<img alt="Screenshot of Docker Settings" src="_images/dockersettings.png" />
+</div>
+<p><em>Step 3 &amp; 4 Docker settings</em></p>
+</div>
+<div class="section" id="step-4-download-webodm">
+<h4>Step 4. Download WebODM<a class="headerlink" href="#step-4-download-webodm" title="Permalink to this headline">¶</a></h4>
+<p>Buksan ang <strong>Git Gui</strong> na programa na kasama Git. galing dito:</p>
+<ul class="simple">
+<li><p>Kapag nabuksan na ang Git Gui, i-click ang 'Clone Existing Repository' na option</p></li>
+<li><p>Mula sa <strong>Source Location</strong> i-type ang: <a class="reference external" href="https://github.com/OpenDroneMap/WebODM">https://github.com/OpenDroneMap/WebODM</a></p></li>
+<li><p>Mula sa <strong>Target Directory</strong> i-click ang browse at magnavigate sa folder na gusto mo (gumawa ng folder kung kinakailangan)</p></li>
+<li><p>Pindutin ang <strong>Clone</strong></p></li>
+</ul>
+<div class="figure align-center">
+<img alt="Screenshot of Git Gui" src="_images/gitgui.png" />
+</div>
+<p><em>Git Gui</em></p>
+<p>Kung ang pagda-download ay successful, makikita ang window na ito:</p>
+<div class="figure align-center">
+<img alt="Screenshot of Git Gui after successful download" src="_images/gitguisuccess.png" />
+</div>
+<p><em>Git Gui after successful download (clone)</em></p>
+<p>Pumunta sa <strong>Repository</strong> menu at i-click ang <strong>Create Desktop Icon</strong>. Matutulungan ka nito na bumalik sa madaling makapunta sa aplikasyon na ito balang araw.</p>
+</div>
+<div class="section" id="step-4-launch-webodm">
+<h4>Step 4. Launch WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Permalink to this headline">¶</a></h4>
+<p>Mula sa Git Gui, pumunta sa <strong>Repository</strong> menu at i-click ang <strong>Git Bash</strong>. Mula sa command line terminal i-type ang:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start<span class="p">&amp;</span>
+</pre></div>
+</div>
+<p>Iba't ibang components na ang nadownload dapat ng iyong computer sa point na ito. Kasama na rito ang WebODM, NodeODM at ODM. Matapos ang pagda-download, ikaw ay babatiin ng mga sumusunod na mensahe sa screen:</p>
+<div class="figure align-center">
+<img alt="Screenshot of after successfully downloading WebODM" src="_images/webodmsuccess.png" />
+</div>
+<p><em>Console output after starting WebODM for the first time</em></p>
+<ul class="simple">
+<li><p>Kung ikaw ay gumagamit ng Docker for Windows, buksan ang web browser sa <a class="reference external" href="http://localhost:8000">http://localhost:8000</a></p></li>
+<li><p>Kung ikaw ay gumagamit ng Docker Toolbox, hanapin ang IP address na magcoconnect sayo sa pamamagitan ng pagtype nito:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker-machine ip
+</pre></div>
+</div>
+<p>Dapat makatanggap ng resulta na katulad ng mga sumusunod:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">192</span>.168.1.100
+</pre></div>
+</div>
+<p>Tapos, magconnect sa <a class="reference external" href="http://192.168.1.100:8000">http://192.168.1.100:8000</a> (replacing the IP address with the proper one).</p>
+</div>
+</div>
+<div class="section" id="macos">
+<h3>macOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h3>
+<p>Karamihan ng modernong bersiyon ng Mac computers (post 2010) na may macOS Sierra 10.12 o mas mataas pa ay kayang gumamit ng OpenDroneMap gamit ang docker, hanggat ang hardware virtualization ay suportado (tignan ang nasa ibaba).</p>
+<div class="section" id="id1">
+<h4>Step 1. I-check Virtualization Support<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
+<p>Buksan ang Terminal na window at i-type ang:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sysctl kern.hv_support
+</pre></div>
+</div>
+<p>Makakatanggap ng mensahe na katulad ng mga sumusunod:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kern.hv_support: <span class="m">1</span>
+</pre></div>
+</div>
+<p>Ang iyong Mac ay suportado kung ang resulta na lumalabas ay <em>kern.hv_support: 1</em>. Sundan ang hakbang bilang 2.</p>
+<p>Ang sistema ng iyong Mac ay luma na hindi na kakayanin ang OpenDroneMap kapag ang resulta na lumabas ay <em>kern.hv_support: 0</em>. :(</p>
+</div>
+<div class="section" id="id2">
+<h4>Step 2. Install Requirements<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
+<p>Mayroon lamang dalawang programa na dapat i-install:</p>
+<ol class="arabic simple">
+<li><p>Ang Docker: <a class="reference external" href="https://download.docker.com/mac/stable/Docker.dmg">https://download.docker.com/mac/stable/Docker.dmg</a></p></li>
+<li><p>At ang Git: <a class="reference external" href="https://sourceforge.net/projects/git-osx-installer/files/">https://sourceforge.net/projects/git-osx-installer/files/</a></p></li>
+</ol>
+<p>Matapoa i-install ang docker, makikita ang simbolo na mukang balyena sa task bar.</p>
+<div class="figure align-center">
+<img alt="Screenshot of Docker whale" src="_images/macwhale.png" />
+</div>
+<p><em>Ang Docker app ay tumatakbo</em></p>
+<p>Upang masigurado na tumatakbo ng matiwasay ang docker, buksan ang <strong>Terminal</strong> na app at i-type ang mga sumusunod:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker run hello-world
+</pre></div>
+</div>
+<p>Na dapat ay bumalik</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Hello from Docker!
+</pre></div>
+</div>
+<p>Para masigurado na ang git ay na-install, i-type ang:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git --version
+</pre></div>
+</div>
+<p>Na may babalik dapat na malapit sa mga sumusunod:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git version <span class="m">2</span>.20.1 <span class="o">(</span>Apple Git-117<span class="o">)</span>
+</pre></div>
+</div>
+<p>Kapag nakatanggap ng “bash: git: command not found”, i-restart ang <strong>Terminal</strong> app at suriing mabuti kung may mga error habang inagi-install.</p>
+</div>
+<div class="section" id="id3">
+<h4>Step 3. I-check ang Memory at CPU Allocation<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
+<p>Ang docker ay tumatakbo lamang sa macOS sa pamamagitan ng paggamit ng VM sa background (isipin na ito ay parang &quot;computer emulator&quot;). Ang VM na ito ay may limitadong alokasyon lamang  ng memorya para sa WebODM.</p>
+<ol class="arabic simple">
+<li><p>I-right click ang balyena na simbulo sa task bar at piliin ang <strong>Preferences</strong>...</p></li>
+<li><p>Piliin ang <strong>Advanced</strong> tab</p></li>
+<li><p>I-adjust ang CPU slider para magamit ang kalahato ng kabuoang CPU at ang memoryang magagamit ay 60-70% ng kabuoang memorya.</p></li>
+<li><p>Pindutin ang <em>Apply &amp; Restart*</em></p></li>
+</ol>
+<div class="figure align-center">
+<img alt="Screenshot of Docker advanced settings" src="_images/dockeradvanced.png" />
+</div>
+<p><em>Docker advanced settings</em></p>
+</div>
+<div class="section" id="step-4-download-and-launch-webodm">
+<h4>Step 4. I-download at i-launch ang WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Permalink to this headline">¶</a></h4>
+<p>Mula sa <strong>Terminal</strong> i-type ang:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
+$ <span class="nb">cd</span> WebODM
+$ ./webodm.sh start
+</pre></div>
+</div>
+<p>Tapos buksan ang web browser sa <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
+</div>
+</div>
+<div class="section" id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
+<p>Ang OpenDroneMap ay makakatakbo lamang sa kahit anong Linux na distribusyon na nagsusuporta sa docker. Ayon sa <a class="reference external" href="https://docs.docker.com/install/">docker’s documentation website</a> ang opisyal nasuportadong distribusyon ay ang CentOS, Debian, Ubuntu at Fedora, na may static binaries na mayroon para sa iba. Kung ikaw ay pipili ng distribusyon para sa pagpapatakbo ng OpenDroneMap, Ubunto ang rekomendado.</p>
+<div class="section" id="step-1-install-requirements">
+<h4>Step 1. Mga kailangan bago maginstall.<a class="headerlink" href="#step-1-install-requirements" title="Permalink to this headline">¶</a></h4>
+<p>May apat na programa na dapat ma-install:</p>
+<ol class="arabic simple">
+<li><p>Docker</p></li>
+<li><p>Git</p></li>
+<li><p>Python (2 or 3)</p></li>
+<li><p>Pip</p></li>
+</ol>
+<p>Hindi pwedeng takpan ang process ng installation kada Linux na distribusyon, kaya lilimitahan na lamang ang instruksiyon para sa distribusyon na opisyal na pang docker. Sa lahat ng kaso, ito ay isang bagay na pangbukas o terminal prompt at ang pag-type ng ilan na commands.</p>
+<div class="section" id="install-on-ubuntu-debian">
+<h5>Maginstall sa Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Permalink to this headline">¶</a></h5>
+<p>Mga command na ita-type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt update
+$ curl -fsSL https://get.docker.com -o get-docker.sh
+$ sh get-docker.sh
+$ sudo apt install -y git python python-pip
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-on-centos-rhel">
+<h5>Maginstall sa CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Permalink to this headline">¶</a></h5>
+<p>Mga command na ita-type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
+$ sh get-docker.sh
+$ sudo yum -y install git python python-pip
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-on-fedora">
+<h5>Maginstall sa Fedora<a class="headerlink" href="#install-on-fedora" title="Permalink to this headline">¶</a></h5>
+<p>Mga command na ita-type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
+$ sh get-docker.sh
+$ sudo dnf install git python python-pip
+</pre></div>
+</div>
+</div>
+<div class="section" id="install-on-arch">
+<h5>Maginstall sa Arch<a class="headerlink" href="#install-on-arch" title="Permalink to this headline">¶</a></h5>
+<p>Mga command na ita-type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pacman -Sy docker git python python-pip
+</pre></div>
+</div>
+</div>
+</div>
+<div class="section" id="step-2-check-additional-requirements">
+<h4>Step 2. I-check ang mga karagdagan na requirements<a class="headerlink" href="#step-2-check-additional-requirements" title="Permalink to this headline">¶</a></h4>
+<p>Bukod sa mga tatlong programa sa taas, ang dockercompose script ay kailangan din. Minsan, ito ay installed na kasama ng docker at minsan naman ay hindi. Para ma-verify kung ito ay nakainstall na, itype ang:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker-compose --version
+</pre></div>
+</div>
+<p>Dapat makita ang mga sumusunod:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose version <span class="m">1</span>.22.0, build f46880f
+</pre></div>
+</div>
+<p>Kung makatanggap naman ng mensahe na katulad ng sumusunod:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose: <span class="nb">command</span> not found
+</pre></div>
+</div>
+<p>Mai-install mo ito gamit ang pip:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pip install docker-compose
+</pre></div>
+</div>
+</div>
+<div class="section" id="step-3-download-and-launch-webodm">
+<h4>Step 3. Download and Launch WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Permalink to this headline">¶</a></h4>
+<p>Mula sa terminal i-type ang:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
+$ <span class="nb">cd</span> WebODM
+$ ./webodm.sh start
+</pre></div>
+</div>
+<p>Tapos buksan ang web browser sa <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
+</div>
+</div>
+</div>
+<div class="section" id="basic-commands-and-troubleshooting">
+<h2>Basic na mga cCommands at Troubleshooting<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Permalink to this headline">¶</a></h2>
+<p>Ang mainam na bagy sa paggamit ng dockey ay 99% ng mmga task na kailangan gamitin habang gamit ang WebODM ay magagawa sa pamamagitan ng ./webodm.sh script. Ikaw ay naka-encounter na ng isa sa mga ito:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start
+</pre></div>
+</div>
+<p>na nangangalaga sa pagsisimula ng WebODM at setting-up ng default processing node (node-odm-1). Kung gusto pahintuin ang WebODM, pwede ng hulaan kung ano ang command:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh stop
+</pre></div>
+</div>
+<p>Marami ang ibang commands na pwede gamitin kasama ng iba't-ibang flags. Ang flags ay parameter na ipinapasa sa ./webodm.sh command na may tipikal na prefix na “–”. Ang <strong>port</strong> flag halimbawa ay nagiinstruct sa WebODM na gamitin ang iba't-ibang network port:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start --port <span class="m">80</span>
+</pre></div>
+</div>
+<p>Ang ibang importanteng commands ay nakalista sa baba:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Restart WebODM (useful if things get stuck)</span>
+$ ./webodm.sh restart
+
+<span class="c1"># Reset the admin user&#39;s password if you forget it</span>
+$ ./webodm.sh resetadminpassword newpass
+
+<span class="c1"># Update everything to the latest version</span>
+$ ./webodm.sh update
+
+<span class="c1"># Store processing results in the specified folder instead of the default location (inside docker)</span>
+$ ./webodm.sh restart --media-dir /path/to/webodm_results
+
+<span class="c1"># See all options</span>
+$ ./webodm.sh --help
+</pre></div>
+</div>
+<p>Ang community forum na &lt;<a class="reference external" href="https://community.opendronemap.org">https://community.opendronemap.org</a>&gt;`_ ay magandang lugar na pagtanungan kapag ikaw ay na-stuck sa kahit anong mga hakbang pangi-installasyon at para sa mga general na katanungan kung paano gumamit ng ./webodm.sh script.</p>
+</div>
+<div class="section" id="hello-webodm">
+<h2>Hello, WebODM!<a class="headerlink" href="#hello-webodm" title="Permalink to this headline">¶</a></h2>
+<p>Matapos patakbuhin ang ./webodm.sh simulan at buksan ang WebODM sa browser, ikaw ay makatatanggap ng pangbungad na mensahe at tatanungin na gawin ang first user. Bigyang oras at pagsanayan ang web interface at i-explore ang various menus.</p>
+<div class="figure align-center">
+<img alt="Screenshot of WebODM Dashboard" src="_images/webodmdashboard.png" />
+</div>
+<p><em>WebODM Dashboard</em></p>
+<p>Pansinin na sa ilalim ng <strong>Processing Nodes</strong> menu ay may &quot;node-odm-1&quot; node ay na-configure para sa iyo. Ito ay NodeODM node at nagawa ng awtomatik ng WebODM. Ang node na ito ay gumagana sa parehong machine tulad ng WebODM.</p>
+<p>Kung umabot ka na sa ganito kalayo, congratulations! Oras na para simulan ang pagprocess ng mga data.</p>
+<div class="figure align-center">
+<img alt="Image of celebratory dance" src="_images/congratulations.png" />
+</div>
+<div class="section" id="running-on-more-than-one-machine">
+<h3>Pagpapatakbo sa dalawa o mas marami pang machine<a class="headerlink" href="#running-on-more-than-one-machine" title="Permalink to this headline">¶</a></h3>
+<p><strong>Optionally:</strong> Kung ikaw ay may isa pang computer, mauulit mo ang installation process (install docker, git, python, etc.) at i-launch ang bagong NodeODM node sa pagta-type mula sa Terminal/Git Bash window:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --rm -it -p <span class="m">3000</span>:3000 opendronemap/nodeodm -q <span class="m">1</span> --token secret
+</pre></div>
+</div>
+<p>Ang command sa taas ay nagre-require kay docker na i-launch ang makabagong container gamit ang opendronemap/nodeodm image mula sa Docker Hub (pinakabagong bersiyon ng NodeODM), gamit ang port 3000, nagset ng pinakamataas na bilang ng concurrent tasks mula 1 at pinoprotektahan ang node mula sa hindi pinapahintulutan na pag-access gamit ang password na &quot;secret&quot;.</p>
+<p>Mula sa WebODM pwede mong piliin ang <strong>Add New</strong> button under <strong>Processing Nodes</strong>. Para sa <strong>hostname/IP</strong> field i-type ang IP ng pangalawang computer. Para sa <strong>port</strong> field type “3000”. Para sa <strong>token</strong> field type “secret”. Pwede mo rin dagdagan ng optional na <strong>label</strong> para sa iyong node, katulad ng “second computer”. Then press <strong>Save</strong>.</p>
+<p>Kung ang lahat ay nagawa ng maayos, dapat ay mayroon ka nang dalawang processing nodes! Kaya ng magprocess ng multiple tasks in parallel gamit ang dalawang magkaiba na machines.</p>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst">this page</a>!</p>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="tutorials.html" class="btn btn-neutral float-right" title="Mga Tutoryal" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="index.html" class="btn btn-neutral float-left" title="Malugod na pagtanggap mula sa OpenDroneMap&#39;s Documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, OpenDroneMap
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

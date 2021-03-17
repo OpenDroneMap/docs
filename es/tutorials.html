@@ -1,0 +1,695 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Tutoriales &mdash; documentación de OpenDroneMap - 2.4.7</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+        <script src="_static/translations.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="genindex.html" />
+    <link rel="search" title="Búsqueda" href="search.html" />
+    <link rel="next" title="Opciones e indicadores" href="arguments.html" />
+    <link rel="prev" title="Instalación y Guía de Introducción" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Inicio de Documentación"> OpenDroneMap
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.4.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Instalación y Guía de Introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hardware-recommendations">Recomendaciones de Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation">Instalación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-check-virtualization-support">Paso 1. Verificar el Soporte de Virtualización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-install-requirements">Paso 2. Requisitos de instalación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-check-memory-and-cpu-allocation">Paso 3. Revisa la memoria y la asignación del procesador</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-webodm">Paso 4. Descarga WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-launch-webodm">Paso 4. Inicie WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id1">Paso 1. Verificar el Soporte de Virtualización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id2">Paso 2. Requisitos de instalación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id3">Paso 3. Revisa la memoria y la asignación del procesador</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-and-launch-webodm">Paso 4. Descargue y ejecute WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-install-requirements">Paso 1. Requerimientos de instalación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-check-additional-requirements">Paso 2. Verifique los requisitos adicionales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-download-and-launch-webodm">Paso 3. Descargue y ejecute WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#basic-commands-and-troubleshooting">Comandos básicos y resolución de problemas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hello-webodm">¡Hola WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#running-on-more-than-one-machine">Ejecutando en más de una máquina</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Tutoriales</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-high-quality-orthophotos">Creación de Ortofotos de Alta Calidad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calibrating-the-camera">Calibrar la cámara</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-digital-elevation-models">Creación de modelos de elevación digitales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-docker">Usando Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#listing-docker-machines">Listado de máquinas Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-logs-on-the-instance">Accediendo a los registros en la instancia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#command-line-access-to-instances">Acceso de línea de comando a las instancias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cleaning-up-after-docker">Limpieza de Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-odm-from-low-bandwidth-location">Usando ODM desde una ubicación de ancho de banda bajo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-this-and-who-is-it-for">¿Qué es esto y para quién es?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#steps">Pasos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install">Instalación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prep-data-and-project">Datos de preparación y proyecto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resize-droplet-pull-pin-run-away">Cambie el tamaño del Droplet, quite el seguro, huya</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#after-it-finishes-assuming-you-survive-that-long">Después de que termine (suponiendo que sobrevivas tanto tiempo)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arguments.html">Opciones e indicadores</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#id1">Argumentos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">Salidas de OpenDroneMap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#point-cloud">Nube de puntos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#d-textured-model">Modelo texturizado 3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#orthophoto">Ortofoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#list-of-all-outputs">Lista de todas las salidas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gcp.html">Puntos de Control Terrestre</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#recommended-practices-for-gcp-setting">Prácticas recomendadas para la colocación de GCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#gcp-file-format">Formato del archivo GCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#user-interfaces">Interfaces de Usuario</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#references">Referencias</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="map-accuracy.html">Precisión del Mapa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#what-to-expect">Que esperar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="map-accuracy.html#aspects-impacting-map-accuracy">Aspectos que impactan la precisión del mapa</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#references">Referencias</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geo.html">Archivos de geolocalización de imagen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="masks.html">Usar máscaras de imagen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large.html">División de grandes conjuntos de datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="large.html#calibrate-images">Calibrar imágenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#local-split-merge">Split-merge local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#distributed-split-merge">Split-Merge distribuido</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="large.html#getting-started-with-distributed-split-merge">Introducción a split-merge distribuido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#understanding-the-cluster">Entendiendo el Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#accessing-the-logs">Acceder a los registros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#autoscaling-clusterodm">Ajuste de escala automático de ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#limitations">Limitaciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#acknowledgments">Agradecimientos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Referencias adicionales</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-users">Para usuarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-developers">Para desarrolladores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flying.html">Consejos de vuelo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multispectral.html">Soporte multiespectral</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#hardware">Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#usage">Uso</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requesting-features.html">Cómo solicitar funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Como contribuir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#community-forum">Foro comunitario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#reporting-bugs">Reportando Errores</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#template-for-submitting-bug-reports">Plantilla Para Enviar Informes de Errores</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#pull-requests">Solicitudes de Extraxion</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenDroneMap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Tutoriales</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/tutorials.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorials">
+<h1>Tutoriales<a class="headerlink" href="#tutorials" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>A continuación, encontrará instrucciones para algunos casos de uso comunes.</p>
+<div class="section" id="creating-high-quality-orthophotos">
+<h2>Creación de Ortofotos de Alta Calidad<a class="headerlink" href="#creating-high-quality-orthophotos" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="figure align-center">
+<img alt="image of OpenDroneMap orthophoto" src="_images/orthophoto.png" />
+</div>
+<p>Sin ningún ajuste de parámetros, ODM elije un buen balance entre calidad, velocidad y uso de memoria. Si quiere obtener resultados de mayor calidad, debe modificar algunos parámetros:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--orthophoto-resolution</span></code> es la resolución de la ortofoto en cm/pixel. Disminuya este valor para obtener un resultado de mayor resolución.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--ignore-gsd</span></code> es un indicador de instruye a ODM a omitir ciertas optimizaciones de memoria y velocidad que afectan la ortofoto. El uso de este indicador aumentará el tiempo de ejecución y el uso de la memoria, pero puede producir resultados mas nítidos.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--texturing-nadir-weight</span></code> debe aumentarse a <code class="docutils literal notranslate"><span class="pre">29-32</span></code> en áreas urbanas para reconstruir mejores bordes de techos. Debe reducirse a <code class="docutils literal notranslate"><span class="pre">0-6</span></code> en áreas con césped o planas.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--texturing-data-term</span></code> debe establecerse en <cite>area</cite> para áreas forestales.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--mesh-size</span></code> debe incrementarse a <code class="docutils literal notranslate"><span class="pre">300000-600000</span></code> y <code class="docutils literal notranslate"><span class="pre">--mesh-octree-depth</span></code> debe incrementarse a <code class="docutils literal notranslate"><span class="pre">10-11</span></code> en áreas urbanas para recrear mejor los edificios/techos.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="calibrating-the-camera">
+<h2>Calibrar la cámara<a class="headerlink" href="#calibrating-the-camera" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>La calibración de la cámara es un desafío especial con las cámaras básicas. Los cambios de temperatura, las vibraciones, el enfoque y otros factores pueden afectar los parámetros derivados con efectos sustanciales en los datos resultantes. La calibración automática o la autocalibración es posible y deseable para los vuelos de drones, pero dependiendo del patrón de vuelo, la calibración automática puede no eliminar toda la distorsión de los productos resultantes. James y Robson (2014) en su artículo <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609">Mitigating systematic error in topographic models derived from UAV and ground‐based image networks</a>  abordan cómo para minimizar la distorsión de la autocalibración.</p>
+<div class="figure align-center">
+<img alt="image of lens distortion effect on bowling of data" src="_images/msimbasi_bowling.png" />
+</div>
+<p><em>Efecto de tazón en la nube de puntos de un juego de datos de mas de 13,000 imágenes colectadas por el Banco mundial de Tanzania sobre la cuenca propensa a inundaciones de Msimbasi, Dar es Salaam, Tanzania.</em></p>
+<p>Para mitigar este efecto, hay algunas opciones, pero las más simples son las siguientes: vuele dos patrones separados por 20 °, y en lugar de tener una cámara nadir (apuntando hacia abajo), use una que se incline hacia adelante en 5 °.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/flightplanning.gif"><img alt="animation showing optimum" src="_images/flightplanning.gif" style="width: 640px; height: 480px;" /></a>
+</div>
+<p>Como este enfoque de vuelo puede llevar más tiempo que los vuelos típicos, un piloto o un equipo pueden volar en un área pequeña utilizando el enfoque anterior. OpenDroneMap generará un archivo de calibración llamado camera.json que luego se puede importar para usarlo para calibrar otro vuelo que se vuela de manera más eficiente.</p>
+<p>Alternativamente, se puede aplicar el siguiente método experimental: volar con una superposición mucho menor, pero dos vuelos de <em>rejilla cruzada</em> (a veces llamados rayados cruzados) separados por 20 ° con una cámara de 5 ° orientada hacia adelante.</p>
+<ul class="simple">
+<li><p>Los porcentajes de superposición de rejillas cruzadas pueden ser más bajos que los vuelos paralelos. Para obtener buenos resultados en 3D, necesitará un 68% de superposición y superposición lateral para una superposición y superposición lateral equivalente del 83%.</p></li>
+<li><p>Para obtener buenos resultados en 2D y 2.5D (modelo de elevación digital), necesitará un 42% de superposición y superposición lateral para una superposición y superposición lateral equivalente del 70%.</p></li>
+</ul>
+<div class="figure align-center">
+<img alt="animation showing experimental optimum" src="_images/rotation.gif" />
+</div>
+<p>Las líneas de vuelo separadas verticalmente también mejoran la precisión, pero menos que una cámara que mira hacia adelante en 5 °.</p>
+<div class="figure align-center">
+<img alt="figure showing effect of vertically separated flight lines and forward facing cameras on improving self calibration" src="_images/forward_facing.png" />
+</div>
+<p>De James and Robson (2014), <a class="reference external" href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></p>
+</div>
+<div class="section" id="creating-digital-elevation-models">
+<h2>Creación de modelos de elevación digitales<a class="headerlink" href="#creating-digital-elevation-models" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Por defecto, ODM no crea DEMs. Para crear un modelo digital de terreno, asegúrese de utilizar la marca <code class="docutils literal notranslate"><span class="pre">--dtm</span></code>. Para crear un modelo digital de superficie, asegúrese de pasar la marca <code class="docutils literal notranslate"><span class="pre">--dsm</span></code>.</p>
+<div class="figure align-center">
+<img alt="image of OpenDroneMap derived digital surface model" src="_images/digitalsurfacemodel.png" />
+</div>
+<p>Para la generación del DTM, se utiliza un filtro morfológico simple (smrf) para clasificar los puntos terrestres frente a los no terrestres y solo se utilizan los puntos terrestres. El filtro <code class="docutils literal notranslate"><span class="pre">smrf</span></code> se puede controlar mediante varios parámetros:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Valor de escala <code class="docutils literal notranslate"><span class="pre">--smrf-scalar</span></code>. Aumente este parámetro para terrenos con mucha variación de altura.</p></li>
+<li><p>Parámetro de pendiente <code class="docutils literal notranslate"><span class="pre">--smrf-slope</span></code>, que es una medida de la «tolerancia de pendiente». Aumente este parámetro para terrenos con mucha variación de altura. Debe establecerse en un valor superior a 0,1 y menor a 1,2.</p></li>
+<li><p>Umbral de elevación <code class="docutils literal notranslate"><span class="pre">--smrf-threshold</span></code>. Establezca este parámetro en la altura mínima (en metros) que espera que tengan los objetos que no corresponden al suelo.</p></li>
+<li><p>Parámetro de radio de ventana <code class="docutils literal notranslate"><span class="pre">--smrf-window</span></code> (en metros) que corresponde al tamaño de la característica más grande (edificio, árboles, etc.) que se eliminará. Debe establecerse en un valor superior a 10.</p></li>
+</ul>
+</div></blockquote>
+<p>Cambiar estas opciones puede afectar significativamente el resultado de los DTM. La mejor fuente de lectura para comprender cómo los parámetros afectan la salida es leer el artículo original <a class="reference external" href="https://www.researchgate.net/publication/258333806_An_Improved_Simple_Morphological_Filter_for_the_Terrain_Classification_of_Airborne_LIDAR_Data">An improved simple morphological filter for the terrain classification of airborne LIDAR data</a> (PDF disponible gratuitamente).</p>
+<p>En general, la opción <code class="docutils literal notranslate"><span class="pre">--smrf-threshold</span></code> tiene el mayor impacto en los resultados.</p>
+<p>SMRF es bueno para evitar errores de Tipo I (un pequeño número de puntos de tierra clasificados erróneamente como no terrestres) pero solo es «aceptable» para evitar errores de Tipo II (gran número de puntos no terrestres clasificados erróneamente como terrestres). Esto debe tenerse en cuenta al generar DTM para ser usados visualmente, ya que los objetos que se confunden con el suelo parecen artefactos en el DTM final.</p>
+<div class="figure align-center">
+<img alt="image of lens distortion effect on bowling of data" src="_images/smrf.png" />
+</div>
+<p>Otros dos parámetros importantes afectan la generación de DEM:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--dem-resolution</span></code> que establece la resolución de salida del ráster DEM (cm/píxel)</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--dem-gapfill-steps</span></code> que determina el número de capas DEM progresivas que se utilizarán. Para escenas urbanas, aumentar este valor a «4-5» puede ayudar a producir mejores resultados de interpolación en las áreas que quedan vacías por el filtro SMRF.</p></li>
+</ul>
+</div></blockquote>
+<p>Ejemplo de cómo generar un DTM:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">ti</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">my</span><span class="o">/</span><span class="n">project</span><span class="p">:</span><span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span> <span class="o">&lt;</span><span class="n">my_odm_image</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">project</span><span class="o">-</span><span class="n">path</span> <span class="o">/</span><span class="n">datasets</span> <span class="o">--</span><span class="n">dtm</span> <span class="o">--</span><span class="n">dem</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">2</span> <span class="o">--</span><span class="n">smrf</span><span class="o">-</span><span class="n">threshold</span> <span class="mf">0.4</span> <span class="o">--</span><span class="n">smrf</span><span class="o">-</span><span class="n">window</span> <span class="mi">24</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="measuring-stockpile-volume">
+<h2>Measuring stockpile volume<a class="headerlink" href="#measuring-stockpile-volume" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="fieldwork-planning">
+<h3>Fieldwork planning<a class="headerlink" href="#fieldwork-planning" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Weather conditions modify illumination and thus impact the photography results. Best results are obtained with evenly overcast or clear skies. Also look for low wind speeds that allow the camera to remain stable during the data collection process.
+In order to avoid shadows which on one side of the stockpile can obstruct feature detection and lessen the number of resulting points, always prefer the flights during the midday, when the sun is at the nadir so everything is consistently illuminated.
+Also ensure that your naked eye horizontal visibility distance is congruent with the planned flight distances for the specific project, so image quality is not adversely impacted by dust, fog, smoke, volcanic ash or pollution.</p>
+</div>
+<div class="section" id="flight-pattern">
+<h3>Flight pattern<a class="headerlink" href="#flight-pattern" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Most stockpile measurement jobs does not require a crosshatch pattern or angled gimbal as the resting angle of stockpile materials allows the camera to capture the entire stockpile sides. Only some special cases where erosion or machinery operations causes steep angles on the faces of the stockpile would benefit of the crosshatch flight pattern and angled camera gimbal but consider that these additional recognized features come at a cost, (in field labor and processing time) and the resulting improvements are sometimes negligible.</p>
+<p>In most of the cases a lawn mower flight pattern is capable of producing highly accurate stockpile models.</p>
+<div class="figure align-center">
+<img alt="a simple lawnmower flight pattern can produce accurate results" src="_images/lawnmower_pattern.png" />
+</div>
+<p>Recommended overlap would be between 75% and 80% with a sidelap in the order of 65% to 70%. It is also recommended to slightly increase overlap and sidelap as the flight height is increased.</p>
+</div>
+<div class="section" id="flight-height">
+<h3>Flight height<a class="headerlink" href="#flight-height" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Flight height can be influenced by different camera models, but in a general way and in order to ensure a balance between image quality and flight optimization, it is recommended to be executed at heights 3 to 4 times the tallest stockpile height. So for a 10 meter stockpile, images can be captured at a height of 40 meters.
+As the flight height is increased, it is also recommended to increase overlap, so for a 40 meter height flight you can set a 65% sidelap and 75% overlap, but for a planned height of 80 meters a 70% sidelap and 80% overlap allowing features to be recognized and properly processed.</p>
+</div>
+<div class="section" id="gcps">
+<h3>GCPs<a class="headerlink" href="#gcps" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>To achieve accuracy levels better than 3%, the use of GCP’s is advised. Typically 5 distributed GCP are sufficient to ensure accurate results.
+When placing or measuring GCP, equipment accuracy should be greater than the GSD. Survey grade GNSS and total stations  are intended to provide the required millimetric accuracy.</p>
+<p>For further information on the use of GCPs, please refer to the <a class="reference external" href="https://docs.opendronemap.org/gcp.html">Ground Control Points section</a>.</p>
+</div>
+<div class="section" id="processing-parameters">
+<h3>Processing parameters<a class="headerlink" href="#processing-parameters" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>A highly accurate model can be achieved using WebODM high resolution predefined settings. Then you can further adjust some parameters as necessary.</p>
+<p>If using ODM, these this reference values can help you configure the process settings.</p>
+<p>–dsm: true</p>
+<p>–dem-resolution 2.0</p>
+<p>–orthophoto-resolution 1.0</p>
+<p>–feature-quality high</p>
+<p>–pc-quality high</p>
+</div>
+<div class="section" id="measuring">
+<h3>Measuring<a class="headerlink" href="#measuring" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>As almost 50% of the material will be found in the first 20% of the stockpile height, special care should be taken in adequately defining the base plane.</p>
+<div class="figure align-center">
+<img alt="almost 50% of the material will be found in the first 20% of the stockpile height" src="_images/stockpile.png" />
+</div>
+<p>In WebODM Dashboard, clic on «view map» to start a 2D view of your project.</p>
+<p>Once in the 2D map view, clic on the «Measure volume, area and length» button.</p>
+<div class="figure align-center">
+<img alt="clic on the &quot;Measure volume, area and length&quot; button" src="_images/measurement1.png" />
+</div>
+<p>then clic on «Create a new measurement»</p>
+<div class="figure align-center">
+<img alt="clic on &quot;Create a new measurement&quot;" src="_images/measurement2.png" />
+</div>
+<p>Start placing the points to define the stockpile base plane</p>
+<div class="figure align-center">
+<img alt="Define the stockpile base plane" src="_images/measurement3.png" />
+</div>
+<p>Clic on «Finish measurement» to finish the process.</p>
+<div class="figure align-center">
+<img alt="Clic on &quot;Finish measurement&quot; to finish the process" src="_images/measurement4.png" />
+</div>
+<p>Dialog box will show the  message «Computing …» for a few seconds, and after the computing is finished the volume measurement value will be displayed.</p>
+<div class="figure align-center">
+<img alt="Clic on &quot;Finish measurement&quot; to finish the process" src="_images/measurement7.png" />
+</div>
+<p>If you are using the command line OpenDroneMap you can use the dsm files to measure the stockpile volumes using other programs.</p>
+<p>Also consider that once the limits of the stockpile are set in software like <a class="reference external" href="https://www.qgis.org">QGis</a>, you will find there are some ways to determine the base plane. So for isolated stockpiles which boundaries are mostly visible, a linear approach can be used. While for stockpiles set in slopes or in bins, the base plane is better defined by the lowest point.
+Creation of a triangulated 3D surface to define the base plane is advised for large stockpiles. This is also valid for stockpiles paced on irregular surfaces.</p>
+</div>
+<div class="section" id="expected-accuracy">
+<h3>Expected accuracy<a class="headerlink" href="#expected-accuracy" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>For carefully planned and executed projects, and specially when GSD is less than 1 cm, the expected accuracy should be in the range of 1% to 2%.
+The resulting accuracy is comparable to the commercially available photogrammetry software and the obtained using survey grade GNSS equipment.</p>
+</div>
+</div>
+<div class="section" id="using-docker">
+<h2>Usando Docker<a class="headerlink" href="#using-docker" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Dado que muchos usuarios emplean Docker para implementar OpenDroneMap, puede ser útil comprender algunos comandos básicos para consultar a las instancias de Docker cuando las cosas van mal o si tenemos curiosidad por ver lo que está sucediendo. Docker es un entorno en contenedores destinado, entre otras cosas, a facilitar la implementación de software independientemente del entorno local. De esta forma, es similar a las máquinas virtuales.</p>
+<p>Unos pocos comandos de Docker pueden mejorar mucho nuestra experiencia.</p>
+<div class="section" id="listing-docker-machines">
+<h3>Listado de máquinas Docker<a class="headerlink" href="#listing-docker-machines" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Podemos comenzar enumerando las máquinas Docker disponibles en la máquina actual que estamos ejecutando de la siguiente manera:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">ps</span>
+<span class="n">CONTAINER</span> <span class="n">ID</span>        <span class="n">IMAGE</span>                  <span class="n">COMMAND</span>                  <span class="n">CREATED</span>             <span class="n">STATUS</span>              <span class="n">PORTS</span>                    <span class="n">NAMES</span>
+<span class="mi">2518817537</span><span class="n">ce</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">36</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">36</span> <span class="n">hours</span>                                  <span class="n">zen_wright</span>
+<span class="mi">1</span><span class="n">cdc7fadf688</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">37</span> <span class="n">hours</span>         <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">flamboyant_dhawan</span>
+</pre></div>
+</div>
+<p>Si queremos ver máquinas que pueden no estar ejecutándose pero que aún existen, podemos agregar la bandera <cite>-a</cite>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">ps</span> <span class="o">-</span><span class="n">a</span>
+<span class="n">CONTAINER</span> <span class="n">ID</span>        <span class="n">IMAGE</span>                  <span class="n">COMMAND</span>                  <span class="n">CREATED</span>             <span class="n">STATUS</span>                    <span class="n">PORTS</span>                    <span class="n">NAMES</span>
+<span class="mi">2518817537</span><span class="n">ce</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">36</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">36</span> <span class="n">hours</span>                                        <span class="n">zen_wright</span>
+<span class="mi">1</span><span class="n">cdc7fadf688</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">37</span> <span class="n">hours</span>               <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">flamboyant_dhawan</span>
+<span class="n">cd7b9585b8f6</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>                            <span class="n">nostalgic_lederberg</span>
+<span class="n">e31010c00b9a</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;python /code/run.py…&quot;</span>   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>                              <span class="n">suspicious_kepler</span>
+<span class="n">c44e0d0b8448</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>                            <span class="n">wonderful_burnell</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="accessing-logs-on-the-instance">
+<h3>Accediendo a los registros en la instancia<a class="headerlink" href="#accessing-logs-on-the-instance" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Usando el <cite>CONTAINER ID</cite> o el nombre, podemos acceder a cualquier registro disponible en la máquina de la siguiente manera:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">logs</span> <span class="mi">2518817537</span><span class="n">ce</span>
+</pre></div>
+</div>
+<p>Es probable que sea difícil de manejar, pero podemos usar un carácter de barra vertical <cite>|</cite> y otras herramientas para extraer exactamente lo que necesitamos de los registros. Por ejemplo, podemos movernos lentamente por el registro usando el comando <cite>more</cite>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">logs</span> <span class="mi">2518817537</span><span class="n">ce</span> <span class="o">|</span> <span class="n">more</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">DTM</span> <span class="ow">is</span> <span class="n">turned</span> <span class="n">on</span><span class="p">,</span> <span class="n">automatically</span> <span class="n">turning</span> <span class="n">on</span> <span class="n">point</span> <span class="n">cloud</span> <span class="n">classification</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">Initializing</span> <span class="n">OpenDroneMap</span> <span class="n">app</span> <span class="o">-</span> <span class="n">Mon</span> <span class="n">Sep</span> <span class="mi">23</span> <span class="mi">01</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">33</span>  <span class="mi">2019</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="o">==============</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">build_overviews</span><span class="p">:</span> <span class="kc">False</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">camera_lens</span><span class="p">:</span> <span class="n">auto</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">crop</span><span class="p">:</span> <span class="mi">3</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">debug</span><span class="p">:</span> <span class="kc">False</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">dem_decimation</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">dem_euclidean_map</span><span class="p">:</span> <span class="kc">False</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Presionar «Enter» o «Espacio», las teclas de flecha o las teclas «Page Up» o «Page Down» ahora nos ayudará a navegar por los registros. La letra minúscula «Q» nos permitirá volver a la línea de comandos.</p>
+<p>También podemos extraer solo el final de los registros usando el comando <cite>tail</cite> de la siguiente manera:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">logs</span> <span class="mi">2518817537</span><span class="n">ce</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="mi">5</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">Cropping</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">tif</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">running</span> <span class="n">gdalwarp</span> <span class="o">-</span><span class="n">cutline</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_georeferencing</span><span class="o">/</span><span class="n">odm_georeferenced_model</span><span class="o">.</span><span class="n">bounds</span><span class="o">.</span><span class="n">gpkg</span> <span class="o">-</span><span class="n">crop_to_cutline</span> <span class="o">-</span><span class="n">co</span> <span class="n">NUM_THREADS</span><span class="o">=</span><span class="mi">8</span> <span class="o">-</span><span class="n">co</span> <span class="n">BIGTIFF</span><span class="o">=</span><span class="n">IF_SAFER</span> <span class="o">-</span><span class="n">co</span> <span class="n">BLOCKYSIZE</span><span class="o">=</span><span class="mi">512</span> <span class="o">-</span><span class="n">co</span> <span class="n">COMPRESS</span><span class="o">=</span><span class="n">DEFLATE</span> <span class="o">-</span><span class="n">co</span> <span class="n">BLOCKXSIZE</span><span class="o">=</span><span class="mi">512</span> <span class="o">-</span><span class="n">co</span> <span class="n">TILED</span><span class="o">=</span><span class="n">YES</span> <span class="o">-</span><span class="n">co</span> <span class="n">PREDICTOR</span><span class="o">=</span><span class="mi">2</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">original</span><span class="o">.</span><span class="n">tif</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">tif</span> <span class="o">--</span><span class="n">config</span> <span class="n">GDAL_CACHEMAX</span> <span class="mf">48.95</span><span class="o">%</span>
+<span class="n">Using</span> <span class="n">band</span> <span class="mi">4</span> <span class="n">of</span> <span class="n">source</span> <span class="n">image</span> <span class="k">as</span> <span class="n">alpha</span><span class="o">.</span>
+<span class="n">Creating</span> <span class="n">output</span> <span class="n">file</span> <span class="n">that</span> <span class="ow">is</span> <span class="mi">111567</span><span class="n">P</span> <span class="n">x</span> <span class="mi">137473</span><span class="n">L</span><span class="o">.</span>
+<span class="n">Processing</span> <span class="nb">input</span> <span class="n">file</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">original</span><span class="o">.</span><span class="n">tif</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>El valor <cite>-5</cite> le dice al comando tail que nos dé solo las últimas 5 líneas de los registros.</p>
+</div>
+<div class="section" id="command-line-access-to-instances">
+<h3>Acceso de línea de comando a las instancias<a class="headerlink" href="#command-line-access-to-instances" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>A veces necesitamos profundizar un poco más en nuestra exploración del proceso de OpenDroneMap. Para ello, podemos obtener acceso directo a la línea de comandos de las máquinas. Para esto, podemos usar <cite>docker exec</cite> para ejecutar un shell de línea de comando` bash` en la máquina de interés de la siguiente manera:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">ti</span> <span class="mi">2518817537</span><span class="n">ce</span> <span class="n">bash</span>
+<span class="n">root</span><span class="o">@</span><span class="mi">2518817537</span><span class="n">ce</span><span class="p">:</span><span class="o">/</span><span class="n">code</span><span class="c1">#</span>
+</pre></div>
+</div>
+<p>Ahora estamos conectados a nuestra instancia de Docker y podemos explorar la máquina.</p>
+</div>
+<div class="section" id="cleaning-up-after-docker">
+<h3>Limpieza de Docker<a class="headerlink" href="#cleaning-up-after-docker" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Docker tiene un uso lamentable del espacio y, de forma predeterminada, no limpia el exceso de datos y máquinas cuando los procesos están completos. Esto puede ser ventajoso si necesitamos acceder a un proceso que ya ha terminado, pero que lleva la carga de usar cantidades crecientes de almacenamiento a lo largo del tiempo. Maciej Łebkowski tiene una ʻexcelente descripción general de cómo administrar el uso excesivo del disco en la ventana acoplable &lt;<a class="reference external" href="https://lebkowski.name/docker-volumes/">https://lebkowski.name/docker-volumes/</a>&gt;`_.</p>
+</div>
+</div>
+<div class="section" id="using-odm-from-low-bandwidth-location">
+<h2>Usando ODM desde una ubicación de ancho de banda bajo<a class="headerlink" href="#using-odm-from-low-bandwidth-location" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="what-is-this-and-who-is-it-for">
+<h3>¿Qué es esto y para quién es?<a class="headerlink" href="#what-is-this-and-who-is-it-for" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>A través del repositorio de ʻIvan Gayton &lt;<a class="reference external" href="https://github.com/ivangayton/GDAL_scripts/">https://github.com/ivangayton/GDAL_scripts/</a>&gt;`_.</p>
+<p>ʻOpenDroneMap &lt;<a class="reference external" href="https://www.opendronemap.org/">https://www.opendronemap.org/</a>&gt;`__ no siempre se puede configurar localmente de forma efectiva; se necesita una máquina bastante poderosa para procesar conjuntos de datos grandes, por lo que una máquina en la nube a veces puede ser la respuesta para las personas en el campo. Sin embargo, el ancho de banda es un problema en muchos entornos de bajos ingresos. Esta restricción no se puede resolver por completo, pero el siguiente método hace un trabajo razonable al reducir el ancho de banda necesario para procesar conjuntos de datos de imágenes de drones en la nube desde ubicaciones africanas.</p>
+<p>Aquí presentamos un proceso complicado pero factible para crear una máquina en la nube OpenDroneMap (* no * CloudODM, eso sí, solo una instancia de ODM basada en la nube que se ejecuta desde la línea de comandos) y usarla para procesar de forma remota conjuntos de fotos grandes. Requiere familiaridad con el uso de la línea de comandos de Unix, ssh, una cuenta de Digital Ocean (Amazon AWS también funcionaría, posiblemente con ligeras diferencias en la configuración) y un nivel moderado de conocimientos informáticos generales. Si no es un experto en informática y está dispuesto a preocuparse por una configuración un poco complicada, <a class="reference external" href="https://www.opendronemap.org/cloudodm/">CloudODM</a> is what you should be looking at.</p>
+<p>Todo el proceso está dirigido principalmente a alguien que vuela misiones sustanciales en África o un lugar similar, y que busca procesar datos lo antes posible mientras aún se encuentra en un entorno de campo. Por lo tanto, enfatiza un flujo de trabajo destinado a reducir el ancho de banda/transferencia de datos, en lugar de solo la forma más simple de ejecutar ODM.</p>
+</div>
+<div class="section" id="steps">
+<h3>Pasos<a class="headerlink" href="#steps" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="install">
+<h4>Instalación<a class="headerlink" href="#install" title="Enlazar permanentemente con este título">¶</a></h4>
+<ul class="simple">
+<li><p>Cree una Droplet de Digital Ocean con al menos 4 GB de RAM. Eso costará alrededor de $ 20 USD  al mes. Menos de 4 GB de RAM y la instalación probablemente fallará. Cuando realmente ejecutemos el proceso ODM, lo redimensionaremos a una máquina en la nube mucho más grande y más cara, pero entre ejecuciones puede reducirlo al  segundo Droplet más barato que cuesta solo $10 USD (el Droplet mas barato a $5 USD por mes, viene con una unidad tan pequeña que no puede volver a reducirla).</p>
+<ul>
+<li><p>Debe ser una instancia de Ubuntu 18.04 para asegurar la compatibilidad de las dependencias.</p></li>
+<li><p>Cree un usuario con privilegios de sudo. <a class="reference external" href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04">La documentación increíblemente buena de Digital Ocean</a> puede ayudarte a resolver esto. En nuestro caso, configuramos un usuario llamado <code class="docutils literal notranslate"><span class="pre">odm</span></code>, por lo que conectarse a él es a través del comando``ssh <a class="reference external" href="mailto:odm&#37;&#52;&#48;xxx&#46;xxx&#46;xxx">odm<span>&#64;</span>xxx<span>&#46;</span>xxx<span>&#46;</span>xxx</a>.xxx`` (donde las x representan la dirección IPv4 de su servidor) . Si desea seguir este ejemplo de cerca, <em>utilice</em> el nombre de usuario <code class="docutils literal notranslate"><span class="pre">odm</span></code>; entonces su ruta de instalación será <code class="docutils literal notranslate"><span class="pre">/home/odm/ODM/</span></code> y coincidirá con todos los ejemplos de este documento.</p></li>
+<li><p>Continúe y ejecute <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code> y <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">upgrade</span></code> para asegurarse de que su servidor no esté peligrosamente sin actualizaciones. Asegúrese de permanecer con Ubuntu 18.04.</p></li>
+</ul>
+</li>
+<li><p>Descargue e instale ODM en él desde el ʻODM Github &lt;<a class="reference external" href="https://github.com/OpenDroneMap/ODM">https://github.com/OpenDroneMap/ODM</a>&gt;`__ (normal, no WebODM) con los siguientes comandos:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">OpenDroneMap</span><span class="o">/</span><span class="n">ODM</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">ODM</span>
+<span class="n">bash</span> <span class="n">configure</span><span class="o">.</span><span class="n">sh</span> <span class="n">install</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Si hace esto desde la carpeta de inicio predeterminada de su usuario (es decir, <code class="docutils literal notranslate"><span class="pre">odm</span></code>), la ruta a la instalación será <code class="docutils literal notranslate"><span class="pre">/home/odm/ODM</span></code> (abreviado como <code class="docutils literal notranslate"><span class="pre">~/ODM/</span></code>).</p></li>
+<li><p>Hay algunas variables ambientales que deben configurarse. Abra el archivo ~/.bashrc en su máquina y agregue las siguientes 3 líneas al final (De <a class="reference external" href="https://github.com/OpenDroneMap/ODM">the ODM github</a>). El archivo se puede abrir con <code class="docutils literal notranslate"><span class="pre">nano~/.bashrc</span></code> (o cualquier editor de texto que use en lugar de nano). Asegúrese de reemplazar <code class="docutils literal notranslate"><span class="pre">/home/odm/</span></code> con la ruta correcta a la ubicación donde extrajo OpenDroneMap si no hizo todo exactamente como en nuestro ejemplo (por ejemplo, si usó un nombre de usuario diferente en la configuración de su servidor):</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PYTHONPATH=$PYTHONPATH:/home/odm/ODM/SuperBuild/install/lib/python2.7/dist-packages
+export PYTHONPATH=$PYTHONPATH:/home/odm/ODM/SuperBuild/src/opensfm
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/odm/ODM/SuperBuild/install/lib
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Tenga en cuenta que el archivo Léame de ODM github contiene un pequeño error, el nombre del directorio de instalación será ODM, no OpenDroneMap (lo verá si compara las instrucciones anteriores con las del ODM GitHub).</p></li>
+<li><p>Para evitar un bloqueo en el que el proceso de split-merge no localice su propio ejecutable, agregamos las siguientes líneas a <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> (ajuste las rutas si ha configurado las cosas de manera diferente a nuestro ejemplo):</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PYTHONPATH=$PYTHONPATH:/home/odm/ODM/
+export PATH=$PATH:/home/odm/ODM/
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ahora necesitará un segundo disco duro en la nube (un «Volumen» en la jerga de Digital Ocean) lo suficientemente grande para administrar su proyecto. La regla de oro parece ser 10 veces el tamaño de su conjunto de imágenes sin procesar; tenemos un conjunto de imágenes de 100 GB y configuramos un volumen de 1000 GB (una vez que la ejecución haya terminado, debería poder deshacerse de la mayor parte de esta costosa capacidad de disco, pero es necesaria para completar el proceso). Configure el volumen, adjúntelo a su Droplet y <a class="reference external" href="https://www.digitalocean.com/docs/volumes/how-to/mount/">configure su punto de montaje</a> (en este ejemplo lo estamos configurando a <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>).</p></li>
+</ul>
+</div>
+<div class="section" id="prep-data-and-project">
+<h4>Datos de preparación y proyecto<a class="headerlink" href="#prep-data-and-project" title="Enlazar permanentemente con este título">¶</a></h4>
+<ul class="simple">
+<li><p>Ahora envíe sus imágenes al servidor. Puede usar <a class="reference external" href="https://en.wikipedia.org/wiki/Secure_copy">Secure Copy (scp)</a> así: <code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">-r</span> <span class="pre">/path/to/my/imagefolder</span> <span class="pre">odm&#64;xxx.xxx.xxx.</span> <span class="pre">xxx:</span> <span class="pre">/mnt/odmdata/</span></code>.</p>
+<ul>
+<li><p>Esto copia toda la carpeta llena de imágenes (eso es lo que hace la opción <code class="docutils literal notranslate"><span class="pre">-r'',</span> <span class="pre">``recursiva</span></code>) en la ubicación remota (en nuestro ejemplo, en el volumen que adjuntamos a la máquina en la nube en <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>.</p></li>
+<li><p>Esto costará algo de ancho de banda. No hay forma de evitar el tamaño de los archivos<a class="reference external" href="#footnote1">1</a>, <a class="reference external" href="#footnote2">2</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="directory-structure">
+<h5>Estructura del directorio<a class="headerlink" href="#directory-structure" title="Enlazar permanentemente con este título">¶</a></h5>
+<p>ODM requiere que los directorios de la máquina se configuren exactamente así. Los bits críticos son la carpeta de instalación (si instaló como antes, es <code class="docutils literal notranslate"><span class="pre">/home/odm/ODM/</span></code>) y la carpeta del proyecto (es decir, <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code>)</p>
+<ul class="simple">
+<li><p>El archivo settings.yaml de ODM especifica un único directorio principal que contiene todos los proyectos. Esto es lo que va en la línea de ruta del proyecto del archivo settings.yaml (un poco confuso, este es en realidad el directorio <em>principal</em> de los directorios del proyecto individual, que se especifican mediante el parámetro de nombre del proyecto al llamar a ODM). Edite settings.yaml y establezca el parámetro project_path en (según nuestra configuración de ejemplo) <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>, que en este caso apunta al Volumen que creamos. Dentro de eso se crean directorios de proyectos individuales.</p></li>
+<li><p>Los directorios de proyectos individuales, es decir, <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code> contienen el archivo gcp_list.txt, el archivo image_groups.txt y la carpeta de imágenes para cada proyecto <code class="docutils literal notranslate"><span class="pre">\</span></code></p></li>
+<li><p>La carpeta de imágenes, es decir, <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images/</span></code> contiene todas las imágenes. Si lo configura así, las imágenes no se vuelven a copiar porque ya están en el directorio en el que ODM las quiere.</p></li>
+<li><p>Modifique settings.yaml para especificar el directorio principal de la carpeta del proyecto (en este caso, el Volumen que creamos, <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>). Asegúrese de que las imágenes estén en el lugar correcto, es decir, <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images</span></code> y los otros archivos auxiliares (gcp_list.txt e image_groups.txt) están en la carpeta raíz <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code></p></li>
+<li><p>Si tiene las imágenes en carpetas separadas para bloques AOI o vuelos  individuales (lo que hará si su gestión de vuelos fue organizada), puede crear un archivo image_groups.txt con los encantamientos <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">*;</span> <span class="pre">do</span> <span class="pre">cd</span> <span class="pre">$i;</span> <span class="pre">for</span> <span class="pre">j</span> <span class="pre">in</span> <span class="pre">*;</span> <span class="pre">do</span> <span class="pre">echo</span> <span class="pre">&quot;$j</span> <span class="pre">$i&quot;</span> <span class="pre">&gt;&gt;</span> <span class="pre">../$i.txt;</span> <span class="pre">done;</span> <span class="pre">cd</span> <span class="pre">../;</span> <span class="pre">done;</span></code> y <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">../</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">myproject/*.txt;</span> <span class="pre">do</span> <span class="pre">cat</span> <span class="pre">$i</span> <span class="pre">&gt;&gt;</span> <span class="pre">image_groups.txt;</span> <span class="pre">done;</span></code>.  Eso debería crear un archivo con la estructura correcta: una lista de todos los archivos de imagen y un «nombre de grupo» después de cada uno (que en este caso será simplemente el nombre de la carpeta de la que proviene). Luego mueva todos los archivos de imagen a un solo directorio llamado imágenes en el directorio raíz del proyecto (por lo tanto, <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images/</span></code>). El archivo image_groups.txt permitirá que ODM realice un seguimiento de las imágenes que pertenecen al mismo lote, aunque estén todas en un solo directorio.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="resize-droplet-pull-pin-run-away">
+<h4>Cambie el tamaño del Droplet, quite el seguro, huya<a class="headerlink" href="#resize-droplet-pull-pin-run-away" title="Enlazar permanentemente con este título">¶</a></h4>
+<ul class="simple">
+<li><p>Apague y cambie el tamaño de su máquina a una cantidad monstruosa de CPU y memoria. Utilizo la máquina con memoria optimizada con 24 vCPU dedicadas y 192 GB de RAM (que cuesta alrededor de $ 1,60 / hora, lo que se suma rápido y supera los $ 1000/mes). Reinicie y comience a trabajar rápidamente para no perder el costoso tiempo de los Droplets grandes.</p></li>
+<li><p>Inicie el proceso ODM a través de ssh usando nohup (de modo que, si se corta, el procesamiento continuará)</p>
+<ul>
+<li><p>Alternativamente, puede usar la pantalla GNU para iniciar el proceso desde una sesión de pantalla que no se detendrá si se interrumpe su conexión, inicie <code class="docutils literal notranslate"><span class="pre">screen</span></code>  y use <code class="docutils literal notranslate"><span class="pre">&lt;ctrl&gt;</span> <span class="pre">a</span> <span class="pre">&lt;ctrl&gt;</span> <span class="pre">d</span></code> para separar, <code class="docutils literal notranslate"><span class="pre">screen</span> <span class="pre">-r</span></code> para volver a juntar. Pero al usar la pantalla no obtendrá un archivo de registro de toda la salida de la consola a menos que haga algo específico para capturar eso, mientras que nohup le brinda un archivo con toda la salida de la consola, incluidos los mensajes de error, de forma gratuita.</p></li>
+<li><p>Nota: a partir de 2020-03, el encantamiento normal  <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">run.py</span> <span class="pre">-i</span> <span class="pre">/path/to/image/folder</span> <span class="pre">project_name</span></code> parece <em>no</em> funcionar; el parámetro <code class="docutils literal notranslate"><span class="pre">-i</span></code> o <code class="docutils literal notranslate"><span class="pre">--image</span></code> causa un error extraño. Entonces introducimos el parámetro -i y y confiamos en la línea del directorio del proyecto en el archivo settings.yaml para dirigir ODM al lugar correcto. Ahora usando (incluyendo split-merge):</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nohup</span> <span class="n">python</span> <span class="n">run</span><span class="o">.</span><span class="n">py</span> <span class="n">myproject</span> <span class="o">--</span><span class="n">split</span> <span class="mi">1</span> <span class="o">--</span><span class="n">split</span><span class="o">-</span><span class="n">overlap</span> <span class="mi">0</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">gsd</span> <span class="o">--</span><span class="n">depthmap</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">1000</span> <span class="o">--</span><span class="n">orthophoto</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">5</span> <span class="o">--</span><span class="n">dem</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">15</span> <span class="o">--</span><span class="n">pc</span><span class="o">-</span><span class="n">las</span> <span class="o">--</span><span class="n">dsm</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Esto apunta a ODM a la carpeta (en este ejemplo) <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code>. Siempre que image_groups.txt y gcp_list.txt estén en esta carpeta, las imágenes están en <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images/</span></code>, y la ruta del proyecto en settings.yaml es <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code> no perderá tiempo ni espacio copiando imágenes.</p></li>
+<li><p>Tenga en cuenta que esto supone que tiene un archivo image_groups.txt. Si no es así, este <code class="docutils literal notranslate"><span class="pre">-split-overlap</span> <span class="pre">0</span></code> probablemente arruinará las cosas, y el <code class="docutils literal notranslate"><span class="pre">--split</span> <span class="pre">1</span></code> es literalmente un número aleatorio que se ignorará despues de que se cargue el archivo image_groups.txt  (creo que normalmente controla en cuántos grupos divide un conjunto de imágenes, pero en nuestro caso asumimos que las imágenes ya están agrupadas de manera sensata). Si no tiene un conjunto de datos grande (&gt; 1000 imágenes), omita las opciones <code class="docutils literal notranslate"><span class="pre">--split</span></code> y <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code>.</p></li>
+<li><p>Siga el progreso usando tail (para que sepa cuando está hecho)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tail</span> <span class="o">-</span><span class="n">f</span> <span class="n">nohup</span><span class="o">.</span><span class="n">out</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Es posible que desee estar atento a htop (para tener una idea del uso de recursos para que en el futuro solo pueda hacer girar una máquina tan grande como sea necesario)</p></li>
+</ul>
+</div>
+<div class="section" id="after-it-finishes-assuming-you-survive-that-long">
+<h4>Después de que termine (suponiendo que sobrevivas tanto tiempo)<a class="headerlink" href="#after-it-finishes-assuming-you-survive-that-long" title="Enlazar permanentemente con este título">¶</a></h4>
+<ul class="simple">
+<li><p>Tan pronto como termine el procesamiento, apague la máquina y cambie su tamaño a la capacidad mínima económica.</p></li>
+<li><p>Inicie la copia de seguridad de la máquina e inicie sesión a través de ssh.</p></li>
+<li><p>Si desea ahorrar ancho de banda de descarga, puede comprimir la ortofoto usando GDAL. No agregue descripciones generales, hágalo en su máquina local para evitar agrandar el archivo antes de descargarlo.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gdal_translate</span> <span class="o">-</span><span class="n">co</span> <span class="n">COMPRESS</span><span class="o">=</span><span class="n">JPEG</span> <span class="o">-</span><span class="n">co</span> <span class="n">PHOTOMETRIC</span><span class="o">=</span><span class="n">YCBCR</span> <span class="o">-</span><span class="n">co</span> <span class="n">TILED</span><span class="o">=</span><span class="n">YES</span> <span class="o">-</span><span class="n">b</span> <span class="mi">1</span> <span class="o">-</span><span class="n">b</span> <span class="mi">2</span> <span class="o">-</span><span class="n">b</span> <span class="mi">3</span> <span class="o">-</span><span class="n">mask</span> <span class="mi">4</span> <span class="o">--</span><span class="n">config</span> <span class="n">GDAL_TIFF_INTERNAL_MASK</span> <span class="n">YES</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">original</span><span class="o">/</span><span class="n">filename</span><span class="o">.</span><span class="n">extension</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">output</span><span class="o">.</span><span class="n">tif</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Descargue usando scp: <code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">odm&#64;xxx.xxx.xxx.xxx:/mnt/odmdata/myproject/odm_orthophoto/odm_orthophoto.tif</span></code> (o tome la versión comprimida que creó en el último paso)</p></li>
+<li><p>Una vez que obtenga el archivo en su computadora local, puede usar QGIS para agregar descripciones generales (“pyramids”) o usar el comando GDAL <code class="docutils literal notranslate"><span class="pre">gdaladdo</span> <span class="pre">-r</span> <span class="pre">average</span> <span class="pre">/path/to/image.tif</span> <span class="pre">2</span> <span class="pre">4</span> <span class="pre">8</span> <span class="pre">16</span> <span class="pre">32</span> <span class="pre">64</span> <span class="pre">128</span> <span class="pre">256</span> <span class="pre">512</span> <span class="pre">1024</span></code>.</p></li>
+<li><p>Puede archivar las carpetas odm_texturing, odm_georeferencing y odm-dem usando tar para que sea más fácil descargarlas en una sola pieza (y tal vez más pequeñas).</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">zcvf</span> <span class="n">archivename</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">folder</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst">esta página</a>!</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arguments.html" class="btn btn-neutral float-right" title="Opciones e indicadores" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral float-left" title="Instalación y Guía de Introducción" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Anterior</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, OpenDroneMap
+
+    </p>
+  </div>
+    
+    
+    
+    Construido con <a href="http://sphinx-doc.org/">Sphinx</a> usando un
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">tema</a>
+    
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

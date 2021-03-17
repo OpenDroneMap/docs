@@ -1,0 +1,694 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="fil" >
+<head>
+  <meta charset="utf-8">
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  
+  <title>Mga Tutoryal &mdash; OpenDroneMap 2.4.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="_static/favicon.ico"/>
+  
+  
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="./" src="_static/documentation_options.js"></script>
+        <script src="_static/jquery.js"></script>
+        <script src="_static/underscore.js"></script>
+        <script src="_static/doctools.js"></script>
+        <script src="_static/language_data.js"></script>
+    
+    <script type="text/javascript" src="_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="genindex.html" />
+    <link rel="search" title="Search" href="search.html" />
+    <link rel="next" title="Mga Opsyon at Tanda" href="arguments.html" />
+    <link rel="prev" title="Instalasyon at Paano Simulan" href="installation.html" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="index.html" class="icon icon-home" alt="Documentation Home"> OpenDroneMap
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.4.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="search.html" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="installation.html">Instalasyon at Paano Simulan</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hardware-recommendations">Hardware Recommendations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-check-virtualization-support">Step 1. I-check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-install-requirements">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-check-memory-and-cpu-allocation">Step 3. I-check ang Memory at CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-webodm">Step 4. Download WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-launch-webodm">Step 4. Launch WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id1">Step 1. I-check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id2">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#id3">Step 3. I-check ang Memory at CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-4-download-and-launch-webodm">Step 4. I-download at i-launch ang WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-1-install-requirements">Step 1. Mga kailangan bago maginstall.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-2-check-additional-requirements">Step 2. I-check ang mga karagdagan na requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="installation.html#step-3-download-and-launch-webodm">Step 3. Download and Launch WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#basic-commands-and-troubleshooting">Basic na mga cCommands at Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="installation.html#hello-webodm">Hello, WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="installation.html#running-on-more-than-one-machine">Pagpapatakbo sa dalawa o mas marami pang machine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Mga Tutoryal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-high-quality-orthophotos">Paglikha ng Mataas na Kalidad ng Orthophotos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calibrating-the-camera">Pag-kalibrate ng Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-digital-elevation-models">Paglikha ng Digital Elevation Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-docker">Using Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#listing-docker-machines">Listing Docker Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-logs-on-the-instance">Accessing logs on the instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#command-line-access-to-instances">Command line access to instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cleaning-up-after-docker">Cleaning up after Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-odm-from-low-bandwidth-location">Paggamit ng ODM para sa low-bandwidth na lokasyon.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-this-and-who-is-it-for">Ano ito at para kanino ito?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#steps">Steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install">Install</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prep-data-and-project">Prep data and project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resize-droplet-pull-pin-run-away">I-resize ang droplet, hatakin ang pin at i-proseso ito.</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#after-it-finishes-assuming-you-survive-that-long">Matapos ang lahat (assuming na ikaw ay nagsurvive ng ganoon katagal)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="arguments.html">Mga Opsyon at Tanda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="arguments.html#id1">Mga Argumento</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="outputs.html">OpenDroneMap Outputs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#point-cloud">Point Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#d-textured-model">3D Textured Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#orthophoto">Orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="outputs.html#list-of-all-outputs">Listahan ng mga output</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="gcp.html">Ground Control Points</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#recommended-practices-for-gcp-setting">Mga nirerekumendang gawi para sa paglagay ng GCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#gcp-file-format">GCP file format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#user-interfaces">User Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="gcp.html#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="gcp.html#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="map-accuracy.html">Kawastuan ng Mapa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#what-to-expect">Mga Dapat I-expect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="map-accuracy.html#aspects-impacting-map-accuracy">Mga aspeto na may impact sa map accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="map-accuracy.html#references">Mga Sanggunian</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="geo.html">Image Geolocation Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="masks.html">Gamit ang Image Masks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="large.html">Splitting Large Datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="large.html#calibrate-images">Calibrate images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#local-split-merge">Local Split-Merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#distributed-split-merge">Distributed Split-Merge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="large.html#getting-started-with-distributed-split-merge">Paano simulan ang Distributed Split-Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#understanding-the-cluster">Pagkaunawa sa Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#accessing-the-logs">Pag-access sa Logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="large.html#autoscaling-clusterodm">Autoscaling ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#limitations">Mga limitasyon</a></li>
+<li class="toctree-l2"><a class="reference internal" href="large.html#acknowledgments">Acknowledgments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="resources.html">Karagdagang Sanggunian</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-users">Para sa gagamit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resources.html#for-developers">Para sa mga taga-buo.</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="flying.html">Mga Paalala sa Pagpapalipad</a></li>
+<li class="toctree-l1"><a class="reference internal" href="multispectral.html">Multispectral Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#hardware">Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="multispectral.html#usage">Paggamit</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="requesting-features.html">Paano Magrequest ng Features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="contributing.html">Paano makadaragdag</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#community-forum">Pagtitipon ng Komunidad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#reporting-bugs">Pagsumite ng mga Sira</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="contributing.html#template-for-submitting-bug-reports">Template para sa pagpapasa ng Bug Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="contributing.html#pull-requests">Ipakita ang mga Request</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="index.html">OpenDroneMap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="index.html" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Mga Tutoryal</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+            
+            <a href="_sources/tutorials.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="tutorials">
+<h1>Mga Tutoryal<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h1>
+<p>Sa ibaba makikita ang ilang tagubilin para sa ilang mga pang-karaniwang paggamit.</p>
+<div class="section" id="creating-high-quality-orthophotos">
+<h2>Paglikha ng Mataas na Kalidad ng Orthophotos<a class="headerlink" href="#creating-high-quality-orthophotos" title="Permalink to this headline">¶</a></h2>
+<div class="figure align-center">
+<img alt="image of OpenDroneMap orthophoto" src="_images/orthophoto.png" />
+</div>
+<p>Nang walang anumang mga pagpapalit ng parameter, ang ODM ay pumipili ng isang mahusay na kompromiso sa pagitan ng kalidad, bilis at paggamit ng memorya. Kung nais mong makakuha ng mas mataas na kalidad ng mga resulta, kailangan mong magpalit ng ilang mga parameter:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>&quot;orthophoto resolution&quot; ay ang resolusyon ng orthophoto sa cm / pixel. Bawasan ang halagang ito para sa isang mas mataas na resulta ng resolusyon.</p></li>
+<li><p>&quot;--ignore-gsd&quot; ay isang hudyat o babala na nagtuturo sa ODM na laktawan ang ilang mga memorya at bilis ng pag-optimize na direktang nakakaapekto sa orthophoto. Ang paggamit ng hudyat na ito ay magpapataas ng runtime at paggamit ng memorya, ngunit maaaring makagawa ng mga sharper results.</p></li>
+<li><p>&quot;--texturing-nadir-weight&quot; ay dapat na itaas sa &quot;29-32&quot; sa mga lunsod o bayan upang mabuo ang mas mahusay na mga gilid ng mga bubong. Dapat itong ibaba sa 0-6 sa mga lugar na patag at damuhan.</p></li>
+<li><p>&quot;--texturing-data-term&quot; ay dapat itakda sa 'area' sa mga lugar na kagubatan.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--mesh-size</span></code> ay dapat itaas sa <code class="docutils literal notranslate"><span class="pre">300000-6000</span></code> at <code class="docutils literal notranslate"><span class="pre">--mesh-octree-depth</span></code> ay dapat itaas ng <code class="docutils literal notranslate"><span class="pre">10-11</span></code> sa urban areas para maka-create ng magandang building / bubong.</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="calibrating-the-camera">
+<h2>Pag-kalibrate ng Camera<a class="headerlink" href="#calibrating-the-camera" title="Permalink to this headline">¶</a></h2>
+<p>Ang pag-calibrate ng camera ay isang malaking hamon sa mga pangkaraniwang camera. Ang mga pagbabago sa temperatura, mga vibrations, pokus, at iba pang mga kadahilanan ay maaaring makaapekto sa mga hango na mga parameter na may malaking epekto sa resultang data. Ang awtomatikong o pag-calibrate sa sarili ay posible at mas mainam sa mga drone flights, ngunit depende sa pattern ng flight, ang awtomatikong pagkakalibrate ay maaaring hindi mag-alis ng lahat ng pagbaluktot sa mga nagresultang produkto. Sa papel nina James at Robson (2014) na &quot;Ang pagpapalit ng sistematikong error sa mga topographic models na nagmula sa UAV at ground ‐ based image networks &lt;<a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609">https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609</a>&gt; ay nagpapakita kung paano mabawasan ang pagkabaluktot.</p>
+<div class="figure align-center">
+<img alt="image of lens distortion effect on bowling of data" src="_images/msimbasi_bowling.png" />
+</div>
+<p>Ang epekto ng &quot;Bowling&quot; sa point cloud ng mahigit &quot;13,000+ imahe na  nakalap ng World Bank Tanzania sa bahaing lugar ng Msimbasi, Basin, Dar es Salaam, Tanzania.</p>
+<p>Upang pagaanin ang epekto na ito, may ilang mga pagpipilian ngunit ang pinakasimple ay ang mga sumusunod: lumipad ng dalawang pattern na pinaghihiwalay ng 20°, at sa halip na magkaroon ng isang nadir (tuwid at pababang pagturo) camera, gumamit ng isa na nakakiling sa harap ng 5°.</p>
+<div class="figure align-center">
+<a class="reference internal image-reference" href="_images/flightplanning.gif"><img alt="animation showing optimum" src="_images/flightplanning.gif" style="width: 640px; height: 480px;" /></a>
+</div>
+<p>Dahil ang pamamaraang ito sa paglipad ay maaaring mas matagal kaysa sa mga karaniwang lipad, ang isa o ilang mga piloto ay maaaring lumipad ng isang maliit na lugar gamit ang pamamaraan sa itaas. Ang OpenDroneMap ay bubuo ng isang pangkalibrate file na tinatawag na mga cameras.json na pagkatapos ay mai-import upang magamit na pang calibrate ang isa pang flight na mas mahusay na napaliparan.</p>
+<p>Bilang kahalili, ang sumusunod na pamamaraan ng eksperimento ay maaaring gawin: lumipad na may mas mababang overlap, ngunit dalawang flight ng crossgrid (kung minsan ay tinatawag na crosshatch) na pinaghiwalay ng 20° na may 5° pasulong na nakaharap na camera.</p>
+<ul class="simple">
+<li><p>Ang mga porsyento na overlap ng crossgrid ay maaaring mas mababa kaysa sa mga kahilera na flight. Upang makakuha ng mahusay na mga resulta ng 3D, kakailanganin ang 68% na magkakapatong at sidelap para sa katumbas na 83% na magkakapatong at sidelap.</p></li>
+<li><p>Upang makakuha ng magandang resulta ng 2D at 2.5D (digital elevation model), kakailanganin  ang 42% na magkakapatong at sidelap para sa isang katumbas na 70% na magkakapatong at sidelap.</p></li>
+</ul>
+<div class="figure align-center">
+<img alt="animation showing experimental optimum" src="_images/rotation.gif" />
+</div>
+<p>Ang mga magkakahiwalay na linya ng flight ay nagpapabuti din sa kawastuhan, ngunit mas kaunti kaysa sa isang kamera na pasulong na hinaharap ng 5°.</p>
+<div class="figure align-center">
+<img alt="figure showing effect of vertically separated flight lines and forward facing cameras on improving self calibration" src="_images/forward_facing.png" />
+</div>
+<p>Mula kay James at Robson (2014), 'CC BY 4.0 &lt;<a class="reference external" href="https://creativecommons.org/licenses/by/4.0">https://creativecommons.org/licenses/by/4.0</a>&gt;_</p>
+</div>
+<div class="section" id="creating-digital-elevation-models">
+<h2>Paglikha ng Digital Elevation Models<a class="headerlink" href="#creating-digital-elevation-models" title="Permalink to this headline">¶</a></h2>
+<p>Bilang default, ang ODM ay hindi lumilikha ng DEM. Upang lumikha ng isang digital na modelo ng terrain, siguraduhing ipasa ang watawat --dtm. Upang lumikha ng isang digital na modelo ng ibabaw, siguraduhing ipasa ang watawat --dsm.</p>
+<div class="figure align-center">
+<img alt="image of OpenDroneMap derived digital surface model" src="_images/digitalsurfacemodel.png" />
+</div>
+<p>Para sa pag gawa ng DTM, ginagamit ang isang Simple Morphological Filter (smrf) upang mauri ang mga puntos sa nasa lupa kumpara sa wala sa lupa, kung saan ang mga nasa lupa na puntos lamang ang ginagamit. Ang filter na &quot;smrf&quot; ay maaaring kontrolin sa pamamagitan ng maraming mga parameter:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>&quot;--smrf-scalar&quot; halaga ng pag-iskala. Taasan ang parameter na ito para sa mga lupain na may maraming pag-iba ng taas.</p></li>
+<li><p>&quot;--smrf-slope&quot; parametro ng libis, na sukat ng &quot;tolerance ng slope&quot;. Taasan ang parametrong ito para sa mga lupain na may maraming pagiiba-iba ng taas. Dapat ang halaga nito ay mas mataas sa 0.1 ngunit hindi tataas sa 1.2.</p></li>
+<li><p>&quot;--smrf-threshold&quot; bingit ng pagtaas. Itakda ang parametrong ito sa minimong taas (sa yunit na metro) ng mga bagay na wala sa lupa.</p></li>
+<li><p>&quot;--smrf-window&quot; parametro ng pinakalamaking paikot na sukat (sa yunit  na metro) na sukat ng pinakamalaking bagay (gusali, mga puno, atbp.) na aalisin. Dapat itakda sa halagang mas mataas sa 10.</p></li>
+</ul>
+</div></blockquote>
+<p>Ang pagpapalit ng mga opsiyon na ito ay nagreresulta ng malaking epekto sa DTMs. Ang pinakamahusay na basahin para mapagkunan ng pinakamahusay na impormasyon ukol sa parametro ng epekto ng output ay ang <a class="reference external" href="https://www.researchgate.net/publication/258333806_An_Improved_Simple_Morphological_Filter_for_the_Terrain_Classification_of_Airborne_LIDAR_Data">An improved simple morphological filter for the terrain classification of airborne LIDAR data</a> (Ang PDF ay libre lamang)</p>
+<p>Ang <code class="docutils literal notranslate"><span class="pre">--smrf-threshold</span></code> ang may pinakamalaking impact sa resulta.</p>
+<p>Ang SMRF ay mahusay sa pagiwas ng Type I na pagkakamali (maliliit na numero ng ground poins na napagkakamalan bilang non-ground) pero &quot;acceptable&quot; sa pagiwas sa Type II na pagkakamali (malaking numero na non-ground points na napagkakamalan na ground). Ito ay dapat na bigyan importansiya kapag bumubuo ng DTMs na hangarin na gamitin ng biswal, bilang ang mga baga na napagkakamalan na ground ay mukhang artifacts sa resulta ng DTM.</p>
+<div class="figure align-center">
+<img alt="image of lens distortion effect on bowling of data" src="_images/smrf.png" />
+</div>
+<p>May dalawa pang importanteng parameters na nakakaapekto sa DEM generation:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--dem-resolution</span></code> na nagse-set ng output resolution ng DEM raster (cm/pixel)</p></li>
+<li><p>Ang <code class="docutils literal notranslate"><span class="pre">--dem-gapfill-steps</span></code> ang tumutukoy sa bilang ng progresibong DEM layer na gagamitin. Para sa urban na eksena na may taas na value na <cite>4-5</cite> ay makakatulong na magresulta ng mas maayos na interpolation sa mga lugar na iniwan na walang laman ng SMRF filter.</p></li>
+</ul>
+</div></blockquote>
+<p>Halimbawa kung papaano lumikha ng DTM</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">ti</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">my</span><span class="o">/</span><span class="n">project</span><span class="p">:</span><span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span> <span class="o">&lt;</span><span class="n">my_odm_image</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">project</span><span class="o">-</span><span class="n">path</span> <span class="o">/</span><span class="n">datasets</span> <span class="o">--</span><span class="n">dtm</span> <span class="o">--</span><span class="n">dem</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">2</span> <span class="o">--</span><span class="n">smrf</span><span class="o">-</span><span class="n">threshold</span> <span class="mf">0.4</span> <span class="o">--</span><span class="n">smrf</span><span class="o">-</span><span class="n">window</span> <span class="mi">24</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="measuring-stockpile-volume">
+<h2>Measuring stockpile volume<a class="headerlink" href="#measuring-stockpile-volume" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="fieldwork-planning">
+<h3>Fieldwork planning<a class="headerlink" href="#fieldwork-planning" title="Permalink to this headline">¶</a></h3>
+<p>Weather conditions modify illumination and thus impact the photography results. Best results are obtained with evenly overcast or clear skies. Also look for low wind speeds that allow the camera to remain stable during the data collection process.
+In order to avoid shadows which on one side of the stockpile can obstruct feature detection and lessen the number of resulting points, always prefer the flights during the midday, when the sun is at the nadir so everything is consistently illuminated.
+Also ensure that your naked eye horizontal visibility distance is congruent with the planned flight distances for the specific project, so image quality is not adversely impacted by dust, fog, smoke, volcanic ash or pollution.</p>
+</div>
+<div class="section" id="flight-pattern">
+<h3>Flight pattern<a class="headerlink" href="#flight-pattern" title="Permalink to this headline">¶</a></h3>
+<p>Most stockpile measurement jobs does not require a crosshatch pattern or angled gimbal as the resting angle of stockpile materials allows the camera to capture the entire stockpile sides. Only some special cases where erosion or machinery operations causes steep angles on the faces of the stockpile would benefit of the crosshatch flight pattern and angled camera gimbal but consider that these additional recognized features come at a cost, (in field labor and processing time) and the resulting improvements are sometimes negligible.</p>
+<p>In most of the cases a lawn mower flight pattern is capable of producing highly accurate stockpile models.</p>
+<div class="figure align-center">
+<img alt="a simple lawnmower flight pattern can produce accurate results" src="_images/lawnmower_pattern.png" />
+</div>
+<p>Recommended overlap would be between 75% and 80% with a sidelap in the order of 65% to 70%. It is also recommended to slightly increase overlap and sidelap as the flight height is increased.</p>
+</div>
+<div class="section" id="flight-height">
+<h3>Flight height<a class="headerlink" href="#flight-height" title="Permalink to this headline">¶</a></h3>
+<p>Flight height can be influenced by different camera models, but in a general way and in order to ensure a balance between image quality and flight optimization, it is recommended to be executed at heights 3 to 4 times the tallest stockpile height. So for a 10 meter stockpile, images can be captured at a height of 40 meters.
+As the flight height is increased, it is also recommended to increase overlap, so for a 40 meter height flight you can set a 65% sidelap and 75% overlap, but for a planned height of 80 meters a 70% sidelap and 80% overlap allowing features to be recognized and properly processed.</p>
+</div>
+<div class="section" id="gcps">
+<h3>GCPs<a class="headerlink" href="#gcps" title="Permalink to this headline">¶</a></h3>
+<p>To achieve accuracy levels better than 3%, the use of GCP’s is advised. Typically 5 distributed GCP are sufficient to ensure accurate results.
+When placing or measuring GCP, equipment accuracy should be greater than the GSD. Survey grade GNSS and total stations  are intended to provide the required millimetric accuracy.</p>
+<p>For further information on the use of GCPs, please refer to the <a class="reference external" href="https://docs.opendronemap.org/gcp.html">Ground Control Points section</a>.</p>
+</div>
+<div class="section" id="processing-parameters">
+<h3>Processing parameters<a class="headerlink" href="#processing-parameters" title="Permalink to this headline">¶</a></h3>
+<p>A highly accurate model can be achieved using WebODM high resolution predefined settings. Then you can further adjust some parameters as necessary.</p>
+<p>If using ODM, these this reference values can help you configure the process settings.</p>
+<p>--dsm: true</p>
+<p>--dem-resolution 2.0</p>
+<p>--orthophoto-resolution 1.0</p>
+<p>--feature-quality high</p>
+<p>--pc-quality high</p>
+</div>
+<div class="section" id="measuring">
+<h3>Measuring<a class="headerlink" href="#measuring" title="Permalink to this headline">¶</a></h3>
+<p>As almost 50% of the material will be found in the first 20% of the stockpile height, special care should be taken in adequately defining the base plane.</p>
+<div class="figure align-center">
+<img alt="almost 50% of the material will be found in the first 20% of the stockpile height" src="_images/stockpile.png" />
+</div>
+<p>In WebODM Dashboard, clic on &quot;view map&quot; to start a 2D view of your project.</p>
+<p>Once in the 2D map view, clic on the &quot;Measure volume, area and length&quot; button.</p>
+<div class="figure align-center">
+<img alt="clic on the &quot;Measure volume, area and length&quot; button" src="_images/measurement1.png" />
+</div>
+<p>then clic on &quot;Create a new measurement&quot;</p>
+<div class="figure align-center">
+<img alt="clic on &quot;Create a new measurement&quot;" src="_images/measurement2.png" />
+</div>
+<p>Start placing the points to define the stockpile base plane</p>
+<div class="figure align-center">
+<img alt="Define the stockpile base plane" src="_images/measurement3.png" />
+</div>
+<p>Clic on &quot;Finish measurement&quot; to finish the process.</p>
+<div class="figure align-center">
+<img alt="Clic on &quot;Finish measurement&quot; to finish the process" src="_images/measurement4.png" />
+</div>
+<p>Dialog box will show the  message &quot;Computing ...&quot; for a few seconds, and after the computing is finished the volume measurement value will be displayed.</p>
+<div class="figure align-center">
+<img alt="Clic on &quot;Finish measurement&quot; to finish the process" src="_images/measurement7.png" />
+</div>
+<p>If you are using the command line OpenDroneMap you can use the dsm files to measure the stockpile volumes using other programs.</p>
+<p>Also consider that once the limits of the stockpile are set in software like <a class="reference external" href="https://www.qgis.org">QGis</a>, you will find there are some ways to determine the base plane. So for isolated stockpiles which boundaries are mostly visible, a linear approach can be used. While for stockpiles set in slopes or in bins, the base plane is better defined by the lowest point.
+Creation of a triangulated 3D surface to define the base plane is advised for large stockpiles. This is also valid for stockpiles paced on irregular surfaces.</p>
+</div>
+<div class="section" id="expected-accuracy">
+<h3>Expected accuracy<a class="headerlink" href="#expected-accuracy" title="Permalink to this headline">¶</a></h3>
+<p>For carefully planned and executed projects, and specially when GSD is less than 1 cm, the expected accuracy should be in the range of 1% to 2%.
+The resulting accuracy is comparable to the commercially available photogrammetry software and the obtained using survey grade GNSS equipment.</p>
+</div>
+</div>
+<div class="section" id="using-docker">
+<h2>Using Docker<a class="headerlink" href="#using-docker" title="Permalink to this headline">¶</a></h2>
+<p>Bilang maraming gumagamit ang nageemply ng docker para madeply ang OpenDroneMap, makakatulong kapag naiintindihan ang mga basic commands para matanong ang mga pangayayari na ang docker ay nagkakamali. Ang Docker ay isang contained na aplikasyon na ang intensiyon ay mapadali ang pagdeploy ng software independent sa lokal na kapaligiran. Sa lagay na ito, ito ay masasabing pareho sa virtual machines</p>
+<p>Ang ilan na simpleng commands ay makakatulong na mapaayos ang experience.</p>
+<div class="section" id="listing-docker-machines">
+<h3>Listing Docker Machines<a class="headerlink" href="#listing-docker-machines" title="Permalink to this headline">¶</a></h3>
+<p>Masisimulan ito sa paglista ng magagamit na docker machines sa kasalukuyang machine na pinapatakbo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">ps</span>
+<span class="n">CONTAINER</span> <span class="n">ID</span>        <span class="n">IMAGE</span>                  <span class="n">COMMAND</span>                  <span class="n">CREATED</span>             <span class="n">STATUS</span>              <span class="n">PORTS</span>                    <span class="n">NAMES</span>
+<span class="mi">2518817537</span><span class="n">ce</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">36</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">36</span> <span class="n">hours</span>                                  <span class="n">zen_wright</span>
+<span class="mi">1</span><span class="n">cdc7fadf688</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">37</span> <span class="n">hours</span>         <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">flamboyant_dhawan</span>
+</pre></div>
+</div>
+<p>Kung nais na makakita ng machines na hindi na tumatakbo ngunit mayroon pa rin, maaaring i-add ang <cite>-a</cite> flag:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">ps</span> <span class="o">-</span><span class="n">a</span>
+<span class="n">CONTAINER</span> <span class="n">ID</span>        <span class="n">IMAGE</span>                  <span class="n">COMMAND</span>                  <span class="n">CREATED</span>             <span class="n">STATUS</span>                    <span class="n">PORTS</span>                    <span class="n">NAMES</span>
+<span class="mi">2518817537</span><span class="n">ce</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">36</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">36</span> <span class="n">hours</span>                                        <span class="n">zen_wright</span>
+<span class="mi">1</span><span class="n">cdc7fadf688</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">37</span> <span class="n">hours</span>               <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">flamboyant_dhawan</span>
+<span class="n">cd7b9585b8f6</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>                            <span class="n">nostalgic_lederberg</span>
+<span class="n">e31010c00b9a</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;python /code/run.py…&quot;</span>   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>                              <span class="n">suspicious_kepler</span>
+<span class="n">c44e0d0b8448</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>                            <span class="n">wonderful_burnell</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="accessing-logs-on-the-instance">
+<h3>Accessing logs on the instance<a class="headerlink" href="#accessing-logs-on-the-instance" title="Permalink to this headline">¶</a></h3>
+<p>Sa paggamit ng <cite>CONTAINER ID</cite> o ng pangalan, maaaring mapuntahan ang mga logs sa machine na sumusunod:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">logs</span> <span class="mi">2518817537</span><span class="n">ce</span>
+</pre></div>
+</div>
+<p>Ito ay di hamak na malaki ngunit maaaring gamitin ang <cite>|</cite> na karakter at iba pang mga tools para kunin ang mga kailangan sa logs. Halimbawa, pwedeng tignan ang log ng mabagal sa pamamagitan ng <cite>more</cite> command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">logs</span> <span class="mi">2518817537</span><span class="n">ce</span> <span class="o">|</span> <span class="n">more</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">DTM</span> <span class="ow">is</span> <span class="n">turned</span> <span class="n">on</span><span class="p">,</span> <span class="n">automatically</span> <span class="n">turning</span> <span class="n">on</span> <span class="n">point</span> <span class="n">cloud</span> <span class="n">classification</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">Initializing</span> <span class="n">OpenDroneMap</span> <span class="n">app</span> <span class="o">-</span> <span class="n">Mon</span> <span class="n">Sep</span> <span class="mi">23</span> <span class="mi">01</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">33</span>  <span class="mi">2019</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="o">==============</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">build_overviews</span><span class="p">:</span> <span class="kc">False</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">camera_lens</span><span class="p">:</span> <span class="n">auto</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">crop</span><span class="p">:</span> <span class="mi">3</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">debug</span><span class="p">:</span> <span class="kc">False</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">dem_decimation</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">dem_euclidean_map</span><span class="p">:</span> <span class="kc">False</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>ANg paggamit ng  <cite>Enter</cite> o <cite>Space</cite>, arrow keys o <cite>Page Up</cite> o <cite>Page Down</cite> keys ay makakatulong sa pag-navigate ng logs. Ang maliit na titik <cite>Q</cite> naman ay ang escape back pabalik ng command line.</p>
+<p>Maaaring i-extract ang dulo ng logs gamit ang <cite>tail</cite> commmand na sumusunod:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">logs</span> <span class="mi">2518817537</span><span class="n">ce</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="mi">5</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">Cropping</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">tif</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">running</span> <span class="n">gdalwarp</span> <span class="o">-</span><span class="n">cutline</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_georeferencing</span><span class="o">/</span><span class="n">odm_georeferenced_model</span><span class="o">.</span><span class="n">bounds</span><span class="o">.</span><span class="n">gpkg</span> <span class="o">-</span><span class="n">crop_to_cutline</span> <span class="o">-</span><span class="n">co</span> <span class="n">NUM_THREADS</span><span class="o">=</span><span class="mi">8</span> <span class="o">-</span><span class="n">co</span> <span class="n">BIGTIFF</span><span class="o">=</span><span class="n">IF_SAFER</span> <span class="o">-</span><span class="n">co</span> <span class="n">BLOCKYSIZE</span><span class="o">=</span><span class="mi">512</span> <span class="o">-</span><span class="n">co</span> <span class="n">COMPRESS</span><span class="o">=</span><span class="n">DEFLATE</span> <span class="o">-</span><span class="n">co</span> <span class="n">BLOCKXSIZE</span><span class="o">=</span><span class="mi">512</span> <span class="o">-</span><span class="n">co</span> <span class="n">TILED</span><span class="o">=</span><span class="n">YES</span> <span class="o">-</span><span class="n">co</span> <span class="n">PREDICTOR</span><span class="o">=</span><span class="mi">2</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">original</span><span class="o">.</span><span class="n">tif</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">tif</span> <span class="o">--</span><span class="n">config</span> <span class="n">GDAL_CACHEMAX</span> <span class="mf">48.95</span><span class="o">%</span>
+<span class="n">Using</span> <span class="n">band</span> <span class="mi">4</span> <span class="n">of</span> <span class="n">source</span> <span class="n">image</span> <span class="k">as</span> <span class="n">alpha</span><span class="o">.</span>
+<span class="n">Creating</span> <span class="n">output</span> <span class="n">file</span> <span class="n">that</span> <span class="ow">is</span> <span class="mi">111567</span><span class="n">P</span> <span class="n">x</span> <span class="mi">137473</span><span class="n">L</span><span class="o">.</span>
+<span class="n">Processing</span> <span class="nb">input</span> <span class="n">file</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">original</span><span class="o">.</span><span class="n">tif</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Ang value na <cite>-5</cite> ay sinasabihan ang tail command na ibigay ang limang 5 huling linya ng logs.</p>
+</div>
+<div class="section" id="command-line-access-to-instances">
+<h3>Command line access to instances<a class="headerlink" href="#command-line-access-to-instances" title="Permalink to this headline">¶</a></h3>
+<p>Minsan, kailangan natin na laliman ang pagsusuri sa proseso ng OpenDroneMap. Makakakuha dito ng diretsong command line na daan sa machine. dahil dito, pwede gamitin ang <cite>docker exec</cite> ng mapasagawa ang bash` command line shell sa machine of interest na sumusunod:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">ti</span> <span class="mi">2518817537</span><span class="n">ce</span> <span class="n">bash</span>
+<span class="n">root</span><span class="o">@</span><span class="mi">2518817537</span><span class="n">ce</span><span class="p">:</span><span class="o">/</span><span class="n">code</span><span class="c1">#</span>
+</pre></div>
+</div>
+<p>Ngayon ay naka log-in na tayo sa docker instance at maaari ng suriin ang machine.</p>
+</div>
+<div class="section" id="cleaning-up-after-docker">
+<h3>Cleaning up after Docker<a class="headerlink" href="#cleaning-up-after-docker" title="Permalink to this headline">¶</a></h3>
+<p>Ang docker ay may kahina-hinayang na gamit ng space at by default ay hindi naglilinis ng sobrang laman na data at machine kapag ang proseso ay kumpleto na. Ito ay may benepisyo kapag kailangan na puntahan ang proseso na matagal ng terminated pero kinakarga pa rin ang bigat ng nagamit na storage space overtime. Si Maciej Łebkowski ay may 'napakahusay na pangkahalatang-ideya kung papaano aayusin ang sobrang disk usage sa docker &lt;<a class="reference external" href="https://lebkowski.name/docker-volumes/">https://lebkowski.name/docker-volumes/</a>&gt;`_.</p>
+</div>
+</div>
+<div class="section" id="using-odm-from-low-bandwidth-location">
+<h2>Paggamit ng ODM para sa low-bandwidth na lokasyon.<a class="headerlink" href="#using-odm-from-low-bandwidth-location" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="what-is-this-and-who-is-it-for">
+<h3>Ano ito at para kanino ito?<a class="headerlink" href="#what-is-this-and-who-is-it-for" title="Permalink to this headline">¶</a></h3>
+<p>Via <a class="reference external" href="https://github.com/ivangayton/GDAL_scripts/">Ivan Gayton's repo</a>.</p>
+<p>Ang <a class="reference external" href="https://www.opendronemap.org/">OpenDroneMap</a>  ay hindi naman laging epektibo sa pagset-up locally-ito ay makapagyarihan na machine sa pagproseso ng malalaking datasets ng sa gayon ang cloud machine ay maaaring masagot ang mga tao sa field. Ngunit, bandwidth ang problema sa maraming low-income na setting. Ang kakulangan na ito ay hindi mareresolusyonan agag-agad pero ang mga sumusunod na hakbang ay makatutulong sa pagpapababa ng kailangan na bandwidth para maproseso ang drone imagery datasets sa cloud mula sa African na lokasyon.</p>
+<p>Dito ay nagsasaad kami ng nakakalito ngunit maisasagawa na proseso para makagawa ng OPenDronMap cloud machine (<em>hindi</em> CloudODM ito, isa lamang cloud-based instance ng ODM na pwedeng patakbuhin mula sa command line) at gamitin ito para maproseso ang malalaking photo sets. Ito ay nangangailangan nga kaalaman sa Unix command line use, ssh, Digital Ocean account (ang Amazon AWS ay gagana ngunit mga kaunting kaibahan sa set-up), at katamtaman na kaalaman sa general computer literacy. Kung ikaw ay hindi masyadong eksperto at handang pagdaanan ang nakakalito na pagset-up, ang 'CloudODM &lt;<a class="reference external" href="https://www.opendronemap.org/cloudodm/">https://www.opendronemap.org/cloudodm/</a>&gt;`__ ang dapat pagbasehan.</p>
+<p>Ang kabuoan na proseso ay nakatarget sa pagpapalipad ng mga importanteng misyon sa African o kapareho na lokasyon na maghahanap ng ipoproseso na data habang naghihintay ng field setting. Sa madalit sabi, ito ay naglalayon ng trabaho na makababawas sa bandwidth/data transfer, kesa sa simlpeng pagpapatakbo lamang ng ODM.</p>
+</div>
+<div class="section" id="steps">
+<h3>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
+<div class="section" id="install">
+<h4>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Gumawa ng Digital Ocean droplet na may 4GB na RAM. Ito ay magkakapresyo ng $20/month. Hindi sapat ang 4GB na RAM at ang installation ay siguradong hindi matutuloy. Kapag ang ODM na proseso ay pinapatakbo, ito ay nire-resize sa mas malaki-at mas mahal-na cloud machine pero habang ito ay pinapatakbo, maaari na pababain sa pangalawang pinakamura na drooplet na nagkakahalaga ng $10/month (pinakamura na droplet na nasa $5/month, may kasama na maliit na drive na hindi na pwedeng magdownsize pabalik dito).</p>
+<ul>
+<li><p>Dapat ay Ubintu 18.04 na instansiya para makasiguro sa dependency compatibility.</p></li>
+<li><p>Gumawa ng user na may pribelehiyong sudo. <a class="reference external" href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04">Digital Ocean’s insanely good documentation</a> ay makakatulong na alamin ito. Sa aming kaso, nagset-up kami ng user na may pangalan na <code class="docutils literal notranslate"><span class="pre">odm</span></code>, para kumonekta via sa command na <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">odm&#64;xxx.xxx.xxx.xxx</span></code> (kung saan ang x's ay IPv4 na address ng iyong server). Kung nais na sundan ito, <em>gamitin</em> ang username na <code class="docutils literal notranslate"><span class="pre">odm</span></code>; tapos ang install path dapat ay <code class="docutils literal notranslate"><span class="pre">/home/odm/ODM/</span></code> at makakapareho ang mga halimbawa sa dokumento na ito.</p></li>
+<li><p>Magpatuloy sa pagpapasagawa ng <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code> at <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">upgrade</span></code> para masigurado na ang server ay may updates. Siguraduhin na nasa Ubuntu 18.04.</p></li>
+</ul>
+</li>
+<li><p>I-download at i-install ang ODM sa <a class="reference external" href="https://github.com/OpenDroneMap/ODM">ODM Github</a> (regular, hindi WebODM) na may mga sumusunod na commands:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">OpenDroneMap</span><span class="o">/</span><span class="n">ODM</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">ODM</span>
+<span class="n">bash</span> <span class="n">configure</span><span class="o">.</span><span class="n">sh</span> <span class="n">install</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Kapag ito ay nagawa mo na sa default home faulder ng user (i.e.``odm``) ang daan papunta sa paginstall ay <code class="docutils literal notranslate"><span class="pre">/home/odm/ODM</span></code> (abbreviated as <code class="docutils literal notranslate"><span class="pre">~/ODM/</span></code>).</p></li>
+<li><p>May mga elemento na pangkalikasan na kelangan isaayos. Buksan ang ~/.bashrc file sa iyong machine at idagdag ang 3 linya sa huli (From <a class="reference external" href="https://github.com/OpenDroneMap/ODM">the ODM github</a>). Ang file ay pwedeng buksan sa <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">~/.bashrc</span></code> (o sakahit anong text editor na ginagamit sa halip ng nano).  Siguraduhin na napalitan ang <code class="docutils literal notranslate"><span class="pre">/home/odm/</span></code> ng tama na path papunta sa lokasyon kung saan inextract ang OpenDroneMap kung hindi nagawa ang mga hakbang ng eksaktong katulad ng mga nasa halimbawa (halimbawa ay ang paggamit ng ibang username sa server setup):</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PYTHONPATH=$PYTHONPATH:/home/odm/ODM/SuperBuild/install/lib/python2.7/dist-packages
+export PYTHONPATH=$PYTHONPATH:/home/odm/ODM/SuperBuild/src/opensfm
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/odm/ODM/SuperBuild/install/lib
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Alalahanin na ang ODM github readme ay naglalaman ng kaunting kamalian, ang pangalan ng direktoryong pang-install ay ODM, hindi OpenDroneMap (Makikita ito kapag kinumpara ag mga iinstruksiyon sa taas sa mga instruksiyon sa ODM GitHub).</p></li>
+<li><p>Para maiwasan ang pag-crash kung saan ang split-merge na proseso ay hindi na ma-locate ang sarili nitong executable, dinaragdag natin ang mga sumusunod na linya <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> (i-adjust ang paths kung may makita na kakaiba sa aming halimbawa):</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PYTHONPATH=$PYTHONPATH:/home/odm/ODM/
+export PATH=$PATH:/home/odm/ODM/
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Ngayon, kakailanganin mo ng pangalawang cloud hard drive (“Volume” in Digital Ocean jargon) na may sapat na laki para sa iyong proyekto. Ang pamantayan ay 10 beses ng laki iyong raw image set; ay mayroon 100GB na image set at set-up na 1000GB volume (kapag ito ay napaandar na, dapat ay makapagbawas na ng mga mamahalin na drive capacity, ito ay kailangan para matapos ang proseso). Iset-up ang volume at i-attach ito sa droplet at 'ayusin ang mount point &lt;<a class="reference external" href="https://www.digitalocean.com/docs/volumes/how-to/mount/">https://www.digitalocean.com/docs/volumes/how-to/mount/</a>&gt;`__ (sa halimbawa na ito, ise-set natin sa <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>).</p></li>
+</ul>
+</div>
+<div class="section" id="prep-data-and-project">
+<h4>Prep data and project<a class="headerlink" href="#prep-data-and-project" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Ngayon, i-push ang mga imahe sa server. Maaaring gamitin ang Now push your images onto the server. You can use <a class="reference external" href="https://en.wikipedia.org/wiki/Secure_copy">Secure Copy (scp)</a> like so: <code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">-r</span> <span class="pre">/path/to/my/imagefolder</span> <span class="pre">odm&#64;xxx.xxx.xxx.xxx:/mnt/odmdata/</span></code>.</p>
+<ul>
+<li><p>Matutulak nito ang buong folder na puno ng imahe (ito ang nagagawa ng <code class="docutils literal notranslate"><span class="pre">-r</span></code> option, “recursive”) sa remote na lokasyon (sa ating halimbawa, inattach sa volume ang cloud machine <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>.</p></li>
+<li><p>Kukunsumo ito ng bandwidth. No way around the size of the files.<a class="reference external" href="#footnote1">1</a>, <a class="reference external" href="#footnote2">2</a></p></li>
+</ul>
+</li>
+</ul>
+<div class="section" id="directory-structure">
+<h5>Istraktura ng direktoryo<a class="headerlink" href="#directory-structure" title="Permalink to this headline">¶</a></h5>
+<p>Nirerequire ng ODM na iset-up ang direktoryo sa machine. ANg kritikal ay ang install folder (kung ininstall mo katulad ng nasa taas, <code class="docutils literal notranslate"><span class="pre">/home/odm/ODM/</span></code>) at ang project folder (i.e. <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code>)</p>
+<ul class="simple">
+<li><p>Ang ODM settings.yaml file ay nag-specify ng isang parent directory na naglalaman ng lahat ng proyekto. Ito ang nangyayari sa path line ng proyekto ng  settings.yaml file (medyo nakakalito ito ngunit ito ang <em>parent</em> diirectory ng mga indibidwal na direktoryo ng proyekto na tinutukoy sa project name parameter kapag tinatawagan ang ODM). Ang edit settings.yaml at ang set ng project_path parameter sa (ayon sa halimbawa na set-up) <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>, na sa kaso na ito ay pinupunto ang volume na nilikha. Ang Indibidwal na direktoryo ng proyekto ay nilikha sa loob nito.</p></li>
+<li><p>Ang mga indibidwal na direktoryo ng proyekto, halimbawa  <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code> ay naglalaman ng gcp_list.txt file, ang imahe na image_groups.txt file, at ang imahe ng folder kada proyekto```</p></li>
+<li><p>Ang folder ng imahe, i.e. <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images/</span></code> ay naglalaman ng lahat ng imahe. Kapag sinet-up ito ng ganon, hindi marere-copy ang mga imahe dahil ito ay nasa direktoryo na kung saan gusto sila ilagay ng ODM.</p></li>
+<li><p>I-modify ang settings.yaml para matukoy ang parent directory ng  project folder (sa kaso na ito ang Volume na nilikha, <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>). Siguraduhin na ang mga imahe ay nasa tamang lugaw, i.e. <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images</span></code> at ang ibang ancillary files <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images</span></code> ay nasa root folder <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code></p></li>
+<li><p>Kung ang mga imahe mo ay nasa hiwalay na folder para sa indibidwal na AOI blocks or flights (na kadalasan ay nangyayari kapag ang iyong pamamahala ay organisado), pwedeng gumawa ng image_groups.txt file na may incantation na <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">*;</span> <span class="pre">do</span> <span class="pre">cd</span> <span class="pre">$i;</span> <span class="pre">for</span> <span class="pre">j</span> <span class="pre">in</span> <span class="pre">*;</span> <span class="pre">do</span> <span class="pre">echo</span> <span class="pre">&quot;$j</span> <span class="pre">$i&quot;</span> <span class="pre">&gt;&gt;</span> <span class="pre">../$i.txt;</span> <span class="pre">done;</span> <span class="pre">cd</span> <span class="pre">../;</span> <span class="pre">done;</span></code> at <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">../</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">myproject/*.txt;</span> <span class="pre">do</span> <span class="pre">cat</span> <span class="pre">$i</span> <span class="pre">&gt;&gt;</span> <span class="pre">image_groups.txt;</span> <span class="pre">done;</span></code>. Ito ay makakabuo ng file na may tamang istraktura: listahan ng mga imahe at &quot;group name&quot; pagkatapos ng bawat isa (na sa kaso na ito madalas ay pangalan ng folder na pinanggalingan nito). Ilagay ang lahat ng image files sa isang direktoryo na tatawagin na images sa project root dir (so <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images/</span></code>). Ang image_groups.txt file ay papayagan ng ODM na bantayan ang mga imahe na na kasapi ng kaparehong batch, kahit na sila ay nasa iisang direktoryo lamang.</p></li>
+</ul>
+</div>
+</div>
+<div class="section" id="resize-droplet-pull-pin-run-away">
+<h4>I-resize ang droplet, hatakin ang pin at i-proseso ito.<a class="headerlink" href="#resize-droplet-pull-pin-run-away" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Patayin at ire-size ang machine sa tamang bilang ng CPUs at laki ng memory. Ginagamit namin ang memory-optimized machine na may 24 na dedicated vCPUs at 192GB na RAM (na nagkakahalaga ng $1.60/hr-na dumaragdag ng mabilis, ito ay nasa $1000/month). I-restart at magsimula agad para hindi masayang nag mahal na big-droplet time.</p></li>
+<li><p>i-launce ang ODM na proseso gamit ang ssh at nohup (para kahit ikaw ay maputol, magtutuloy-tuloy ang proseso)</p>
+<ul>
+<li><p>Pwedeng gamitin ang GNU screen para masimulan ang proseso mula sa screen session na hindi hihinto kung ang konesyon mo ay hindi masisira; I-launch ang <code class="docutils literal notranslate"><span class="pre">screen</span></code>, at gamitin ang <code class="docutils literal notranslate"><span class="pre">&lt;ctrl&gt;</span> <span class="pre">a</span> <span class="pre">&lt;ctrl&gt;</span> <span class="pre">d</span></code> para humiwalay at <code class="docutils literal notranslate"><span class="pre">screen</span> <span class="pre">-r</span></code> para kumabit ulit. Ngunit ang paggamit ng screen ay hindi makakapagbigay ng log file ng lahat ng console output maliban kung may gagawin na partikular para ito ay makuhanan. Ang nohup ay nagbibigay ng file na kasama ang lahat n g console output kasama na ang error messages ng libre.</p></li>
+<li><p>Tandaan: as of 2020-03 ang normal na incantation na <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">run.py</span> <span class="pre">-i</span> <span class="pre">/path/to/image/folder</span> <span class="pre">project_name</span></code> ay mukhang <em>hindi</em> gumagana; ang <code class="docutils literal notranslate"><span class="pre">-i</span></code> or <code class="docutils literal notranslate"><span class="pre">--image</span></code> parameter ay nagdudulot ng kakaibang error. So hindi na ginagamit ang -i parameter, ayt umaasa na lamang sa project directory line sa settings.yaml file para iderekta ang ODM sa tamang lugar. Ngayon ay gumagamit (kasama ang split-merge):</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nohup</span> <span class="n">python</span> <span class="n">run</span><span class="o">.</span><span class="n">py</span> <span class="n">myproject</span> <span class="o">--</span><span class="n">split</span> <span class="mi">1</span> <span class="o">--</span><span class="n">split</span><span class="o">-</span><span class="n">overlap</span> <span class="mi">0</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">gsd</span> <span class="o">--</span><span class="n">depthmap</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">1000</span> <span class="o">--</span><span class="n">orthophoto</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">5</span> <span class="o">--</span><span class="n">dem</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">15</span> <span class="o">--</span><span class="n">pc</span><span class="o">-</span><span class="n">las</span> <span class="o">--</span><span class="n">dsm</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Tinuturo ang ODM sa folder (sa halimbawa na ito) <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code>. Sa kondisyon na image_groups.txt at ang image_groups.txt ay nasa folder na ito, ang mga imahe ay nasa <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images/</span></code>, at ang project path sa settings.yaml ay <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code> hindi masasayang ang oras at ang ispasyo sa pagkopya ng imahe.</p></li>
+<li><p>Tandaan na ina-assume dito na ikaw ay meroong image_groups.txt file. Kung wala, itong <code class="docutils literal notranslate"><span class="pre">-split-overlap</span> <span class="pre">0</span></code> ay paniguradong masisira ang lahat at ang <code class="docutils literal notranslate"><span class="pre">--split</span> <span class="pre">1</span></code> naman ay literal na sapalarang numero lamang na hindi papansinin matapos ang  image_groups.txt file ay ma-load (normal na kinokontrol nito ang dami ng grupo ng imahe na hinihiwalay nito, pero sa kaso na ito ay ating  inaasahan na ang mga imahe ay nakagrupo na). Kung ikaw ay walang malaki na dataset (&gt;1000 na imahe), tanggalin ang <code class="docutils literal notranslate"><span class="pre">--split</span></code> at <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code> na opsiyon.</p></li>
+<li><p>Sundan ang progreso gamit ang tail (para malaman kapag tapos na)</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tail</span> <span class="o">-</span><span class="n">f</span> <span class="n">nohup</span><span class="o">.</span><span class="n">out</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Kailangan bantayan ang htop (para mas matantsa ang konsumo ng sa susunod, ikaw ay magspin-up lamang ng machine base sa pangangalangan)</p></li>
+</ul>
+</div>
+<div class="section" id="after-it-finishes-assuming-you-survive-that-long">
+<h4>Matapos ang lahat (assuming na ikaw ay nagsurvive ng ganoon katagal)<a class="headerlink" href="#after-it-finishes-assuming-you-survive-that-long" title="Permalink to this headline">¶</a></h4>
+<ul class="simple">
+<li><p>Kapag tapos na ang proseso, patayin ang machine at ire-size ito pabalik sa inexpensive minimum capacity.</p></li>
+<li><p>Simulan ang machine back up at log in via ssh.</p></li>
+<li><p>Kung gusto makatipid sa download bandwidth, pwedeng icompress ang orthophoto gamit ang GDAL. Wag magdagdag ng overviews, gawin ito sa iyong lokal na machine para maiwasan ang pagpapalaki ng file bago ito i-download.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gdal_translate</span> <span class="o">-</span><span class="n">co</span> <span class="n">COMPRESS</span><span class="o">=</span><span class="n">JPEG</span> <span class="o">-</span><span class="n">co</span> <span class="n">PHOTOMETRIC</span><span class="o">=</span><span class="n">YCBCR</span> <span class="o">-</span><span class="n">co</span> <span class="n">TILED</span><span class="o">=</span><span class="n">YES</span> <span class="o">-</span><span class="n">b</span> <span class="mi">1</span> <span class="o">-</span><span class="n">b</span> <span class="mi">2</span> <span class="o">-</span><span class="n">b</span> <span class="mi">3</span> <span class="o">-</span><span class="n">mask</span> <span class="mi">4</span> <span class="o">--</span><span class="n">config</span> <span class="n">GDAL_TIFF_INTERNAL_MASK</span> <span class="n">YES</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">original</span><span class="o">/</span><span class="n">filename</span><span class="o">.</span><span class="n">extension</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">output</span><span class="o">.</span><span class="n">tif</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Magdownload gamit ang: <code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">odm&#64;xxx.xxx.xxx.xxx:/mnt/odmdata/myproject/odm_orthophoto/odm_orthophoto.tif</span></code> (o i-grab ang compressed na bersiyon na ginawa mo sa huling hakbang)</p></li>
+<li><p>Kapag nakuha na ang file sa iyong lokal na computer, gamitin ang QGIS para magdagdag ng overviews (“pyramids”) o gamitin ang GDAL command <cite>gdaladdo -r average /path/to/image.tif 2 4 8 16 32 64 128 256 512 1024`</cite>.</p></li>
+<li><p>Maaaring i-archive ang odm_texturing, odm_georeferencing, at odm-dem folders gamit ang tar ng mas mapadali ang pagdownload ng isang piraso (at maaaring mas maliit).</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">zcvf</span> <span class="n">archivename</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">folder</span>
+</pre></div>
+</div>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst">this page</a>!</p>
+</div>
+</div>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+  
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+      
+        <a href="arguments.html" class="btn btn-neutral float-right" title="Mga Opsyon at Tanda" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right"></span></a>
+      
+      
+        <a href="installation.html" class="btn btn-neutral float-left" title="Instalasyon at Paano Simulan" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left"></span> Previous</a>
+      
+    </div>
+  
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        
+        &copy; Copyright 2020, OpenDroneMap
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="http://sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/rtfd/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>
