@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Project-Id-Version: OpenDroneMap 2.4.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-15 09:17-0500\n"
+"POT-Creation-Date: 2021-03-17 15:56-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
@@ -317,11 +317,207 @@ msgstr ""
 msgid "Example of how to generate a DTM::"
 msgstr "Mfano wa kutengeneza DEM::"
 
-#: ../../../tutorials.rst:102 50501074905a4fc8b08b24ba132de8c5
+#: ../../../tutorials.rst:102 faa9eff207e2440fa827d1969709a634
+msgid "Measuring stockpile volume"
+msgstr ""
+
+#: ../../../tutorials.rst:105 af9dbd8eafc942bcbcd8af2e5d4f04b8
+msgid "Fieldwork planning"
+msgstr ""
+
+#: ../../../tutorials.rst:107 7b84291486514468a45e7d2680c72bf1
+msgid ""
+"Weather conditions modify illumination and thus impact the photography "
+"results. Best results are obtained with evenly overcast or clear skies. Also"
+" look for low wind speeds that allow the camera to remain stable during the "
+"data collection process. In order to avoid shadows which on one side of the "
+"stockpile can obstruct feature detection and lessen the number of resulting "
+"points, always prefer the flights during the midday, when the sun is at the "
+"nadir so everything is consistently illuminated. Also ensure that your naked"
+" eye horizontal visibility distance is congruent with the planned flight "
+"distances for the specific project, so image quality is not adversely "
+"impacted by dust, fog, smoke, volcanic ash or pollution."
+msgstr ""
+
+#: ../../../tutorials.rst:112 6175e577636a44548c82c37563eb7a75
+msgid "Flight pattern"
+msgstr ""
+
+#: ../../../tutorials.rst:114 a88780607b8246c8a017d73a02709ceb
+msgid ""
+"Most stockpile measurement jobs does not require a crosshatch pattern or "
+"angled gimbal as the resting angle of stockpile materials allows the camera "
+"to capture the entire stockpile sides. Only some special cases where erosion"
+" or machinery operations causes steep angles on the faces of the stockpile "
+"would benefit of the crosshatch flight pattern and angled camera gimbal but "
+"consider that these additional recognized features come at a cost, (in field"
+" labor and processing time) and the resulting improvements are sometimes "
+"negligible."
+msgstr ""
+
+#: ../../../tutorials.rst:116 1c7085e66b8247539682604072625f0e
+msgid ""
+"In most of the cases a lawn mower flight pattern is capable of producing "
+"highly accurate stockpile models."
+msgstr ""
+
+#: ../../../tutorials.rst:122 c95afca49efd484daf5110cdc58f4609
+msgid ""
+"Recommended overlap would be between 75% and 80% with a sidelap in the order"
+" of 65% to 70%. It is also recommended to slightly increase overlap and "
+"sidelap as the flight height is increased."
+msgstr ""
+
+#: ../../../tutorials.rst:125 ef77fb17eec84d4a9d93a283f4157bac
+msgid "Flight height"
+msgstr ""
+
+#: ../../../tutorials.rst:127 84cff51332a2436fad0a1bb96cf24c90
+msgid ""
+"Flight height can be influenced by different camera models, but in a general"
+" way and in order to ensure a balance between image quality and flight "
+"optimization, it is recommended to be executed at heights 3 to 4 times the "
+"tallest stockpile height. So for a 10 meter stockpile, images can be "
+"captured at a height of 40 meters. As the flight height is increased, it is "
+"also recommended to increase overlap, so for a 40 meter height flight you "
+"can set a 65% sidelap and 75% overlap, but for a planned height of 80 meters"
+" a 70% sidelap and 80% overlap allowing features to be recognized and "
+"properly processed."
+msgstr ""
+
+#: ../../../tutorials.rst:131 ee41d7112f534560a10a25dd1b16e996
+msgid "GCPs"
+msgstr ""
+
+#: ../../../tutorials.rst:133 e5eb9e3cd12a47a89a7529888bab145c
+msgid ""
+"To achieve accuracy levels better than 3%, the use of GCP’s is advised. "
+"Typically 5 distributed GCP are sufficient to ensure accurate results. When "
+"placing or measuring GCP, equipment accuracy should be greater than the GSD."
+" Survey grade GNSS and total stations  are intended to provide the required "
+"millimetric accuracy."
+msgstr ""
+
+#: ../../../tutorials.rst:136 deaefeedceb94d17890bad74633db30c
+msgid ""
+"For further information on the use of GCPs, please refer to the `Ground "
+"Control Points section <https://docs.opendronemap.org/gcp.html>`_."
+msgstr ""
+
+#: ../../../tutorials.rst:139 fed27f004683421aa2fb556d20f7c6df
+msgid "Processing parameters"
+msgstr ""
+
+#: ../../../tutorials.rst:141 aba4c1d8f6184b64bd8b4cfc7a8f5e65
+msgid ""
+"A highly accurate model can be achieved using WebODM high resolution "
+"predefined settings. Then you can further adjust some parameters as "
+"necessary."
+msgstr ""
+
+#: ../../../tutorials.rst:144 4902254786ac4f32ae9a8674b2bdf626
+msgid ""
+"If using ODM, these this reference values can help you configure the process"
+" settings."
+msgstr ""
+
+#: ../../../tutorials.rst:146 b58075d74197499c802927bff5d6efa9
+msgid "--dsm: true"
+msgstr ""
+
+#: ../../../tutorials.rst:148 e2928689643147d5ae994fc538ae25c2
+msgid "--dem-resolution 2.0"
+msgstr ""
+
+#: ../../../tutorials.rst:150 fc20bf52a31a4778a3553386aba4da66
+msgid "--orthophoto-resolution 1.0"
+msgstr ""
+
+#: ../../../tutorials.rst:152 96bd92959be747169fcade8e0e5a8256
+msgid "--feature-quality high"
+msgstr ""
+
+#: ../../../tutorials.rst:154 42eb35ace54746d599d19dc324d9959f
+msgid "--pc-quality high"
+msgstr ""
+
+#: ../../../tutorials.rst:157 f279662cb4d149eca10b864b8574dd80
+msgid "Measuring"
+msgstr ""
+
+#: ../../../tutorials.rst:159 41dffbbb136b4edcb0577c39f26ecab6
+msgid ""
+"As almost 50% of the material will be found in the first 20% of the "
+"stockpile height, special care should be taken in adequately defining the "
+"base plane."
+msgstr ""
+
+#: ../../../tutorials.rst:165 eb05d5ef369740eba915f529fff18be6
+msgid ""
+"In WebODM Dashboard, clic on \"view map\" to start a 2D view of your "
+"project."
+msgstr ""
+
+#: ../../../tutorials.rst:167 af6a26bda3444f5fbb109c07ac0d11ba
+msgid ""
+"Once in the 2D map view, clic on the \"Measure volume, area and length\" "
+"button."
+msgstr ""
+
+#: ../../../tutorials.rst:173 64a752338d7241918caa011d7a16fd65
+msgid "then clic on \"Create a new measurement\""
+msgstr ""
+
+#: ../../../tutorials.rst:179 66d14ae7815c47e0b156efade66ed64c
+msgid "Start placing the points to define the stockpile base plane"
+msgstr ""
+
+#: ../../../tutorials.rst:185 c5d78c1a49b84c238365e97c52386282
+msgid "Clic on \"Finish measurement\" to finish the process."
+msgstr ""
+
+#: ../../../tutorials.rst:191 40671b4012a94114b07dc75c500d735b
+msgid ""
+"Dialog box will show the  message \"Computing ...\" for a few seconds, and "
+"after the computing is finished the volume measurement value will be "
+"displayed."
+msgstr ""
+
+#: ../../../tutorials.rst:197 6b04fa09aa254670a9fdae6fa1620d01
+msgid ""
+"If you are using the command line OpenDroneMap you can use the dsm files to "
+"measure the stockpile volumes using other programs."
+msgstr ""
+
+#: ../../../tutorials.rst:199 89590aedf7904cb59df2aedac6abea74
+msgid ""
+"Also consider that once the limits of the stockpile are set in software like"
+" `QGis <https://www.qgis.org>`_, you will find there are some ways to "
+"determine the base plane. So for isolated stockpiles which boundaries are "
+"mostly visible, a linear approach can be used. While for stockpiles set in "
+"slopes or in bins, the base plane is better defined by the lowest point. "
+"Creation of a triangulated 3D surface to define the base plane is advised "
+"for large stockpiles. This is also valid for stockpiles paced on irregular "
+"surfaces."
+msgstr ""
+
+#: ../../../tutorials.rst:203 973afe0e7fd84beead9475b3676b1f7d
+msgid "Expected accuracy"
+msgstr ""
+
+#: ../../../tutorials.rst:205 4e43a874cf4a4c62af4ff6ded2d3b89a
+msgid ""
+"For carefully planned and executed projects, and specially when GSD is less "
+"than 1 cm, the expected accuracy should be in the range of 1% to 2%. The "
+"resulting accuracy is comparable to the commercially available "
+"photogrammetry software and the obtained using survey grade GNSS equipment."
+msgstr ""
+
+#: ../../../tutorials.rst:212 50501074905a4fc8b08b24ba132de8c5
 msgid "Using Docker"
 msgstr "Kutumia Docker"
 
-#: ../../../tutorials.rst:104 6e4131a5a3384ae285f37d221ae9810a
+#: ../../../tutorials.rst:214 6e4131a5a3384ae285f37d221ae9810a
 msgid ""
 "Since many users employ docker to deploy OpenDroneMap, it can be useful to "
 "understand some basic commands in order to interrogate the docker instances "
@@ -337,15 +533,15 @@ msgstr ""
 "kwa kujitegemea kwenye mazingira ya nyumbani. Kwa njia hii ni sawa na "
 "virtual mashine."
 
-#: ../../../tutorials.rst:106 49b5ab7e8c044080bd1d0aee1d2f2826
+#: ../../../tutorials.rst:216 49b5ab7e8c044080bd1d0aee1d2f2826
 msgid "A few simple commands can make our docker experience much better."
 msgstr "Comand chache rahisi zinaweza kufanya docker yetu kwa nzuri zaidi."
 
-#: ../../../tutorials.rst:109 df53139cd5264dea8fceb65cdf4f63c5
+#: ../../../tutorials.rst:219 df53139cd5264dea8fceb65cdf4f63c5
 msgid "Listing Docker Machines"
 msgstr "Kutumia Docker mashine"
 
-#: ../../../tutorials.rst:111 3c3c8828b27e4b67b8d05aa146ec54ec
+#: ../../../tutorials.rst:221 3c3c8828b27e4b67b8d05aa146ec54ec
 msgid ""
 "We can start by listing available docker machines on the current machine we "
 "are running as follows:"
@@ -353,7 +549,7 @@ msgstr ""
 "Tunaweza kuanza kwa kusikiliza docker zilizopo katika mashine ulionayo "
 "tunaanza kama ifuatavyo:"
 
-#: ../../../tutorials.rst:120 537c71956706401fb8e3c3124d44b653
+#: ../../../tutorials.rst:230 537c71956706401fb8e3c3124d44b653
 msgid ""
 "If we want to see machines that may not be running but still exist, we can "
 "add the `-a` flag:"
@@ -361,11 +557,11 @@ msgstr ""
 "Ikiwa tunataka kuona mashine ambayo haifanyi kazi lakini docker inapatikana,"
 " tunaingiza `-a` flag:"
 
-#: ../../../tutorials.rst:133 5e8cd571a3c9482f91a6c1a43fae75e5
+#: ../../../tutorials.rst:243 5e8cd571a3c9482f91a6c1a43fae75e5
 msgid "Accessing logs on the instance"
 msgstr "Tumia logs kwenye instance"
 
-#: ../../../tutorials.rst:135 bad3417f919e4a0f8f94fb1c105f24e1
+#: ../../../tutorials.rst:245 bad3417f919e4a0f8f94fb1c105f24e1
 msgid ""
 "Using either the `CONTAINER ID` or the name, we can access any logs "
 "available on the machine as follows:"
@@ -373,7 +569,7 @@ msgstr ""
 "Au tumia `CONTAINER ID` au jina, tunamia logs pekee inapatika kwenye mashine"
 " kama ifuatavyo:"
 
-#: ../../../tutorials.rst:141 b4fd6da1500a4e4fb5115c6406890e65
+#: ../../../tutorials.rst:251 b4fd6da1500a4e4fb5115c6406890e65
 msgid ""
 "This is likely to be unwieldy large, but we can use a pipe `|` character and"
 " other tools to extract just what we need from the logs. For example we can "
@@ -383,7 +579,7 @@ msgstr ""
 "tools nyengine kuondosha kile tunachotaka kutoka kwenye log. Kwa mfano "
 "tunaweza kuondosha kupitia log kidogo kwa kutumia more command."
 
-#: ../../../tutorials.rst:157 aa0b31cbf49b491fbd452fcf711a9d74
+#: ../../../tutorials.rst:267 aa0b31cbf49b491fbd452fcf711a9d74
 msgid ""
 "Pressing `Enter` or `Space`, arrow keys or `Page Up` or `Page Down` keys "
 "will now help us navigate through the logs. The lower case letter `Q` will "
@@ -393,24 +589,24 @@ msgstr ""
 "itatusaidia kuelekeza kupitia log. Herufu ndogo ya `Q` itaturejesha nyuma "
 "kwenye comand line."
 
-#: ../../../tutorials.rst:159 1ba3bd1e726a4536b0f2cca5b938d9f1
+#: ../../../tutorials.rst:269 1ba3bd1e726a4536b0f2cca5b938d9f1
 msgid ""
 "We can also extract just the end of the logs using the `tail` commmand as "
 "follows:"
 msgstr ""
 "Tunaweza kuondosha mwisho wa log kwa kutumia `tail` camand kama ifuatavyo:"
 
-#: ../../../tutorials.rst:170 3be85244a688441ea866aa743ddcb394
+#: ../../../tutorials.rst:280 3be85244a688441ea866aa743ddcb394
 msgid ""
 "The value `-5` tells the tail command to give us just the last 5 lines of "
 "the logs."
 msgstr "Nambari `-5` inaiambia tail camand kutupa mistari 5 ya mwisho ya log."
 
-#: ../../../tutorials.rst:173 596c3a847e2f453ea2b730c1a896cc90
+#: ../../../tutorials.rst:283 596c3a847e2f453ea2b730c1a896cc90
 msgid "Command line access to instances"
 msgstr "Matumizy ya camand line kwa mifano"
 
-#: ../../../tutorials.rst:175 af607c2d3f3a4fb6858de895a7812e15
+#: ../../../tutorials.rst:285 af607c2d3f3a4fb6858de895a7812e15
 msgid ""
 "Sometimes we need to go a little deeper in our exploration of the process "
 "for OpenDroneMap. For this, we can get direct command line access to the "
@@ -422,16 +618,16 @@ msgstr ""
 "moja kwenye mashine. Kwa hili, tunawza kutumia `docker exec` kufikia na "
 "camand line `bash` muonekano ndani ya mashine kwa umuhimu ufuatao:"
 
-#: ../../../tutorials.rst:182 da298a4efd4b4c1b9d61db283059f8dc
+#: ../../../tutorials.rst:292 da298a4efd4b4c1b9d61db283059f8dc
 msgid ""
 "Now we are logged into our docker instance and can explore the machine."
 msgstr "Sasa tumeingia ndani ya kundi docker na mashine itaonesha."
 
-#: ../../../tutorials.rst:185 b46b370208e043909e244bbc723d11d3
+#: ../../../tutorials.rst:295 b46b370208e043909e244bbc723d11d3
 msgid "Cleaning up after Docker"
 msgstr "Safisha juu baada ya Docker"
 
-#: ../../../tutorials.rst:187 9d63a1f16cbb41d1b04f8779235aae72
+#: ../../../tutorials.rst:297 9d63a1f16cbb41d1b04f8779235aae72
 msgid ""
 "Docker has a lamentable use of space and by default does not clean up excess"
 " data and machines when processes are complete. This can be advantageous if "
@@ -447,22 +643,22 @@ msgstr ""
 " nafasi iliotumika kutumia ndani ya docker <https://lebkowski.name/docker-"
 "volumes/>`_."
 
-#: ../../../tutorials.rst:191 f96d9ce9d05d4f8881cd2e6a73a6dfa8
+#: ../../../tutorials.rst:301 f96d9ce9d05d4f8881cd2e6a73a6dfa8
 msgid "Using ODM from low-bandwidth location"
 msgstr "Tumia ODM kutoka eneo lenye  low-bandwidth "
 
-#: ../../../tutorials.rst:194 a26912094ee74fe0b94e0d4e9bb63a68
+#: ../../../tutorials.rst:304 a26912094ee74fe0b94e0d4e9bb63a68
 msgid "What is this and who is it for?"
 msgstr "Nini hiki na kwa nani"
 
-#: ../../../tutorials.rst:196 9c1aeead615c41d58afe5baaaa2e9365
+#: ../../../tutorials.rst:306 9c1aeead615c41d58afe5baaaa2e9365
 msgid ""
 "Via `Ivan Gayton's repo <https://github.com/ivangayton/GDAL_scripts/>`_."
 msgstr ""
 "Kutoka kwa `Ivan Gayton's repo "
 "<https://github.com/ivangayton/GDAL_scripts/>`_."
 
-#: ../../../tutorials.rst:198 b1fedebae1c644d49867e82d82dd7d32
+#: ../../../tutorials.rst:308 b1fedebae1c644d49867e82d82dd7d32
 msgid ""
 "`OpenDroneMap <https://www.opendronemap.org/>`__ can’t always be effectively"
 " set up locally—it takes a fairly powerful machine to process large "
@@ -480,7 +676,7 @@ msgstr ""
 "zinaweza kuwa sababu za kupunguza mahitaji ya nafasi kwa kuchakata picha za "
 "ndege nyuki katika claud kutoka maeneo ya Afrika."
 
-#: ../../../tutorials.rst:206 27bb2ac3f43647178743b213b56d1e0a
+#: ../../../tutorials.rst:316 27bb2ac3f43647178743b213b56d1e0a
 msgid ""
 "Here we present a tricky but workable process to create an OpenDroneMap "
 "cloud machine (*not* CloudODM, mind you, just a cloud-based instance of ODM "
@@ -502,7 +698,7 @@ msgstr ""
 "setup, `CloudODM <https://www.opendronemap.org/cloudodm/>`__ ni lazima "
 "kuiangalia."
 
-#: ../../../tutorials.rst:217 cab2d4e8c9364938a4af6c5257cb2055
+#: ../../../tutorials.rst:327 cab2d4e8c9364938a4af6c5257cb2055
 msgid ""
 "The whole process is mostly targeted at someone flying substantial missions "
 "in an African or similar location looking to process data ASAP while still "
@@ -514,15 +710,15 @@ msgstr ""
 " la kazi. Kwa hio itasaidia kazi iliopangwa kwa kupunguza nafasi/ "
 "kusafirisha data, kuliko njia rahisi ya kutumia ODM."
 
-#: ../../../tutorials.rst:224 d8d8597785b84f678cfaa8bcc310bfe2
+#: ../../../tutorials.rst:334 d8d8597785b84f678cfaa8bcc310bfe2
 msgid "Steps"
 msgstr "Njia"
 
-#: ../../../tutorials.rst:227 323632131a7a475996e0f4157f28adf3
+#: ../../../tutorials.rst:337 323632131a7a475996e0f4157f28adf3
 msgid "Install"
 msgstr "Kuingiza"
 
-#: ../../../tutorials.rst:229 92fc4a7110ec42388c4ab2def52c2977
+#: ../../../tutorials.rst:339 92fc4a7110ec42388c4ab2def52c2977
 msgid ""
 "Create a Digital Ocean droplet with at least 4GB of RAM. That’ll cost about "
 "$20/month. Less than 4GB of RAM and the install will probably fail. When we "
@@ -539,11 +735,11 @@ msgstr ""
 "ambayo ina gharama ya $10/mwezi (ni droplet rahisi zaidi, at $5/mwezi , "
 "utatumia kwa nafasi ndogo ambayo huwezi kuirudisha mwanzo)."
 
-#: ../../../tutorials.rst:237 548dc42ce8ee453f9a7d4b501e7f3522
+#: ../../../tutorials.rst:347 548dc42ce8ee453f9a7d4b501e7f3522
 msgid "Should be an Ubuntu 18.04 instance to ensure dependency compatibility"
 msgstr "Lazima Ubuntu 18.04 instance kuhakikisha uwiano"
 
-#: ../../../tutorials.rst:239 7f25f7675fe04c2d8a4e7f52011f99e1
+#: ../../../tutorials.rst:349 7f25f7675fe04c2d8a4e7f52011f99e1
 msgid ""
 "Create a user with sudo privileges. `Digital Ocean’s insanely good "
 "documentation <https://www.digitalocean.com/community/tutorials/initial-"
@@ -563,7 +759,7 @@ msgstr ""
 "``odm``; kisha path yako itakuwa ``/home/odm/ODM/`` na itafanana na mifano "
 "yote katika kitabu hichi."
 
-#: ../../../tutorials.rst:248 814ee561aa4148d0bd7ffc94055102a2
+#: ../../../tutorials.rst:358 814ee561aa4148d0bd7ffc94055102a2
 msgid ""
 "Go ahead and execute ``sudo apt update`` and ``sudo apt upgrade`` to ensure "
 "your server isn’t dangerously without updates. Make sure to stay with Ubuntu"
@@ -572,7 +768,7 @@ msgstr ""
 "Nenda kutumia ``sudo apt update`` na ``sudo apt upgrade`` kuhakikisha server"
 " sio hatari wila kuapdate, lakini endelea kutumia Ubuntu 18.04."
 
-#: ../../../tutorials.rst:252 8893bbe316534e44935a919da6029759
+#: ../../../tutorials.rst:362 8893bbe316534e44935a919da6029759
 msgid ""
 "Download and install ODM on it from the `ODM Github "
 "<https://github.com/OpenDroneMap/ODM>`__ (regular, not WebODM) with the "
@@ -582,7 +778,7 @@ msgstr ""
 "<https://github.com/OpenDroneMap/ODM>`__ (regular, not WebODM) kutumia "
 "camand zifuatazo:"
 
-#: ../../../tutorials.rst:262 ba7617c6598547498e17397d734a6dfe
+#: ../../../tutorials.rst:372 ba7617c6598547498e17397d734a6dfe
 msgid ""
 "If you do this from the default home folder of your user (i.e. ``odm``) the "
 "path to the install will be ``/home/odm/ODM`` (abbreviated as ``~/ODM/``)."
@@ -590,7 +786,7 @@ msgstr ""
 "Ikiwa utafanya hivi kuanzia kawaida home folder ya user yako (i.e ``odm``) "
 "sehemu ya kuingiza itakua ``/home/odm/ODM`` (kiufupikama ``~/ODM/``)."
 
-#: ../../../tutorials.rst:265 305d825d2b5d4c69aef06fcd95f711ea
+#: ../../../tutorials.rst:375 305d825d2b5d4c69aef06fcd95f711ea
 msgid ""
 "There are some environmental variables that need to be set. Open the "
 "~/.bashrc file on your machine and add the following 3 lines at the end "
@@ -610,7 +806,7 @@ msgstr ""
 "kama kwenye mfano wetu (Mfano ukitumia jina la mtumiaji katika mipangilio ya"
 " server)."
 
-#: ../../../tutorials.rst:280 15cee43639104a5da7ef02613ebdf3da
+#: ../../../tutorials.rst:390 15cee43639104a5da7ef02613ebdf3da
 msgid ""
 "Note that the ODM github readme contains a slight error, the install "
 "directory name will be ODM, not OpenDroneMap (you’ll see this if you compare"
@@ -620,7 +816,7 @@ msgstr ""
 "jina itakuwa ODM, sio OpenDroneMap (utaona hiyvo ukiwa utalinganisha na "
 "maeleza hapo juu kwa moja ndani ya ODM GitHub)."
 
-#: ../../../tutorials.rst:284 9dc7c9d9047c45bea929642b5110b2c5
+#: ../../../tutorials.rst:394 9dc7c9d9047c45bea929642b5110b2c5
 msgid ""
 "In order to prevent a crash wherein the split-merge process fails to locate "
 "its own executable, we add the following lines to ``~/.bashrc`` (adjust "
@@ -630,7 +826,7 @@ msgstr ""
 "file lake, tunaengeza mistari ifuatayo kwa ``~/.bashrc`` ( weka sawa kama "
 "uliweka tofauti na mfano wetu):"
 
-#: ../../../tutorials.rst:294 10a2fdc7efb74df0acc55d38fe9514c6
+#: ../../../tutorials.rst:404 10a2fdc7efb74df0acc55d38fe9514c6
 msgid ""
 "Now you’ll need a second cloud hard drive (a “Volume” in Digital Ocean "
 "jargon) big enough to manage your project. Rule of thumb seems to be 10 "
@@ -650,11 +846,11 @@ msgstr ""
 "<https://www.digitalocean.com/docs/volumes/how-to/mount/>`__ (katika mfano "
 "huu tunapanga ndani ya ``/mnt/odmdata/``)."
 
-#: ../../../tutorials.rst:305 20f755d7f03341529e48b584e1b0e55e
+#: ../../../tutorials.rst:415 20f755d7f03341529e48b584e1b0e55e
 msgid "Prep data and project"
 msgstr "Kuandaa data na project"
 
-#: ../../../tutorials.rst:307 cef334da8d1d41d4ba595fdfcba1f97b
+#: ../../../tutorials.rst:417 cef334da8d1d41d4ba595fdfcba1f97b
 msgid ""
 "Now push your images onto the server. You can use `Secure Copy (scp) "
 "<https://en.wikipedia.org/wiki/Secure_copy>`__ like so: ``scp -r "
@@ -664,7 +860,7 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Secure_copy>`__ Mfano: ``scp -r "
 "/path/to/my/imagefolder odm@xxx.xxx.xxx.xxx:/mnt/odmdata/``."
 
-#: ../../../tutorials.rst:311 caec6177a1f049d78ab535505d62b1c9
+#: ../../../tutorials.rst:421 caec6177a1f049d78ab535505d62b1c9
 msgid ""
 "This pushes the entire folder full of images (that’s what the ``-r`` option "
 "does, “recursive”) into the remote location (in our example, into the volume"
@@ -674,7 +870,7 @@ msgstr ""
 "\"recursive\") ndani ya eneo lililoondolewa ( Katika mfano wetu, ndani ya "
 "nafasi tulioweka katika cloud mashine ya ``/mnt/odmdata/``."
 
-#: ../../../tutorials.rst:315 eb7294a6609b4efdb3cd3119c93f736b
+#: ../../../tutorials.rst:425 eb7294a6609b4efdb3cd3119c93f736b
 msgid ""
 "This will take some bandwidth. No way around the size of the files.\\ `1 "
 "<#footnote1>`__, \\ `2 <#footnote2>`__\\"
@@ -682,11 +878,11 @@ msgstr ""
 "Hii itachukua nafasi. Hakuna njia katika ukubwa wa file.\\ `1 "
 "<#footnote1>`__, \\ `2 <#footnote2>`__\\"
 
-#: ../../../tutorials.rst:319 1f8557711eb34544ba19af21e5684d3a
+#: ../../../tutorials.rst:429 1f8557711eb34544ba19af21e5684d3a
 msgid "Directory structure"
 msgstr "Muundo wa Anuani"
 
-#: ../../../tutorials.rst:321 381bc53afeb24707a36c6641acff96d8
+#: ../../../tutorials.rst:431 381bc53afeb24707a36c6641acff96d8
 msgid ""
 "ODM requires the directories on the machine to be set up just so. The "
 "critical bits are the install folder (if you installed as above, it’s "
@@ -697,7 +893,7 @@ msgstr ""
 "kuingiza folder (Ikiwa utahifadhi kama hapo juu ni \"``/home/odm/ODM/``) na "
 "folder la project (i.e. ``/mnt/odmdata/myproject/``)"
 
-#: ../../../tutorials.rst:326 ff4d530d45e743fcba32ecf322e1201a
+#: ../../../tutorials.rst:436 ff4d530d45e743fcba32ecf322e1201a
 msgid ""
 "ODM’s settings.yaml file specifies a single parent directory containing all "
 "projects. This is what goes in the project path line of the settings.yaml "
@@ -715,7 +911,7 @@ msgstr ""
 "settings.yaml na weka ``/mnt/odmdata/``, ambayo katika kesi hii katika "
 "nafasi tuliotengeneza. Anuani ya project husika imetengenezwa na hilo."
 
-#: ../../../tutorials.rst:335 1503b3f631e04941b5738d4d544faebf
+#: ../../../tutorials.rst:445 1503b3f631e04941b5738d4d544faebf
 msgid ""
 "Individual project directories, i.e. ``/mnt/odmdata/myproject/`` contain the"
 " gcp_list.txt file, the image_groups.txt file, and the images folder for "
@@ -725,7 +921,7 @@ msgstr ""
 "gcp_list.txt file, image_groups.txt file, na na folder la picha kwa kila "
 "project``\\`"
 
-#: ../../../tutorials.rst:338 bc6b6d2ec2774bd9819ac092ac6e620b
+#: ../../../tutorials.rst:448 bc6b6d2ec2774bd9819ac092ac6e620b
 msgid ""
 "The images folder, i.e. ``/mnt/odmdata/myproject/images/`` contains all of "
 "the images. If you set it up like this, the images don’t get re-copied "
@@ -735,7 +931,7 @@ msgstr ""
 "zote. Ikiwa utarekebisha kama hivi, picha hazitakopiwa tena kwa sababu "
 "tayari zipo kwenye anuani ambayo ODM inaitaka."
 
-#: ../../../tutorials.rst:342 6f7fb819b1de4edb9ee6a1a381ea5d91
+#: ../../../tutorials.rst:452 6f7fb819b1de4edb9ee6a1a381ea5d91
 msgid ""
 "Modify settings.yaml to specify the parent directory of the project folder "
 "(in this case the Volume we created, ``/mnt/odmdata/``). Make sure the "
@@ -749,7 +945,7 @@ msgstr ""
 "mengine ya ziada (gcp_list.txt and image_groups.txt) imo katika semu ya "
 "folder ``/mnt/odmdata/myproject/``"
 
-#: ../../../tutorials.rst:348 19d1b994192e430783ec441057978515
+#: ../../../tutorials.rst:458 19d1b994192e430783ec441057978515
 msgid ""
 "if you have the images in separate folders for individual AOI blocks or "
 "flights (which you will if your flight management was organized), you can "
@@ -776,11 +972,11 @@ msgstr ""
 " kujua kila picha itokapo kutoka kundi moa,hata ikiwa zimetoka katika anuani"
 " moja."
 
-#: ../../../tutorials.rst:364 cc0ff87ac21745aa8ee81ec4fc1ed3e9
+#: ../../../tutorials.rst:474 cc0ff87ac21745aa8ee81ec4fc1ed3e9
 msgid "Resize droplet, pull pin, run away"
 msgstr "Kubadilisha droplet, kuvuta pini, pekua"
 
-#: ../../../tutorials.rst:366 fe544c97b5f54e388dd5647cd8d45016
+#: ../../../tutorials.rst:476 fe544c97b5f54e388dd5647cd8d45016
 msgid ""
 "Shut down and resize your machine to an appropriately monstrous number of "
 "CPUs and amount of memory. I use the memory-optimized machine with 24 "
@@ -793,7 +989,7 @@ msgstr ""
 "(ghara yake ni kiasi $1.60/hr ambayo itaengeza haraka, ni juu $1000/mwezi). "
 "Washa upya na fanya kazi kwa haraka ili usipoteze mda big-droplet."
 
-#: ../../../tutorials.rst:371 b2ce2ab6d9f04668a30f9d23cc47e27f
+#: ../../../tutorials.rst:481 b2ce2ab6d9f04668a30f9d23cc47e27f
 msgid ""
 "Launch the ODM process via ssh using nohup (so that if you’re cut off, "
 "processing will continue)"
@@ -801,7 +997,7 @@ msgstr ""
 "Zindua mchakato wa ODM kupitia ssh kutumia nohup (kwa hiyo ikiwa utaikata, "
 "mchakato utakatika)"
 
-#: ../../../tutorials.rst:374 ce20de89099c4629a2a6b7b9f452e715
+#: ../../../tutorials.rst:484 ce20de89099c4629a2a6b7b9f452e715
 msgid ""
 "Alternately you can use GNU screen to launch the process from a screen "
 "session which won’t stop if your connection is interrupted; launch "
@@ -818,7 +1014,7 @@ msgstr ""
 "kitu maalum kusanifu hili, ikiwa nohup itakupa file pamoja na muonekano wote"
 " wa console, ikiwemo ujumbe wa makosa, bure."
 
-#: ../../../tutorials.rst:381 3c35097b84c648e7a3454804588d8411
+#: ../../../tutorials.rst:491 3c35097b84c648e7a3454804588d8411
 msgid ""
 "Note: as of 2020-03 the normal incantation ``python run.py -i "
 "/path/to/image/folder project_name`` seems *not* to work; the ``-i`` or "
@@ -833,7 +1029,7 @@ msgstr ""
 "settings.yaml kuongoza ODM katika nafsi husika.Sasa tumia (ikiwemo split-"
 "merge):"
 
-#: ../../../tutorials.rst:392 dc1939fdcad6409a9242b537beec7b64
+#: ../../../tutorials.rst:502 dc1939fdcad6409a9242b537beec7b64
 msgid ""
 "This points ODM at the folder (in this example) ``/mnt/odmdata/myproject/``."
 " Provided the image_groups.txt and gcp_list.txt are in this folder, the "
@@ -847,7 +1043,7 @@ msgstr ""
 "settings.yaml ni ``/mnt/odmdata/`` haitapoteza muda na nafasi ya kukupia "
 "picha."
 
-#: ../../../tutorials.rst:399 c99e7f74b20d43b9ab8995c42a0050f6
+#: ../../../tutorials.rst:509 c99e7f74b20d43b9ab8995c42a0050f6
 msgid ""
 "Note that this assumes you have an image_groups.txt file. If not, this "
 "``-split-overlap 0`` will probably fuck things up, and the ``--split 1`` is "
@@ -865,11 +1061,11 @@ msgstr ""
 "uweledi). Ikiwa huna data seti nyingi (>1000 picha). Acha kuchagua "
 "``--split`` na ``--split-overlap``."
 
-#: ../../../tutorials.rst:408 5d4a1c95f8cb4b8faea6418a8427c318
+#: ../../../tutorials.rst:518 5d4a1c95f8cb4b8faea6418a8427c318
 msgid "Follow the progress using tail (so that you’ll know when it’s done)"
 msgstr "Fuata muoendelezo kwa kutumia tail (ili uweze kujua ikimaliza)"
 
-#: ../../../tutorials.rst:414 d47d6ae7516c4f09b87480cbde8787f4
+#: ../../../tutorials.rst:524 d47d6ae7516c4f09b87480cbde8787f4
 msgid ""
 "You may want to keep an eye on htop (to get a sense of the resource usage so"
 " that in future you can only spin up a machine as large as necessary)"
@@ -877,22 +1073,22 @@ msgstr ""
 "Unaweza kuangalia htop (ili kupata kujua matumizi uliotumia kwa maana siku "
 "za usoni unaweza kuongeza ukubwa wa mashine)"
 
-#: ../../../tutorials.rst:419 4622af635b084049888da4994e2577cd
+#: ../../../tutorials.rst:529 4622af635b084049888da4994e2577cd
 msgid "After it finishes (assuming you survive that long)"
 msgstr "Baada kumaliza (kisia utachukua mda mkubwa)"
 
-#: ../../../tutorials.rst:421 737dba0bee8d4b0b8ea300971cf451f7
+#: ../../../tutorials.rst:531 737dba0bee8d4b0b8ea300971cf451f7
 msgid ""
 "As soon as processing is done, shut down the machine and resize it back down"
 " to the inexpensive minimum capacity."
 msgstr ""
 "Mara tu processing ikimaliza, zima mashine na rudisha chini kwa uwezo mdogo."
 
-#: ../../../tutorials.rst:423 ff4a20334b164e7fb3f66717203e1046
+#: ../../../tutorials.rst:533 ff4a20334b164e7fb3f66717203e1046
 msgid "Start the machine back up, and log in via ssh."
 msgstr "Washa mashine ya kuhifadhi, na ingia ndani kutumia ssh."
 
-#: ../../../tutorials.rst:424 2fe88a5e5c7a4cf9a6a0d4cf7eeeb75e
+#: ../../../tutorials.rst:534 2fe88a5e5c7a4cf9a6a0d4cf7eeeb75e
 msgid ""
 "If you want to save download bandwidth, you can compress the orthophoto "
 "using GDAL. Don’t add overviews, do that on your local machine to avoid "
@@ -902,7 +1098,7 @@ msgstr ""
 "kutumia GDAL. Usiingize muonekano, fanya hivyo kwenye computer yako kuepusha"
 " kufanya file kuwa kubwa kabla ya kupakua."
 
-#: ../../../tutorials.rst:432 cf523f232f6642deafbb485c5b243486
+#: ../../../tutorials.rst:542 cf523f232f6642deafbb485c5b243486
 msgid ""
 "Download using scp: ``scp "
 "odm@xxx.xxx.xxx.xxx:/mnt/odmdata/myproject/odm_orthophoto/odm_orthophoto.tif``"
@@ -912,7 +1108,7 @@ msgstr ""
 "odm@xxx.xxx.xxx.xxx:/mnt/odmdata/myproject/odm_orthophoto/odm_orthophoto.tif``"
 " (au chukua compressed version uliotengeneza mwisho)"
 
-#: ../../../tutorials.rst:436 45f3eb83df8249a380cc13bb16e198c0
+#: ../../../tutorials.rst:546 45f3eb83df8249a380cc13bb16e198c0
 msgid ""
 "Once you get the file on your local computer, you can use QGIS to add "
 "overviews (“pyramids”) or use the GDAL command ``gdaladdo -r average "
@@ -922,7 +1118,7 @@ msgstr ""
 "muonekano (“pyramids”) au tumia GDAL command ``gdaladdo -r average "
 "/path/to/image.tif 2 4 8 16 32 64 128 256 512 1024``."
 
-#: ../../../tutorials.rst:440 2611b4d17c384fee8d1d9905c7a52525
+#: ../../../tutorials.rst:550 2611b4d17c384fee8d1d9905c7a52525
 msgid ""
 "You can archive the odm_texturing, odm_georeferencing, and odm-dem folders "
 "using tar to make them easier to download in one piece (and maybe smaller)."
@@ -930,7 +1126,7 @@ msgstr ""
 "Unaweza kuhifadhi odm_texturing, odm_georeferencing, na odm-dem Mafile tumia"
 " tar kwa urahisi wa kupakua kwa sehemu moja (na pengine ndogo zaidi)."
 
-#: ../../../tutorials.rst:450 196099e256ee41d7938031c930bd326d
+#: ../../../tutorials.rst:560 196099e256ee41d7938031c930bd326d
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
 "contribution>`_ and help improve `this page "
