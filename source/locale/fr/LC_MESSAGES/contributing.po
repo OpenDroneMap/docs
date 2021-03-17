@@ -3,13 +3,17 @@
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Brice Goedert <brice.goedert@gmail.com>, 2020
+# 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Project-Id-Version: OpenDroneMap 2.4.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-15 09:17-0500\n"
+"POT-Creation-Date: 2021-03-17 15:56-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: Brice Goedert <brice.goedert@gmail.com>, 2020\n"
 "Language-Team: French (https://www.transifex.com/americanredcross/teams/111882/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -26,10 +30,12 @@ msgid ""
 "OpenDroneMap relies on community contributions. You can contribute in many "
 "ways, even if you are not a programmer."
 msgstr ""
+"OpenDroneMap est dépendant des contributions de sa communauté. Vous pouvez "
+"contribuer de nombreuses façons, même si vous n'êtes pas programmeur."
 
 #: ../../../contributing.rst:9 d7a8cfb3ce1c4e789d9bc59089b7af33
 msgid "Community Forum"
-msgstr ""
+msgstr "Forum de la communauté"
 
 #: ../../../contributing.rst:11 372bbf306f2e4a60a8915ed2441771d7
 msgid ""
@@ -40,6 +46,13 @@ msgid ""
 "datasets for others to explore. It is a good place go before submitting bug "
 "reports or getting in touch with developers before writing a new feature."
 msgstr ""
+"Si vous voulez vous impliquer, rencontrez un soucis ou voulez contacter "
+"quelqu'un, le forum <https://community.opendronemap.org/>`_  est l'endroit "
+"par lequel commencer. Vous pourriez y trouver vos questions déjà répondues, "
+"ou des astuces et ressources utiles. Vous pouvez aussi y partager vos "
+"données libres pour que les autres les utilise. C'est aussi le meilleur "
+"endroit pour y partager vos bugs ou partager vos suggestions d'amélioration "
+"avec les développeurs."
 
 #: ../../../contributing.rst:14 925012996add420ca56b7ff53828e745
 msgid "Reporting Bugs"
