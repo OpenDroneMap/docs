@@ -83,7 +83,13 @@ From the same Terminal (or command prompt) run the following:
 cd docs/
 pip install virtualenv
 virtualenv -p python3 venv
+
+# Linux/Mac
 source venv/bin/activate
+
+# Windows
+venv\scripts\activate
+
 pip install -r requirements.txt
 ```
 
