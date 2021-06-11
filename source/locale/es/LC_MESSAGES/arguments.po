@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.4.7\n"
+"Project-Id-Version: OpenDroneMap 2.5.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-17 15:56-0400\n"
+"POT-Creation-Date: 2021-06-11 16:36-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
@@ -44,6 +44,7 @@ msgstr ""
 #: ../../../arguments.rst:13 faa596867966454081ab3acf1c08c2b5
 msgid "``--camera-lens`` auto |  perspective |  brown |  fisheye |  spherical"
 msgstr ""
+"``--camera-lens`` auto |  perspective |  brown |  fisheye |  spherical"
 
 #: ../../../arguments.rst:13 de4fe5a4a091417c819c08966866004a
 msgid ""
@@ -58,7 +59,7 @@ msgstr ""
 
 #: ../../../arguments.rst:16 fee92aa73fbd4c13ad783d63b2c27b07
 msgid "``--cameras`` <json>"
-msgstr ""
+msgstr "``--cameras`` <json>"
 
 #: ../../../arguments.rst:16 8e29efb76fff45b999aea95436ec5058
 msgid ""
@@ -74,7 +75,7 @@ msgstr ""
 
 #: ../../../arguments.rst:19 fc3fd19581d84563bf2210e79400c82e
 msgid "``--crop`` <positive float>"
-msgstr ""
+msgstr "``--crop`` <positive float>"
 
 #: ../../../arguments.rst:19 8b4d9a13cb32444a8417051b37c03a4c
 msgid ""
@@ -135,6 +136,12 @@ msgid ""
 "distance weighted (IDW) algorithm and merged together. Remaining gaps are "
 "then merged using nearest neighbor interpolation. Default: ``3``"
 msgstr ""
+"Número de pasos utilizados para rellenar áreas con huecos. Establezca en 0 "
+"para deshabilitar el llenado de espacios. Comenzando con un radio igual a la"
+" resolución de salida, se generan N diferentes DEM con un radio "
+"progresivamente mayor utilizando el algoritmo de distancia inversa ponderada"
+" (IDW) y se fusionan. Luego, los espacios restantes se fusionan utilizando "
+"la interpolación de vecino más cercano. Predeterminado:``3``"
 
 #: ../../../arguments.rst:34 7c1a812bb1c04f6e8b63c644a34d1853
 msgid "``--dem-resolution`` <float>"
@@ -146,6 +153,9 @@ msgid ""
 " sampling distance (GSD) estimate. To remove the cap, check --ignore-gsd "
 "also. Default: ``5``"
 msgstr ""
+"Resolución de DSM/DTM en cm/pixel. Note que este valor esta limitado por la "
+"distancia de muestreo del terreno (GSD) estimada. Para remover este límite, "
+"active tambien --ignore-gsd. Predeterminado: ``5``"
 
 #: ../../../arguments.rst:37 6647bd1b9a154ab892a770f84ed9ba27
 msgid "``--depthmap-resolution`` <positive float>"
@@ -157,6 +167,10 @@ msgid ""
 "cloud by setting the resolution of the depthmap images. Higher values take "
 "longer to compute but produce denser point clouds. Default: ``640``"
 msgstr ""
+"Opción heredada (use --pc-quality en su lugar). Controla la densidad de la "
+"nube de puntos estableciendo la resolución de las imágenes del mapa de "
+"profundidad. Los valores más altos tardan más en calcularse, pero producen "
+"nubes de puntos más densas. Predeterminado: ``640`` "
 
 #: ../../../arguments.rst:40 76677b6a42574f29838efc9b5a7df743
 msgid "``--dsm``"
@@ -168,6 +182,9 @@ msgid ""
 "a progressive morphological filter. Check the --dem* parameters for finer "
 "tuning. Default: ``False``"
 msgstr ""
+"Utilice esta etiqueta para construir un DSM (modelo digital de superficie, "
+"suelo + objetos) utilizando un filtro morfológico progresivo. Verifique los "
+"parámetros --dem* para un ajuste más fino. Predeterminado: ``False``"
 
 #: ../../../arguments.rst:43 3360fec70b774bdfbf94a71cde50479f
 msgid "``--dtm``"
@@ -179,6 +196,9 @@ msgid ""
 "simple morphological filter. Check the --dem* and --smrf* parameters for "
 "finer tuning. Default: ``False``"
 msgstr ""
+"Utilice esta etiqueta para construir un DTM (modelo digital de terreno, solo"
+" suelo) utilizando un filtro morfológico simple. Compruebe los parámetros "
+"--dem* y --smrf* para un ajuste más preciso. Predeterminado: ``False``"
 
 #: ../../../arguments.rst:46 0ba8d09f4960491984c531e8c335e737
 msgid ""
@@ -192,7 +212,7 @@ msgstr ""
 
 #: ../../../arguments.rst:46 d5cefe6316e24d748f4225c9b756f891
 msgid "End processing at this stage. . Default: ``odm_report``"
-msgstr ""
+msgstr "Finalizar procesamiento en esta etapa. Default: ``odm_report``"
 
 #: ../../../arguments.rst:49 3379b475ed744c2f8efecffa2acbf421
 msgid "``--fast-orthophoto``"
@@ -205,6 +225,10 @@ msgid ""
 "orthophoto and do not need a full 3D model, turn on this option. Default: "
 "``False``"
 msgstr ""
+"Omite la reconstrucción densa y la generación de modelos 3D. Genera una "
+"ortofoto directamente a partir de la reconstrucción escasa.  Active esta "
+"opción, si solo necesita una ortofoto y no necesita un modelo 3D completo. "
+"Predeterminado: ``False``"
 
 #: ../../../arguments.rst:52 faa596867966454081ab3acf1c08c2b5
 msgid "``--feature-quality`` ultra |  high |  medium |  low |  lowest"
@@ -215,6 +239,9 @@ msgid ""
 "Set feature extraction quality. Higher quality generates better features, "
 "but requires more memory and takes longer. . Default: ``high``"
 msgstr ""
+"Establezca la calidad de extracción de características. Una calidad más alta"
+" genera mejores características, pero requiere más memoria y lleva más "
+"tiempo. Predeterminado: ``high``"
 
 #: ../../../arguments.rst:55 05d27cf1f89b4fce98bbf41cc4888d9a
 msgid "``--feature-type`` sift |  hahog"
@@ -225,6 +252,8 @@ msgid ""
 "Choose the algorithm for extracting keypoints and computing descriptors. . "
 "Default: ``sift``"
 msgstr ""
+"Elija el algoritmo para extraer puntos clave y calcular descriptores. "
+"Predeterminado: ``sift``"
 
 #: ../../../arguments.rst:58 f438a3f47be744468b355040c99d9de1
 msgid "``--force-gps``"
@@ -236,6 +265,10 @@ msgid ""
 "present.This flag is useful if you have high precision GPS measurements. If "
 "there are no GCPs, this flag does nothing. Default: ``False``"
 msgstr ""
+"Utilice los datos exif de GPS de las imágenes para la reconstrucción, "
+"incluso si hay GCP presentes. Esta bandera es útil si tiene mediciones de "
+"GPS de alta precisión. Si no hay GCP, esta bandera no hace nada. "
+"Predeterminado: ``False``"
 
 #: ../../../arguments.rst:61 dd2425d6065149fab9c32eb3b29bf9e0
 msgid "``--gcp`` <path string>"
@@ -248,6 +281,10 @@ msgid ""
 "<+proj definition>geo_x geo_y geo_z im_x im_y image_name [gcp_name] [extra1]"
 " [extra2]Default: ``None``"
 msgstr ""
+"Ruta al archivo que contiene los puntos de control terrestre usados para "
+"georreferenciar. El archivo debe tener el siguiente formato: EPSG:<code> or "
+"<+proj definition>geo_x geo_y geo_z im_x im_y image_name [gcp_name] [extra1]"
+" [extra2] Predeterminado: ``None``"
 
 #: ../../../arguments.rst:64 2f49392604894003a9aa115ccc32c9e0
 msgid "``--geo`` <path string>"
@@ -262,6 +299,13 @@ msgid ""
 " (degrees)] [phi (degrees)] [kappa (degrees)] [horz accuracy (meters)] [vert"
 " accuracy (meters)]Default: ``None``"
 msgstr ""
+"Ruta al archivo de geolocalización de las imágenes que contiene las "
+"coordenadas de los centros de las imágenes usadas para la "
+"georreferenciación. Note que actualmente no esta soportado omega/phi/kappa "
+"(los puede configurar en 0). El archivo debe tener el siguiente formato: "
+"EPSG:<code> or <+proj definition>image_name geo_x geo_y geo_z [omega "
+"(degrees)] [phi (degrees)] [kappa (degrees)] [horz accuracy (meters)] [vert "
+"accuracy (meters)] Predeterminado: ``None``"
 
 #: ../../../arguments.rst:67 25fc9d27450a412d852b62bf95b5198b
 msgid "``--gps-accuracy`` <positive float>"
@@ -276,6 +320,13 @@ msgid ""
 "Lowering this option can sometimes help control bowling-effects over large "
 "areas. Default: ``10``"
 msgstr ""
+"Establezca un valor en metros para la información de Dilución de precisión "
+"de GPS (DOP) para todas las imágenes. Si sus imágenes están etiquetadas con "
+"información GPS de alta precisión (RTK), este valor se establecerá "
+"automáticamente en consecuencia. Puede utilizar esta opción para "
+"configurarla manualmente en caso de que falle la reconstrucción. Reducir "
+"esta opción a veces puede ayudar a controlar los efectos de combadura en "
+"áreas extensas. Predeterminado: ``10``"
 
 #: ../../../arguments.rst:70 2677913b62eb4736ab3973b5d0e187df
 msgid "``-h,--help``"
@@ -283,7 +334,7 @@ msgstr "``-h,--help``"
 
 #: ../../../arguments.rst:70 5bf00306225e4afa8acc0ae52e820ffa
 msgid "show this help message and exit"
-msgstr ""
+msgstr "muestra este mensaje de ayuda y sale"
 
 #: ../../../arguments.rst:73 0aea9c4e60f84391846bec5dc8c3fc23
 msgid "``--ignore-gsd``"
@@ -297,6 +348,12 @@ msgid ""
 "ignoring it can result in slightly better image output quality. Default: "
 "``False``"
 msgstr ""
+"Ignore la distancia de muestreo del suelo (GSD). La GSD limita la resolución"
+" máxima de las salidas de imagen y cambia el tamaño de las imágenes cuando "
+"es necesario, lo que resulta en un procesamiento más rápido y un menor uso "
+"de memoria. Dado que la GSD es una estimación, a veces ignorarlo puede "
+"resultar en una calidad de salida de imagen ligeramente mejor. "
+"Predeterminado: ``False``"
 
 #: ../../../arguments.rst:76 1bb46e9b82bf4fc4b313271676a40313
 msgid "``--matcher-distance`` <integer>"
@@ -308,6 +365,8 @@ msgid ""
 "data. Set both matcher-neighbors and this to 0 to skip pre-matching. "
 "Default: ``0``"
 msgstr ""
+"92%match\n"
+"Umbral de distancia en metros, para encontrar imágenes pre-coincidentes basado en la información exif de GPS. Establezca ambos matcher-neighbors y este en 0 para saltar la comparación previa. Predeterminado: ``0``"
 
 #: ../../../arguments.rst:79 14fedcc00a284061a80267b0e05025b5
 msgid "``--matcher-neighbors`` <integer>"
@@ -319,6 +378,10 @@ msgid ""
 "skip pre-matching. Neighbors works together with Distance parameter, set "
 "both to 0 to not use pre-matching. Default: ``8``"
 msgstr ""
+"Número de imágenes cercanas a la comparación previa basado en la información"
+" exif de GPS. Establezca en 0 para omitir la comparación previa. El "
+"parámetro Neighbors trabaja junto con el parámetro Distance, establezca "
+"ambos en 0 para no utilizar la comparación previa. Predeterminado: ``8``"
 
 #: ../../../arguments.rst:82 3a25bf1a36d3486eb9d7b3081fdc3f13
 msgid "``--matcher-type`` flann |  bow"

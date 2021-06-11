@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.4.7\n"
+"Project-Id-Version: OpenDroneMap 2.5.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-17 15:56-0400\n"
+"POT-Creation-Date: 2021-06-11 16:36-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
@@ -330,11 +330,11 @@ msgstr "Ejemplo de cómo generar un DTM::"
 
 #: ../../../tutorials.rst:102 faa9eff207e2440fa827d1969709a634
 msgid "Measuring stockpile volume"
-msgstr ""
+msgstr "Medir el volumen de pilas de materiales a granel"
 
 #: ../../../tutorials.rst:105 af9dbd8eafc942bcbcd8af2e5d4f04b8
 msgid "Fieldwork planning"
-msgstr ""
+msgstr "Planificación del trabajo de campo"
 
 #: ../../../tutorials.rst:107 7b84291486514468a45e7d2680c72bf1
 msgid ""
@@ -349,10 +349,23 @@ msgid ""
 "distances for the specific project, so image quality is not adversely "
 "impacted by dust, fog, smoke, volcanic ash or pollution."
 msgstr ""
+"Las condiciones climáticas modifican la iluminación y, por lo tanto, afectan"
+" los resultados de la fotografía. Los mejores resultados se obtienen con "
+"cielos nublados uniformemente o despejados. También busque velocidades de "
+"viento bajas que permitan que la cámara permanezca estable durante el "
+"proceso de recopilación de datos. Para evitar sombras que  puedan obstruir "
+"la detección de características en un lado de la pila y disminuir el número "
+"de puntos resultantes, prefiera siempre los vuelos durante el mediodía, "
+"cuando el sol está en el nadir para que todo esté iluminado "
+"consistentemente. También asegúrese de que la distancia de visibilidad "
+"horizontal a simple vista sea congruente con las distancias de vuelo "
+"planificadas para el proyecto específico, de modo que la calidad de la "
+"imagen no se vea afectada negativamente por el polvo, niebla, humo, cenizas "
+"volcánicas o la contaminación."
 
 #: ../../../tutorials.rst:112 6175e577636a44548c82c37563eb7a75
 msgid "Flight pattern"
-msgstr ""
+msgstr "Patrón de vuelo"
 
 #: ../../../tutorials.rst:114 a88780607b8246c8a017d73a02709ceb
 msgid ""
@@ -365,12 +378,23 @@ msgid ""
 " labor and processing time) and the resulting improvements are sometimes "
 "negligible."
 msgstr ""
+"La mayoría de los trabajos de medición de pilas no requieren un patrón de "
+"vuelo cruzado o la cámara en ángulo, ya que el ángulo de reposo de los "
+"materiales de las pilas permite que la cámara capture todos los lados. Solo "
+"algunos casos especiales en los que la erosión o las operaciones de "
+"maquinaria causan ángulos pronunciados en las caras de la pila se verán "
+"beneficiados del patrón de vuelo cruzado y la cámara en ángulo, pero "
+"considere que estas características adicionales tienen un costo (en mano de "
+"obra de campo y tiempo de procesamiento) y las mejoras resultantes son a "
+"veces insignificantes."
 
 #: ../../../tutorials.rst:116 1c7085e66b8247539682604072625f0e
 msgid ""
 "In most of the cases a lawn mower flight pattern is capable of producing "
 "highly accurate stockpile models."
 msgstr ""
+"En la mayoría de los casos, un patrón de vuelo paralelo como una podadora, "
+"es capaz de producir modelos de pilas de alta precisión."
 
 #: ../../../tutorials.rst:122 c95afca49efd484daf5110cdc58f4609
 msgid ""
@@ -378,10 +402,14 @@ msgid ""
 " of 65% to 70%. It is also recommended to slightly increase overlap and "
 "sidelap as the flight height is increased."
 msgstr ""
+"El traslape frontal recomendado debe estar entre 75% y 80%, con un traslape "
+"lateral en el orden de 65% y 70%. También se recomienda incrementar "
+"ligeramente el traslape lateral y frontal conforme se incremente la altura "
+"del vuelo."
 
 #: ../../../tutorials.rst:125 ef77fb17eec84d4a9d93a283f4157bac
 msgid "Flight height"
-msgstr ""
+msgstr "Altura de vuelo"
 
 #: ../../../tutorials.rst:127 84cff51332a2436fad0a1bb96cf24c90
 msgid ""
@@ -395,10 +423,21 @@ msgid ""
 " a 70% sidelap and 80% overlap allowing features to be recognized and "
 "properly processed."
 msgstr ""
+"La altura de vuelo puede verse influenciada por diferentes modelos de "
+"cámara, pero de manera general y con el fin de garantizar un equilibrio "
+"entre la calidad de imagen y la optimización del vuelo, se recomienda "
+"ejecutarlo a alturas de 3 a 4 veces la altura de la pila más alta. Entonces,"
+" para una pila de 10 metros, las imágenes se pueden capturar a una altura de"
+" 40 metros. A medida que aumenta la altura de vuelo, también se recomienda "
+"aumentar la superposición, por lo que para un vuelo de 40 metros de altura "
+"puede usar una superposición lateral del 65% y una superposición frontal del"
+" 75%, pero para una altura planificada de 80 metros, una superposición "
+"lateral del 70% y una superposición del 80% permitiendo que las estructuras "
+"sean reconocidas y procesadas correctamente."
 
 #: ../../../tutorials.rst:131 ee41d7112f534560a10a25dd1b16e996
 msgid "GCPs"
-msgstr ""
+msgstr "GCPs"
 
 #: ../../../tutorials.rst:133 e5eb9e3cd12a47a89a7529888bab145c
 msgid ""
@@ -408,16 +447,25 @@ msgid ""
 " Survey grade GNSS and total stations  are intended to provide the required "
 "millimetric accuracy."
 msgstr ""
+"Para lograr niveles de precisión superiores al 3%, se recomienda el uso de "
+"GCP. Normalmente, 5 GCP distribuidos son suficientes para garantizar "
+"resultados precisos. Al colocar o medir los GCP, la precisión del equipo "
+"debe ser mayor que el GSD. Las estaciones totales y los GNSS de grado "
+"topográfico están diseñadas para proporcionar la precisión milimétrica "
+"requerida."
 
 #: ../../../tutorials.rst:136 deaefeedceb94d17890bad74633db30c
 msgid ""
 "For further information on the use of GCPs, please refer to the `Ground "
 "Control Points section <https://docs.opendronemap.org/gcp.html>`_."
 msgstr ""
+"Para mayor información sobre el uso de GCPs, por favor consulte la `sección "
+"de Puntos de Control Terrestre "
+"<https://docs.opendronemap.org/es/gcp.html>`_."
 
 #: ../../../tutorials.rst:139 fed27f004683421aa2fb556d20f7c6df
 msgid "Processing parameters"
-msgstr ""
+msgstr "Parámetros de procesamiento"
 
 #: ../../../tutorials.rst:141 aba4c1d8f6184b64bd8b4cfc7a8f5e65
 msgid ""
@@ -425,36 +473,41 @@ msgid ""
 "predefined settings. Then you can further adjust some parameters as "
 "necessary."
 msgstr ""
+"Se puede lograr un modelo de alta precisión usando los parámetros "
+"predefinidos para alta resolución en WebODM. Luego puede ajustar aún más "
+"algunos parámetros según sea necesario."
 
 #: ../../../tutorials.rst:144 4902254786ac4f32ae9a8674b2bdf626
 msgid ""
 "If using ODM, these this reference values can help you configure the process"
 " settings."
 msgstr ""
+"Si utiliza ODM, estos valores de referencia pueden ayudarle a configurar los"
+" parámetros de proceso."
 
 #: ../../../tutorials.rst:146 b58075d74197499c802927bff5d6efa9
 msgid "--dsm: true"
-msgstr ""
+msgstr "--dsm: true"
 
 #: ../../../tutorials.rst:148 e2928689643147d5ae994fc538ae25c2
 msgid "--dem-resolution 2.0"
-msgstr ""
+msgstr "--dem-resolution 2.0"
 
 #: ../../../tutorials.rst:150 fc20bf52a31a4778a3553386aba4da66
 msgid "--orthophoto-resolution 1.0"
-msgstr ""
+msgstr "--orthophoto-resolution 1.0"
 
 #: ../../../tutorials.rst:152 96bd92959be747169fcade8e0e5a8256
 msgid "--feature-quality high"
-msgstr ""
+msgstr "--feature-quality high"
 
 #: ../../../tutorials.rst:154 42eb35ace54746d599d19dc324d9959f
 msgid "--pc-quality high"
-msgstr ""
+msgstr "--pc-quality high"
 
 #: ../../../tutorials.rst:157 f279662cb4d149eca10b864b8574dd80
 msgid "Measuring"
-msgstr ""
+msgstr "Medición"
 
 #: ../../../tutorials.rst:159 41dffbbb136b4edcb0577c39f26ecab6
 msgid ""
@@ -462,30 +515,38 @@ msgid ""
 "stockpile height, special care should be taken in adequately defining the "
 "base plane."
 msgstr ""
+"Como casi el 50% del material se encuentra en el primer 20% de la altura de "
+"la pila, se debe tener especial cuidado en definir adecuadamente el plano de"
+" la base."
 
 #: ../../../tutorials.rst:165 eb05d5ef369740eba915f529fff18be6
 msgid ""
 "In WebODM Dashboard, clic on \"view map\" to start a 2D view of your "
 "project."
 msgstr ""
+"En el tablero de WebODM, haga clic en \"ver mapa\" para iniciar una vista 2D"
+" de su proyecto."
 
 #: ../../../tutorials.rst:167 af6a26bda3444f5fbb109c07ac0d11ba
 msgid ""
 "Once in the 2D map view, clic on the \"Measure volume, area and length\" "
 "button."
 msgstr ""
+"Una vez en la vista de mapa 2D, haga clic en el botón \"Medir volumen, área "
+"y distancia\"."
 
 #: ../../../tutorials.rst:173 64a752338d7241918caa011d7a16fd65
 msgid "then clic on \"Create a new measurement\""
-msgstr ""
+msgstr "luego haga clic en \"Crear una nueva medición\""
 
 #: ../../../tutorials.rst:179 66d14ae7815c47e0b156efade66ed64c
 msgid "Start placing the points to define the stockpile base plane"
 msgstr ""
+"Empiece a colocar los puntos para definir el plano de la base de la pila"
 
 #: ../../../tutorials.rst:185 c5d78c1a49b84c238365e97c52386282
 msgid "Clic on \"Finish measurement\" to finish the process."
-msgstr ""
+msgstr "Haga clic en \"Finalizar medición\" para finalizar el proceso."
 
 #: ../../../tutorials.rst:191 40671b4012a94114b07dc75c500d735b
 msgid ""
@@ -493,12 +554,17 @@ msgid ""
 "after the computing is finished the volume measurement value will be "
 "displayed."
 msgstr ""
+"El cuadro de diálogo muestra el mensaje \"Calculando...\" por algunos "
+"segundos, y después de que el cálculo esté terminado la medición de volumen "
+"será desplegada."
 
 #: ../../../tutorials.rst:197 6b04fa09aa254670a9fdae6fa1620d01
 msgid ""
 "If you are using the command line OpenDroneMap you can use the dsm files to "
 "measure the stockpile volumes using other programs."
 msgstr ""
+"Si utiliza OpenDroneMap en la línea de comandos, puede usar los archivos DSM"
+" para medir el volumen de las pilas usando otros programas."
 
 #: ../../../tutorials.rst:199 89590aedf7904cb59df2aedac6abea74
 msgid ""
@@ -511,10 +577,19 @@ msgid ""
 "for large stockpiles. This is also valid for stockpiles paced on irregular "
 "surfaces."
 msgstr ""
+"También considere que una vez que los límites de la pila están definidos en "
+"un software como `QGis <https://www.qgis.org>`_, encontrará que existen "
+"varias maneras de determinar el plano de la base. Así que para pilas "
+"aisladas, cuyos límites son mayormente visibles, se puede usar un enfoque "
+"linear. Mientras que para pilas ubicadas en pendientes o en contenedores, el"
+" plano de la base es mejor definido el punto mas bajo. Se recomienda la "
+"creación de una superficie tridimensional triangulada para definir el plano "
+"de la base de pilas grandes. Esto también es válido para pilas sobre "
+"superficies irregulares. "
 
 #: ../../../tutorials.rst:203 973afe0e7fd84beead9475b3676b1f7d
 msgid "Expected accuracy"
-msgstr ""
+msgstr "Precisión esperada"
 
 #: ../../../tutorials.rst:205 4e43a874cf4a4c62af4ff6ded2d3b89a
 msgid ""
@@ -523,6 +598,11 @@ msgid ""
 "resulting accuracy is comparable to the commercially available "
 "photogrammetry software and the obtained using survey grade GNSS equipment."
 msgstr ""
+"Para proyectos cuidadosamente planificados y ejecutados, y especialmente "
+"cuando el GSD es menor de 1 cm, la precisión esperada debe estar en el rango"
+" de 1% a 2%. La precisión resultante es comparable a la del software de "
+"fotogrametría disponible comercialmente y la obtenida utilizando equipo GNSS"
+" de grado topográfico."
 
 #: ../../../tutorials.rst:212 50501074905a4fc8b08b24ba132de8c5
 msgid "Using Docker"

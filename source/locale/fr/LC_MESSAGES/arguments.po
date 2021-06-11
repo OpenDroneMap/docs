@@ -5,15 +5,16 @@
 # 
 # Translators:
 # Bertrand RUKUNDO <rukundo_bertrand@yahoo.fr>, 2020
+# Arnaud Boilleau <arneir77@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.4.7\n"
+"Project-Id-Version: OpenDroneMap 2.5.5\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-17 15:56-0400\n"
+"POT-Creation-Date: 2021-06-11 16:36-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
-"Last-Translator: Bertrand RUKUNDO <rukundo_bertrand@yahoo.fr>, 2020\n"
+"Last-Translator: Arnaud Boilleau <arneir77@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/americanredcross/teams/111882/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -27,7 +28,7 @@ msgstr "Options et indicateurs"
 
 #: ../../../arguments.rst:7 22dcd4f93de143d4be348424b5141abe
 msgid "Arguments"
-msgstr ""
+msgstr "Arguments : :"
 
 #: ../../../arguments.rst:10 3648f45e2ae6425d982cd17a9c1c4dd7
 msgid "``--build-overviews``"
@@ -38,6 +39,8 @@ msgid ""
 "Build orthophoto overviews for faster display in programs such as QGIS. "
 "Default: ``False``"
 msgstr ""
+"Créez des aperçus d'orthophoto pour un affichage plus rapide dans des "
+"programmes tels que QGIS. Par défaut: ``False``"
 
 #: ../../../arguments.rst:13 faa596867966454081ab3acf1c08c2b5
 msgid "``--camera-lens`` auto |  perspective |  brown |  fisheye |  spherical"
@@ -49,6 +52,10 @@ msgid ""
 "geometric undistortion. By default the application tries to determine a lens"
 " type from the images metadata. . Default: ``auto``"
 msgstr ""
+"Définissez un type de projection de caméra. La définition manuelle d'une "
+"valeur peut aider à améliorer la non-distorsion géométrique. Par défaut, "
+"l'application tente de déterminer un type d'objectif à partir des "
+"métadonnées des images. . Par défaut: ``auto``"
 
 #: ../../../arguments.rst:16 fee92aa73fbd4c13ad783d63b2c27b07
 msgid "``--cameras`` <json>"
@@ -61,6 +68,10 @@ msgid ""
 "as a JSON string representing the contents of a cameras.json file. Default: "
 "``"
 msgstr ""
+"Utilisez les paramètres de la caméra calculés à partir d'un autre jeu de "
+"données au lieu de les calculer. Peut être spécifié soit en tant que chemin "
+"d'accès à un fichier cameras.json, soit en tant que chaîne JSON représentant"
+" le contenu d'un fichier cameras.json. Par défaut: ``"
 
 #: ../../../arguments.rst:19 fc3fd19581d84563bf2210e79400c82e
 msgid "``--crop`` <positive float>"
@@ -72,6 +83,9 @@ msgid ""
 "dataset boundaries, shrinked by N meters. Use 0 to disable cropping. "
 "Default: ``3``"
 msgstr ""
+"Recadrez automatiquement les sorties d'image en créant un tampon lisse "
+"autour des limites du jeu de données, réduit de N mètres. Utilisez 0 pour "
+"désactiver le recadrage. Par défaut: ``3``"
 
 #: ../../../arguments.rst:22 8d89c72a451d4cdfab30a158c71fb309
 msgid "``--debug``"
@@ -79,7 +93,7 @@ msgstr ""
 
 #: ../../../arguments.rst:22 51f0cf7bc32e43c890dd228311b6b506
 msgid "Print debug messages. Default: ``False``"
-msgstr ""
+msgstr "Imprimer les messages de débogage. Par défaut: ``False``"
 
 #: ../../../arguments.rst:25 807da86be74c4fa79888fe331cfcfd96
 msgid "``--dem-decimation`` <positive integer>"
@@ -91,6 +105,10 @@ msgid ""
 "quality). 100 decimates ~99%% of the points. Useful for speeding up "
 "generation of DEM results in very large datasets. Default: ``1``"
 msgstr ""
+"Décimez les points avant de générer le DEM. 1 indique sans décimation "
+"(qualité totale). 100 décime ~99%% des points. Utile pour accélérer la "
+"génération de résultats DEM dans des ensembles de données très volumineux. "
+"Par défaut: ``1``"
 
 #: ../../../arguments.rst:28 1374ff0d08624013870f996b7fd5b5a4
 msgid "``--dem-euclidean-map``"
@@ -103,6 +121,10 @@ msgid ""
 "place). This can be useful to isolate the areas that have been filled. "
 "Default: ``False``"
 msgstr ""
+"Calcule une carte raster euclidienne pour chaque DEM. La carte indique la "
+"distance entre chaque cellule et la valeur NODATA la plus proche (avant tout"
+" remplissage de trou). Cela peut être utile pour isoler les zones qui ont "
+"été remplies. Par défaut: ``False``"
 
 #: ../../../arguments.rst:31 f8a2841236ea4d8d94649b16dbfe1a02
 msgid "``--dem-gapfill-steps`` <positive integer>"
@@ -116,6 +138,13 @@ msgid ""
 "distance weighted (IDW) algorithm and merged together. Remaining gaps are "
 "then merged using nearest neighbor interpolation. Default: ``3``"
 msgstr ""
+"Nombre d'étapes utilisées pour remplir les zones avec des vides. Réglez sur "
+"0 pour désactiver le remplissage des espaces. En commençant par un rayon "
+"égal à la résolution de sortie, N différents DEM sont générés avec un rayon "
+"progressivement plus grand en utilisant l'algorithme de pondération de la "
+"distance inverse (IDW) et fusionnés ensemble. Les espaces restants sont "
+"ensuite fusionnés à l'aide de l'interpolation du plus proche voisin. Par "
+"défaut: ``3``"
 
 #: ../../../arguments.rst:34 7c1a812bb1c04f6e8b63c644a34d1853
 msgid "``--dem-resolution`` <float>"
@@ -127,6 +156,9 @@ msgid ""
 " sampling distance (GSD) estimate. To remove the cap, check --ignore-gsd "
 "also. Default: ``5``"
 msgstr ""
+"Résolution DSM / DTM en cm / pixel. Notez que cette valeur est plafonnée par"
+" une estimation de la distance d'échantillonnage au sol (GSD). Pour retirer "
+"le capuchon, cochez également --ignore-gsd. Par défaut: ``5``"
 
 #: ../../../arguments.rst:37 6647bd1b9a154ab892a770f84ed9ba27
 msgid "``--depthmap-resolution`` <positive float>"
@@ -138,6 +170,10 @@ msgid ""
 "cloud by setting the resolution of the depthmap images. Higher values take "
 "longer to compute but produce denser point clouds. Default: ``640``"
 msgstr ""
+"Option héritée (utilisez à la place --pc-quality). Contrôle la densité du "
+"nuage de points en définissant la résolution de la profondeur des images de "
+"la carte. Les valeurs plus élevées prennent plus de temps à calculer mais "
+"produisent des nuages de points plus denses. Par défaut: ``640``"
 
 #: ../../../arguments.rst:40 76677b6a42574f29838efc9b5a7df743
 msgid "``--dsm``"
@@ -149,6 +185,9 @@ msgid ""
 "a progressive morphological filter. Check the --dem* parameters for finer "
 "tuning. Default: ``False``"
 msgstr ""
+"Utilisez cette balise pour construire un DSM (Digital Surface Model, sol + "
+"objets) à l'aide d'un filtre morphologique progressif. Vérifiez les "
+"paramètres --dem* pour un réglage plus fin. Par défaut: ``False``"
 
 #: ../../../arguments.rst:43 3360fec70b774bdfbf94a71cde50479f
 msgid "``--dtm``"
@@ -261,7 +300,7 @@ msgstr ""
 
 #: ../../../arguments.rst:70 5bf00306225e4afa8acc0ae52e820ffa
 msgid "show this help message and exit"
-msgstr ""
+msgstr "Montrer le message d'aide et sortir"
 
 #: ../../../arguments.rst:73 0aea9c4e60f84391846bec5dc8c3fc23
 msgid "``--ignore-gsd``"
@@ -382,6 +421,11 @@ msgid ""
 "datasets to be processed on machines that don't have sufficient disk space "
 "available. Default: ``False``"
 msgstr ""
+"Supprimez les fichiers intermédiaires lourds pour optimiser l'utilisation de"
+" l'espace disque. Cela affecte la possibilité de redémarrer la file "
+"d'attente à partir d'une étape intermédiaire, mais permet de traiter les "
+"ensembles de données sur des machines qui ne disposent pas de suffisamment "
+"d'espace disque disponible. Par défaut: ``False``"
 
 #: ../../../arguments.rst:106 2ccae1354a9244789fbbbe356ba5495d
 msgid ""
