@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="es" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Salidas de OpenDroneMap &mdash; documentación de OpenDroneMap - 2.4.7</title>
+  <title>Salidas de OpenDroneMap &mdash; documentación de OpenDroneMap - 2.5.5</title>
   
 
   
@@ -64,7 +65,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -129,14 +130,14 @@
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-high-quality-orthophotos">Creación de Ortofotos de Alta Calidad</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#calibrating-the-camera">Calibrar la cámara</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-digital-elevation-models">Creación de modelos de elevación digitales</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Fieldwork planning</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Flight pattern</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Flight height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Medir el volumen de pilas de materiales a granel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Planificación del trabajo de campo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Patrón de vuelo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Altura de vuelo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tutorials.html#gcps">GCPs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Processing parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Measuring</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Expected accuracy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Parámetros de procesamiento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Medición</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Precisión esperada</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-docker">Usando Docker</a><ul>
@@ -292,36 +293,36 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="opendronemap-outputs">
+  <section id="opendronemap-outputs">
 <h1>Salidas de OpenDroneMap<a class="headerlink" href="#opendronemap-outputs" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>A continuación se enumeran algunos de los resultados útiles que produce ODM.</p>
-<div class="section" id="point-cloud">
+<section id="point-cloud">
 <h2>Nube de puntos<a class="headerlink" href="#point-cloud" title="Enlazar permanentemente con este título">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_georeferencing/odm_georeferenced_model.ply/laz/csv</span></code> – La nube de puntos georeferenciada en diferentes formatos de archivo</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap derived point cloud" src="_images/pointcloud.png" />
-</div>
+</figure>
 <p><em>Nube de puntos sobre la Universidad Estatal Zanzibar, cortesía de</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
-</div>
-<div class="section" id="d-textured-model">
+</section>
+<section id="d-textured-model">
 <h2>Modelo texturizado 3D<a class="headerlink" href="#d-textured-model" title="Enlazar permanentemente con este título">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_texturing/odm_textured_model.obj</span></code> – La malla de superficie texturizada <code class="docutils literal notranslate"><span class="pre">odm_texturing/odm_textured_model_geo.obj</span></code> – La malla de superficie texturizada y georeferenciada</p>
 <p>Puede acceder a la nube de puntos y las mallas texturizadas usando MeshLab. Abra MeshLab, y vaya a <a class="reference external" href="File:Import">File:Import</a> Mesh y seleccione su malla texturizada de una ubicación similar a la siguiente: <code class="docutils literal notranslate"><span class="pre">odm_texturing\odm_textured_model.obj</span></code></p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap derived textured mesh" src="_images/UR_3D.gif" />
-</div>
+</figure>
 <p><em>Malla texturizada cortesia de</em> <a class="reference external" href="https://twitter.com/opendronemap">OpenDroneMap</a></p>
-</div>
-<div class="section" id="orthophoto">
+</section>
+<section id="orthophoto">
 <h2>Ortofoto<a class="headerlink" href="#orthophoto" title="Enlazar permanentemente con este título">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_orthophoto/odm_orthphoto.png</span></code> – La ortofoto, pero este es un simple png, que no tiene información de georreferenciación</p>
 <p><code class="docutils literal notranslate"><span class="pre">odm_orthophoto/odm_orthophoto.tif</span></code> – Ortofoto GeoTIFF. Puede usarla en QGIS como una capa raster.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap orthophoto" src="_images/orthophoto.png" />
-</div>
+</figure>
 <p><em>Ortofoto sobre la Universidad Estatal de Zanzibar, cortesía de</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
-</div>
-<div class="section" id="dtm-dsm">
+</section>
+<section id="dtm-dsm">
 <h2>DTM/DSM<a class="headerlink" href="#dtm-dsm" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Los DTM/DSM solo se crearán si se usan las opciones <code class="docutils literal notranslate"><span class="pre">--dtm</span></code> o <code class="docutils literal notranslate"><span class="pre">--dsm</span></code>. Vea el <a class="reference external" href="https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-models">tutorial de modelos de elevación</a> para mas opciones sobre su creación.</p>
 <p>Los datos se almacenarán en:</p>
@@ -331,12 +332,12 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">odm_dem/dsm.tif</span></code></p></li>
 </ul>
 </div></blockquote>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap derived digital surface model" src="_images/digitalsurfacemodel.png" />
-</div>
+</figure>
 <p><em>Modelo digital de superficie sobre la Universidad Estatal de Zanzibar, cortesía de</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
-</div>
-<div class="section" id="list-of-all-outputs">
+</section>
+<section id="list-of-all-outputs">
 <h2>Lista de todas las salidas<a class="headerlink" href="#list-of-all-outputs" title="Enlazar permanentemente con este título">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
 ├── images/
@@ -382,8 +383,8 @@
 </pre></div>
 </div>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/outputs.rst">esta página</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

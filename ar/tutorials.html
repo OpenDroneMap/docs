@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="ar" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>دروس &mdash; OpenDroneMap 2.4.7 documentation</title>
+  <title>دروس &mdash; OpenDroneMap 2.5.5 documentation</title>
   
 
   
@@ -64,7 +65,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -292,14 +293,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tutorials">
+  <section id="tutorials">
 <h1>دروس<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h1>
 <p>ستجد أدناه تعليمات لبعض حالات الاستخدام الشائعة.</p>
-<div class="section" id="creating-high-quality-orthophotos">
+<section id="creating-high-quality-orthophotos">
 <h2>إنشاء Orthophotos عالية الجودة<a class="headerlink" href="#creating-high-quality-orthophotos" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap orthophoto" src="_images/orthophoto.png" />
-</div>
+</figure>
 <p>بدون أي تعديلات في المعلمات ، يختار ODM حل وسط جيد بين الجودة والسرعة واستخدام الذاكرة. إذا كنت ترغب في الحصول على نتائج عالية الجودة ، فأنت بحاجة إلى تعديل بعض المعلمات:</p>
 <blockquote>
 <div><ul class="simple">
@@ -310,39 +311,39 @@
 <li><p>يجب زيادة <code class="docutils literal notranslate"><span class="pre">mesh-size--</span></code> إلى <code class="docutils literal notranslate"><span class="pre">300000-600000</span></code> و <code class="docutils literal notranslate"><span class="pre">--mesh-octree-depth</span></code> يجب زيادتها إلى <code class="docutils literal notranslate"><span class="pre">10-11</span></code> في المناطق الحضرية لإعادة إنشاء مباني / أسقف أفضل.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="calibrating-the-camera">
+</section>
+<section id="calibrating-the-camera">
 <h2>معايرة الكاميرا<a class="headerlink" href="#calibrating-the-camera" title="Permalink to this headline">¶</a></h2>
 <p>تعد معايرة الأميرة تحديًا خاصًا مع كاميرات السلع. يمكن أن تؤثر التغيرات في درجات الحرارة والاهتزازات والتركيز والعوامل الأخرى على المعلمات المشتقة مع تأثيرات كبيرة على البيانات الناتجة. المعايرة التلقائية أو الذاتية ممكنة ومرغوب فيها مع رحلات الطائرات بدون طيار ، ولكن اعتمادًا على نمط الرحلة ، قد لا تؤدي المعايرة التلقائية إلى إزالة كل التشويه من المنتجات الناتجة. جيمس وروبسون (2014) في ورقتهما بعنوان `` التخفيف من الخطأ المنهجي في النماذج الطبوغرافية المشتقة من الطائرات بدون طيار وشبكات الصور الأرضية &lt;<a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609">https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609</a>&gt; &quot;_ معالجة كيف لتقليل التشويه من المعايرة الذاتية.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of lens distortion effect on bowling of data" src="_images/msimbasi_bowling.png" />
-</div>
+</figure>
 <p><em>Bowling effect on point cloud over 13,000+ image dataset collected by World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania.</em></p>
 <p>للتخفيف من هذا التأثير ، هناك عدد قليل من الخيارات ولكن أبسطها على النحو التالي: حلّق بنمطين مفصولين بـ 20 درجة ، وبدلاً من أن يكون لديك كاميرا (إشارة مستقيمة لأسفل) ، استخدم واحدًا يميل إلى الأمام بمقدار 5 درجات.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <a class="reference internal image-reference" href="_images/flightplanning.gif"><img alt="animation showing optimum" src="_images/flightplanning.gif" style="width: 640px; height: 480px;" /></a>
-</div>
+</figure>
 <p>نظرًا لأن هذا النهج في الطيران يمكن أن يستغرق وقتًا أطول من الرحلات النموذجية ، يمكن للطيار أو الفريق أن يطير في منطقة صغيرة باستخدام النهج أعلاه. ستقوم OpenDroneMap بإنشاء ملف معايرة يسمى camera.json يمكن استيراده بعد ذلك لاستخدامه لمعايرة رحلة أخرى يتم نقلها بكفاءة أكبر.</p>
 <p>بدلاً من ذلك ، يمكن تطبيق الطريقة التجريبية التالية: حلّق بتداخل أقل بكثير ، لكن رحلتين * متصالبتين * (تسمى أحيانًا التقاطع المائل) مفصولتين بزاوية 20 درجة مع كاميرا أمامية 5 درجات.</p>
 <ul class="simple">
 <li><p>مكن أن تكون نسب التداخل بين خطوط الشبكة أقل من الرحلات المتوازية. للحصول على نتائج جيدة ثلاثية الأبعاد ، ستحتاج إلى تداخل 68٪ و sidelap لما يعادل 83٪ تداخل و sidelap.</p></li>
 <li><p>للحصول على نتائج جيدة ثنائية الأبعاد و 2.5 D (نموذج الارتفاع الرقمي) ، ستحتاج إلى 42٪ تداخل و sidelap للحصول على 70٪ تراكب و sidelap مكافئ.</p></li>
 </ul>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="animation showing experimental optimum" src="_images/rotation.gif" />
-</div>
+</figure>
 <p>كما تحسن خطوط الطيران المنفصلة عموديًا الدقة ، ولكنها أقل دقة من الكاميرا التي تواجه الأمام بمقدار 5 درجات.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="figure showing effect of vertically separated flight lines and forward facing cameras on improving self calibration" src="_images/forward_facing.png" />
-</div>
+</figure>
 <p>من James and Robson (2014), <a class="reference external" href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></p>
-</div>
-<div class="section" id="creating-digital-elevation-models">
+</section>
+<section id="creating-digital-elevation-models">
 <h2>إنشاء نماذج الارتفاعات الرقمية<a class="headerlink" href="#creating-digital-elevation-models" title="Permalink to this headline">¶</a></h2>
 <p>بشكل افتراضي لا يُنشئ ODM DEMs. لإنشاء نموذج تضاريس رقمي ، تأكد من تمرير علامة &quot;--dtm&quot;. لإنشاء نموذج سطح رقمي ، تأكد من تمرير علامة &quot;--dsm&quot;.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap derived digital surface model" src="_images/digitalsurfacemodel.png" />
-</div>
+</figure>
 <p>بالنسبة لتوليد DTM ، يتم استخدام مرشح مورفولوجي بسيط (smrf) لتصنيف النقاط في الأرض مقابل غير الأرض ويتم استخدام نقاط الأرض فقط. يمكن التحكم في مرشح `` smrf '' من خلال عدة معلمات:</p>
 <blockquote>
 <div><ul class="simple">
@@ -355,9 +356,9 @@
 <p>يمكن أن يؤثر تغيير هذه الخيارات على نتيجة DTM بشكل كبير. أفضل مصدر للقراءة لفهم كيفية تأثير المعلمات على الإخراج هو قراءة الورقة الأصلية <a class="reference external" href="https://www.researchgate.net/publication/258333806_An_Improved_Simple_Morphological_Filter_for_the_Terrain_Classification_of_AirDatae_LIDAR_DATA">مرشح مورفولوجي بسيط محسن لتصنيف التضاريس لبيانات LIDAR المحمولة جواً</a> (PDF متاح مجانًا).</p>
 <p>بشكل عام ، فإن خيار &quot;- smrf-threshold&quot; له أكبر الأثر على النتائج.</p>
 <p>SMRF جيد في تجنب أخطاء النوع الأول (عدد صغير من نقاط الأرض المصنفة خطأً على أنها غير أرضية) ولكنها &quot;مقبولة&quot; فقط في تجنب أخطاء النوع الثاني (عدد كبير من النقاط غير الأرضية مصنفة خطأً كأرضية). يجب أن يؤخذ هذا في الاعتبار عند إنشاء DTMs التي من المفترض أن يتم استخدامها بصريًا ، لأن الكائنات التي تم الخلط بينها وبين الأرض تبدو وكأنها قطع أثرية في DTM النهائية.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of lens distortion effect on bowling of data" src="_images/smrf.png" />
-</div>
+</figure>
 <p>هناك معلمتان مهمتان أخريان تؤثران على توليد DEM:</p>
 <blockquote>
 <div><ul class="simple">
@@ -369,36 +370,36 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">ti</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">my</span><span class="o">/</span><span class="n">project</span><span class="p">:</span><span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span> <span class="o">&lt;</span><span class="n">my_odm_image</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">project</span><span class="o">-</span><span class="n">path</span> <span class="o">/</span><span class="n">datasets</span> <span class="o">--</span><span class="n">dtm</span> <span class="o">--</span><span class="n">dem</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">2</span> <span class="o">--</span><span class="n">smrf</span><span class="o">-</span><span class="n">threshold</span> <span class="mf">0.4</span> <span class="o">--</span><span class="n">smrf</span><span class="o">-</span><span class="n">window</span> <span class="mi">24</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="measuring-stockpile-volume">
+</section>
+<section id="measuring-stockpile-volume">
 <h2>Measuring stockpile volume<a class="headerlink" href="#measuring-stockpile-volume" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="fieldwork-planning">
+<section id="fieldwork-planning">
 <h3>Fieldwork planning<a class="headerlink" href="#fieldwork-planning" title="Permalink to this headline">¶</a></h3>
 <p>Weather conditions modify illumination and thus impact the photography results. Best results are obtained with evenly overcast or clear skies. Also look for low wind speeds that allow the camera to remain stable during the data collection process.
 In order to avoid shadows which on one side of the stockpile can obstruct feature detection and lessen the number of resulting points, always prefer the flights during the midday, when the sun is at the nadir so everything is consistently illuminated.
 Also ensure that your naked eye horizontal visibility distance is congruent with the planned flight distances for the specific project, so image quality is not adversely impacted by dust, fog, smoke, volcanic ash or pollution.</p>
-</div>
-<div class="section" id="flight-pattern">
+</section>
+<section id="flight-pattern">
 <h3>Flight pattern<a class="headerlink" href="#flight-pattern" title="Permalink to this headline">¶</a></h3>
 <p>Most stockpile measurement jobs does not require a crosshatch pattern or angled gimbal as the resting angle of stockpile materials allows the camera to capture the entire stockpile sides. Only some special cases where erosion or machinery operations causes steep angles on the faces of the stockpile would benefit of the crosshatch flight pattern and angled camera gimbal but consider that these additional recognized features come at a cost, (in field labor and processing time) and the resulting improvements are sometimes negligible.</p>
 <p>In most of the cases a lawn mower flight pattern is capable of producing highly accurate stockpile models.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="a simple lawnmower flight pattern can produce accurate results" src="_images/lawnmower_pattern.png" />
-</div>
+</figure>
 <p>Recommended overlap would be between 75% and 80% with a sidelap in the order of 65% to 70%. It is also recommended to slightly increase overlap and sidelap as the flight height is increased.</p>
-</div>
-<div class="section" id="flight-height">
+</section>
+<section id="flight-height">
 <h3>Flight height<a class="headerlink" href="#flight-height" title="Permalink to this headline">¶</a></h3>
 <p>Flight height can be influenced by different camera models, but in a general way and in order to ensure a balance between image quality and flight optimization, it is recommended to be executed at heights 3 to 4 times the tallest stockpile height. So for a 10 meter stockpile, images can be captured at a height of 40 meters.
 As the flight height is increased, it is also recommended to increase overlap, so for a 40 meter height flight you can set a 65% sidelap and 75% overlap, but for a planned height of 80 meters a 70% sidelap and 80% overlap allowing features to be recognized and properly processed.</p>
-</div>
-<div class="section" id="gcps">
+</section>
+<section id="gcps">
 <h3>GCPs<a class="headerlink" href="#gcps" title="Permalink to this headline">¶</a></h3>
 <p>To achieve accuracy levels better than 3%, the use of GCP’s is advised. Typically 5 distributed GCP are sufficient to ensure accurate results.
 When placing or measuring GCP, equipment accuracy should be greater than the GSD. Survey grade GNSS and total stations  are intended to provide the required millimetric accuracy.</p>
 <p>For further information on the use of GCPs, please refer to the <a class="reference external" href="https://docs.opendronemap.org/gcp.html">Ground Control Points section</a>.</p>
-</div>
-<div class="section" id="processing-parameters">
+</section>
+<section id="processing-parameters">
 <h3>Processing parameters<a class="headerlink" href="#processing-parameters" title="Permalink to this headline">¶</a></h3>
 <p>A highly accurate model can be achieved using WebODM high resolution predefined settings. Then you can further adjust some parameters as necessary.</p>
 <p>If using ODM, these this reference values can help you configure the process settings.</p>
@@ -407,69 +408,69 @@ When placing or measuring GCP, equipment accuracy should be greater than the GSD
 <p>--orthophoto-resolution 1.0</p>
 <p>--feature-quality high</p>
 <p>--pc-quality high</p>
-</div>
-<div class="section" id="measuring">
+</section>
+<section id="measuring">
 <h3>Measuring<a class="headerlink" href="#measuring" title="Permalink to this headline">¶</a></h3>
 <p>As almost 50% of the material will be found in the first 20% of the stockpile height, special care should be taken in adequately defining the base plane.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="almost 50% of the material will be found in the first 20% of the stockpile height" src="_images/stockpile.png" />
-</div>
+</figure>
 <p>In WebODM Dashboard, clic on &quot;view map&quot; to start a 2D view of your project.</p>
 <p>Once in the 2D map view, clic on the &quot;Measure volume, area and length&quot; button.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="clic on the &quot;Measure volume, area and length&quot; button" src="_images/measurement1.png" />
-</div>
+</figure>
 <p>then clic on &quot;Create a new measurement&quot;</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="clic on &quot;Create a new measurement&quot;" src="_images/measurement2.png" />
-</div>
+</figure>
 <p>Start placing the points to define the stockpile base plane</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Define the stockpile base plane" src="_images/measurement3.png" />
-</div>
+</figure>
 <p>Clic on &quot;Finish measurement&quot; to finish the process.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Clic on &quot;Finish measurement&quot; to finish the process" src="_images/measurement4.png" />
-</div>
+</figure>
 <p>Dialog box will show the  message &quot;Computing ...&quot; for a few seconds, and after the computing is finished the volume measurement value will be displayed.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Clic on &quot;Finish measurement&quot; to finish the process" src="_images/measurement7.png" />
-</div>
+</figure>
 <p>If you are using the command line OpenDroneMap you can use the dsm files to measure the stockpile volumes using other programs.</p>
 <p>Also consider that once the limits of the stockpile are set in software like <a class="reference external" href="https://www.qgis.org">QGis</a>, you will find there are some ways to determine the base plane. So for isolated stockpiles which boundaries are mostly visible, a linear approach can be used. While for stockpiles set in slopes or in bins, the base plane is better defined by the lowest point.
 Creation of a triangulated 3D surface to define the base plane is advised for large stockpiles. This is also valid for stockpiles paced on irregular surfaces.</p>
-</div>
-<div class="section" id="expected-accuracy">
+</section>
+<section id="expected-accuracy">
 <h3>Expected accuracy<a class="headerlink" href="#expected-accuracy" title="Permalink to this headline">¶</a></h3>
 <p>For carefully planned and executed projects, and specially when GSD is less than 1 cm, the expected accuracy should be in the range of 1% to 2%.
 The resulting accuracy is comparable to the commercially available photogrammetry software and the obtained using survey grade GNSS equipment.</p>
-</div>
-</div>
-<div class="section" id="using-docker">
+</section>
+</section>
+<section id="using-docker">
 <h2>باستخدام  Docker<a class="headerlink" href="#using-docker" title="Permalink to this headline">¶</a></h2>
 <p>نظرًا لأن العديد من المستخدمين يستخدمون عامل إرساء لنشر OpenDroneMap ، فقد يكون من المفيد فهم بعض الأوامر الأساسية من أجل استجواب حالات عامل الميناء عندما تسوء الأمور ، أو نشعر بالفضول حيال ما يحدث. Docker هي بيئة حاويات تهدف ، من بين أمور أخرى ، إلى تسهيل نشر البرامج بشكل مستقل عن البيئة المحلية. بهذه الطريقة ، فهي تشبه الأجهزة الافتراضية.</p>
 <p>يمكن لبعض الأوامر البسيطة أن تجعل تجربة docker أفضل بكثير.</p>
-<div class="section" id="listing-docker-machines">
+<section id="listing-docker-machines">
 <h3>ادراج Docker ماكينات<a class="headerlink" href="#listing-docker-machines" title="Permalink to this headline">¶</a></h3>
 <p>يمكننا البدء بإدراج آلات الرصيف المتوفرة على الجهاز الحالي الذي نقوم بتشغيله على النحو التالي:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">ps</span>
 <span class="n">CONTAINER</span> <span class="n">ID</span>        <span class="n">IMAGE</span>                  <span class="n">COMMAND</span>                  <span class="n">CREATED</span>             <span class="n">STATUS</span>              <span class="n">PORTS</span>                    <span class="n">NAMES</span>
 <span class="mi">2518817537</span><span class="n">ce</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">36</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">36</span> <span class="n">hours</span>                                  <span class="n">zen_wright</span>
-<span class="mi">1</span><span class="n">cdc7fadf688</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">37</span> <span class="n">hours</span>         <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">flamboyant_dhawan</span>
+<span class="mi">1</span><span class="n">cdc7fadf688</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">37</span> <span class="n">hours</span>         <span class="mf">0.0.0.0</span><span class="p">:</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">flamboyant_dhawan</span>
 </pre></div>
 </div>
 <p>إذا أردنا رؤية الأجهزة التي قد لا تعمل ولكنها لا تزال موجودة ، فيمكننا إضافة علامة &quot;-a&quot;:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">ps</span> <span class="o">-</span><span class="n">a</span>
 <span class="n">CONTAINER</span> <span class="n">ID</span>        <span class="n">IMAGE</span>                  <span class="n">COMMAND</span>                  <span class="n">CREATED</span>             <span class="n">STATUS</span>                    <span class="n">PORTS</span>                    <span class="n">NAMES</span>
 <span class="mi">2518817537</span><span class="n">ce</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">36</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">36</span> <span class="n">hours</span>                                        <span class="n">zen_wright</span>
-<span class="mi">1</span><span class="n">cdc7fadf688</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">37</span> <span class="n">hours</span>               <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">flamboyant_dhawan</span>
+<span class="mi">1</span><span class="n">cdc7fadf688</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">37</span> <span class="n">hours</span>               <span class="mf">0.0.0.0</span><span class="p">:</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">flamboyant_dhawan</span>
 <span class="n">cd7b9585b8f6</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>                            <span class="n">nostalgic_lederberg</span>
 <span class="n">e31010c00b9a</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;python /code/run.py…&quot;</span>   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>                              <span class="n">suspicious_kepler</span>
 <span class="n">c44e0d0b8448</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>                            <span class="n">wonderful_burnell</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="accessing-logs-on-the-instance">
+</section>
+<section id="accessing-logs-on-the-instance">
 <h3>الوصول إلى السجلات على سبيل المثال<a class="headerlink" href="#accessing-logs-on-the-instance" title="Permalink to this headline">¶</a></h3>
 <p>باستخدام &quot;  CONTAINER ID&quot; أو الاسم ، يمكننا الوصول إلى أي سجلات متاحة على الجهاز على النحو التالي:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">logs</span> <span class="mi">2518817537</span><span class="n">ce</span>
@@ -500,8 +501,8 @@ The resulting accuracy is comparable to the commercially available photogrammetr
 </pre></div>
 </div>
 <p>تخبر القيمة <cite>-5</cite> الأمر tail بإعطائنا الأسطر الخمسة الأخيرة فقط من السجلات.</p>
-</div>
-<div class="section" id="command-line-access-to-instances">
+</section>
+<section id="command-line-access-to-instances">
 <h3>وصول سطر الأوامر إلى المثيلات<a class="headerlink" href="#command-line-access-to-instances" title="Permalink to this headline">¶</a></h3>
 <p>في بعض الأحيان نحتاج إلى التعمق أكثر في استكشافنا لعملية OpenDroneMap. لهذا ، يمكننا الحصول على وصول مباشر لسطر الأوامر إلى الأجهزة. لهذا ، يمكننا استخدام <cite>docker exec</cite> لتنفيذ قذيفة سطر الأوامر` bash` في الجهاز المعني على النحو التالي:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">ti</span> <span class="mi">2518817537</span><span class="n">ce</span> <span class="n">bash</span>
@@ -509,24 +510,24 @@ The resulting accuracy is comparable to the commercially available photogrammetr
 </pre></div>
 </div>
 <p>الآن تم تسجيل دخولنا إلى مثيل عامل الميناء لدينا ويمكننا استكشاف الجهاز.</p>
-</div>
-<div class="section" id="cleaning-up-after-docker">
+</section>
+<section id="cleaning-up-after-docker">
 <h3>التنظيف بعد Docker<a class="headerlink" href="#cleaning-up-after-docker" title="Permalink to this headline">¶</a></h3>
 <p>تمتع Docker باستخدام مؤسف للمساحة ولا يقوم افتراضيًا بتنظيف البيانات والآلات الزائدة عند اكتمال العمليات. يمكن أن يكون ذلك مفيدًا إذا احتجنا إلى الوصول إلى عملية تم إنهاؤها منذ ذلك الحين ، ولكنها تحمل عبء استخدام كميات متزايدة من التخزين بمرور الوقت. يقدم Maciej Łebkowski <cite>نظرة عامة ممتازة على كيفية إدارة الاستخدام الزائد للقرص في عامل الميناء &lt;https://lebkowski.name/docker-volumes/&gt;</cite> _.</p>
-</div>
-</div>
-<div class="section" id="using-odm-from-low-bandwidth-location">
+</section>
+</section>
+<section id="using-odm-from-low-bandwidth-location">
 <h2>استخدام ODM من موقع النطاق الترددي المنخفض<a class="headerlink" href="#using-odm-from-low-bandwidth-location" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="what-is-this-and-who-is-it-for">
+<section id="what-is-this-and-who-is-it-for">
 <h3>ما هذا ومن هو؟<a class="headerlink" href="#what-is-this-and-who-is-it-for" title="Permalink to this headline">¶</a></h3>
 <p>عبر  <a class="reference external" href="https://github.com/ivangayton/GDAL_scripts/">Ivan Gayton's repo</a></p>
 <p>&lt;<a class="reference external" href="https://www.opendronemap.org/">https://www.opendronemap.org/</a>&gt;&quot; __ لا يمكن دائمًا إعدادها بشكل فعال محليًا - يتطلب الأمر جهازًا قويًا إلى حد ما لمعالجة مجموعات البيانات الكبيرة - لذا يمكن أن تكون الآلة السحابية أحيانًا هي الحل للأشخاص في حقل. ومع ذلك ، فإن عرض النطاق الترددي يمثل مشكلة في العديد من الإعدادات منخفضة الدخل. لا يمكن حل هذا القيد تمامًا ، ولكن الطريقة التالية تؤدي مهمة معقولة لتقليل النطاق الترددي اللازم لمعالجة مجموعات بيانات صور الطائرات بدون طيار على السحابة من المواقع الأفريقية.</p>
 <p>نقدم هنا عملية صعبة ولكنها عملية لإنشاء جهاز سحابة OpenDroneMap (* لا * CloudODM ، ضع في اعتبارك أنه مجرد نسخة مستندة إلى السحابة من ODM تقوم بتشغيلها من سطر الأوامر) واستخدامها لمعالجة مجموعات الصور الكبيرة عن بُعد. إنه يتطلب معرفة باستخدام سطر أوامر Unix و ssh وحساب Digital Ocean (قد يعمل Amazon AWS أيضًا ، ربما مع اختلافات طفيفة في الإعداد) ، ومستوى معتدل من معرفة الكمبيوتر العامة. إذا لم تكن على دراية بالكمبيوتر إلى حد ما وترغب في إثارة ضجة مع إعداد صعب قليلاً ، فإن &quot;CloudODM &lt;<a class="reference external" href="https://www.opendronemap.org/cloudodm/">https://www.opendronemap.org/cloudodm/</a>&gt;&quot; __ هو ما يجب أن تنظر إليه.</p>
 <p>تستهدف العملية برمتها في الغالب شخصًا يقوم بمهام كبيرة في موقع أفريقي أو موقع مماثل يتطلع إلى معالجة البيانات في أسرع وقت ممكن بينما لا يزال في بيئة ميدانية. ولذلك ، فإنه يؤكد على سير العمل الذي يهدف إلى تقليل نقل البيانات / النطاق الترددي ، بدلاً من أبسط طريقة لتشغيل ODM.</p>
-</div>
-<div class="section" id="steps">
+</section>
+<section id="steps">
 <h3>خطوات<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="install">
+<section id="install">
 <h4>تثبيت<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>قم بإنشاء قطرة محيط رقمية مع ذاكرة وصول عشوائي بسعة 4 جيجابايت على الأقل. سيكلفك ذلك حوالي 20 دولارًا / شهريًا. من المحتمل أن يفشل التثبيت أقل من 4 غيغابايت من ذاكرة الوصول العشوائي. عندما نقوم بتشغيل عملية ODM فعليًا ، سنقوم بتغيير حجمها إلى جهاز سحابي أكبر بكثير وأكثر تكلفة ، ولكن بين الجري يمكنك تقليصها بين الجري إلى ثاني أرخص قطيرة والتي تكلف 10 دولارات فقط في الشهر (أرخص قطرة ، بسعر 5 دولارات شهريًا ، ويأتي مع محرك أقراص صغير لا يمكنك تقليصه).</p>
@@ -573,8 +574,8 @@ export PATH=$PATH:/home/odm/ODM/
 <ul class="simple">
 <li><p>ستحتاج الآن إلى محرك أقراص ثابت سحابي ثانٍ (&quot;حجم&quot; في المصطلح الرقمي للمحيط) كبير بما يكفي لإدارة مشروعك. يبدو أن القاعدة الأساسية هي 10 أضعاف حجم مجموعة صورك الخام ؛ لدينا مجموعة من الصور بحجم 100 جيجابايت وقمنا بإعداد وحدة تخزين بحجم 1000 جيجابايت (بمجرد الانتهاء من التشغيل ، يجب أن تكون قادرًا على التخلص من معظم سعة محرك الأقراص الباهظة الثمن هذه ، ولكن يلزم إكمال العملية). قم بإعداد الصوت وإرفاقه بالقطرة الخاصة بك ، و <a class="reference external" href="https://www.digitalocean.com/docs/volumes/how-to/mount/">تكوين نقطة التحميل الخاصة به</a> (في هذا المثال ، نقوم بتعيينه إلى <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>).</p></li>
 </ul>
-</div>
-<div class="section" id="prep-data-and-project">
+</section>
+<section id="prep-data-and-project">
 <h4>إعداد البيانات والمشروع<a class="headerlink" href="#prep-data-and-project" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>الآن ادفع صورك إلى الخادم. يمكنك استخدام <a class="reference external" href="https://en.wikipedia.org/wiki/Secure_copy">Secure Copy (scp)</a> مثل ذلك: <code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">-r</span> <span class="pre">/path/to/my/imagefolder</span> <span class="pre">odm&#64;xxx.xxx.xxx.xxx:/mnt/odmdata/</span></code>.</p>
@@ -584,7 +585,7 @@ export PATH=$PATH:/home/odm/ODM/
 </ul>
 </li>
 </ul>
-<div class="section" id="directory-structure">
+<section id="directory-structure">
 <h5>بنية الدليل<a class="headerlink" href="#directory-structure" title="Permalink to this headline">¶</a></h5>
 <p>يتطلب ODM إعداد الدلائل الموجودة على الجهاز فقط. البتات الحرجة هي مجلد التثبيت (إذا قمت بتثبيته كما هو موضح أعلاه ، فهو <code class="docutils literal notranslate"><span class="pre">/home/odm/ODM/</span></code> ومجلد المشروع (i.e. <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code>))</p>
 <ul class="simple">
@@ -594,9 +595,9 @@ export PATH=$PATH:/home/odm/ODM/
 <li><p>قم بتعديل settings.yaml لتحديد الدليل الأصلي لمجلد المشروع (في هذه الحالة المجلد الذي أنشأناه ، `` / mnt / odmdata / <code class="docutils literal notranslate"><span class="pre">).</span> <span class="pre">تأكد</span> <span class="pre">من</span> <span class="pre">أن</span> <span class="pre">الصور</span> <span class="pre">في</span> <span class="pre">الموضع</span> <span class="pre">الصحيح</span> <span class="pre">،</span> <span class="pre">مثل</span>&#160; <span class="pre">``/mnt/odmdata/myproject/images</span></code> والملفات المساعدة الأخرى (gcp_list.txt و image_groups.txt) في المجلد الجذر <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code></p></li>
 <li><p>إذا كانت لديك الصور في مجلدات منفصلة لكتل ​​أو رحلات طيران فردية (والتي ستفعلها إذا تم تنظيم إدارة رحلتك) ، فيمكنك إنشاء ملف image_groups.txt مع التعويذات <code class="docutils literal notranslate"><span class="pre">لـ</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">*</span> <span class="pre">؛</span> <span class="pre">هل</span> <span class="pre">cd</span> <span class="pre">$</span> <span class="pre">i</span> <span class="pre">؛</span> <span class="pre">for</span> <span class="pre">j</span> <span class="pre">in</span> <span class="pre">*؛</span> <span class="pre">do</span> <span class="pre">echo</span> <span class="pre">&quot;$</span> <span class="pre">j</span> <span class="pre">$</span> <span class="pre">i&quot;</span> <span class="pre">&gt;&gt;</span> <span class="pre">../$i.txt؛</span> <span class="pre">فعله؛</span> <span class="pre">مؤتمر</span> <span class="pre">نزع</span> <span class="pre">السلاح</span> <span class="pre">../</span> <span class="pre">؛</span> <span class="pre">فعل</span> <span class="pre">؛</span></code> و <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">../</span></code> ، <code class="docutils literal notranslate"><span class="pre">لأني</span> <span class="pre">في</span> <span class="pre">myproject</span> <span class="pre">/</span> <span class="pre">*.</span> <span class="pre">txt</span> <span class="pre">؛</span> <span class="pre">do</span> <span class="pre">cat</span> <span class="pre">$</span> <span class="pre">i</span> <span class="pre">&gt;&gt;</span> <span class="pre">image_groups.txt؛</span> <span class="pre">فعل</span> <span class="pre">؛</span></code>. من المفترض أن يؤدي ذلك إلى إنشاء ملف بهيكل صحيح: قائمة بجميع ملفات الصور و &quot;اسم المجموعة&quot; بعد كل ملف (والذي سيكون في هذه الحالة ببساطة اسم المجلد الذي جاء منه). ثم انقل جميع ملفات الصور إلى دليل واحد يسمى الصور في دليل جذر المشروع (لذا <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images/</span></code>). سيسمح ملف image_groups.txt لـ ODM بتتبع الصور التي تنتمي إلى نفس الدفعة ، على الرغم من أنها كلها في دليل واحد.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="resize-droplet-pull-pin-run-away">
+</section>
+</section>
+<section id="resize-droplet-pull-pin-run-away">
 <h4>تغيير حجم القطرة ، وسحب دبوس ، والهروب<a class="headerlink" href="#resize-droplet-pull-pin-run-away" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>قم بإيقاف تشغيل جهازك وتغيير حجمه إلى عدد هائل من وحدات المعالجة المركزية وكمية الذاكرة المناسبة. أستخدم الجهاز المُحسّن للذاكرة مع 24 وحدة vCPU مخصصة و 192 غيغابايت من ذاكرة الوصول العشوائي (والتي تكلف حوالي 1.60 دولارًا في الساعة - والتي تضيف بسرعة ، تزيد عن 1000 دولار / شهر). إعادة التشغيل ، والبدء في العمل بسرعة حتى لا تضيع وقتًا كبيرًا.</p></li>
@@ -621,8 +622,8 @@ export PATH=$PATH:/home/odm/ODM/
 <ul class="simple">
 <li><p>قد ترغب في مراقبة htop (للحصول على فكرة عن استخدام الموارد حتى تتمكن في المستقبل من تدوير آلة كبيرة بقدر الضرورة)</p></li>
 </ul>
-</div>
-<div class="section" id="after-it-finishes-assuming-you-survive-that-long">
+</section>
+<section id="after-it-finishes-assuming-you-survive-that-long">
 <h4>بعد الانتهاء (بافتراض أنك تعيش طويلاً)<a class="headerlink" href="#after-it-finishes-assuming-you-survive-that-long" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>بمجرد الانتهاء من المعالجة ، أغلق الماكينة وقم بتغيير حجمها مرة أخرى إلى الحد الأدنى للسعة غير المكلفة.</p></li>
@@ -641,10 +642,10 @@ export PATH=$PATH:/home/odm/ODM/
 </pre></div>
 </div>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst">this page</a>!</p>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
 
 
            </div>

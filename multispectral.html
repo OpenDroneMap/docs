@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Multispectral Support &mdash; OpenDroneMap 2.4.7 documentation</title>
+  <title>Multispectral Support &mdash; OpenDroneMap 2.5.5 documentation</title>
   
 
   
@@ -63,7 +64,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -291,10 +292,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="multispectral-support">
+  <section id="multispectral-support">
 <h1>Multispectral Support<a class="headerlink" href="#multispectral-support" title="Permalink to this headline">¶</a></h1>
 <p>Since version 0.9.9 ODM has basic support for radiometric normalization, which is able to generate reflectance orthophotos from multispectral cameras. Multispectral cameras capture multiple shots of the scene using different band sensors.</p>
-<div class="section" id="hardware">
+<section id="hardware">
 <h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this headline">¶</a></h2>
 <p>While we aim to support as many cameras as possible, multispectral support has been developed using the following cameras, so they will work better:</p>
 <blockquote>
@@ -304,13 +305,13 @@
 </ul>
 </div></blockquote>
 <p>Other cameras might also work. You can help us expand this list by <a class="reference external" href="https://community.opendronemap.org/c/datasets/10">sharing datasets</a> captured with other cameras.</p>
-</div>
-<div class="section" id="usage">
+</section>
+<section id="usage">
 <h2>Usage<a class="headerlink" href="#usage" title="Permalink to this headline">¶</a></h2>
 <p>Process all the images from all bands at once (do not separate the bands into multiple folders) and pass the <cite>–radiometric-calibration</cite> parameter to enable radiometric normalization. If the images are part of a multi-camera setup, the resulting orthophoto will have N bands, one for each camera (+ alpha).</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst">this page</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

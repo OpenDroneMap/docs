@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="te" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>OpenDroneMap అవుట్‌పుట్‌లు &mdash; OpenDroneMap 2.4.7 documentation</title>
+  <title>OpenDroneMap అవుట్‌పుట్‌లు &mdash; OpenDroneMap 2.5.5 documentation</title>
   
 
   
@@ -64,7 +65,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -292,36 +293,36 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="opendronemap-outputs">
+  <section id="opendronemap-outputs">
 <h1>OpenDroneMap అవుట్‌పుట్‌లు<a class="headerlink" href="#opendronemap-outputs" title="Permalink to this headline">¶</a></h1>
 <p>ODM ఉత్పత్తి చేసే కొన్ని ఉపయోగకరమైన ఉత్పాదనలు క్రింద ఇవ్వబడ్డాయి.</p>
-<div class="section" id="point-cloud">
+<section id="point-cloud">
 <h2>పాయింట్ క్లౌడ్<a class="headerlink" href="#point-cloud" title="Permalink to this headline">¶</a></h2>
 <p>`` odm_georeferencing / odm_georeferenced_model.ply / laz / csv`` - వేర్వేరు ఫైల్ ఫార్మాట్లలో భౌగోళిక సూచించిన పాయింట్ క్లౌడ్</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap derived point cloud" src="_images/pointcloud.png" />
-</div>
+</figure>
 <p><em>Point cloud over State University Zanzibar, courtesy of</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
-</div>
-<div class="section" id="d-textured-model">
+</section>
+<section id="d-textured-model">
 <h2>3D ఆకృతి మోడల్<a class="headerlink" href="#d-textured-model" title="Permalink to this headline">¶</a></h2>
 <p>`` odm_texturing / odm_textured_model.obj`` - ఆకృతి చేసిన ఉపరితల మెష్ `` odm_texturing / odm_textured_model_geo.obj`` - భౌగోళిక మరియు ఉపరితల ఉపరితల మెష్</p>
 <p>మీరు మెష్ లాబ్ ఉపయోగించి పాయింట్ క్లౌడ్ మరియు ఆకృతి మెష్లను యాక్సెస్ చేయవచ్చు. మెష్‌ల్యాబ్‌ను తెరిచి, ఫైల్‌ను ఎంచుకోండి: మెష్‌ను దిగుమతి చేయండి మరియు కింది వాటికి సమానమైన స్థానం నుండి మీ ఆకృతి మెష్‌ను ఎంచుకోండి: `` odm_texturing odm_textured_model.obj``</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap derived textured mesh" src="_images/UR_3D.gif" />
-</div>
+</figure>
 <p><em>Textured mesh courtesy of</em> <a class="reference external" href="https://twitter.com/opendronemap">OpenDroneMap</a></p>
-</div>
-<div class="section" id="orthophoto">
+</section>
+<section id="orthophoto">
 <h2>ఆర్థోఫోటో<a class="headerlink" href="#orthophoto" title="Permalink to this headline">¶</a></h2>
 <p>`` odm_orthophoto / odm_orthphoto.png`` - ఆర్థోఫోటో, కానీ ఇది సరళమైన png, దీనికి భౌగోళిక సమాచారం లేదు</p>
 <p>`` odm_orthophoto / odm_orthphoto.tif`` - GeoTIFF ఆర్థోఫోటో. మీరు దీన్ని QGIS లో రాస్టర్ లేయర్‌గా ఉపయోగించవచ్చు.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap orthophoto" src="_images/orthophoto.png" />
-</div>
+</figure>
 <p><em>Orthophoto over State University Zanzibar, courtesy of</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
-</div>
-<div class="section" id="dtm-dsm">
+</section>
+<section id="dtm-dsm">
 <h2>DTM / DSM<a class="headerlink" href="#dtm-dsm" title="Permalink to this headline">¶</a></h2>
 <p>`` --Dtm`` లేదా `` --dsm`` ఎంపికలు ఉపయోగించినట్లయితే మాత్రమే DTM / DSM సృష్టించబడుతుంది. సృష్టించే మరిన్ని ఎంపికల కోసం ఎలివేషన్ మోడళ్లపై &lt;ట్యుటోరియల్ &lt;<a class="reference external" href="https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-models">https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-models</a>&gt;`_ చూడండి.</p>
 <p>డేటా వీటిలో నిల్వ చేయబడుతుంది:</p>
@@ -331,12 +332,12 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">odm_dem/dsm.tif</span></code></p></li>
 </ul>
 </div></blockquote>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap derived digital surface model" src="_images/digitalsurfacemodel.png" />
-</div>
+</figure>
 <p><em>Digital surface model over State University Zanzibar, courtesy of</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
-</div>
-<div class="section" id="list-of-all-outputs">
+</section>
+<section id="list-of-all-outputs">
 <h2>అన్ని ఉత్పాదనల జాబితా<a class="headerlink" href="#list-of-all-outputs" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
 ├── images/
@@ -382,8 +383,8 @@
 </pre></div>
 </div>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/outputs.rst">this page</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

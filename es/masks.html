@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="es" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Usar máscaras de imagen &mdash; documentación de OpenDroneMap - 2.4.7</title>
+  <title>Usar máscaras de imagen &mdash; documentación de OpenDroneMap - 2.5.5</title>
   
 
   
@@ -64,7 +65,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -129,14 +130,14 @@
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-high-quality-orthophotos">Creación de Ortofotos de Alta Calidad</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#calibrating-the-camera">Calibrar la cámara</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-digital-elevation-models">Creación de modelos de elevación digitales</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Fieldwork planning</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Flight pattern</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Flight height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Medir el volumen de pilas de materiales a granel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Planificación del trabajo de campo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Patrón de vuelo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Altura de vuelo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tutorials.html#gcps">GCPs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Processing parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Measuring</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Expected accuracy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Parámetros de procesamiento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Medición</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Precisión esperada</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-docker">Usando Docker</a><ul>
@@ -292,24 +293,24 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="using-image-masks">
+  <section id="using-image-masks">
 <h1>Usar máscaras de imagen<a class="headerlink" href="#using-image-masks" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>A partir de ODM `` 2.0 “”, las personas pueden proporcionar máscaras de imagen para informar al software de que omita la reconstrucción en ciertas áreas. Esto es útil para los casos en los que el cielo se incluyó accidentalmente en las fotos de entrada de tomas oblicuas, o simplemente para limitar la reconstrucción de un solo sujeto.</p>
 <p>Para agregar una máscara, simplemente cree una nueva imagen en blanco y negro de la misma dimensión que la imagen de destino que desea enmascarar (puede usar un programa como GIMP para hacer esto). Colorea de negro las zonas a excluir de la reconstrucción.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Target image" src="https://user-images.githubusercontent.com/1951843/93247037-ade87a00-f75b-11ea-8b42-25bc1d89279d.png" />
-</div>
-<div class="figure align-center">
+</figure>
+<figure class="align-center">
 <img alt="Image mask" src="https://user-images.githubusercontent.com/1951843/93247007-a2954e80-f75b-11ea-87b3-4f04bd1737b9.png" />
-</div>
-<div class="figure align-center">
+</figure>
+<figure class="align-center">
 <img alt="3D result (building is masked)" src="https://user-images.githubusercontent.com/1951843/93246970-8f827e80-f75b-11ea-8179-5a8fdd9f5193.png" />
-</div>
+</figure>
 <p>Nombre su archivo:</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;_mask.JPG</span></code></p>
 <p>Por ejemplo, `` DJI_0018.JPG “” puede tener una máscara creando un archivo `` DJI_0018_mask.JPG “” e incluirlo en la lista de imágenes. Puede utilizar los formatos `` .JPG “”, `` .PNG “”, `` .BMP “” y `` .TIF “” para las máscaras de imagen.</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/masks.rst">esta página</a>!</p>
-</div>
+</section>
 
 
            </div>

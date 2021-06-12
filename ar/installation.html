@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="ar" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>التثبيت والبدء &mdash; OpenDroneMap 2.4.7 documentation</title>
+  <title>التثبيت والبدء &mdash; OpenDroneMap 2.5.5 documentation</title>
   
 
   
@@ -64,7 +65,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -292,50 +293,50 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="installation-and-getting-started">
+  <section id="installation-and-getting-started">
 <h1>التثبيت والبدء<a class="headerlink" href="#installation-and-getting-started" title="Permalink to this headline">¶</a></h1>
 <p>تم اقتباس هذا القسم وتعديله بإذن من  <a class="reference external" href="https://odmbook.com">OpenDroneMap: الدليل المفقود</a>, by Piero Toffanin.</p>
 <p>حتى وقت قريب كان OpenDroneMap هو المصطلح المستخدم للإشارة إلى تطبيق سطر أوامر واحد (ما يعرف الآن بمشروع ODM). مع التطور الأخير لواجهة الويب وواجهة برمجة التطبيقات والأدوات الأخرى ، أصبحت OpenDroneMap نظامًا إيكولوجيًا من التطبيقات المختلفة لمعالجة البيانات الجوية وتحليلها وعرضها. يتكون هذا النظام البيئي من عدة مكونات:</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="ODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/odm-logo-64x64.png" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>** ODM ** هو محرك المعالجة ، والذي يمكن استخدامه من سطر الأوامر. يأخذ الصور كمدخلات وينتج مجموعة متنوعة من المخرجات ، بما في ذلك الغيوم النقطية ، والنماذج ثلاثية الأبعاد والصور التقويمية</p></li>
 </ul>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="NodeODM Logo" src="_images/NodeODMLogo.png" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>** NodeODM ** عبارة عن واجهة برمجة تطبيقات خفيفة الوزن مبنية على أعلى ODM. يسمح للمستخدمين والتطبيقات للوصول إلى وظائف ODM عبر شبكة الكمبيوتر</p></li>
 </ul>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="WebODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/webodm-icon-64x64.png" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>** WebODM ** عبارة عن واجهة مستخدم سهلة الاستخدام تتضمن عارض خرائط وعارض ثلاثي الأبعاد وتسجيلات دخول المستخدمين ونظامًا إضافيًا والعديد من الميزات الأخرى المتوقعة من منصات رسم الخرائط الحديثة بطائرات بدون طيار</p></li>
 </ul>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="CloudODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2019/01/cloudodm-64x64.png" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>** CloudODM ** هو عميل سطر أوامر صغير للتواصل مع ODM عبر واجهة برمجة تطبيقات NodeODM</p></li>
 </ul>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="PyODM Logo" src="_images/PyODMLogo.png" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>** PyODM ** هي Python SDK لإنشاء المهام عبر واجهة برمجة تطبيقات NodeODM. نغطيها بمزيد من التفصيل في فصل &quot;المعالجة الآلية باستخدام Python&quot;</p></li>
 </ul>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="ClusterODM Logo" src="_images/ClusterODMLogo.png" />
-</div>
+</figure>
 <ul class="simple">
 <li><p>** ClusterODM ** هو موازن تحميل لربط أمثلة NodeODM المتعددة معًا</p></li>
 </ul>
 <p>تتوفر ODM و NodeODM و WebODM على جميع المنصات الرئيسية (Windows و macOS و Linux) عبر برنامج يسمى docker ، وهو مطلوب لتشغيل البرنامج. تقدم شركة Docker طريقة لتشغيل &quot;الحاويات&quot;. الحاويات عبارة عن نُسخ مُعبّأة من نظام برمته وبرامجه وتبعياته. تعمل هذه الحاويات في بيئة افتراضية. تتوفر بيئة افتراضية على Linux من نظام التشغيل وهي فعالة للغاية. في نظامي التشغيل macOS و Windows ، يتم تشغيل الحاويات داخل جهاز ظاهري ، لذلك هناك القليل من النفقات العامة. لكنها لا تزال مناسبة جدًا لتشغيل البرنامج. بمجرد تثبيت المستخدمين ، لا داعي للقلق كثيرًا بشأن عامل الميناء ، لأنه يعمل (تقريبًا) بشفافية.</p>
 <p>بدون عامل إرساء ، لن يكون من الممكن تشغيل ODM على Windows أو macOS. لا يمكن تشغيل ODM على هذه الأنظمة الأساسية بشكل أصلي. يتم تركيز جهود التطوير المستقبلية على الاستفادة من نظام Windows الفرعي الجديد لنظام Linux (WSL) وإمكانية جعل المنفذ الأصلي لجميع التبعيات إلى macOS ، الأمر الذي سيجعل التثبيت أسهل بكثير.</p>
 <p>في Ubuntu Linux 18.04 ، من الممكن تشغيل جميع برامج OpenDroneMap أصلاً. ومع ذلك ، نظرًا لوجود القليل جدًا من عقوبة الأداء لتشغيل عامل الميناء على Linux ووصلة عامل الميناء مباشرة على الإعداد على هذا النظام الأساسي ، فإننا لا نوصي بذلك. في لينكس ، تفوق مزايا الحاويات بشكل كبير عقوبة الأداء الصغيرة. مع مستخدمي docker ، يحصلون أيضًا على تحديثات سهلة لخطوة واحدة للبرنامج ، وهذا أمر جيد.</p>
-<div class="section" id="hardware-recommendations">
+<section id="hardware-recommendations">
 <h2>توصيات الأجهزة<a class="headerlink" href="#hardware-recommendations" title="Permalink to this headline">¶</a></h2>
 <p>الحد الأدنى من المتطلبات لتشغيل البرنامج هي:</p>
 <ul class="simple">
@@ -350,28 +351,28 @@
 <li><p>ذاكرة رام 16 جيجا</p></li>
 </ul>
 <p>سيسمح ما سبق بمعالجة بضع مئات من الصور دون مشاكل كثيرة. ستسمح وحدة المعالجة المركزية (CPU) المزودة بمزيد من النوى بمعالجة أسرع ، بينما لا تؤثر بطاقة الرسومات (GPU) حاليًا على الأداء. لمعالجة المزيد من الصور ، أضف المزيد من مساحة القرص وذاكرة الوصول العشوائي خطيًا إلى عدد الصور التي تحتاج إلى معالجتها.</p>
-</div>
-<div class="section" id="installation">
+</section>
+<section id="installation">
 <span id="docker-installation"></span><h2>التركيب<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>نوصي باستخدام الناس <a class="reference external" href="https://www.docker.com">docker</a> أو تشغيل ODM ، سواء كنت تستخدم نظام التشغيل Windows أو macOS أو Linux.</p>
-<div class="section" id="windows">
+<section id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
 <p>لتشغيل OpenDroneMap ، تحتاج إلى Windows 7. على الأقل. الإصدارات السابقة من Windows غير مدعومة.</p>
-<div class="section" id="step-1-check-virtualization-support">
+<section id="step-1-check-virtualization-support">
 <h4>الخطوة 1. تحقق من دعم المحاكاة الافتراضية<a class="headerlink" href="#step-1-check-virtualization-support" title="Permalink to this headline">¶</a></h4>
 <p>يتطلب Docker ميزة من وحدة المعالجة المركزية الخاصة بك تسمى المحاكاة الافتراضية ، والتي تسمح لها بتشغيل الأجهزة الافتراضية (VMs). تأكد من تمكينه! في بعض الأحيان يتم تعطيل هذا. للتحقق ، في Windows 8 أو أعلى ، يمكنك فتح <strong>Task Manager</strong> (اضغط CTRL + SHIFT + ESC) والتبديل إلى علامة التبويب علامة التبويب <strong>الأداء</strong>.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Image of checking virtualization in Windows 8 or higher" src="_images/virtualizationcheck.png" />
-</div>
+</figure>
 <p><em>Virtualization should be enabled</em></p>
 <p>في نظام التشغيل Windows 7 لمعرفة ما إذا تم تمكين المحاكاة الافتراضية ، يمكنك استخدام أداة الكشف عن المحاكاة الافتراضية المدعومة بالأجهزة من Microsoft® &lt;<a class="reference external" href="http://">http://</a> www.microsoft.com/en-us/download/details.aspx?id=592&gt;`_ في حين أن.</p>
 <p>إذا تم تعطيل المحاكاة الافتراضية ، فستحتاج إلى تمكينها. للأسف ، يختلف الإجراء قليلاً بالنسبة لكل طراز كمبيوتر ، لذا فإن أفضل طريقة للقيام بذلك هي البحث في محرك بحث &quot;كيفية تمكين vtx لـ &lt;اكتب طراز الكمبيوتر الخاص بك هنا&gt;&quot;. غالبًا ما يكون الأمر يتعلق بإعادة تشغيل الكمبيوتر ، والضغط على الفور على F2 أو F12 أثناء بدء التشغيل ، والتنقل في قائمة التمهيد وتغيير الإعدادات لتمكين التمثيل الافتراضي (غالبًا ما يسمى &quot;VT-X&quot;)</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Table of different bios keys" src="_images/bioskeys.png" />
-</div>
+</figure>
 <p><em>Common keys to press at computer startup to access the boot menu for various PC vendors</em></p>
-</div>
-<div class="section" id="step-2-install-requirements">
+</section>
+<section id="step-2-install-requirements">
 <h4>الخطوة 2. تثبيت المتطلبات<a class="headerlink" href="#step-2-install-requirements" title="Permalink to this headline">¶</a></h4>
 <p>أولاً ، ستحتاج إلى تثبيت:</p>
 <ul class="simple">
@@ -379,9 +380,9 @@
 <li><p>Python (latest version 3): <a class="reference external" href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a></p></li>
 </ul>
 <p>بالنسبة إلى Python 3 ، تأكد من تحديد ** إضافة Python 3.x إلى PATH ** أثناء التثبيت.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of Python3 installation process" src="_images/installpython3.png" />
-</div>
+</figure>
 <p><em>Don’t forget to add the Python executable to your PATH (so that you can run commands with it)</em></p>
 <p>بعد ذلك ، فقط إذا كنت تستخدم Windows 10 Home أو Windows 8 (أي إصدار) أو Windows 7 (أي إصدار) ، قم بتثبيت:</p>
 <ul class="simple">
@@ -393,8 +394,8 @@
 </ul>
 <p>أرجوك** لا** تثبيت كل من برامج عامل الميناء. إنهما مختلفان وسيحدثان فوضى إذا تم تثبيتهما</p>
 <p>بعد تثبيت docker ، قم بتشغيله من أيقونة سطح المكتب التي تم إنشاؤها من التثبيت (** Docker Quickstart ** في حالة Docker Toolbox ، ** Docker for Windows ** for Docker for Windows). هذا مهم ، لا تتخطى هذه الخطوة. إذا كانت هناك أخطاء ، فاتبع المطالبات التي تظهر على الشاشة لإصلاحها.</p>
-</div>
-<div class="section" id="step-3-check-memory-and-cpu-allocation">
+</section>
+<section id="step-3-check-memory-and-cpu-allocation">
 <h4>الخطوة 3. تحقق من تخصيص الذاكرة ووحدة المعالجة المركزية<a class="headerlink" href="#step-3-check-memory-and-cpu-allocation" title="Permalink to this headline">¶</a></h4>
 <p>يعمل Docker على Windows عن طريق تشغيل VM في الخلفية (فكر في VM كـ &quot;محاكي كمبيوتر&quot;). يحتوي هذا الجهاز الظاهري على مقدار معين من الذاكرة المخصصة ولا يمكن أن يستخدم WebODM سوى قدر الذاكرة المخصصة.</p>
 <p>إذا قمت بتثبيت Docker Toolbox (انظر أدناه إذا قمت بتثبيت Docker لنظام Windows بدلاً من ذلك):</p>
@@ -404,9 +405,9 @@
 <li><p>انقر بزر الماوس الأيمن على ** افتراضي ** VM واضغط على ** الإعدادات ... **</p></li>
 <li><p>Move the <strong>Base Memory</strong> slider from the <strong>System</strong> panel and allocate 60-70% of all available memory, optionally adding 50% of the available processors from the <strong>Processor</strong> tab also</p></li>
 </ol>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of VirtualBox Settings" src="_images/virtualboxsettings.png" />
-</div>
+</figure>
 <p><em>إعدادات VirtualBox الافتراضية VM</em></p>
 <p>ثم اضغط على <strong>OK</strong> ، انقر بزر الماوس الأيمن على <strong>default **VM واضغط على **Start</strong>.</p>
 <p>إذا قمت بتثبيت Docker لنظام Windows بدلاً من ذلك:</p>
@@ -416,16 +417,16 @@
 <li><p>من اللوحة ، انقر فوق <strong>متقدم</strong> واستخدم أشرطة التمرير لتخصيص 60-70٪ من الذاكرة المتوفرة واستخدام نصف جميع وحدات المعالجة المركزية المتاحة.</p></li>
 <li><p>اضغط <strong>تطبيق</strong>.</p></li>
 </ol>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of Docker Icon" src="_images/dockericon.png" />
-</div>
+</figure>
 <p><em>Step 1 Docker icon</em></p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of Docker Settings" src="_images/dockersettings.png" />
-</div>
+</figure>
 <p><em>Step 3 &amp; 4 Docker settings</em></p>
-</div>
-<div class="section" id="step-4-download-webodm">
+</section>
+<section id="step-4-download-webodm">
 <h4>الخطوة 4. قم بتنزيل WebODM<a class="headerlink" href="#step-4-download-webodm" title="Permalink to this headline">¶</a></h4>
 <p>افتح برنامج ** Git Gui ** الذي يأتي مثبتًا مع Git. من هناك:</p>
 <ul class="simple">
@@ -434,27 +435,27 @@
 <li><p>في ** Target Directory ** انقر فوق تصفح وانتقل إلى مجلد من اختيارك (قم بإنشاء مجلد إذا لزم الأمر)</p></li>
 <li><p>اضغط ** استنساخ **</p></li>
 </ul>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of Git Gui" src="_images/gitgui.png" />
-</div>
+</figure>
 <p><em>Git Gui</em></p>
 <p>إذا نجح التنزيل ، فمن المفترض أن ترى هذه النافذة الآن:</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of Git Gui after successful download" src="_images/gitguisuccess.png" />
-</div>
+</figure>
 <p><em>Git Gui after successful download (clone)</em></p>
 <p>انتقل إلى قائمة <strong>Repository</strong> ، ثم انقر فوق <strong>Create Desktop Icon</strong>. هذا سيسمح لك بالعودة إلى هذا التطبيق بسهولة في المستقبل.</p>
-</div>
-<div class="section" id="step-4-launch-webodm">
+</section>
+<section id="step-4-launch-webodm">
 <h4>الخطوة 4. قم بتشغيل WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Permalink to this headline">¶</a></h4>
 <p>من Git Gui ، انتقل إلى قائمة <strong>Repository</strong> ، ثم انقر فوق <strong>Git Bash</strong>. من نوع سطر الأوامر:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start<span class="p">&amp;</span>
 </pre></div>
 </div>
 <p>سيتم تنزيل العديد من المكونات على جهازك في هذه المرحلة ، بما في ذلك WebODM و NodeODM و ODM. بعد التنزيل ، يجب أن تستقبل الشاشة التالية:</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of after successfully downloading WebODM" src="_images/webodmsuccess.png" />
-</div>
+</figure>
 <p><em>إخراج وحدة التحكم بعد بدء WebODM لأول مرة</em></p>
 <ul class="simple">
 <li><p>إذا كنت تستخدم Docker لنظام التشغيل Windows ، فافتح متصفح الويب على http: // localhost: 8000</p></li>
@@ -468,12 +469,12 @@
 </pre></div>
 </div>
 <p>ثم اتصل بـ <a class="reference external" href="http://192.168.1.100:8000">http://192.168.1.100:8000</a> (استبدال عنوان IP بالعنوان المناسب).</p>
-</div>
-</div>
-<div class="section" id="macos">
+</section>
+</section>
+<section id="macos">
 <h3>macOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h3>
 <p>يمكن لمعظم أجهزة الكمبيوتر الحديثة Mac (التي تعمل بعد عام 2010) التي تعمل بنظام macOS Sierra 10.12 أو أعلى تشغيل OpenDroneMap باستخدام عامل الإرساء ، طالما أن دعم الأجهزة الافتراضية (انظر أدناه).</p>
-<div class="section" id="id1">
+<section id="id1">
 <h4>الخطوة 1. تحقق من دعم المحاكاة الافتراضية<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p>افتح نافذة طرفية واكتب:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sysctl kern.hv_support
@@ -485,8 +486,8 @@
 </div>
 <p>إذا كانت النتيجة <em>kern.hv_support: 1</em> ، فهذا يعني أن جهاز Mac الخاص بك مدعوم! تابع مع الخطوة 2.</p>
 <p>إذا كانت النتيجة هي <em>kern.hv_support: 0</em> ، فهذا يعني للأسف أن جهاز Mac قديم جدًا بحيث لا يمكنه تشغيل OpenDroneMap. :(</p>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h4>الخطوة 2. تثبيت المتطلبات<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <p>يوجد برنامجان فقط للتثبيت:</p>
 <ol class="arabic simple">
@@ -494,9 +495,9 @@
 <li><p>Git: <a class="reference external" href="https://sourceforge.net/projects/git-osx-installer/files/">https://sourceforge.net/projects/git-osx-installer/files/</a></p></li>
 </ol>
 <p>بعد تثبيت عامل الميناء ، يجب أن تجد رمزًا يشبه الحوت في شريط المهام.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of Docker whale" src="_images/macwhale.png" />
-</div>
+</figure>
 <p><em>تطبيق Docker قيد التشغيل</em></p>
 <p>يمكنك التحقق من أن عامل الميناء يعمل بشكل صحيح من خلال فتح تطبيق <strong>Terminal</strong> وكتابة:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker run hello-world
@@ -515,8 +516,8 @@
 </pre></div>
 </div>
 <p>إذا حصلت على &quot;bash: git: command not found&quot; ، فحاول إعادة تشغيل تطبيق <strong>Terminal</strong> وتحقق جيدًا من أي أخطاء أثناء عملية التثبيت.</p>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h4>الخطوة 3. تحقق من تخصيص الذاكرة ووحدة المعالجة المركزية<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <p>عمل Docker على macOS عن طريق تشغيل VM في الخلفية (فكر في الأمر على أنه &quot;محاكي كمبيوتر&quot;). يحتوي هذا الجهاز الظاهري على مقدار معين من الذاكرة المخصصة ولا يمكن أن يستخدم WebODM سوى قدر الذاكرة المخصصة.</p>
 <ol class="arabic simple">
@@ -525,12 +526,12 @@
 <li><p>اضبط شريط تمرير وحدات المعالجة المركزية لاستخدام نصف جميع وحدات المعالجة المركزية المتاحة والذاكرة لاستخدام 60-70٪ من جميع الذاكرة المتاحة</p></li>
 <li><p>اضغط <strong>التقديم وإعادة التشغيل</strong></p></li>
 </ol>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of Docker advanced settings" src="_images/dockeradvanced.png" />
-</div>
+</figure>
 <p><em>إعدادات Docker المتقدمة</em></p>
-</div>
-<div class="section" id="step-4-download-and-launch-webodm">
+</section>
+<section id="step-4-download-and-launch-webodm">
 <h4>الخطوة 4. قم بتحميل وتشغيل WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Permalink to this headline">¶</a></h4>
 <p>من نوع <strong>Terminal</strong>:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
@@ -539,12 +540,12 @@ $ ./webodm.sh start
 </pre></div>
 </div>
 <p>ثم افتح متصفح الويب على <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
-</div>
-</div>
-<div class="section" id="linux">
+</section>
+</section>
+<section id="linux">
 <h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
 <p>يمكن تشغيل OpenDroneMap على أي توزيع Linux يدعم عامل الإرساء. <a class="reference external" href="https://docs.docker.com/install/">وفقًا لموقع وثائق docker على الويب</a> التوزيعات المدعومة رسميًا هي CentOS و Debian و Ubuntu و Fedora ، مع ثنائيات ثابتة متاحة للآخرين. إذا كان عليك اختيار توزيع فقط لتشغيل OpenDroneMap ، فإن Ubuntu هو الطريقة الموصى بها للذهاب.</p>
-<div class="section" id="step-1-install-requirements">
+<section id="step-1-install-requirements">
 <h4>الخطوة 1. تثبيت المتطلبات<a class="headerlink" href="#step-1-install-requirements" title="Permalink to this headline">¶</a></h4>
 <p>هناك أربعة برامج تحتاج للتثبيت:</p>
 <ol class="arabic simple">
@@ -554,7 +555,7 @@ $ ./webodm.sh start
 <li><p>Pip</p></li>
 </ol>
 <p>لا يمكننا تغطية عملية التثبيت لكل توزيع Linux هناك ، لذلك سنقصر التعليمات على التوزيعات التي تدعمها شركة docker رسميًا. في جميع الحالات ، يكون الأمر مجرد فتح موجه طرفية وكتابة بعض الأوامر.</p>
-<div class="section" id="install-on-ubuntu-debian">
+<section id="install-on-ubuntu-debian">
 <h5>التثبيت على Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Permalink to this headline">¶</a></h5>
 <p>أوامر للكتابة:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt update
@@ -563,8 +564,8 @@ $ sh get-docker.sh
 $ sudo apt install -y git python python-pip
 </pre></div>
 </div>
-</div>
-<div class="section" id="install-on-centos-rhel">
+</section>
+<section id="install-on-centos-rhel">
 <h5>التثبيت على CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Permalink to this headline">¶</a></h5>
 <p>أوامر للكتابة:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
@@ -572,8 +573,8 @@ $ sh get-docker.sh
 $ sudo yum -y install git python python-pip
 </pre></div>
 </div>
-</div>
-<div class="section" id="install-on-fedora">
+</section>
+<section id="install-on-fedora">
 <h5>التثبيت على Fedora<a class="headerlink" href="#install-on-fedora" title="Permalink to this headline">¶</a></h5>
 <p>أوامر للكتابة:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
@@ -581,16 +582,16 @@ $ sh get-docker.sh
 $ sudo dnf install git python python-pip
 </pre></div>
 </div>
-</div>
-<div class="section" id="install-on-arch">
+</section>
+<section id="install-on-arch">
 <h5>التثبيت على Arch<a class="headerlink" href="#install-on-arch" title="Permalink to this headline">¶</a></h5>
 <p>أوامر للكتابة:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pacman -Sy docker git python python-pip
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="step-2-check-additional-requirements">
+</section>
+</section>
+<section id="step-2-check-additional-requirements">
 <h4>الخطوة 2. تحقق من المتطلبات الإضافية<a class="headerlink" href="#step-2-check-additional-requirements" title="Permalink to this headline">¶</a></h4>
 <p>بالإضافة إلى البرامج الثلاثة أعلاه ، هناك حاجة أيضًا إلى البرنامج النصي المكون من docker. في بعض الأحيان يتم تثبيته بالفعل مع عامل الميناء ، ولكن في بعض الأحيان لم يتم تثبيته. للتحقق مما إذا كان مثبتًا ، حاول الكتابة:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker-compose --version
@@ -608,8 +609,8 @@ $ sudo dnf install git python python-pip
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pip install docker-compose
 </pre></div>
 </div>
-</div>
-<div class="section" id="step-3-download-and-launch-webodm">
+</section>
+<section id="step-3-download-and-launch-webodm">
 <h4>الخطوة 3. قم بتحميل وتشغيل WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Permalink to this headline">¶</a></h4>
 <p>من نوع المحطة الطرفية:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
@@ -618,10 +619,10 @@ $ ./webodm.sh start
 </pre></div>
 </div>
 <p>ثم افتح متصفح الويب على <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
-</div>
-</div>
-</div>
-<div class="section" id="basic-commands-and-troubleshooting">
+</section>
+</section>
+</section>
+<section id="basic-commands-and-troubleshooting">
 <h2>الأوامر الأساسية واستكشاف الأخطاء وإصلاحها<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Permalink to this headline">¶</a></h2>
 <p>الشيء الرائع في استخدام عامل الإرساء هو أن 99٪ من المهام التي ستحتاج إلى تنفيذها أثناء استخدام WebODM يمكن إجراؤها عبر النص البرمجي .webodm.sh/. لقد واجهت بالفعل أحدهم:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start
@@ -653,20 +654,20 @@ $ ./webodm.sh --help
 </pre></div>
 </div>
 <p><a class="reference external" href="https://community.opendronemap.org">The community forum</a> is a great place to ask for help if you     get stuck during any of the installation steps and for general questions on using the ./webodm.sh script.</p>
-</div>
-<div class="section" id="hello-webodm">
+</section>
+<section id="hello-webodm">
 <h2>مرحبًا WebODM!<a class="headerlink" href="#hello-webodm" title="Permalink to this headline">¶</a></h2>
 <p>بعد تشغيل .webodm.sh/ بدء وفتح WebODM في المتصفح ، سيتم الترحيب بك برسالة ترحيب وسيطلب منك إنشاء المستخدم الأول. خصص بعض الوقت للتعرف على واجهة الويب واستكشاف قوائمها المختلفة.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of WebODM Dashboard" src="_images/webodmdashboard.png" />
-</div>
+</figure>
 <p><em>لوحة تحكم WebODM</em></p>
 <p>لاحظ أنه تحت قائمة <strong>Processing Nodes</strong> ، تم بالفعل تكوين عقدة &quot;node-odm-1&quot; لتتمكن من استخدامها. هذه عقدة NodeODM وتم إنشاؤها تلقائيًا بواسطة WebODM. تعمل هذه العقدة على نفس جهاز WebODM.</p>
 <p>إذا وصلت إلى هذا الحد ، تهانينا! حان الوقت الآن لبدء معالجة بعض البيانات.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Image of celebratory dance" src="_images/congratulations.png" />
-</div>
-<div class="section" id="running-on-more-than-one-machine">
+</figure>
+<section id="running-on-more-than-one-machine">
 <h3>يعمل على أكثر من جهاز<a class="headerlink" href="#running-on-more-than-one-machine" title="Permalink to this headline">¶</a></h3>
 <p><strong>اختياريًا:</strong> إذا كان لديك جهاز كمبيوتر آخر ، يمكنك تكرار عملية التثبيت (تثبيت docker و git و python وما إلى ذلك) وتشغيل عقدة NodeODM جديدة من خلال الكتابة من نافذة Terminal / Git Bash:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --rm -it -p <span class="m">3000</span>:3000 opendronemap/nodeodm -q <span class="m">1</span> --token secret
@@ -676,9 +677,9 @@ $ ./webodm.sh --help
 <p>من WebODM يمكنك بعد ذلك الضغط على زر <strong>Add New</strong> تحت <strong>Nodes العقد</strong>. بالنسبة للحقل <strong>hostname / IP</strong> ، اكتب عنوان IP للكمبيوتر الثاني. بالنسبة للحقل <strong>المنفذ</strong> ، اكتب &quot;3000&quot;. بالنسبة إلى الحقل <strong>الرمز المميز</strong> ، اكتب &quot;سري&quot;. يمكنك أيضًا إضافة <strong>تسمية</strong> اختيارية للعقدة ، مثل &quot;الكمبيوتر الثاني&quot;. ثم اضغط <strong>حفظ</strong>.</p>
 <p>إذا سار كل شيء على ما يرام ، يجب أن يكون لديك الآن عقدتان للمعالجة! ستتمكن من معالجة مهام متعددة بالتوازي باستخدام جهازين مختلفين.</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst">this page</a>!</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

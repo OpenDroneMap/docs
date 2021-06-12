@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="te" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>మ్యాప్ ఖచ్చితత్వం &mdash; OpenDroneMap 2.4.7 documentation</title>
+  <title>మ్యాప్ ఖచ్చితత్వం &mdash; OpenDroneMap 2.5.5 documentation</title>
   
 
   
@@ -64,7 +65,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -292,30 +293,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="map-accuracy">
+  <section id="map-accuracy">
 <h1>మ్యాప్ ఖచ్చితత్వం<a class="headerlink" href="#map-accuracy" title="Permalink to this headline">¶</a></h1>
 <p>మ్యాప్‌లోని సమాచారం వాస్తవ ప్రపంచంలోని విలువలతో సరిపోయే డిగ్రీ లేదా సాన్నిహిత్యాన్ని ఖచ్చితత్వాన్ని నిర్వచించవచ్చు. అందువల్ల, మేము ఖచ్చితత్వాన్ని సూచించినప్పుడు, మేము డేటా నాణ్యత గురించి మరియు ఒక నిర్దిష్ట డేటాసెట్ (పాస్కల్ 2011) లో ఉన్న లోపాల సంఖ్య గురించి మాట్లాడుతున్నాము.</p>
 <p>** సాపేక్ష లేదా స్థానిక ఖచ్చితత్వం **</p>
 <p>స్థానిక లేదా సాపేక్ష ఖచ్చితత్వాన్ని మ్యాప్‌లోని రెండు పాయింట్ల మధ్య దూరం వాస్తవ ప్రపంచంలో ఆ పాయింట్ల మధ్య దూరాలకు అనుగుణంగా ఉంటుంది.</p>
 <p>సాపేక్ష ఖచ్చితత్వం ప్రపంచంలోని మ్యాప్ యొక్క స్థానానికి స్వతంత్రంగా ఉంటుంది, కాబట్టి మ్యాప్ అధిక సాపేక్ష ఖచ్చితత్వాన్ని కలిగి ఉంటుంది (పరిమాణం మరియు ఆకారంలో) కానీ ప్రపంచంలో దాని స్థానాన్ని మార్చవచ్చు (మూర్తి 1).</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Model showing high relative accuracy" src="_images/rel_accuracy.png" />
-</div>
+</figure>
 <p><em>Figure 1. Model showing high relative accuracy but misplaced according to its real world position</em></p>
 <p>** సంపూర్ణ లేదా ప్రపంచ ఖచ్చితత్వం **</p>
 <p>సంపూర్ణ ఖచ్చితత్వం అంటే గ్రహం మీద దాని నిజమైన స్థానానికి సంబంధించి పునర్నిర్మాణం యొక్క ఖచ్చితత్వం (పిక్స్ 4 డి 2019). మూర్తి 2 సాపేక్ష మరియు సంపూర్ణ ఖచ్చితమైన నమూనాను చూపిస్తుంది, ఎందుకంటే పాయింట్లు దాని వాస్తవ ప్రపంచ స్థానం ప్రకారం సరిగ్గా ఉంచబడతాయి.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Model showing high absolute accuracy" src="_images/abs_accuracy.png" />
-</div>
+</figure>
 <p><em>Figure 2. Model showing high relative and absolute accuracy. Placed correctly according to its real world position</em></p>
 <p>** ప్రతి ప్రాజెక్ట్ కోసం ఖచ్చితత్వం స్థాయి **</p>
 <p>ప్రతి ప్రాజెక్ట్ నిర్దిష్ట ఖచ్చితత్వాన్ని కలిగి ఉండాలి. ఉదాహరణకు, నిర్మాణ స్థలంలో పురోగతిని అంచనా వేయడం లేదా అగ్నిప్రమాదం సంభవించిన ప్రాంతాన్ని కొలవడం GCP యొక్క ఉపయోగం అవసరం లేదు, ఎందుకంటే సంపూర్ణ ఖచ్చితత్వం నిర్ణయం తీసుకునే ప్రక్రియను ప్రభావితం చేయదు. మరోవైపు, ఖచ్చితత్వం కీలకమైన పనులు ఉన్నాయి, ఉదాహరణకు ప్రాజెక్ట్ వర్తింపు మూల్యాంకనాలు మరియు భూమి టైటిల్ సర్వేయింగ్, దీనికి అధిక సాపేక్ష మరియు సంపూర్ణ ఖచ్చితత్వం అవసరం.</p>
-<div class="section" id="what-to-expect">
+<section id="what-to-expect">
 <h2>ఏమి ఆశించను<a class="headerlink" href="#what-to-expect" title="Permalink to this headline">¶</a></h2>
 <p>సాధారణ పరంగా, డేటాసెట్ కోసం సగటు ఖచ్చితత్వం 1 నుండి 3 రెట్లు సాపేక్ష ఖచ్చితత్వం ఉంటుందని ఎవరైనా ఆశించవచ్చు. మరియు సంపూర్ణ ఖచ్చితత్వానికి, ఇది UAV లో అమర్చిన GPS యూనిట్ మీద ఆధారపడి ఉంటుందని పరిగణించాలి కాని ప్రామాణిక GPS యొక్క క్షితిజ సమాంతర ఖచ్చితత్వం సాధారణంగా 2 నుండి 6 మీటర్ల పరిధిలో ఉంటుంది మరియు నిలువు ఖచ్చితత్వం 3 నుండి 4 రెట్లు మధ్య ఉంటుంది సమాంతర ఖచ్చితత్వం.</p>
 <p>GCP ని ఉపయోగిస్తున్నప్పుడు, క్షితిజ సమాంతర ఖచ్చితత్వానికి సంపూర్ణ ఖచ్చితత్వాన్ని 2.5 రెట్లు GSD మరియు నిలువు ఖచ్చితత్వానికి 4 రెట్లు GSD గా మెరుగుపరచవచ్చు (మాడవాలాగామా 2016).</p>
 <p>1 సెం.మీ. యొక్క GSD వద్ద, ఖచ్చితత్వం RTK GNSS కు ఉంటుంది మరియు ఇది ఉప-ఆప్టిమల్ పరిస్థితులలో (బారీ 2013) NSDI &amp; FGDC మ్యాపింగ్ ఖచ్చితత్వ ప్రమాణాల ప్రకారం 1: 200 ప్రమాణాలలో ఉంటుంది.</p>
-<div class="section" id="aspects-impacting-map-accuracy">
+<section id="aspects-impacting-map-accuracy">
 <h3>మ్యాప్ ఖచ్చితత్వాన్ని ప్రభావితం చేసే అంశాలు<a class="headerlink" href="#aspects-impacting-map-accuracy" title="Permalink to this headline">¶</a></h3>
 <p>** వాతావరణం **</p>
 <p>ఫోటోగ్రామెట్రీ ఫలితాల్లో వాతావరణ పరిస్థితులు ప్రత్యక్ష ప్రభావాన్ని చూపుతాయి, కాబట్టి క్లౌడ్ కవరేజ్, గాలి వేగం, తేమ, సూర్యుడి ఎత్తు మరియు UAV స్థిరత్వం మరియు భూభాగ ప్రకాశాన్ని ప్రభావితం చేసే ఇతర అంశాలను పరిగణనలోకి తీసుకోవడం చాలా ముఖ్యం.</p>
@@ -325,9 +326,9 @@
 <p>ఫ్లైట్ ఎత్తులో ఎక్కువ, ఇమేజ్ పాదముద్ర మరియు జిఎస్‌డి పెద్దవి. గుర్తించదగిన లక్షణాలలో తక్కువ వివరాలు ఉన్నందున ఫలితమయ్యే పెద్ద GSD ఖచ్చితత్వం తగ్గుతుంది. ఒక చిన్న GSD అవసరమైనప్పుడు ఎత్తైన ప్రదేశం యొక్క ఎత్తు 3 నుండి 4 రెట్లు ఎత్తుగా సిఫార్సు చేయబడింది.</p>
 <p>** విమాన వేగం **</p>
 <p>రోలింగ్ షట్టర్ అమర్చిన కెమెరాల్లో విమాన వేగం ప్రత్యేక ప్రభావాన్ని చూపుతుంది, అయితే గ్లోబల్ లేదా మెకానికల్ షట్టర్ అమర్చినవి ఈ ప్రభావాన్ని తగ్గిస్తాయి. RTK పొజిషనింగ్ సిస్టమ్‌లతో కూడిన UAV కూడా వేగంతో ప్రభావితమవుతుంది, కానీ తీసిన ప్రతి ఫోటో వద్ద హోవర్‌తో, మీరు చాలా మంచి ఖచ్చితత్వాన్ని పొందవచ్చు. బదులుగా మీరు ప్రతి ఫోటో తీసేటప్పుడు కదులుతున్నట్లయితే, ఖచ్చితత్వం రెండు కారకాల ద్వారా పరిమితం చేయబడుతుంది: మీరు కదులుతున్న వేగం RTK (మాథర్ 2020) యొక్క 1 సెకండ్ ఇంక్రిమెంట్లతో గుణించబడుతుంది.</p>
-</div>
-</div>
-<div class="section" id="references">
+</section>
+</section>
+<section id="references">
 <h2>ప్రస్తావనలు<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <p>బారీ, పి., &amp; కోక్లీ, ఆర్. Network నెట్‌వర్క్ RTK GPS తో పోలిస్తే UAV ఫోటోగ్రామెట్రీ యొక్క ఖచ్చితత్వం. » బేస్లైన్ సర్వేలు. 2013. <a class="reference external" href="http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf">http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf</a> (10 13, 2020 న వినియోగించబడింది).</p>
 <p>డ్రోన్ డిప్లాయ్. నేను గ్రౌండ్ కంట్రోల్ పాయింట్లను ఎలా ఉపయోగించగలను ?: డ్రోన్ మ్యాపింగ్ సాఫ్ట్‌వేర్‌తో గ్రౌండ్ కంట్రోల్ పాయింట్లను ఉపయోగించటానికి ఒక గైడ్. 5 8, 2017. <a class="reference external" href="https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/">https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/</a> (యాక్సెస్ చేయబడింది 7 9, 2020).</p>
@@ -336,8 +337,8 @@
 <p>పాస్కల్, మాన్యువల్ ఎస్. జిఐఎస్ లాంజ్: జిఐఎస్ డేటా: ఎ లుక్ ఎట్ ఖచ్చితత్వం, ప్రెసిషన్, మరియు రకాలు లోపాలు. 11 6, 2011. <a class="reference external" href="https://www.gislounge.com/gis-data-a-look-at-accuracy-precision-and-types-of-errors/">https://www.gislounge.com/gis-data-a-look-at-accuracy-precision-and-types-of-errors/</a> (యాక్సెస్ 07 09, 2020).</p>
 <p>పిక్స్ 4 డి. A ఏరియల్ మ్యాపింగ్ ప్రాజెక్టులో ఖచ్చితత్వం ఏమిటి? » పిక్స్ 4 డి. 25 డి 05 డి 2019. <a class="reference external" href="https://www.pix4d.com/blog/accuracy-aerial-mapping">https://www.pix4d.com/blog/accuracy-aerial-mapping</a>  (యాక్సెస్డ్ 10 13, 2020).</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/map-accuracy.rst">this page</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

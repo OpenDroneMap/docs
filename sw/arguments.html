@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="sw" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Chagizi na Bendera &mdash; OpenDroneMap 2.4.7 documentation</title>
+  <title>Chagizi na Bendera &mdash; OpenDroneMap 2.5.5 documentation</title>
   
 
   
@@ -63,7 +64,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -291,9 +292,9 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="options-and-flags">
+  <section id="options-and-flags">
 <span id="arguments"></span><h1>Chagizi na Bendera<a class="headerlink" href="#options-and-flags" title="Permalink to this headline">¶</a></h1>
-<div class="section" id="id1">
+<section id="id1">
 <h2>Arguments<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h2>
 <dl class="simple">
 <dt><code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code></dt><dd><p>Build orthophoto overviews for faster display in programs such as QGIS. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
@@ -301,6 +302,10 @@
 <dt><code class="docutils literal notranslate"><span class="pre">--camera-lens</span></code> auto |  perspective |  brown |  fisheye |  spherical</dt><dd><p>Set a camera projection type. Manually setting a value can help improve geometric undistortion. By default the application tries to determine a lens type from the images metadata. . Default: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">--cameras</span></code> &lt;json&gt;</dt><dd><p>Use the camera parameters computed from another dataset instead of calculating them. Can be specified either as path to a cameras.json file or as a JSON string representing the contents of a cameras.json file. Default: ``</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--cog</span></code></dt><dd><p>Create Cloud-Optimized GeoTIFFs instead of normal GeoTIFFs. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--copy-to</span></code> &lt;path&gt;</dt><dd><p>Copy output results to this folder after processing.</p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">--crop</span></code> &lt;positive float&gt;</dt><dd><p>Automatically crop image outputs by creating a smooth buffer around the dataset boundaries, shrinked by N meters. Use 0 to disable cropping. Default: <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
 </dd>
@@ -356,13 +361,15 @@
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">--min-num-features</span></code> &lt;integer&gt;</dt><dd><p>Minimum number of features to extract per image. More features can be useful for finding more matches between images, potentially allowing the reconstruction of areas with little overlap or insufficient features. More features also slow down processing. Default: <code class="docutils literal notranslate"><span class="pre">8000</span></code></p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">name</span></code> &lt;project name&gt;</dt><dd><p>Name of dataset (i.e subfolder name within project folder). Default: <code class="docutils literal notranslate"><span class="pre">code</span></code></p>
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code> &lt;dataset name&gt;</dt><dd><p>Name of dataset (i.e subfolder name within project folder). Default: <code class="docutils literal notranslate"><span class="pre">code</span></code></p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">--optimize-disk-space</span></code></dt><dd><p>Delete heavy intermediate files to optimize disk space usage. This affects the ability to restart the pipeline from an intermediate stage, but allows datasets to be processed on machines that don't have sufficient disk space available. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">--orthophoto-compression</span></code> JPEG |  LZW |  PACKBITS |  DEFLATE |  LZMA |  NONE</dt><dd><p>Set the compression to use for orthophotos. . Default: <code class="docutils literal notranslate"><span class="pre">DEFLATE</span></code></p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">--orthophoto-cutline</span></code></dt><dd><p>Generates a polygon around the cropping area that cuts the orthophoto around the edges of features. This polygon can be useful for stitching seamless mosaics with multiple overlapping orthophotos. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--orthophoto-kmz</span></code></dt><dd><p>Set this parameter if you want to generate a Google Earth (KMZ) rendering of the orthophoto. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">--orthophoto-no-tiled</span></code></dt><dd><p>Set this parameter if you want a striped GeoTIFF. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -392,7 +399,7 @@
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">--project-path</span></code> &lt;path&gt;</dt><dd><p>Path to the project folder. Your project folder should contain subfolders for each dataset. Each dataset should have an &quot;images&quot; folder.</p>
 </dd>
-<dt><code class="docutils literal notranslate"><span class="pre">--radiometric-calibration</span></code> none |  camera |  camera+sun</dt><dd><p>Set the radiometric calibration to perform on images. When processing multispectral images you should set this option to obtain reflectance values (otherwise you will get digital number values). [camera] applies black level, vignetting, row gradient gain/exposure compensation (if appropriate EXIF tags are found). [camera+sun] is experimental, applies all the corrections of [camera], plus compensates for spectral radiance registered via a downwelling light sensor (DLS) taking in consideration the angle of the sun. . Default: <code class="docutils literal notranslate"><span class="pre">none</span></code></p>
+<dt><code class="docutils literal notranslate"><span class="pre">--radiometric-calibration</span></code> none |  camera |  camera+sun</dt><dd><p>Set the radiometric calibration to perform on images. When processing multispectral and thermal images you should set this option to obtain reflectance/temperature values (otherwise you will get digital number values). [camera] applies black level, vignetting, row gradient gain/exposure compensation (if appropriate EXIF tags are found) and computes absolute temperature values. [camera+sun] is experimental, applies all the corrections of [camera], plus compensates for spectral radiance registered via a downwelling light sensor (DLS) taking in consideration the angle of the sun. . Default: <code class="docutils literal notranslate"><span class="pre">none</span></code></p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">--rerun,-r</span></code> dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report</dt><dd><p>Rerun this stage only and stop. . Default: ``</p>
 </dd>
@@ -426,6 +433,8 @@
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">--texturing-data-term</span></code> gmi |  area</dt><dd><p>When texturing the 3D mesh, for each triangle, choose to prioritize images with sharp features (gmi) or those that cover the largest area (area). Default: <code class="docutils literal notranslate"><span class="pre">gmi</span></code></p>
 </dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--texturing-keep-unseen-faces</span></code></dt><dd><p>Keep faces in the mesh that are not seen in any camera. Default:  <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
 <dt><code class="docutils literal notranslate"><span class="pre">--texturing-outlier-removal-type</span></code> none |  gauss_clamping |  gauss_damping</dt><dd><p>Type of photometric outlier removal method. . Default: <code class="docutils literal notranslate"><span class="pre">gauss_clamping</span></code></p>
 </dd>
 <dt><code class="docutils literal notranslate"><span class="pre">--texturing-skip-global-seam-leveling</span></code></dt><dd><p>Skip normalization of colors across all images. Useful when processing radiometric data. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
@@ -452,8 +461,8 @@
 </dd>
 </dl>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/arguments.rst">this page</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

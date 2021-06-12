@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="ar" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Map accuracy &mdash; OpenDroneMap 2.4.7 documentation</title>
+  <title>Map accuracy &mdash; OpenDroneMap 2.5.5 documentation</title>
   
 
   
@@ -64,7 +65,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -292,30 +293,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="map-accuracy">
+  <section id="map-accuracy">
 <h1>Map accuracy<a class="headerlink" href="#map-accuracy" title="Permalink to this headline">¶</a></h1>
 <p>Accuracy can be defined as the degree or closeness to which the information on a map matches the values in the real world. Therefore, when we refer to accuracy, we are talking about quality of data and about number of errors contained in a certain dataset (Pascual 2011).</p>
 <p><strong>Relative or Local accuracy</strong></p>
 <p>Local or relative accuracy can be defined as the degree to which de distances between two points on a map correspond to the actually distances between those points in the real world.</p>
 <p>Relative accuracy is independent of the location of the map in the world, so a map can have a high relative accuracy (in size and shape) but its position in the world can be shifted (Figure 1).</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Model showing high relative accuracy" src="_images/rel_accuracy.png" />
-</div>
+</figure>
 <p><em>Figure 1. Model showing high relative accuracy but misplaced according to its real world position</em></p>
 <p><strong>Absolute or global Accuracy</strong></p>
 <p>Absolute accuracy is the accuracy of the reconstruction in relation to its true position on the planet (Pix4D 2019). Figure 2 shows a relative and absolute accurate model, as the points are correctly placed according to its real world position.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Model showing high absolute accuracy" src="_images/abs_accuracy.png" />
-</div>
+</figure>
 <p><em>Figure 2. Model showing high relative and absolute accuracy. Placed correctly according to its real world position</em></p>
 <p><strong>An Accuracy level for each project</strong></p>
 <p>Each project has specific accuracy needs to be met. For instance assessing the progress in a construction site or measuring an area affected by a fire does not require the use of GCP, since absolute accuracy will not impact the decision making process. In the other hand, there are tasks on which accuracy is critical, for example project compliance evaluations and land title surveying, which require a higher relative and absolute accuracy.</p>
-<div class="section" id="what-to-expect">
+<section id="what-to-expect">
 <h2>What to expect<a class="headerlink" href="#what-to-expect" title="Permalink to this headline">¶</a></h2>
 <p>In general terms, one can expect the relative accuracy to be in the order of 1 to 3 times the average GSD for the dataset. And as for the absolute accuracy, one must consider that it is dependent of the GPS unit mounted in the UAV but the horizontal accuracy of a standard GPS is usually in the range of 2 to 6 meters and the vertical accuracy between 3 to 4 times the horizontal accuracy.</p>
 <p>When using GCP, absolute accuracy can be improved to 2.5 times GSD for the horizontal accuracy and 4 times the GSD for the vertical accuracy (Madawalagama 2016).</p>
 <p>At a GSD of 1cm, the accuracy is to that of the RTK GNSS, and is within 1:200 scales according to NSDI &amp; FGDC mapping accuracy standards during sub-optimal conditions (Barry 2013).</p>
-<div class="section" id="aspects-impacting-map-accuracy">
+<section id="aspects-impacting-map-accuracy">
 <h3>Aspects impacting map accuracy<a class="headerlink" href="#aspects-impacting-map-accuracy" title="Permalink to this headline">¶</a></h3>
 <p><strong>Weather</strong></p>
 <p>Weather conditions have direct impact in the photogrammetry results, so it is important to consider cloud coverage, wind speed, humidity, sun’s altitude and other factors influencing the UAV stability and terrain illumination.</p>
@@ -325,9 +326,9 @@
 <p>The higher the flight altitude, the larger the image footprint and GSD. The resulting larger GSD the accuracy will be decreased as there will be less detail in the recognizable features. When a smaller GSD is required an altitude of 3 to 4 times the height of the highest point is recommended.</p>
 <p><strong>Flight speed</strong></p>
 <p>Flight speed have special effect in cameras equipped with rolling shutter, while those equipped with global or mechanical shutter tends to reduce this effect. UAV equipped with RTK positioning systems are also affected with the speed, but with hover at each photo taken, you can get very good accuracy. If instead you are moving during each photo take, the accuracy is going to be limited by two factors: the speed at which you are moving multiplied by the 1 second increments of RTK (Mather 2020).</p>
-</div>
-</div>
-<div class="section" id="references">
+</section>
+</section>
+<section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <p>Barry, P., &amp; Coakley, R. «Accuracy of UAV photogrammetry compared with Network RTK GPS.» Baseline Surveys. 2013. <a class="reference external" href="http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf">http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf</a>  (accessed 10 13, 2020).</p>
 <p>Drone Deploy. How Do I Use Ground Control Points?: A guide to using ground control points with drone mapping software. 5 8, 2017. <a class="reference external" href="https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/">https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/</a> (accessed 7 9, 2020).</p>
@@ -336,8 +337,8 @@
 <p>Pascual, Manuel S. GIS Lounge: GIS Data: A Look at Accuracy, Precision, and Types of Errors. 11 6, 2011. <a class="reference external" href="https://www.gislounge.com/gis-data-a-look-at-accuracy-precision-and-types-of-errors/">https://www.gislounge.com/gis-data-a-look-at-accuracy-precision-and-types-of-errors/</a> (accessed 07 09, 2020).</p>
 <p>Pix4D. «What is accuracy in an aerial mapping project?» Pix4D. 25 de 05 de 2019. <a class="reference external" href="https://www.pix4d.com/blog/accuracy-aerial-mapping">https://www.pix4d.com/blog/accuracy-aerial-mapping</a> (accessed 10 13, 2020).</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/map-accuracy.rst">this page</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

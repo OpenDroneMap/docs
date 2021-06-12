@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="es" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Precisión del Mapa &mdash; documentación de OpenDroneMap - 2.4.7</title>
+  <title>Precisión del Mapa &mdash; documentación de OpenDroneMap - 2.5.5</title>
   
 
   
@@ -64,7 +65,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -129,14 +130,14 @@
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-high-quality-orthophotos">Creación de Ortofotos de Alta Calidad</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#calibrating-the-camera">Calibrar la cámara</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-digital-elevation-models">Creación de modelos de elevación digitales</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Fieldwork planning</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Flight pattern</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Flight height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Medir el volumen de pilas de materiales a granel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Planificación del trabajo de campo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Patrón de vuelo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Altura de vuelo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tutorials.html#gcps">GCPs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Processing parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Measuring</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Expected accuracy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Parámetros de procesamiento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Medición</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Precisión esperada</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-docker">Usando Docker</a><ul>
@@ -292,30 +293,30 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="map-accuracy">
+  <section id="map-accuracy">
 <h1>Precisión del Mapa<a class="headerlink" href="#map-accuracy" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>La precisión se puede definir como el grado o la cercanía con la que la información de un mapa coincide con los valores del mundo real. Por tanto, cuando nos referimos a la precisión, nos referimos a la calidad de los datos y al número de errores contenidos en un determinado conjunto de datos (Pascual 2011).</p>
 <p><strong>Precisión Relativa o Local</strong></p>
 <p>La precisión local o relativa se puede definir como el grado en que las distancias entre dos puntos en un mapa corresponden a las distancias reales entre esos puntos en el mundo real.</p>
 <p>La precisión relativa es independiente de la ubicación del mapa en el mundo, por lo que un mapa puede tener una precisión relativa alta (en tamaño y forma), pero su posición en el mundo se puede cambiar (Figura 1).</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Model showing high relative accuracy" src="_images/rel_accuracy.png" />
-</div>
+</figure>
 <p><em>Figura 1. Modelo que muestra una alta precisión relativa pero está fuera de lugar según su posición en el mundo real</em></p>
 <p><strong>Precisión absoluta o global</strong></p>
 <p>La precisión absoluta es la precisión de la reconstrucción en relación con su posición real en el planeta (Pix4D 2019). La Figura 2 muestra un modelo de precisión relativa y absoluta, ya que los puntos están colocados correctamente de acuerdo con su posición en el mundo real.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Model showing high absolute accuracy" src="_images/abs_accuracy.png" />
-</div>
+</figure>
 <p><em>Figura 2. Modelo que muestra una alta precisión relativa y absoluta. Colocado correctamente de acuerdo con su posición en el mundo real</em></p>
 <p>** Un nivel de precisión para cada proyecto**</p>
 <p>Cada proyecto tiene necesidades específicas de precisión que se deben cumplir. Por ejemplo, evaluar el progreso en un sitio de construcción o medir un área afectada por un incendio no requiere el uso de GCP, ya que la precisión absoluta no afectará el proceso de toma de decisiones. Por otro lado, hay tareas en las que la precisión es fundamental, por ejemplo, evaluaciones de cumplimiento de proyectos y levantamiento de títulos de propiedad, que requieren una mayor precisión relativa y absoluta.</p>
-<div class="section" id="what-to-expect">
+<section id="what-to-expect">
 <h2>Que esperar<a class="headerlink" href="#what-to-expect" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>En términos generales, se puede esperar que la precisión relativa sea del orden de 1 a 3 veces el GSD promedio para el conjunto de datos. Y en cuanto a la precisión absoluta, se debe considerar que depende de la unidad GPS montada en el UAV pero la precisión horizontal de un GPS estándar suele estar en el rango de 2 a 6 metros y la precisión vertical entre 3 y 4 veces la precisión horizontal.</p>
 <p>Cuando se utiliza GCP, la precisión absoluta se puede mejorar a 2,5 veces GSD para la precisión horizontal y 4 veces la GSD para la precisión vertical (Madawalagama 2016).</p>
 <p>A un GSD de 1 cm, la precisión es igual a la del RTK GNSS, y está dentro de las escalas de 1:200 según los estándares de precisión de mapeo NSDI y FGDC durante condiciones subóptimas (Barry 2013).</p>
-<div class="section" id="aspects-impacting-map-accuracy">
+<section id="aspects-impacting-map-accuracy">
 <h3>Aspectos que impactan la precisión del mapa<a class="headerlink" href="#aspects-impacting-map-accuracy" title="Enlazar permanentemente con este título">¶</a></h3>
 <p><strong>Clima</strong></p>
 <p>Las condiciones climáticas tienen un impacto directo en los resultados de la fotogrametría, por lo que es importante considerar la cobertura de nubes, la velocidad del viento, la humedad, la altitud del sol y otros factores que influyen en la estabilidad del UAV y la iluminación del terreno.</p>
@@ -325,9 +326,9 @@
 <p>Cuanto mayor sea la altitud de vuelo, mayor será la huella de la imagen y el GSD. Con el GSD más grande resultante, la precisión disminuirá ya que habrá menos detalles en las características reconocibles. Cuando se requiere un GSD más pequeño, se recomienda una altitud de 3 a 4 veces la altura del punto más alto.</p>
 <p><strong>Velocidad del vuelo</strong></p>
 <p>La velocidad de vuelo tiene un efecto especial en las cámaras equipadas con obturador «rolling shutter», mientras que las equipadas con obturador global o mecánico tienden a reducir este efecto. Los UAV equipados con sistemas de posicionamiento RTK también se ven afectados por la velocidad, pero deteniendo la UAV en cada foto tomada, puede obtener una muy buena precisión. Si, en cambio, se está moviendo durante cada toma de fotos, la precisión estará limitada por dos factores: la velocidad a la que se está moviendo multiplicada por los incrementos de 1 segundo de RTK (Mather 2020).</p>
-</div>
-</div>
-<div class="section" id="references">
+</section>
+</section>
+<section id="references">
 <h2>Referencias<a class="headerlink" href="#references" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Barry, P., &amp; Coakley, R. «Accuracy of UAV photogrammetry compared with Network RTK GPS.» Baseline Surveys. 2013. <a class="reference external" href="http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf">http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf</a>  (accessed 10 13, 2020).</p>
 <p>Drone Deploy. How Do I Use Ground Control Points?: A guide to using ground control points with drone mapping software. 5 8, 2017. <a class="reference external" href="https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/">https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/</a> (último acceso el 9 del 7, 2020).</p>
@@ -336,8 +337,8 @@
 <p>Pascual, Manuel S. GIS Lounge: GIS Data: A Look at Accuracy, Precision, and Types of Errors. 11 6, 2011. <a class="reference external" href="https://www.gislounge.com/gis-data-a-look-at-accuracy-precision-and-types-of-errors/">https://www.gislounge.com/gis-data-a-look-at-accuracy-precision-and-types-of-errors/</a> (último acceso el 09 del 07, 2020).</p>
 <p>Pix4D. «What is accuracy in an aerial mapping project?» Pix4D. 25 de 05 de 2019. <a class="reference external" href="https://www.pix4d.com/blog/accuracy-aerial-mapping">https://www.pix4d.com/blog/accuracy-aerial-mapping</a> (último acceso el 13 del 10, 2020).</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/map-accuracy.rst">esta página</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

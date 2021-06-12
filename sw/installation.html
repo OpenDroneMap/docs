@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="sw" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Kuingiza na kuanza kutumia &mdash; OpenDroneMap 2.4.7 documentation</title>
+  <title>Kuingiza na kuanza kutumia &mdash; OpenDroneMap 2.5.5 documentation</title>
   
 
   
@@ -63,7 +64,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -291,50 +292,50 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="installation-and-getting-started">
+  <section id="installation-and-getting-started">
 <h1>Kuingiza na kuanza kutumia<a class="headerlink" href="#installation-and-getting-started" title="Permalink to this headline">¶</a></h1>
 <p>Kipengele hiki kimekubalika na kurahisishwa pamoja na ruhusa kutoka <a class="reference external" href="https://odmbook.com">OpenDroneMap: Maelekezo yaliokosekana</a>, by Piero Toffanin.</p>
 <p>Hadi sasa OpenDroneMap imekua ni term inayotumika kuwakilisha mstari mmoja wa camand application (ambayo sasa inajuulika kama ODM project). Pamoja na maendeleo ya sasa ya web interface ya API na tools nyengine, OpenDroneMap imekua tegemezi kwa application tofauti kwa kuchakata, kuchambua na kuonesha data za ardhini. Utegemeo huu umetengeneza baadhi ya vipengele:</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="ODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/odm-logo-64x64.png" />
-</div>
+</figure>
 <ul class="simple">
 <li><p><strong>ODM</strong> ni mashine ya kuchakata, ambayo inaweza kutumika kutoka camand line. itachukua picha kama kiingizio na kutoa matokeo tofauti, ikiwemo point clouds, 3D model na orthophotos.</p></li>
 </ul>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="NodeODM Logo" src="_images/NodeODMLogo.png" />
-</div>
+</figure>
 <ul class="simple">
 <li><p><strong>NodeODM</strong> ni light-weight API iliojengwa juu ya ODM. Inaruhusu watumiaji na application kutumia function za ODM kwenye computer mtandao</p></li>
 </ul>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="WebODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/webodm-icon-64x64.png" />
-</div>
+</figure>
 <ul class="simple">
 <li><p><strong>WebODM</strong> ni muonekano rahisi wa mtumiaji inayokusanya muonekano wa ramani, muonesho wa 3D, user login, mfumo wa plagin na vipengele vyengine ambavyo vinategemewa na drone mapping platform za kisasa</p></li>
 </ul>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="CloudODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2019/01/cloudodm-64x64.png" />
-</div>
+</figure>
 <ul class="simple">
 <li><p><strong>CloudODM</strong> ni mtari mdogo wa camand ya mteja kwa kuwasiliana na ODM kupitia NodeODM API</p></li>
 </ul>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="PyODM Logo" src="_images/PyODMLogo.png" />
-</div>
+</figure>
 <ul class="simple">
 <li><p><strong>PyODM</strong> ni Python SDK kwa kutengeza kazi kupitia NodeODM API. Tunavalisha maelezo zaidi ndani ya sura ya “Automated Processing With Python”</p></li>
 </ul>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="ClusterODM Logo" src="_images/ClusterODMLogo.png" />
-</div>
+</figure>
 <ul class="simple">
 <li><p><strong>ClusterODM</strong> ni usawa wa kubeba kwa kuunganisha pamoja NodeODM instance nyingi</p></li>
 </ul>
 <p>ODM, NodeODM na WebODM zinapatika katika platform kuu (Windows,macOS na Linux) kupitia programu inayoitwa docker, ambayo unatakiwa ifanye kazi software. Docker inatoa njia ya kutumia “containers”. Container zimekusanywa kukopiwa kwa system yote, ni software na inajitegemea. Container hii inarun ndani ya mazingira ya virtual. Katika Linux mazingira ya virtual hii yanapatika ndani ya operating system na ni rahisi kwa macOS na Windows,  container hio inatumika ndani ya VM, kwa hiyo kuna nafasi mbele. lakini bado ni sawa kutumia software. Mara ikiingizwa mtumiaji hana haja ya kujali kuhusu docker, kama inafanya kazi sawa (kiujumla).</p>
 <p>Bila ya docker itakuwa sio rahisi ODM na Windows au macOS kufanya kazi. Katika platform hizi ODM haziwezi kukufanya kazi inavyotakiwa. Maendeleo ya nguvu za baadae yatazingatia juu ya nguvu mpya za Windows subsystem kwa Linux (WSL) na rahisi kuanzisha port kwa tegemezi zote za macOS, ambazo zitafanyak uingizwa software kwa rahisi zaidi.</p>
 <p>Katika Ubuntu Linux 18.04 inawezekana kurun OpenDroneMap software zote wenyewe. Hata hivyo, kwa sababu kuna kuongezeka ufanisi kwa kufanya kazi docker kwenye Linux na docker ina njia nyepesi ya kupangilia katika platform hii, hatushauri hio. Katika Linux ya faida ya chombo kisichozidi uwezowe uliopewa. Kwa watumiaji wa docker pia wanapata urahisi katika kupangilia kuapdate software, kwa hio ni vizuri.</p>
-<div class="section" id="hardware-recommendations">
+<section id="hardware-recommendations">
 <h2>Sifa za Hardware<a class="headerlink" href="#hardware-recommendations" title="Permalink to this headline">¶</a></h2>
 <p>Nafasi ndogo inayotakiwa kwa kutumia software ni:</p>
 <ul class="simple">
@@ -349,28 +350,28 @@
 <li><p>16 GB RAM</p></li>
 </ul>
 <p>Sifa hizo zitaruhusu kwa picha kidogo mia moja kuchakatwa bila uzito mwingi. CPU iliyo na core nyingi itaruhu kuchakata haraka, wakati kadi ya picha (CPU) kwa wakati huo haina faida juu ya utendaji kazi. Kwa kuchakata picha zaidi, engeza kiendshi diski na RAM kulingana na picha unazotaka kuchakata.</p>
-</div>
-<div class="section" id="installation">
+</section>
+<section id="installation">
 <span id="docker-installation"></span><h2>Uingizaji<a class="headerlink" href="#installation" title="Permalink to this headline">¶</a></h2>
 <p>Tunapendekeza watu kutumia <a class="reference external" href="https://www.docker.com">docker</a> kwa kurun ODM, kama unatumia Windows, macOS au Linux.</p>
-<div class="section" id="windows">
+<section id="windows">
 <h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline">¶</a></h3>
 <p>Kutumia OpenDroneMap unahitaji angalau Windows 7. Toleo la nyuma la windows halihimili.</p>
-<div class="section" id="step-1-check-virtualization-support">
+<section id="step-1-check-virtualization-support">
 <h4>Jia ya 1. Angalia msaada wa uvumbuzi<a class="headerlink" href="#step-1-check-virtualization-support" title="Permalink to this headline">¶</a></h4>
 <p>Docker inahitaji vipengele kutoka kwenye CPU yako inayoitwa virtualization, ambayo inaruhusu kufanya kazi virtual mashine (VMs). Hakikisha unaweka enabled! baadhi ya muda huwa disabled. Kuangalia, katika windows 8 au ya juu zaidi unaweza kufungua <strong>Task Manager</strong> (Bonyeza CTRL+SHIFT+ESC) na washa <strong>Performance</strong> tab.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Image of checking virtualization in Windows 8 or higher" src="_images/virtualizationcheck.png" />
-</div>
+</figure>
 <p><em>Virtualization lazima iruhusiwe</em></p>
 <p>Katika Window 7 kuangalia kama una virtualization ilioruhusiwa, unaweza kutumia <a class="reference external" href="http://www.microsoft.com/en-us/download/details.aspx?id=592">Microsoft® Hardware-Assisted Virtualization Detection Tool</a> badala yake.</p>
 <p>Ikiwa virtualization haijaruhusiwa, unahitajika uiruhusu. Kwa sasa watoaji ni tofauti kidogo kwa kila aina ya computer, Njia nzuri kufanya hivi ni kuangalia katika search engine “how to enable vtx for &lt;type your computer model here&gt;”. Kawaida muda hutegemea na kurestart computer, haraka bonyeza F2 au F12 wakati inawaka,angalia boot menu na badilisha mpangilo kwa kuruhusu virtualization (kawaida inaitwa &quot;VT-X&quot;).</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Table of different bios keys" src="_images/bioskeys.png" />
-</div>
+</figure>
 <p><em>Key iliyozoeleka kubonyeza kwa kuwasha computer kutumia boot menu kwa watengezaji wengi wa PC</em></p>
-</div>
-<div class="section" id="step-2-install-requirements">
+</section>
+<section id="step-2-install-requirements">
 <h4>Njia ya 2. Ingiza Vinavyohitajika<a class="headerlink" href="#step-2-install-requirements" title="Permalink to this headline">¶</a></h4>
 <p>Kwanza, Unahitaji kuingiza:</p>
 <ul class="simple">
@@ -378,9 +379,9 @@
 <li><p>Python (toleo la sasa la 3): <a class="reference external" href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a></p></li>
 </ul>
 <p>Kwa Python 3, hakikisha unaangalia <strong>Add Python 3.x to PATH</strong> wakati wa uingizaji.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of Python3 installation process" src="_images/installpython3.png" />
-</div>
+</figure>
 <p><em>Usisahau kuingiza Python executable katika PATH (kwa maana hio unaweza kurun camand pamoja).</em></p>
 <p>Kisha, ikiwa upo katika Windows 10 home pekee, Windows 8 (toleo lolote) au Windows 7 (toleo lolote), ingiza:</p>
 <ul class="simple">
@@ -392,8 +393,8 @@
 </ul>
 <p>Tafadhali <strong>usingize</strong> programu zote za docker. Ni tofauti na utatengeneza tatizo ikiwa zote zimeingizwa.</p>
 <p>Baada ya kuingiza docker, fungua kutoka Desktop icon ambayo imetengenezwa ilipoingizwa (<strong>Docker Quickstart</strong> kwa Docker Toolbox, <strong>Docker for Windows</strong> kwa docker kwa ajili ya Windows). Hii ni muhimu, usikatishe hatua hii. ikiwa kuna makosa fuata haraka katika koo na uyatatue.</p>
-</div>
-<div class="section" id="step-3-check-memory-and-cpu-allocation">
+</section>
+<section id="step-3-check-memory-and-cpu-allocation">
 <h4>Njia ya 3. Angalia nafasi na mgao wa CPU<a class="headerlink" href="#step-3-check-memory-and-cpu-allocation" title="Permalink to this headline">¶</a></h4>
 <p>Docker katika Windows inafanya kazi kwa kufungua VM katika msingi (Fikiria VM kama “computer emulator”). VM hii ina kiwango fulani cha nafasi kilichogaiwa na WebODM, kinaweza kutumika tu kwa kiasi ambacho kimetengwa.</p>
 <p>Ikiwa utaingiza Docker Toolbox (angalia chini ikiwa utaingiza Docker badala ya windows):</p>
@@ -403,9 +404,9 @@
 <li><p>Right click <strong>default</strong> VM na bonyeza <strong>Settings...</strong></p></li>
 <li><p>Move the <strong>Base Memory</strong> slider from the <strong>System</strong> panel and allocate 60-70% of all available memory, optionally adding 50% of the available processors from the <strong>Processor</strong> tab also</p></li>
 </ol>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of VirtualBox Settings" src="_images/virtualboxsettings.png" />
-</div>
+</figure>
 <p><em>Chaguo msingi la VirtualBox kwa Mpangilio wa VM</em></p>
 <p>Kisha bonyeza <strong>OK</strong>&quot;, right click <strong>default</strong> VM na bonyeza <strong>Start</strong>.</p>
 <p>Ikiwa umeingiza Docker kwa Windows badala yake:</p>
@@ -415,16 +416,16 @@
 <li><p>kutoka kwenye ubao, bonyeza <strong>Advanced</strong> na tumia sliders kuonesha 60-70% ya nafasi inayotumika na tumia nusu ya CPU ilobakia.</p></li>
 <li><p>Bonyeza <strong>Apply</strong>.</p></li>
 </ol>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of Docker Icon" src="_images/dockericon.png" />
-</div>
+</figure>
 <p><em>Njia ya 1. Docker icon</em></p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of Docker Settings" src="_images/dockersettings.png" />
-</div>
+</figure>
 <p><em>Njia ya 3 &amp; 4 Mpangilo wa  Docker</em></p>
-</div>
-<div class="section" id="step-4-download-webodm">
+</section>
+<section id="step-4-download-webodm">
 <h4>Njia ya 4. Pakua WebODM<a class="headerlink" href="#step-4-download-webodm" title="Permalink to this headline">¶</a></h4>
 <p>Fungua <strong>Git Gui</strong> programu iliyoingizwa pamoja na Git. Kutoka hapo:</p>
 <ul class="simple">
@@ -433,27 +434,27 @@
 <li><p>Ndani ya <strong>Target Directory</strong> bonyeza browse na tembea hadi folder ulilochagua (tengeneza moja kama lazima)</p></li>
 <li><p>Bonyeza <strong>Clone</strong></p></li>
 </ul>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of Git Gui" src="_images/gitgui.png" />
-</div>
+</figure>
 <p><em>Git Gui</em></p>
 <p>Ikiwa kupakua kumefanikiwa, utaona window ifuatayo:</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of Git Gui after successful download" src="_images/gitguisuccess.png" />
-</div>
+</figure>
 <p><em>Git Gui baada ya kufanikiwa kupakua (clone)</em></p>
 <p>Nenda hadi <strong>Repository</strong> menu, kisha bonyeza <strong>Create Desktop Icon</strong>. Hii itakuruhusu kurudi nyuma kwenda katika application hii kiurahisi zaidi baadae.</p>
-</div>
-<div class="section" id="step-4-launch-webodm">
+</section>
+<section id="step-4-launch-webodm">
 <h4>Njia ya 4. Zindua WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Permalink to this headline">¶</a></h4>
 <p>Kutoka Git Gui, nenda kwenye <strong>Repository</strong> menu, kisha bonyeza <strong>Git Bash</strong>. Kutoka kwenye mstari wa camand aina ya terminal:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start<span class="p">&amp;</span>
 </pre></div>
 </div>
 <p>Vipengele tofauti vitapakuliwa katika mashine yako katika hatua hii, ikiwemo WebODM, NodeODM na ODM. Baada ya kupakua utapeleka kwa screen zifuatazo:</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of after successfully downloading WebODM" src="_images/webodmsuccess.png" />
-</div>
+</figure>
 <p><em>Console output baada ya kuanzisha WebODM kwa mara ya mwanzo</em></p>
 <ul class="simple">
 <li><p>Ikiwa unatumia docker kwa Windows, fungua browser kwenda <a class="reference external" href="http://localhost:8000">http://localhost:8000</a></p></li>
@@ -467,12 +468,12 @@
 </pre></div>
 </div>
 <p>Kisha utaunganisha kwa <a class="reference external" href="http://192.168.1.100:8000">http://192.168.1.100:8000</a> (badilisha anuani IP kuweka iliyo sahihi zaidi).</p>
-</div>
-</div>
-<div class="section" id="macos">
+</section>
+</section>
+<section id="macos">
 <h3>macOS<a class="headerlink" href="#macos" title="Permalink to this headline">¶</a></h3>
 <p>Modem nyingi (post 2010) za Mac computer zinafanya kazi MacOS Sierra 10.12 au kubwa inafanyakazi OpenDroneMap kutumia docker, ikiwa hardware virtualization inakubali (angalia chini).</p>
-<div class="section" id="id1">
+<section id="id1">
 <h4>Jia ya 1. Angalia msaada wa uvumbuzi<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h4>
 <p>Fungua terminal window na andika:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sysctl kern.hv_support
@@ -484,8 +485,8 @@
 </div>
 <p>Ikiwa jawabu ni <em>kern.hv_support: 1</em>, Mac yako inakuali! Endelea na step ya 2.</p>
 <p>Ikiwa majibu ni <em>kern.hv_support: 0</em>, inamaanisha Mac yako ni ya zamani sana kwa kutumia OpenDroneMap. :(</p>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h4>Njia ya 2. Ingiza Vinavyohitajika<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h4>
 <p>Kuna programu mbili tu za kuingiza:</p>
 <ol class="arabic simple">
@@ -493,9 +494,9 @@
 <li><p>Git: <a class="reference external" href="https://sourceforge.net/projects/git-osx-installer/files/">https://sourceforge.net/projects/git-osx-installer/files/</a></p></li>
 </ol>
 <p>Baada ya kuingiza docker itaona icon ambyo muonekano wake kama nyumbani katika task bar.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of Docker whale" src="_images/macwhale.png" />
-</div>
+</figure>
 <p><em>Docker app running</em></p>
 <p>Unaweza kuhakikisha kwamba docker inafanya kazi sawa kwa kufungua <strong>Terminal</strong> app na kuanza kuandika:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker run hello-world
@@ -514,8 +515,8 @@
 </pre></div>
 </div>
 <p>Ikiwa umepata “bash: git: command not found”, jaribu kuwasha tena <strong>Terminal</strong> app yako na angalia kwa mara nyengine ikiwa kuna makosa wakati wa mchakato wa kuingiza.</p>
-</div>
-<div class="section" id="id3">
+</section>
+<section id="id3">
 <h4>Njia ya 3. Angalia nafasi na mgao wa CPU<a class="headerlink" href="#id3" title="Permalink to this headline">¶</a></h4>
 <p>Docker katika macOS inafanya kazi kwa kuwasha VM katika background (fikiria hilo kama computer emulator”). VM hii ina kiwango cha nafasi kilichowekwa na WebODM inaweza kutumia nafasi ya kutosha iliotengwa.</p>
 <ol class="arabic simple">
@@ -524,12 +525,12 @@
 <li><p>Rekebisha CPU slider kwa kutumia nusu ya CPU inayopatikana na nafasi ya kutumia 60-70% ya nafasi yote ilyobakia</p></li>
 <li><p>Bonyeza <strong>Apply &amp; Restart</strong></p></li>
 </ol>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of Docker advanced settings" src="_images/dockeradvanced.png" />
-</div>
+</figure>
 <p><em>Docker advanced settings</em></p>
-</div>
-<div class="section" id="step-4-download-and-launch-webodm">
+</section>
+<section id="step-4-download-and-launch-webodm">
 <h4>Njia ya 4. Pakua na fungua WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Permalink to this headline">¶</a></h4>
 <p>Kutoka <strong>Terminal</strong> andika:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
@@ -538,12 +539,12 @@ $ ./webodm.sh start
 </pre></div>
 </div>
 <p>Kisha fungua web browser kwenda <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
-</div>
-</div>
-<div class="section" id="linux">
+</section>
+</section>
+<section id="linux">
 <h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline">¶</a></h3>
 <p>OpenDroneMap inaweza kufanya kazi kwenye Linux yoyote ambayo inaruhusu docker. Kwa mujibu wa <a class="reference external" href="https://docs.docker.com/install/">nyaraka za website ya docker</a> kwa mujibu wa msaada rasmi uliothibitishwa ni CentOS, Debian, Ubuntu na fedora, pamoja na bainari tuli zinazotumika kwa wengine. Ikiwa unataka kuchakua distribution peke yake kwa kumia OpenDroneMap, Ubuntu ni chaguo la kutumia.</p>
-<div class="section" id="step-1-install-requirements">
+<section id="step-1-install-requirements">
 <h4>Hatua 1. Mahitaji ya kuingiza<a class="headerlink" href="#step-1-install-requirements" title="Permalink to this headline">¶</a></h4>
 <p>Kuna program nne ambazo zinahitaji kuingizwa:</p>
 <ol class="arabic simple">
@@ -553,7 +554,7 @@ $ ./webodm.sh start
 <li><p>Pip</p></li>
 </ol>
 <p>Hatuweza kuweza kumaliza mchakato wa uwingizaji kwa kila usambazaji wa Linux nje ya hapo, kwa hio tutazuiya maelekezo kwa wote kusambaza wanasaidiwa na docker. Katika kesi zote ni jambo la kufungua terminal prompt na kuandika comand.</p>
-<div class="section" id="install-on-ubuntu-debian">
+<section id="install-on-ubuntu-debian">
 <h5>Ingiza ndani ya Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Permalink to this headline">¶</a></h5>
 <p>Camand za kuandika</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt update
@@ -562,8 +563,8 @@ $ sh get-docker.sh
 $ sudo apt install -y git python python-pip
 </pre></div>
 </div>
-</div>
-<div class="section" id="install-on-centos-rhel">
+</section>
+<section id="install-on-centos-rhel">
 <h5>Ingiza ndani ya CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Permalink to this headline">¶</a></h5>
 <p>Camand za kuandika</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
@@ -571,8 +572,8 @@ $ sh get-docker.sh
 $ sudo yum -y install git python python-pip
 </pre></div>
 </div>
-</div>
-<div class="section" id="install-on-fedora">
+</section>
+<section id="install-on-fedora">
 <h5>Ingiza ndani ya Fedora<a class="headerlink" href="#install-on-fedora" title="Permalink to this headline">¶</a></h5>
 <p>Camand za kuandika</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
@@ -580,16 +581,16 @@ $ sh get-docker.sh
 $ sudo dnf install git python python-pip
 </pre></div>
 </div>
-</div>
-<div class="section" id="install-on-arch">
+</section>
+<section id="install-on-arch">
 <h5>Ingiza ndani ya Arch<a class="headerlink" href="#install-on-arch" title="Permalink to this headline">¶</a></h5>
 <p>Camand za kuandika</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pacman -Sy docker git python python-pip
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="step-2-check-additional-requirements">
+</section>
+</section>
+<section id="step-2-check-additional-requirements">
 <h4>Njia ya 2. Angalia Mahitaji ya Ziada<a class="headerlink" href="#step-2-check-additional-requirements" title="Permalink to this headline">¶</a></h4>
 <p>Kwa kuongezea kwa programu tatu juu, dockercompose script pia inahitajika. Baadhi ya muda inakuwa ishahifadhiwa ndani ya docker, lakini kuna muda haijaingizwa. Kuthibitisha kama imeingizwa jaribu kuandika:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker-compose --version
@@ -607,8 +608,8 @@ $ sudo dnf install git python python-pip
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pip install docker-compose
 </pre></div>
 </div>
-</div>
-<div class="section" id="step-3-download-and-launch-webodm">
+</section>
+<section id="step-3-download-and-launch-webodm">
 <h4>Njia ya 3. Pakua na zindua WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Permalink to this headline">¶</a></h4>
 <p>Kutoka aina ya terminal:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
@@ -617,10 +618,10 @@ $ ./webodm.sh start
 </pre></div>
 </div>
 <p>Kisha fungua web browser kwenda <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
-</div>
-</div>
-</div>
-<div class="section" id="basic-commands-and-troubleshooting">
+</section>
+</section>
+</section>
+<section id="basic-commands-and-troubleshooting">
 <h2>Camand za msingi na utatuzi shida<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Permalink to this headline">¶</a></h2>
 <p>Kitu kizuri kuhusu kutumia docker ni 99% ya kazi unayohitaji kufanya ikiwa unatumia WebODM, inaweza kufanywa kwa kutumia ./webodm.sh script. Unaweza kutimiza moja kati ya hizo:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start
@@ -652,20 +653,20 @@ $ ./webodm.sh --help
 </pre></div>
 </div>
 <p><a class="reference external" href="https://community.opendronemap.org">Jukwaa la kijamii</a> ni sehemu nzuri kuomba msaada ikiwa umekwama wakati unapingiza kwa mpangilio na kwa maswali ya ujumla kutumia ./webodm.sh script.</p>
-</div>
-<div class="section" id="hello-webodm">
+</section>
+<section id="hello-webodm">
 <h2>Habari, WebODM!<a class="headerlink" href="#hello-webodm" title="Permalink to this headline">¶</a></h2>
 <p>Baada kuwa inatumika ./webodm.sh ikianza na kufungua WebODM ndani ya browser, utasalimia pamoja na ujumbe wa karibu na utaulizwa kutengeneza mtumiaji wa kwanza. Chukua muda kumalizia mwenyewe pamoja na web interface na kuchunguza menu tofauti.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Screenshot of WebODM Dashboard" src="_images/webodmdashboard.png" />
-</div>
+</figure>
 <p><em>WebODM Dashboard</em></p>
 <p>Tazama kwa <strong>Processing Nodes</strong> menu kuna &quot;node-odm-1&quot; node tayari zishapangwa kwa ajili yako kutumia. NodeODM node hii na imetengenezwa wenyewe kwa WebODM. Node hii inatumika katika mashine moja kama WebODM.</p>
 <p>Ikiwa umefikia hapo, Hongera! Sasa ni mda wa kuanza kuchakata baadhi ya data.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Image of celebratory dance" src="_images/congratulations.png" />
-</div>
-<div class="section" id="running-on-more-than-one-machine">
+</figure>
+<section id="running-on-more-than-one-machine">
 <h3>Kuendesha mashine zaidi ya moja<a class="headerlink" href="#running-on-more-than-one-machine" title="Permalink to this headline">¶</a></h3>
 <p><strong>Optionally:</strong> Ikiwa una computer nyengine, unaweza kurejea mchakato wa uwingizaji (install docker, git, python, etc.) na anzisha NodeODM mpya kwa kuandika kutoka dirisha la Terminal/Git Bash:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --rm -it -p <span class="m">3000</span>:3000 opendronemap/nodeodm -q <span class="m">1</span> --token secret
@@ -675,9 +676,9 @@ $ ./webodm.sh --help
 <p>Kutoka WebODM kisha unawesha kuwasha <strong>Add New</strong> button juu ya <strong>Processin Nodes</strong> Kwa <strong>hostname/IP</strong> aina ya anuani ya field katika computer nyengine. Kwa <strong>port</strong> field type &quot;3000&quot;. Kwa <strong>token</strong> field type &quot;secret&quot;. Pia unaweza kuengeza <strong>label</strong> kwa node yako, kama vile computer ya pili. Kisha bonyeza <strong>Save</strong>.</p>
 <p>Ikiwa kila kitu kimeenda sawa, lazima uwe na processing node mbili! Utaweza kuchakata kazi nyingi kwa wakati mmoja kwa kutumia mashine tofauti.</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst">this page</a>!</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>

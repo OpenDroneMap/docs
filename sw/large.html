@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="sw" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Kugawa Database Kubwa &mdash; OpenDroneMap 2.4.7 documentation</title>
+  <title>Kugawa Database Kubwa &mdash; OpenDroneMap 2.5.5 documentation</title>
   
 
   
@@ -63,7 +64,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -291,20 +292,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="splitting-large-datasets">
+  <section id="splitting-large-datasets">
 <h1>Kugawa Database Kubwa<a class="headerlink" href="#splitting-large-datasets" title="Permalink to this headline">¶</a></h1>
 <p>Anza na toleo la ODM <code class="docutils literal notranslate"><span class="pre">0.6.0</span></code> unaweza kugawa group kubwa la data linaloweza kudhibitiwa (liitwalo submodels), kutumia pipeline katika kila kundi, na kisha zalisha DEM itakayounganisha, orthophoto na pointcloud. Mchakato utawekwa kama &quot;split-merge.&quot;</p>
 <p>Kwa nini unaweza kutumia split-merge pipeline? Ikiwa una idadi ya picha nyingi kwenye dataseti yako, split-merge itasaidia mchakato kuongozwa vizuri katika mashine kubwa (itahitaji nafasi ndogo). Ikiwa una mashine nyingi zilizounganishwa katika mtandao mmoja pia unaweza kuchakata submodel kwa pamoja, ndivyo itakavyoruhu kuongeza mstari mlalo na kuchakata maelfu ya picha kwa urahisi zaidi.</p>
 <p>Split-merge inafanya kazi ndani ya ODM nje ya boxi ikiwa node zinasaidia split-merge, kwa kuruhusu chaguo la <code class="docutils literal notranslate"><span class="pre">--split</span></code> unapotengeneza njia mpya.</p>
-<div class="section" id="calibrate-images">
+<section id="calibrate-images">
 <h2>Kurekebisha Picha<a class="headerlink" href="#calibrate-images" title="Permalink to this headline">¶</a></h2>
 <p>Kurekebisha picha ni kupendekeza (lakini sio lazima) kwa dataset nyingi, kwa sababu upatikanaji wa makosa wakati wa kuvuruga picha kunaweza kusababisha kubonyea katika muundo. Maelezo ya muinuko yanapatika kwenye <a class="reference external" href="tutorials.html#calibrating-the-camera">Calibrate Images</a>.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of lens distortion effect on bowling of data" src="_images/msimbasi_bowling.png" />
-</div>
+</figure>
 <p>Madhara ya kubonyea picha juu ya point cloudi kwa kundi kubwa la picha zaidi ya 13,000+ zilizokusanywa na World Bank Tanzania katika maeneo ya mafuriko Msimbasi Basin, Dar es Salaam, Tanzania.</p>
-</div>
-<div class="section" id="local-split-merge">
+</section>
+<section id="local-split-merge">
 <h2>Split-Merge ya Ndani<a class="headerlink" href="#local-split-merge" title="Permalink to this headline">¶</a></h2>
 <p>Mgawio wa kundi data katika submodel, urahisi na katika kuchakata wepesi zaidi ndani ya mashine moja kwa wepesi! Tumia <code class="docutils literal notranslate"><span class="pre">--split</span></code> na <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code> kuchagua nambari ya picha inayotakiwa kwa kila submodel na mpishano (katika meters) baina ya submodel mfululizo</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split <span class="m">400</span> --split-overlap <span class="m">100</span>
@@ -320,14 +321,14 @@
 </pre></div>
 </div>
 <p>utatengeza submodel 3. Hakikisha unapitisha <code class="docutils literal notranslate"><span class="pre">--split-overlap</span> <span class="pre">0</span></code> ikiwa unatengeneza mwenyewe <code class="docutils literal notranslate"><span class="pre">image_groups.txt</span></code> faili.</p>
-</div>
-<div class="section" id="distributed-split-merge">
+</section>
+<section id="distributed-split-merge">
 <h2>Kugawanya Split-Merge<a class="headerlink" href="#distributed-split-merge" title="Permalink to this headline">¶</a></h2>
 <p>ODM pia inaweza kugawanya wenyewe mchakato wa kila submodel kwa mashine tofauti kupitia <a class="reference external" href="https://github.com/OpenDroneMap/NodeODM">NodeODM</a> nodes, orchestrated via <a class="reference external" href="https://github.com/OpenDroneMap/ClusterODM">ClusterODM</a>.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of lens distortion effect on bowling of data" src="_images/clusterodm.png" />
-</div>
-<div class="section" id="getting-started-with-distributed-split-merge">
+</figure>
+<section id="getting-started-with-distributed-split-merge">
 <h3>Kupata kuanza pamoja na kugawanya Split-Merge<a class="headerlink" href="#getting-started-with-distributed-split-merge" title="Permalink to this headline">¶</a></h3>
 <p>Njia ya mwanzo ni kustart ClusterODM</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti -p <span class="m">3001</span>:3000 -p <span class="m">8080</span>:8080 opendronemap/clusterodm
@@ -355,8 +356,8 @@ Escape character is <span class="s1">&#39;^]&#39;</span>.
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split <span class="m">800</span> --split-overlap <span class="m">120</span> --sm-cluster http://&lt;cluster-odm-ip&gt;:3001
 </pre></div>
 </div>
-</div>
-<div class="section" id="understanding-the-cluster">
+</section>
+<section id="understanding-the-cluster">
 <h3>Kufahamu Cluster<a class="headerlink" href="#understanding-the-cluster" title="Permalink to this headline">¶</a></h3>
 <p>Ukiunganisha kupitia telnet, ni rahisi kufahamu nini kinaendelea ndani ya cluster. Kwa Mfano, tunaweza kutumia camand HELP kutafuta camand zinazopatika</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># HELP</span>
@@ -391,16 +392,16 @@ OK
 <span class="m">1</span><span class="o">)</span> localhost:3000 <span class="o">[</span>online<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.3&gt; <span class="o">[</span>L<span class="o">]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="accessing-the-logs">
+</section>
+<section id="accessing-the-logs">
 <h3>Kutumia Logs<a class="headerlink" href="#accessing-the-logs" title="Permalink to this headline">¶</a></h3>
 <p>Wakati mchakato unaendelea, pia ni rahisi kuorodhesha kazi, na muonekano wa matokeo ya kazi</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># TASK LIST</span>
 <span class="c1"># TASK OUTPUT &lt;taskId&gt; [lines]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="autoscaling-clusterodm">
+</section>
+<section id="autoscaling-clusterodm">
 <h3>Kuongeza kiotomatiki ClusterODM<a class="headerlink" href="#autoscaling-clusterodm" title="Permalink to this headline">¶</a></h3>
 <p>ClusterODM pia inakusanya njia za kujipima wenyewe platform tofauti, ikiwemo, to date, Amazon na digital Ocean. Hii inawezesha watumiaji kupunguza gharama zitokanazo na always-on instance vile vile kuweza kupima mchakano kutokana na mahitaji.</p>
 <p>Kupanga autoscaling lazima:</p>
@@ -436,19 +437,19 @@ info: Found docker-machine executable
 </pre></div>
 </div>
 <p>Njia hii hii kazi zote zinapelekwa wenyewe kwa autoscaler.</p>
-</div>
-</div>
-<div class="section" id="limitations">
+</section>
+</section>
+<section id="limitations">
 <h2>Mipaka<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
 <p>Mfumo wa 3D meshes kwa sasa haijaunganishwa kama sehemu ya mpangilio kazi (Ni point cloud pekee, DEM na orthophoto).</p>
 <p>GCPs inasaidiwa kikamilifu, lakini kuna mahitaji angalau point 3 za GCP kwa kila submodel kwa georeferencing kuchukua nafasi. Ikiwa submodel ina unafuu kuliko GCP 3, muungano wa GCP zilobakia + EXIF data zitatumika badala yake (ambayo itakua na usahihi mdogo). Tunapendekeza kutumia <code class="docutils literal notranslate"><span class="pre">image_groups.txt</span></code> faili kupelekea udhibiti sahihi wa mgawanyo wa submodel ukitumia GCP.</p>
-</div>
-<div class="section" id="acknowledgments">
+</section>
+<section id="acknowledgments">
 <h2>Tunakiri<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h2>
 <p>Sifa kubwa kwa Pau na folks kwa Mapillary kushiriki kwema kwa OpenDroneMap kupitia OpenSfM code, ambacho ni kijenzi cha msingi kwa split-merge pipeline. Tunaangalia mbele kwa kusukuma zaidi upeo wa OpenDroneMap na kuangalia vipi dataset kubwa zinaweza kuchakatwa.</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst">this page</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

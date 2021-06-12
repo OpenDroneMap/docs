@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="en" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>OpenDroneMap Outputs &mdash; OpenDroneMap 2.4.7 documentation</title>
+  <title>OpenDroneMap Outputs &mdash; OpenDroneMap 2.5.5 documentation</title>
   
 
   
@@ -63,7 +64,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -291,37 +292,37 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="opendronemap-outputs">
+  <section id="opendronemap-outputs">
 <h1>OpenDroneMap Outputs<a class="headerlink" href="#opendronemap-outputs" title="Permalink to this headline">¶</a></h1>
 <p>Listed below are some of the useful outputs ODM produces.</p>
-<div class="section" id="point-cloud">
+<section id="point-cloud">
 <h2>Point Cloud<a class="headerlink" href="#point-cloud" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_georeferencing/odm_georeferenced_model.ply/laz/csv</span></code> – The georeferenced point cloud in different file formats</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap derived point cloud" src="_images/pointcloud.png" />
-</div>
+</figure>
 <p><em>Point cloud over State University Zanzibar, courtesy of</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
-</div>
-<div class="section" id="d-textured-model">
+</section>
+<section id="d-textured-model">
 <h2>3D Textured Model<a class="headerlink" href="#d-textured-model" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_texturing/odm_textured_model.obj</span></code> – The textured surface mesh
 <code class="docutils literal notranslate"><span class="pre">odm_texturing/odm_textured_model_geo.obj</span></code> – The georeferenced and textured surface mesh</p>
 <p>You can access the point cloud and textured meshes using MeshLab. Open MeshLab, and choose <a class="reference external" href="File:Import">File:Import</a> Mesh and choose your textured mesh from a location similar to the following: <code class="docutils literal notranslate"><span class="pre">odm_texturing\odm_textured_model.obj</span></code></p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap derived textured mesh" src="_images/UR_3D.gif" />
-</div>
+</figure>
 <p><em>Textured mesh courtesy of</em> <a class="reference external" href="https://twitter.com/opendronemap">OpenDroneMap</a></p>
-</div>
-<div class="section" id="orthophoto">
+</section>
+<section id="orthophoto">
 <h2>Orthophoto<a class="headerlink" href="#orthophoto" title="Permalink to this headline">¶</a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_orthophoto/odm_orthphoto.png</span></code> – The orthophoto, but this is a simple png, which doesn’t have any georeferencing information</p>
 <p><code class="docutils literal notranslate"><span class="pre">odm_orthophoto/odm_orthphoto.tif</span></code> – GeoTIFF Orthophoto. You can use it in QGIS as a raster layer.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap orthophoto" src="_images/orthophoto.png" />
-</div>
+</figure>
 <p><em>Orthophoto over State University Zanzibar, courtesy of</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
-</div>
-<div class="section" id="dtm-dsm">
+</section>
+<section id="dtm-dsm">
 <h2>DTM/DSM<a class="headerlink" href="#dtm-dsm" title="Permalink to this headline">¶</a></h2>
 <p>DTM/DSM will only be created if the <code class="docutils literal notranslate"><span class="pre">--dtm</span></code> or <code class="docutils literal notranslate"><span class="pre">--dsm</span></code> options are used. See <a class="reference external" href="https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-models">tutorial on elevation models</a> for more options in creating.</p>
 <p>Data will be stored in:</p>
@@ -331,12 +332,12 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">odm_dem/dsm.tif</span></code></p></li>
 </ul>
 </div></blockquote>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap derived digital surface model" src="_images/digitalsurfacemodel.png" />
-</div>
+</figure>
 <p><em>Digital surface model over State University Zanzibar, courtesy of</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
-</div>
-<div class="section" id="list-of-all-outputs">
+</section>
+<section id="list-of-all-outputs">
 <h2>List of all outputs<a class="headerlink" href="#list-of-all-outputs" title="Permalink to this headline">¶</a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
 ├── images/
@@ -382,8 +383,8 @@
 </pre></div>
 </div>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/outputs.rst">this page</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="es" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Puntos de Control Terrestre &mdash; documentación de OpenDroneMap - 2.4.7</title>
+  <title>Puntos de Control Terrestre &mdash; documentación de OpenDroneMap - 2.5.5</title>
   
 
   
@@ -64,7 +65,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -129,14 +130,14 @@
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-high-quality-orthophotos">Creación de Ortofotos de Alta Calidad</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#calibrating-the-camera">Calibrar la cámara</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-digital-elevation-models">Creación de modelos de elevación digitales</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Fieldwork planning</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Flight pattern</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Flight height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Medir el volumen de pilas de materiales a granel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Planificación del trabajo de campo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Patrón de vuelo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Altura de vuelo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tutorials.html#gcps">GCPs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Processing parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Measuring</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Expected accuracy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Parámetros de procesamiento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Medición</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Precisión esperada</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-docker">Usando Docker</a><ul>
@@ -292,19 +293,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ground-control-points">
+  <section id="ground-control-points">
 <h1>Puntos de Control Terrestre<a class="headerlink" href="#ground-control-points" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>Los puntos de control terrestre son útiles para corregir distorsiones en los datos y referenciarlos en sistemas de coordenadas conocidos.</p>
 <p>Un Punto de Control Terrestre (GCP por sus siglas en inglés) es una medición de la posición hecha sobre el terreno, típicamente usando un GPS de alta precisión (Toffanin 2019).</p>
 <p>Los puntos de control terrestres se pueden colocar en estructuras existentes como esquinas de pavimento, líneas en un estacionamiento o baldosas de colores contrastantes; de otra manera, se pueden configurar utilizando objetivos colocados en el suelo.</p>
 <p>Estos objetivos pueden comprarse o construirse con una amplia variedad de materiales que van desde tapas de cubetas hasta baldosas.</p>
-<div class="section" id="recommended-practices-for-gcp-setting">
+<section id="recommended-practices-for-gcp-setting">
 <h2>Prácticas recomendadas para la colocación de GCP<a class="headerlink" href="#recommended-practices-for-gcp-setting" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Mantén los puntos de control terrestre visibles para todas las ubicaciones de las cámaras. Considere la distancia de muestreo del terreno esperada, la iluminación, vegetación, edificios y todos los obstáculos existentes.</p>
 <p>Procura una distribución horizontal uniforme de los GCP dentro del proyecto, cubriendo elevaciones altas y bajas. Un mínimo de 5 GCP funciona para la mayoría de los trabajos y para proyectos más grandes, de 8 a 10 son suficientes. Ubique algunos puntos cerca de las esquinas y otros en el centro, considerando que el espaciado de los GCP debe ser mayor que la huella de la imagen para que no pueda ver más de un GCP en una sola imagen.</p>
 <p>Para asegurar que cada GCP se encuentre en al menos 5 imágenes, separa los puntos de 10 a 30 metros del perímetro del proyecto. Esta distancia depende del traslape, por lo que aumentar el traslape debería reducir la distancia requerida desde el perímetro.</p>
-</div>
-<div class="section" id="gcp-file-format">
+</section>
+<section id="gcp-file-format">
 <h2>Formato del archivo GCP<a class="headerlink" href="#gcp-file-format" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>El formato del archivo GCP es simple.</p>
 <blockquote>
@@ -334,8 +335,8 @@
 <p>Las esquinas definidas son buenas elecciones para GCPs. También debes colocar los GCP de manera uniforme alrededor del área de la medición.</p>
 <p>El archivo <code class="docutils literal notranslate"><span class="pre">gcp_list.txt</span></code> debe ser creado en la carpeta base de tu proyecto.</p>
 <p>Para buenos resultados, tu archivo debe tener un mínimo de 15 líneas después del encabezado (5 puntos con 3 imágenes para cada punto).</p>
-</div>
-<div class="section" id="user-interfaces">
+</section>
+<section id="user-interfaces">
 <h2>Interfaces de Usuario<a class="headerlink" href="#user-interfaces" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Puedes usar una de las dos interfaces de usuario para crear archivos de GCP:</p>
 <blockquote>
@@ -344,7 +345,7 @@
 <li><p><cite>GCP Editor Pro &lt;https://github.com/uav4geo/GCPEditorPro&gt;</cite></p></li>
 </ul>
 </div></blockquote>
-<div class="section" id="id1">
+<section id="id1">
 <h3>POSM GCPi<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>POSM GCPi esta cargado automaticamente en WebODM. Un ejemplo esta disponible en <a class="reference external" href="http://demo.webodm.org/plugins/posm-gcpi/">the WebODM Demo</a>. Para usarlo con valores XYZ de control terrestre conocidos, se haría lo siguiente:</p>
 <p>Crear una lista GCP, que solo incluya el nombre gcp (esta es la etiqueta que se verá en la interfaz GCP), x, y, y z, con un título con una cadena de caracteres proj4  de sus GCPs (asegurese de que están es un sistema de coordenadas plano, como UTM. Debería verse algo así:</p>
@@ -357,8 +358,8 @@
 </pre></div>
 </div>
 <p>Después se puede cargar la lista GCP en la interfaz, cargar las imágenes y colocar cada uno de los GCPs en la imagen.</p>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h3>GCP Editor Pro<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título">¶</a></h3>
 <p>Esta aplicación necesita ser instalada separadamente o puede ser cargada como un plugin WebODM desde <a class="reference external" href="https://github.com/uav4geo/GCPEditorPro">https://github.com/uav4geo/GCPEditorPro</a></p>
 <p>Crear un archivo csv que incluya el nombre gcp, el norte, el este y la elevación.</p>
@@ -370,14 +371,14 @@
 </div>
 <p>Luego importar el archivo CSV desde la pantalla principal y escribir <code class="docutils literal notranslate"><span class="pre">+proj=utm</span> <span class="pre">+zone=37</span> <span class="pre">+south</span> <span class="pre">+ellps=WGS84</span> <span class="pre">+datum=WGS84</span> <span class="pre">+units=m</span> <span class="pre">+no_defs</span></code> en el cuadro  <code class="docutils literal notranslate"><span class="pre">EPSG/PROJ</span></code> .</p>
 <p>La siguiente pantalla va a mostrar un mapa desde donde se puede seleccionar los GCPs a etiquetar e importar las respectivas imágenes.</p>
-</div>
-</div>
-<div class="section" id="references">
+</section>
+</section>
+<section id="references">
 <h2>Referencias<a class="headerlink" href="#references" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Toffanin, Piero. <a class="reference external" href="https://odmbook.com/">Open Drone Map: The Missing Guide.</a> MasseranoLabs LLC, 2019.</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/gcp.rst">esta página</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

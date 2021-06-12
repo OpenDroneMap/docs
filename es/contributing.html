@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="es" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Como contribuir &mdash; documentación de OpenDroneMap - 2.4.7</title>
+  <title>Como contribuir &mdash; documentación de OpenDroneMap - 2.5.5</title>
   
 
   
@@ -63,7 +64,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -128,14 +129,14 @@
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-high-quality-orthophotos">Creación de Ortofotos de Alta Calidad</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#calibrating-the-camera">Calibrar la cámara</a></li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#creating-digital-elevation-models">Creación de modelos de elevación digitales</a></li>
-<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Fieldwork planning</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Flight pattern</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Flight height</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tutorials.html#measuring-stockpile-volume">Medir el volumen de pilas de materiales a granel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#fieldwork-planning">Planificación del trabajo de campo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-pattern">Patrón de vuelo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#flight-height">Altura de vuelo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="tutorials.html#gcps">GCPs</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Processing parameters</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Measuring</a></li>
-<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Expected accuracy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#processing-parameters">Parámetros de procesamiento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#measuring">Medición</a></li>
+<li class="toctree-l3"><a class="reference internal" href="tutorials.html#expected-accuracy">Precisión esperada</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="tutorials.html#using-docker">Usando Docker</a><ul>
@@ -291,14 +292,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="how-to-contribute">
+  <section id="how-to-contribute">
 <h1>Como contribuir<a class="headerlink" href="#how-to-contribute" title="Enlazar permanentemente con este título">¶</a></h1>
 <p>OpenDroneMap depende de las contribuciones de la comunidad. Puedes contribuir de muchas formas, aunque no seas programador.</p>
-<div class="section" id="community-forum">
+<section id="community-forum">
 <h2>Foro comunitario<a class="headerlink" href="#community-forum" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Si quieres involucrarte, tienes un porblema o quieres conectarte, <a class="reference external" href="https://community.opendronemap.org/">el foro</a> es un excelente lugar para comenzar. Es posible que que encuentres tus preguntas ya respondidas o puedes encontrar consejos utiles y recursos. Tambien puedes contribuir con tus conjuntos de datos de acceso abierto para que otros los puedan explorar. Es un buen lugar para revisar antes de enviar informes de errores oponerse ne contacto con los desarrolladores antes de escribir una nueva caracterisitca.</p>
-</div>
-<div class="section" id="reporting-bugs">
+</section>
+<section id="reporting-bugs">
 <h2>Reportando Errores<a class="headerlink" href="#reporting-bugs" title="Enlazar permanentemente con este título">¶</a></h2>
 <p>Errores son rastreados como problemas de Github. Por favor crea un porblema en el repositorio y etiquetalo con la etiqueta del error.</p>
 <p>Explica el problema e incluye detalles adicionales para ayudar a los mantenedores a reproducir el problema:</p>
@@ -319,7 +320,7 @@ Un lanzamiento estable? un clon de un master?</p></li>
 <li><p><strong>Cual es el nombre y la version del sistema operativo que estas usando?</strong></p></li>
 <li><p><strong>Estas usando ODM en una maquina virtual o Docker?</strong> Si es asi, que software de maquina virtualestas usando y que sistema operativo y versiones estas usando para el host y el guest?</p></li>
 </ul>
-<div class="section" id="template-for-submitting-bug-reports">
+<section id="template-for-submitting-bug-reports">
 <h3>Plantilla Para Enviar Informes de Errores<a class="headerlink" href="#template-for-submitting-bug-reports" title="Enlazar permanentemente con este título">¶</a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[Short description of problem here]
 
@@ -351,9 +352,9 @@ Un lanzamiento estable? un clon de un master?</p></li>
 * Problem happens with all datasets and projects, not only some datasets or projects: [Yes/No]
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="pull-requests">
+</section>
+</section>
+<section id="pull-requests">
 <h2>Solicitudes de Extraxion<a class="headerlink" href="#pull-requests" title="Enlazar permanentemente con este título">¶</a></h2>
 <ul class="simple">
 <li><p>Incluye capturas de pantalla y GIFs animados en tus solicitudes de extraccion siempre que sea posible.</p></li>
@@ -377,8 +378,8 @@ Un lanzamiento estable? un clon de un master?</p></li>
 </li>
 </ul>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst">esta página</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

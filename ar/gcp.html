@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="ar" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>نقاط التحكم الأرضية &mdash; OpenDroneMap 2.4.7 documentation</title>
+  <title>نقاط التحكم الأرضية &mdash; OpenDroneMap 2.5.5 documentation</title>
   
 
   
@@ -64,7 +65,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -292,19 +293,19 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="ground-control-points">
+  <section id="ground-control-points">
 <h1>نقاط التحكم الأرضية<a class="headerlink" href="#ground-control-points" title="Permalink to this headline">¶</a></h1>
 <p>نقاط التحكم الأرضية مفيدة لتصحيح التشوهات في البيانات والإشارة إلى البيانات لمعرفة أنظمة الإحداثيات.</p>
 <p>A Ground Control Point (GCP) is a position measurement made on the ground, typically using a high precision GPS. (Toffanin 2019)</p>
 <p>Ground control points can be set existing structures like pavement corners, lines on a parking lot or contrasting color floor tiles, otherwise can be set using targets placed on the ground.</p>
 <p>Targets can be purchased or build with an ample variety of materials ranging from bucket lids to floor tiles.</p>
-<div class="section" id="recommended-practices-for-gcp-setting">
+<section id="recommended-practices-for-gcp-setting">
 <h2>Recommended practices for GCP setting<a class="headerlink" href="#recommended-practices-for-gcp-setting" title="Permalink to this headline">¶</a></h2>
 <p>Keep ground control points visible for all camera locations. Consider the expected ground sampling distance, illumination, vegetation, buildings and all the existing obstacles.</p>
 <p>Procure an evenly horizontal distribution of the GCPs within the project, covering high and low elevations. A minimum of 5 GCP works for most of the jobs, and for larger projects 8 – 10 are sufficient. Locate some points near the corners and others in the center, considering that GCP spacing should be larger than the image footprint so that you can’t see more than one GCP in a single image.</p>
 <p>In order to ensure each GCP are found in at least 5 images, separate the points 10 to 30 meters from the perimeter of the project. This distance is dependent of the overlapping, so increasing overlapping should reduce the required distance from the perimeter.</p>
-</div>
-<div class="section" id="gcp-file-format">
+</section>
+<section id="gcp-file-format">
 <h2>GCP file format<a class="headerlink" href="#gcp-file-format" title="Permalink to this headline">¶</a></h2>
 <p>تنسيق ملف GCP بسيط</p>
 <blockquote>
@@ -333,8 +334,8 @@
 <p>تعد الزوايا الحادة اختيارات جيدة لـ GCP. يجب عليك أيضًا وضع / العثور على نقاط المراقبة الحرجة بشكل متساوٍ حول منطقة المسح.</p>
 <p>يجب إنشاء ملف `` gcp_list.txt '' في قاعدة مجلد المشروع.</p>
 <p>للحصول على نتائج جيدة ، يجب أن يحتوي ملفك على 15 سطرًا على الأقل بعد الرأس (5 نقاط مع 3 صور لكل نقطة).</p>
-</div>
-<div class="section" id="user-interfaces">
+</section>
+<section id="user-interfaces">
 <h2>واجهات المستخدم<a class="headerlink" href="#user-interfaces" title="Permalink to this headline">¶</a></h2>
 <p>يمكنك استخدام واحدة من واجهات المستخدم لإنشاء ملفات GCP:</p>
 <blockquote>
@@ -343,7 +344,7 @@
 <li><p><a class="reference external" href="https://github.com/uav4geo/GCPEditorPro">GCP Editor Pro</a></p></li>
 </ul>
 </div></blockquote>
-<div class="section" id="id1">
+<section id="id1">
 <h3>POSM GCPi<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
 <p>يتم تحميل POSM GCPi بشكل افتراضي على WebODM. يتوفر مثال في <a class="reference external" href="http://demo.webodm.org/plugins/posm-gcpi/">WebODM Demo</a>. استخدام هذا مع قيم XYZ المعروفة للتحكم الأرضي ، يمكن للمرء القيام بما يلي:</p>
 <p>إنشاء قائمة GCP تتضمن فقط اسم gcp (هذا هو الملصق الذي سيظهر في واجهة GCP) و x و y و z ، مع رأس بسلسلة proj4 من GCP (تأكد من وجودها في إحداثيات مستوية النظام ، مثل UTM. يجب أن يبدو شيء مثل هذا:</p>
@@ -356,8 +357,8 @@
 </pre></div>
 </div>
 <p>ثم يمكن للمرء تحميل قائمة GCP هذه في الواجهة ، وتحميل الصور ، ووضع كل من GCP في الصورة.</p>
-</div>
-<div class="section" id="id2">
+</section>
+<section id="id2">
 <h3>GCP Editor Pro<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
 <p>يجب تثبيت هذا التطبيق بشكل منفصل أو يمكن تحميله كبرنامج مساعد WebODM من <a class="reference external" href="https://github.com/uav4geo/GCPEditorPro">https://github.com/uav4geo/GCPEditorPro</a></p>
 <p>أنشئ ملف CSV يتضمن اسم gcp والشمال والشرق والارتفاع.</p>
@@ -369,14 +370,14 @@
 </div>
 <p>م قم باستيراد ملف CSV من الشاشة الرئيسية واكتب <cite>+proj=utm +zone=37 +south +ellps=WGS84 +datum=WGS84 +units=m +no_defs`</cite> in the <code class="docutils literal notranslate"><span class="pre">EPSG/PROJ</span></code> صندوق.</p>
 <p>سيتم عرض الشاشة التالية خريطة من أين تختار GCP وضع علامة على الصور ذات الصلة واستيرادها.</p>
-</div>
-</div>
-<div class="section" id="references">
+</section>
+</section>
+<section id="references">
 <h2>References<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
 <p>Toffanin, Piero. <a class="reference external" href="https://odmbook.com/">Open Drone Map: The Missing Guide.</a> MasseranoLabs LLC, 2019.</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/gcp.rst">this page</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

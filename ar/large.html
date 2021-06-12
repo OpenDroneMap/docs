@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="ar" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>تقسيم مجموعات البيانات الكبيرة &mdash; OpenDroneMap 2.4.7 documentation</title>
+  <title>تقسيم مجموعات البيانات الكبيرة &mdash; OpenDroneMap 2.5.5 documentation</title>
   
 
   
@@ -64,7 +65,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -292,20 +293,20 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="splitting-large-datasets">
+  <section id="splitting-large-datasets">
 <h1>تقسيم مجموعات البيانات الكبيرة<a class="headerlink" href="#splitting-large-datasets" title="Permalink to this headline">¶</a></h1>
 <p>بدءًا من إصدار ODM `` 0.6.0  ، يمكنك تقسيم مجموعات البيانات الكبيرة جدًا إلى قطع قابلة للإدارة (تسمى النماذج الفرعية) ، وتشغيل خط الأنابيب على كل قطعة ، ثم إنتاج DEMs مدمجة ، وتقويم الصور ، وسحب النقاط. يشار إلى العملية باسم &quot;الدمج المقسم&quot;.</p>
 <p>لماذا قد تستخدم خط أنابيب الدمج المقسم؟ إذا كان لديك عدد كبير جدًا من الصور في مجموعة البيانات الخاصة بك ، سيساعد الدمج المقسم على جعل المعالجة أكثر قابلية للإدارة على جهاز كبير (سيتطلب ذاكرة أقل). إذا كان لديك العديد من الأجهزة المتصلة جميعها بالشبكة نفسها ، فيمكنك أيضًا معالجة النماذج الفرعية بشكل متوازٍ ، مما يسمح بالقياس الأفقي ومعالجة آلاف الصور بسرعة أكبر.</p>
 <p>تعمل ميزة Split-merge في WebODM من خارج الصندوق طالما أن عقد المعالجة تدعم الدمج المقسم ، من خلال تمكين خيار `` -split '' عند إنشاء مهمة جديدة.</p>
-<div class="section" id="calibrate-images">
+<section id="calibrate-images">
 <h2>معايرة الصور<a class="headerlink" href="#calibrate-images" title="Permalink to this headline">¶</a></h2>
 <p>يوصى بمعايرة الصورة (ولكن ليس مطلوبًا) لمجموعات البيانات الكبيرة لأن انتشار الخطأ بسبب تشوه الصورة يمكن أن يسبب تأثير الوعاء على النماذج. يمكن العثور على تعليمات المعايرة في <a class="reference external" href="tutorials.html#calibrating-the-camera">Calibrate Images</a>.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of lens distortion effect on bowling of data" src="_images/msimbasi_bowling.png" />
-</div>
+</figure>
 <p>تأثير البولينج على السحابة النقطية أكثر من 13000 مجموعة بيانات للصور تم جمعها من قبل البنك الدولي في تنزانيا حول حوض الفيضانات المعرض للفيضانات ، دار السلام ، تنزانيا.</p>
-</div>
-<div class="section" id="local-split-merge">
+</section>
+<section id="local-split-merge">
 <h2>دمج التجزئة المحلية<a class="headerlink" href="#local-split-merge" title="Permalink to this headline">¶</a></h2>
 <p>إن تقسيم مجموعة البيانات إلى نماذج فرعية أكثر قابلية للإدارة ومعالجة جميع النماذج الفرعية على نفس الجهاز بالتتابع أمر سهل! ما عليك سوى استخدام &quot;--split&quot; و &quot;--split-interap&quot; لتحديد متوسط ​​عدد الصور لكل نماذج فرعية والتداخل (بالأمتار) بين النماذج الفرعية على التوالي</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split <span class="m">400</span> --split-overlap <span class="m">100</span>
@@ -321,14 +322,14 @@
 </pre></div>
 </div>
 <p>سيتم إنشاء 3 نماذج فرعية. تأكد من تمرير &quot;--split-overap 0&quot; إذا قدمت يدويًا ملف `` image_groups.txt ''.</p>
-</div>
-<div class="section" id="distributed-split-merge">
+</section>
+<section id="distributed-split-merge">
 <h2>دمج سبليت الموزعة<a class="headerlink" href="#distributed-split-merge" title="Permalink to this headline">¶</a></h2>
 <p>يمكن لـ ODM أيضًا توزيع معالجة كل نموذج فرعي تلقائيًا على أجهزة متعددة عبر <a class="reference external" href="https://github.com/OpenDroneMap/NodeODM">NodeODM</a> nodes, مدبرة عبر <a class="reference external" href="https://github.com/OpenDroneMap/ClusterODM">ClusterODM</a>.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of lens distortion effect on bowling of data" src="_images/clusterodm.png" />
-</div>
-<div class="section" id="getting-started-with-distributed-split-merge">
+</figure>
+<section id="getting-started-with-distributed-split-merge">
 <h3>الشروع في البدء في عملية دمج التجزئة الموزعة<a class="headerlink" href="#getting-started-with-distributed-split-merge" title="Permalink to this headline">¶</a></h3>
 <p>الخطوة الأولى هي بدء ClusterODM</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti -p <span class="m">3001</span>:3000 -p <span class="m">8080</span>:8080 opendronemap/clusterodm
@@ -356,8 +357,8 @@ Escape character is <span class="s1">&#39;^]&#39;</span>.
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split <span class="m">800</span> --split-overlap <span class="m">120</span> --sm-cluster http://&lt;cluster-odm-ip&gt;:3001
 </pre></div>
 </div>
-</div>
-<div class="section" id="understanding-the-cluster">
+</section>
+<section id="understanding-the-cluster">
 <h3>فهم الكتلة<a class="headerlink" href="#understanding-the-cluster" title="Permalink to this headline">¶</a></h3>
 <p>ند الاتصال عبر telnet ، من الممكن استجواب ما يحدث على الكتلة. على سبيل المثال ، يمكننا استخدام الأمر HELP لمعرفة الأوامر المتاحة</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># HELP</span>
@@ -392,16 +393,16 @@ OK
 <span class="m">1</span><span class="o">)</span> localhost:3000 <span class="o">[</span>online<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.3&gt; <span class="o">[</span>L<span class="o">]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="accessing-the-logs">
+</section>
+<section id="accessing-the-logs">
 <h3>الوصول إلى السجلات<a class="headerlink" href="#accessing-the-logs" title="Permalink to this headline">¶</a></h3>
 <p>أثناء تشغيل العملية ، من الممكن أيضًا سرد المهام ، وعرض إخراج المهمة</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># TASK LIST</span>
 <span class="c1"># TASK OUTPUT &lt;taskId&gt; [lines]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="autoscaling-clusterodm">
+</section>
+<section id="autoscaling-clusterodm">
 <h3>أوتوسكالينج  ClusterODM<a class="headerlink" href="#autoscaling-clusterodm" title="Permalink to this headline">¶</a></h3>
 <p>يتضمن ClusterODM أيضًا خيار القياس التلقائي على منصات متعددة ، بما في ذلك حتى الآن ، أمازون والمحيط الرقمي. يسمح ذلك للمستخدمين بتقليل التكاليف المرتبطة بالمثيلات التي تعمل دائمًا بالإضافة إلى القدرة على توسيع نطاق المعالجة بناءً على الطلب.</p>
 <p>لإعداد القياس التلقائي ، يجب عليك:</p>
@@ -437,19 +438,19 @@ info: Found docker-machine executable
 </pre></div>
 </div>
 <p>بهذه الطريقة ستتم إعادة توجيه جميع المهام تلقائيًا إلى أوتوسكالر.</p>
-</div>
-</div>
-<div class="section" id="limitations">
+</section>
+</section>
+<section id="limitations">
 <h2>محددات<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
 <p>لا يتم دمج الشبكات ثلاثية الأبعاد في الوقت الحالي كجزء من سير العمل (فقط الغيوم النقطية ، DEMs و orthophotos هي).</p>
 <p>يتم دعم GCP بشكل كامل ، ومع ذلك ، يجب أن يكون هناك 3 نقاط GCP على الأقل في كل نموذج فرعي حتى يتم إجراء الإشارة الجغرافية. إذا كان النموذج الفرعي يحتوي على أقل من 3 من نقاط Google Cloud Platform ، فسيتم استخدام مجموعة من بيانات GCPs + EXIF ​​المتبقية بدلاً من ذلك (والتي ستكون أقل دقة). نوصي باستخدام ملف `` image_groups.txt '' للتحكم بدقة في تقسيم النموذج الفرعي عند استخدام GCP.</p>
-</div>
-<div class="section" id="acknowledgments">
+</section>
+<section id="acknowledgments">
 <h2>شكر وتقدير<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h2>
 <p>الدعائم الضخمة لباو والناس في Mapillary لمساهماتهم المذهلة في OpenDroneMap من خلال كود OpenSfM الخاص بهم ، والذي يعد مكونًا رئيسيًا لخط الأنابيب المدمج. نحن نتطلع إلى زيادة حدود OpenDroneMap ومعرفة مدى ضخامة مجموعة البيانات التي يمكننا معالجتها.</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst">this page</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>

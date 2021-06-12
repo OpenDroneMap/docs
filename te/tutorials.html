@@ -4,10 +4,11 @@
 <html class="writer-html5" lang="te" >
 <head>
   <meta charset="utf-8">
-  
+  <meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   
-  <title>Tutorials &mdash; OpenDroneMap 2.4.7 documentation</title>
+  <title>Tutorials &mdash; OpenDroneMap 2.5.5 documentation</title>
   
 
   
@@ -64,7 +65,7 @@
             
             
               <div class="version">
-                2.4.7
+                2.5.5
               </div>
             
           
@@ -292,14 +293,14 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
             
-  <div class="section" id="tutorials">
+  <section id="tutorials">
 <h1>Tutorials<a class="headerlink" href="#tutorials" title="Permalink to this headline">¶</a></h1>
 <p>Below you will find instructions for some common use cases.</p>
-<div class="section" id="creating-high-quality-orthophotos">
+<section id="creating-high-quality-orthophotos">
 <h2>Creating High Quality Orthophotos<a class="headerlink" href="#creating-high-quality-orthophotos" title="Permalink to this headline">¶</a></h2>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap orthophoto" src="_images/orthophoto.png" />
-</div>
+</figure>
 <p>Without any parameter tweaks, ODM chooses a good compromise between quality, speed and memory usage. If you want to get higher quality results, you need to tweak some parameters:</p>
 <blockquote>
 <div><ul class="simple">
@@ -310,39 +311,39 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">--mesh-size</span></code> should be increased to <code class="docutils literal notranslate"><span class="pre">300000-600000</span></code> and <code class="docutils literal notranslate"><span class="pre">--mesh-octree-depth</span></code> should be increased to <code class="docutils literal notranslate"><span class="pre">10-11</span></code> in urban areas to recreate better buildings / roofs.</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="calibrating-the-camera">
+</section>
+<section id="calibrating-the-camera">
 <h2>Calibrating the Camera<a class="headerlink" href="#calibrating-the-camera" title="Permalink to this headline">¶</a></h2>
 <p>Camera calibration is a special challenge with commodity cameras. Temperature changes, vibrations, focus, and other factors can affect the derived parameters with substantial effects on resulting data. Automatic or self calibration is possible and desirable with drone flights, but depending on the flight pattern, automatic calibration may not remove all distortion from the resulting products. James and Robson (2014) in their paper <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609">Mitigating systematic error in topographic models derived from UAV and ground‐based image networks</a> address how to minimize the distortion from self-calibration.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of lens distortion effect on bowling of data" src="_images/msimbasi_bowling.png" />
-</div>
+</figure>
 <p><em>Bowling effect on point cloud over 13,000+ image dataset collected by World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania.</em></p>
 <p>To mitigate this effect, there are a few options but the simplest are as follows: fly two patterns separated by 20°, and rather than having a nadir (straight down pointing) camera, use one that tilts forward by 5°.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <a class="reference internal image-reference" href="_images/flightplanning.gif"><img alt="animation showing optimum" src="_images/flightplanning.gif" style="width: 640px; height: 480px;" /></a>
-</div>
+</figure>
 <p>As this approach to flying can be take longer than typical flights, a pilot or team can fly a small area using the above approach. OpenDroneMap will generate a calibration file called cameras.json that then can be imported to be used to calibrate another flight that is more efficiently flown.</p>
 <p>Alternatively, the following experimental method can be applied: fly with much lower overlap, but two <em>crossgrid</em> flights (sometimes called crosshatch) separated by 20° with a 5° forward facing camera.</p>
 <ul class="simple">
 <li><p>Crossgrid overlap percentages can be lower than parallel flights. To get good 3D results, you will require 68% overlap and sidelap for an equivalent 83% overlap and sidelap.</p></li>
 <li><p>To get good 2D and 2.5D (digital elevation model) results, you will require 42% overlap and sidelap for an equivalent 70% overlap and sidelap.</p></li>
 </ul>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="animation showing experimental optimum" src="_images/rotation.gif" />
-</div>
+</figure>
 <p>Vertically separated flight lines also improve accuracy, but less so than a camera that is forward facing by 5°.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="figure showing effect of vertically separated flight lines and forward facing cameras on improving self calibration" src="_images/forward_facing.png" />
-</div>
+</figure>
 <p>From James and Robson (2014), <a class="reference external" href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></p>
-</div>
-<div class="section" id="creating-digital-elevation-models">
+</section>
+<section id="creating-digital-elevation-models">
 <h2>Creating Digital Elevation Models<a class="headerlink" href="#creating-digital-elevation-models" title="Permalink to this headline">¶</a></h2>
 <p>By default ODM does not create DEMs. To create a digital terrain model, make sure to pass the <code class="docutils literal notranslate"><span class="pre">--dtm</span></code> flag. To create a digital surface model, be sure to pass the <code class="docutils literal notranslate"><span class="pre">--dsm</span></code> flag.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap derived digital surface model" src="_images/digitalsurfacemodel.png" />
-</div>
+</figure>
 <p>For DTM generation, a Simple Morphological Filter (smrf) is used to classify points in ground vs. non-ground and only the ground points are used. The <code class="docutils literal notranslate"><span class="pre">smrf</span></code> filter can be controlled via several parameters:</p>
 <blockquote>
 <div><ul class="simple">
@@ -355,9 +356,9 @@
 <p>Changing these options can affect the result of DTMs significantly. The best source to read to understand how the parameters affect the output is to read the original paper <a class="reference external" href="https://www.researchgate.net/publication/258333806_An_Improved_Simple_Morphological_Filter_for_the_Terrain_Classification_of_Airborne_LIDAR_Data">An improved simple morphological filter for the terrain classification of airborne LIDAR data</a> (PDF freely available).</p>
 <p>Overall the <code class="docutils literal notranslate"><span class="pre">--smrf-threshold</span></code> option has the biggest impact on results.</p>
 <p>SMRF is good at avoiding Type I errors (small number of ground points mistakenly classified as non-ground) but only &quot;acceptable&quot; at avoiding Type II errors (large number non-ground points mistakenly classified as ground). This needs to be taken in consideration when generating DTMs that are meant to be used visually, since objects mistaken for ground look like artifacts in the final DTM.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of lens distortion effect on bowling of data" src="_images/smrf.png" />
-</div>
+</figure>
 <p>Two other important parameters affect DEM generation:</p>
 <blockquote>
 <div><ul class="simple">
@@ -369,36 +370,36 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">ti</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">my</span><span class="o">/</span><span class="n">project</span><span class="p">:</span><span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span> <span class="o">&lt;</span><span class="n">my_odm_image</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">project</span><span class="o">-</span><span class="n">path</span> <span class="o">/</span><span class="n">datasets</span> <span class="o">--</span><span class="n">dtm</span> <span class="o">--</span><span class="n">dem</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">2</span> <span class="o">--</span><span class="n">smrf</span><span class="o">-</span><span class="n">threshold</span> <span class="mf">0.4</span> <span class="o">--</span><span class="n">smrf</span><span class="o">-</span><span class="n">window</span> <span class="mi">24</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="measuring-stockpile-volume">
+</section>
+<section id="measuring-stockpile-volume">
 <h2>Measuring stockpile volume<a class="headerlink" href="#measuring-stockpile-volume" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="fieldwork-planning">
+<section id="fieldwork-planning">
 <h3>Fieldwork planning<a class="headerlink" href="#fieldwork-planning" title="Permalink to this headline">¶</a></h3>
 <p>Weather conditions modify illumination and thus impact the photography results. Best results are obtained with evenly overcast or clear skies. Also look for low wind speeds that allow the camera to remain stable during the data collection process.
 In order to avoid shadows which on one side of the stockpile can obstruct feature detection and lessen the number of resulting points, always prefer the flights during the midday, when the sun is at the nadir so everything is consistently illuminated.
 Also ensure that your naked eye horizontal visibility distance is congruent with the planned flight distances for the specific project, so image quality is not adversely impacted by dust, fog, smoke, volcanic ash or pollution.</p>
-</div>
-<div class="section" id="flight-pattern">
+</section>
+<section id="flight-pattern">
 <h3>Flight pattern<a class="headerlink" href="#flight-pattern" title="Permalink to this headline">¶</a></h3>
 <p>Most stockpile measurement jobs does not require a crosshatch pattern or angled gimbal as the resting angle of stockpile materials allows the camera to capture the entire stockpile sides. Only some special cases where erosion or machinery operations causes steep angles on the faces of the stockpile would benefit of the crosshatch flight pattern and angled camera gimbal but consider that these additional recognized features come at a cost, (in field labor and processing time) and the resulting improvements are sometimes negligible.</p>
 <p>In most of the cases a lawn mower flight pattern is capable of producing highly accurate stockpile models.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="a simple lawnmower flight pattern can produce accurate results" src="_images/lawnmower_pattern.png" />
-</div>
+</figure>
 <p>Recommended overlap would be between 75% and 80% with a sidelap in the order of 65% to 70%. It is also recommended to slightly increase overlap and sidelap as the flight height is increased.</p>
-</div>
-<div class="section" id="flight-height">
+</section>
+<section id="flight-height">
 <h3>Flight height<a class="headerlink" href="#flight-height" title="Permalink to this headline">¶</a></h3>
 <p>Flight height can be influenced by different camera models, but in a general way and in order to ensure a balance between image quality and flight optimization, it is recommended to be executed at heights 3 to 4 times the tallest stockpile height. So for a 10 meter stockpile, images can be captured at a height of 40 meters.
 As the flight height is increased, it is also recommended to increase overlap, so for a 40 meter height flight you can set a 65% sidelap and 75% overlap, but for a planned height of 80 meters a 70% sidelap and 80% overlap allowing features to be recognized and properly processed.</p>
-</div>
-<div class="section" id="gcps">
+</section>
+<section id="gcps">
 <h3>GCPs<a class="headerlink" href="#gcps" title="Permalink to this headline">¶</a></h3>
 <p>To achieve accuracy levels better than 3%, the use of GCP’s is advised. Typically 5 distributed GCP are sufficient to ensure accurate results.
 When placing or measuring GCP, equipment accuracy should be greater than the GSD. Survey grade GNSS and total stations  are intended to provide the required millimetric accuracy.</p>
 <p>For further information on the use of GCPs, please refer to the <a class="reference external" href="https://docs.opendronemap.org/gcp.html">Ground Control Points section</a>.</p>
-</div>
-<div class="section" id="processing-parameters">
+</section>
+<section id="processing-parameters">
 <h3>Processing parameters<a class="headerlink" href="#processing-parameters" title="Permalink to this headline">¶</a></h3>
 <p>A highly accurate model can be achieved using WebODM high resolution predefined settings. Then you can further adjust some parameters as necessary.</p>
 <p>If using ODM, these this reference values can help you configure the process settings.</p>
@@ -407,69 +408,69 @@ When placing or measuring GCP, equipment accuracy should be greater than the GSD
 <p>--orthophoto-resolution 1.0</p>
 <p>--feature-quality high</p>
 <p>--pc-quality high</p>
-</div>
-<div class="section" id="measuring">
+</section>
+<section id="measuring">
 <h3>Measuring<a class="headerlink" href="#measuring" title="Permalink to this headline">¶</a></h3>
 <p>As almost 50% of the material will be found in the first 20% of the stockpile height, special care should be taken in adequately defining the base plane.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="almost 50% of the material will be found in the first 20% of the stockpile height" src="_images/stockpile.png" />
-</div>
+</figure>
 <p>In WebODM Dashboard, clic on &quot;view map&quot; to start a 2D view of your project.</p>
 <p>Once in the 2D map view, clic on the &quot;Measure volume, area and length&quot; button.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="clic on the &quot;Measure volume, area and length&quot; button" src="_images/measurement1.png" />
-</div>
+</figure>
 <p>then clic on &quot;Create a new measurement&quot;</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="clic on &quot;Create a new measurement&quot;" src="_images/measurement2.png" />
-</div>
+</figure>
 <p>Start placing the points to define the stockpile base plane</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Define the stockpile base plane" src="_images/measurement3.png" />
-</div>
+</figure>
 <p>Clic on &quot;Finish measurement&quot; to finish the process.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Clic on &quot;Finish measurement&quot; to finish the process" src="_images/measurement4.png" />
-</div>
+</figure>
 <p>Dialog box will show the  message &quot;Computing ...&quot; for a few seconds, and after the computing is finished the volume measurement value will be displayed.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Clic on &quot;Finish measurement&quot; to finish the process" src="_images/measurement7.png" />
-</div>
+</figure>
 <p>If you are using the command line OpenDroneMap you can use the dsm files to measure the stockpile volumes using other programs.</p>
 <p>Also consider that once the limits of the stockpile are set in software like <a class="reference external" href="https://www.qgis.org">QGis</a>, you will find there are some ways to determine the base plane. So for isolated stockpiles which boundaries are mostly visible, a linear approach can be used. While for stockpiles set in slopes or in bins, the base plane is better defined by the lowest point.
 Creation of a triangulated 3D surface to define the base plane is advised for large stockpiles. This is also valid for stockpiles paced on irregular surfaces.</p>
-</div>
-<div class="section" id="expected-accuracy">
+</section>
+<section id="expected-accuracy">
 <h3>Expected accuracy<a class="headerlink" href="#expected-accuracy" title="Permalink to this headline">¶</a></h3>
 <p>For carefully planned and executed projects, and specially when GSD is less than 1 cm, the expected accuracy should be in the range of 1% to 2%.
 The resulting accuracy is comparable to the commercially available photogrammetry software and the obtained using survey grade GNSS equipment.</p>
-</div>
-</div>
-<div class="section" id="using-docker">
+</section>
+</section>
+<section id="using-docker">
 <h2>Using Docker<a class="headerlink" href="#using-docker" title="Permalink to this headline">¶</a></h2>
 <p>Since many users employ docker to deploy OpenDroneMap, it can be useful to understand some basic commands in order to interrogate the docker instances when things go wrong, or we are curious about what is happening. Docker is a containerized environment intended, among other things, to make it easier to deploy software independent of the local environment. In this way, it is similar to virtual machines.</p>
 <p>A few simple commands can make our docker experience much better.</p>
-<div class="section" id="listing-docker-machines">
+<section id="listing-docker-machines">
 <h3>Listing Docker Machines<a class="headerlink" href="#listing-docker-machines" title="Permalink to this headline">¶</a></h3>
 <p>We can start by listing available docker machines on the current machine we are running as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">ps</span>
 <span class="n">CONTAINER</span> <span class="n">ID</span>        <span class="n">IMAGE</span>                  <span class="n">COMMAND</span>                  <span class="n">CREATED</span>             <span class="n">STATUS</span>              <span class="n">PORTS</span>                    <span class="n">NAMES</span>
 <span class="mi">2518817537</span><span class="n">ce</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">36</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">36</span> <span class="n">hours</span>                                  <span class="n">zen_wright</span>
-<span class="mi">1</span><span class="n">cdc7fadf688</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">37</span> <span class="n">hours</span>         <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">flamboyant_dhawan</span>
+<span class="mi">1</span><span class="n">cdc7fadf688</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">37</span> <span class="n">hours</span>         <span class="mf">0.0.0.0</span><span class="p">:</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">flamboyant_dhawan</span>
 </pre></div>
 </div>
 <p>If we want to see machines that may not be running but still exist, we can add the <cite>-a</cite> flag:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">ps</span> <span class="o">-</span><span class="n">a</span>
 <span class="n">CONTAINER</span> <span class="n">ID</span>        <span class="n">IMAGE</span>                  <span class="n">COMMAND</span>                  <span class="n">CREATED</span>             <span class="n">STATUS</span>                    <span class="n">PORTS</span>                    <span class="n">NAMES</span>
 <span class="mi">2518817537</span><span class="n">ce</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">36</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">36</span> <span class="n">hours</span>                                        <span class="n">zen_wright</span>
-<span class="mi">1</span><span class="n">cdc7fadf688</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">37</span> <span class="n">hours</span>               <span class="mf">0.0</span><span class="o">.</span><span class="mf">0.0</span><span class="p">:</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">flamboyant_dhawan</span>
+<span class="mi">1</span><span class="n">cdc7fadf688</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">37</span> <span class="n">hours</span>               <span class="mf">0.0.0.0</span><span class="p">:</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">flamboyant_dhawan</span>
 <span class="n">cd7b9585b8f6</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>                            <span class="n">nostalgic_lederberg</span>
 <span class="n">e31010c00b9a</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;python /code/run.py…&quot;</span>   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>                              <span class="n">suspicious_kepler</span>
 <span class="n">c44e0d0b8448</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>                            <span class="n">wonderful_burnell</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="accessing-logs-on-the-instance">
+</section>
+<section id="accessing-logs-on-the-instance">
 <h3>Accessing logs on the instance<a class="headerlink" href="#accessing-logs-on-the-instance" title="Permalink to this headline">¶</a></h3>
 <p>Using either the <cite>CONTAINER ID</cite> or the name, we can access any logs available on the machine as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">logs</span> <span class="mi">2518817537</span><span class="n">ce</span>
@@ -500,8 +501,8 @@ The resulting accuracy is comparable to the commercially available photogrammetr
 </pre></div>
 </div>
 <p>The value <cite>-5</cite> tells the tail command to give us just the last 5 lines of the logs.</p>
-</div>
-<div class="section" id="command-line-access-to-instances">
+</section>
+<section id="command-line-access-to-instances">
 <h3>Command line access to instances<a class="headerlink" href="#command-line-access-to-instances" title="Permalink to this headline">¶</a></h3>
 <p>Sometimes we need to go a little deeper in our exploration of the process for OpenDroneMap. For this, we can get direct command line access to the machines. For this, we can use <cite>docker exec</cite> to execute a <cite>bash</cite> command line shell in the machine of interest as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">ti</span> <span class="mi">2518817537</span><span class="n">ce</span> <span class="n">bash</span>
@@ -509,15 +510,15 @@ The resulting accuracy is comparable to the commercially available photogrammetr
 </pre></div>
 </div>
 <p>Now we are logged into our docker instance and can explore the machine.</p>
-</div>
-<div class="section" id="cleaning-up-after-docker">
+</section>
+<section id="cleaning-up-after-docker">
 <h3>Cleaning up after Docker<a class="headerlink" href="#cleaning-up-after-docker" title="Permalink to this headline">¶</a></h3>
 <p>Docker has a lamentable use of space and by default does not clean up excess data and machines when processes are complete. This can be advantageous if we need to access a process that has since terminated, but carries the burden of using increasing amounts of storage over time. Maciej Łebkowski has an <a class="reference external" href="https://lebkowski.name/docker-volumes/">excellent overview of how to manage excess disk usage in docker</a>.</p>
-</div>
-</div>
-<div class="section" id="using-odm-from-low-bandwidth-location">
+</section>
+</section>
+<section id="using-odm-from-low-bandwidth-location">
 <h2>Using ODM from low-bandwidth location<a class="headerlink" href="#using-odm-from-low-bandwidth-location" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="what-is-this-and-who-is-it-for">
+<section id="what-is-this-and-who-is-it-for">
 <h3>What is this and who is it for?<a class="headerlink" href="#what-is-this-and-who-is-it-for" title="Permalink to this headline">¶</a></h3>
 <p>Via <a class="reference external" href="https://github.com/ivangayton/GDAL_scripts/">Ivan Gayton's repo</a>.</p>
 <p><a class="reference external" href="https://www.opendronemap.org/">OpenDroneMap</a> can’t always be
@@ -542,10 +543,10 @@ missions in an African or similar location looking to process data ASAP
 while still in a field setting. Therefore it emphasizes a workflow
 intended to reduce bandwidth/data transfer, rather than just the
 simplest way of running ODM.</p>
-</div>
-<div class="section" id="steps">
+</section>
+<section id="steps">
 <h3>Steps<a class="headerlink" href="#steps" title="Permalink to this headline">¶</a></h3>
-<div class="section" id="install">
+<section id="install">
 <h4>Install<a class="headerlink" href="#install" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>Create a Digital Ocean droplet with at least 4GB of RAM. That’ll cost
@@ -623,8 +624,8 @@ droplet, and <a class="reference external" href="https://www.digitalocean.com/do
 point</a>
 (in this example we’re setting it to <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>).</p></li>
 </ul>
-</div>
-<div class="section" id="prep-data-and-project">
+</section>
+<section id="prep-data-and-project">
 <h4>Prep data and project<a class="headerlink" href="#prep-data-and-project" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>Now push your images onto the server. You can use <a class="reference external" href="https://en.wikipedia.org/wiki/Secure_copy">Secure Copy
@@ -640,7 +641,7 @@ files.<a class="reference external" href="#footnote1">1</a>, <a class="reference
 </ul>
 </li>
 </ul>
-<div class="section" id="directory-structure">
+<section id="directory-structure">
 <h5>Directory structure<a class="headerlink" href="#directory-structure" title="Permalink to this headline">¶</a></h5>
 <p>ODM requires the directories on the machine to be set up just so. The
 critical bits are the install folder (if you installed as above, it’s
@@ -684,9 +685,9 @@ image_groups.txt file will allow ODM to keep track of which images
 belong to the same batch, even though they’re all in a single
 directory.</p></li>
 </ul>
-</div>
-</div>
-<div class="section" id="resize-droplet-pull-pin-run-away">
+</section>
+</section>
+<section id="resize-droplet-pull-pin-run-away">
 <h4>Resize droplet, pull pin, run away<a class="headerlink" href="#resize-droplet-pull-pin-run-away" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>Shut down and resize your machine to an appropriately monstrous
@@ -741,8 +742,8 @@ a large dataset (&gt;1000 images), omit the <code class="docutils literal notran
 usage so that in future you can only spin up a machine as large as
 necessary)</p></li>
 </ul>
-</div>
-<div class="section" id="after-it-finishes-assuming-you-survive-that-long">
+</section>
+<section id="after-it-finishes-assuming-you-survive-that-long">
 <h4>After it finishes (assuming you survive that long)<a class="headerlink" href="#after-it-finishes-assuming-you-survive-that-long" title="Permalink to this headline">¶</a></h4>
 <ul class="simple">
 <li><p>As soon as processing is done, shut down the machine and resize it
@@ -770,10 +771,10 @@ maybe smaller).</p></li>
 </pre></div>
 </div>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst">this page</a>!</p>
-</div>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
+</section>
 
 
            </div>
