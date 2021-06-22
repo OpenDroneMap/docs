@@ -1,5 +1,3 @@
-.. _arguments:
-
 Options and Flags
 -----------------
 
@@ -14,6 +12,12 @@ Arguments
 
 ``--cameras`` <json>
   Use the camera parameters computed from another dataset instead of calculating them. Can be specified either as path to a cameras.json file or as a JSON string representing the contents of a cameras.json file. Default: ``
+
+``--cog`` 
+  Create Cloud-Optimized GeoTIFFs instead of normal GeoTIFFs. Default: ``False``
+
+``--copy-to`` <path>
+  Copy output results to this folder after processing.
 
 ``--crop`` <positive float>
   Automatically crop image outputs by creating a smooth buffer around the dataset boundaries, shrinked by N meters. Use 0 to disable cropping. Default: ``3``
@@ -96,7 +100,7 @@ Arguments
 ``--min-num-features`` <integer>
   Minimum number of features to extract per image. More features can be useful for finding more matches between images, potentially allowing the reconstruction of areas with little overlap or insufficient features. More features also slow down processing. Default: ``8000``
 
-``name`` <project name>
+``name`` <dataset name>
   Name of dataset (i.e subfolder name within project folder). Default: ``code``
 
 ``--optimize-disk-space`` 
@@ -107,6 +111,9 @@ Arguments
 
 ``--orthophoto-cutline`` 
   Generates a polygon around the cropping area that cuts the orthophoto around the edges of features. This polygon can be useful for stitching seamless mosaics with multiple overlapping orthophotos. Default: ``False``
+
+``--orthophoto-kmz`` 
+  Set this parameter if you want to generate a Google Earth (KMZ) rendering of the orthophoto. Default: ``False``
 
 ``--orthophoto-no-tiled`` 
   Set this parameter if you want a striped GeoTIFF. Default: ``False``
@@ -129,8 +136,8 @@ Arguments
 ``--pc-filter`` <positive float>
   Filters the point cloud by removing points that deviate more than N standard deviations from the local mean. Set to 0 to disable filtering. Default: ``2.5``
 
-``--pc-geometric``
-	Improve the accuracy of the point cloud by computing geometrically consistent depthmaps. This increases processing time, but can improve results in urban scenes. Default: ``False``
+``--pc-geometric`` 
+  Improve the accuracy of the point cloud by computing geometrically consistent depthmaps. This increases processing time, but can improve results in urban scenes. Default: ``False``
 
 ``--pc-las`` 
   Export the georeferenced point cloud in LAS format. Default: ``False``
@@ -154,7 +161,7 @@ Arguments
   Path to the project folder. Your project folder should contain subfolders for each dataset. Each dataset should have an "images" folder.
 
 ``--radiometric-calibration`` none |  camera |  camera+sun
-  Set the radiometric calibration to perform on images. When processing multispectral images you should set this option to obtain reflectance values (otherwise you will get digital number values). [camera] applies black level, vignetting, row gradient gain/exposure compensation (if appropriate EXIF tags are found). [camera+sun] is experimental, applies all the corrections of [camera], plus compensates for spectral radiance registered via a downwelling light sensor (DLS) taking in consideration the angle of the sun. . Default: ``none``
+  Set the radiometric calibration to perform on images. When processing multispectral and thermal images you should set this option to obtain reflectance/temperature values (otherwise you will get digital number values). [camera] applies black level, vignetting, row gradient gain/exposure compensation (if appropriate EXIF tags are found) and computes absolute temperature values. [camera+sun] is experimental, applies all the corrections of [camera], plus compensates for spectral radiance registered via a downwelling light sensor (DLS) taking in consideration the angle of the sun. . Default: ``none``
 
 ``--rerun,-r`` dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report
   Rerun this stage only and stop. . Default: ``
@@ -203,6 +210,9 @@ Arguments
 
 ``--texturing-data-term`` gmi |  area
   When texturing the 3D mesh, for each triangle, choose to prioritize images with sharp features (gmi) or those that cover the largest area (area). Default: ``gmi``
+
+``--texturing-keep-unseen-faces`` 
+  Keep faces in the mesh that are not seen in any camera. Default:  ``False``
 
 ``--texturing-outlier-removal-type`` none |  gauss_clamping |  gauss_damping
   Type of photometric outlier removal method. . Default: ``gauss_clamping``
