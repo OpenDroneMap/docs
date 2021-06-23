@@ -1,0 +1,394 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Precisión del Mapa &mdash; documentación de OpenDroneMap - 2.5.7</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex/" />
+    <link rel="search" title="Búsqueda" href="../search/" />
+    <link rel="next" title="Archivos de geolocalización de imagen" href="../geo/" />
+    <link rel="prev" title="Puntos de Control Terrestre" href="../gcp/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home"> OpenDroneMap
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/">Instalación y Guía de Introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hardware-recommendations">Recomendaciones de Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#installation">Instalación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-check-virtualization-support">Paso 1. Verificar el Soporte de Virtualización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-install-requirements">Paso 2. Requisitos de instalación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-check-memory-and-cpu-allocation">Paso 3. Revisa la memoria y la asignación del procesador</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-webodm">Paso 4. Descarga WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-launch-webodm">Paso 4. Inicie WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id1">Paso 1. Verificar el Soporte de Virtualización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id2">Paso 2. Requisitos de instalación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id3">Paso 3. Revisa la memoria y la asignación del procesador</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-and-launch-webodm">Paso 4. Descargue y ejecute WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-install-requirements">Paso 1. Requerimientos de instalación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-check-additional-requirements">Paso 2. Verifique los requisitos adicionales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-download-and-launch-webodm">Paso 3. Descargue y ejecute WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#basic-commands-and-troubleshooting">Comandos básicos y resolución de problemas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hello-webodm">¡Hola WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#running-on-more-than-one-machine">Ejecutando en más de una máquina</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutoriales</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-high-quality-orthophotos">Creación de Ortofotos de Alta Calidad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#calibrating-the-camera">Calibrar la cámara</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-digital-elevation-models">Creación de modelos de elevación digitales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#measuring-stockpile-volume">Medir el volumen de pilas de materiales a granel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#fieldwork-planning">Planificación del trabajo de campo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-pattern">Patrón de vuelo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-height">Altura de vuelo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#processing-parameters">Parámetros de procesamiento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#measuring">Medición</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#expected-accuracy">Precisión esperada</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-docker">Usando Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#listing-docker-machines">Listado de máquinas Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#accessing-logs-on-the-instance">Accediendo a los registros en la instancia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#command-line-access-to-instances">Acceso de línea de comando a las instancias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#cleaning-up-after-docker">Limpieza de Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-odm-from-low-bandwidth-location">Usando ODM desde una ubicación de ancho de banda bajo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#what-is-this-and-who-is-it-for">¿Qué es esto y para quién es?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#steps">Pasos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#install">Instalación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#prep-data-and-project">Datos de preparación y proyecto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#resize-droplet-pull-pin-run-away">Cambie el tamaño del Droplet, quite el seguro, huya</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#after-it-finishes-assuming-you-survive-that-long">Después de que termine (suponiendo que sobrevivas tanto tiempo)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arguments/">Opciones e indicadores</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/#arguments">Argumentos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../outputs/">Salidas de OpenDroneMap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#point-cloud">Nube de puntos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#d-textured-model">Modelo texturizado 3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#orthophoto">Ortofoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#list-of-all-outputs">Lista de todas las salidas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gcp/">Puntos de Control Terrestre</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#recommended-practices-for-gcp-setting">Prácticas recomendadas para la colocación de GCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#gcp-file-format">Formato del archivo GCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#user-interfaces">Interfaces de Usuario</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gcp/#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gcp/#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#references">Referencias</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Precisión del Mapa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#what-to-expect">Que esperar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#aspects-impacting-map-accuracy">Aspectos que impactan la precisión del mapa</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#references">Referencias</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../geo/">Archivos de geolocalización de imagen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../masks/">Usar máscaras de imagen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large/">División de grandes conjuntos de datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">Calibrar imágenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#local-split-merge">Split-merge local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#distributed-split-merge">Split-Merge distribuido</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../large/#getting-started-with-distributed-split-merge">Introducción a split-merge distribuido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#understanding-the-cluster">Entendiendo el Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#accessing-the-logs">Acceder a los registros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#autoscaling-clusterodm">Ajuste de escala automático de ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#limitations">Limitaciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#acknowledgments">Agradecimientos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/">Referencias adicionales</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-users">Para usuarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-developers">Para desarrolladores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../flying/">Consejos de vuelo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multispectral/">Soporte multiespectral</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#hardware">Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#usage">Uso</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../requesting-features/">Cómo solicitar funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/">Como contribuir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#community-forum">Foro comunitario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#reporting-bugs">Reportando Errores</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/#template-for-submitting-bug-reports">Plantilla Para Enviar Informes de Errores</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#pull-requests">Solicitudes de Extraxion</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">OpenDroneMap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Precisión del Mapa</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/map-accuracy.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="map-accuracy">
+<h1>Precisión del Mapa<a class="headerlink" href="#map-accuracy" title="Enlazar permanentemente con este título">¶</a></h1>
+<p>La precisión se puede definir como el grado o la cercanía con la que la información de un mapa coincide con los valores del mundo real. Por tanto, cuando nos referimos a la precisión, nos referimos a la calidad de los datos y al número de errores contenidos en un determinado conjunto de datos (Pascual 2011).</p>
+<p><strong>Precisión Relativa o Local</strong></p>
+<p>La precisión local o relativa se puede definir como el grado en que las distancias entre dos puntos en un mapa corresponden a las distancias reales entre esos puntos en el mundo real.</p>
+<p>La precisión relativa es independiente de la ubicación del mapa en el mundo, por lo que un mapa puede tener una precisión relativa alta (en tamaño y forma), pero su posición en el mundo se puede cambiar (Figura 1).</p>
+<div class="figure align-center">
+<img alt="Model showing high relative accuracy" src="../_images/rel_accuracy.png" />
+</div>
+<p><em>Figura 1. Modelo que muestra una alta precisión relativa pero está fuera de lugar según su posición en el mundo real</em></p>
+<p><strong>Precisión absoluta o global</strong></p>
+<p>La precisión absoluta es la precisión de la reconstrucción en relación con su posición real en el planeta (Pix4D 2019). La Figura 2 muestra un modelo de precisión relativa y absoluta, ya que los puntos están colocados correctamente de acuerdo con su posición en el mundo real.</p>
+<div class="figure align-center">
+<img alt="Model showing high absolute accuracy" src="../_images/abs_accuracy.png" />
+</div>
+<p><em>Figura 2. Modelo que muestra una alta precisión relativa y absoluta. Colocado correctamente de acuerdo con su posición en el mundo real</em></p>
+<p>** Un nivel de precisión para cada proyecto**</p>
+<p>Cada proyecto tiene necesidades específicas de precisión que se deben cumplir. Por ejemplo, evaluar el progreso en un sitio de construcción o medir un área afectada por un incendio no requiere el uso de GCP, ya que la precisión absoluta no afectará el proceso de toma de decisiones. Por otro lado, hay tareas en las que la precisión es fundamental, por ejemplo, evaluaciones de cumplimiento de proyectos y levantamiento de títulos de propiedad, que requieren una mayor precisión relativa y absoluta.</p>
+<div class="section" id="what-to-expect">
+<h2>Que esperar<a class="headerlink" href="#what-to-expect" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>En términos generales, se puede esperar que la precisión relativa sea del orden de 1 a 3 veces el GSD promedio para el conjunto de datos. Y en cuanto a la precisión absoluta, se debe considerar que depende de la unidad GPS montada en el UAV pero la precisión horizontal de un GPS estándar suele estar en el rango de 2 a 6 metros y la precisión vertical entre 3 y 4 veces la precisión horizontal.</p>
+<p>Cuando se utiliza GCP, la precisión absoluta se puede mejorar a 2,5 veces GSD para la precisión horizontal y 4 veces la GSD para la precisión vertical (Madawalagama 2016).</p>
+<p>A un GSD de 1 cm, la precisión es igual a la del RTK GNSS, y está dentro de las escalas de 1:200 según los estándares de precisión de mapeo NSDI y FGDC durante condiciones subóptimas (Barry 2013).</p>
+<div class="section" id="aspects-impacting-map-accuracy">
+<h3>Aspectos que impactan la precisión del mapa<a class="headerlink" href="#aspects-impacting-map-accuracy" title="Enlazar permanentemente con este título">¶</a></h3>
+<p><strong>Clima</strong></p>
+<p>Las condiciones climáticas tienen un impacto directo en los resultados de la fotogrametría, por lo que es importante considerar la cobertura de nubes, la velocidad del viento, la humedad, la altitud del sol y otros factores que influyen en la estabilidad del UAV y la iluminación del terreno.</p>
+<p><strong>Cámaras</strong></p>
+<p>Los sensores más grandes y mejores producen menos ruido e imágenes más claramente enfocadas. También tenga en cuenta que las cámaras con obturador «rolling shutter» producen imágenes distorsionadas cuando la UAV se está moviendo, por lo que para las actividades de mapeo, se recomiendan las cámaras con obturador mecánico o global.</p>
+<p><strong>Altitud del vuelo</strong></p>
+<p>Cuanto mayor sea la altitud de vuelo, mayor será la huella de la imagen y el GSD. Con el GSD más grande resultante, la precisión disminuirá ya que habrá menos detalles en las características reconocibles. Cuando se requiere un GSD más pequeño, se recomienda una altitud de 3 a 4 veces la altura del punto más alto.</p>
+<p><strong>Velocidad del vuelo</strong></p>
+<p>La velocidad de vuelo tiene un efecto especial en las cámaras equipadas con obturador «rolling shutter», mientras que las equipadas con obturador global o mecánico tienden a reducir este efecto. Los UAV equipados con sistemas de posicionamiento RTK también se ven afectados por la velocidad, pero deteniendo la UAV en cada foto tomada, puede obtener una muy buena precisión. Si, en cambio, se está moviendo durante cada toma de fotos, la precisión estará limitada por dos factores: la velocidad a la que se está moviendo multiplicada por los incrementos de 1 segundo de RTK (Mather 2020).</p>
+</div>
+</div>
+<div class="section" id="references">
+<h2>Referencias<a class="headerlink" href="#references" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Barry, P., &amp; Coakley, R. «Accuracy of UAV photogrammetry compared with Network RTK GPS.» Baseline Surveys. 2013. <a class="reference external" href="http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf">http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf</a>  (accessed 10 13, 2020).</p>
+<p>Drone Deploy. How Do I Use Ground Control Points?: A guide to using ground control points with drone mapping software. 5 8, 2017. <a class="reference external" href="https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/">https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/</a> (último acceso el 9 del 7, 2020).</p>
+<p>Madawalagama, S.L., Munasinghe, N., Dampegama, S.D.P.J. and Samarakoon, L. «Low-cost aerial mapping with consumer grade.» 37th Asian Conference on Remote Sensing. Colombo, Sri Lanka, 2016.</p>
+<p>Mather, Stephen. OpenDroneMap. 30 de Marzo de 2020. <a class="reference external" href="https://community.opendronemap.org/t/the-accuracy-of-webodm-using-rtk-uavs/3937">https://community.opendronemap.org/t/the-accuracy-of-webodm-using-rtk-uavs/3937</a> (último acceso el 12 del 10, 2020).</p>
+<p>Pascual, Manuel S. GIS Lounge: GIS Data: A Look at Accuracy, Precision, and Types of Errors. 11 6, 2011. <a class="reference external" href="https://www.gislounge.com/gis-data-a-look-at-accuracy-precision-and-types-of-errors/">https://www.gislounge.com/gis-data-a-look-at-accuracy-precision-and-types-of-errors/</a> (último acceso el 09 del 07, 2020).</p>
+<p>Pix4D. «What is accuracy in an aerial mapping project?» Pix4D. 25 de 05 de 2019. <a class="reference external" href="https://www.pix4d.com/blog/accuracy-aerial-mapping">https://www.pix4d.com/blog/accuracy-aerial-mapping</a> (último acceso el 13 del 10, 2020).</p>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/map-accuracy.rst">esta página</a>!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../geo/" class="btn btn-neutral float-right" title="Archivos de geolocalización de imagen" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../gcp/" class="btn btn-neutral float-left" title="Puntos de Control Terrestre" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Derechos de autor 2020, OpenDroneMap.
+
+    </p>
+  </div>
+    
+    
+    
+    Construido con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

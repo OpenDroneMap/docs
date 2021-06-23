@@ -1,0 +1,522 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="es" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>Opciones e indicadores &mdash; documentación de OpenDroneMap - 2.5.7</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Índice" href="../genindex/" />
+    <link rel="search" title="Búsqueda" href="../search/" />
+    <link rel="next" title="Salidas de OpenDroneMap" href="../outputs/" />
+    <link rel="prev" title="Tutoriales" href="../tutorials/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home"> OpenDroneMap
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Buscar documentos" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/">Instalación y Guía de Introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hardware-recommendations">Recomendaciones de Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#installation">Instalación</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-check-virtualization-support">Paso 1. Verificar el Soporte de Virtualización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-install-requirements">Paso 2. Requisitos de instalación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-check-memory-and-cpu-allocation">Paso 3. Revisa la memoria y la asignación del procesador</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-webodm">Paso 4. Descarga WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-launch-webodm">Paso 4. Inicie WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id1">Paso 1. Verificar el Soporte de Virtualización</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id2">Paso 2. Requisitos de instalación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id3">Paso 3. Revisa la memoria y la asignación del procesador</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-and-launch-webodm">Paso 4. Descargue y ejecute WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-install-requirements">Paso 1. Requerimientos de instalación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-check-additional-requirements">Paso 2. Verifique los requisitos adicionales</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-download-and-launch-webodm">Paso 3. Descargue y ejecute WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#basic-commands-and-troubleshooting">Comandos básicos y resolución de problemas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hello-webodm">¡Hola WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#running-on-more-than-one-machine">Ejecutando en más de una máquina</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutoriales</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-high-quality-orthophotos">Creación de Ortofotos de Alta Calidad</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#calibrating-the-camera">Calibrar la cámara</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-digital-elevation-models">Creación de modelos de elevación digitales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#measuring-stockpile-volume">Medir el volumen de pilas de materiales a granel</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#fieldwork-planning">Planificación del trabajo de campo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-pattern">Patrón de vuelo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-height">Altura de vuelo</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#processing-parameters">Parámetros de procesamiento</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#measuring">Medición</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#expected-accuracy">Precisión esperada</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-docker">Usando Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#listing-docker-machines">Listado de máquinas Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#accessing-logs-on-the-instance">Accediendo a los registros en la instancia</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#command-line-access-to-instances">Acceso de línea de comando a las instancias</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#cleaning-up-after-docker">Limpieza de Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-odm-from-low-bandwidth-location">Usando ODM desde una ubicación de ancho de banda bajo</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#what-is-this-and-who-is-it-for">¿Qué es esto y para quién es?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#steps">Pasos</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#install">Instalación</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#prep-data-and-project">Datos de preparación y proyecto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#resize-droplet-pull-pin-run-away">Cambie el tamaño del Droplet, quite el seguro, huya</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#after-it-finishes-assuming-you-survive-that-long">Después de que termine (suponiendo que sobrevivas tanto tiempo)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Opciones e indicadores</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#arguments">Argumentos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../outputs/">Salidas de OpenDroneMap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#point-cloud">Nube de puntos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#d-textured-model">Modelo texturizado 3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#orthophoto">Ortofoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#list-of-all-outputs">Lista de todas las salidas</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gcp/">Puntos de Control Terrestre</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#recommended-practices-for-gcp-setting">Prácticas recomendadas para la colocación de GCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#gcp-file-format">Formato del archivo GCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#user-interfaces">Interfaces de Usuario</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gcp/#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gcp/#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#references">Referencias</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">Precisión del Mapa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#what-to-expect">Que esperar</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aspects-impacting-map-accuracy">Aspectos que impactan la precisión del mapa</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#references">Referencias</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../geo/">Archivos de geolocalización de imagen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../masks/">Usar máscaras de imagen</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large/">División de grandes conjuntos de datos</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">Calibrar imágenes</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#local-split-merge">Split-merge local</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#distributed-split-merge">Split-Merge distribuido</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../large/#getting-started-with-distributed-split-merge">Introducción a split-merge distribuido</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#understanding-the-cluster">Entendiendo el Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#accessing-the-logs">Acceder a los registros</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#autoscaling-clusterodm">Ajuste de escala automático de ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#limitations">Limitaciones</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#acknowledgments">Agradecimientos</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/">Referencias adicionales</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-users">Para usuarios</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-developers">Para desarrolladores</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../flying/">Consejos de vuelo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multispectral/">Soporte multiespectral</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#hardware">Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#usage">Uso</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../requesting-features/">Cómo solicitar funciones</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/">Como contribuir</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#community-forum">Foro comunitario</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#reporting-bugs">Reportando Errores</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/#template-for-submitting-bug-reports">Plantilla Para Enviar Informes de Errores</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#pull-requests">Solicitudes de Extraxion</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">OpenDroneMap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>Opciones e indicadores</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/arguments.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="options-and-flags">
+<h1>Opciones e indicadores<a class="headerlink" href="#options-and-flags" title="Enlazar permanentemente con este título">¶</a></h1>
+<div class="section" id="arguments">
+<h2>Argumentos<a class="headerlink" href="#arguments" title="Enlazar permanentemente con este título">¶</a></h2>
+<dl class="simple">
+<dt><code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code></dt><dd><p>Crea vistas generales de la ortofoto para una visualización mas rápida en programas como QGIS. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--camera-lens</span></code> auto |  perspective |  brown |  fisheye |  spherical</dt><dd><p>Establezca el tipo de proyección de cámara.  Establecer un valor manualmente puede ayudar a mejorar la distorsión geométrica. De forma predeterminada, la aplicación intenta determinar un tipo de lente a partir de los metadatos de las imágenes. Predeterminado: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--cameras</span></code> &lt;json&gt;</dt><dd><p>Utilice los parámetros de cámara calculados a partir de otro conjunto de datos en lugar de calcularlos. Se puede especificar como una ruta a un archivo camera.json o como una cadena JSON que representa el contenido de un archivo camera.json. Default: ``</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--cog</span></code></dt><dd><p>Create Cloud-Optimized GeoTIFFs instead of normal GeoTIFFs. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--copy-to</span></code> &lt;path&gt;</dt><dd><p>Copy output results to this folder after processing.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--crop</span></code> &lt;positive float&gt;</dt><dd><p>Recorte automáticamente los resultados de una imagen creando una zona de amortiguación suave alrededor de los límites del conjunto de datos, reducido en N metros. Utilice 0 para deshabilitar el recorte. Predeterminado: <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--debug</span></code></dt><dd><p>Imprime mensajes de depuración. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--dem-decimation</span></code> &lt;positive integer&gt;</dt><dd><p>Diezma los puntos antes de generar el DEM. <code class="docutils literal notranslate"><span class="pre">1</span></code> no diezma (calidad total). <code class="docutils literal notranslate"><span class="pre">100</span></code> diezma ~ 99% de los puntos. Útil para acelerar la generación.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--dem-euclidean-map</span></code></dt><dd><p>Calcula un mapa ráster euclidiano para cada DEM. El mapa informa la distancia desde cada celda al valor NODATA más cercano (antes de que se rellene cualquier agujero). Esto puede resultar útil para aislar las áreas que se han rellenado.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--dem-gapfill-steps</span></code> &lt;positive integer&gt;</dt><dd><p>Número de pasos utilizados para rellenar áreas con huecos. Establezca en 0 para deshabilitar el llenado de espacios. Comenzando con un radio igual a la resolución de salida, se generan N diferentes DEM con un radio progresivamente mayor utilizando el algoritmo de distancia inversa ponderada (IDW) y se fusionan. Luego, los espacios restantes se fusionan utilizando la interpolación de vecino más cercano. Predeterminado:<code class="docutils literal notranslate"><span class="pre">3</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--dem-resolution</span></code> &lt;float&gt;</dt><dd><p>Resolución de DSM/DTM en cm/pixel. Note que este valor esta limitado por la distancia de muestreo del terreno (GSD) estimada. Para remover este límite, active tambien –ignore-gsd. Predeterminado: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--depthmap-resolution</span></code> &lt;positive float&gt;</dt><dd><p>Opción heredada (use –pc-quality en su lugar). Controla la densidad de la nube de puntos estableciendo la resolución de las imágenes del mapa de profundidad. Los valores más altos tardan más en calcularse, pero producen nubes de puntos más densas. Predeterminado: <code class="docutils literal notranslate"><span class="pre">640</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--dsm</span></code></dt><dd><p>Utilice esta etiqueta para construir un DSM (modelo digital de superficie, suelo + objetos) utilizando un filtro morfológico progresivo. Verifique los parámetros –dem* para un ajuste más fino. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--dtm</span></code></dt><dd><p>Utilice esta etiqueta para construir un DTM (modelo digital de terreno, solo suelo) utilizando un filtro morfológico simple. Compruebe los parámetros –dem* y –smrf* para un ajuste más preciso. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--end-with,-e</span></code> dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report</dt><dd><p>Finalizar procesamiento en esta etapa. Default: <code class="docutils literal notranslate"><span class="pre">odm_report</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--fast-orthophoto</span></code></dt><dd><p>Omite la reconstrucción densa y la generación de modelos 3D. Genera una ortofoto directamente a partir de la reconstrucción escasa.  Active esta opción, si solo necesita una ortofoto y no necesita un modelo 3D completo. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--feature-quality</span></code> ultra |  high |  medium |  low |  lowest</dt><dd><p>Establezca la calidad de extracción de características. Una calidad más alta genera mejores características, pero requiere más memoria y lleva más tiempo. Predeterminado: <code class="docutils literal notranslate"><span class="pre">high</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--feature-type</span></code> sift |  hahog</dt><dd><p>Elija el algoritmo para extraer puntos clave y calcular descriptores. Predeterminado: <code class="docutils literal notranslate"><span class="pre">sift</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--force-gps</span></code></dt><dd><p>Utilice los datos exif de GPS de las imágenes para la reconstrucción, incluso si hay GCP presentes. Esta bandera es útil si tiene mediciones de GPS de alta precisión. Si no hay GCP, esta bandera no hace nada. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--gcp</span></code> &lt;path string&gt;</dt><dd><p>Ruta al archivo que contiene los puntos de control terrestre usados para georreferenciar. El archivo debe tener el siguiente formato: EPSG:&lt;code&gt; or &lt;+proj definition&gt;geo_x geo_y geo_z im_x im_y image_name [gcp_name] [extra1] [extra2] Predeterminado: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--geo</span></code> &lt;path string&gt;</dt><dd><p>Ruta al archivo de geolocalización de las imágenes que contiene las coordenadas de los centros de las imágenes usadas para la georreferenciación. Note que actualmente no esta soportado omega/phi/kappa (los puede configurar en 0). El archivo debe tener el siguiente formato: EPSG:&lt;code&gt; or &lt;+proj definition&gt;image_name geo_x geo_y geo_z [omega (degrees)] [phi (degrees)] [kappa (degrees)] [horz accuracy (meters)] [vert accuracy (meters)] Predeterminado: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--gps-accuracy</span></code> &lt;positive float&gt;</dt><dd><p>Establezca un valor en metros para la información de Dilución de precisión de GPS (DOP) para todas las imágenes. Si sus imágenes están etiquetadas con información GPS de alta precisión (RTK), este valor se establecerá automáticamente en consecuencia. Puede utilizar esta opción para configurarla manualmente en caso de que falle la reconstrucción. Reducir esta opción a veces puede ayudar a controlar los efectos de combadura en áreas extensas. Predeterminado: <code class="docutils literal notranslate"><span class="pre">10</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">-h,--help</span></code></dt><dd><p>muestra este mensaje de ayuda y sale</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--ignore-gsd</span></code></dt><dd><p>Ignore la distancia de muestreo del suelo (GSD). La GSD limita la resolución máxima de las salidas de imagen y cambia el tamaño de las imágenes cuando es necesario, lo que resulta en un procesamiento más rápido y un menor uso de memoria. Dado que la GSD es una estimación, a veces ignorarlo puede resultar en una calidad de salida de imagen ligeramente mejor. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--matcher-distance</span></code> &lt;integer&gt;</dt><dd><p>92%match
+Umbral de distancia en metros, para encontrar imágenes pre-coincidentes basado en la información exif de GPS. Establezca ambos matcher-neighbors y este en 0 para saltar la comparación previa. Predeterminado: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--matcher-neighbors</span></code> &lt;integer&gt;</dt><dd><p>Número de imágenes cercanas a la comparación previa basado en la información exif de GPS. Establezca en 0 para omitir la comparación previa. El parámetro Neighbors trabaja junto con el parámetro Distance, establezca ambos en 0 para no utilizar la comparación previa. Predeterminado: <code class="docutils literal notranslate"><span class="pre">8</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--matcher-type</span></code> flann |  bow</dt><dd><p>Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of Words. FLANN is slower, but more stable. BOW is faster, but can sometimes miss valid matches. . Default: <code class="docutils literal notranslate"><span class="pre">flann</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--max-concurrency</span></code> &lt;positive integer&gt;</dt><dd><p>The maximum number of processes to use in various processes. Peak memory requirement is ~1GB per thread and 2 megapixel image resolution. Default: <code class="docutils literal notranslate"><span class="pre">4</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--merge</span></code> all |  pointcloud |  orthophoto |  dem</dt><dd><p>Choose what to merge in the merge step in a split dataset. By default all available outputs are merged. Options: [“all”, “pointcloud”, “orthophoto”, “dem”]. Default: <code class="docutils literal notranslate"><span class="pre">all</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--mesh-octree-depth</span></code> &lt;positive integer&gt;</dt><dd><p>Octree depth used in the mesh reconstruction, increase to get more vertices, recommended values are 8-12. Default: <code class="docutils literal notranslate"><span class="pre">11</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--mesh-size</span></code> &lt;positive integer&gt;</dt><dd><p>The maximum vertex count of the output mesh. Default: <code class="docutils literal notranslate"><span class="pre">200000</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--min-num-features</span></code> &lt;integer&gt;</dt><dd><p>Minimum number of features to extract per image. More features can be useful for finding more matches between images, potentially allowing the reconstruction of areas with little overlap or insufficient features. More features also slow down processing. Default: <code class="docutils literal notranslate"><span class="pre">8000</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">name</span></code> &lt;dataset name&gt;</dt><dd><p>Name of dataset (i.e subfolder name within project folder). Default: <code class="docutils literal notranslate"><span class="pre">code</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--optimize-disk-space</span></code></dt><dd><p>Delete heavy intermediate files to optimize disk space usage. This affects the ability to restart the pipeline from an intermediate stage, but allows datasets to be processed on machines that don’t have sufficient disk space available. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--orthophoto-compression</span></code> JPEG |  LZW |  PACKBITS |  DEFLATE |  LZMA |  NONE</dt><dd><p>Set the compression to use for orthophotos. . Default: <code class="docutils literal notranslate"><span class="pre">DEFLATE</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--orthophoto-cutline</span></code></dt><dd><p>Generates a polygon around the cropping area that cuts the orthophoto around the edges of features. This polygon can be useful for stitching seamless mosaics with multiple overlapping orthophotos. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--orthophoto-kmz</span></code></dt><dd><p>Set this parameter if you want to generate a Google Earth (KMZ) rendering of the orthophoto. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--orthophoto-no-tiled</span></code></dt><dd><p>Set this parameter if you want a striped GeoTIFF. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--orthophoto-png</span></code></dt><dd><p>Set this parameter if you want to generate a PNG rendering of the orthophoto. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--orthophoto-resolution</span></code> &lt;float &gt; 0.0&gt;</dt><dd><p>Orthophoto resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate. To remove the cap, check –ignore-gsd also. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--pc-classify</span></code></dt><dd><p>Classify the point cloud outputs using a Simple Morphological Filter. You can control the behavior of this option by tweaking the –dem-* parameters. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--pc-csv</span></code></dt><dd><p>Export the georeferenced point cloud in CSV format. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--pc-ept</span></code></dt><dd><p>Export the georeferenced point cloud in Entwine Point Tile (EPT) format. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--pc-filter</span></code> &lt;positive float&gt;</dt><dd><p>Filters the point cloud by removing points that deviate more than N standard deviations from the local mean. Set to 0 to disable filtering. Default: <code class="docutils literal notranslate"><span class="pre">2.5</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--pc-geometric</span></code></dt><dd><p>Improve the accuracy of the point cloud by computing geometrically consistent depthmaps. This increases processing time, but can improve results in urban scenes. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--pc-las</span></code></dt><dd><p>Export the georeferenced point cloud in LAS format. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--pc-quality</span></code> ultra |  high |  medium |  low |  lowest</dt><dd><p>Set point cloud quality. Higher quality generates better, denser point clouds, but requires more memory and takes longer. Each step up in quality increases processing time roughly by a factor of 4x.. Default: <code class="docutils literal notranslate"><span class="pre">medium</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--pc-rectify</span></code></dt><dd><p>Perform ground rectification on the point cloud. This means that wrongly classified ground points will be re-classified and gaps will be filled. Useful for generating DTMs. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--pc-sample</span></code> &lt;positive float&gt;</dt><dd><p>Filters the point cloud by keeping only a single point around a radius N (in meters). This can be useful to limit the output resolution of the point cloud and remove duplicate points. Set to 0 to disable sampling. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--pc-tile</span></code></dt><dd><p>Reduce the memory usage needed for depthmap fusion by splitting large scenes into tiles. Turn this on if your machine doesn’t have much RAM and/or you’ve set –pc-quality to high or ultra. Experimental. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--primary-band</span></code> &lt;string&gt;</dt><dd><p>When processing multispectral datasets, you can specify the name of the primary band that will be used for reconstruction. It’s recommended to choose a band which has sharp details and is in focus. Default: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--project-path</span></code> &lt;path&gt;</dt><dd><p>Path to the project folder. Your project folder should contain subfolders for each dataset. Each dataset should have an «images» folder.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--radiometric-calibration</span></code> none |  camera |  camera+sun</dt><dd><p>Set the radiometric calibration to perform on images. When processing multispectral and thermal images you should set this option to obtain reflectance/temperature values (otherwise you will get digital number values). [camera] applies black level, vignetting, row gradient gain/exposure compensation (if appropriate EXIF tags are found) and computes absolute temperature values. [camera+sun] is experimental, applies all the corrections of [camera], plus compensates for spectral radiance registered via a downwelling light sensor (DLS) taking in consideration the angle of the sun. . Default: <code class="docutils literal notranslate"><span class="pre">none</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--rerun,-r</span></code> dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report</dt><dd><p>Rerun this stage only and stop. . Default: ``</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--rerun-all</span></code></dt><dd><p>Permanently delete all previous results and rerun the processing pipeline.</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--rerun-from</span></code> dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report</dt><dd><p>Rerun processing from this stage. . Default: ``</p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--resize-to</span></code> &lt;integer&gt;</dt><dd><p>Legacy option (use –feature-quality instead). Resizes images by the largest side for feature extraction purposes only. Set to -1 to disable. This does not affect the final orthophoto resolution quality and will not resize the original images. Default: <code class="docutils literal notranslate"><span class="pre">2048</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--skip-3dmodel</span></code></dt><dd><p>Skip generation of a full 3D model. This can save time if you only need 2D results such as orthophotos and DEMs. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--skip-band-alignment</span></code></dt><dd><p>When processing multispectral datasets, ODM will automatically align the images for each band. If the images have been postprocessed and are already aligned, use this option. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--skip-report</span></code></dt><dd><p>Skip generation of PDF report. This can save time if you don’t need a report. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--sm-cluster</span></code> &lt;string&gt;</dt><dd><p>URL to a ClusterODM instance for distributing a split-merge workflow on multiple nodes in parallel. Default: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--smrf-scalar</span></code> &lt;positive float&gt;</dt><dd><p>Simple Morphological Filter elevation scalar parameter. Default: <code class="docutils literal notranslate"><span class="pre">1.25</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--smrf-slope</span></code> &lt;positive float&gt;</dt><dd><p>Simple Morphological Filter slope parameter (rise over run). Default: <code class="docutils literal notranslate"><span class="pre">0.15</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--smrf-threshold</span></code> &lt;positive float&gt;</dt><dd><p>Simple Morphological Filter elevation threshold parameter (meters). Default: <code class="docutils literal notranslate"><span class="pre">0.5</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--smrf-window</span></code> &lt;positive float&gt;</dt><dd><p>Simple Morphological Filter window radius parameter (meters). Default: <code class="docutils literal notranslate"><span class="pre">18.0</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--split</span></code> &lt;positive integer&gt;</dt><dd><p>Average number of images per submodel. When splitting a large dataset into smaller submodels, images are grouped into clusters. This value regulates the number of images that each cluster should have on average. Default: <code class="docutils literal notranslate"><span class="pre">999999</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--split-image-groups</span></code> &lt;path string&gt;</dt><dd><p>Path to the image groups file that controls how images should be split into groups. The file needs to use the following format: image_name group_nameDefault: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code> &lt;positive integer&gt;</dt><dd><p>Radius of the overlap between submodels. After grouping images into clusters, images that are closer than this radius to a cluster are added to the cluster. This is done to ensure that neighboring submodels overlap. Default: <code class="docutils literal notranslate"><span class="pre">150</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--texturing-data-term</span></code> gmi |  area</dt><dd><p>When texturing the 3D mesh, for each triangle, choose to prioritize images with sharp features (gmi) or those that cover the largest area (area). Default: <code class="docutils literal notranslate"><span class="pre">gmi</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--texturing-keep-unseen-faces</span></code></dt><dd><p>Keep faces in the mesh that are not seen in any camera. Default:  <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--texturing-outlier-removal-type</span></code> none |  gauss_clamping |  gauss_damping</dt><dd><p>Type of photometric outlier removal method. . Default: <code class="docutils literal notranslate"><span class="pre">gauss_clamping</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--texturing-skip-global-seam-leveling</span></code></dt><dd><p>Skip normalization of colors across all images. Useful when processing radiometric data. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--texturing-skip-local-seam-leveling</span></code></dt><dd><p>Skip the blending of colors near seams. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--texturing-tone-mapping</span></code> none |  gamma</dt><dd><p>Turn on gamma tone mapping or none for no tone mapping. Can be one of [“none”, “gamma”]. Default: <code class="docutils literal notranslate"><span class="pre">none</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--tiles</span></code></dt><dd><p>Generate static tiles for orthophotos and DEMs that are suitable for viewers like Leaflet or OpenLayers. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--time</span></code></dt><dd><p>Generates a benchmark file with runtime info. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--use-3dmesh</span></code></dt><dd><p>Use a full 3D mesh to compute the orthophoto instead of a 2.5D mesh. This option is a bit faster and provides similar results in planar areas. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--use-exif</span></code></dt><dd><p>Use this tag if you have a GCP File but want to use the EXIF information for georeferencing instead. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--use-fixed-camera-params</span></code></dt><dd><p>Turn off camera parameter optimization during bundle adjustment. This can be sometimes useful for improving results that exhibit doming/bowling or when images are taken with a rolling shutter camera. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--use-hybrid-bundle-adjustment</span></code></dt><dd><p>Run local bundle adjustment for every image added to the reconstruction and a global adjustment every 100 images. Speeds up reconstruction for very large datasets. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--verbose,-v</span></code></dt><dd><p>Imprime mensajes adicionales en la consola. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><code class="docutils literal notranslate"><span class="pre">--version</span></code></dt><dd><p>Muestra el número de versión y sale.</p>
+</dd>
+</dl>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/arguments.rst">esta página</a>!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../outputs/" class="btn btn-neutral float-right" title="Salidas de OpenDroneMap" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../tutorials/" class="btn btn-neutral float-left" title="Tutoriales" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Derechos de autor 2020, OpenDroneMap.
+
+    </p>
+  </div>
+    
+    
+    
+    Construido con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
+    
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

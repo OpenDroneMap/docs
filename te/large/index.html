@@ -1,0 +1,506 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="te" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>పెద్ద డేటాసెట్లను విభజించడం &mdash; OpenDroneMap 2.5.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="అదనపు సూచనలు" href="../resources/" />
+    <link rel="prev" title="ఇమేజ్ మాస్క్‌లను ఉపయోగించడం" href="../masks/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home"> OpenDroneMap
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hardware-recommendations">Hardware Recommendations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-check-virtualization-support">Step 1. Check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-install-requirements">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-check-memory-and-cpu-allocation">Step 3. Check Memory and CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-webodm">Step 4. Download WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-launch-webodm">Step 4. Launch WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id1">Step 1. Check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id2">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id3">Step 3. Check Memory and CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-and-launch-webodm">Step 4. Download and Launch WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-install-requirements">Step 1. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-check-additional-requirements">Step 2. Check Additional Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-download-and-launch-webodm">Step 3. Download and Launch WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#basic-commands-and-troubleshooting">Basic Commands and Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hello-webodm">Hello, WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#running-on-more-than-one-machine">Running on more than one machine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-high-quality-orthophotos">Creating High Quality Orthophotos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#calibrating-the-camera">Calibrating the Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-digital-elevation-models">Creating Digital Elevation Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-docker">Using Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#listing-docker-machines">Listing Docker Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#accessing-logs-on-the-instance">Accessing logs on the instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#command-line-access-to-instances">Command line access to instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#cleaning-up-after-docker">Cleaning up after Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-odm-from-low-bandwidth-location">Using ODM from low-bandwidth location</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#what-is-this-and-who-is-it-for">What is this and who is it for?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#steps">Steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#install">Install</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#prep-data-and-project">Prep data and project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#resize-droplet-pull-pin-run-away">Resize droplet, pull pin, run away</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#after-it-finishes-assuming-you-survive-that-long">After it finishes (assuming you survive that long)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arguments/">ఎంపికలు మరియు ఫ్లాగ్స్</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/#arguments">ఆర్గుమెంట్స్</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../outputs/">OpenDroneMap అవుట్‌పుట్‌లు</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#point-cloud">పాయింట్ క్లౌడ్</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#d-textured-model">3D ఆకృతి మోడల్</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#orthophoto">ఆర్థోఫోటో</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#dtm-dsm">DTM / DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#list-of-all-outputs">అన్ని ఉత్పాదనల జాబితా</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gcp/">గ్రౌండ్ కంట్రోల్ పాయింట్లు</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#recommended-practices-for-gcp-setting">జిసిపి సెట్టింగ్ కోసం సిఫార్సు చేసిన పద్ధతులు</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#gcp-file-format">GCP ఫైల్ ఫార్మాట్</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#user-interfaces">వినియోగదారు ఇంటర్‌ఫేస్‌లు</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gcp/#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gcp/#id2">జిసిపి ఎడిటర్ ప్రో</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#references">ప్రస్తావనలు</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">మ్యాప్ ఖచ్చితత్వం</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#what-to-expect">ఏమి ఆశించను</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aspects-impacting-map-accuracy">మ్యాప్ ఖచ్చితత్వాన్ని ప్రభావితం చేసే అంశాలు</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#references">ప్రస్తావనలు</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../geo/">చిత్రం జియోలొకేషన్ ఫైల్స్</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../masks/">ఇమేజ్ మాస్క్‌లను ఉపయోగించడం</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">పెద్ద డేటాసెట్లను విభజించడం</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#calibrate-images">Calibrate images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#local-split-merge">Local Split-Merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#distributed-split-merge">Distributed Split-Merge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getting-started-with-distributed-split-merge">Getting Started with Distributed Split-Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#understanding-the-cluster">Understanding the Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-the-logs">Accessing the Logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#autoscaling-clusterodm">Autoscaling ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#acknowledgments">Acknowledgments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/">అదనపు సూచనలు</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-users">వినియోగదారుల కోసం</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-developers">డెవలపర్ల కోసం</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../flying/">ఎగిరే చిట్కాలు</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multispectral/">మల్టీస్పెక్ట్రల్ సపోర్ట్</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#hardware">హార్డ్వేర్</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#usage">వాడుక</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../requesting-features/">ఫీచర్లను ఎలా అభ్యర్థించాలి</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/">ఎలా సహకరించాలి</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#community-forum">కమ్యూనిటీ ఫోరం</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#reporting-bugs">దోషాలు నివేదించడం</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/#template-for-submitting-bug-reports">బగ్ నివేదికలను సమర్పించడానికి మూస</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#pull-requests">అభ్యర్థనలను లాగండి</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">OpenDroneMap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>పెద్ద డేటాసెట్లను విభజించడం</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/large.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="splitting-large-datasets">
+<h1>పెద్ద డేటాసెట్లను విభజించడం<a class="headerlink" href="#splitting-large-datasets" title="Permalink to this headline">¶</a></h1>
+<p>ODM సంస్కరణ `` 0.6.0`` తో ప్రారంభించి, మీరు చాలా పెద్ద డేటాసెట్లను నిర్వహించదగిన భాగాలుగా విభజించవచ్చు (సబ్‌మోడల్స్ అని పిలుస్తారు), ప్రతి భాగం పైప్‌లైన్‌ను నడుపుతుంది, ఆపై విలీనం చేసిన DEM లు, ఆర్థోఫోటోలు మరియు పాయింట్ మేఘాలను ఉత్పత్తి చేస్తుంది. ఈ ప్రక్రియను &quot;స్ప్లిట్-విలీనం&quot; గా సూచిస్తారు.</p>
+<p>మీరు స్ప్లిట్-విలీన పైప్‌లైన్‌ను ఎందుకు ఉపయోగించవచ్చు? మీ డేటాసెట్‌లో మీకు చాలా ఎక్కువ సంఖ్యలో చిత్రాలు ఉంటే, స్ప్లిట్-విలీనం పెద్ద మెషీన్‌లో ప్రాసెసింగ్‌ను మరింత నిర్వహించగలిగేలా చేస్తుంది (దీనికి తక్కువ మెమరీ అవసరం). ఒకే నెట్‌వర్క్‌తో అనుసంధానించబడిన అనేక యంత్రాలు మీకు ఉంటే, మీరు సబ్‌మోడల్‌లను సమాంతరంగా ప్రాసెస్ చేయవచ్చు, తద్వారా క్షితిజ సమాంతర స్కేలింగ్ మరియు వేలాది చిత్రాలను మరింత త్వరగా ప్రాసెస్ చేయడానికి అనుమతిస్తుంది.</p>
+<p>Split-merge works in WebODM out of the box as long as the processing nodes support split-merge, by enabling the <code class="docutils literal notranslate"><span class="pre">--split</span></code> option when creating a new task.</p>
+<div class="section" id="calibrate-images">
+<h2>Calibrate images<a class="headerlink" href="#calibrate-images" title="Permalink to this headline">¶</a></h2>
+<p>Image calibration is recommended (but not required) for large datasets because error propagation due to image distortion could cause a bowl effect on the models. Calibration instructions can be found at      <a class="reference external" href="tutorials.html#calibrating-the-camera">Calibrate Images</a>.</p>
+<div class="figure align-center">
+<img alt="image of lens distortion effect on bowling of data" src="../_images/msimbasi_bowling.png" />
+</div>
+<p>Bowling effect on point cloud over 13,000+ image dataset collected by World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania.</p>
+</div>
+<div class="section" id="local-split-merge">
+<h2>Local Split-Merge<a class="headerlink" href="#local-split-merge" title="Permalink to this headline">¶</a></h2>
+<p>Splitting a dataset into more manageable submodels and sequentially processing all submodels on the same machine is easy! Just use <code class="docutils literal notranslate"><span class="pre">--split</span></code> and <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code> to decide the the average number of images per submodels and the overlap (in meters) between submodels respectively</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split <span class="m">400</span> --split-overlap <span class="m">100</span>
+</pre></div>
+</div>
+<p>If you already know how you want to split the dataset, you can provide that information and it will be used instead of the clustering algorithm.</p>
+<p>The grouping can be provided by adding a file named image_groups.txt in the main dataset folder. The file should have one line per image. Each line should have two words: first the name of the image and second the name of the group it belongs to. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">01.</span><span class="n">jpg</span> <span class="n">A</span>
+<span class="mf">02.</span><span class="n">jpg</span> <span class="n">A</span>
+<span class="mf">03.</span><span class="n">jpg</span> <span class="n">B</span>
+<span class="mf">04.</span><span class="n">jpg</span> <span class="n">B</span>
+<span class="mf">05.</span><span class="n">jpg</span> <span class="n">C</span>
+</pre></div>
+</div>
+<p>will create 3 submodels. Make sure to pass <code class="docutils literal notranslate"><span class="pre">--split-overlap</span> <span class="pre">0</span></code> if you manually provide a <code class="docutils literal notranslate"><span class="pre">image_groups.txt</span></code> file.</p>
+</div>
+<div class="section" id="distributed-split-merge">
+<h2>Distributed Split-Merge<a class="headerlink" href="#distributed-split-merge" title="Permalink to this headline">¶</a></h2>
+<p>ODM can also automatically distribute the processing of each submodel to multiple machines via <a class="reference external" href="https://github.com/OpenDroneMap/NodeODM">NodeODM</a> nodes, orchestrated via <a class="reference external" href="https://github.com/OpenDroneMap/ClusterODM">ClusterODM</a>.</p>
+<div class="figure align-center">
+<img alt="image of lens distortion effect on bowling of data" src="../_images/clusterodm.png" />
+</div>
+<div class="section" id="getting-started-with-distributed-split-merge">
+<h3>Getting Started with Distributed Split-Merge<a class="headerlink" href="#getting-started-with-distributed-split-merge" title="Permalink to this headline">¶</a></h3>
+<p>The first step is start ClusterODM</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti -p <span class="m">3001</span>:3000 -p <span class="m">8080</span>:8080 opendronemap/clusterodm
+</pre></div>
+</div>
+<p>Then on each machine you want to use for processing, launch a NodeODM instance via</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti -p <span class="m">3000</span>:3000 opendronemap/nodeodm
+</pre></div>
+</div>
+<p>Connect via telnet to ClusterODM and add the IP addresses/port of the machines running NodeODM</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ telnet &lt;cluster-odm-ip&gt; <span class="m">8080</span>
+Connected to &lt;cluster-odm-ip&gt;.
+Escape character is <span class="s1">&#39;^]&#39;</span>.
+<span class="o">[</span>...<span class="o">]</span>
+<span class="c1"># node add &lt;node-odm-ip-1&gt; 3000</span>
+<span class="c1"># node add &lt;node-odm-ip-2&gt; 3000</span>
+<span class="o">[</span>...<span class="o">]</span>
+<span class="c1"># node list</span>
+<span class="m">1</span><span class="o">)</span> &lt;node-odm-ip-1&gt;:3000 <span class="o">[</span>online<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.1&gt;
+<span class="m">2</span><span class="o">)</span> &lt;node-odm-ip-2&gt;:3000 <span class="o">[</span>online<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.1&gt;
+</pre></div>
+</div>
+<p>Make sure you are running version <code class="docutils literal notranslate"><span class="pre">1.5.1</span></code> or higher of the NodeODM API.</p>
+<p>At this point, simply use the <code class="docutils literal notranslate"><span class="pre">--sm-cluster</span></code> option to enable distributed split-merge</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split <span class="m">800</span> --split-overlap <span class="m">120</span> --sm-cluster http://&lt;cluster-odm-ip&gt;:3001
+</pre></div>
+</div>
+</div>
+<div class="section" id="understanding-the-cluster">
+<h3>Understanding the Cluster<a class="headerlink" href="#understanding-the-cluster" title="Permalink to this headline">¶</a></h3>
+<p>When connected via telnet, it is possible to interrogate what is happening on the cluster. For example, we can use the command HELP to find out available commands</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># HELP</span>
+NODE ADD &lt;hostname&gt; &lt;port&gt; <span class="o">[</span>token<span class="o">]</span> - Add new node
+NODE DEL &lt;node number&gt; - Remove a node
+NODE INFO &lt;node number&gt; - View node info
+NODE LIST - List nodes
+NODE LOCK &lt;node number&gt; - Stop forwarding tasks to this node
+NODE UNLOCK &lt;node number&gt; - Resume forwarding tasks to this node
+NODE UPDATE - Update all nodes info
+NODE BEST &lt;number of images&gt; - Show best node <span class="k">for</span> the number of images
+ROUTE INFO &lt;taskId&gt; - Find route information <span class="k">for</span> task
+ROUTE LIST <span class="o">[</span>node number<span class="o">]</span> - List routes
+TASK LIST <span class="o">[</span>node number<span class="o">]</span> - List tasks
+TASK INFO &lt;taskId&gt; - View task info
+TASK OUTPUT &lt;taskId&gt; <span class="o">[</span>lines<span class="o">]</span> - View task output
+TASK CANCEL &lt;taskId&gt; - Cancel task
+TASK REMOVE &lt;taskId&gt; - Remove task
+ASR VIEWCMD &lt;number of images&gt; - View <span class="nb">command</span> used to create a machine
+!! - Repeat last <span class="nb">command</span>
+</pre></div>
+</div>
+<p>If, for example, the NodeODM instance wasn't active when ClusterODM started, we might list nodes and see something as follows</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># NODE LIST</span>
+<span class="m">1</span><span class="o">)</span> localhost:3000 <span class="o">[</span>offline<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.3&gt; <span class="o">[</span>L<span class="o">]</span>
+</pre></div>
+</div>
+<p>To address this, we can start up our local node (if not already started), and then perform a <code class="docutils literal notranslate"><span class="pre">NODE</span> <span class="pre">UPDATE</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># NODE UPDATE</span>
+OK
+<span class="c1"># NODE LIST</span>
+<span class="m">1</span><span class="o">)</span> localhost:3000 <span class="o">[</span>online<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.3&gt; <span class="o">[</span>L<span class="o">]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="accessing-the-logs">
+<h3>Accessing the Logs<a class="headerlink" href="#accessing-the-logs" title="Permalink to this headline">¶</a></h3>
+<p>While a process is running, it is also possible to list the tasks, and view the task output</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># TASK LIST</span>
+<span class="c1"># TASK OUTPUT &lt;taskId&gt; [lines]</span>
+</pre></div>
+</div>
+</div>
+<div class="section" id="autoscaling-clusterodm">
+<h3>Autoscaling ClusterODM<a class="headerlink" href="#autoscaling-clusterodm" title="Permalink to this headline">¶</a></h3>
+<p>ClusterODM also includes the option to autoscale on multiple platforms, including, to date, Amazon and Digital Ocean. This allows users to reduce costs associated with always-on instances as well as being able to scale processing based on demand.</p>
+<p>To setup autoscaling you must:</p>
+<ul class="simple">
+<li><p>Have a functioning version of NodeJS installed and then install ClusterODM</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/OpenDroneMap/ClusterODM
+<span class="nb">cd</span> ClusterODM
+npm install
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Make sure docker-machine is installed.</p></li>
+<li><p>Setup a S3-compatible bucket for storing results.</p></li>
+<li><p>Create a configuration file for <a class="reference external" href="https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/digitalocean.md">DigitalOcean</a> or <a class="reference external" href="https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/aws.md">Amazon Web Services</a>.</p></li>
+</ul>
+<p>You can then launch ClusterODM with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>node index.js --asr configuration.json
+</pre></div>
+</div>
+<p>You should see something similar to following messages in the console</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>info: ASR: DigitalOceanAsrProvider
+info: Can write to S3
+info: Found docker-machine executable
+</pre></div>
+</div>
+<p>You should always have at least one static NodeODM node attached to ClusterODM, even if you plan to use the autoscaler for all processing. If you setup auto scaling, you can't have zero nodes and rely 100% on the autoscaler. You need to attach a NodeODM node to act as the &quot;reference node&quot; otherwise ClusterODM will not know how to handle certain requests (for the forwarding the UI, for validating options prior to spinning up an instance, etc.). For this purpose, you should add a &quot;dummy&quot; NodeODM node and lock it</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>telnet localhost <span class="m">8080</span>
+&gt; NODE ADD localhost <span class="m">3001</span>
+&gt; NODE LOCK <span class="m">1</span>
+&gt; NODE LIST
+<span class="m">1</span><span class="o">)</span> localhost:3001 <span class="o">[</span>online<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.1&gt; <span class="o">[</span>L<span class="o">]</span>
+</pre></div>
+</div>
+<p>This way all tasks will be automatically forwarded to the autoscaler.</p>
+</div>
+</div>
+<div class="section" id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+<p>The 3D textured meshes are currently not being merged as part of the workflow (only point clouds, DEMs and orthophotos are).</p>
+<p>GCPs are fully supported, however, there needs to be at least 3 GCP points on each submodel for the georeferencing to take place. If a submodel has fewer than 3 GCPs, a combination of the remaining GCPs + EXIF data will be used instead (which is going to be less accurate). We recommend using the <code class="docutils literal notranslate"><span class="pre">image_groups.txt</span></code> file to accurately control the submodel split when using GCPs.</p>
+</div>
+<div class="section" id="acknowledgments">
+<h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h2>
+<p>Huge props to Pau and the folks at Mapillary for their amazing contributions to OpenDroneMap through their OpenSfM code, which is a key component of the split-merge pipeline. We look forward to further pushing the limits of OpenDroneMap and seeing how big a dataset we can process.</p>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst">this page</a>!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../resources/" class="btn btn-neutral float-right" title="అదనపు సూచనలు" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../masks/" class="btn btn-neutral float-left" title="ఇమేజ్ మాస్క్‌లను ఉపయోగించడం" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, OpenDroneMap.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

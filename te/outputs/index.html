@@ -1,0 +1,440 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="te" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>OpenDroneMap అవుట్‌పుట్‌లు &mdash; OpenDroneMap 2.5.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title="గ్రౌండ్ కంట్రోల్ పాయింట్లు" href="../gcp/" />
+    <link rel="prev" title="ఎంపికలు మరియు ఫ్లాగ్స్" href="../arguments/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home"> OpenDroneMap
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hardware-recommendations">Hardware Recommendations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-check-virtualization-support">Step 1. Check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-install-requirements">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-check-memory-and-cpu-allocation">Step 3. Check Memory and CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-webodm">Step 4. Download WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-launch-webodm">Step 4. Launch WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id1">Step 1. Check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id2">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id3">Step 3. Check Memory and CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-and-launch-webodm">Step 4. Download and Launch WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-install-requirements">Step 1. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-check-additional-requirements">Step 2. Check Additional Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-download-and-launch-webodm">Step 3. Download and Launch WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#basic-commands-and-troubleshooting">Basic Commands and Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hello-webodm">Hello, WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#running-on-more-than-one-machine">Running on more than one machine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-high-quality-orthophotos">Creating High Quality Orthophotos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#calibrating-the-camera">Calibrating the Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-digital-elevation-models">Creating Digital Elevation Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-docker">Using Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#listing-docker-machines">Listing Docker Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#accessing-logs-on-the-instance">Accessing logs on the instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#command-line-access-to-instances">Command line access to instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#cleaning-up-after-docker">Cleaning up after Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-odm-from-low-bandwidth-location">Using ODM from low-bandwidth location</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#what-is-this-and-who-is-it-for">What is this and who is it for?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#steps">Steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#install">Install</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#prep-data-and-project">Prep data and project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#resize-droplet-pull-pin-run-away">Resize droplet, pull pin, run away</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#after-it-finishes-assuming-you-survive-that-long">After it finishes (assuming you survive that long)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arguments/">ఎంపికలు మరియు ఫ్లాగ్స్</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/#arguments">ఆర్గుమెంట్స్</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">OpenDroneMap అవుట్‌పుట్‌లు</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#point-cloud">పాయింట్ క్లౌడ్</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#d-textured-model">3D ఆకృతి మోడల్</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#orthophoto">ఆర్థోఫోటో</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#dtm-dsm">DTM / DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#list-of-all-outputs">అన్ని ఉత్పాదనల జాబితా</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gcp/">గ్రౌండ్ కంట్రోల్ పాయింట్లు</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#recommended-practices-for-gcp-setting">జిసిపి సెట్టింగ్ కోసం సిఫార్సు చేసిన పద్ధతులు</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#gcp-file-format">GCP ఫైల్ ఫార్మాట్</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#user-interfaces">వినియోగదారు ఇంటర్‌ఫేస్‌లు</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gcp/#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gcp/#id2">జిసిపి ఎడిటర్ ప్రో</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#references">ప్రస్తావనలు</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">మ్యాప్ ఖచ్చితత్వం</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#what-to-expect">ఏమి ఆశించను</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aspects-impacting-map-accuracy">మ్యాప్ ఖచ్చితత్వాన్ని ప్రభావితం చేసే అంశాలు</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#references">ప్రస్తావనలు</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../geo/">చిత్రం జియోలొకేషన్ ఫైల్స్</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../masks/">ఇమేజ్ మాస్క్‌లను ఉపయోగించడం</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large/">పెద్ద డేటాసెట్లను విభజించడం</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">Calibrate images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#local-split-merge">Local Split-Merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#distributed-split-merge">Distributed Split-Merge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../large/#getting-started-with-distributed-split-merge">Getting Started with Distributed Split-Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#understanding-the-cluster">Understanding the Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#accessing-the-logs">Accessing the Logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#autoscaling-clusterodm">Autoscaling ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#acknowledgments">Acknowledgments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/">అదనపు సూచనలు</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-users">వినియోగదారుల కోసం</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-developers">డెవలపర్ల కోసం</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../flying/">ఎగిరే చిట్కాలు</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multispectral/">మల్టీస్పెక్ట్రల్ సపోర్ట్</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#hardware">హార్డ్వేర్</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#usage">వాడుక</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../requesting-features/">ఫీచర్లను ఎలా అభ్యర్థించాలి</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/">ఎలా సహకరించాలి</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#community-forum">కమ్యూనిటీ ఫోరం</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#reporting-bugs">దోషాలు నివేదించడం</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/#template-for-submitting-bug-reports">బగ్ నివేదికలను సమర్పించడానికి మూస</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#pull-requests">అభ్యర్థనలను లాగండి</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">OpenDroneMap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>OpenDroneMap అవుట్‌పుట్‌లు</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/outputs.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="opendronemap-outputs">
+<h1>OpenDroneMap అవుట్‌పుట్‌లు<a class="headerlink" href="#opendronemap-outputs" title="Permalink to this headline">¶</a></h1>
+<p>ODM ఉత్పత్తి చేసే కొన్ని ఉపయోగకరమైన ఉత్పాదనలు క్రింద ఇవ్వబడ్డాయి.</p>
+<div class="section" id="point-cloud">
+<h2>పాయింట్ క్లౌడ్<a class="headerlink" href="#point-cloud" title="Permalink to this headline">¶</a></h2>
+<p>`` odm_georeferencing / odm_georeferenced_model.ply / laz / csv`` - వేర్వేరు ఫైల్ ఫార్మాట్లలో భౌగోళిక సూచించిన పాయింట్ క్లౌడ్</p>
+<div class="figure align-center">
+<img alt="image of OpenDroneMap derived point cloud" src="../_images/pointcloud.png" />
+</div>
+<p><em>Point cloud over State University Zanzibar, courtesy of</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
+</div>
+<div class="section" id="d-textured-model">
+<h2>3D ఆకృతి మోడల్<a class="headerlink" href="#d-textured-model" title="Permalink to this headline">¶</a></h2>
+<p>`` odm_texturing / odm_textured_model.obj`` - ఆకృతి చేసిన ఉపరితల మెష్ `` odm_texturing / odm_textured_model_geo.obj`` - భౌగోళిక మరియు ఉపరితల ఉపరితల మెష్</p>
+<p>మీరు మెష్ లాబ్ ఉపయోగించి పాయింట్ క్లౌడ్ మరియు ఆకృతి మెష్లను యాక్సెస్ చేయవచ్చు. మెష్‌ల్యాబ్‌ను తెరిచి, ఫైల్‌ను ఎంచుకోండి: మెష్‌ను దిగుమతి చేయండి మరియు కింది వాటికి సమానమైన స్థానం నుండి మీ ఆకృతి మెష్‌ను ఎంచుకోండి: `` odm_texturing odm_textured_model.obj``</p>
+<div class="figure align-center">
+<img alt="image of OpenDroneMap derived textured mesh" src="../_images/UR_3D.gif" />
+</div>
+<p><em>Textured mesh courtesy of</em> <a class="reference external" href="https://twitter.com/opendronemap">OpenDroneMap</a></p>
+</div>
+<div class="section" id="orthophoto">
+<h2>ఆర్థోఫోటో<a class="headerlink" href="#orthophoto" title="Permalink to this headline">¶</a></h2>
+<p>`` odm_orthophoto / odm_orthphoto.png`` - ఆర్థోఫోటో, కానీ ఇది సరళమైన png, దీనికి భౌగోళిక సమాచారం లేదు</p>
+<p>`` odm_orthophoto / odm_orthphoto.tif`` - GeoTIFF ఆర్థోఫోటో. మీరు దీన్ని QGIS లో రాస్టర్ లేయర్‌గా ఉపయోగించవచ్చు.</p>
+<div class="figure align-center">
+<img alt="image of OpenDroneMap orthophoto" src="../_images/orthophoto.png" />
+</div>
+<p><em>Orthophoto over State University Zanzibar, courtesy of</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
+</div>
+<div class="section" id="dtm-dsm">
+<h2>DTM / DSM<a class="headerlink" href="#dtm-dsm" title="Permalink to this headline">¶</a></h2>
+<p>`` --Dtm`` లేదా `` --dsm`` ఎంపికలు ఉపయోగించినట్లయితే మాత్రమే DTM / DSM సృష్టించబడుతుంది. సృష్టించే మరిన్ని ఎంపికల కోసం ఎలివేషన్ మోడళ్లపై &lt;ట్యుటోరియల్ &lt;<a class="reference external" href="https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-models">https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-models</a>&gt;`_ చూడండి.</p>
+<p>డేటా వీటిలో నిల్వ చేయబడుతుంది:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">odm_dem/dtm.tif</span></code></p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">odm_dem/dsm.tif</span></code></p></li>
+</ul>
+</div></blockquote>
+<div class="figure align-center">
+<img alt="image of OpenDroneMap derived digital surface model" src="../_images/digitalsurfacemodel.png" />
+</div>
+<p><em>Digital surface model over State University Zanzibar, courtesy of</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
+</div>
+<div class="section" id="list-of-all-outputs">
+<h2>అన్ని ఉత్పాదనల జాబితా<a class="headerlink" href="#list-of-all-outputs" title="Permalink to this headline">¶</a></h2>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
+├── images/
+│   ├── img-1234.jpg
+│   └── ...
+├── opensfm/                            # Tie Points and camera positions here in JSON format
+│   ├── config.yaml
+│   ├── images/
+│   ├── masks/
+│   ├── gcp_list.txt
+│   ├── metadata/
+│   ├── features/
+│   ├── matches/
+│   ├── tracks.tsv
+│   ├── reconstruction.json
+│   ├── reconstruction.meshed.json
+│   ├── undistorted/
+│   ├── undistorted_tracks.json
+│   ├── undistorted_reconstruction.json
+│   └── depthmaps/
+│      └── merged.ply                   # Dense Point Cloud
+├── odm_meshing/
+│   ├── odm_mesh.ply                    # A 3D mesh
+│   └── odm_meshing_log.txt             # Output of the meshing task. May point out errors.
+├── odm_texturing/
+│   ├── odm_textured_model.obj          # Textured mesh
+│   ├── odm_textured_model_geo.obj      # Georeferenced textured mesh
+│   └── texture_N.jpg                   # Associated textured images used by the model
+├── odm_georeferencing/
+│   ├── odm_georeferenced_model.ply     # A georeferenced dense point cloud
+│   ├── odm_georeferenced_model.laz # LAZ format point cloud
+│   ├── odm_georeferenced_model.csv     # XYZ format point cloud
+│   ├── odm_georeferencing_log.txt      # Georeferencing log
+│   └── odm_georeferencing_utm_log.txt  # Log for the extract_utm portion
+├── odm_orthophoto/
+│   ├── odm_orthophoto.png              # Orthophoto image (no coordinates)
+│   ├── odm_orthophoto.tif              # Orthophoto GeoTiff
+│   ├── odm_orthophoto_log.txt          # Log file
+│   └── gdal_translate_log.txt          # Log for georeferencing the png file
+└── odm_dem/
+    ├── dsm.tif                     # Digital Surface Model Geotiff - the tops of everything
+    └── dtm.tif                     # Digital Terrain Model Geotoff - the ground.
+</pre></div>
+</div>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/outputs.rst">this page</a>!</p>
+</div>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../gcp/" class="btn btn-neutral float-right" title="గ్రౌండ్ కంట్రోల్ పాయింట్లు" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../arguments/" class="btn btn-neutral float-left" title="ఎంపికలు మరియు ఫ్లాగ్స్" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, OpenDroneMap.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

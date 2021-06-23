@@ -1,0 +1,364 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="ar" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>كيفية طلب الميزات &mdash; OpenDroneMap 2.5.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    
+    <script type="text/javascript" src="../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../genindex/" />
+    <link rel="search" title="Search" href="../search/" />
+    <link rel="next" title=".كيفية المشاركة" href="../contributing/" />
+    <link rel="prev" title="دعم متعدد الأطياف" href="../multispectral/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../" class="icon icon-home"> OpenDroneMap
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/">التثبيت والبدء</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hardware-recommendations">توصيات الأجهزة</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#installation">التركيب</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-check-virtualization-support">الخطوة 1. تحقق من دعم المحاكاة الافتراضية</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-install-requirements">الخطوة 2. تثبيت المتطلبات</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-check-memory-and-cpu-allocation">الخطوة 3. تحقق من تخصيص الذاكرة ووحدة المعالجة المركزية</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-webodm">الخطوة 4. قم بتنزيل WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-launch-webodm">الخطوة 4. قم بتشغيل WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id1">الخطوة 1. تحقق من دعم المحاكاة الافتراضية</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id2">الخطوة 2. تثبيت المتطلبات</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id3">الخطوة 3. تحقق من تخصيص الذاكرة ووحدة المعالجة المركزية</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-and-launch-webodm">الخطوة 4. قم بتحميل وتشغيل WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-install-requirements">الخطوة 1. تثبيت المتطلبات</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-check-additional-requirements">الخطوة 2. تحقق من المتطلبات الإضافية</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-download-and-launch-webodm">الخطوة 3. قم بتحميل وتشغيل WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#basic-commands-and-troubleshooting">الأوامر الأساسية واستكشاف الأخطاء وإصلاحها</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hello-webodm">مرحبًا WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#running-on-more-than-one-machine">يعمل على أكثر من جهاز</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/">دروس</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-high-quality-orthophotos">إنشاء Orthophotos عالية الجودة</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#calibrating-the-camera">معايرة الكاميرا</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-digital-elevation-models">إنشاء نماذج الارتفاعات الرقمية</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-docker">باستخدام  Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#listing-docker-machines">ادراج Docker ماكينات</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#accessing-logs-on-the-instance">الوصول إلى السجلات على سبيل المثال</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#command-line-access-to-instances">وصول سطر الأوامر إلى المثيلات</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#cleaning-up-after-docker">التنظيف بعد Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-odm-from-low-bandwidth-location">استخدام ODM من موقع النطاق الترددي المنخفض</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#what-is-this-and-who-is-it-for">ما هذا ومن هو؟</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#steps">خطوات</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#install">تثبيت</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#prep-data-and-project">إعداد البيانات والمشروع</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#resize-droplet-pull-pin-run-away">تغيير حجم القطرة ، وسحب دبوس ، والهروب</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#after-it-finishes-assuming-you-survive-that-long">بعد الانتهاء (بافتراض أنك تعيش طويلاً)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arguments/">الخيارات والإعلام</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/#arguments">Arguments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../outputs/">مخرجات OpenDroneMap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#point-cloud">سحابة نقطة</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#d-textured-model">نموذج محكم ثلاثي الأبعاد</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#orthophoto">Orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#list-of-all-outputs">قائمة بجميع المخرجات</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gcp/">نقاط التحكم الأرضية</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#recommended-practices-for-gcp-setting">Recommended practices for GCP setting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#gcp-file-format">GCP file format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#user-interfaces">واجهات المستخدم</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gcp/#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gcp/#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">Map accuracy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#what-to-expect">What to expect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aspects-impacting-map-accuracy">Aspects impacting map accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../geo/">Image Geolocation Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../masks/">Using Image Masks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large/">تقسيم مجموعات البيانات الكبيرة</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">معايرة الصور</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#local-split-merge">دمج التجزئة المحلية</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#distributed-split-merge">دمج سبليت الموزعة</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../large/#getting-started-with-distributed-split-merge">الشروع في البدء في عملية دمج التجزئة الموزعة</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#understanding-the-cluster">فهم الكتلة</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#accessing-the-logs">الوصول إلى السجلات</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#autoscaling-clusterodm">أوتوسكالينج  ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#limitations">محددات</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#acknowledgments">شكر وتقدير</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/">مراجع إضافية</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-users">للمستخدمين</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-developers">للمطورين</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../flying/">نصائح طيران</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multispectral/">دعم متعدد الأطياف</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#hardware">المعدات</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#usage">الاستخدام</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">كيفية طلب الميزات</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/">.كيفية المشاركة</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#community-forum">جو الإجتماعي</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#reporting-bugs">البق للتقرير</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/#template-for-submitting-bug-reports">نموذج لتقديم تقارير الأخطاء</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#pull-requests">سحب الطلبات</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">OpenDroneMap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>كيفية طلب الميزات</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../_sources/requesting-features.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  <div class="section" id="how-to-request-features">
+<h1>كيفية طلب الميزات<a class="headerlink" href="#how-to-request-features" title="Permalink to this headline">¶</a></h1>
+<p>تحتاج جميع البرامج إلى تعليقات المستخدمين وطلبات الميزات ، لزيادة النمو والحفاظ على التوافق مع احتياجات المستخدمين.</p>
+<p>OpenDroneMap هو برنامج FOSS. تعتبر المشاريع المجانية والمفتوحة المصدر (FOSS) مثيرة للاهتمام من الداخل والخارج: من الخارج ، يشعر الناجحون أنه يجب أن يكونوا قادرين على القيام بأي شيء ، ومن الصعب معرفة الطلب المعقول. من داخل المشروع ، يمكن أن يشعروا بالقيود الكبيرة على الموارد: إلى حد كبير بالوقت والمال والفرص الزائدة.</p>
+<p>مكن إرسال طلب الميزة كإصدارات في مستودع Github المعمول به (على سبيل المثال ، <a class="reference external" href="https://github.com/OpenDroneMap/WebODM/issues">WebODM</a> أو <a class="reference external" href="https://github.com/OpenDroneMap/ODM/issues">ODM</a> أو مشابه) أو ببساطة كموضوع نقاش في <a class="reference external" href="https://community.opendronemap.org/">منتدى المجتمع</a>. حاول البدء بالبحث في هذه المصادر لمعرفة ما إذا كان شخص آخر قد أثارها بالفعل. في بعض الأحيان تكون الميزة قيد العمل بالفعل ، أو تمت مناقشتها على الأقل.</p>
+<p>والأهم من ذلك ، أن الخدعة هي الاستماع: إذا قال أحد الأشخاص في المشروع: &quot;هذا رفع كبير ، فنحن بحاجة إلى المال أو الوقت أو شخص ما للمساعدة في ترميزها&quot; (أو ربما مزيج من الثلاثة) ، فهناك إجابتان تعمل بشكل جيد في الاستجابة</p>
+<blockquote>
+<div><p><em>حسنا. لم أكن أعلم أنه كان طلب ميزة كبيرة! آمل أن يأتي شخص ما مع الموارد اللازمة. كعضو في المجتمع ، يسعدني أن أكون مستخدمًا ومُختبِرًا مبكرًا!</em></p>
+</div></blockquote>
+<p>أو</p>
+<blockquote>
+<div><p><em>دعنا نكتشف ما إذا كان بإمكاننا تجميع الموارد لإنجاز ذلك! إليك ما يمكنني المساهمة فيه: ...</em></p>
+</div></blockquote>
+<p>يسعدنا أنك متحمس لرؤية الميزات الجديدة المضافة إلى المشروع. تحتاج بعض الميزات الجديدة إلى الدعم ، وبعضها أسهل في التنفيذ. سنبذل قصارى جهدنا لمساعدتك على فهم مكان سقوط طلبك ، ونقدر أي دعم يمكنك تقديمه.</p>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/requesting-features.rst">this page</a>!</p>
+</div>
+
+
+           </div>
+           
+          </div>
+          <footer>
+    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+        <a href="../contributing/" class="btn btn-neutral float-right" title=".كيفية المشاركة" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../multispectral/" class="btn btn-neutral float-left" title="دعم متعدد الأطياف" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169;  حقوق النشر 2020, OpenDroneMap
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

@@ -1,5 +1,3 @@
-.. _arguments:
-
 Options and Flags
 -----------------
 
@@ -137,6 +135,9 @@ Arguments
 
 ``--pc-filter`` <positive float>
   Filters the point cloud by removing points that deviate more than N standard deviations from the local mean. Set to 0 to disable filtering. Default: ``2.5``
+
+``--pc-geometric`` 
+  Improve the accuracy of the point cloud by computing geometrically consistent depthmaps. This increases processing time, but can improve results in urban scenes. Default: ``False``
 
 ``--pc-las`` 
   Export the georeferenced point cloud in LAS format. Default: ``False``
