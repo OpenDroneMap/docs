@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-15 09:17-0500\n"
+"POT-Creation-Date: 2021-06-22 19:54-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020\n"
 "Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
@@ -21,31 +21,31 @@ msgstr ""
 "Language: fil\n"
 "Plural-Forms: nplurals=2; plural=(n == 1 || n==2 || n==3) || (n % 10 != 4 || n % 10 != 6 || n % 10 != 9);\n"
 
-#: ../../../resources.rst:2 fd0399e9f29e43ee85f633fc5a7d9854
+#: ../../../resources.rst:2
 msgid "Additional References"
 msgstr "Karagdagang Sanggunian"
 
-#: ../../../resources.rst:5 d3ba9250ce4b482c89983e02f0bb4d9d
+#: ../../../resources.rst:5
 msgid "For Users"
 msgstr "Para sa gagamit"
 
-#: ../../../resources.rst:7 2c54ff8efcbb4cd4a1d4426a677a668a
+#: ../../../resources.rst:7
 msgid "The following resources are a good place to start:"
 msgstr "Ang mga sumusunod na impormasyon ay makakatulong sa pagsisimula."
 
-#: ../../../resources.rst:9 4d7432320ac74422a01020761eaf6f3a
+#: ../../../resources.rst:9
 msgid "`README page for ODM <https://github.com/OpenDroneMap/OpenDroneMap>`_"
 msgstr ""
 "Mga instruksiyon na dapat basahin sa ODM\n"
 "<https://github.com/OpenDroneMap/OpenDroneMap>`_"
 
-#: ../../../resources.rst:10 3bcf9ff9b6e3408f875a614e65332f9b
+#: ../../../resources.rst:10
 msgid "`README page for WebODM <https://github.com/OpenDroneMap/WebODM>`_"
 msgstr ""
 "Mga instruksiyon para sa WebODM\n"
 "<https://github.com/OpenDroneMap/WebODM>`_"
 
-#: ../../../resources.rst:11 52d2e948eece4d0d8fe87e3f17bff6dd
+#: ../../../resources.rst:11
 msgid ""
 "`README page for NodeODM <https://github.com/OpenDroneMap/node-"
 "OpenDroneMap>`_"
@@ -53,7 +53,7 @@ msgstr ""
 "Mga Instruksiyon patungkol sa NodeODM\n"
 "<https://github.com/OpenDroneMap/node-OpenDroneMap>`_"
 
-#: ../../../resources.rst:12 43b64684e93c41a08607bfd7318b8509
+#: ../../../resources.rst:12
 msgid ""
 "`Ground Control Points Format Specification "
 "<https://github.com/mapillary/OpenSfM/blob/master/doc/source/gcp.rst>`_"
@@ -61,26 +61,26 @@ msgstr ""
 "`Ground Control Points Format Specification "
 "<https://github.com/mapillary/OpenSfM/blob/master/doc/source/gcp.rst>`_"
 
-#: ../../../resources.rst:13 b4bbfe51562c46d781908edf80c34abf
+#: ../../../resources.rst:13
 msgid "`OpenDroneMap: The Missing Guide <https://odmbook.com/>`_"
 msgstr "`OpenDroneMap: The Missing Guide <https://odmbook.com/>`_"
 
-#: ../../../resources.rst:16 60796eb1324b41d5b56f497960451872
+#: ../../../resources.rst:16
 msgid "For Developers"
 msgstr "Para sa mga taga-buo."
 
-#: ../../../resources.rst:18 45473074a8b6436f9d842e2c9bb4ca87
+#: ../../../resources.rst:18
 msgid ""
 "In addition to user resources, we recommend to also read the following:"
 msgstr ""
 "Bukod sa mga nailahad na impormasyon, inirerekomenda namin na basahin ang "
 "mga sumusunod:"
 
-#: ../../../resources.rst:20 cd3029204fde4dd2b6ece3cfe1a2bd6b
+#: ../../../resources.rst:20
 msgid "WebODM documentation: https://docs.webodm.org"
 msgstr "WebODM documentation: https://docs.webodm.org"
 
-#: ../../../resources.rst:21 c6fe70ba85564f3e82f609e7df9f8227
+#: ../../../resources.rst:21
 msgid ""
 "NodeODM API specification: "
 "https://github.com/OpenDroneMap/NodeODM/blob/master/docs/index.adoc"
@@ -88,7 +88,7 @@ msgstr ""
 "NodeODM API specification: "
 "https://github.com/OpenDroneMap/NodeODM/blob/master/docs/index.adoc"
 
-#: ../../../resources.rst:22 b282ab45d280415982d512c91e6b6719
+#: ../../../resources.rst:22
 msgid ""
 "Overview of the ODM pipeline: http://community.opendronemap.org/t/where-"
 "can-i-find-background-information-on-the-concepts-of-odm/665/2"
@@ -96,7 +96,7 @@ msgstr ""
 "Kabuuang impormasyon tungkol sa ODM.\n"
 "http://community.opendronemap.org/t/where-can-i-find-background-information-on-the-concepts-of-odm/665/2"
 
-#: ../../../resources.rst:23 edc948c7e2d2431e8b888a7b1a733965
+#: ../../../resources.rst:23
 msgid ""
 "We keep a `section in our forum dedicated to research papers "
 "<http://community.opendronemap.org/c/ideas-proposals/research-papers>`_. "
@@ -110,7 +110,7 @@ msgstr ""
 " related sa structure from motion, multi-view stereo, meshing, texturing, "
 "etc., na magagamit para mas mapaganda ang software"
 
-#: ../../../resources.rst:26 4a9612627f3e47fc91f6031800f26d26
+#: ../../../resources.rst:26
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
 "contribution>`_ and help improve `this page "

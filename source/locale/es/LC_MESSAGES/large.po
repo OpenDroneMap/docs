@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.4.7\n"
+"Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-17 15:56-0400\n"
+"POT-Creation-Date: 2021-06-22 19:54-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
@@ -22,11 +22,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../../large.rst:4 5ea5942cc4604baea3dc66a4ee841282
+#: ../../../large.rst:4
 msgid "Splitting Large Datasets"
 msgstr "División de grandes conjuntos de datos"
 
-#: ../../../large.rst:6 09b5af17439740d2b8a18993e6709da6
+#: ../../../large.rst:6
 msgid ""
 "Starting with ODM version ``0.6.0`` you can split up very large datasets "
 "into manageable chunks (called submodels), running the pipeline on each "
@@ -38,7 +38,7 @@ msgstr ""
 "canalización en cada fragmento y luego producir DEM, ortofotos y nubes de "
 "puntos fusionados. El proceso se conoce como \"split-merge\"."
 
-#: ../../../large.rst:8 0c58eb496d8d456ca011011549f430a8
+#: ../../../large.rst:8
 msgid ""
 "Why might you use the split-merge pipeline? If you have a very large number "
 "of images in your dataset, split-merge will help make the processing more "
@@ -54,7 +54,7 @@ msgstr ""
 "procesar los submodelos en paralelo, lo que permite el escalado horizontal y"
 " el procesamiento de miles de imágenes más rápidamente."
 
-#: ../../../large.rst:10 d3a6bf47796e4775bfb53066d0d51dce
+#: ../../../large.rst:10
 msgid ""
 "Split-merge works in WebODM out of the box as long as the processing nodes "
 "support split-merge, by enabling the ``--split`` option when creating a new "
@@ -64,11 +64,11 @@ msgstr ""
 "procesamiento admitan split-merge, al habilitar la opción ``--split`` al "
 "crear una nueva tarea."
 
-#: ../../../large.rst:13 7c1cb609f5c74801ba89894fb5974978
+#: ../../../large.rst:13
 msgid "Calibrate images"
 msgstr "Calibrar imágenes"
 
-#: ../../../large.rst:15 a5852d851b3c4557a860c07a9a876368
+#: ../../../large.rst:15
 msgid ""
 "Image calibration is recommended (but not required) for large datasets "
 "because error propagation due to image distortion could cause a bowl effect "
@@ -81,7 +81,7 @@ msgstr ""
 "instrucciones de calibración se pueden encontrar en calibración de imágenes "
 "`Calibrate Images <tutorials.html#calibrating-the-camera>`_."
 
-#: ../../../large.rst:21 bb110a174c5f40ec9d3517e5eabbd887
+#: ../../../large.rst:21
 msgid ""
 "Bowling effect on point cloud over 13,000+ image dataset collected by World "
 "Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania."
@@ -90,11 +90,11 @@ msgstr ""
 "de imágenes recopilados por el Banco Mundial de Tanzania sobre la cuenca de "
 "Msimbasi, propensa a inundaciones, Dar es Salaam, Tanzania"
 
-#: ../../../large.rst:24 0967d468c7144fc5bd2132400d045215
+#: ../../../large.rst:24
 msgid "Local Split-Merge"
 msgstr "Split-merge local"
 
-#: ../../../large.rst:26 2e2ad9be96fa496bb5ab7db7b677f5df
+#: ../../../large.rst:26
 msgid ""
 "Splitting a dataset into more manageable submodels and sequentially "
 "processing all submodels on the same machine is easy! Just use ``--split`` "
@@ -107,7 +107,7 @@ msgstr ""
 "promedio de imágenes por submodelos y la superposición (en metros) entre "
 "submodelos respectivamente"
 
-#: ../../../large.rst:32 0aeee1b4863b45729bc6cbf63b6b1d84
+#: ../../../large.rst:32
 msgid ""
 "If you already know how you want to split the dataset, you can provide that "
 "information and it will be used instead of the clustering algorithm."
@@ -115,7 +115,7 @@ msgstr ""
 "si ya sabe como desea dividir el conjunto de datos, puede proporcionar esa "
 "información y se utilizará en lugar del algoritmo de agrupamiento."
 
-#: ../../../large.rst:34 175b97d3d6a44086be4f0cdabfb6fe95
+#: ../../../large.rst:34
 msgid ""
 "The grouping can be provided by adding a file named image_groups.txt in the "
 "main dataset folder. The file should have one line per image. Each line "
@@ -128,7 +128,7 @@ msgstr ""
 " el nombre de la imagen y segundo el nombre del grupo al que pertenece. Por "
 "ejemplo::"
 
-#: ../../../large.rst:42 20c59dc7a68941e89e8369bd6026f2ff
+#: ../../../large.rst:42
 msgid ""
 "will create 3 submodels. Make sure to pass ``--split-overlap 0`` if you "
 "manually provide a ``image_groups.txt`` file."
@@ -136,11 +136,11 @@ msgstr ""
 "creará 3 submodelos. Asegúrese de pasar ``--split-overlay 0`` si proporciona"
 " manualmente un archivo ``image_groups.txt``."
 
-#: ../../../large.rst:46 f821d7b1316a4f81830050135f38ec62
+#: ../../../large.rst:46
 msgid "Distributed Split-Merge"
 msgstr "Split-Merge distribuido"
 
-#: ../../../large.rst:48 f170f960ba414793b7f657bb74d70937
+#: ../../../large.rst:48
 msgid ""
 "ODM can also automatically distribute the processing of each submodel to "
 "multiple machines via `NodeODM <https://github.com/OpenDroneMap/NodeODM>`_ "
@@ -152,15 +152,15 @@ msgstr ""
 "<https://github.com/OpenDroneMap/NodeODM>` _, orquestados a través de "
 "`ClusterODM <https://github.com/OpenDroneMap/ClusterODM>`_."
 
-#: ../../../large.rst:55 09a33b36dab54c42a8ce360deacaf649
+#: ../../../large.rst:55
 msgid "Getting Started with Distributed Split-Merge"
 msgstr "Introducción a split-merge distribuido"
 
-#: ../../../large.rst:57 af83a83165d8401396aab49b8744a62b
+#: ../../../large.rst:57
 msgid "The first step is start ClusterODM"
 msgstr "El primer paso es iniciar ClusterODM"
 
-#: ../../../large.rst:63 6d4217467bf544e9a7ad1ac56e9f9973
+#: ../../../large.rst:63
 msgid ""
 "Then on each machine you want to use for processing, launch a NodeODM "
 "instance via"
@@ -168,7 +168,7 @@ msgstr ""
 "Luego en cada máquina que desee utilizar para procesamiento, inicie una "
 "instancia de NodeODM a través de"
 
-#: ../../../large.rst:69 f7f5d656ce9f46d89eaa1769c27ba6e5
+#: ../../../large.rst:69
 msgid ""
 "Connect via telnet to ClusterODM and add the IP addresses/port of the "
 "machines running NodeODM"
@@ -176,13 +176,13 @@ msgstr ""
 "Conectese a ClusterODM a través de telnet y agregue las direcciones IP / "
 "puertos de las máquinas que ejecutan NodeODM"
 
-#: ../../../large.rst:84 b6440814204a44fd9b9cbde1ff322cc3
+#: ../../../large.rst:84
 msgid ""
 "Make sure you are running version ``1.5.1`` or higher of the NodeODM API."
 msgstr ""
 "Asegurese de estar corriendo la versión de NodeODM API  ``1.5.1`` o superior"
 
-#: ../../../large.rst:86 42d5b57f70b54515892481ba4875365b
+#: ../../../large.rst:86
 msgid ""
 "At this point, simply use the ``--sm-cluster`` option to enable distributed "
 "split-merge"
@@ -190,11 +190,11 @@ msgstr ""
 "En este punto simpemente use la opción ``--sm-cluster`` para habilitar el "
 "split-merge distribuido"
 
-#: ../../../large.rst:93 1ff052ee47864108abd13c2ca2b6eeef
+#: ../../../large.rst:93
 msgid "Understanding the Cluster"
 msgstr "Entendiendo el Cluster"
 
-#: ../../../large.rst:95 18e376a78edf468088b5efbd939c0bbf
+#: ../../../large.rst:95
 msgid ""
 "When connected via telnet, it is possible to interrogate what is happening "
 "on the cluster. For example, we can use the command HELP to find out "
@@ -204,7 +204,7 @@ msgstr ""
 "sucediendo en el clúster. Por ejemplo, podemos usar el comando HELP para "
 "averiguar los comandos disponibles."
 
-#: ../../../large.rst:118 1494dbd111a64a7e9075a9c20a0c12d9
+#: ../../../large.rst:118
 msgid ""
 "If, for example, the NodeODM instance wasn't active when ClusterODM started,"
 " we might list nodes and see something as follows"
@@ -212,7 +212,7 @@ msgstr ""
 "Si, por ejemplo, la instancia de NodeODM no estaba activa cuando se inició "
 "ClusterODM, podríamos enumerar los nodos y ver algo de la siguiente manera"
 
-#: ../../../large.rst:125 20e68e67542e4049b232b7635d88760b
+#: ../../../large.rst:125
 msgid ""
 "To address this, we can start up our local node (if not already started), "
 "and then perform a ``NODE UPDATE``"
@@ -220,11 +220,11 @@ msgstr ""
 "Para solucionar esto, podemos iniciar nuestro nodo local (si aún no lo ha "
 "hecho) y luego realizar una ``NODE UPDATE`` "
 
-#: ../../../large.rst:135 33eecf83e3124b59a7d0c13af09e04a2
+#: ../../../large.rst:135
 msgid "Accessing the Logs"
 msgstr "Acceder a los registros"
 
-#: ../../../large.rst:137 def6c238d7864b5382c8a0c925a3c6e3
+#: ../../../large.rst:137
 msgid ""
 "While a process is running, it is also possible to list the tasks, and view "
 "the task output"
@@ -232,11 +232,11 @@ msgstr ""
 "Mientras se ejecuta un proceso, también es posible enumerar las tareas y ver"
 " el resultado de la tarea"
 
-#: ../../../large.rst:145 2a15305d8ba94ce0bdb2d07174a39b0f
+#: ../../../large.rst:145
 msgid "Autoscaling ClusterODM"
 msgstr "Ajuste de escala automático de ClusterODM"
 
-#: ../../../large.rst:147 9ec4019144e94b0eb0ab5f4325320568
+#: ../../../large.rst:147
 msgid ""
 "ClusterODM also includes the option to autoscale on multiple platforms, "
 "including, to date, Amazon and Digital Ocean. This allows users to reduce "
@@ -249,25 +249,25 @@ msgstr ""
 "siempre activas, además de poder escalar el procesamiento en función de la "
 "demanda."
 
-#: ../../../large.rst:149 62b6f826c2c643e0901155b8e13ae32b
+#: ../../../large.rst:149
 msgid "To setup autoscaling you must:"
 msgstr "Para configurar el ajuste de escala automático, debe:"
 
-#: ../../../large.rst:151 1f57a583ee064aadaa3feee9c394eafc
+#: ../../../large.rst:151
 msgid ""
 "Have a functioning version of NodeJS installed and then install ClusterODM"
 msgstr ""
 "Tenga instalada una versión funcional de NodeJS y luego instale ClusterODM"
 
-#: ../../../large.rst:159 717a4e330335494bb0df832234fa0032
+#: ../../../large.rst:159
 msgid "Make sure docker-machine is installed."
 msgstr "Asegúrese de que Docker-machine esté instalado."
 
-#: ../../../large.rst:160 199f29aa6b7f4f409bb92e6c3cb5bf16
+#: ../../../large.rst:160
 msgid "Setup a S3-compatible bucket for storing results."
 msgstr "Configure un bucket compatible con S3 para almacenar resultados."
 
-#: ../../../large.rst:161 6326931fadb04511aeefe580135ad3a2
+#: ../../../large.rst:161
 msgid ""
 "Create a configuration file for `DigitalOcean "
 "<https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/digitalocean.md>`_"
@@ -279,15 +279,15 @@ msgstr ""
 " o `Amazon Web Services "
 "<https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/aws.md>`_."
 
-#: ../../../large.rst:163 24f1bc1a5a1045b5a066cb88d855dac6
+#: ../../../large.rst:163
 msgid "You can then launch ClusterODM with"
 msgstr "A continuación, puede iniciar ClusterODM con"
 
-#: ../../../large.rst:169 cfd356de2d654bf891a32218437a3674
+#: ../../../large.rst:169
 msgid "You should see something similar to following messages in the console"
 msgstr "Debería ver algo similar a los siguientes mensajes en la consola"
 
-#: ../../../large.rst:177 e70048dcf8f24f71bc79a7051c51a05f
+#: ../../../large.rst:177
 msgid ""
 "You should always have at least one static NodeODM node attached to "
 "ClusterODM, even if you plan to use the autoscaler for all processing. If "
@@ -307,17 +307,17 @@ msgstr ""
 " validar opciones antes de activar una instancia, etc.). Para este "
 "propósito, debe agregar un nodo NodeODM \"ficticio\" y bloquearlo"
 
-#: ../../../large.rst:187 534c507b01064a47810c210e1bb41569
+#: ../../../large.rst:187
 msgid "This way all tasks will be automatically forwarded to the autoscaler."
 msgstr ""
 "De esta forma, todas las tareas se reenviarán automáticamente al escalador "
 "automático."
 
-#: ../../../large.rst:190 69765d62d9bb44979d730a3aee0908c7
+#: ../../../large.rst:190
 msgid "Limitations"
 msgstr "Limitaciones"
 
-#: ../../../large.rst:192 bf357933f5f442d2837b2682b0ad9bb2
+#: ../../../large.rst:192
 msgid ""
 "The 3D textured meshes are currently not being merged as part of the "
 "workflow (only point clouds, DEMs and orthophotos are)."
@@ -325,7 +325,7 @@ msgstr ""
 "Las mallas texturizados 3D actualmente no son fusionadas como parte del "
 "flujo de trabajo (solo las nubes de puntos, DEMs y las ortofotos lo son)"
 
-#: ../../../large.rst:194 8e1fa32d457445b489bc403442ae7fd5
+#: ../../../large.rst:194
 msgid ""
 "GCPs are fully supported, however, there needs to be at least 3 GCP points "
 "on each submodel for the georeferencing to take place. If a submodel has "
@@ -341,11 +341,11 @@ msgstr ""
 "precisa). Recomendamos utilizar el archivo `ʻimage_groups.txt`` para "
 "controlar con precisión la división del submodelo cuando se utilizan GCP."
 
-#: ../../../large.rst:197 1597b856001e4334a4df3555c8416ee1
+#: ../../../large.rst:197
 msgid "Acknowledgments"
 msgstr "Agradecimientos"
 
-#: ../../../large.rst:198 ec973929d9d947be90f0859358cc398c
+#: ../../../large.rst:198
 msgid ""
 "Huge props to Pau and the folks at Mapillary for their amazing contributions"
 " to OpenDroneMap through their OpenSfM code, which is a key component of the"
@@ -358,7 +358,7 @@ msgstr ""
 "límites de OpenDroneMap y ver qué tan grande es el conjunto de datos que "
 "podemos procesar."
 
-#: ../../../large.rst:201 4c8774a03a9b4048ad759092049aad71
+#: ../../../large.rst:201
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
 "contribution>`_ and help improve `this page "

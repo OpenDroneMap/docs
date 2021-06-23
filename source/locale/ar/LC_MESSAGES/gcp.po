@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-15 09:17-0500\n"
+"POT-Creation-Date: 2021-06-22 19:54-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: Khadija Abdulla <khastylez@gmail.com>, 2020\n"
 "Language-Team: Arabic (https://www.transifex.com/americanredcross/teams/111882/ar/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: ../../../gcp.rst:3 911f0a51699040bbbac8fd6336625beb
+#: ../../../gcp.rst:3
 msgid "Ground Control Points"
 msgstr "نقاط التحكم الأرضية"
 
-#: ../../../gcp.rst:5 022d5bddc65e48618d8dcfa0a4c6f73d
+#: ../../../gcp.rst:5
 msgid ""
 "Ground control points are useful for correcting distortions in the data and "
 "referencing the data to know coordinate systems."
@@ -33,37 +33,37 @@ msgstr ""
 "نقاط التحكم الأرضية مفيدة لتصحيح التشوهات في البيانات والإشارة إلى البيانات "
 "لمعرفة أنظمة الإحداثيات."
 
-#: ../../../gcp.rst:7 ad17511e7ca64fbda395e4f953e80eea
+#: ../../../gcp.rst:7
 msgid ""
 "A Ground Control Point (GCP) is a position measurement made on the ground, "
 "typically using a high precision GPS. (Toffanin 2019)"
 msgstr ""
 
-#: ../../../gcp.rst:9 3ea9ac611d3a42a78eb928b9cebb8fe7
+#: ../../../gcp.rst:9
 msgid ""
 "Ground control points can be set existing structures like pavement corners, "
 "lines on a parking lot or contrasting color floor tiles, otherwise can be "
 "set using targets placed on the ground."
 msgstr ""
 
-#: ../../../gcp.rst:11 7e9458665b944639b07049fb14aaa585
+#: ../../../gcp.rst:11
 msgid ""
 "Targets can be purchased or build with an ample variety of materials ranging"
 " from bucket lids to floor tiles."
 msgstr ""
 
-#: ../../../gcp.rst:15 58d694776d2944069f23706d57db7f03
+#: ../../../gcp.rst:15
 msgid "Recommended practices for GCP setting"
 msgstr ""
 
-#: ../../../gcp.rst:17 be9453643db74c3dbce9cb60114879b8
+#: ../../../gcp.rst:17
 msgid ""
 "Keep ground control points visible for all camera locations. Consider the "
 "expected ground sampling distance, illumination, vegetation, buildings and "
 "all the existing obstacles."
 msgstr ""
 
-#: ../../../gcp.rst:19 b8ca322401f44845bcd07bab7d07c0a6
+#: ../../../gcp.rst:19
 msgid ""
 "Procure an evenly horizontal distribution of the GCPs within the project, "
 "covering high and low elevations. A minimum of 5 GCP works for most of the "
@@ -73,7 +73,7 @@ msgid ""
 "in a single image."
 msgstr ""
 
-#: ../../../gcp.rst:21 ac223f7550cd411da9e36fd8784fba34
+#: ../../../gcp.rst:21
 msgid ""
 "In order to ensure each GCP are found in at least 5 images, separate the "
 "points 10 to 30 meters from the perimeter of the project. This distance is "
@@ -81,15 +81,15 @@ msgid ""
 "required distance from the perimeter."
 msgstr ""
 
-#: ../../../gcp.rst:25 7e516e234f5d48b6bdf2452c90949a1e
+#: ../../../gcp.rst:25
 msgid "GCP file format"
 msgstr ""
 
-#: ../../../gcp.rst:27 8452104a74d646fd98667e75940154f9
+#: ../../../gcp.rst:27
 msgid "The format of the GCP file is simple."
 msgstr "تنسيق ملف GCP بسيط"
 
-#: ../../../gcp.rst:29 dce0e96292f14671b20009aff56908eb
+#: ../../../gcp.rst:29
 msgid ""
 "The first line should contain the name of the projection used for the geo "
 "coordinates. This can be specified either as a PROJ string (e.g. ``+proj=utm"
@@ -102,7 +102,7 @@ msgstr ""
 "+datum=WGS84 +units=m +no_defs``), EPSG code (e.g. ``EPSG:4326``) or as a "
 "``WGS84 UTM 1[N|S]`` value (eg. ``WGS84 UTM 16N``)"
 
-#: ../../../gcp.rst:30 b2b962c0b86148d0baa20170f21a4809
+#: ../../../gcp.rst:30
 msgid ""
 "Subsequent lines are the X, Y & Z coordinates, your associated pixels, the "
 "image filename and optional extra fields, separated by tabs or spaces:"
@@ -110,23 +110,23 @@ msgstr ""
 "الخطوط اللاحقة هي إحداثيات X و Y و Z ، وحدات البكسل المرتبطة ، اسم ملف "
 "الصورة والحقول الإضافية الاختيارية ، مفصولة بعلامات تبويب أو مسافات:"
 
-#: ../../../gcp.rst:31 b14a4632f09d452987da341b4761ee93
+#: ../../../gcp.rst:31
 msgid "Elevation values can be set to \"NaN\" to indicate no value"
 msgstr "مكن ضبط قيم الارتفاع على \"NaN\" للإشارة إلى عدم وجود قيمة"
 
-#: ../../../gcp.rst:32 326fc2b4a246402887eec024ee7dc44b
+#: ../../../gcp.rst:32
 msgid "The 7th column (optional) typically contains the label of the GCP."
 msgstr "يحتوي العمود السابع (اختياري) يحتوي عادة GCP تسمية."
 
-#: ../../../gcp.rst:34 7e516e234f5d48b6bdf2452c90949a1e
+#: ../../../gcp.rst:34
 msgid "GCP file format::"
 msgstr "تنسيق ملف GCP"
 
-#: ../../../gcp.rst:40 cfc779a9cd644757ac87736911a5cb2c
+#: ../../../gcp.rst:40
 msgid "Example::"
 msgstr "مثال::"
 
-#: ../../../gcp.rst:47 af0d955959494dfea9d3d9efbb90d333
+#: ../../../gcp.rst:47
 msgid ""
 "If you supply a GCP file called ``gcp_list.txt`` then ODM will automatically"
 " detect it. If it has another name you can specify using ``--gcp <path>``. "
@@ -141,7 +141,7 @@ msgstr ""
 "\"--use-exif\". إذا كانت لديك قياسات GPS عالية الدقة في صورك (RTK) وتريد "
 "استخدام هذه المعلومات مع ملف gcp ، يمكنك تحديد \"--force-gps\"."
 
-#: ../../../gcp.rst:49 bbde94c6d77e4ebcb74ecec6b26d4752
+#: ../../../gcp.rst:49
 msgid ""
 "`This post has some information about placing Ground Control Targets before "
 "a flight <http://diydrones.com/profiles/blogs/ground-control-points-gcps-"
@@ -156,7 +156,7 @@ msgstr ""
 " في الصور بعد الواقع. من المهم أن تجد كائنات عالية التباين موجودة في ** 3 "
 "صور على الأقل ** ، وأن تعثر على 5 كائنات على الأقل."
 
-#: ../../../gcp.rst:51 6b99ba39e0ba4be98be0cf9089458f19
+#: ../../../gcp.rst:51
 msgid ""
 "Sharp corners are good picks for GCPs. You should also place/find the GCPs "
 "evenly around your survey area."
@@ -164,13 +164,13 @@ msgstr ""
 "تعد الزوايا الحادة اختيارات جيدة لـ GCP. يجب عليك أيضًا وضع / العثور على "
 "نقاط المراقبة الحرجة بشكل متساوٍ حول منطقة المسح."
 
-#: ../../../gcp.rst:53 2022c1e3d9074c80bc5988fb77630231
+#: ../../../gcp.rst:53
 msgid ""
 "The ``gcp_list.txt`` file must be created in the base of your project "
 "folder."
 msgstr "يجب إنشاء ملف `` gcp_list.txt '' في قاعدة مجلد المشروع."
 
-#: ../../../gcp.rst:55 d053ffc6a0b44e60be90864b1d0ad399
+#: ../../../gcp.rst:55
 msgid ""
 "For good results your file should have a minimum of 15 lines after the "
 "header (5 points with 3 images to each point)."
@@ -178,27 +178,27 @@ msgstr ""
 "للحصول على نتائج جيدة ، يجب أن يحتوي ملفك على 15 سطرًا على الأقل بعد الرأس "
 "(5 نقاط مع 3 صور لكل نقطة)."
 
-#: ../../../gcp.rst:59 9712bfa7df5343f8b383155a9eee015c
+#: ../../../gcp.rst:59
 msgid "User Interfaces"
 msgstr "واجهات المستخدم"
 
-#: ../../../gcp.rst:61 58a11feafc7641fca1250a9e80a9e9a2
+#: ../../../gcp.rst:61
 msgid "You can use one of two user interfaces for creating GCP files:"
 msgstr "يمكنك استخدام واحدة من واجهات المستخدم لإنشاء ملفات GCP:"
 
-#: ../../../gcp.rst:63 84afe5e0d2964247b972da99da981b86
+#: ../../../gcp.rst:63
 msgid "`POSM GCPi <https://github.com/posm/posm-gcpi>`_"
 msgstr "`POSM GCPi <https://github.com/posm/posm-gcpi>`_"
 
-#: ../../../gcp.rst:64 60450f4c04ca4bac9bd654bd2ba83c35
+#: ../../../gcp.rst:64
 msgid "`GCP Editor Pro <https://github.com/uav4geo/GCPEditorPro>`_"
 msgstr "`GCP Editor Pro <https://github.com/uav4geo/GCPEditorPro>`_"
 
-#: ../../../gcp.rst:68 397f2777c59948cc8c50fe7aaee405e1
+#: ../../../gcp.rst:68
 msgid "POSM GCPi"
 msgstr "POSM GCPi"
 
-#: ../../../gcp.rst:70 927593a77dc84e74b137c4d439df6825
+#: ../../../gcp.rst:70
 msgid ""
 "The POSM GCPi is loaded by default on WebODM. An example is available at "
 "`the WebODM Demo <http://demo.webodm.org/plugins/posm-gcpi/>`_. To use this "
@@ -208,7 +208,7 @@ msgstr ""
 "<http://demo.webodm.org/plugins/posm-gcpi/>`_. استخدام هذا مع قيم XYZ "
 "المعروفة للتحكم الأرضي ، يمكن للمرء القيام بما يلي: "
 
-#: ../../../gcp.rst:72 b9a43cb0966f427fae9039e6aa420d36
+#: ../../../gcp.rst:72
 msgid ""
 "Create a GCP list that only includes gcp name (this is the label that will "
 "be seen in the GCP interface), x, y, and z, with a header with a proj4 "
@@ -219,7 +219,7 @@ msgstr ""
 "x و y و z ، مع رأس بسلسلة proj4 من GCP (تأكد من وجودها في إحداثيات مستوية "
 "النظام ، مثل UTM. يجب أن يبدو شيء مثل هذا:"
 
-#: ../../../gcp.rst:83 c193a1ce8f7a4da2b796010be7fc9521
+#: ../../../gcp.rst:83
 msgid ""
 "Then one can load this GCP list into the interface, load the images, and "
 "place each of the GCPs in the image."
@@ -227,11 +227,11 @@ msgstr ""
 "ثم يمكن للمرء تحميل قائمة GCP هذه في الواجهة ، وتحميل الصور ، ووضع كل من GCP"
 " في الصورة."
 
-#: ../../../gcp.rst:87 ece94c1e7c6c44698893e57cf6c10c92
+#: ../../../gcp.rst:87
 msgid "GCP Editor Pro"
 msgstr "GCP Editor Pro"
 
-#: ../../../gcp.rst:89 31a2f2c5d1614505b9b11f063ed8f8af
+#: ../../../gcp.rst:89
 msgid ""
 "This app needs to be installed separately or can be loaded as a WebODM "
 "plugin from `https://github.com/uav4geo/GCPEditorPro "
@@ -241,13 +241,13 @@ msgstr ""
 "`https://github.com/uav4geo/GCPEditorPro "
 "<https://github.com/uav4geo/GCPEditorPro>`_"
 
-#: ../../../gcp.rst:91 400a7b772b064992b58e256c4a86d802
+#: ../../../gcp.rst:91
 msgid ""
 "Create a CSV file that includes the gcp name, northing, easting and "
 "elevation."
 msgstr "أنشئ ملف CSV يتضمن اسم gcp والشمال والشرق والارتفاع."
 
-#: ../../../gcp.rst:100 e3be97e2b1d442f99df0adde4e1752cb
+#: ../../../gcp.rst:100
 msgid ""
 "Then import the CSV from the main screen and type ``+proj=utm +zone=37 "
 "+south +ellps=WGS84 +datum=WGS84 +units=m +no_defs`` in the ``EPSG/PROJ`` "
@@ -256,7 +256,7 @@ msgstr ""
 "م قم باستيراد ملف CSV من الشاشة الرئيسية واكتب `+proj=utm +zone=37 +south "
 "+ellps=WGS84 +datum=WGS84 +units=m +no_defs`` in the ``EPSG/PROJ`` صندوق."
 
-#: ../../../gcp.rst:102 e90ba38338ef409792e454d071bbcc16
+#: ../../../gcp.rst:102
 msgid ""
 "The following screen will display a map from where to select the GCPs to tag"
 " and import the respective images."
@@ -264,17 +264,17 @@ msgstr ""
 "سيتم عرض الشاشة التالية خريطة من أين تختار GCP وضع علامة على الصور ذات الصلة"
 " واستيرادها."
 
-#: ../../../gcp.rst:106 9712bfa7df5343f8b383155a9eee015c
+#: ../../../gcp.rst:106
 msgid "References"
 msgstr ""
 
-#: ../../../gcp.rst:108 00d0a4cc5f3441b09095b9e4c3d1805f
+#: ../../../gcp.rst:108
 msgid ""
 "Toffanin, Piero. `Open Drone Map: The Missing Guide. "
 "<https://odmbook.com/>`_ MasseranoLabs LLC, 2019."
 msgstr ""
 
-#: ../../../gcp.rst:111 da635552741e4ec895246bc268ab64b9
+#: ../../../gcp.rst:111
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
 "contribution>`_ and help improve `this page "

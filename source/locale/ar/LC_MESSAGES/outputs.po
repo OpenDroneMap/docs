@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-15 09:17-0500\n"
+"POT-Creation-Date: 2021-06-22 19:54-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: Khadija Abdulla <khastylez@gmail.com>, 2020\n"
 "Language-Team: Arabic (https://www.transifex.com/americanredcross/teams/111882/ar/)\n"
@@ -21,19 +21,19 @@ msgstr ""
 "Language: ar\n"
 "Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
 
-#: ../../../outputs.rst:2 0363274eec9a4b9c82318f91f7138fa8
+#: ../../../outputs.rst:2
 msgid "OpenDroneMap Outputs"
 msgstr "مخرجات OpenDroneMap"
 
-#: ../../../outputs.rst:4 4d0105590a224be8b3366a34b3ca7dcf
+#: ../../../outputs.rst:4
 msgid "Listed below are some of the useful outputs ODM produces."
 msgstr "فيما يلي بعض المخرجات المفيدة التي تنتجها ODM."
 
-#: ../../../outputs.rst:7 e4c5e56bafa147fab888836f5d3ee12d
+#: ../../../outputs.rst:7
 msgid "Point Cloud"
 msgstr "سحابة نقطة"
 
-#: ../../../outputs.rst:9 e5a47a5f7e9048b9a271385ca20dff58
+#: ../../../outputs.rst:9
 msgid ""
 "``odm_georeferencing/odm_georeferenced_model.ply/laz/csv`` -- The "
 "georeferenced point cloud in different file formats"
@@ -41,7 +41,7 @@ msgstr ""
 "odm_georeferencing/odm_georeferenced_model.ply/laz/csv`` -- سحابة مرجعية "
 "جغرافية في تنسيقات ملفات مختلفة"
 
-#: ../../../outputs.rst:15 c255fdbb5e244cc59984eeb5c1411b57
+#: ../../../outputs.rst:15
 msgid ""
 "*Point cloud over State University Zanzibar, courtesy of* `Khadija Abdullah "
 "Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
@@ -49,11 +49,11 @@ msgstr ""
 "* سحابة نقطة State University Zanzibar, من باب المجاملة* `Khadija Abdullah "
 "Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
 
-#: ../../../outputs.rst:19 ef280b4664614efb95892f9f3d86a3d0
+#: ../../../outputs.rst:19
 msgid "3D Textured Model"
 msgstr "نموذج محكم ثلاثي الأبعاد"
 
-#: ../../../outputs.rst:21 83eaf395dd13452abe2885162d0d16e6
+#: ../../../outputs.rst:21
 msgid ""
 "``odm_texturing/odm_textured_model.obj`` -- The textured surface mesh "
 "``odm_texturing/odm_textured_model_geo.obj`` -- The georeferenced and "
@@ -63,7 +63,7 @@ msgstr ""
 "``odm_texturing/odm_textured_model_geo.obj`` -- شبكة السطح ذات المرجعية "
 "الجغرافية والمحكم"
 
-#: ../../../outputs.rst:24 ac92cff17c904762b2fd054257cf64d5
+#: ../../../outputs.rst:24
 msgid ""
 "You can access the point cloud and textured meshes using MeshLab. Open "
 "MeshLab, and choose File:Import Mesh and choose your textured mesh from a "
@@ -73,18 +73,18 @@ msgstr ""
 "MeshLab واختر File: Import Mesh واختر شبكتك المزخرفة من موقع مشابه لما يلي: "
 "``odm_texturing\\odm_textured_model.obj``"
 
-#: ../../../outputs.rst:30 f452c086297841c6b18804010bbf394d
+#: ../../../outputs.rst:30
 msgid ""
 "*Textured mesh courtesy of* `OpenDroneMap "
 "<https://twitter.com/opendronemap>`_"
 msgstr ""
 "* مجاملة شبكة محكم * `OpenDroneMap <https://twitter.com/opendronemap>`_"
 
-#: ../../../outputs.rst:33 e7762f4764a944549f8fb90991214af0
+#: ../../../outputs.rst:33
 msgid "Orthophoto"
 msgstr "Orthophoto"
 
-#: ../../../outputs.rst:35 55a73a43fc1e443e8f90f27c4562f1ca
+#: ../../../outputs.rst:35
 msgid ""
 "``odm_orthophoto/odm_orthphoto.png`` -- The orthophoto, but this is a simple"
 " png, which doesn't have any georeferencing information"
@@ -92,7 +92,7 @@ msgstr ""
 "``odm_orthophoto/odm_orthphoto.png`` -- orthophoto ، ولكن هذا هو png بسيط ، "
 "والذي لا يحتوي على أي معلومات عن المراجع الجغرافية"
 
-#: ../../../outputs.rst:37 8487c7b9409e4549bdf74776d7c552b0
+#: ../../../outputs.rst:37
 msgid ""
 "``odm_orthophoto/odm_orthphoto.tif`` -- GeoTIFF Orthophoto. You can use it "
 "in QGIS as a raster layer."
@@ -100,7 +100,7 @@ msgstr ""
 "``odm_orthophoto/odm_orthphoto.tif`` -- GeoTIFF Orthophoto. يمكنك استخدامه "
 "في QGIS كطبقة نقطية."
 
-#: ../../../outputs.rst:43 f96d614393b3411299358ed2ac8847bd
+#: ../../../outputs.rst:43
 msgid ""
 "*Orthophoto over State University Zanzibar, courtesy of* `Khadija Abdullah "
 "Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
@@ -108,11 +108,11 @@ msgstr ""
 "Orthophoto على جامعة ولاية زنجبار ، بإذن من * `Khadija Abdullah Ali "
 "<https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
 
-#: ../../../outputs.rst:46 97a9f77304ae4ce487ea62415fbe0e5a
+#: ../../../outputs.rst:46
 msgid "DTM/DSM"
 msgstr "DTM/DSM"
 
-#: ../../../outputs.rst:48 cc432c908f294d6a87d3c47274b32de8
+#: ../../../outputs.rst:48
 msgid ""
 "DTM/DSM will only be created if the ``--dtm`` or ``--dsm`` options are used."
 " See `tutorial on elevation models "
@@ -124,19 +124,19 @@ msgstr ""
 "<https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-"
 "models>`_ لمزيد من الخيارات في الإنشاء."
 
-#: ../../../outputs.rst:50 3d6a730458b14794bf7454b4f6e119e4
+#: ../../../outputs.rst:50
 msgid "Data will be stored in:"
 msgstr "سيتم تخزين البيانات في:"
 
-#: ../../../outputs.rst:52 abad74d908c04802b1be22686908379e
+#: ../../../outputs.rst:52
 msgid "``odm_dem/dtm.tif``"
 msgstr "``odm_dem/dtm.tif``"
 
-#: ../../../outputs.rst:53 d5483e2a7881435c91539b04f55ce113
+#: ../../../outputs.rst:53
 msgid "``odm_dem/dsm.tif``"
 msgstr "``odm_dem/dsm.tif``"
 
-#: ../../../outputs.rst:59 879bdeaa3d8a43519e2552ae4830a3e0
+#: ../../../outputs.rst:59
 msgid ""
 "*Digital surface model over State University Zanzibar, courtesy of* `Khadija"
 " Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
@@ -144,11 +144,11 @@ msgstr ""
 "* نموذج سطح رقمي فوق جامعة ولاية زنجبار ، بإذن من * `Khadija Abdullah Ali "
 "<https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_"
 
-#: ../../../outputs.rst:62 fe6b51da6c9f47a39b7437e0cdfcee35
+#: ../../../outputs.rst:62
 msgid "List of all outputs"
 msgstr "قائمة بجميع المخرجات"
 
-#: ../../../outputs.rst:110 e3bd312249e14d20924632e086696b9c
+#: ../../../outputs.rst:110
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
 "contribution>`_ and help improve `this page "

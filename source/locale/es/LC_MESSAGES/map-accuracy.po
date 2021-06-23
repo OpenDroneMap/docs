@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.4.7\n"
+"Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-17 15:56-0400\n"
+"POT-Creation-Date: 2021-06-22 19:54-0400\n"
 "PO-Revision-Date: 2020-10-15 13:38+0000\n"
 "Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../../map-accuracy.rst:3 d4e2d7d317d34b208e768f689ad692b0
+#: ../../../map-accuracy.rst:3
 msgid "Map accuracy"
 msgstr "Precisión del Mapa"
 
-#: ../../../map-accuracy.rst:5 674abb654cf7448cac13ea47971e80d2
+#: ../../../map-accuracy.rst:5
 msgid ""
 "Accuracy can be defined as the degree or closeness to which the information "
 "on a map matches the values in the real world. Therefore, when we refer to "
@@ -38,11 +38,11 @@ msgstr ""
 " y al número de errores contenidos en un determinado conjunto de datos "
 "(Pascual 2011)."
 
-#: ../../../map-accuracy.rst:8 c23ea9314c134c8ba5671054b7e3c057
+#: ../../../map-accuracy.rst:8
 msgid "**Relative or Local accuracy**"
 msgstr "**Precisión Relativa o Local**"
 
-#: ../../../map-accuracy.rst:10 35f3324c29ea443497c2fdcd80a55145
+#: ../../../map-accuracy.rst:10
 msgid ""
 "Local or relative accuracy can be defined as the degree to which de "
 "distances between two points on a map correspond to the actually distances "
@@ -52,7 +52,7 @@ msgstr ""
 "distancias entre dos puntos en un mapa corresponden a las distancias reales "
 "entre esos puntos en el mundo real."
 
-#: ../../../map-accuracy.rst:12 5463e74ce3b246a4a690fcc476f95536
+#: ../../../map-accuracy.rst:12
 msgid ""
 "Relative accuracy is independent of the location of the map in the world, so"
 " a map can have a high relative accuracy (in size and shape) but its "
@@ -62,7 +62,7 @@ msgstr ""
 " por lo que un mapa puede tener una precisión relativa alta (en tamaño y "
 "forma), pero su posición en el mundo se puede cambiar (Figura 1)."
 
-#: ../../../map-accuracy.rst:18 1d4253e1796842319b7dcbd23384343c
+#: ../../../map-accuracy.rst:18
 msgid ""
 "*Figure 1. Model showing high relative accuracy but misplaced according to "
 "its real world position*"
@@ -70,11 +70,11 @@ msgstr ""
 "*Figura 1. Modelo que muestra una alta precisión relativa pero está fuera de"
 " lugar según su posición en el mundo real*"
 
-#: ../../../map-accuracy.rst:22 754655b1d1d840fbbc8c2d8980a876fb
+#: ../../../map-accuracy.rst:22
 msgid "**Absolute or global Accuracy**"
 msgstr "**Precisión absoluta o global**"
 
-#: ../../../map-accuracy.rst:24 e5e01529bd0c499aa456f620a7022ef5
+#: ../../../map-accuracy.rst:24
 msgid ""
 "Absolute accuracy is the accuracy of the reconstruction in relation to its "
 "true position on the planet (Pix4D 2019). Figure 2 shows a relative and "
@@ -86,7 +86,7 @@ msgstr ""
 "de precisión relativa y absoluta, ya que los puntos están colocados "
 "correctamente de acuerdo con su posición en el mundo real."
 
-#: ../../../map-accuracy.rst:30 9d73ff2d96b14f37b5f6166e2baf2695
+#: ../../../map-accuracy.rst:30
 msgid ""
 "*Figure 2. Model showing high relative and absolute accuracy. Placed "
 "correctly according to its real world position*"
@@ -94,11 +94,11 @@ msgstr ""
 "*Figura 2. Modelo que muestra una alta precisión relativa y absoluta. "
 "Colocado correctamente de acuerdo con su posición en el mundo real*"
 
-#: ../../../map-accuracy.rst:33 b73218309c99474abc6119f6bfffdf61
+#: ../../../map-accuracy.rst:33
 msgid "**An Accuracy level for each project**"
 msgstr "** Un nivel de precisión para cada proyecto**"
 
-#: ../../../map-accuracy.rst:35 1cccb608cda9412c9545ad6c5094fa64
+#: ../../../map-accuracy.rst:35
 msgid ""
 "Each project has specific accuracy needs to be met. For instance assessing "
 "the progress in a construction site or measuring an area affected by a fire "
@@ -115,11 +115,11 @@ msgstr ""
 "evaluaciones de cumplimiento de proyectos y levantamiento de títulos de "
 "propiedad, que requieren una mayor precisión relativa y absoluta."
 
-#: ../../../map-accuracy.rst:39 cc37e2d221b5438597d9284f2f6b18ff
+#: ../../../map-accuracy.rst:39
 msgid "What to expect"
 msgstr "Que esperar"
 
-#: ../../../map-accuracy.rst:41 0a236f8f8a584a588a68484240ee6551
+#: ../../../map-accuracy.rst:41
 msgid ""
 "In general terms, one can expect the relative accuracy to be in the order of"
 " 1 to 3 times the average GSD for the dataset. And as for the absolute "
@@ -135,7 +135,7 @@ msgstr ""
 "estar en el rango de 2 a 6 metros y la precisión vertical entre 3 y 4 veces "
 "la precisión horizontal."
 
-#: ../../../map-accuracy.rst:43 60659f189c6143b6bd94cb23d28105d6
+#: ../../../map-accuracy.rst:43
 msgid ""
 "When using GCP, absolute accuracy can be improved to 2.5 times GSD for the "
 "horizontal accuracy and 4 times the GSD for the vertical accuracy "
@@ -145,7 +145,7 @@ msgstr ""
 "GSD para la precisión horizontal y 4 veces la GSD para la precisión vertical"
 " (Madawalagama 2016)."
 
-#: ../../../map-accuracy.rst:45 7f9656e94e544adf807d480168874da7
+#: ../../../map-accuracy.rst:45
 msgid ""
 "At a GSD of 1cm, the accuracy is to that of the RTK GNSS, and is within "
 "1:200 scales according to NSDI & FGDC mapping accuracy standards during sub-"
@@ -155,15 +155,15 @@ msgstr ""
 "las escalas de 1:200 según los estándares de precisión de mapeo NSDI y FGDC "
 "durante condiciones subóptimas (Barry 2013)."
 
-#: ../../../map-accuracy.rst:49 3e9dd6b536884dd38b143069f710f1ab
+#: ../../../map-accuracy.rst:49
 msgid "Aspects impacting map accuracy"
 msgstr "Aspectos que impactan la precisión del mapa"
 
-#: ../../../map-accuracy.rst:51 fedd030db34543209cfa5ee6ef5e6196
+#: ../../../map-accuracy.rst:51
 msgid "**Weather**"
 msgstr "**Clima**"
 
-#: ../../../map-accuracy.rst:53 dd1b686e9e6b413c96a22b6509f9d88d
+#: ../../../map-accuracy.rst:53
 msgid ""
 "Weather conditions have direct impact in the photogrammetry results, so it "
 "is important to consider cloud coverage, wind speed, humidity, sun’s "
@@ -175,11 +175,11 @@ msgstr ""
 "la velocidad del viento, la humedad, la altitud del sol y otros factores que"
 " influyen en la estabilidad del UAV y la iluminación del terreno."
 
-#: ../../../map-accuracy.rst:55 dd609d1a79b64f2590b9d786fa83e5f1
+#: ../../../map-accuracy.rst:55
 msgid "**Cameras**"
 msgstr "**Cámaras**"
 
-#: ../../../map-accuracy.rst:57 c3cb5f9cfee84481a72bfcb66a85f17b
+#: ../../../map-accuracy.rst:57
 msgid ""
 "Bigger and better sensors produce less noise and more clearly focused "
 "images. Also consider that rolling shutter cameras produce distorted images "
@@ -192,11 +192,11 @@ msgstr ""
 "moviendo, por lo que para las actividades de mapeo, se recomiendan las "
 "cámaras con obturador mecánico o global."
 
-#: ../../../map-accuracy.rst:60 e4f17c5a5c184b5691fa3a8c08bb8543
+#: ../../../map-accuracy.rst:60
 msgid "**Flight altitude**"
 msgstr "**Altitud del vuelo**"
 
-#: ../../../map-accuracy.rst:62 e6a7b31d71664586a04a8fdd54f2001d
+#: ../../../map-accuracy.rst:62
 msgid ""
 "The higher the flight altitude, the larger the image footprint and GSD. The "
 "resulting larger GSD the accuracy will be decreased as there will be less "
@@ -209,11 +209,11 @@ msgstr ""
 "GSD más pequeño, se recomienda una altitud de 3 a 4 veces la altura del "
 "punto más alto."
 
-#: ../../../map-accuracy.rst:65 1555b7ec782a49c6a7460f0e32d578e0
+#: ../../../map-accuracy.rst:65
 msgid "**Flight speed**"
 msgstr "**Velocidad del vuelo**"
 
-#: ../../../map-accuracy.rst:67 2eb90c4a9e41400d94a560217cfc9e96
+#: ../../../map-accuracy.rst:67
 msgid ""
 "Flight speed have special effect in cameras equipped with rolling shutter, "
 "while those equipped with global or mechanical shutter tends to reduce this "
@@ -232,11 +232,11 @@ msgstr ""
 "precisión estará limitada por dos factores: la velocidad a la que se está "
 "moviendo multiplicada por los incrementos de 1 segundo de RTK (Mather 2020)."
 
-#: ../../../map-accuracy.rst:72 d2ef9f75f3624fd18cc2d2e7e0f9afee
+#: ../../../map-accuracy.rst:72
 msgid "References"
 msgstr "Referencias"
 
-#: ../../../map-accuracy.rst:74 9b8c9e6151824c24a592ec6ae333ff61
+#: ../../../map-accuracy.rst:74
 msgid ""
 "Barry, P., & Coakley, R. «Accuracy of UAV photogrammetry compared with "
 "Network RTK GPS.» Baseline Surveys. 2013. "
@@ -246,7 +246,7 @@ msgstr ""
 "Network RTK GPS.» Baseline Surveys. 2013. "
 "http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf  (accessed 10 13, 2020)."
 
-#: ../../../map-accuracy.rst:76 54475a5460a74936b892b63f462125f9
+#: ../../../map-accuracy.rst:76
 msgid ""
 "Drone Deploy. How Do I Use Ground Control Points?: A guide to using ground "
 "control points with drone mapping software. 5 8, 2017. "
@@ -258,7 +258,7 @@ msgstr ""
 "https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/ "
 "(último acceso el 9 del 7, 2020)."
 
-#: ../../../map-accuracy.rst:78 3c130fce6ff74f019cbe7244f8138545
+#: ../../../map-accuracy.rst:78
 msgid ""
 "Madawalagama, S.L., Munasinghe, N., Dampegama, S.D.P.J. and Samarakoon, L. "
 "«Low-cost aerial mapping with consumer grade.» 37th Asian Conference on "
@@ -268,7 +268,7 @@ msgstr ""
 "«Low-cost aerial mapping with consumer grade.» 37th Asian Conference on "
 "Remote Sensing. Colombo, Sri Lanka, 2016."
 
-#: ../../../map-accuracy.rst:80 151ceb4c0fd84418b73fd6a3717038e3
+#: ../../../map-accuracy.rst:80
 msgid ""
 "Mather, Stephen. OpenDroneMap. 30 de Marzo de 2020. "
 "https://community.opendronemap.org/t/the-accuracy-of-webodm-using-rtk-"
@@ -278,7 +278,7 @@ msgstr ""
 "https://community.opendronemap.org/t/the-accuracy-of-webodm-using-rtk-"
 "uavs/3937 (último acceso el 12 del 10, 2020)."
 
-#: ../../../map-accuracy.rst:82 6f51c9cc28e6453ab07e036fa6e37a03
+#: ../../../map-accuracy.rst:82
 msgid ""
 "Pascual, Manuel S. GIS Lounge: GIS Data: A Look at Accuracy, Precision, and "
 "Types of Errors. 11 6, 2011. https://www.gislounge.com/gis-data-a-look-at-"
@@ -288,7 +288,7 @@ msgstr ""
 "Types of Errors. 11 6, 2011. https://www.gislounge.com/gis-data-a-look-at-"
 "accuracy-precision-and-types-of-errors/ (último acceso el 09 del 07, 2020)."
 
-#: ../../../map-accuracy.rst:84 0bc80ba7d78f4075b5ea484cdbdb767f
+#: ../../../map-accuracy.rst:84
 msgid ""
 "Pix4D. «What is accuracy in an aerial mapping project?» Pix4D. 25 de 05 de "
 "2019. https://www.pix4d.com/blog/accuracy-aerial-mapping (accessed 10 13, "
@@ -298,7 +298,7 @@ msgstr ""
 "2019. https://www.pix4d.com/blog/accuracy-aerial-mapping (último acceso el "
 "13 del 10, 2020)."
 
-#: ../../../map-accuracy.rst:87 fb3f3b6f21c547389dd446af2ff2d1e0
+#: ../../../map-accuracy.rst:87
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
 "contribution>`_ and help improve `this page "

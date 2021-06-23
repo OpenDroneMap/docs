@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-15 09:17-0500\n"
+"POT-Creation-Date: 2021-06-22 19:54-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: Bertrand RUKUNDO <rukundo_bertrand@yahoo.fr>, 2020\n"
 "Language-Team: French (https://www.transifex.com/americanredcross/teams/111882/fr/)\n"
@@ -21,11 +21,11 @@ msgstr ""
 "Language: fr\n"
 "Plural-Forms: nplurals=2; plural=(n > 1);\n"
 
-#: ../../../flying.rst:2 846d8a3f9d9646e5a43911942183b8c8
+#: ../../../flying.rst:2
 msgid "Flying Tips"
 msgstr "Conseils de vol"
 
-#: ../../../flying.rst:4 c96becee56f94efca8b3de336db9d844
+#: ../../../flying.rst:4
 msgid ""
 "The `Humanitarian OpenStreetMap team <https://www.hotosm.org/>`_ has "
 "guidelines on `flying for UAV mapping <https://uav-"
@@ -35,7 +35,7 @@ msgstr ""
 "directives sur le `vol pour la cartographie des UAV <https://uav-"
 "guidelines.openaerialmap.org/>`_ :"
 
-#: ../../../flying.rst:6 4a6f4c2edee741ddac135447436976f7
+#: ../../../flying.rst:6
 msgid ""
 "`Choosing the right UAV <https://uav-guidelines.openaerialmap.org/pages/05"
 "-choosing-the-right-uav/>`_"
@@ -43,7 +43,7 @@ msgstr ""
 "`Choisir le bon UAV <https://uav-guidelines.openaerialmap.org/pages/05"
 "-choosing-the-right-uav/>`_"
 
-#: ../../../flying.rst:8 fe7f09d545684117aba61ff9860a51d2
+#: ../../../flying.rst:8
 msgid ""
 "`Choosing the right sensor <https://uav-"
 "guidelines.openaerialmap.org/pages/06-choosing-the-sensor/>`_"
@@ -51,7 +51,7 @@ msgstr ""
 "`Choisir le bon senseur <https://uav-guidelines.openaerialmap.org/pages/06"
 "-choosing-the-sensor/>`_"
 
-#: ../../../flying.rst:10 6c7947d1197147df9d63e165d11924cb
+#: ../../../flying.rst:10
 msgid ""
 "`Mission preparation <https://uav-guidelines.openaerialmap.org/pages/07"
 "-preparing-for-the-uav-mission/>`_"
@@ -59,7 +59,7 @@ msgstr ""
 "`Préparation de la mission <https://uav-"
 "guidelines.openaerialmap.org/pages/07-preparing-for-the-uav-mission/>`_"
 
-#: ../../../flying.rst:12 9b557a1da5cc46af807bcaaa6faee6dd
+#: ../../../flying.rst:12
 msgid ""
 "The guidelines are intended for drone mapping projects on islands, but have "
 "general use for all drone mappers."
@@ -68,7 +68,7 @@ msgstr ""
 "drones sur les îles, mais leur utilisation est généralisée à tous les "
 "cartographes avec drones."
 
-#: ../../../flying.rst:14 44b1eacc4ff2499a8a4e74651b9443e1
+#: ../../../flying.rst:14
 msgid ""
 "See also DroneDeploy's guide on `Making Successful Maps "
 "<https://support.dronedeploy.com/docs/making-successful-maps>`_, which "
@@ -78,7 +78,7 @@ msgstr ""
 "<https://support.dronedeploy.com/docs/making-successful-maps>`_, qui donne "
 "de bons conseils sur la planification des missions."
 
-#: ../../../flying.rst:16 790dc47dea524f9589ab6de072d0febc
+#: ../../../flying.rst:16
 msgid ""
 "Finally, lens distortion is a challenge in projects requiring accurate 3D "
 "data. See our section in these docs on `Camera Calibration <tutorials.html"
@@ -88,7 +88,7 @@ msgstr ""
 " des données 3D précises. Voir notre section dans ces documents sur `Camera "
 "Calibration <tutorials.html#calibrating-the-camera>`_."
 
-#: ../../../flying.rst:19 c3005806a2da46cebce1e0d12b163b0b
+#: ../../../flying.rst:19
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
 "contribution>`_ and help improve `this page "

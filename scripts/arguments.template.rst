@@ -1,5 +1,3 @@
-.. _arguments:
-
 Options and Flags
 -----------------
 

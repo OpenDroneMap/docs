@@ -245,7 +245,7 @@ Start up your Python virtual environment if it's not already with `source venv/b
 You can also run the build for just one specific language, for example:
 
 ``` 
-sphinx-build -b html -D language='sw' source "_build/html/sw/"
+sphinx-build -b dirhtml -D language='sw' source "_build/html/sw/"
 ```
 
 ![build errors logged to the terminal](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/sphinx-build_errors_in_terminal.png)

@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-15 09:17-0500\n"
+"POT-Creation-Date: 2021-06-22 19:54-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Telugu (https://www.transifex.com/americanredcross/teams/111882/te/)\n"
@@ -22,11 +22,11 @@ msgstr ""
 "Language: te\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../../requesting-features.rst:2 d940e31fefb34ecbb8d9be39288cd73c
+#: ../../../requesting-features.rst:2
 msgid "How To Request Features"
 msgstr "ఫీచర్లను ఎలా అభ్యర్థించాలి"
 
-#: ../../../requesting-features.rst:4 95118bd8b9c649a598c5fe8bff033698
+#: ../../../requesting-features.rst:4
 msgid ""
 "All software needs user feedback and feature requests, to grow and maintain "
 "alignment with the needs of its users."
@@ -34,7 +34,7 @@ msgstr ""
 "అన్ని సాఫ్ట్‌వేర్‌లకు దాని వినియోగదారుల అవసరాలకు అనుగుణంగా అమరిక పెరగడానికి "
 "మరియు నిర్వహించడానికి వినియోగదారు అభిప్రాయం మరియు ఫీచర్ అభ్యర్థనలు అవసరం."
 
-#: ../../../requesting-features.rst:7 696e503999524f108ec4e69ad5c38b9a
+#: ../../../requesting-features.rst:7
 msgid ""
 "OpenDroneMap is FOSS software.  Free and open source (FOSS) projects are "
 "interesting from the inside and outside: from the outside, successful ones "
@@ -49,7 +49,7 @@ msgstr ""
 "నిర్బంధించినట్లు భావిస్తారు: ఎక్కువగా సమయం, డబ్బు మరియు అవకాశాల ఓవర్లోడ్ "
 "ద్వారా."
 
-#: ../../../requesting-features.rst:13 1b8acc2a7a29463ca0df0b5f454bc0b7
+#: ../../../requesting-features.rst:13
 msgid ""
 "A feature request can be submitted as issues on the applicable Github "
 "repository (e.g., `WebODM <https://github.com/OpenDroneMap/WebODM/issues>`_ "
@@ -67,7 +67,7 @@ msgstr ""
 "దీన్ని ఇప్పటికే తీసుకువచ్చారా అని చూడటానికి. కొన్నిసార్లు ఒక లక్షణం ఇప్పటికే"
 " పనిలో ఉంది లేదా కనీసం చర్చించబడింది."
 
-#: ../../../requesting-features.rst:19 72a6e0d25ec84002b73a6810ffca914c
+#: ../../../requesting-features.rst:19
 msgid ""
 "And importantly, the trick is to listen: if someone within the project says:"
 " \"This is a big lift, we need MONEY or TIME or SOMEONE TO HELP CODE IT\" "
@@ -79,7 +79,7 @@ msgstr ""
 "కావాలి\" (లేదా బహుశా ఈ మూడింటి కలయిక) అప్పుడు రెండు సమాధానాలు ఉన్నాయి "
 "ప్రతిస్పందనగా బాగా పని చేయండి:"
 
-#: ../../../requesting-features.rst:23 db0eaf87e7fa4f9f99538ed5dd6b2d66
+#: ../../../requesting-features.rst:23
 msgid ""
 "*Ok. I didn’t know it was a big feature request! I hope someone comes along "
 "with the necessary resources. As a community member, I would be happy to be "
@@ -89,11 +89,11 @@ msgstr ""
 "ఎవరైనా వస్తారని నేను ఆశిస్తున్నాను. సంఘం సభ్యునిగా, ప్రారంభ వినియోగదారు "
 "మరియు పరీక్షకుడిగా నేను సంతోషంగా ఉన్నాను!*"
 
-#: ../../../requesting-features.rst:25 d83e0f882cf640539bbdfca6d431241d
+#: ../../../requesting-features.rst:25
 msgid "or"
 msgstr "లేదా"
 
-#: ../../../requesting-features.rst:27 eeb066ea19ea47398930c8e7c724c5a4
+#: ../../../requesting-features.rst:27
 msgid ""
 "*Let’s figure out if we can put together the resources to get this done! "
 "Here’s what I can contribute toward it: …*"
@@ -101,7 +101,7 @@ msgstr ""
 "* దీన్ని పూర్తి చేయడానికి వనరులను సమకూర్చగలమా అని తెలుసుకుందాం! నేను దీనికి "
 "దోహదపడేది ఇక్కడ ఉంది:… *"
 
-#: ../../../requesting-features.rst:29 22a7df06b14a4a30a09f34de5c834c28
+#: ../../../requesting-features.rst:29
 msgid ""
 "We are glad you are excited to see new features added to the project.  Some "
 "new features need support, and some are easier to implement.  We'll do our "
@@ -113,7 +113,7 @@ msgstr ""
 "ఎక్కడ పడిపోతుందో అర్థం చేసుకోవడానికి మేము మా వంతు కృషి చేస్తాము మరియు మీరు "
 "అందించగల మద్దతును మేము అభినందిస్తున్నాము."
 
-#: ../../../requesting-features.rst:34 7da56259db894bdd9321b4c1357c70ae
+#: ../../../requesting-features.rst:34
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
 "contribution>`_ and help improve `this page "

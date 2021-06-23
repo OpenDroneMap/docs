@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.4.7\n"
+"Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-03-17 15:56-0400\n"
+"POT-Creation-Date: 2021-06-22 19:54-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
@@ -22,11 +22,11 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../../contributing.rst:4 33a2711c05144f9582994fb626017045
+#: ../../../contributing.rst:4
 msgid "How To Contribute"
 msgstr "Como contribuir"
 
-#: ../../../contributing.rst:6 fd9047989963484db99d88e41c6a763c
+#: ../../../contributing.rst:6
 msgid ""
 "OpenDroneMap relies on community contributions. You can contribute in many "
 "ways, even if you are not a programmer."
@@ -34,11 +34,11 @@ msgstr ""
 "OpenDroneMap depende de las contribuciones de la comunidad. Puedes "
 "contribuir de muchas formas, aunque no seas programador."
 
-#: ../../../contributing.rst:9 d7a8cfb3ce1c4e789d9bc59089b7af33
+#: ../../../contributing.rst:9
 msgid "Community Forum"
 msgstr "Foro comunitario"
 
-#: ../../../contributing.rst:11 372bbf306f2e4a60a8915ed2441771d7
+#: ../../../contributing.rst:11
 msgid ""
 "If you are looking to get involved, are stuck on a problem, or want to reach"
 " out, `the forum <https://community.opendronemap.org/>`_ is a great place to"
@@ -55,11 +55,11 @@ msgstr ""
 "un buen lugar para revisar antes de enviar informes de errores oponerse ne "
 "contacto con los desarrolladores antes de escribir una nueva caracterisitca."
 
-#: ../../../contributing.rst:14 925012996add420ca56b7ff53828e745
+#: ../../../contributing.rst:14
 msgid "Reporting Bugs"
 msgstr "Reportando Errores"
 
-#: ../../../contributing.rst:16 cfa595af5c7748dea7c279ce2b09160f
+#: ../../../contributing.rst:16
 msgid ""
 "Bugs are tracked as Github issues. Please create an issue in the repository "
 "and tag it with the Bug tag."
@@ -67,7 +67,7 @@ msgstr ""
 "Errores son rastreados como problemas de Github. Por favor crea un porblema "
 "en el repositorio y etiquetalo con la etiqueta del error."
 
-#: ../../../contributing.rst:18 f79279e13ea24b5e8196ae34fb77bb8c
+#: ../../../contributing.rst:18
 msgid ""
 "Explain the problem and include additional details to help maintainers "
 "reproduce the problem:"
@@ -75,12 +75,12 @@ msgstr ""
 "Explica el problema e incluye detalles adicionales para ayudar a los "
 "mantenedores a reproducir el problema:"
 
-#: ../../../contributing.rst:20 3957ae606cb0425d8a8d6fcb1e639faf
+#: ../../../contributing.rst:20
 msgid ""
 "**Use a clear and descriptive title** for the issue to identify the problem."
 msgstr "**Usa un titulo claro y descriptivo** para identificar el problema."
 
-#: ../../../contributing.rst:21 bdb253d1772f45e7a7ef73e96e4e2654
+#: ../../../contributing.rst:21
 msgid ""
 "**Describe the exact steps which reproduce the problem** in as many details "
 "as possible. For example, start by explaining how you run ODM (Docker, "
@@ -92,7 +92,7 @@ msgstr ""
 "(Docker, Vagrant, etc), exactamente que comando usaste en el terminal. Al "
 "listar los pasos, **no solo digas que hiciste, explica como lo hiciste.**"
 
-#: ../../../contributing.rst:22 eebf5329d6344d08b8d6949880fca497
+#: ../../../contributing.rst:22
 msgid ""
 "**Provide specific examples to demonstrate the steps.** Include links to "
 "files or GitHub projects, or copy/pasteable snippets, which you use in those"
@@ -105,7 +105,7 @@ msgstr ""
 "problema, usa `Markdown code blocks <https://help.github.com/articles"
 "/markdown-basics/#multiple-lines>`_."
 
-#: ../../../contributing.rst:23 c6dc25d3a3cc4b188e567e241d3f3a77
+#: ../../../contributing.rst:23
 msgid ""
 "**Describe the behavior you observed after following the steps** and point "
 "out what exactly is the problem with that behavior."
@@ -113,11 +113,11 @@ msgstr ""
 "**Describe el comportamiento que observaste al seguir los pasos** y señala "
 "cual es exactamente el problema en ese comportamiento."
 
-#: ../../../contributing.rst:24 a4e3ccec200740a0854f45b8c9105728
+#: ../../../contributing.rst:24
 msgid "**Explain which behavior you expected to see instead and why.**"
 msgstr "**Explica que comportamiento esperabas observar y porque**"
 
-#: ../../../contributing.rst:25 541a50043a9b4241a4b659662b6e1d30
+#: ../../../contributing.rst:25
 msgid ""
 "**Include screenshots and animated GIFs** which show you following the "
 "described steps and clearly demonstrate the problem. You can use `this tool "
@@ -132,7 +132,7 @@ msgstr ""
 "<https://github.com/colinkeenan/silentcast>`_ o `esta "
 "<https://github.com/GNOME/byzanz>`_ en Linux."
 
-#: ../../../contributing.rst:26 43f98a3d907e487d967f29497574f208
+#: ../../../contributing.rst:26
 msgid ""
 "**If the problem is related to performance,** please post your machine's "
 "specs (host and guest machine)."
@@ -140,7 +140,7 @@ msgstr ""
 "**Si el problema es relacionado a rendimiento,** por favor postea las "
 "especificaciones de tu maquina (maquina host y guest)."
 
-#: ../../../contributing.rst:27 95d28b70f6c745269f2e101c9ebd7872
+#: ../../../contributing.rst:27
 msgid ""
 "**If the problem wasn't triggered by a specific action,** describe what you "
 "were doing before the problem happened and share more information using the "
@@ -150,23 +150,23 @@ msgstr ""
 "lo que estabas haciendo antes de que el problema pasara y comparte mas "
 "informacion usando las pautas de abajo."
 
-#: ../../../contributing.rst:29 7e3a9ff9bd6047cfbb353a9007c072de
+#: ../../../contributing.rst:29
 msgid "Include details about your configuration and environment:"
 msgstr "Incluye detalles de tu configuracion y ambiente:"
 
-#: ../../../contributing.rst:31 d0b284a2065049f5a2c78f914fd4ee97
+#: ../../../contributing.rst:31
 msgid ""
 "**Which version of ODM are you using?** A stable release? a clone of master?"
 msgstr ""
 "**Que version de ODM estas usando?**\n"
 "Un lanzamiento estable? un clon de un master?"
 
-#: ../../../contributing.rst:32 2c6d40300ba9430a85a83dc23588debb
+#: ../../../contributing.rst:32
 msgid "**What's the name and version of the OS you're using?**"
 msgstr ""
 "**Cual es el nombre y la version del sistema operativo que estas usando?**"
 
-#: ../../../contributing.rst:33 49f8184463b44d938e19609a806233ea
+#: ../../../contributing.rst:33
 msgid ""
 "**Are you running ODM in a virtual machine or Docker?** If so, which VM "
 "software are you using and which operating systems and versions are used for"
@@ -176,15 +176,15 @@ msgstr ""
 "software de maquina virtualestas usando y que sistema operativo y versiones "
 "estas usando para el host y el guest?"
 
-#: ../../../contributing.rst:36 3135c11e453247179f8c1c65d5700c63
+#: ../../../contributing.rst:36
 msgid "Template For Submitting Bug Reports"
 msgstr "Plantilla Para Enviar Informes de Errores"
 
-#: ../../../contributing.rst:69 befb661ef483468296538486ee7c72a1
+#: ../../../contributing.rst:69
 msgid "Pull Requests"
 msgstr "Solicitudes de Extraxion"
 
-#: ../../../contributing.rst:71 39056637eeed467b8451dd10998c0783
+#: ../../../contributing.rst:71
 msgid ""
 "Include screenshots and animated GIFs in your pull request whenever "
 "possible."
@@ -192,28 +192,28 @@ msgstr ""
 "Incluye capturas de pantalla y GIFs animados en tus solicitudes de "
 "extraccion siempre que sea posible."
 
-#: ../../../contributing.rst:72 b7dbdbac90e84d6284edfd22f4d2b53b
+#: ../../../contributing.rst:72
 msgid "Follow the PEP8 Python Style Guide."
 msgstr "Sigue la guia de estilo de PEP8 Python."
 
-#: ../../../contributing.rst:73 b679a0d7db6246c1a8c40720159e034b
+#: ../../../contributing.rst:73
 msgid "End files with a newline."
 msgstr "Finaliza archivos con una nueva linea."
 
-#: ../../../contributing.rst:76 dc6b120a67bf4f9684e5bb653290c7cb
+#: ../../../contributing.rst:76
 msgid "Avoid platform-dependent code:"
 msgstr "Evita codigo dependiente de la plataforma."
 
-#: ../../../contributing.rst:75 e198baeffa1f4a919d039b18e11ec7f8
+#: ../../../contributing.rst:75
 msgid "Use require('fs-plus').getHomeDirectory() to get the home directory."
 msgstr ""
 "Usa require('fs-plus').getHomeDirectory() para ir al directorio de inicio."
 
-#: ../../../contributing.rst:76 5d00c0c8d3d24347bfaa26f0ebe1e063
+#: ../../../contributing.rst:76
 msgid "Use path.join() to concatenate filenames."
 msgstr "Usa pth.join() para concatenar nombres de archivos."
 
-#: ../../../contributing.rst:77 00cddf0eb7bf4e4bb9a469313a778b3a
+#: ../../../contributing.rst:77
 msgid ""
 "Use os.tmpdir() rather than /tmp when you need to reference the temporary "
 "directory."
@@ -221,16 +221,16 @@ msgstr ""
 "Usa os.tmpdir() en lugar de /tmp cuando necesites referenciar al directorio "
 "temporal."
 
-#: ../../../contributing.rst:80 60e9e81967354752b39a01541d5b2ccf
+#: ../../../contributing.rst:80
 msgid ""
 "Using a plain return when returning explicitly at the end of a function."
 msgstr "Usando un retorno plano cuando retorna al final de una funcion."
 
-#: ../../../contributing.rst:79 fc372ffc32604e90890111d4287b33a0
+#: ../../../contributing.rst:79
 msgid "Not return null, return undefined, null, or undefined"
 msgstr "No reotrnar null, retornar indefinido, null o undefinido"
 
-#: ../../../contributing.rst:82 1bbd9476f992444fa2c635b3d02ce8f4
+#: ../../../contributing.rst:82
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
 "contribution>`_ and help improve `this page "

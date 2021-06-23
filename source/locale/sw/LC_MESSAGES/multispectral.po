@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-15 09:17-0500\n"
+"POT-Creation-Date: 2021-06-22 19:54-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: Khadija Abdulla <khastylez@gmail.com>, 2020\n"
 "Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
@@ -22,11 +22,11 @@ msgstr ""
 "Language: sw\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../../multispectral.rst:2 87c9cb4a7b2b478387fd990c81927150
+#: ../../../multispectral.rst:2
 msgid "Multispectral Support"
 msgstr "Msaada wa Multispectral"
 
-#: ../../../multispectral.rst:4 067b863268c2477bb94a7b6aaebab68f
+#: ../../../multispectral.rst:4
 msgid ""
 "Since version 0.9.9 ODM has basic support for radiometric normalization, "
 "which is able to generate reflectance orthophotos from multispectral "
@@ -38,11 +38,11 @@ msgstr ""
 "Multispectral camera inapiga picha nyingi za sehemu kutumia band sensor "
 "tofauti."
 
-#: ../../../multispectral.rst:7 b8dcb9bc7b7f4fffa0a8c9d75c0da9ca
+#: ../../../multispectral.rst:7
 msgid "Hardware"
 msgstr "Hardware"
 
-#: ../../../multispectral.rst:9 1c8ec56af3bc4fe5afdcb43f8b1fb149
+#: ../../../multispectral.rst:9
 msgid ""
 "While we aim to support as many cameras as possible, multispectral support "
 "has been developed using the following cameras, so they will work better:"
@@ -51,15 +51,15 @@ msgstr ""
 "multispectral umekuzwa kwa kutumia camera zifuatazo, kwa hiyo zitafanya kazi"
 " vizuri:"
 
-#: ../../../multispectral.rst:11 2b3e96533ded49da9ef461dc8f54d720
+#: ../../../multispectral.rst:11
 msgid "`MicaSense RedEdge-MX and Altum <https://www.micasense.com/>`_"
 msgstr "`MicaSense RedEdge-MX and Altum <https://www.micasense.com/>`_"
 
-#: ../../../multispectral.rst:12 ce4bd2fe479f45c9a851203698d34a39
+#: ../../../multispectral.rst:12
 msgid "`Sentera 6X <https://sentera.com/6x/>`_"
 msgstr "`Sentera 6X <https://sentera.com/6x/>`_"
 
-#: ../../../multispectral.rst:14 3acaad56c8ed48aba2f6bbb7e7963587
+#: ../../../multispectral.rst:14
 msgid ""
 "Other cameras might also work. You can help us expand this list by `sharing "
 "datasets <https://community.opendronemap.org/c/datasets/10>`_ captured with "
@@ -69,11 +69,11 @@ msgstr ""
 " ` kugawa dataseti <https://community.opendronemap.org/c/datasets/10>`_ "
 "zilopigwa na kamera nyengine."
 
-#: ../../../multispectral.rst:17 95652e4bd93440a098146431e52dbfbd
+#: ../../../multispectral.rst:17
 msgid "Usage"
 msgstr "Matumizi"
 
-#: ../../../multispectral.rst:19 c7362ff9d6ae4d6bbfc4b41bcbd7d0b4
+#: ../../../multispectral.rst:19
 msgid ""
 "Process all the images from all bands at once (do not separate the bands "
 "into multiple folders) and pass the `--radiometric-calibration` parameter to"
@@ -86,7 +86,7 @@ msgstr ""
 "radiometric normalization.Ikiwa picha ni sehemu ya mpangilio wa multi-"
 "camera, matokeo ya orthophoto yatakuwa na N band, kwa kila camera (+ alpha)."
 
-#: ../../../multispectral.rst:22 8231fc0c092840a0a328b0d094c3dfe1
+#: ../../../multispectral.rst:22
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
 "contribution>`_ and help improve `this page "

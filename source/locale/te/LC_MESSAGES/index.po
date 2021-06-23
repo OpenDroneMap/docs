@@ -10,9 +10,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-15 09:17-0500\n"
+"POT-Creation-Date: 2021-06-22 19:54-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Telugu (https://www.transifex.com/americanredcross/teams/111882/te/)\n"
@@ -22,11 +22,11 @@ msgstr ""
 "Language: te\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../../index.rst:8 fa2f220d4f704404a75d0d9dd55f72b8
+#: ../../../index.rst:8
 msgid "Welcome to OpenDroneMap's documentation"
 msgstr "OpenDroneMap యొక్క డాక్యుమెంటేషన్‌కు స్వాగతం"
 
-#: ../../../index.rst:13 d78ae117dc164a5fa4be88ae2534446c
+#: ../../../index.rst:13
 msgid ""
 "There is a `guide <https://github.com/opendronemap/docs#how-to-make-your-"
 "first-contribution>`_ on using GitHub to contribute. Anyone is welcome to "
@@ -35,7 +35,7 @@ msgid ""
 "<https://github.com/OpenDroneMap/docs/issues>`_."
 msgstr ""
 
-#: ../../../index.rst:15 ff1b3e1fb8404f56878e737c1909cfcf
+#: ../../../index.rst:15
 msgid ""
 "The documentation is available in several languages. Some translations are "
 "incomplete and will still display in English. The below languages are at "
@@ -49,26 +49,26 @@ msgstr ""
 "అనువదించడానికి మీరు మాకు సహాయపడగలరు. `GitHub "
 "<https://github.com/opendronemap/docs#translations>`_ లో` ప్రారంభ గైడ్ ఉంది."
 
-#: ../../../index.rst:17 dd42376621d64b6d86648e1c87101e31
+#: ../../../index.rst:17
 msgid "`English <https://docs.opendronemap.org/>`_"
 msgstr "`ఇంగ్లీష్ <https://docs.opendronemap.org/>`_"
 
-#: ../../../index.rst:18 2ae77e832f9f40fdbb17f72d04369b04
+#: ../../../index.rst:18
 msgid "`Filipino <https://docs.opendronemap.org/fil>`_"
 msgstr ""
 
-#: ../../../index.rst:19 2ae77e832f9f40fdbb17f72d04369b04
+#: ../../../index.rst:19
 msgid "`French <https://docs.opendronemap.org/fr>`_"
 msgstr "`ఫ్రెంచ్ <https://docs.opendronemap.org/fr>`_"
 
-#: ../../../index.rst:20 2b86dd77c9ca4fdbb3e5c3a362287930
+#: ../../../index.rst:20
 msgid "`Spanish <https://docs.opendronemap.org/es>`_"
 msgstr "`స్పానిష్ <https://docs.opendronemap.org/es>`_"
 
-#: ../../../index.rst:21 bdc10bb2b2904d7886f3128bf90cbf72
+#: ../../../index.rst:21
 msgid "`Swahili <https://docs.opendronemap.org/sw>`_"
 msgstr "`స్వాహిలి <https://docs.opendronemap.org/sw>`_"
 
-#: ../../../index.rst:22 41b56ac8133b4a35a02b95db07be553b
+#: ../../../index.rst:22
 msgid "`Telugu <https://docs.opendronemap.org/te>`_"
 msgstr "`తెలుగు <https://docs.opendronemap.org/te>`_"

@@ -11,9 +11,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.0.0\n"
+"Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2020-12-15 09:17-0500\n"
+"POT-Creation-Date: 2021-06-22 19:54-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
@@ -23,11 +23,11 @@ msgstr ""
 "Language: fil\n"
 "Plural-Forms: nplurals=2; plural=(n == 1 || n==2 || n==3) || (n % 10 != 4 || n % 10 != 6 || n % 10 != 9);\n"
 
-#: ../../../contributing.rst:4 33a2711c05144f9582994fb626017045
+#: ../../../contributing.rst:4
 msgid "How To Contribute"
 msgstr "Paano makadaragdag"
 
-#: ../../../contributing.rst:6 fd9047989963484db99d88e41c6a763c
+#: ../../../contributing.rst:6
 msgid ""
 "OpenDroneMap relies on community contributions. You can contribute in many "
 "ways, even if you are not a programmer."
@@ -36,11 +36,11 @@ msgstr ""
 "mga tao. Maari kang makaragdag ng kontribusiyon kahit na ikaw ay hindi isang"
 " ekspertong programmer."
 
-#: ../../../contributing.rst:9 d7a8cfb3ce1c4e789d9bc59089b7af33
+#: ../../../contributing.rst:9
 msgid "Community Forum"
 msgstr "Pagtitipon ng Komunidad"
 
-#: ../../../contributing.rst:11 372bbf306f2e4a60a8915ed2441771d7
+#: ../../../contributing.rst:11
 msgid ""
 "If you are looking to get involved, are stuck on a problem, or want to reach"
 " out, `the forum <https://community.opendronemap.org/>`_ is a great place to"
@@ -58,11 +58,11 @@ msgstr ""
 "kaalaman upang makatulong sa iba. Nawa ay masulit ang tugunan na ito bago "
 "magsumite ng problema sa ating mga ekspertong."
 
-#: ../../../contributing.rst:14 925012996add420ca56b7ff53828e745
+#: ../../../contributing.rst:14
 msgid "Reporting Bugs"
 msgstr "Pagsumite ng mga Sira"
 
-#: ../../../contributing.rst:16 cfa595af5c7748dea7c279ce2b09160f
+#: ../../../contributing.rst:16
 msgid ""
 "Bugs are tracked as Github issues. Please create an issue in the repository "
 "and tag it with the Bug tag."
@@ -70,7 +70,7 @@ msgstr ""
 "Ang mga sira ang itinuturing na isyu ng Github. Maaari lamang na magbigay-"
 "ulat sa ating imbakan at markahan ito ng Bug."
 
-#: ../../../contributing.rst:18 f79279e13ea24b5e8196ae34fb77bb8c
+#: ../../../contributing.rst:18
 msgid ""
 "Explain the problem and include additional details to help maintainers "
 "reproduce the problem:"
@@ -78,14 +78,14 @@ msgstr ""
 "Ilahad ang kompleto na detalye ng problema upang masolusyonan ng eksperto "
 "ang problema:"
 
-#: ../../../contributing.rst:20 3957ae606cb0425d8a8d6fcb1e639faf
+#: ../../../contributing.rst:20
 msgid ""
 "**Use a clear and descriptive title** for the issue to identify the problem."
 msgstr ""
 "**Gumamit ng klaro at detalyadong deskripsyon sa pamagat** upang mapadali "
 "ang pagresolba sa problema."
 
-#: ../../../contributing.rst:21 bdb253d1772f45e7a7ef73e96e4e2654
+#: ../../../contributing.rst:21
 msgid ""
 "**Describe the exact steps which reproduce the problem** in as many details "
 "as possible. For example, start by explaining how you run ODM (Docker, "
@@ -98,7 +98,7 @@ msgstr ""
 "command ang ginamit sa terminal. Kapag nagsalaysay ng mga hakbang, **bigyang"
 " eksplanasyon kung paano ginawa ang bawat hakbang.**"
 
-#: ../../../contributing.rst:22 eebf5329d6344d08b8d6949880fca497
+#: ../../../contributing.rst:22
 msgid ""
 "**Provide specific examples to demonstrate the steps.** Include links to "
 "files or GitHub projects, or copy/pasteable snippets, which you use in those"
@@ -111,7 +111,7 @@ msgstr ""
 "ikaw ay magpapasa ng snippet patungkol sa isyu, gamitin ang `Markdown code "
 "blocks <https://help.github.com/articles/markdown-basics/#multiple-lines>`_."
 
-#: ../../../contributing.rst:23 c6dc25d3a3cc4b188e567e241d3f3a77
+#: ../../../contributing.rst:23
 msgid ""
 "**Describe the behavior you observed after following the steps** and point "
 "out what exactly is the problem with that behavior."
@@ -119,11 +119,11 @@ msgstr ""
 "**Isalaysay ang pangyayari na naobserbahan matapos makumpleto ang mga "
 "hakbang** at ituro kung ano mismo ang naging sanhi ng problema."
 
-#: ../../../contributing.rst:24 a4e3ccec200740a0854f45b8c9105728
+#: ../../../contributing.rst:24
 msgid "**Explain which behavior you expected to see instead and why.**"
 msgstr "**Ilahad and kagawian na inaasahan na makita at bakit.**"
 
-#: ../../../contributing.rst:25 541a50043a9b4241a4b659662b6e1d30
+#: ../../../contributing.rst:25
 msgid ""
 "**Include screenshots and animated GIFs** which show you following the "
 "described steps and clearly demonstrate the problem. You can use `this tool "
@@ -138,7 +138,7 @@ msgstr ""
 "<https://github.com/colinkeenan/silentcast>`_ `pati na rin ito para sa Linux"
 " <https://github.com/GNOME/byzanz>`_."
 
-#: ../../../contributing.rst:26 43f98a3d907e487d967f29497574f208
+#: ../../../contributing.rst:26
 msgid ""
 "**If the problem is related to performance,** please post your machine's "
 "specs (host and guest machine)."
@@ -147,7 +147,7 @@ msgstr ""
 "lamang ang kumpletong detalye ng inyong makina (pangalan ng may-ari at "
 "makina)."
 
-#: ../../../contributing.rst:27 95d28b70f6c745269f2e101c9ebd7872
+#: ../../../contributing.rst:27
 msgid ""
 "**If the problem wasn't triggered by a specific action,** describe what you "
 "were doing before the problem happened and share more information using the "
@@ -157,22 +157,22 @@ msgstr ""
 "aksyon,** maaari lamang na ikwento ang kuong detalye ng inyong ginagawa bago"
 " masira ang makina. Ibahagi ang buong kwento gamit ang mga panuto sa baba."
 
-#: ../../../contributing.rst:29 7e3a9ff9bd6047cfbb353a9007c072de
+#: ../../../contributing.rst:29
 msgid "Include details about your configuration and environment:"
 msgstr "Isalaysay ang detalye ng iyong pagsasaayos at kapaligiran."
 
-#: ../../../contributing.rst:31 d0b284a2065049f5a2c78f914fd4ee97
+#: ../../../contributing.rst:31
 msgid ""
 "**Which version of ODM are you using?** A stable release? a clone of master?"
 msgstr ""
 "**Anong bersiyon ng ODM ang iyong ginagamit?** Iyo ba ay ang stable release?"
 " o ang tinatawag na clone of a master?"
 
-#: ../../../contributing.rst:32 2c6d40300ba9430a85a83dc23588debb
+#: ../../../contributing.rst:32
 msgid "**What's the name and version of the OS you're using?**"
 msgstr "**Ano ang pangalan at bersiyon ng OS ang iyong ginagamit?**"
 
-#: ../../../contributing.rst:33 49f8184463b44d938e19609a806233ea
+#: ../../../contributing.rst:33
 msgid ""
 "**Are you running ODM in a virtual machine or Docker?** If so, which VM "
 "software are you using and which operating systems and versions are used for"
@@ -182,44 +182,44 @@ msgstr ""
 "isang Docker?** Kung ang sagot ay oo, ano ang VM software at bersiyon ng OS "
 "ang iyong ginagamit bilang may-ari o bisita?"
 
-#: ../../../contributing.rst:36 3135c11e453247179f8c1c65d5700c63
+#: ../../../contributing.rst:36
 msgid "Template For Submitting Bug Reports"
 msgstr "Template para sa pagpapasa ng Bug Reports"
 
-#: ../../../contributing.rst:69 befb661ef483468296538486ee7c72a1
+#: ../../../contributing.rst:69
 msgid "Pull Requests"
 msgstr "Ipakita ang mga Request"
 
-#: ../../../contributing.rst:71 39056637eeed467b8451dd10998c0783
+#: ../../../contributing.rst:71
 msgid ""
 "Include screenshots and animated GIFs in your pull request whenever "
 "possible."
 msgstr ""
 "Magpasa ng larawan ng animated GIF sa iyong pull request hanggat maaari."
 
-#: ../../../contributing.rst:72 b7dbdbac90e84d6284edfd22f4d2b53b
+#: ../../../contributing.rst:72
 msgid "Follow the PEP8 Python Style Guide."
 msgstr "Sundan ang PEP8 Python Style Guide."
 
-#: ../../../contributing.rst:73 b679a0d7db6246c1a8c40720159e034b
+#: ../../../contributing.rst:73
 msgid "End files with a newline."
 msgstr "Tapusin ang bawat dokumento sa bagong linya."
 
-#: ../../../contributing.rst:76 dc6b120a67bf4f9684e5bb653290c7cb
+#: ../../../contributing.rst:76
 msgid "Avoid platform-dependent code:"
 msgstr "Iwasan ang platform-dependent code:"
 
-#: ../../../contributing.rst:75 e198baeffa1f4a919d039b18e11ec7f8
+#: ../../../contributing.rst:75
 msgid "Use require('fs-plus').getHomeDirectory() to get the home directory."
 msgstr ""
 "Gamitin ang ('fs-plus').getHomeDirectory() upang makapunta sa home "
 "directory."
 
-#: ../../../contributing.rst:76 5d00c0c8d3d24347bfaa26f0ebe1e063
+#: ../../../contributing.rst:76
 msgid "Use path.join() to concatenate filenames."
 msgstr "Gamitin ang path.join() upang pagsamasamahin anh mga dokumento."
 
-#: ../../../contributing.rst:77 00cddf0eb7bf4e4bb9a469313a778b3a
+#: ../../../contributing.rst:77
 msgid ""
 "Use os.tmpdir() rather than /tmp when you need to reference the temporary "
 "directory."
@@ -227,16 +227,16 @@ msgstr ""
 "Gamitin ang os.tmpdir() imbis ang /tmp tuwing kailangan ng reperensiya sa "
 "pansamantalang direktoryo."
 
-#: ../../../contributing.rst:80 60e9e81967354752b39a01541d5b2ccf
+#: ../../../contributing.rst:80
 msgid ""
 "Using a plain return when returning explicitly at the end of a function."
 msgstr "Gamitin ang return option pagkatapos ng bawat punsyon."
 
-#: ../../../contributing.rst:79 fc372ffc32604e90890111d4287b33a0
+#: ../../../contributing.rst:79
 msgid "Not return null, return undefined, null, or undefined"
 msgstr "Hindi return null, return undefined, null, o undefined"
 
-#: ../../../contributing.rst:82 1bbd9476f992444fa2c635b3d02ce8f4
+#: ../../../contributing.rst:82
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
 "contribution>`_ and help improve `this page "
