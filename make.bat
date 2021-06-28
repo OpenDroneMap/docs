@@ -1,1 +1,1 @@
-if "%1"=="livehtml" sphinx-autobuild --open-browser -H localhost -b html "source" "_build"
+if "%1"=="livehtml" sphinx-autobuild --open-browser --host localhost -b html "source" "_build"
