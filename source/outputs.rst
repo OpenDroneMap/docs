@@ -32,9 +32,9 @@ You can access the point cloud and textured meshes using MeshLab. Open MeshLab, 
 Orthophoto
 ^^^^^^^^^^
 
-``odm_orthophoto/odm_orthphoto.png`` -- The orthophoto, but this is a simple png, which doesn't have any georeferencing information
-
 ``odm_orthophoto/odm_orthphoto.tif`` -- GeoTIFF Orthophoto. You can use it in QGIS as a raster layer.
+
+``odm_orthophoto/odm_orthphoto.original.tif`` -- The orthophoto in its original un-cropped state.
 
 .. figure:: images/orthophoto.png
    :alt: image of OpenDroneMap orthophoto
