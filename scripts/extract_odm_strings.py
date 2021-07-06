@@ -7,15 +7,13 @@ from string import Template
 parser = argparse.ArgumentParser(description='Extract ODM strings.')
 parser.add_argument('input', type=str,
                     help='URL to ODM\'s config.py')
-parser.add_argument('template', type=str,
-                    help='Template rst to use')
-parser.add_argument('output', type=str,
-                    help='Where to write resulting rst file')
 args = parser.parse_args()
 
 url = args.input
-outfile = args.output
-tmplfile = args.template
+outfile = os.path.join(os.path.dirname(__file__), "..", "source", "arguments.rst")
+tmplfile = os.path.join(os.path.dirname(__file__), "arguments.template.rst")
+argstmplfile = os.path.join(os.path.dirname(__file__), "arguments.arg.template.rst")
+argsoutdir = os.path.join(os.path.dirname(__file__), "..", "source", "arguments")
 
 strings = []
 print("Fetching %s ..." % url)
@@ -90,12 +88,45 @@ if len(options) > 0:
 
     keys = list(options.keys())
     keys.sort(key=lambda a: a.replace("-", ""))
+    
+    with open(argstmplfile) as f:
+        argstmpl = Template(f.read())
+
+    def get_opt_name(opt):
+        opt_name = opt
+        arg_map = args_map[opt]
+        if len(arg_map) > 0:
+            # Use longest name
+            opt_name = max(arg_map + (opt_name, ), key=len)
+        return opt_name.replace("--", "")
+    
+    def get_opt_choices(opt):
+        return options[opt].get('choices', options[opt].get('metavar', '')).replace('[', '').replace(']', '').replace(',', ' | ').replace('\'', '')
 
     for opt in keys:
-        subst += "``%s%s`` %s\n  %s\n\n" % (
-            opt,
-            "," + ",".join(args_map[opt]) if len(args_map[opt]) > 0 else "",
-            options[opt].get('choices', options[opt].get('metavar', '')).replace('[', '').replace(']', '').replace(',', ' | ').replace('\'', ''),
+        opt_name = get_opt_name(opt)
+
+        include_file = os.path.join(argsoutdir + "_edit", "%s.rst" % opt_name)
+
+        kwargs = {
+            'opt': opt_name,
+            'ticks': '`' * len(opt_name),
+            'descr': options[opt].get('help', ''),
+            'parameter': "``%s``" % get_opt_choices(opt) if get_opt_choices(opt) else "",
+            'include': ".. include:: ../arguments_edit/%s" % os.path.basename(include_file) if os.path.isfile(include_file) else "",
+            'editfile': os.path.join("arguments_edit", os.path.basename(include_file)),
+        }
+
+        argsoutfile = os.path.join(argsoutdir, opt_name + ".rst")
+        with open(argsoutfile, "w") as f:
+            f.write(argstmpl.substitute(**kwargs))
+        print("Wrote %s" % argsoutfile)
+
+    for opt in keys:
+        subst += ":ref:`%s<%s>` %s\n  %s\n\n" % (
+            get_opt_name(opt),
+            get_opt_name(opt),
+            get_opt_choices(opt),
             options[opt].get('help', '')
         )
 
@@ -107,5 +138,7 @@ if len(options) > 0:
         f.write(tmpl.substitute(arguments=subst))
 
     print("Wrote %s" % outfile)
+
+
 else:
     print("No strings found")
