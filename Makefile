@@ -16,7 +16,7 @@ help:
 
 # this will update `arguments.rst` to match arguments in the ODM code
 autogenerate:
-	python scripts/extract_odm_strings.py https://raw.githubusercontent.com/OpenDroneMap/ODM/master/opendm/config.py scripts/arguments.template.rst source/arguments.rst
+	python scripts/extract_odm_strings.py https://raw.githubusercontent.com/OpenDroneMap/ODM/master/opendm/config.py
 
 pushlang: 
 	@$(SPHINXBUILD) -b gettext "$(SOURCEDIR)" "source/locale/en/pot"
@@ -29,7 +29,8 @@ livehtml:
 
 export GIT_DEPLOY_DIR = _build/html
 export GIT_DEPLOY_BRANCH = gh-pages
-deploy:
+
+build:
 	@$(SPHINXBUILD) -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)/html" -nW
 	@$(SPHINXBUILD) -b dirhtml -D language='sw' "$(SOURCEDIR)" "$(BUILDDIR)/html/sw" -nW 
 	@$(SPHINXBUILD) -b dirhtml -D language='ar' "$(SOURCEDIR)" "$(BUILDDIR)/html/ar" -nW 
@@ -37,10 +38,12 @@ deploy:
 	@$(SPHINXBUILD) -b dirhtml -D language='fr' "$(SOURCEDIR)" "$(BUILDDIR)/html/fr" -nW
 	@$(SPHINXBUILD) -b dirhtml -D language='te' "$(SOURCEDIR)" "$(BUILDDIR)/html/te" -nW
 	@$(SPHINXBUILD) -b dirhtml -D language='fil' "$(SOURCEDIR)" "$(BUILDDIR)/html/fil"  -nW
+	echo "docs.opendronemap.org" > ./_build/html/CNAME
+	
+deploy: build
 	#  -n   Run in nit-picky mode. Currently, this generates warnings for all missing references.
 	#  -W   Turn warnings into errors that stop the build.
 	# for more details about the options see https://www.sphinx-doc.org/en/1.8/man/sphinx-build.html#options
-	echo "docs.opendronemap.org" > ./_build/html/CNAME
 	chmod +x ./scripts/deploy.sh
 	./scripts/deploy.sh
 
