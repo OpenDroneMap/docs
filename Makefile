@@ -25,7 +25,7 @@ pulllang:
 	tx pull --language "sw,ar,es,fr,te,fil"
 
 livehtml:
-	sphinx-autobuild --open-browser -H 0.0.0.0 -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)"
+	sphinx-autobuild --open-browser --host 0.0.0.0 -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)"
 
 export GIT_DEPLOY_DIR = _build/html
 export GIT_DEPLOY_BRANCH = gh-pages
