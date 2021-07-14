@@ -8,10 +8,10 @@
 resize-to
 `````````
 
-``<integer>``
+**Options:** *<integer>*
 
 Legacy option (use --feature-quality instead). Resizes images by the largest side for feature extraction purposes only. Set to -1 to disable. This does not affect the final orthophoto resolution quality and will not resize the original images. Default: ``2048``
 
-
+.. include:: ../arguments_edit/resize-to.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/resize-to.rst>`_!

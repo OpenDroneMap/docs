@@ -8,10 +8,10 @@
 min-num-features
 ````````````````
 
-``<integer>``
+**Options:** *<integer>*
 
 Minimum number of features to extract per image. More features can be useful for finding more matches between images, potentially allowing the reconstruction of areas with little overlap or insufficient features. More features also slow down processing. Default: ``8000``
 
-
+.. include:: ../arguments_edit/min-num-features.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/min-num-features.rst>`_!

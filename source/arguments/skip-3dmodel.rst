@@ -12,6 +12,6 @@ skip-3dmodel
 
 Skip generation of a full 3D model. This can save time if you only need 2D results such as orthophotos and DEMs. Default: ``False``
 
-
+.. include:: ../arguments_edit/skip-3dmodel.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/skip-3dmodel.rst>`_!

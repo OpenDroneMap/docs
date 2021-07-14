@@ -12,6 +12,6 @@ texturing-skip-global-seam-leveling
 
 Skip normalization of colors across all images. Useful when processing radiometric data. Default: ``False``
 
-
+.. include:: ../arguments_edit/texturing-skip-global-seam-leveling.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/texturing-skip-global-seam-leveling.rst>`_!

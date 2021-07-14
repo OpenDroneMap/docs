@@ -8,10 +8,10 @@
 matcher-type
 ````````````
 
-``flann |  bow``
+**Options:** *flann |  bow*
 
 Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of Words. FLANN is slower, but more stable. BOW is faster, but can sometimes miss valid matches. . Default: ``flann``
 
-
+.. include:: ../arguments_edit/matcher-type.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/matcher-type.rst>`_!

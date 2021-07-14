@@ -8,10 +8,10 @@
 dem-resolution
 ``````````````
 
-``<float>``
+**Options:** *<float>*
 
 DSM/DTM resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate. To remove the cap, check --ignore-gsd also. Default: ``5``
 
-
+.. include:: ../arguments_edit/dem-resolution.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/dem-resolution.rst>`_!

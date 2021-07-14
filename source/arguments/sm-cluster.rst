@@ -8,10 +8,10 @@
 sm-cluster
 ``````````
 
-``<string>``
+**Options:** *<string>*
 
 URL to a ClusterODM instance for distributing a split-merge workflow on multiple nodes in parallel. Default: ``None``
 
-
+.. include:: ../arguments_edit/sm-cluster.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/sm-cluster.rst>`_!

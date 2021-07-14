@@ -8,10 +8,10 @@
 name
 ````
 
-``<dataset name>``
+**Options:** *<dataset name>*
 
 Name of dataset (i.e subfolder name within project folder). Default: ``code``
 
-
+.. include:: ../arguments_edit/name.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/name.rst>`_!

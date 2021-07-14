@@ -8,10 +8,10 @@
 feature-quality
 ```````````````
 
-``ultra |  high |  medium |  low |  lowest``
+**Options:** *ultra |  high |  medium |  low |  lowest*
 
 Set feature extraction quality. Higher quality generates better features, but requires more memory and takes longer. . Default: ``high``
 
-
+.. include:: ../arguments_edit/feature-quality.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/feature-quality.rst>`_!

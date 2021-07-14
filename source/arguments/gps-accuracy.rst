@@ -8,10 +8,10 @@
 gps-accuracy
 ````````````
 
-``<positive float>``
+**Options:** *<positive float>*
 
 Set a value in meters for the GPS Dilution of Precision (DOP) information for all images. If your images are tagged with high precision GPS information (RTK), this value will be automatically set accordingly. You can use this option to manually set it in case the reconstruction fails. Lowering this option can sometimes help control bowling-effects over large areas. Default: ``10``
 
-
+.. include:: ../arguments_edit/gps-accuracy.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/gps-accuracy.rst>`_!

@@ -8,10 +8,10 @@
 orthophoto-compression
 ``````````````````````
 
-``JPEG |  LZW |  PACKBITS |  DEFLATE |  LZMA |  NONE``
+**Options:** *JPEG |  LZW |  PACKBITS |  DEFLATE |  LZMA |  NONE*
 
 Set the compression to use for orthophotos. . Default: ``DEFLATE``
 
-
+.. include:: ../arguments_edit/orthophoto-compression.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/orthophoto-compression.rst>`_!

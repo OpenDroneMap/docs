@@ -8,10 +8,10 @@
 smrf-window
 ```````````
 
-``<positive float>``
+**Options:** *<positive float>*
 
 Simple Morphological Filter window radius parameter (meters). Default: ``18.0``
 
-
+.. include:: ../arguments_edit/smrf-window.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/smrf-window.rst>`_!

@@ -8,10 +8,10 @@
 matcher-distance
 ````````````````
 
-``<integer>``
+**Options:** *<integer>*
 
 Distance threshold in meters to find pre-matching images based on GPS exif data. Set both matcher-neighbors and this to 0 to skip pre-matching. Default: ``0``
 
-
+.. include:: ../arguments_edit/matcher-distance.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/matcher-distance.rst>`_!

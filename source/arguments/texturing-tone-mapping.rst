@@ -8,10 +8,10 @@
 texturing-tone-mapping
 ``````````````````````
 
-``none |  gamma``
+**Options:** *none |  gamma*
 
 Turn on gamma tone mapping or none for no tone mapping. Can be one of ['none', 'gamma']. Default: ``none`` 
 
-
+.. include:: ../arguments_edit/texturing-tone-mapping.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/texturing-tone-mapping.rst>`_!

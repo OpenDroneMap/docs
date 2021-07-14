@@ -12,6 +12,6 @@ dem-euclidean-map
 
 Computes an euclidean raster map for each DEM. The map reports the distance from each cell to the nearest NODATA value (before any hole filling takes place). This can be useful to isolate the areas that have been filled. Default: ``False``
 
-
+.. include:: ../arguments_edit/dem-euclidean-map.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/dem-euclidean-map.rst>`_!

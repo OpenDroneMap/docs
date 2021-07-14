@@ -107,13 +107,17 @@ if len(options) > 0:
         opt_name = get_opt_name(opt)
 
         include_file = os.path.join(argsoutdir + "_edit", "%s.rst" % opt_name)
+        if not os.path.isfile(include_file):
+            with open(include_file, 'w') as f:
+                f.write("\n")
+            print("Wrote %s" % include_file)
 
         kwargs = {
             'opt': opt_name,
             'ticks': '`' * len(opt_name),
             'descr': options[opt].get('help', ''),
-            'parameter': "``%s``" % get_opt_choices(opt) if get_opt_choices(opt) else "",
-            'include': ".. include:: ../arguments_edit/%s" % os.path.basename(include_file) if os.path.isfile(include_file) else "",
+            'parameter': "**Options:** *%s*" % get_opt_choices(opt) if get_opt_choices(opt) else "",
+            'include': ".. include:: ../arguments_edit/%s" % os.path.basename(include_file),
             'editfile': os.path.join("arguments_edit", os.path.basename(include_file)),
         }
 

@@ -12,6 +12,6 @@ skip-band-alignment
 
 When processing multispectral datasets, ODM will automatically align the images for each band. If the images have been postprocessed and are already aligned, use this option. Default: ``False``
 
-
+.. include:: ../arguments_edit/skip-band-alignment.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/skip-band-alignment.rst>`_!

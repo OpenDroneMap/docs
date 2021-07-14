@@ -12,6 +12,6 @@ texturing-skip-local-seam-leveling
 
 Skip the blending of colors near seams. Default: ``False``
 
-
+.. include:: ../arguments_edit/texturing-skip-local-seam-leveling.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/texturing-skip-local-seam-leveling.rst>`_!

@@ -8,10 +8,10 @@
 texturing-outlier-removal-type
 ``````````````````````````````
 
-``none |  gauss_clamping |  gauss_damping``
+**Options:** *none |  gauss_clamping |  gauss_damping*
 
 Type of photometric outlier removal method. . Default: ``gauss_clamping``
 
-
+.. include:: ../arguments_edit/texturing-outlier-removal-type.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/texturing-outlier-removal-type.rst>`_!

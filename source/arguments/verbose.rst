@@ -12,6 +12,6 @@ verbose
 
 Print additional messages to the console. Default: ``False``
 
-
+.. include:: ../arguments_edit/verbose.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/verbose.rst>`_!

@@ -8,10 +8,10 @@
 max-concurrency
 ```````````````
 
-``<positive integer>``
+**Options:** *<positive integer>*
 
 The maximum number of processes to use in various processes. Peak memory requirement is ~1GB per thread and 2 megapixel image resolution. Default: ``4``
 
-
+.. include:: ../arguments_edit/max-concurrency.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/max-concurrency.rst>`_!

@@ -8,10 +8,10 @@
 camera-lens
 ```````````
 
-``auto |  perspective |  brown |  fisheye |  spherical``
+**Options:** *auto |  perspective |  brown |  fisheye |  spherical*
 
 Set a camera projection type. Manually setting a value can help improve geometric undistortion. By default the application tries to determine a lens type from the images metadata. . Default: ``auto``
 
-
+.. include:: ../arguments_edit/camera-lens.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/camera-lens.rst>`_!

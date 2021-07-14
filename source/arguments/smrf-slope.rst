@@ -8,10 +8,10 @@
 smrf-slope
 ``````````
 
-``<positive float>``
+**Options:** *<positive float>*
 
 Simple Morphological Filter slope parameter (rise over run). Default: ``0.15``
 
-
+.. include:: ../arguments_edit/smrf-slope.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/smrf-slope.rst>`_!

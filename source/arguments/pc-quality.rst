@@ -8,10 +8,10 @@
 pc-quality
 ``````````
 
-``ultra |  high |  medium |  low |  lowest``
+**Options:** *ultra |  high |  medium |  low |  lowest*
 
 Set point cloud quality. Higher quality generates better, denser point clouds, but requires more memory and takes longer. Each step up in quality increases processing time roughly by a factor of 4x.. Default: ``medium``
 
-
+.. include:: ../arguments_edit/pc-quality.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/pc-quality.rst>`_!

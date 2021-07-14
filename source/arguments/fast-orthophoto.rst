@@ -12,6 +12,6 @@ fast-orthophoto
 
 Skips dense reconstruction and 3D model generation. It generates an orthophoto directly from the sparse reconstruction. If you just need an orthophoto and do not need a full 3D model, turn on this option. Default: ``False``
 
-
+.. include:: ../arguments_edit/fast-orthophoto.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/fast-orthophoto.rst>`_!
