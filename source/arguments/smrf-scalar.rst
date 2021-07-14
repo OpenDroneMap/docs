@@ -8,10 +8,10 @@
 smrf-scalar
 ```````````
 
-``<positive float>``
+**Options:** *<positive float>*
 
 Simple Morphological Filter elevation scalar parameter. Default: ``1.25``
 
-
+.. include:: ../arguments_edit/smrf-scalar.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/smrf-scalar.rst>`_!

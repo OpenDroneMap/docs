@@ -8,10 +8,10 @@
 pc-filter
 `````````
 
-``<positive float>``
+**Options:** *<positive float>*
 
 Filters the point cloud by removing points that deviate more than N standard deviations from the local mean. Set to 0 to disable filtering. Default: ``2.5``
 
-
+.. include:: ../arguments_edit/pc-filter.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/pc-filter.rst>`_!

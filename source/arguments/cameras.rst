@@ -8,10 +8,10 @@
 cameras
 ```````
 
-``<json>``
+**Options:** *<json>*
 
 Use the camera parameters computed from another dataset instead of calculating them. Can be specified either as path to a cameras.json file or as a JSON string representing the contents of a cameras.json file. Default: ``
 
-
+.. include:: ../arguments_edit/cameras.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/cameras.rst>`_!

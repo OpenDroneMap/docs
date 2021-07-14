@@ -8,10 +8,10 @@
 dem-decimation
 ``````````````
 
-``<positive integer>``
+**Options:** *<positive integer>*
 
 Decimate the points before generating the DEM. 1 is no decimation (full quality). 100 decimates ~99%% of the points. Useful for speeding up generation of DEM results in very large datasets. Default: ``1``
 
-
+.. include:: ../arguments_edit/dem-decimation.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/dem-decimation.rst>`_!

@@ -8,10 +8,10 @@
 radiometric-calibration
 ```````````````````````
 
-``none |  camera |  camera+sun``
+**Options:** *none |  camera |  camera+sun*
 
 Set the radiometric calibration to perform on images. When processing multispectral and thermal images you should set this option to obtain reflectance/temperature values (otherwise you will get digital number values). [camera] applies black level, vignetting, row gradient gain/exposure compensation (if appropriate EXIF tags are found) and computes absolute temperature values. [camera+sun] is experimental, applies all the corrections of [camera], plus compensates for spectral radiance registered via a downwelling light sensor (DLS) taking in consideration the angle of the sun. . Default: ``none``
 
-
+.. include:: ../arguments_edit/radiometric-calibration.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/radiometric-calibration.rst>`_!

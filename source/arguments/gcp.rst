@@ -8,10 +8,10 @@
 gcp
 ```
 
-``<path string>``
+**Options:** *<path string>*
 
 Path to the file containing the ground control points used for georeferencing. The file needs to use the following format: EPSG:<code> or <+proj definition>geo_x geo_y geo_z im_x im_y image_name [gcp_name] [extra1] [extra2]Default: ``None``
 
-
+.. include:: ../arguments_edit/gcp.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/gcp.rst>`_!

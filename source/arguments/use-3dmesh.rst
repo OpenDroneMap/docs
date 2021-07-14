@@ -12,6 +12,6 @@ use-3dmesh
 
 Use a full 3D mesh to compute the orthophoto instead of a 2.5D mesh. This option is a bit faster and provides similar results in planar areas. Default: ``False``
 
-
+.. include:: ../arguments_edit/use-3dmesh.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/use-3dmesh.rst>`_!

@@ -8,10 +8,10 @@
 copy-to
 ```````
 
-``<path>``
+**Options:** *<path>*
 
 Copy output results to this folder after processing.
 
-
+.. include:: ../arguments_edit/copy-to.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/copy-to.rst>`_!

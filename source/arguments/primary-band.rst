@@ -8,10 +8,10 @@
 primary-band
 ````````````
 
-``<string>``
+**Options:** *<string>*
 
 When processing multispectral datasets, you can specify the name of the primary band that will be used for reconstruction. It's recommended to choose a band which has sharp details and is in focus. Default: ``auto``
 
-
+.. include:: ../arguments_edit/primary-band.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/primary-band.rst>`_!

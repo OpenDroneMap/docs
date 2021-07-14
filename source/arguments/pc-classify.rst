@@ -12,6 +12,6 @@ pc-classify
 
 Classify the point cloud outputs using a Simple Morphological Filter. You can control the behavior of this option by tweaking the --dem-* parameters. Default: ``False``
 
-
+.. include:: ../arguments_edit/pc-classify.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/pc-classify.rst>`_!

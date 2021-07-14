@@ -12,6 +12,6 @@ orthophoto-cutline
 
 Generates a polygon around the cropping area that cuts the orthophoto around the edges of features. This polygon can be useful for stitching seamless mosaics with multiple overlapping orthophotos. Default: ``False``
 
-
+.. include:: ../arguments_edit/orthophoto-cutline.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/orthophoto-cutline.rst>`_!

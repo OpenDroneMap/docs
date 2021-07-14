@@ -12,6 +12,6 @@ rerun-all
 
 Permanently delete all previous results and rerun the processing pipeline.
 
-
+.. include:: ../arguments_edit/rerun-all.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/rerun-all.rst>`_!

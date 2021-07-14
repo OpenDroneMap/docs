@@ -12,6 +12,6 @@ texturing-keep-unseen-faces
 
 Keep faces in the mesh that are not seen in any camera. Default:  ``False``
 
-
+.. include:: ../arguments_edit/texturing-keep-unseen-faces.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/texturing-keep-unseen-faces.rst>`_!

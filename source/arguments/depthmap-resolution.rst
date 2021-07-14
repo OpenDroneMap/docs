@@ -8,10 +8,10 @@
 depthmap-resolution
 ```````````````````
 
-``<positive float>``
+**Options:** *<positive float>*
 
 Legacy option (use --pc-quality instead). Controls the density of the point cloud by setting the resolution of the depthmap images. Higher values take longer to compute but produce denser point clouds. Default: ``640``
 
-
+.. include:: ../arguments_edit/depthmap-resolution.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/depthmap-resolution.rst>`_!

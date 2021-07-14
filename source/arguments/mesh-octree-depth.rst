@@ -8,10 +8,10 @@
 mesh-octree-depth
 `````````````````
 
-``<integer: 1 <= x <= 14>``
+**Options:** *<integer: 1 <= x <= 14>*
 
 Octree depth used in the mesh reconstruction, increase to get more vertices, recommended values are 8-12. Default: ``11``
 
-
+.. include:: ../arguments_edit/mesh-octree-depth.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/mesh-octree-depth.rst>`_!

@@ -12,6 +12,6 @@ pc-ept
 
 Export the georeferenced point cloud in Entwine Point Tile (EPT) format. Default: ``False``
 
-
+.. include:: ../arguments_edit/pc-ept.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/pc-ept.rst>`_!

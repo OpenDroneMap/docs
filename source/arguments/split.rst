@@ -8,10 +8,10 @@
 split
 `````
 
-``<positive integer>``
+**Options:** *<positive integer>*
 
 Average number of images per submodel. When splitting a large dataset into smaller submodels, images are grouped into clusters. This value regulates the number of images that each cluster should have on average. Default: ``999999``
 
-
+.. include:: ../arguments_edit/split.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/split.rst>`_!

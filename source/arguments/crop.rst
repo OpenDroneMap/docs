@@ -8,10 +8,10 @@
 crop
 ````
 
-``<positive float>``
+**Options:** *<positive float>*
 
 Automatically crop image outputs by creating a smooth buffer around the dataset boundaries, shrinked by N meters. Use 0 to disable cropping. Default: ``3``
 
-
+.. include:: ../arguments_edit/crop.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/crop.rst>`_!

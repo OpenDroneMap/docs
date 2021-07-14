@@ -8,10 +8,10 @@
 pc-sample
 `````````
 
-``<positive float>``
+**Options:** *<positive float>*
 
 Filters the point cloud by keeping only a single point around a radius N (in meters). This can be useful to limit the output resolution of the point cloud and remove duplicate points. Set to 0 to disable sampling. Default: ``0``
 
-
+.. include:: ../arguments_edit/pc-sample.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/pc-sample.rst>`_!

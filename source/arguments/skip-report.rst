@@ -12,6 +12,6 @@ skip-report
 
 Skip generation of PDF report. This can save time if you don't need a report. Default: ``False``
 
-
+.. include:: ../arguments_edit/skip-report.rst
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/skip-report.rst>`_!
