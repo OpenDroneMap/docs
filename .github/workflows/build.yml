@@ -14,8 +14,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: Install Python and Extract ODM parameters
       run: |
-        apt update -y
-        apt install -y python build-essential
+        sudo apt update -y
+        sudo apt install -y python build-essential
         make autogenerate
     - uses: ammaraskar/sphinx-action@master
       with:
