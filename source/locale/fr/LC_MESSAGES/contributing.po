@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Brice Goedert <brice.goedert@gmail.com>, 2020
+# Arnaud Boilleau <arneir77@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-22 19:54-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
-"Last-Translator: Brice Goedert <brice.goedert@gmail.com>, 2020\n"
+"Last-Translator: Arnaud Boilleau <arneir77@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/americanredcross/teams/111882/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -23,7 +24,7 @@ msgstr ""
 
 #: ../../../contributing.rst:4
 msgid "How To Contribute"
-msgstr ""
+msgstr "Comment contribuer"
 
 #: ../../../contributing.rst:6
 msgid ""
@@ -56,24 +57,30 @@ msgstr ""
 
 #: ../../../contributing.rst:14
 msgid "Reporting Bugs"
-msgstr ""
+msgstr "Signaler des bogues"
 
 #: ../../../contributing.rst:16
 msgid ""
 "Bugs are tracked as Github issues. Please create an issue in the repository "
 "and tag it with the Bug tag."
 msgstr ""
+"Les bugs sont suivis en tant que Github Issues. Veuillez créer un problème "
+"dans le référentiel et le marquer avec la balise Bug."
 
 #: ../../../contributing.rst:18
 msgid ""
 "Explain the problem and include additional details to help maintainers "
 "reproduce the problem:"
 msgstr ""
+"Expliquez le problème et incluez des détails supplémentaires pour aider les "
+"responsables à reproduire le problème :"
 
 #: ../../../contributing.rst:20
 msgid ""
 "**Use a clear and descriptive title** for the issue to identify the problem."
 msgstr ""
+"**Utilisez un titre et un descriptif clair** pour le problème afin "
+"d'identifier le problème."
 
 #: ../../../contributing.rst:21
 msgid ""
@@ -82,6 +89,12 @@ msgid ""
 "Vagrant, etc), e.g. which command exactly you used in the terminal. When "
 "listing steps, **don't just say what you did, but explain how you did it.**"
 msgstr ""
+"**Décrivez les étapes exactes qui reproduisent le problème** avec autant de "
+"détails que possible. Par exemple, commencez par expliquer comment vous "
+"exécutez ODM (Docker, Vagrant, etc.), par ex. quelle commande exactement "
+"vous avez utilisée dans le terminal. Lorsque vous répertoriez les étapes, "
+"**ne vous contentez pas de dire ce que vous avez fait, mais expliquez "
+"comment vous l'avez fait.**"
 
 #: ../../../contributing.rst:22
 msgid ""
@@ -90,16 +103,25 @@ msgid ""
 " examples. If you're providing snippets in the issue, use `Markdown code "
 "blocks <https://help.github.com/articles/markdown-basics/#multiple-lines>`_."
 msgstr ""
+"**Fournissez des exemples spécifiques pour illustrer les étapes.** Incluez "
+"des liens vers des fichiers ou des projets GitHub, ou des extraits de code à"
+" copier/coller, que vous utilisez dans ces exemples. Si vous fournissez des "
+"extraits de code dans le problème, utilisez `Markdown code blocks "
+"<https://help.github.com/articles/markdown-basics/#multiple-lines>`_."
 
 #: ../../../contributing.rst:23
 msgid ""
 "**Describe the behavior you observed after following the steps** and point "
 "out what exactly is the problem with that behavior."
 msgstr ""
+"**Décrivez le comportement que vous avez observé après avoir suivi les "
+"étapes** et indiquez quel est exactement le problème avec ce comportement."
 
 #: ../../../contributing.rst:24
 msgid "**Explain which behavior you expected to see instead and why.**"
 msgstr ""
+"**Expliquez quel comportement vous vous attendiez à voir à la place et "
+"pourquoi.**"
 
 #: ../../../contributing.rst:25
 msgid ""
@@ -109,12 +131,20 @@ msgid ""
 "`this tool <https://github.com/colinkeenan/silentcast>`_ or `this one "
 "<https://github.com/GNOME/byzanz>`_ on Linux."
 msgstr ""
+"**Incluez des captures d'écran et des GIF animés** qui vous montrent suivre "
+"les étapes décrites et démontrent clairement le problème. Vous pouvez "
+"utiliser `cet outil pour enregistrer des GIF sur macOS et Windows "
+"<http://www.cockos.com/licecap/>`_, et `cet outil "
+"<https://github.com/colinkeenan/silentcast>`_ ou `celui-ci "
+"<https://github.com/GNOME/byzanz>`_ sur Linux."
 
 #: ../../../contributing.rst:26
 msgid ""
 "**If the problem is related to performance,** please post your machine's "
 "specs (host and guest machine)."
 msgstr ""
+"**Si le problème est lié aux performances,** veuillez publier les "
+"spécifications de votre machine (machine hôte et machine invitée)."
 
 #: ../../../contributing.rst:27
 msgid ""
@@ -122,19 +152,26 @@ msgid ""
 "were doing before the problem happened and share more information using the "
 "guidelines below."
 msgstr ""
+"**Si le problème n'a pas été déclenché par une action spécifique,** décrivez"
+" ce que vous faisiez avant que le problème ne survienne et partagez plus "
+"d'informations en suivant les instructions ci-dessous."
 
 #: ../../../contributing.rst:29
 msgid "Include details about your configuration and environment:"
-msgstr ""
+msgstr "Incluez des détails sur votre configuration et votre environnement :"
 
 #: ../../../contributing.rst:31
 msgid ""
 "**Which version of ODM are you using?** A stable release? a clone of master?"
 msgstr ""
+"**Quelle version d'ODM utilisez-vous ?** Une version stable ? un clone de "
+"maître ?"
 
 #: ../../../contributing.rst:32
 msgid "**What's the name and version of the OS you're using?**"
 msgstr ""
+"**Quels sont le nom et la version du système d'exploitation que vous "
+"utilisez ?**"
 
 #: ../../../contributing.rst:33
 msgid ""
@@ -142,55 +179,66 @@ msgid ""
 "software are you using and which operating systems and versions are used for"
 " the host and the guest?"
 msgstr ""
+"**Exécutez-vous ODM dans une machine virtuelle ou Docker ?** Si oui, quel "
+"logiciel VM utilisez-vous et quels systèmes d'exploitation et versions sont "
+"utilisés pour l'hôte et l'invité ?"
 
 #: ../../../contributing.rst:36
 msgid "Template For Submitting Bug Reports"
-msgstr ""
+msgstr "Modèle de soumission de rapports de bogues"
 
 #: ../../../contributing.rst:69
 msgid "Pull Requests"
-msgstr ""
+msgstr "Demande d'extraction"
 
 #: ../../../contributing.rst:71
 msgid ""
 "Include screenshots and animated GIFs in your pull request whenever "
 "possible."
 msgstr ""
+"Incluez des captures d'écran et des GIF animés dans votre pull request dans "
+"la mesure du possible."
 
 #: ../../../contributing.rst:72
 msgid "Follow the PEP8 Python Style Guide."
-msgstr ""
+msgstr "Suivez le guide de style Python PEP8."
 
 #: ../../../contributing.rst:73
 msgid "End files with a newline."
-msgstr ""
+msgstr "Terminez les fichiers avec une nouvelle ligne."
 
 #: ../../../contributing.rst:76
 msgid "Avoid platform-dependent code:"
-msgstr ""
+msgstr "Évitez le code dépendant de la plate-forme :"
 
 #: ../../../contributing.rst:75
 msgid "Use require('fs-plus').getHomeDirectory() to get the home directory."
 msgstr ""
+"Utilisez require('fs-plus').getHomeDirectory() pour obtenir le répertoire "
+"personnel."
 
 #: ../../../contributing.rst:76
 msgid "Use path.join() to concatenate filenames."
-msgstr ""
+msgstr "Utilisez path.join() pour concaténer les noms de fichiers."
 
 #: ../../../contributing.rst:77
 msgid ""
 "Use os.tmpdir() rather than /tmp when you need to reference the temporary "
 "directory."
 msgstr ""
+"Utilisez os.tmpdir() plutôt que /tmp lorsque vous devez référencer le "
+"répertoire temporaire."
 
 #: ../../../contributing.rst:80
 msgid ""
 "Using a plain return when returning explicitly at the end of a function."
 msgstr ""
+"Utilisation d'un retour simple lors du retour explicite à la fin d'une "
+"fonction."
 
 #: ../../../contributing.rst:79
 msgid "Not return null, return undefined, null, or undefined"
-msgstr ""
+msgstr "Ne retourne pas null, retourne undefined, null ou undefined"
 
 #: ../../../contributing.rst:82
 msgid ""
@@ -198,3 +246,6 @@ msgid ""
 "contribution>`_ and help improve `this page "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_!"
 msgstr ""
+"`Apprenez à éditer <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ et aidez à améliorer `cette page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_!"
