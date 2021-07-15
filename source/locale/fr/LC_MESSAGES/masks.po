@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# Arnaud Boilleau <arneir77@gmail.com>, 2021
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-22 19:54-0400\n"
 "PO-Revision-Date: 2020-10-05 17:13+0000\n"
+"Last-Translator: Arnaud Boilleau <arneir77@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/americanredcross/teams/111882/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +23,7 @@ msgstr ""
 
 #: ../../../masks.rst:3
 msgid "Using Image Masks"
-msgstr ""
+msgstr "Utiliser les images masque"
 
 #: ../../../masks.rst:5
 msgid ""
@@ -28,6 +32,11 @@ msgid ""
 " where the sky was accidentally included in the input photos from oblique "
 "shots, or simply to limit the reconstruction of a single subject."
 msgstr ""
+"À partir d'ODM ``2.0``, les gens peuvent fournir des masques d'image pour "
+"informer le logiciel d'ignorer la reconstruction sur certaines zones. Ceci "
+"est utile pour les cas où le ciel a été accidentellement inclus dans les "
+"photos d'entrée à partir de prises de vue obliques, ou simplement pour "
+"limiter la reconstruction d'un seul sujet."
 
 #: ../../../masks.rst:7
 msgid ""
@@ -36,14 +45,18 @@ msgid ""
 "as GIMP to do this). Color in black the areas to exclude from the "
 "reconstruction."
 msgstr ""
+"Pour ajouter un masque, créez simplement une nouvelle image en noir et blanc"
+" de la même dimension que l'image cible que vous souhaitez masquer (vous "
+"pouvez utiliser un programme tel que GIMP pour le faire). Colorez en noir "
+"les zones à exclure de la reconstruction."
 
 #: ../../../masks.rst:22
 msgid "Name your file:"
-msgstr ""
+msgstr "Nommez votre fichier :"
 
 #: ../../../masks.rst:24
 msgid "``<filename>_mask.JPG``"
-msgstr ""
+msgstr "``<filename>_mask.JPG``"
 
 #: ../../../masks.rst:26
 msgid ""
@@ -51,6 +64,10 @@ msgid ""
 "``DJI_0018_mask.JPG`` file and include that in the list of images. You can "
 "use ``.JPG``, ``.PNG``, ``.BMP`` and ``.TIF`` formats for image masks."
 msgstr ""
+"Par example, ``DJI_0018.JPG`` peut avoir un masque en créant un fichier "
+"``DJI_0018_mask.JPG`` et l'inclure dans la liste des images. Vous pouvez "
+"utiliser les formats ``.JPG``, ``.PNG``, ``.BMP`` and ``.TIF`` pour les "
+"masques image."
 
 #: ../../../masks.rst:29
 msgid ""
@@ -58,3 +75,6 @@ msgid ""
 "contribution>`_ and help improve `this page "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/masks.rst>`_!"
 msgstr ""
+"`Apprenez à éditer <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ et aidez à améliorer `cette "
+"page<https://github.com/OpenDroneMap/docs/blob/publish/source/masks.rst>`_!"

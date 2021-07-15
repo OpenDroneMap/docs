@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-09 09:50-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: Khadija Abdulla <khastylez@gmail.com>, 2020\n"
 "Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
@@ -88,19 +88,17 @@ msgstr "Orthophoto"
 
 #: ../../../outputs.rst:35
 msgid ""
-"``odm_orthophoto/odm_orthphoto.png`` -- The orthophoto, but this is a simple"
-" png, which doesn't have any georeferencing information"
-msgstr ""
-"``odm_orthophoto/odm_orthphoto.png`` -- The orthophoto, lakini hii ni simple"
-" png, ambayo haina maelezo ya georeferencing"
-
-#: ../../../outputs.rst:37
-msgid ""
 "``odm_orthophoto/odm_orthphoto.tif`` -- GeoTIFF Orthophoto. You can use it "
 "in QGIS as a raster layer."
 msgstr ""
 "``odm_orthophoto/odm_orthphoto.tif`` -- GeoTIFF Orthophoto. Unaweza kuitumia"
 " kwenye QGIS kama tabaka la rasta."
+
+#: ../../../outputs.rst:37
+msgid ""
+"``odm_orthophoto/odm_orthphoto.original.tif`` -- The orthophoto in its "
+"original un-cropped state."
+msgstr ""
 
 #: ../../../outputs.rst:43
 msgid ""

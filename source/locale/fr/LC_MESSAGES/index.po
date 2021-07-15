@@ -5,6 +5,7 @@
 # 
 # Translators:
 # Bertrand RUKUNDO <rukundo_bertrand@yahoo.fr>, 2020
+# Arnaud Boilleau <arneir77@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
@@ -13,7 +14,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-06-22 19:54-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
-"Last-Translator: Bertrand RUKUNDO <rukundo_bertrand@yahoo.fr>, 2020\n"
+"Last-Translator: Arnaud Boilleau <arneir77@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/americanredcross/teams/111882/fr/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -33,6 +34,11 @@ msgid ""
 "problems using `GitHub issues "
 "<https://github.com/OpenDroneMap/docs/issues>`_."
 msgstr ""
+"Il y a un `guide <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ sur l'utilisation de GitHub pour contribuer. Toutes "
+"personnes sont bienvenues pour partager leur connaissance et améliorer notre"
+" documentation. Vous pouvez également reporter un problème en utilisant "
+"`GitHub issues <https://github.com/OpenDroneMap/docs/issues>`_."
 
 #: ../../../index.rst:15
 msgid ""
@@ -42,27 +48,32 @@ msgid ""
 "other languages!) via Transifex. There is a `getting started guide on GitHub"
 " <https://github.com/opendronemap/docs#translations>`_."
 msgstr ""
+"La documentation est disponible en plusieurs langues. Certaines traductions "
+"sont incomplètes et s'afficheront toujours en anglais. Les langues ci-"
+"dessous sont traduites à au moins 20 %. Vous pouvez nous aider à traduire "
+"ces langues (et d'autres langues !) via Transifex. Il existe un guide de "
+"démarrage sur GitHub <https://github.com/opendronemap/docs#translations>`_."
 
 #: ../../../index.rst:17
 msgid "`English <https://docs.opendronemap.org/>`_"
-msgstr ""
+msgstr "`Anglais <https://docs.opendronemap.org/>`_"
 
 #: ../../../index.rst:18
 msgid "`Filipino <https://docs.opendronemap.org/fil>`_"
-msgstr ""
+msgstr "`Philippin <https://docs.opendronemap.org/fil>`_"
 
 #: ../../../index.rst:19
 msgid "`French <https://docs.opendronemap.org/fr>`_"
-msgstr ""
+msgstr "`Français <https://docs.opendronemap.org/fr>`_"
 
 #: ../../../index.rst:20
 msgid "`Spanish <https://docs.opendronemap.org/es>`_"
-msgstr ""
+msgstr "`Espagnol <https://docs.opendronemap.org/es>`_"
 
 #: ../../../index.rst:21
 msgid "`Swahili <https://docs.opendronemap.org/sw>`_"
-msgstr ""
+msgstr "`Swahili <https://docs.opendronemap.org/sw>`_"
 
 #: ../../../index.rst:22
 msgid "`Telugu <https://docs.opendronemap.org/te>`_"
-msgstr ""
+msgstr "`Telugu <https://docs.opendronemap.org/te>`_"
