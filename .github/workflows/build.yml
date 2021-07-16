@@ -11,16 +11,17 @@ jobs:
     runs-on: ubuntu-latest
 
     steps:
-    - uses: actions/checkout@v1
-    - name: Install Python and Extract ODM parameters
+    - uses: actions/checkout@v2
+    - name: Set up Python
+    - uses: actions/setup-python@v2
+      with: 
+        python-version: '3.x'
+    - name: Install dependencies
       run: |
-        sudo apt update -y
-        sudo apt install -y python build-essential
-        make autogenerate
-    - uses: ammaraskar/sphinx-action@master
-      with:
-        build-command: "make build"
-        docs-folder: "source/"
+        python -m pip install --upgrade pip
+        pip install -r requirements_prod.txt
+    - name: Build docs    
+      run: make build
     - name: Commit documentation changes
       run: |
         git clone https://github.com/OpenDroneMap/docs --branch gh-pages --single-branch gh-pages
