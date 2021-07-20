@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-09 09:50-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -57,11 +57,11 @@ msgid "Orthophoto"
 msgstr ""
 
 #: ../../../outputs.rst:35
-msgid "``odm_orthophoto/odm_orthphoto.png`` -- The orthophoto, but this is a simple png, which doesn't have any georeferencing information"
+msgid "``odm_orthophoto/odm_orthphoto.tif`` -- GeoTIFF Orthophoto. You can use it in QGIS as a raster layer."
 msgstr ""
 
 #: ../../../outputs.rst:37
-msgid "``odm_orthophoto/odm_orthphoto.tif`` -- GeoTIFF Orthophoto. You can use it in QGIS as a raster layer."
+msgid "``odm_orthophoto/odm_orthphoto.original.tif`` -- The orthophoto in its original un-cropped state."
 msgstr ""
 
 #: ../../../outputs.rst:43

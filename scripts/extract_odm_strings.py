@@ -115,7 +115,7 @@ if len(options) > 0:
         kwargs = {
             'opt': opt_name,
             'ticks': '`' * len(opt_name),
-            'descr': options[opt].get('help', ''),
+            'descr': options[opt].get('help', '').replace("*", "\*"),
             'parameter': "**Options:** *%s*" % get_opt_choices(opt) if get_opt_choices(opt) else "",
             'include': ".. include:: ../arguments_edit/%s" % os.path.basename(include_file),
             'editfile': os.path.join("arguments_edit", os.path.basename(include_file)),

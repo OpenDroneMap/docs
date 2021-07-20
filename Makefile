@@ -27,9 +27,6 @@ pulllang:
 livehtml:
 	sphinx-autobuild --open-browser --host 0.0.0.0 -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)"
 
-export GIT_DEPLOY_DIR = _build/html
-export GIT_DEPLOY_BRANCH = gh-pages
-
 build:
 	@$(SPHINXBUILD) -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)/html" -nW
 	@$(SPHINXBUILD) -b dirhtml -D language='sw' "$(SOURCEDIR)" "$(BUILDDIR)/html/sw" -nW 
@@ -39,13 +36,9 @@ build:
 	@$(SPHINXBUILD) -b dirhtml -D language='te' "$(SOURCEDIR)" "$(BUILDDIR)/html/te" -nW
 	@$(SPHINXBUILD) -b dirhtml -D language='fil' "$(SOURCEDIR)" "$(BUILDDIR)/html/fil"  -nW
 	echo "docs.opendronemap.org" > ./_build/html/CNAME
-	
-deploy: build
 	#  -n   Run in nit-picky mode. Currently, this generates warnings for all missing references.
 	#  -W   Turn warnings into errors that stop the build.
 	# for more details about the options see https://www.sphinx-doc.org/en/1.8/man/sphinx-build.html#options
-	chmod +x ./scripts/deploy.sh
-	./scripts/deploy.sh
 
 # `allerr` runs without nit-picky mode, so that an error doesn't halt the build
 # it will log all errors that need to be fixed in the translations (generally syntax errors)
