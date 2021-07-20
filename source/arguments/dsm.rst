@@ -10,7 +10,7 @@ dsm
 
 
 
-Use this tag to build a DSM (Digital Surface Model, ground + objects) using a progressive morphological filter. Check the --dem* parameters for finer tuning. Default: ``False``
+Use this tag to build a DSM (Digital Surface Model, ground + objects) using a progressive morphological filter. Check the --dem\* parameters for finer tuning. Default: ``False``
 
 .. include:: ../arguments_edit/dsm.rst
 

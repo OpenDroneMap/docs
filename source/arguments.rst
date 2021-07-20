@@ -38,10 +38,10 @@ Options and Flags
   Legacy option (use --pc-quality instead). Controls the density of the point cloud by setting the resolution of the depthmap images. Higher values take longer to compute but produce denser point clouds. Default: ``640``
 
 :ref:`dsm<dsm>` 
-  Use this tag to build a DSM (Digital Surface Model, ground + objects) using a progressive morphological filter. Check the --dem* parameters for finer tuning. Default: ``False``
+  Use this tag to build a DSM (Digital Surface Model, ground + objects) using a progressive morphological filter. Check the --dem\* parameters for finer tuning. Default: ``False``
 
 :ref:`dtm<dtm>` 
-  Use this tag to build a DTM (Digital Terrain Model, ground only) using a simple morphological filter. Check the --dem* and --smrf* parameters for finer tuning. Default: ``False``
+  Use this tag to build a DTM (Digital Terrain Model, ground only) using a simple morphological filter. Check the --dem\* and --smrf\* parameters for finer tuning. Default: ``False``
 
 :ref:`end-with<end-with>` dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report
   End processing at this stage. . Default: ``odm_report``
@@ -122,7 +122,7 @@ Options and Flags
   Orthophoto resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate. To remove the cap, check --ignore-gsd also. Default: ``5``
 
 :ref:`pc-classify<pc-classify>` 
-  Classify the point cloud outputs using a Simple Morphological Filter. You can control the behavior of this option by tweaking the --dem-* parameters. Default: ``False``
+  Classify the point cloud outputs using a Simple Morphological Filter. You can control the behavior of this option by tweaking the --dem-\* parameters. Default: ``False``
 
 :ref:`pc-csv<pc-csv>` 
   Export the georeferenced point cloud in CSV format. Default: ``False``

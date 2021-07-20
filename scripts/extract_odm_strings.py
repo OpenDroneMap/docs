@@ -100,6 +100,9 @@ if len(options) > 0:
             opt_name = max(arg_map + (opt_name, ), key=len)
         return opt_name.replace("--", "")
     
+    def get_opt_descr(opt):
+        return options[opt].get('help', '').replace("*", "\*")
+    
     def get_opt_choices(opt):
         return options[opt].get('choices', options[opt].get('metavar', '')).replace('[', '').replace(']', '').replace(',', ' | ').replace('\'', '')
 
@@ -115,7 +118,7 @@ if len(options) > 0:
         kwargs = {
             'opt': opt_name,
             'ticks': '`' * len(opt_name),
-            'descr': options[opt].get('help', '').replace("*", "\*"),
+            'descr': get_opt_descr(opt),
             'parameter': "**Options:** *%s*" % get_opt_choices(opt) if get_opt_choices(opt) else "",
             'include': ".. include:: ../arguments_edit/%s" % os.path.basename(include_file),
             'editfile': os.path.join("arguments_edit", os.path.basename(include_file)),
@@ -131,7 +134,7 @@ if len(options) > 0:
             get_opt_name(opt),
             get_opt_name(opt),
             get_opt_choices(opt),
-            options[opt].get('help', '')
+            get_opt_descr(opt)
         )
 
     with open(tmplfile) as f:

@@ -10,7 +10,7 @@ dtm
 
 
 
-Use this tag to build a DTM (Digital Terrain Model, ground only) using a simple morphological filter. Check the --dem* and --smrf* parameters for finer tuning. Default: ``False``
+Use this tag to build a DTM (Digital Terrain Model, ground only) using a simple morphological filter. Check the --dem\* and --smrf\* parameters for finer tuning. Default: ``False``
 
 .. include:: ../arguments_edit/dtm.rst
 
