@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Language-Team: French (https://www.transifex.com/americanredcross/teams/111882/fr/)\n"
 "MIME-Version: 1.0\n"
@@ -27,6 +27,10 @@ msgstr ""
 
 #: ../../../tutorials.rst:11
 msgid "Creating High Quality Orthophotos"
+msgstr ""
+
+#: ../../../tutorials.rstNone
+msgid "image of OpenDroneMap orthophoto"
 msgstr ""
 
 #: ../../../tutorials.rst:17
@@ -85,6 +89,10 @@ msgid ""
 " minimize the distortion from self-calibration."
 msgstr ""
 
+#: ../../../tutorials.rstNone ../../../tutorials.rstNone
+msgid "image of lens distortion effect on bowling of data"
+msgstr ""
+
 #: ../../../tutorials.rst:35
 msgid ""
 "*Bowling effect on point cloud over 13,000+ image dataset collected by World"
@@ -97,6 +105,10 @@ msgid ""
 "To mitigate this effect, there are a few options but the simplest are as "
 "follows: fly two patterns separated by 20°, and rather than having a nadir "
 "(straight down pointing) camera, use one that tilts forward by 5°."
+msgstr ""
+
+#: ../../../tutorials.rstNone
+msgid "animation showing optimum"
 msgstr ""
 
 #: ../../../tutorials.rst:45
@@ -127,10 +139,20 @@ msgid ""
 "42% overlap and sidelap for an equivalent 70% overlap and sidelap."
 msgstr ""
 
+#: ../../../tutorials.rstNone
+msgid "animation showing experimental optimum"
+msgstr ""
+
 #: ../../../tutorials.rst:56
 msgid ""
 "Vertically separated flight lines also improve accuracy, but less so than a "
 "camera that is forward facing by 5°."
+msgstr ""
+
+#: ../../../tutorials.rstNone
+msgid ""
+"figure showing effect of vertically separated flight lines and forward "
+"facing cameras on improving self calibration"
 msgstr ""
 
 #: ../../../tutorials.rst:62
@@ -148,6 +170,10 @@ msgid ""
 "By default ODM does not create DEMs. To create a digital terrain model, make"
 " sure to pass the ``--dtm`` flag. To create a digital surface model, be sure"
 " to pass the ``--dsm`` flag."
+msgstr ""
+
+#: ../../../tutorials.rstNone
+msgid "image of OpenDroneMap derived digital surface model"
 msgstr ""
 
 #: ../../../tutorials.rst:74
@@ -274,6 +300,10 @@ msgid ""
 "highly accurate stockpile models."
 msgstr ""
 
+#: ../../../tutorials.rstNone
+msgid "a simple lawnmower flight pattern can produce accurate results"
+msgstr ""
+
 #: ../../../tutorials.rst:122
 msgid ""
 "Recommended overlap would be between 75% and 80% with a sidelap in the order"
@@ -365,6 +395,12 @@ msgid ""
 "base plane."
 msgstr ""
 
+#: ../../../tutorials.rstNone
+msgid ""
+"almost 50% of the material will be found in the first 20% of the stockpile "
+"height"
+msgstr ""
+
 #: ../../../tutorials.rst:165
 msgid ""
 "In WebODM Dashboard, clic on \"view map\" to start a 2D view of your "
@@ -377,16 +413,32 @@ msgid ""
 "button."
 msgstr ""
 
+#: ../../../tutorials.rstNone
+msgid "clic on the \"Measure volume, area and length\" button"
+msgstr ""
+
 #: ../../../tutorials.rst:173
 msgid "then clic on \"Create a new measurement\""
+msgstr ""
+
+#: ../../../tutorials.rstNone
+msgid "clic on \"Create a new measurement\""
 msgstr ""
 
 #: ../../../tutorials.rst:179
 msgid "Start placing the points to define the stockpile base plane"
 msgstr ""
 
+#: ../../../tutorials.rstNone
+msgid "Define the stockpile base plane"
+msgstr ""
+
 #: ../../../tutorials.rst:185
 msgid "Clic on \"Finish measurement\" to finish the process."
+msgstr ""
+
+#: ../../../tutorials.rstNone ../../../tutorials.rstNone
+msgid "Clic on \"Finish measurement\" to finish the process"
 msgstr ""
 
 #: ../../../tutorials.rst:191

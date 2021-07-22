@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-10-15 13:38+0000\n"
 "Last-Translator: Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020\n"
 "Language-Team: Telugu (https://www.transifex.com/americanredcross/teams/111882/te/)\n"
@@ -60,6 +60,10 @@ msgstr ""
 "కాబట్టి మ్యాప్ అధిక సాపేక్ష ఖచ్చితత్వాన్ని కలిగి ఉంటుంది (పరిమాణం మరియు "
 "ఆకారంలో) కానీ ప్రపంచంలో దాని స్థానాన్ని మార్చవచ్చు (మూర్తి 1)."
 
+#: ../../../map-accuracy.rstNone
+msgid "Model showing high relative accuracy"
+msgstr ""
+
 #: ../../../map-accuracy.rst:18
 msgid ""
 "*Figure 1. Model showing high relative accuracy but misplaced according to "
@@ -83,6 +87,10 @@ msgstr ""
 "పునర్నిర్మాణం యొక్క ఖచ్చితత్వం (పిక్స్ 4 డి 2019). మూర్తి 2 సాపేక్ష మరియు "
 "సంపూర్ణ ఖచ్చితమైన నమూనాను చూపిస్తుంది, ఎందుకంటే పాయింట్లు దాని వాస్తవ ప్రపంచ"
 " స్థానం ప్రకారం సరిగ్గా ఉంచబడతాయి."
+
+#: ../../../map-accuracy.rstNone
+msgid "Model showing high absolute accuracy"
+msgstr ""
 
 #: ../../../map-accuracy.rst:30
 msgid ""

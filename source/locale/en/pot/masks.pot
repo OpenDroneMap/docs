@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,6 +26,18 @@ msgstr ""
 
 #: ../../../masks.rst:7
 msgid "To add a mask, simply create a new black and white image of the same dimension as the target image you want to mask (you can use a program such as GIMP to do this). Color in black the areas to exclude from the reconstruction."
+msgstr ""
+
+#: ../../../masks.rst:None
+msgid "Target image"
+msgstr ""
+
+#: ../../../masks.rst:None
+msgid "Image mask"
+msgstr ""
+
+#: ../../../masks.rst:None
+msgid "3D result (building is masked)"
 msgstr ""
 
 #: ../../../masks.rst:22

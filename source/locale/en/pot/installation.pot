@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -28,24 +28,48 @@ msgstr ""
 msgid "Until recently OpenDroneMap was the term used to refer to a single command line application (what is now known as the ODM project).  With the recent development of a web interface, an API and other tools, OpenDroneMap has become an ecosystem of various applications to process, analyze and display aerial data. This ecosystem is made of several components:"
 msgstr ""
 
+#: ../../../installation.rst:None
+msgid "ODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:14
 msgid "**ODM** is the processing engine, which can be used from the command line. It takes images as input and produces a variety of outputs, including point clouds, 3D models and orthophotos"
+msgstr ""
+
+#: ../../../installation.rst:None
+msgid "NodeODM Logo"
 msgstr ""
 
 #: ../../../installation.rst:20
 msgid "**NodeODM** is a light-weight API built on top of ODM. It allows users and applications to access the functions of ODM over a computer network"
 msgstr ""
 
+#: ../../../installation.rst:None
+msgid "WebODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:26
 msgid "**WebODM** is a friendly user interface that includes a map viewer, a 3D viewer, user logins, a plugin system and many other features that are expected of modern drone mapping platforms"
+msgstr ""
+
+#: ../../../installation.rst:None
+msgid "CloudODM Logo"
 msgstr ""
 
 #: ../../../installation.rst:32
 msgid "**CloudODM** is a small command line client to communicate with ODM via the NodeODM API"
 msgstr ""
 
+#: ../../../installation.rst:None
+msgid "PyODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:38
 msgid "**PyODM** is a Python SDK for creating tasks via the NodeODM API. We cover it in more detail in the “Automated Processing With Python” chapter"
+msgstr ""
+
+#: ../../../installation.rst:None
+msgid "ClusterODM Logo"
 msgstr ""
 
 #: ../../../installation.rst:44
@@ -129,6 +153,10 @@ msgstr ""
 msgid "Docker requires a feature from your CPU called virtualization, which allows it to run virtual machines (VMs). Make sure you have it enabled! Sometimes this is disabled. To check, on Windows 8 or higher you can open the **Task Manager** (press CTRL+SHIFT+ESC) and switch to the **Performance** tab."
 msgstr ""
 
+#: ../../../installation.rst:None
+msgid "Image of checking virtualization in Windows 8 or higher"
+msgstr ""
+
 #: ../../../installation.rst:94
 msgid "*Virtualization should be enabled*"
 msgstr ""
@@ -139,6 +167,10 @@ msgstr ""
 
 #: ../../../installation.rst:99
 msgid "If virtualization is disabled, you’ll need to enable it. The procedure unfortunately is a bit different for each computer model, so the best way to do this is to look up on a search engine “how to enable vtx for <type your computer model here>”. Often times it’s a matter of restarting the computer, immediately pressing F2 or F12 during startup, navigating the boot menu and changing the settings to enable virtualization (often called “VT-X”)."
+msgstr ""
+
+#: ../../../installation.rst:None
+msgid "Table of different bios keys"
 msgstr ""
 
 #: ../../../installation.rst:105
@@ -164,6 +196,10 @@ msgstr ""
 
 #: ../../../installation.rst:115
 msgid "For Python 3, make sure you check **Add Python 3.x to PATH** during the installation."
+msgstr ""
+
+#: ../../../installation.rst:None
+msgid "Screenshot of Python3 installation process"
 msgstr ""
 
 #: ../../../installation.rst:121
@@ -223,6 +259,10 @@ msgstr ""
 msgid "Move the **Base Memory** slider from the **System** panel and allocate 60-70% of all available memory, optionally adding 50% of the available processors from the **Processor** tab also"
 msgstr ""
 
+#: ../../../installation.rst:None
+msgid "Screenshot of VirtualBox Settings"
+msgstr ""
+
 #: ../../../installation.rst:151
 msgid "*VirtualBox default VM settings*"
 msgstr ""
@@ -251,8 +291,16 @@ msgstr ""
 msgid "Press **Apply**."
 msgstr ""
 
+#: ../../../installation.rst:None
+msgid "Screenshot of Docker Icon"
+msgstr ""
+
 #: ../../../installation.rst:166
 msgid "*Step 1 Docker icon*"
+msgstr ""
+
+#: ../../../installation.rst:None
+msgid "Screenshot of Docker Settings"
 msgstr ""
 
 #: ../../../installation.rst:172
@@ -283,12 +331,20 @@ msgstr ""
 msgid "Press **Clone**"
 msgstr ""
 
+#: ../../../installation.rst:None
+msgid "Screenshot of Git Gui"
+msgstr ""
+
 #: ../../../installation.rst:188
 msgid "*Git Gui*"
 msgstr ""
 
 #: ../../../installation.rst:190
 msgid "If the download succeeded, you should now see this window:"
+msgstr ""
+
+#: ../../../installation.rst:None
+msgid "Screenshot of Git Gui after successful download"
 msgstr ""
 
 #: ../../../installation.rst:196
@@ -309,6 +365,10 @@ msgstr ""
 
 #: ../../../installation.rst:209
 msgid "Several components will download to your machine at this point, including WebODM, NodeODM and ODM. After the download you should be greeted by the following screen:"
+msgstr ""
+
+#: ../../../installation.rst:None
+msgid "Screenshot of after successfully downloading WebODM"
 msgstr ""
 
 #: ../../../installation.rst:215
@@ -371,6 +431,10 @@ msgstr ""
 msgid "After installing docker you should find an icon that looks like a whale in the task bar."
 msgstr ""
 
+#: ../../../installation.rst:None
+msgid "Screenshot of Docker whale"
+msgstr ""
+
 #: ../../../installation.rst:270
 msgid "*Docker app running*"
 msgstr ""
@@ -413,6 +477,10 @@ msgstr ""
 
 #: ../../../installation.rst:306
 msgid "Press **Apply & Restart**"
+msgstr ""
+
+#: ../../../installation.rst:None
+msgid "Screenshot of Docker advanced settings"
 msgstr ""
 
 #: ../../../installation.rst:312
@@ -551,6 +619,10 @@ msgstr ""
 msgid "After running ./webodm.sh start and opening WebODM in the browser, you will be greeted with a welcome message and will be asked to create the first user. Take some time to familiarize yourself with the web interface and explore its various menus."
 msgstr ""
 
+#: ../../../installation.rst:None
+msgid "Screenshot of WebODM Dashboard"
+msgstr ""
+
 #: ../../../installation.rst:479
 msgid "*WebODM Dashboard*"
 msgstr ""
@@ -561,6 +633,10 @@ msgstr ""
 
 #: ../../../installation.rst:483
 msgid "If you’ve made it this far, congratulations! Now it’s time to start processing some data."
+msgstr ""
+
+#: ../../../installation.rst:None
+msgid "Image of celebratory dance"
 msgstr ""
 
 #: ../../../installation.rst:490

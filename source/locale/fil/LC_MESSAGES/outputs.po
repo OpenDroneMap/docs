@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-09 09:50-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
@@ -43,6 +43,10 @@ msgid ""
 msgstr ""
 "`odm_georeferencing/odm_georeferenced_model.ply/laz/csv`` -- Ang "
 "georeferenced point cloud sa iba't-ibang file format"
+
+#: ../../../outputs.rstNone
+msgid "image of OpenDroneMap derived point cloud"
+msgstr ""
 
 #: ../../../outputs.rst:15
 msgid ""
@@ -76,6 +80,10 @@ msgstr ""
 "Meshlab at piliin ang File:Import Mesh at piliin ang textured mesh mula sa "
 "lokasyon  tulad ng mga sumusunod: ``odm_texturing\\odm_textured_model.obj``"
 
+#: ../../../outputs.rstNone
+msgid "image of OpenDroneMap derived textured mesh"
+msgstr ""
+
 #: ../../../outputs.rst:30
 msgid ""
 "*Textured mesh courtesy of* `OpenDroneMap "
@@ -100,6 +108,10 @@ msgstr ""
 msgid ""
 "``odm_orthophoto/odm_orthphoto.original.tif`` -- The orthophoto in its "
 "original un-cropped state."
+msgstr ""
+
+#: ../../../outputs.rstNone
+msgid "image of OpenDroneMap orthophoto"
 msgstr ""
 
 #: ../../../outputs.rst:43
@@ -137,6 +149,10 @@ msgstr "``odm_dem/dtm.tif``"
 #: ../../../outputs.rst:53
 msgid "``odm_dem/dsm.tif``"
 msgstr "``odm_dem/dsm.tif``"
+
+#: ../../../outputs.rstNone
+msgid "image of OpenDroneMap derived digital surface model"
+msgstr ""
 
 #: ../../../outputs.rst:59
 msgid ""

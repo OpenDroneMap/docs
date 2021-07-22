@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -36,6 +36,10 @@ msgstr ""
 msgid "Relative accuracy is independent of the location of the map in the world, so a map can have a high relative accuracy (in size and shape) but its position in the world can be shifted (Figure 1)."
 msgstr ""
 
+#: ../../../map-accuracy.rst:None
+msgid "Model showing high relative accuracy"
+msgstr ""
+
 #: ../../../map-accuracy.rst:18
 msgid "*Figure 1. Model showing high relative accuracy but misplaced according to its real world position*"
 msgstr ""
@@ -46,6 +50,10 @@ msgstr ""
 
 #: ../../../map-accuracy.rst:24
 msgid "Absolute accuracy is the accuracy of the reconstruction in relation to its true position on the planet (Pix4D 2019). Figure 2 shows a relative and absolute accurate model, as the points are correctly placed according to its real world position."
+msgstr ""
+
+#: ../../../map-accuracy.rst:None
+msgid "Model showing high absolute accuracy"
 msgstr ""
 
 #: ../../../map-accuracy.rst:30

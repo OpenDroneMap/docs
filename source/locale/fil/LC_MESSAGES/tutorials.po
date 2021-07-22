@@ -14,7 +14,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
@@ -37,6 +37,10 @@ msgstr ""
 #: ../../../tutorials.rst:11
 msgid "Creating High Quality Orthophotos"
 msgstr "Paglikha ng Mataas na Kalidad ng Orthophotos"
+
+#: ../../../tutorials.rstNone
+msgid "image of OpenDroneMap orthophoto"
+msgstr ""
 
 #: ../../../tutorials.rst:17
 msgid ""
@@ -123,6 +127,10 @@ msgstr ""
 "<https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609> ay nagpapakita "
 "kung paano mabawasan ang pagkabaluktot. "
 
+#: ../../../tutorials.rstNone ../../../tutorials.rstNone
+msgid "image of lens distortion effect on bowling of data"
+msgstr ""
+
 #: ../../../tutorials.rst:35
 msgid ""
 "*Bowling effect on point cloud over 13,000+ image dataset collected by World"
@@ -143,6 +151,10 @@ msgstr ""
 "pinakasimple ay ang mga sumusunod: lumipad ng dalawang pattern na "
 "pinaghihiwalay ng 20°, at sa halip na magkaroon ng isang nadir (tuwid at "
 "pababang pagturo) camera, gumamit ng isa na nakakiling sa harap ng 5°."
+
+#: ../../../tutorials.rstNone
+msgid "animation showing optimum"
+msgstr ""
 
 #: ../../../tutorials.rst:45
 msgid ""
@@ -189,6 +201,10 @@ msgstr ""
 " kakailanganin  ang 42% na magkakapatong at sidelap para sa isang katumbas "
 "na 70% na magkakapatong at sidelap."
 
+#: ../../../tutorials.rstNone
+msgid "animation showing experimental optimum"
+msgstr ""
+
 #: ../../../tutorials.rst:56
 msgid ""
 "Vertically separated flight lines also improve accuracy, but less so than a "
@@ -196,6 +212,12 @@ msgid ""
 msgstr ""
 "Ang mga magkakahiwalay na linya ng flight ay nagpapabuti din sa kawastuhan, "
 "ngunit mas kaunti kaysa sa isang kamera na pasulong na hinaharap ng 5°."
+
+#: ../../../tutorials.rstNone
+msgid ""
+"figure showing effect of vertically separated flight lines and forward "
+"facing cameras on improving self calibration"
+msgstr ""
 
 #: ../../../tutorials.rst:62
 msgid ""
@@ -219,6 +241,10 @@ msgstr ""
 "digital na modelo ng terrain, siguraduhing ipasa ang watawat --dtm. Upang "
 "lumikha ng isang digital na modelo ng ibabaw, siguraduhing ipasa ang watawat"
 " --dsm."
+
+#: ../../../tutorials.rstNone
+msgid "image of OpenDroneMap derived digital surface model"
+msgstr ""
 
 #: ../../../tutorials.rst:74
 msgid ""
@@ -378,6 +404,10 @@ msgid ""
 "highly accurate stockpile models."
 msgstr ""
 
+#: ../../../tutorials.rstNone
+msgid "a simple lawnmower flight pattern can produce accurate results"
+msgstr ""
+
 #: ../../../tutorials.rst:122
 msgid ""
 "Recommended overlap would be between 75% and 80% with a sidelap in the order"
@@ -469,6 +499,12 @@ msgid ""
 "base plane."
 msgstr ""
 
+#: ../../../tutorials.rstNone
+msgid ""
+"almost 50% of the material will be found in the first 20% of the stockpile "
+"height"
+msgstr ""
+
 #: ../../../tutorials.rst:165
 msgid ""
 "In WebODM Dashboard, clic on \"view map\" to start a 2D view of your "
@@ -481,16 +517,32 @@ msgid ""
 "button."
 msgstr ""
 
+#: ../../../tutorials.rstNone
+msgid "clic on the \"Measure volume, area and length\" button"
+msgstr ""
+
 #: ../../../tutorials.rst:173
 msgid "then clic on \"Create a new measurement\""
+msgstr ""
+
+#: ../../../tutorials.rstNone
+msgid "clic on \"Create a new measurement\""
 msgstr ""
 
 #: ../../../tutorials.rst:179
 msgid "Start placing the points to define the stockpile base plane"
 msgstr ""
 
+#: ../../../tutorials.rstNone
+msgid "Define the stockpile base plane"
+msgstr ""
+
 #: ../../../tutorials.rst:185
 msgid "Clic on \"Finish measurement\" to finish the process."
+msgstr ""
+
+#: ../../../tutorials.rstNone ../../../tutorials.rstNone
+msgid "Clic on \"Finish measurement\" to finish the process"
 msgstr ""
 
 #: ../../../tutorials.rst:191

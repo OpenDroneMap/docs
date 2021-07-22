@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-10-05 17:13+0000\n"
 "Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
 "MIME-Version: 1.0\n"
@@ -35,6 +35,18 @@ msgid ""
 "dimension as the target image you want to mask (you can use a program such "
 "as GIMP to do this). Color in black the areas to exclude from the "
 "reconstruction."
+msgstr ""
+
+#: ../../../masks.rstNone
+msgid "Target image"
+msgstr ""
+
+#: ../../../masks.rstNone
+msgid "Image mask"
+msgstr ""
+
+#: ../../../masks.rstNone
+msgid "3D result (building is masked)"
 msgstr ""
 
 #: ../../../masks.rst:22

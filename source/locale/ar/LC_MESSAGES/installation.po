@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Arabic (https://www.transifex.com/americanredcross/teams/111882/ar/)\n"
@@ -48,6 +48,10 @@ msgstr ""
 "التطبيقات المختلفة لمعالجة البيانات الجوية وتحليلها وعرضها. يتكون هذا النظام"
 " البيئي من عدة مكونات:"
 
+#: ../../../installation.rstNone
+msgid "ODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:14
 msgid ""
 "**ODM** is the processing engine, which can be used from the command line. "
@@ -58,6 +62,10 @@ msgstr ""
 "كمدخلات وينتج مجموعة متنوعة من المخرجات ، بما في ذلك الغيوم النقطية ، "
 "والنماذج ثلاثية الأبعاد والصور التقويمية"
 
+#: ../../../installation.rstNone
+msgid "NodeODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:20
 msgid ""
 "**NodeODM** is a light-weight API built on top of ODM. It allows users and "
@@ -65,6 +73,10 @@ msgid ""
 msgstr ""
 "** NodeODM ** عبارة عن واجهة برمجة تطبيقات خفيفة الوزن مبنية على أعلى ODM. "
 "يسمح للمستخدمين والتطبيقات للوصول إلى وظائف ODM عبر شبكة الكمبيوتر"
+
+#: ../../../installation.rstNone
+msgid "WebODM Logo"
+msgstr ""
 
 #: ../../../installation.rst:26
 msgid ""
@@ -76,6 +88,10 @@ msgstr ""
 "ثلاثي الأبعاد وتسجيلات دخول المستخدمين ونظامًا إضافيًا والعديد من الميزات "
 "الأخرى المتوقعة من منصات رسم الخرائط الحديثة بطائرات بدون طيار"
 
+#: ../../../installation.rstNone
+msgid "CloudODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:32
 msgid ""
 "**CloudODM** is a small command line client to communicate with ODM via the "
@@ -84,6 +100,10 @@ msgstr ""
 "** CloudODM ** هو عميل سطر أوامر صغير للتواصل مع ODM عبر واجهة برمجة تطبيقات"
 " NodeODM"
 
+#: ../../../installation.rstNone
+msgid "PyODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:38
 msgid ""
 "**PyODM** is a Python SDK for creating tasks via the NodeODM API. We cover "
@@ -91,6 +111,10 @@ msgid ""
 msgstr ""
 "** PyODM ** هي Python SDK لإنشاء المهام عبر واجهة برمجة تطبيقات NodeODM. "
 "نغطيها بمزيد من التفصيل في فصل \"المعالجة الآلية باستخدام Python\""
+
+#: ../../../installation.rstNone
+msgid "ClusterODM Logo"
+msgstr ""
 
 #: ../../../installation.rst:44
 msgid ""
@@ -245,6 +269,10 @@ msgstr ""
 "**Task Manager** (اضغط CTRL + SHIFT + ESC) والتبديل إلى علامة التبويب علامة "
 "التبويب **الأداء**."
 
+#: ../../../installation.rstNone
+msgid "Image of checking virtualization in Windows 8 or higher"
+msgstr ""
+
 #: ../../../installation.rst:94
 msgid "*Virtualization should be enabled*"
 msgstr "* يجب تمكين المحاكاة الافتراضية *"
@@ -274,6 +302,10 @@ msgstr ""
 " غالبًا ما يكون الأمر يتعلق بإعادة تشغيل الكمبيوتر ، والضغط على الفور على F2"
 " أو F12 أثناء بدء التشغيل ، والتنقل في قائمة التمهيد وتغيير الإعدادات لتمكين"
 " التمثيل الافتراضي (غالبًا ما يسمى \"VT-X\")"
+
+#: ../../../installation.rstNone
+msgid "Table of different bios keys"
+msgstr ""
 
 #: ../../../installation.rst:105
 msgid ""
@@ -306,6 +338,10 @@ msgid ""
 msgstr ""
 "بالنسبة إلى Python 3 ، تأكد من تحديد ** إضافة Python 3.x إلى PATH ** أثناء "
 "التثبيت."
+
+#: ../../../installation.rstNone
+msgid "Screenshot of Python3 installation process"
+msgstr ""
 
 #: ../../../installation.rst:121
 msgid ""
@@ -414,6 +450,10 @@ msgid ""
 "processors from the **Processor** tab also"
 msgstr ""
 
+#: ../../../installation.rstNone
+msgid "Screenshot of VirtualBox Settings"
+msgstr ""
+
 #: ../../../installation.rst:151
 msgid "*VirtualBox default VM settings*"
 msgstr "*إعدادات VirtualBox الافتراضية VM*"
@@ -448,9 +488,17 @@ msgstr ""
 msgid "Press **Apply**."
 msgstr "اضغط **تطبيق**."
 
+#: ../../../installation.rstNone
+msgid "Screenshot of Docker Icon"
+msgstr ""
+
 #: ../../../installation.rst:166
 msgid "*Step 1 Docker icon*"
 msgstr "* أيقونة الخطوة 1 عامل الميناء *"
+
+#: ../../../installation.rstNone
+msgid "Screenshot of Docker Settings"
+msgstr ""
 
 #: ../../../installation.rst:172
 msgid "*Step 3 & 4 Docker settings*"
@@ -485,6 +533,10 @@ msgstr ""
 msgid "Press **Clone**"
 msgstr "اضغط ** استنساخ **"
 
+#: ../../../installation.rstNone
+msgid "Screenshot of Git Gui"
+msgstr ""
+
 #: ../../../installation.rst:188
 msgid "*Git Gui*"
 msgstr "*Git Gui*"
@@ -492,6 +544,10 @@ msgstr "*Git Gui*"
 #: ../../../installation.rst:190
 msgid "If the download succeeded, you should now see this window:"
 msgstr "إذا نجح التنزيل ، فمن المفترض أن ترى هذه النافذة الآن:"
+
+#: ../../../installation.rstNone
+msgid "Screenshot of Git Gui after successful download"
+msgstr ""
 
 #: ../../../installation.rst:196
 msgid "*Git Gui after successful download (clone)*"
@@ -525,6 +581,10 @@ msgid ""
 msgstr ""
 "سيتم تنزيل العديد من المكونات على جهازك في هذه المرحلة ، بما في ذلك WebODM و"
 " NodeODM و ODM. بعد التنزيل ، يجب أن تستقبل الشاشة التالية:"
+
+#: ../../../installation.rstNone
+msgid "Screenshot of after successfully downloading WebODM"
+msgstr ""
 
 #: ../../../installation.rst:215
 msgid "*Console output after starting WebODM for the first time*"
@@ -612,6 +672,10 @@ msgid ""
 "the task bar."
 msgstr "بعد تثبيت عامل الميناء ، يجب أن تجد رمزًا يشبه الحوت في شريط المهام."
 
+#: ../../../installation.rstNone
+msgid "Screenshot of Docker whale"
+msgstr ""
+
 #: ../../../installation.rst:270
 msgid "*Docker app running*"
 msgstr "*تطبيق Docker قيد التشغيل*"
@@ -676,6 +740,10 @@ msgstr ""
 #: ../../../installation.rst:306
 msgid "Press **Apply & Restart**"
 msgstr "اضغط **التقديم وإعادة التشغيل**"
+
+#: ../../../installation.rstNone
+msgid "Screenshot of Docker advanced settings"
+msgstr ""
 
 #: ../../../installation.rst:312
 msgid "*Docker advanced settings*"
@@ -866,6 +934,10 @@ msgstr ""
 "ترحيب وسيطلب منك إنشاء المستخدم الأول. خصص بعض الوقت للتعرف على واجهة الويب "
 "واستكشاف قوائمها المختلفة."
 
+#: ../../../installation.rstNone
+msgid "Screenshot of WebODM Dashboard"
+msgstr ""
+
 #: ../../../installation.rst:479
 msgid "*WebODM Dashboard*"
 msgstr "*لوحة تحكم WebODM*"
@@ -887,6 +959,10 @@ msgid ""
 "processing some data."
 msgstr ""
 "إذا وصلت إلى هذا الحد ، تهانينا! حان الوقت الآن لبدء معالجة بعض البيانات."
+
+#: ../../../installation.rstNone
+msgid "Image of celebratory dance"
+msgstr ""
 
 #: ../../../installation.rst:490
 msgid "Running on more than one machine"
