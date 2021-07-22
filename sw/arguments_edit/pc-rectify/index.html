@@ -1,0 +1,425 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="sw" >
+<head>
+  <meta charset="utf-8" />
+  
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  
+  <title>&lt;no title&gt; &mdash; OpenDroneMap 2.5.7 documentation</title>
+  
+
+  
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
+
+  
+  
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+  
+
+  
+  
+
+  
+
+  
+  <!--[if lt IE 9]>
+    <script src="../../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+    
+      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
+        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
+        <script src="../../_static/jquery.js"></script>
+        <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/doctools.js"></script>
+    
+    <script type="text/javascript" src="../../_static/js/theme.js"></script>
+
+    
+    <link rel="index" title="Index" href="../../genindex/" />
+    <link rel="search" title="Search" href="../../search/" /> 
+</head>
+
+<body class="wy-body-for-nav">
+
+   
+  <div class="wy-grid-for-nav">
+    
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+          
+
+          
+            <a href="../../" class="icon icon-home"> OpenDroneMap
+          
+
+          
+          </a>
+
+          
+            
+            
+              <div class="version">
+                2.5.7
+              </div>
+            
+          
+
+          
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+
+          
+        </div>
+
+        
+        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
+          
+            
+            
+              
+            
+            
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../../installation/">Kuingiza na kuanza kutumia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../installation/#hardware-recommendations">Sifa za Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../installation/#installation">Uingizaji</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../installation/#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../installation/#step-1-check-virtualization-support">Jia ya 1. Angalia msaada wa uvumbuzi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../installation/#step-2-install-requirements">Njia ya 2. Ingiza Vinavyohitajika</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../installation/#step-3-check-memory-and-cpu-allocation">Njia ya 3. Angalia nafasi na mgao wa CPU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../installation/#step-4-download-webodm">Njia ya 4. Pakua WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../installation/#step-4-launch-webodm">Njia ya 4. Zindua WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../installation/#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../installation/#id1">Jia ya 1. Angalia msaada wa uvumbuzi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../installation/#id2">Njia ya 2. Ingiza Vinavyohitajika</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../installation/#id3">Njia ya 3. Angalia nafasi na mgao wa CPU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../installation/#step-4-download-and-launch-webodm">Njia ya 4. Pakua na fungua WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../../installation/#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../installation/#step-1-install-requirements">Hatua 1. Mahitaji ya kuingiza</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../installation/#step-2-check-additional-requirements">Njia ya 2. Angalia Mahitaji ya Ziada</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../installation/#step-3-download-and-launch-webodm">Njia ya 3. Pakua na zindua WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../installation/#basic-commands-and-troubleshooting">Camand za msingi na utatuzi shida</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../installation/#hello-webodm">Habari, WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../installation/#running-on-more-than-one-machine">Kuendesha mashine zaidi ya moja</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../../tutorials/">Somo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/#creating-high-quality-orthophotos">Tengeneza Orthophotos ya kitaalamu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/#calibrating-the-camera">Kurekebisha Camera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/#creating-digital-elevation-models">Kutengeneza Digital Elevation Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/#using-docker">Kutumia Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/#listing-docker-machines">Kutumia Docker mashine</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/#accessing-logs-on-the-instance">Tumia logs kwenye instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/#command-line-access-to-instances">Matumizy ya camand line kwa mifano</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/#cleaning-up-after-docker">Safisha juu baada ya Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../tutorials/#using-odm-from-low-bandwidth-location">Tumia ODM kutoka eneo lenye  low-bandwidth</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/#what-is-this-and-who-is-it-for">Nini hiki na kwa nani</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../tutorials/#steps">Njia</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/#install">Kuingiza</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/#prep-data-and-project">Kuandaa data na project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/#resize-droplet-pull-pin-run-away">Kubadilisha droplet, kuvuta pini, pekua</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../tutorials/#after-it-finishes-assuming-you-survive-that-long">Baada kumaliza (kisia utachukua mda mkubwa)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../arguments/">Chagizi na Bendera</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/build-overviews/">build-overviews</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/camera-lens/">camera-lens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/cameras/">cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/cog/">cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/copy-to/">copy-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/crop/">crop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/debug/">debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/dem-decimation/">dem-decimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/dem-euclidean-map/">dem-euclidean-map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/dem-gapfill-steps/">dem-gapfill-steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/dem-resolution/">dem-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/depthmap-resolution/">depthmap-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/dsm/">dsm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/dtm/">dtm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/end-with/">end-with</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/fast-orthophoto/">fast-orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/feature-quality/">feature-quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/feature-type/">feature-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/force-gps/">force-gps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/gcp/">gcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/geo/">geo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/gps-accuracy/">gps-accuracy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/help/">help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/ignore-gsd/">ignore-gsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/matcher-distance/">matcher-distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/matcher-neighbors/">matcher-neighbors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/matcher-type/">matcher-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/max-concurrency/">max-concurrency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/merge/">merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/mesh-octree-depth/">mesh-octree-depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/mesh-size/">mesh-size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/min-num-features/">min-num-features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/name/">name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/optimize-disk-space/">optimize-disk-space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/orthophoto-compression/">orthophoto-compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/orthophoto-cutline/">orthophoto-cutline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/orthophoto-kmz/">orthophoto-kmz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/orthophoto-no-tiled/">orthophoto-no-tiled</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/orthophoto-png/">orthophoto-png</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/orthophoto-resolution/">orthophoto-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/pc-classify/">pc-classify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/pc-csv/">pc-csv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/pc-ept/">pc-ept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/pc-filter/">pc-filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/pc-geometric/">pc-geometric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/pc-las/">pc-las</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/pc-quality/">pc-quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/pc-rectify/">pc-rectify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/pc-sample/">pc-sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/pc-tile/">pc-tile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/primary-band/">primary-band</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/project-path/">project-path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/radiometric-calibration/">radiometric-calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/rerun/">rerun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/rerun-all/">rerun-all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/rerun-from/">rerun-from</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/resize-to/">resize-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/skip-3dmodel/">skip-3dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/skip-band-alignment/">skip-band-alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/skip-report/">skip-report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/sm-cluster/">sm-cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/smrf-scalar/">smrf-scalar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/smrf-slope/">smrf-slope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/smrf-threshold/">smrf-threshold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/smrf-window/">smrf-window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/split/">split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/split-image-groups/">split-image-groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/split-overlap/">split-overlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/texturing-data-term/">texturing-data-term</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/texturing-keep-unseen-faces/">texturing-keep-unseen-faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/texturing-outlier-removal-type/">texturing-outlier-removal-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/texturing-skip-global-seam-leveling/">texturing-skip-global-seam-leveling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/texturing-skip-local-seam-leveling/">texturing-skip-local-seam-leveling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/texturing-tone-mapping/">texturing-tone-mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/tiles/">tiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/time/">time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/use-3dmesh/">use-3dmesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/use-exif/">use-exif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/use-fixed-camera-params/">use-fixed-camera-params</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/use-hybrid-bundle-adjustment/">use-hybrid-bundle-adjustment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/verbose/">verbose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/version/">version</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../outputs/">OpenDroneMap Matokeo</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../outputs/#point-cloud">Point Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../outputs/#d-textured-model">3D Textured Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../outputs/#orthophoto">Orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../outputs/#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../outputs/#list-of-all-outputs">Mpangilo wa matokeo yote</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../gcp/">Pointi za Udhibiti wa chini</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../gcp/#recommended-practices-for-gcp-setting">Recommended practices for GCP setting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gcp/#gcp-file-format">GCP file format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../gcp/#user-interfaces">interface ya mtumiaji</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../gcp/#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../gcp/#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../gcp/#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../map-accuracy/">Map accuracy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../map-accuracy/#what-to-expect">What to expect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../map-accuracy/#aspects-impacting-map-accuracy">Aspects impacting map accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../map-accuracy/#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../geo/">Image Geolocation Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../masks/">Using Image Masks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../large/">Kugawa Database Kubwa</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../large/#calibrate-images">Kurekebisha Picha</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../large/#local-split-merge">Split-Merge ya Ndani</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../large/#distributed-split-merge">Kugawanya Split-Merge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../large/#getting-started-with-distributed-split-merge">Kupata kuanza pamoja na kugawanya Split-Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../large/#understanding-the-cluster">Kufahamu Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../large/#accessing-the-logs">Kutumia Logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../large/#autoscaling-clusterodm">Kuongeza kiotomatiki ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../large/#limitations">Mipaka</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../large/#acknowledgments">Tunakiri</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../resources/">Kumbukumbu za ziada</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../resources/#for-users">Kwa watumiaji</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../resources/#for-developers">Kwa msanidi programu</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../flying/">Kidokeza cha kurusha ndege nyuki</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../multispectral/">Msaada wa Multispectral</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../multispectral/#hardware">Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../multispectral/#usage">Matumizi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../../requesting-features/">Vipi Utaomba Vipengele</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../../contributing/">Jinsi ya kushiriki</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/#community-forum">Jukwaa la kijamii</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/#reporting-bugs">Kuwasilisha Bugs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../contributing/#template-for-submitting-bug-reports">Kigezo kwa kuwasilisha maelezo ya bug</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../../contributing/#pull-requests">Tatua maombi</a></li>
+</ul>
+</li>
+</ul>
+
+            
+          
+        </div>
+        
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
+
+      
+      <nav class="wy-nav-top" aria-label="top navigation">
+        
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../../">OpenDroneMap</a>
+        
+      </nav>
+
+
+      <div class="wy-nav-content">
+        
+        <div class="rst-content">
+        
+          
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+<div role="navigation" aria-label="breadcrumbs navigation">
+
+  <ul class="wy-breadcrumbs">
+    
+      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
+        
+      <li>&lt;no title&gt;</li>
+    
+    
+      <li class="wy-breadcrumbs-aside">
+        
+          
+            <a href="../../_sources/arguments_edit/pc-rectify.rst.txt" rel="nofollow"> View page source</a>
+          
+        
+      </li>
+    
+  </ul>
+
+  
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+            
+  
+
+           </div>
+           
+          </div>
+          <footer>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>
+        &#169; Copyright 2020, OpenDroneMap.
+
+    </p>
+  </div>
+    
+    
+    
+    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    
+    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+
+</footer>
+        </div>
+      </div>
+
+    </section>
+
+  </div>
+  
+
+  <script type="text/javascript">
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script>
+
+  
+  
+    
+   
+
+</body>
+</html>

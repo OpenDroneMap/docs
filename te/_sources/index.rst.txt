@@ -42,7 +42,6 @@ The documentation is available in several languages. Some translations are incom
     :width: 60
 		
 .. toctree::
-
     tutorials
     arguments
     outputs
