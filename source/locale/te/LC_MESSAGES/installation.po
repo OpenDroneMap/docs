@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Language-Team: Telugu (https://www.transifex.com/americanredcross/teams/111882/te/)\n"
 "MIME-Version: 1.0\n"
@@ -36,6 +36,10 @@ msgid ""
 "aerial data. This ecosystem is made of several components:"
 msgstr ""
 
+#: ../../../installation.rstNone
+msgid "ODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:14
 msgid ""
 "**ODM** is the processing engine, which can be used from the command line. "
@@ -43,10 +47,18 @@ msgid ""
 "clouds, 3D models and orthophotos"
 msgstr ""
 
+#: ../../../installation.rstNone
+msgid "NodeODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:20
 msgid ""
 "**NodeODM** is a light-weight API built on top of ODM. It allows users and "
 "applications to access the functions of ODM over a computer network"
+msgstr ""
+
+#: ../../../installation.rstNone
+msgid "WebODM Logo"
 msgstr ""
 
 #: ../../../installation.rst:26
@@ -56,16 +68,28 @@ msgid ""
 "expected of modern drone mapping platforms"
 msgstr ""
 
+#: ../../../installation.rstNone
+msgid "CloudODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:32
 msgid ""
 "**CloudODM** is a small command line client to communicate with ODM via the "
 "NodeODM API"
 msgstr ""
 
+#: ../../../installation.rstNone
+msgid "PyODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:38
 msgid ""
 "**PyODM** is a Python SDK for creating tasks via the NodeODM API. We cover "
 "it in more detail in the “Automated Processing With Python” chapter"
+msgstr ""
+
+#: ../../../installation.rstNone
+msgid "ClusterODM Logo"
 msgstr ""
 
 #: ../../../installation.rst:44
@@ -186,6 +210,10 @@ msgid ""
 "Manager** (press CTRL+SHIFT+ESC) and switch to the **Performance** tab."
 msgstr ""
 
+#: ../../../installation.rstNone
+msgid "Image of checking virtualization in Windows 8 or higher"
+msgstr ""
+
 #: ../../../installation.rst:94
 msgid "*Virtualization should be enabled*"
 msgstr ""
@@ -205,6 +233,10 @@ msgid ""
 "computer model here>”. Often times it’s a matter of restarting the computer,"
 " immediately pressing F2 or F12 during startup, navigating the boot menu and"
 " changing the settings to enable virtualization (often called “VT-X”)."
+msgstr ""
+
+#: ../../../installation.rstNone
+msgid "Table of different bios keys"
 msgstr ""
 
 #: ../../../installation.rst:105
@@ -233,6 +265,10 @@ msgstr ""
 msgid ""
 "For Python 3, make sure you check **Add Python 3.x to PATH** during the "
 "installation."
+msgstr ""
+
+#: ../../../installation.rstNone
+msgid "Screenshot of Python3 installation process"
 msgstr ""
 
 #: ../../../installation.rst:121
@@ -318,6 +354,10 @@ msgid ""
 "processors from the **Processor** tab also"
 msgstr ""
 
+#: ../../../installation.rstNone
+msgid "Screenshot of VirtualBox Settings"
+msgstr ""
+
 #: ../../../installation.rst:151
 msgid "*VirtualBox default VM settings*"
 msgstr ""
@@ -348,8 +388,16 @@ msgstr ""
 msgid "Press **Apply**."
 msgstr ""
 
+#: ../../../installation.rstNone
+msgid "Screenshot of Docker Icon"
+msgstr ""
+
 #: ../../../installation.rst:166
 msgid "*Step 1 Docker icon*"
+msgstr ""
+
+#: ../../../installation.rstNone
+msgid "Screenshot of Docker Settings"
 msgstr ""
 
 #: ../../../installation.rst:172
@@ -383,12 +431,20 @@ msgstr ""
 msgid "Press **Clone**"
 msgstr ""
 
+#: ../../../installation.rstNone
+msgid "Screenshot of Git Gui"
+msgstr ""
+
 #: ../../../installation.rst:188
 msgid "*Git Gui*"
 msgstr ""
 
 #: ../../../installation.rst:190
 msgid "If the download succeeded, you should now see this window:"
+msgstr ""
+
+#: ../../../installation.rstNone
+msgid "Screenshot of Git Gui after successful download"
 msgstr ""
 
 #: ../../../installation.rst:196
@@ -416,6 +472,10 @@ msgid ""
 "Several components will download to your machine at this point, including "
 "WebODM, NodeODM and ODM. After the download you should be greeted by the "
 "following screen:"
+msgstr ""
+
+#: ../../../installation.rstNone
+msgid "Screenshot of after successfully downloading WebODM"
 msgstr ""
 
 #: ../../../installation.rst:215
@@ -493,6 +553,10 @@ msgid ""
 "the task bar."
 msgstr ""
 
+#: ../../../installation.rstNone
+msgid "Screenshot of Docker whale"
+msgstr ""
+
 #: ../../../installation.rst:270
 msgid "*Docker app running*"
 msgstr ""
@@ -545,6 +609,10 @@ msgstr ""
 
 #: ../../../installation.rst:306
 msgid "Press **Apply & Restart**"
+msgstr ""
+
+#: ../../../installation.rstNone
+msgid "Screenshot of Docker advanced settings"
 msgstr ""
 
 #: ../../../installation.rst:312
@@ -710,6 +778,10 @@ msgid ""
 "explore its various menus."
 msgstr ""
 
+#: ../../../installation.rstNone
+msgid "Screenshot of WebODM Dashboard"
+msgstr ""
+
 #: ../../../installation.rst:479
 msgid "*WebODM Dashboard*"
 msgstr ""
@@ -726,6 +798,10 @@ msgstr ""
 msgid ""
 "If you’ve made it this far, congratulations! Now it’s time to start "
 "processing some data."
+msgstr ""
+
+#: ../../../installation.rstNone
+msgid "Image of celebratory dance"
 msgstr ""
 
 #: ../../../installation.rst:490

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
@@ -80,6 +80,10 @@ msgstr ""
 "de la imagen podría causar un efecto de tazón en los modelos. Las "
 "instrucciones de calibración se pueden encontrar en calibración de imágenes "
 "`Calibrate Images <tutorials.html#calibrating-the-camera>`_."
+
+#: ../../../large.rstNone ../../../large.rstNone
+msgid "image of lens distortion effect on bowling of data"
+msgstr ""
 
 #: ../../../large.rst:21
 msgid ""

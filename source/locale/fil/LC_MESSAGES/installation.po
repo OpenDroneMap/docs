@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020\n"
 "Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
@@ -49,6 +49,10 @@ msgstr ""
 " ma-proseso, ma-suri at makita ang aerial data. ang ekosistem na ito ay "
 "ginawa para sa iilang  component:"
 
+#: ../../../installation.rstNone
+msgid "ODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:14
 msgid ""
 "**ODM** is the processing engine, which can be used from the command line. "
@@ -59,6 +63,10 @@ msgstr ""
 "Tinatanggap nito ang mga imahe bilang input at nagpo-produce ng iba't-ibang "
 "outputs katulad ng point clouds, 3D models at orthophotos."
 
+#: ../../../installation.rstNone
+msgid "NodeODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:20
 msgid ""
 "**NodeODM** is a light-weight API built on top of ODM. It allows users and "
@@ -67,6 +75,10 @@ msgstr ""
 "Ang **NodeODM** ay isang light-weight API na nasa taas ng ODM. Ina-allow "
 "nito ang gumagamit ng aplikasyon na ma-access ang mga functions ng ODM sa "
 "computer network."
+
+#: ../../../installation.rstNone
+msgid "WebODM Logo"
+msgstr ""
 
 #: ../../../installation.rst:26
 msgid ""
@@ -78,6 +90,10 @@ msgstr ""
 "viewer, 3D viewer, user logins, plugin system at marami pang iba na ine-"
 "expect sa modern drone mapping platforms."
 
+#: ../../../installation.rstNone
+msgid "CloudODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:32
 msgid ""
 "**CloudODM** is a small command line client to communicate with ODM via the "
@@ -86,6 +102,10 @@ msgstr ""
 "Ang **CloudODM** ay isang maliit na command line client na nagcocommunicate "
 "sa ODM via NodeODM API"
 
+#: ../../../installation.rstNone
+msgid "PyODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:38
 msgid ""
 "**PyODM** is a Python SDK for creating tasks via the NodeODM API. We cover "
@@ -93,6 +113,10 @@ msgid ""
 msgstr ""
 "Ang **PyODM** ay Python SDK na gumagawa ng tasks via NodeODM API. Mababasa "
 "ang detalye sa “Automated Processing With Python” na chapter"
+
+#: ../../../installation.rstNone
+msgid "ClusterODM Logo"
+msgstr ""
 
 #: ../../../installation.rst:44
 msgid ""
@@ -255,6 +279,10 @@ msgstr ""
 "Windows 8 o mas mataas na bersiyon, buksan ang **Task Manager** (press "
 "CTRL+SHIFT+ESC) at i-switch sa **Performance** tab."
 
+#: ../../../installation.rstNone
+msgid "Image of checking virtualization in Windows 8 or higher"
+msgstr ""
+
 #: ../../../installation.rst:94
 msgid "*Virtualization should be enabled*"
 msgstr "*Virtualization should be enabled*"
@@ -282,6 +310,10 @@ msgstr ""
 "ng F2 o F12 habang start-up, ang pag-navigate ng boot menu at pagpalit ng "
 "settings para mapahintulot ang virtualization (madals na tinatawag na "
 "“VT-X”)."
+
+#: ../../../installation.rstNone
+msgid "Table of different bios keys"
+msgstr ""
 
 #: ../../../installation.rst:105
 msgid ""
@@ -314,6 +346,10 @@ msgid ""
 msgstr ""
 "Para sa Python 3, siguraduhin na i-check ang **Add Python 3.x to PATH** "
 "habang iniinstall."
+
+#: ../../../installation.rstNone
+msgid "Screenshot of Python3 installation process"
+msgstr ""
 
 #: ../../../installation.rst:121
 msgid ""
@@ -423,6 +459,10 @@ msgid ""
 "processors from the **Processor** tab also"
 msgstr ""
 
+#: ../../../installation.rstNone
+msgid "Screenshot of VirtualBox Settings"
+msgstr ""
+
 #: ../../../installation.rst:151
 msgid "*VirtualBox default VM settings*"
 msgstr "*VirtualBox default VM settings*"
@@ -457,9 +497,17 @@ msgstr ""
 msgid "Press **Apply**."
 msgstr "Pindutin ang **Apply**."
 
+#: ../../../installation.rstNone
+msgid "Screenshot of Docker Icon"
+msgstr ""
+
 #: ../../../installation.rst:166
 msgid "*Step 1 Docker icon*"
 msgstr "*Step 1 Docker icon*"
+
+#: ../../../installation.rstNone
+msgid "Screenshot of Docker Settings"
+msgstr ""
 
 #: ../../../installation.rst:172
 msgid "*Step 3 & 4 Docker settings*"
@@ -498,6 +546,10 @@ msgstr ""
 msgid "Press **Clone**"
 msgstr "Pindutin ang **Clone**"
 
+#: ../../../installation.rstNone
+msgid "Screenshot of Git Gui"
+msgstr ""
+
 #: ../../../installation.rst:188
 msgid "*Git Gui*"
 msgstr "*Git Gui*"
@@ -505,6 +557,10 @@ msgstr "*Git Gui*"
 #: ../../../installation.rst:190
 msgid "If the download succeeded, you should now see this window:"
 msgstr "Kung ang pagda-download ay successful, makikita ang window na ito:"
+
+#: ../../../installation.rstNone
+msgid "Screenshot of Git Gui after successful download"
+msgstr ""
 
 #: ../../../installation.rst:196
 msgid "*Git Gui after successful download (clone)*"
@@ -540,6 +596,10 @@ msgstr ""
 "Iba't ibang components na ang nadownload dapat ng iyong computer sa point na"
 " ito. Kasama na rito ang WebODM, NodeODM at ODM. Matapos ang pagda-download,"
 " ikaw ay babatiin ng mga sumusunod na mensahe sa screen:"
+
+#: ../../../installation.rstNone
+msgid "Screenshot of after successfully downloading WebODM"
+msgstr ""
 
 #: ../../../installation.rst:215
 msgid "*Console output after starting WebODM for the first time*"
@@ -632,6 +692,10 @@ msgstr ""
 "Matapoa i-install ang docker, makikita ang simbolo na mukang balyena sa task"
 " bar."
 
+#: ../../../installation.rstNone
+msgid "Screenshot of Docker whale"
+msgstr ""
+
 #: ../../../installation.rst:270
 msgid "*Docker app running*"
 msgstr "*Ang Docker app ay tumatakbo*"
@@ -696,6 +760,10 @@ msgstr ""
 #: ../../../installation.rst:306
 msgid "Press **Apply & Restart**"
 msgstr "Pindutin ang *Apply & Restart**"
+
+#: ../../../installation.rstNone
+msgid "Screenshot of Docker advanced settings"
+msgstr ""
 
 #: ../../../installation.rst:312
 msgid "*Docker advanced settings*"
@@ -891,6 +959,10 @@ msgstr ""
 "first user. Bigyang oras at pagsanayan ang web interface at i-explore ang "
 "various menus."
 
+#: ../../../installation.rstNone
+msgid "Screenshot of WebODM Dashboard"
+msgstr ""
+
 #: ../../../installation.rst:479
 msgid "*WebODM Dashboard*"
 msgstr "*WebODM Dashboard*"
@@ -913,6 +985,10 @@ msgid ""
 msgstr ""
 "Kung umabot ka na sa ganito kalayo, congratulations! Oras na para simulan "
 "ang pagprocess ng mga data."
+
+#: ../../../installation.rstNone
+msgid "Image of celebratory dance"
+msgstr ""
 
 #: ../../../installation.rst:490
 msgid "Running on more than one machine"

@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-09 09:50-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -121,7 +121,7 @@ msgid ":ref:`dsm<dsm>`"
 msgstr ""
 
 #: ../../../arguments.rst:41
-msgid "Use this tag to build a DSM (Digital Surface Model, ground + objects) using a progressive morphological filter. Check the --dem* parameters for finer tuning. Default: ``False``"
+msgid "Use this tag to build a DSM (Digital Surface Model, ground + objects) using a progressive morphological filter. Check the --dem\\* parameters for finer tuning. Default: ``False``"
 msgstr ""
 
 #: ../../../arguments.rst:44
@@ -129,7 +129,7 @@ msgid ":ref:`dtm<dtm>`"
 msgstr ""
 
 #: ../../../arguments.rst:44
-msgid "Use this tag to build a DTM (Digital Terrain Model, ground only) using a simple morphological filter. Check the --dem* and --smrf* parameters for finer tuning. Default: ``False``"
+msgid "Use this tag to build a DTM (Digital Terrain Model, ground only) using a simple morphological filter. Check the --dem\\* and --smrf\\* parameters for finer tuning. Default: ``False``"
 msgstr ""
 
 #: ../../../arguments.rst:47
@@ -345,7 +345,7 @@ msgid ":ref:`pc-classify<pc-classify>`"
 msgstr ""
 
 #: ../../../arguments.rst:125
-msgid "Classify the point cloud outputs using a Simple Morphological Filter. You can control the behavior of this option by tweaking the --dem-* parameters. Default: ``False``"
+msgid "Classify the point cloud outputs using a Simple Morphological Filter. You can control the behavior of this option by tweaking the --dem-\\* parameters. Default: ``False``"
 msgstr ""
 
 #: ../../../arguments.rst:128

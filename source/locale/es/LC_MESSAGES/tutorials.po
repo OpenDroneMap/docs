@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
@@ -34,6 +34,10 @@ msgstr ""
 #: ../../../tutorials.rst:11
 msgid "Creating High Quality Orthophotos"
 msgstr "Creación de Ortofotos de Alta Calidad"
+
+#: ../../../tutorials.rstNone
+msgid "image of OpenDroneMap orthophoto"
+msgstr ""
 
 #: ../../../tutorials.rst:17
 msgid ""
@@ -117,6 +121,10 @@ msgstr ""
 "image networks <https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609>`_"
 "  abordan cómo para minimizar la distorsión de la autocalibración."
 
+#: ../../../tutorials.rstNone ../../../tutorials.rstNone
+msgid "image of lens distortion effect on bowling of data"
+msgstr ""
+
 #: ../../../tutorials.rst:35
 msgid ""
 "*Bowling effect on point cloud over 13,000+ image dataset collected by World"
@@ -137,6 +145,10 @@ msgstr ""
 " siguientes: vuele dos patrones separados por 20 °, y en lugar de tener una "
 "cámara nadir (apuntando hacia abajo), use una que se incline hacia adelante "
 "en 5 °."
+
+#: ../../../tutorials.rstNone
+msgid "animation showing optimum"
+msgstr ""
 
 #: ../../../tutorials.rst:45
 msgid ""
@@ -182,6 +194,10 @@ msgstr ""
 "necesitará un 42% de superposición y superposición lateral para una "
 "superposición y superposición lateral equivalente del 70%."
 
+#: ../../../tutorials.rstNone
+msgid "animation showing experimental optimum"
+msgstr ""
+
 #: ../../../tutorials.rst:56
 msgid ""
 "Vertically separated flight lines also improve accuracy, but less so than a "
@@ -189,6 +205,12 @@ msgid ""
 msgstr ""
 "Las líneas de vuelo separadas verticalmente también mejoran la precisión, "
 "pero menos que una cámara que mira hacia adelante en 5 °."
+
+#: ../../../tutorials.rstNone
+msgid ""
+"figure showing effect of vertically separated flight lines and forward "
+"facing cameras on improving self calibration"
+msgstr ""
 
 #: ../../../tutorials.rst:62
 msgid ""
@@ -211,6 +233,10 @@ msgstr ""
 "Por defecto, ODM no crea DEMs. Para crear un modelo digital de terreno, "
 "asegúrese de utilizar la marca ``--dtm``. Para crear un modelo digital de "
 "superficie, asegúrese de pasar la marca ``--dsm``."
+
+#: ../../../tutorials.rstNone
+msgid "image of OpenDroneMap derived digital surface model"
+msgstr ""
 
 #: ../../../tutorials.rst:74
 msgid ""
@@ -396,6 +422,10 @@ msgstr ""
 "En la mayoría de los casos, un patrón de vuelo paralelo como una podadora, "
 "es capaz de producir modelos de pilas de alta precisión."
 
+#: ../../../tutorials.rstNone
+msgid "a simple lawnmower flight pattern can produce accurate results"
+msgstr ""
+
 #: ../../../tutorials.rst:122
 msgid ""
 "Recommended overlap would be between 75% and 80% with a sidelap in the order"
@@ -519,6 +549,12 @@ msgstr ""
 "la pila, se debe tener especial cuidado en definir adecuadamente el plano de"
 " la base."
 
+#: ../../../tutorials.rstNone
+msgid ""
+"almost 50% of the material will be found in the first 20% of the stockpile "
+"height"
+msgstr ""
+
 #: ../../../tutorials.rst:165
 msgid ""
 "In WebODM Dashboard, clic on \"view map\" to start a 2D view of your "
@@ -535,18 +571,34 @@ msgstr ""
 "Una vez en la vista de mapa 2D, haga clic en el botón \"Medir volumen, área "
 "y distancia\"."
 
+#: ../../../tutorials.rstNone
+msgid "clic on the \"Measure volume, area and length\" button"
+msgstr ""
+
 #: ../../../tutorials.rst:173
 msgid "then clic on \"Create a new measurement\""
 msgstr "luego haga clic en \"Crear una nueva medición\""
+
+#: ../../../tutorials.rstNone
+msgid "clic on \"Create a new measurement\""
+msgstr ""
 
 #: ../../../tutorials.rst:179
 msgid "Start placing the points to define the stockpile base plane"
 msgstr ""
 "Empiece a colocar los puntos para definir el plano de la base de la pila"
 
+#: ../../../tutorials.rstNone
+msgid "Define the stockpile base plane"
+msgstr ""
+
 #: ../../../tutorials.rst:185
 msgid "Clic on \"Finish measurement\" to finish the process."
 msgstr "Haga clic en \"Finalizar medición\" para finalizar el proceso."
+
+#: ../../../tutorials.rstNone ../../../tutorials.rstNone
+msgid "Clic on \"Finish measurement\" to finish the process"
+msgstr ""
 
 #: ../../../tutorials.rst:191
 msgid ""

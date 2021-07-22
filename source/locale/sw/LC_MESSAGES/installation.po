@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
@@ -49,6 +49,10 @@ msgstr ""
 "imekua tegemezi kwa application tofauti kwa kuchakata, kuchambua na kuonesha"
 " data za ardhini. Utegemeo huu umetengeneza baadhi ya vipengele:"
 
+#: ../../../installation.rstNone
+msgid "ODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:14
 msgid ""
 "**ODM** is the processing engine, which can be used from the command line. "
@@ -59,6 +63,10 @@ msgstr ""
 " itachukua picha kama kiingizio na kutoa matokeo tofauti, ikiwemo point "
 "clouds, 3D model na orthophotos."
 
+#: ../../../installation.rstNone
+msgid "NodeODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:20
 msgid ""
 "**NodeODM** is a light-weight API built on top of ODM. It allows users and "
@@ -66,6 +74,10 @@ msgid ""
 msgstr ""
 "**NodeODM** ni light-weight API iliojengwa juu ya ODM. Inaruhusu watumiaji "
 "na application kutumia function za ODM kwenye computer mtandao"
+
+#: ../../../installation.rstNone
+msgid "WebODM Logo"
+msgstr ""
 
 #: ../../../installation.rst:26
 msgid ""
@@ -77,6 +89,10 @@ msgstr ""
 " muonesho wa 3D, user login, mfumo wa plagin na vipengele vyengine ambavyo "
 "vinategemewa na drone mapping platform za kisasa"
 
+#: ../../../installation.rstNone
+msgid "CloudODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:32
 msgid ""
 "**CloudODM** is a small command line client to communicate with ODM via the "
@@ -85,6 +101,10 @@ msgstr ""
 "**CloudODM** ni mtari mdogo wa camand ya mteja kwa kuwasiliana na ODM "
 "kupitia NodeODM API"
 
+#: ../../../installation.rstNone
+msgid "PyODM Logo"
+msgstr ""
+
 #: ../../../installation.rst:38
 msgid ""
 "**PyODM** is a Python SDK for creating tasks via the NodeODM API. We cover "
@@ -92,6 +112,10 @@ msgid ""
 msgstr ""
 "**PyODM** ni Python SDK kwa kutengeza kazi kupitia NodeODM API. Tunavalisha "
 "maelezo zaidi ndani ya sura ya “Automated Processing With Python”"
+
+#: ../../../installation.rstNone
+msgid "ClusterODM Logo"
+msgstr ""
 
 #: ../../../installation.rst:44
 msgid ""
@@ -249,6 +273,10 @@ msgstr ""
 " zaidi unaweza kufungua **Task Manager** (Bonyeza CTRL+SHIFT+ESC) na washa "
 "**Performance** tab."
 
+#: ../../../installation.rstNone
+msgid "Image of checking virtualization in Windows 8 or higher"
+msgstr ""
+
 #: ../../../installation.rst:94
 msgid "*Virtualization should be enabled*"
 msgstr "*Virtualization lazima iruhusiwe*"
@@ -278,6 +306,10 @@ msgstr ""
 "model here>”. Kawaida muda hutegemea na kurestart computer, haraka bonyeza "
 "F2 au F12 wakati inawaka,angalia boot menu na badilisha mpangilo kwa "
 "kuruhusu virtualization (kawaida inaitwa \"VT-X\")."
+
+#: ../../../installation.rstNone
+msgid "Table of different bios keys"
+msgstr ""
 
 #: ../../../installation.rst:105
 msgid ""
@@ -311,6 +343,10 @@ msgid ""
 msgstr ""
 "Kwa Python 3, hakikisha unaangalia **Add Python 3.x to PATH** wakati wa "
 "uingizaji."
+
+#: ../../../installation.rstNone
+msgid "Screenshot of Python3 installation process"
+msgstr ""
 
 #: ../../../installation.rst:121
 msgid ""
@@ -418,6 +454,10 @@ msgid ""
 "processors from the **Processor** tab also"
 msgstr ""
 
+#: ../../../installation.rstNone
+msgid "Screenshot of VirtualBox Settings"
+msgstr ""
+
 #: ../../../installation.rst:151
 msgid "*VirtualBox default VM settings*"
 msgstr "*Chaguo msingi la VirtualBox kwa Mpangilio wa VM*"
@@ -451,9 +491,17 @@ msgstr ""
 msgid "Press **Apply**."
 msgstr "Bonyeza **Apply**."
 
+#: ../../../installation.rstNone
+msgid "Screenshot of Docker Icon"
+msgstr ""
+
 #: ../../../installation.rst:166
 msgid "*Step 1 Docker icon*"
 msgstr "*Njia ya 1. Docker icon*"
+
+#: ../../../installation.rstNone
+msgid "Screenshot of Docker Settings"
+msgstr ""
 
 #: ../../../installation.rst:172
 msgid "*Step 3 & 4 Docker settings*"
@@ -489,6 +537,10 @@ msgstr ""
 msgid "Press **Clone**"
 msgstr "Bonyeza **Clone**"
 
+#: ../../../installation.rstNone
+msgid "Screenshot of Git Gui"
+msgstr ""
+
 #: ../../../installation.rst:188
 msgid "*Git Gui*"
 msgstr "*Git Gui*"
@@ -496,6 +548,10 @@ msgstr "*Git Gui*"
 #: ../../../installation.rst:190
 msgid "If the download succeeded, you should now see this window:"
 msgstr "Ikiwa kupakua kumefanikiwa, utaona window ifuatayo:"
+
+#: ../../../installation.rstNone
+msgid "Screenshot of Git Gui after successful download"
+msgstr ""
 
 #: ../../../installation.rst:196
 msgid "*Git Gui after successful download (clone)*"
@@ -530,6 +586,10 @@ msgid ""
 msgstr ""
 "Vipengele tofauti vitapakuliwa katika mashine yako katika hatua hii, ikiwemo"
 " WebODM, NodeODM na ODM. Baada ya kupakua utapeleka kwa screen zifuatazo:"
+
+#: ../../../installation.rstNone
+msgid "Screenshot of after successfully downloading WebODM"
+msgstr ""
 
 #: ../../../installation.rst:215
 msgid "*Console output after starting WebODM for the first time*"
@@ -620,6 +680,10 @@ msgstr ""
 "Baada ya kuingiza docker itaona icon ambyo muonekano wake kama nyumbani "
 "katika task bar."
 
+#: ../../../installation.rstNone
+msgid "Screenshot of Docker whale"
+msgstr ""
+
 #: ../../../installation.rst:270
 msgid "*Docker app running*"
 msgstr "*Docker app running*"
@@ -685,6 +749,10 @@ msgstr ""
 #: ../../../installation.rst:306
 msgid "Press **Apply & Restart**"
 msgstr "Bonyeza **Apply & Restart**"
+
+#: ../../../installation.rstNone
+msgid "Screenshot of Docker advanced settings"
+msgstr ""
 
 #: ../../../installation.rst:312
 msgid "*Docker advanced settings*"
@@ -878,6 +946,10 @@ msgstr ""
 "mtumiaji wa kwanza. Chukua muda kumalizia mwenyewe pamoja na web interface "
 "na kuchunguza menu tofauti."
 
+#: ../../../installation.rstNone
+msgid "Screenshot of WebODM Dashboard"
+msgstr ""
+
 #: ../../../installation.rst:479
 msgid "*WebODM Dashboard*"
 msgstr "*WebODM Dashboard*"
@@ -900,6 +972,10 @@ msgid ""
 msgstr ""
 "Ikiwa umefikia hapo, Hongera! Sasa ni mda wa kuanza kuchakata baadhi ya "
 "data."
+
+#: ../../../installation.rstNone
+msgid "Image of celebratory dance"
+msgstr ""
 
 #: ../../../installation.rst:490
 msgid "Running on more than one machine"

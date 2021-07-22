@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-10-15 13:38+0000\n"
 "Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
@@ -62,6 +62,10 @@ msgstr ""
 " por lo que un mapa puede tener una precisión relativa alta (en tamaño y "
 "forma), pero su posición en el mundo se puede cambiar (Figura 1)."
 
+#: ../../../map-accuracy.rstNone
+msgid "Model showing high relative accuracy"
+msgstr ""
+
 #: ../../../map-accuracy.rst:18
 msgid ""
 "*Figure 1. Model showing high relative accuracy but misplaced according to "
@@ -85,6 +89,10 @@ msgstr ""
 "su posición real en el planeta (Pix4D 2019). La Figura 2 muestra un modelo "
 "de precisión relativa y absoluta, ya que los puntos están colocados "
 "correctamente de acuerdo con su posición en el mundo real."
+
+#: ../../../map-accuracy.rstNone
+msgid "Model showing high absolute accuracy"
+msgstr ""
 
 #: ../../../map-accuracy.rst:30
 msgid ""

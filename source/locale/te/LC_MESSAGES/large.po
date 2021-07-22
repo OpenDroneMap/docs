@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020\n"
 "Language-Team: Telugu (https://www.transifex.com/americanredcross/teams/111882/te/)\n"
@@ -70,6 +70,10 @@ msgid ""
 "because error propagation due to image distortion could cause a bowl effect "
 "on the models. Calibration instructions can be found at      `Calibrate "
 "Images <tutorials.html#calibrating-the-camera>`_."
+msgstr ""
+
+#: ../../../large.rstNone ../../../large.rstNone
+msgid "image of lens distortion effect on bowling of data"
 msgstr ""
 
 #: ../../../large.rst:21

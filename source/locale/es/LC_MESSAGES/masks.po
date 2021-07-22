@@ -5,15 +5,16 @@
 # 
 # Translators:
 # israel Villarreal <israelbar@gmail.com>, 2021
+# danbjoseph <danbjoseph@gmail.com>, 2021
 # 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-10-05 17:13+0000\n"
-"Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
+"Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -32,11 +33,11 @@ msgid ""
 " where the sky was accidentally included in the input photos from oblique "
 "shots, or simply to limit the reconstruction of a single subject."
 msgstr ""
-"A partir de ODM `` 2.0 '', las personas pueden proporcionar máscaras de "
-"imagen para informar al software de que omita la reconstrucción en ciertas "
-"áreas. Esto es útil para los casos en los que el cielo se incluyó "
-"accidentalmente en las fotos de entrada de tomas oblicuas, o simplemente "
-"para limitar la reconstrucción de un solo sujeto."
+"A partir de ODM ``2.0``, las personas pueden proporcionar máscaras de imagen"
+" para informar al software de que omita la reconstrucción en ciertas áreas. "
+"Esto es útil para los casos en los que el cielo se incluyó accidentalmente "
+"en las fotos de entrada de tomas oblicuas, o simplemente para limitar la "
+"reconstrucción de un solo sujeto."
 
 #: ../../../masks.rst:7
 msgid ""
@@ -49,6 +50,18 @@ msgstr ""
 "negro de la misma dimensión que la imagen de destino que desea enmascarar "
 "(puede usar un programa como GIMP para hacer esto). Colorea de negro las "
 "zonas a excluir de la reconstrucción."
+
+#: ../../../masks.rstNone
+msgid "Target image"
+msgstr ""
+
+#: ../../../masks.rstNone
+msgid "Image mask"
+msgstr ""
+
+#: ../../../masks.rstNone
+msgid "3D result (building is masked)"
+msgstr ""
 
 #: ../../../masks.rst:22
 msgid "Name your file:"
@@ -64,10 +77,10 @@ msgid ""
 "``DJI_0018_mask.JPG`` file and include that in the list of images. You can "
 "use ``.JPG``, ``.PNG``, ``.BMP`` and ``.TIF`` formats for image masks."
 msgstr ""
-"Por ejemplo, `` DJI_0018.JPG '' puede tener una máscara creando un archivo "
-"`` DJI_0018_mask.JPG '' e incluirlo en la lista de imágenes. Puede utilizar "
-"los formatos `` .JPG '', `` .PNG '', `` .BMP '' y `` .TIF '' para las "
-"máscaras de imagen."
+"Por ejemplo, ``DJI_0018.JPG`` puede tener una máscara creando un archivo "
+"``DJI_0018_mask.JPG`` e incluirlo en la lista de imágenes. Puede utilizar "
+"los formatos ``.JPG``, ``.PNG``, ``.BMP`` y ``.TIF`` para las máscaras de "
+"imagen."
 
 #: ../../../masks.rst:29
 msgid ""

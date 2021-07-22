@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-10-05 17:13+0000\n"
 "Last-Translator: Urmila Yalamanchili <Urmila_10@yahoo.com>, 2020\n"
 "Language-Team: Telugu (https://www.transifex.com/americanredcross/teams/111882/te/)\n"
@@ -49,6 +49,18 @@ msgstr ""
 " కొత్త నలుపు మరియు తెలుపు చిత్రాన్ని సృష్టించండి (దీన్ని చేయడానికి మీరు GIMP"
 " వంటి ప్రోగ్రామ్‌ను ఉపయోగించవచ్చు). పునర్నిర్మాణం నుండి మినహాయించటానికి "
 "ప్రాంతాలను నలుపు రంగులో ఉంచండి."
+
+#: ../../../masks.rstNone
+msgid "Target image"
+msgstr ""
+
+#: ../../../masks.rstNone
+msgid "Image mask"
+msgstr ""
+
+#: ../../../masks.rstNone
+msgid "3D result (building is masked)"
+msgstr ""
 
 #: ../../../masks.rst:22
 msgid "Name your file:"

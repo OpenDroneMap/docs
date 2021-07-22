@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
@@ -20,6 +20,10 @@ msgstr ""
 "Content-Transfer-Encoding: 8bit\n"
 "Language: sw\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../../index.rstNone
+msgid "OpenDroneMap Logo"
+msgstr ""
 
 #: ../../../index.rst:8
 msgid "Welcome to OpenDroneMap's documentation"
@@ -65,4 +69,12 @@ msgstr ""
 
 #: ../../../index.rst:22
 msgid "`Telugu <https://docs.opendronemap.org/te>`_"
+msgstr ""
+
+#: ../../../index.rstNone
+msgid "image of seedling"
+msgstr ""
+
+#: ../../../index.rstNone
+msgid "image of pencil"
 msgstr ""

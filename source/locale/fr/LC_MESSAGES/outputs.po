@@ -11,7 +11,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-09 09:50-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: Arnaud Boilleau <arneir77@gmail.com>, 2021\n"
 "Language-Team: French (https://www.transifex.com/americanredcross/teams/111882/fr/)\n"
@@ -42,6 +42,10 @@ msgid ""
 msgstr ""
 "``odm_georeferencing/odm_georeferenced_model.ply/laz/csv`` -- Le nuage de "
 "points géoréférencé dans différents formats de fichiers"
+
+#: ../../../outputs.rstNone
+msgid "image of OpenDroneMap derived point cloud"
+msgstr ""
 
 #: ../../../outputs.rst:15
 msgid ""
@@ -77,6 +81,10 @@ msgstr ""
 "choisissez votre maillage texturé à partir d'un emplacement similaire au "
 "suivant : ``odm_texturing\\odm_textured_model.obj``"
 
+#: ../../../outputs.rstNone
+msgid "image of OpenDroneMap derived textured mesh"
+msgstr ""
+
 #: ../../../outputs.rst:30
 msgid ""
 "*Textured mesh courtesy of* `OpenDroneMap "
@@ -104,6 +112,10 @@ msgid ""
 msgstr ""
 "``odm_orthophoto/odm_orthphoto.original.tif`` -- L'orthophoto dans son état "
 "d'origine non rogné."
+
+#: ../../../outputs.rstNone
+msgid "image of OpenDroneMap orthophoto"
+msgstr ""
 
 #: ../../../outputs.rst:43
 msgid ""
@@ -141,6 +153,10 @@ msgstr "``odm_dem/dtm.tif``"
 #: ../../../outputs.rst:53
 msgid "``odm_dem/dsm.tif``"
 msgstr "``odm_dem/dsm.tif``"
+
+#: ../../../outputs.rstNone
+msgid "image of OpenDroneMap derived digital surface model"
+msgstr ""
 
 #: ../../../outputs.rst:59
 msgid ""

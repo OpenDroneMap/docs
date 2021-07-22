@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -26,6 +26,10 @@ msgstr ""
 
 #: ../../../tutorials.rst:11
 msgid "Creating High Quality Orthophotos"
+msgstr ""
+
+#: ../../../tutorials.rst:None
+msgid "image of OpenDroneMap orthophoto"
 msgstr ""
 
 #: ../../../tutorials.rst:17
@@ -60,12 +64,21 @@ msgstr ""
 msgid "Camera calibration is a special challenge with commodity cameras. Temperature changes, vibrations, focus, and other factors can affect the derived parameters with substantial effects on resulting data. Automatic or self calibration is possible and desirable with drone flights, but depending on the flight pattern, automatic calibration may not remove all distortion from the resulting products. James and Robson (2014) in their paper `Mitigating systematic error in topographic models derived from UAV and ground‐based image networks <https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609>`_ address how to minimize the distortion from self-calibration."
 msgstr ""
 
+#: ../../../tutorials.rst:None
+#: ../../../tutorials.rst:None
+msgid "image of lens distortion effect on bowling of data"
+msgstr ""
+
 #: ../../../tutorials.rst:35
 msgid "*Bowling effect on point cloud over 13,000+ image dataset collected by World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania.*"
 msgstr ""
 
 #: ../../../tutorials.rst:37
 msgid "To mitigate this effect, there are a few options but the simplest are as follows: fly two patterns separated by 20°, and rather than having a nadir (straight down pointing) camera, use one that tilts forward by 5°."
+msgstr ""
+
+#: ../../../tutorials.rst:None
+msgid "animation showing optimum"
 msgstr ""
 
 #: ../../../tutorials.rst:45
@@ -84,8 +97,16 @@ msgstr ""
 msgid "To get good 2D and 2.5D (digital elevation model) results, you will require 42% overlap and sidelap for an equivalent 70% overlap and sidelap."
 msgstr ""
 
+#: ../../../tutorials.rst:None
+msgid "animation showing experimental optimum"
+msgstr ""
+
 #: ../../../tutorials.rst:56
 msgid "Vertically separated flight lines also improve accuracy, but less so than a camera that is forward facing by 5°."
+msgstr ""
+
+#: ../../../tutorials.rst:None
+msgid "figure showing effect of vertically separated flight lines and forward facing cameras on improving self calibration"
 msgstr ""
 
 #: ../../../tutorials.rst:62
@@ -98,6 +119,10 @@ msgstr ""
 
 #: ../../../tutorials.rst:68
 msgid "By default ODM does not create DEMs. To create a digital terrain model, make sure to pass the ``--dtm`` flag. To create a digital surface model, be sure to pass the ``--dsm`` flag."
+msgstr ""
+
+#: ../../../tutorials.rst:None
+msgid "image of OpenDroneMap derived digital surface model"
 msgstr ""
 
 #: ../../../tutorials.rst:74
@@ -172,6 +197,10 @@ msgstr ""
 msgid "In most of the cases a lawn mower flight pattern is capable of producing highly accurate stockpile models."
 msgstr ""
 
+#: ../../../tutorials.rst:None
+msgid "a simple lawnmower flight pattern can produce accurate results"
+msgstr ""
+
 #: ../../../tutorials.rst:122
 msgid "Recommended overlap would be between 75% and 80% with a sidelap in the order of 65% to 70%. It is also recommended to slightly increase overlap and sidelap as the flight height is increased."
 msgstr ""
@@ -236,6 +265,10 @@ msgstr ""
 msgid "As almost 50% of the material will be found in the first 20% of the stockpile height, special care should be taken in adequately defining the base plane."
 msgstr ""
 
+#: ../../../tutorials.rst:None
+msgid "almost 50% of the material will be found in the first 20% of the stockpile height"
+msgstr ""
+
 #: ../../../tutorials.rst:165
 msgid "In WebODM Dashboard, clic on \"view map\" to start a 2D view of your project."
 msgstr ""
@@ -244,16 +277,33 @@ msgstr ""
 msgid "Once in the 2D map view, clic on the \"Measure volume, area and length\" button."
 msgstr ""
 
+#: ../../../tutorials.rst:None
+msgid "clic on the \"Measure volume, area and length\" button"
+msgstr ""
+
 #: ../../../tutorials.rst:173
 msgid "then clic on \"Create a new measurement\""
+msgstr ""
+
+#: ../../../tutorials.rst:None
+msgid "clic on \"Create a new measurement\""
 msgstr ""
 
 #: ../../../tutorials.rst:179
 msgid "Start placing the points to define the stockpile base plane"
 msgstr ""
 
+#: ../../../tutorials.rst:None
+msgid "Define the stockpile base plane"
+msgstr ""
+
 #: ../../../tutorials.rst:185
 msgid "Clic on \"Finish measurement\" to finish the process."
+msgstr ""
+
+#: ../../../tutorials.rst:None
+#: ../../../tutorials.rst:None
+msgid "Clic on \"Finish measurement\" to finish the process"
 msgstr ""
 
 #: ../../../tutorials.rst:191

@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-10-15 13:38+0000\n"
 "Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
@@ -62,6 +62,10 @@ msgstr ""
 "mapa ay maaaring may mataas na relative accuracy (sa laki at korte) ngunit "
 "ang posisyon sa mundo ay pwedeng baguhin (Figure1)."
 
+#: ../../../map-accuracy.rstNone
+msgid "Model showing high relative accuracy"
+msgstr ""
+
 #: ../../../map-accuracy.rst:18
 msgid ""
 "*Figure 1. Model showing high relative accuracy but misplaced according to "
@@ -85,6 +89,10 @@ msgstr ""
 "posisyon sa planeta (Pix4D 2019). ANg Figure 2 ay pinapakita ang relative at"
 " absolute accurate na modelo, ang mga puntos ay tama ang posisyon ayon sa "
 "totoong buhay."
+
+#: ../../../map-accuracy.rstNone
+msgid "Model showing high absolute accuracy"
+msgstr ""
 
 #: ../../../map-accuracy.rst:30
 msgid ""

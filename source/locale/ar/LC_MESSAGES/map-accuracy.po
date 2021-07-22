@@ -8,7 +8,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2021-07-22 08:47-0400\n"
 "PO-Revision-Date: 2020-10-15 13:38+0000\n"
 "Language-Team: Arabic (https://www.transifex.com/americanredcross/teams/111882/ar/)\n"
 "MIME-Version: 1.0\n"
@@ -47,6 +47,10 @@ msgid ""
 "position in the world can be shifted (Figure 1)."
 msgstr ""
 
+#: ../../../map-accuracy.rstNone
+msgid "Model showing high relative accuracy"
+msgstr ""
+
 #: ../../../map-accuracy.rst:18
 msgid ""
 "*Figure 1. Model showing high relative accuracy but misplaced according to "
@@ -63,6 +67,10 @@ msgid ""
 "true position on the planet (Pix4D 2019). Figure 2 shows a relative and "
 "absolute accurate model, as the points are correctly placed according to its"
 " real world position."
+msgstr ""
+
+#: ../../../map-accuracy.rstNone
+msgid "Model showing high absolute accuracy"
 msgstr ""
 
 #: ../../../map-accuracy.rst:30
