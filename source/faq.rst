@@ -9,7 +9,7 @@ Data Processing
 Can I process two or more orthophoto GeoTIFFs to stitch them together? 
 ----------------------------------------------------------------------
 
-No. ODM is a photogrammetric pipeline and orthophotos do not have the necessary camera information since the image has already been orthorectified. Use another program such as `Hugin <http://hugin.sourceforge.net/>`_.
+No. ODM is a photogrammetric pipeline and orthophotos do not have the necessary camera information since the images have already been orthorectified. Use another program such as `Hugin <http://hugin.sourceforge.net/>`_.
 
 *********
 Licensing
