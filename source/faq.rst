@@ -16,7 +16,7 @@ Licensing
 *********
 
 I want to build a commercial application that includes ODM. Do I need a commercial license?
--------------------------------------------------------------------------
+-------------------------------------------------------------------------------------------
 
 ODM is free and open source software, released under the `AGPLv3 <https://github.com/OpenDroneMap/ODM/blob/master/LICENSE>`_. You are free to build and sell applications with it, just make sure to comply with the requirements of the license, in particular the disclose source requirement.
 
