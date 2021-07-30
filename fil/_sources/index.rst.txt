@@ -55,3 +55,4 @@ The documentation is available in several languages. Some translations are incom
     multispectral
     requesting-features
     contributing
+    faq
