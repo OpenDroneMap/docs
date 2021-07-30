@@ -45,8 +45,14 @@ Example Images
 
 True: --build-overviews
 ^^^^^^^^^^^^^^^^^^^^^^^
-.. image:: https://user-images.githubusercontent.com/19295950/127073339-6b2a0a4f-6ede-4dc1-8da4-5bc9646de304.png
+.. figure:: https://user-images.githubusercontent.com/19295950/127073339-6b2a0a4f-6ede-4dc1-8da4-5bc9646de304.png
+  :alt: QGIS displaying the generated Overviews
+
+  The Layer Properties panel demonstrates that this OpenDroneMap-generated GeoTIFF has internal Overviews.
 
 False: `null`
 ^^^^^^^^^^^^^
-.. image:: https://user-images.githubusercontent.com/19295950/127074349-a3f84c4c-d05c-4bf1-bd7c-790781ad0fe3.png
+.. figure:: https://user-images.githubusercontent.com/19295950/127074349-a3f84c4c-d05c-4bf1-bd7c-790781ad0fe3.png
+  :alt: QGIS displaying the file is lacking Overviews
+
+  The Layer Properties panel demonstrates that this OpenDroneMap-generated GeoTIFF lacks internal Overviews.
