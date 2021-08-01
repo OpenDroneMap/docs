@@ -9,11 +9,11 @@
 ========        ========
 Resource        Impact
 ========        ========
-CPU             ░▓░ | Medium
-GPU             ░░░ | None
-HDD             ░▓░ | Medium
-RAM             ░▓░ | Medium
-Time            ░▓░ | Medium
+CPU             ●●○ | Medium
+GPU             ○○○ | None
+HDD             ●●○ | Medium
+RAM             ●●○ | Medium
+Time            ●●○ | Medium
 ========        ========
 
 ----
