@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>build-overviews &mdash; OpenDroneMap 2.5.8 documentation</title>
+  <title>build-overviews &mdash; OpenDroneMap 2.5.9 documentation</title>
   
 
   
@@ -68,7 +68,7 @@
             
             
               <div class="version">
-                2.5.8
+                2.5.9
               </div>
             
           
@@ -164,7 +164,17 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">Chagizi na Bendera</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">build-overviews</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">build-overviews</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-are-overviews">What Are Overviews?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-would-one-use-overviews">Why would one use Overviews?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#true-build-overviews">True: <code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../camera-lens/">camera-lens</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cameras/">cameras</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cog/">cog</a></li>
@@ -396,9 +406,86 @@
   <div class="section" id="build-overviews">
 <span id="id1"></span><h1>build-overviews<a class="headerlink" href="#build-overviews" title="Permalink to this headline">¶</a></h1>
 <p>Build orthophoto overviews for faster display in programs such as QGIS. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
-<p>Overviews are an optimization that reduce the time it takes to
-open GeoTIFF files, for the tradeoff of a larger filesize.</p>
+<div class="line-block">
+<div class="line">Parameter Type:</div>
+<div class="line-block">
+<div class="line"><strong>Boolean</strong></div>
+</div>
+<div class="line">Parameter Domain:</div>
+<div class="line-block">
+<div class="line">True: <code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code></div>
+<div class="line">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
+</div>
+</div>
+<hr class="docutils" />
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Resource</p></th>
+<th class="head"><p>Impact</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CPU</p></td>
+<td><p>●●○ | Medium</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPU</p></td>
+<td><p>○○○ | None</p></td>
+</tr>
+<tr class="row-even"><td><p>HDD</p></td>
+<td><p>●●○ | Medium</p></td>
+</tr>
+<tr class="row-odd"><td><p>RAM</p></td>
+<td><p>●●○ | Medium</p></td>
+</tr>
+<tr class="row-even"><td><p>Time</p></td>
+<td><p>●●○ | Medium</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<div class="section" id="what-are-overviews">
+<h2>What Are Overviews?<a class="headerlink" href="#what-are-overviews" title="Permalink to this headline">¶</a></h2>
+<p>Overviews (sometimes referred to as pyramids) are an optimization that reduce the time it takes to render GeoTIFF files; Larger file-size is the tradeoff for this increased rendering performance.</p>
+<p>Overviews are lower-resoultion copies of the raster data (Power of two factor [128x128, 256x256, etc]) that are stored either internally or externally in a sidecar.</p>
+<p>In the case of OpenDroneMap, the Overviews will always be internal.</p>
+</div>
+<div class="section" id="when-are-overviews-appropriate">
+<h2>When are Overviews appropriate?<a class="headerlink" href="#when-are-overviews-appropriate" title="Permalink to this headline">¶</a></h2>
+<p>One would likely want to use Overviews for nearly every instance, with some few (relatively rare) exceptions.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Small File Size is paramount</p></li>
+<li><p>Reading software does not support internal Overviews</p></li>
+</ul>
+</div></blockquote>
+</div>
+<div class="section" id="why-would-one-use-overviews">
+<h2>Why would one use Overviews?<a class="headerlink" href="#why-would-one-use-overviews" title="Permalink to this headline">¶</a></h2>
+<p>Overviews speed preview of the raster data by allowing the program rendering the raster to choose the closest size pyramid to match the resolution of the display extent that it is being rendered into, potentially saving a significant amount of time retrieving the full-size raster, buffering it, and then downscaling it for display.</p>
+<p>In the case of WebODM, Overviews are used to create dynamic tiles for rapid display and navigation of the 2D web map.</p>
+</div>
+<div class="section" id="example-images">
+<h2>Example Images<a class="headerlink" href="#example-images" title="Permalink to this headline">¶</a></h2>
+<div class="section" id="true-build-overviews">
+<h3>True: <code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code><a class="headerlink" href="#true-build-overviews" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="id2">
+<img alt="QGIS displaying the generated Overviews" src="https://user-images.githubusercontent.com/19295950/127073339-6b2a0a4f-6ede-4dc1-8da4-5bc9646de304.png" />
+<p class="caption"><span class="caption-text">The Layer Properties panel demonstrates that this OpenDroneMap-generated GeoTIFF has internal Overviews.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
+</div>
+</div>
+<div class="section" id="false-null">
+<h3>False: <code class="docutils literal notranslate"><span class="pre">null</span></code><a class="headerlink" href="#false-null" title="Permalink to this headline">¶</a></h3>
+<div class="figure align-default" id="id3">
+<img alt="QGIS displaying the file is lacking Overviews" src="https://user-images.githubusercontent.com/19295950/127074349-a3f84c4c-d05c-4bf1-bd7c-790781ad0fe3.png" />
+<p class="caption"><span class="caption-text">The Layer Properties panel demonstrates that this OpenDroneMap-generated GeoTIFF lacks internal Overviews.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
+</div>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/build-overviews.rst">this page</a>!</p>
+</div>
+</div>
 </div>
 
 
