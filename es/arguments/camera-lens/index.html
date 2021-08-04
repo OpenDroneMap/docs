@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>camera-lens &mdash; documentación de OpenDroneMap - 2.5.9</title>
+  <title>camera-lens &mdash; documentación de OpenDroneMap - 2.6.0</title>
   
 
   
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                2.5.9
+                2.6.0
               </div>
             
           
@@ -176,7 +176,20 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">camera-lens</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">camera-lens</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-are-camera-lens-models">What Are Camera Lens Models?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#when-are-manual-selections-appropriate">When are manual selections appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-would-one-use-a-particular-camera-lens-model">Why would one use a particular Camera Lens Model?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#auto-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">auto</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#brown-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">brown</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#fisheye-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">fisheye</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#perspective-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">perspective</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#spherical-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">spherical</span></code> : Rectilinear Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../cameras/">cameras</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../cog/">cog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../copy-to/">copy-to</a></li>
@@ -408,7 +421,106 @@
 <span id="id1"></span><h1>camera-lens<a class="headerlink" href="#camera-lens" title="Enlazar permanentemente con este título">¶</a></h1>
 <p><strong>Options:</strong> <em>auto |  perspective |  brown |  fisheye |  spherical</em></p>
 <p>Set a camera projection type. Manually setting a value can help improve geometric undistortion. By default the application tries to determine a lens type from the images metadata. . Default: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p>
+<div class="line-block">
+<div class="line">Parameter Type:</div>
+<div class="line-block">
+<div class="line"><strong>String</strong></div>
+</div>
+<div class="line">Parameter Domain:</div>
+<div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">auto</span></code> : Automatic selection of best camera projection model.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">brown</span></code> : Robust rectilinear projection model. Preferred by <code class="docutils literal notranslate"><span class="pre">auto</span></code>.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">fisheye</span></code> : Wide-angle / non-rectilinear projection model.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">perspective</span></code> : Legacy rectilinear projection model.</div>
+<div class="line"><code class="docutils literal notranslate"><span class="pre">spherical</span></code> : 360° camera projection model.</div>
+</div>
+<div class="line">Parameter Default:</div>
+<div class="line-block">
+<div class="line"><code class="docutils literal notranslate"><span class="pre">auto</span></code></div>
+</div>
+</div>
+<hr class="docutils" />
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Resource</p></th>
+<th class="head"><p>Impact</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CPU</p></td>
+<td><p>●○○ | Low</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPU</p></td>
+<td><p>○○○ | None</p></td>
+</tr>
+<tr class="row-even"><td><p>HDD</p></td>
+<td><p>●○○ | Low</p></td>
+</tr>
+<tr class="row-odd"><td><p>RAM</p></td>
+<td><p>●○○ | Low</p></td>
+</tr>
+<tr class="row-even"><td><p>Time</p></td>
+<td><p>●○○ | Low</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<div class="section" id="what-are-camera-lens-models">
+<h2>What Are Camera Lens Models?<a class="headerlink" href="#what-are-camera-lens-models" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Camera Lens Models are projection/distortion models that OpenSFM uses to correct for the optics of the camera platforms that record our images. These corrections are essential for proper camera/scene modeling, and therefore, proper reconstruction of the data.</p>
+</div>
+<div class="section" id="when-are-manual-selections-appropriate">
+<h2>When are manual selections appropriate?<a class="headerlink" href="#when-are-manual-selections-appropriate" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>Manually choosing a Camera Lens Model is currently only recommended in the case of Spherical Cameras (GoPro Fusion, GoPro Max, Insta360, Kodak PixPro, etc.) as these are currently not detected automatically by OpenSFM.</p>
+</div>
+<div class="section" id="why-would-one-use-a-particular-camera-lens-model">
+<h2>Why would one use a particular Camera Lens Model?<a class="headerlink" href="#why-would-one-use-a-particular-camera-lens-model" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>In rare cases, OpenSFM may not be able to detect (or retrieve from its Camera database) the correct Camera Lens Model for your particular sensor, in which case you should select the closest appropriate model. When in doubt, try specifying <code class="docutils literal notranslate"><span class="pre">brown</span></code> first.</p>
+</div>
+<div class="section" id="example-images">
+<h2>Example Images<a class="headerlink" href="#example-images" title="Enlazar permanentemente con este título">¶</a></h2>
+<p>The following examples are all data taken with a standard Rectilinear Lens. Manual selection of the various Camera Lens Models is demonstrated to show some differences in how this will affect reconstruction.</p>
+<div class="section" id="auto-rectilinear-data">
+<h3><code class="docutils literal notranslate"><span class="pre">auto</span></code> : Rectilinear Data<a class="headerlink" href="#auto-rectilinear-data" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="figure align-default" id="id2">
+<img alt="Rectilinear data rendered by ``auto`` Camera Lens Model" src="https://user-images.githubusercontent.com/19295950/127077336-ae79a958-a953-4376-86fd-430d0e5457f2.png" />
+<p class="caption"><span class="caption-text">This Point Cloud shows a proper reconstruction via the <code class="docutils literal notranslate"><span class="pre">auto</span></code> (<code class="docutils literal notranslate"><span class="pre">brown</span></code>) Camera Lens Model, which is appropriate for this sensor.</span><a class="headerlink" href="#id2" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</div>
+<div class="section" id="brown-rectilinear-data">
+<h3><code class="docutils literal notranslate"><span class="pre">brown</span></code> : Rectilinear Data<a class="headerlink" href="#brown-rectilinear-data" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="figure align-default" id="id3">
+<img alt="Rectilinear data rendered by ``brown`` Camera Lens Model" src="https://user-images.githubusercontent.com/19295950/127077753-580a174e-7572-4315-8801-224ce097d9fc.png" />
+<p class="caption"><span class="caption-text">As in the prior example, this Point Cloud is reconstructed via the <code class="docutils literal notranslate"><span class="pre">brown</span></code> Camera Lens Model.</span><a class="headerlink" href="#id3" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</div>
+<div class="section" id="fisheye-rectilinear-data">
+<h3><code class="docutils literal notranslate"><span class="pre">fisheye</span></code> : Rectilinear Data<a class="headerlink" href="#fisheye-rectilinear-data" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="figure align-default" id="id4">
+<img alt="Rectilinear data rendered by ``fisheye`` Camera Lens Model" src="https://user-images.githubusercontent.com/19295950/127077826-53d459fe-5e4e-4b10-8e70-fbddf775c4f7.png" />
+<p class="caption"><span class="caption-text">In this Point Cloud reconstruction, severe bowling and other artifacts have been introduced via the use of the wrong Camera Lens Model.</span><a class="headerlink" href="#id4" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</div>
+<div class="section" id="perspective-rectilinear-data">
+<h3><code class="docutils literal notranslate"><span class="pre">perspective</span></code> : Rectilinear Data<a class="headerlink" href="#perspective-rectilinear-data" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="figure align-default" id="id5">
+<img alt="Rectilinear data rendered by ``perspective`` Camera Lens Model" src="https://user-images.githubusercontent.com/19295950/127077485-699f9e61-72a6-45f2-990f-f5748b6ee99f.png" />
+<p class="caption"><span class="caption-text">This Point Cloud rendered well, very similar to the <code class="docutils literal notranslate"><span class="pre">auto</span></code> and <code class="docutils literal notranslate"><span class="pre">brown</span></code> examples. One may see artifacts in the <code class="docutils literal notranslate"><span class="pre">perspective</span></code> Camera Lens Model in very large collections, or over very flat/homogenus terrain (agricultural fields). In such cases, forcing <code class="docutils literal notranslate"><span class="pre">brown</span></code> may help.</span><a class="headerlink" href="#id5" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
+</div>
+<div class="section" id="spherical-rectilinear-data">
+<h3><code class="docutils literal notranslate"><span class="pre">spherical</span></code> : Rectilinear Data<a class="headerlink" href="#spherical-rectilinear-data" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="figure align-default" id="id6">
+<img alt="Rectilinear data rendered by ``spherical`` Camera Lens Model" src="https://user-images.githubusercontent.com/19295950/127078960-27e35cbb-a378-4d0d-92e2-42dbfd1edd7c.png" />
+<p class="caption"><span class="caption-text">This Point Cloud failed to reconstruct properly due to the manual selection of the <code class="docutils literal notranslate"><span class="pre">fisheye</span></code> Camera Lens Model. Similar failures to reconstruct can often indicate the wrong manual selection, or in edge cases, wrong <code class="docutils literal notranslate"><span class="pre">auto</span></code> selection of the Camera Lens Model, and you are advised to try another Model that is more appropriate.</span><a class="headerlink" href="#id6" title="Enlace permanente a esta imagen">¶</a></p>
+</div>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/camera-lens.rst">this page</a>!</p>
+</div>
+</div>
 </div>
 
 

@@ -3,6 +3,8 @@
 | Parameter Domain:
 |  True: ``--build-overviews``
 |  False: ``null``
+| Parameter Default:
+|  False: ``null``
 
 ----
 
@@ -22,7 +24,7 @@ What Are Overviews?
 -------------------
 Overviews (sometimes referred to as pyramids) are an optimization that reduce the time it takes to render GeoTIFF files; Larger file-size is the tradeoff for this increased rendering performance.
 
-Overviews are lower-resoultion copies of the raster data (Power of two factor [128x128, 256x256, etc]) that are stored either internally or externally in a sidecar.
+Overviews are lower-resolution copies of the raster data (Power of two factor [128x128, 256x256, etc]) that are stored either internally or externally in a sidecar.
 
 In the case of OpenDroneMap, the Overviews will always be internal.
 

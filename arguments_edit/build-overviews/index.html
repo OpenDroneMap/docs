@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>What Are Overviews? &mdash; OpenDroneMap 2.5.9 documentation</title>
+  <title>What Are Overviews? &mdash; OpenDroneMap 2.6.0 documentation</title>
   
 
   
@@ -66,7 +66,7 @@
             
             
               <div class="version">
-                2.5.9
+                2.6.0
               </div>
             
           
@@ -173,7 +173,20 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../../arguments/camera-lens/">camera-lens</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../../arguments/camera-lens/">camera-lens</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../../arguments/camera-lens/#what-are-camera-lens-models">What Are Camera Lens Models?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../arguments/camera-lens/#when-are-manual-selections-appropriate">When are manual selections appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../arguments/camera-lens/#why-would-one-use-a-particular-camera-lens-model">Why would one use a particular Camera Lens Model?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../arguments/camera-lens/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../arguments/camera-lens/#auto-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">auto</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../arguments/camera-lens/#brown-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">brown</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../arguments/camera-lens/#fisheye-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">fisheye</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../arguments/camera-lens/#perspective-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">perspective</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../../arguments/camera-lens/#spherical-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">spherical</span></code> : Rectilinear Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../../arguments/cameras/">cameras</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../arguments/cog/">cog</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../arguments/copy-to/">copy-to</a></li>
@@ -409,6 +422,10 @@
 <div class="line">True: <code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code></div>
 <div class="line">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
 </div>
+<div class="line">Parameter Default:</div>
+<div class="line-block">
+<div class="line">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
+</div>
 </div>
 <hr class="docutils" />
 <table class="docutils align-default">
@@ -443,7 +460,7 @@
 <div class="section" id="what-are-overviews">
 <h1>What Are Overviews?<a class="headerlink" href="#what-are-overviews" title="Permalink to this headline">¶</a></h1>
 <p>Overviews (sometimes referred to as pyramids) are an optimization that reduce the time it takes to render GeoTIFF files; Larger file-size is the tradeoff for this increased rendering performance.</p>
-<p>Overviews are lower-resoultion copies of the raster data (Power of two factor [128x128, 256x256, etc]) that are stored either internally or externally in a sidecar.</p>
+<p>Overviews are lower-resolution copies of the raster data (Power of two factor [128x128, 256x256, etc]) that are stored either internally or externally in a sidecar.</p>
 <p>In the case of OpenDroneMap, the Overviews will always be internal.</p>
 </div>
 <div class="section" id="when-are-overviews-appropriate">
