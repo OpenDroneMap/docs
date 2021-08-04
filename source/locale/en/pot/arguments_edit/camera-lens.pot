@@ -6,12 +6,183 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.5.7\n"
+"Project-Id-Version: OpenDroneMap 2.6.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-15 13:46-0400\n"
+"POT-Creation-Date: 2021-08-04 10:03-0600\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
+
+#: ../../../arguments_edit/camera-lens.rst:1
+msgid "Parameter Type:"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:2
+msgid "**String**"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:3
+msgid "Parameter Domain:"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:4
+msgid "``auto`` : Automatic selection of best camera projection model."
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:5
+msgid "``brown`` : Robust rectilinear projection model. Preferred by ``auto``."
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:6
+msgid "``fisheye`` : Wide-angle / non-rectilinear projection model."
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:7
+msgid "``perspective`` : Legacy rectilinear projection model."
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:8
+msgid "``spherical`` : 360° camera projection model."
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:9
+msgid "Parameter Default:"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:10
+msgid "``auto``"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:15
+msgid "Resource"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:15
+msgid "Impact"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:17
+msgid "CPU"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:17
+#: ../../../arguments_edit/camera-lens.rst:19
+#: ../../../arguments_edit/camera-lens.rst:20
+#: ../../../arguments_edit/camera-lens.rst:21
+msgid "●○○ | Low"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:18
+msgid "GPU"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:18
+msgid "○○○ | None"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:19
+msgid "HDD"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:20
+msgid "RAM"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:21
+msgid "Time"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:27
+msgid "What Are Camera Lens Models?"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:28
+msgid "Camera Lens Models are projection/distortion models that OpenSFM uses to correct for the optics of the camera platforms that record our images. These corrections are essential for proper camera/scene modeling, and therefore, proper reconstruction of the data."
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:31
+msgid "When are manual selections appropriate?"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:32
+msgid "Manually choosing a Camera Lens Model is currently only recommended in the case of Spherical Cameras (GoPro Fusion, GoPro Max, Insta360, Kodak PixPro, etc.) as these are currently not detected automatically by OpenSFM."
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:35
+msgid "Why would one use a particular Camera Lens Model?"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:36
+msgid "In rare cases, OpenSFM may not be able to detect (or retrieve from its Camera database) the correct Camera Lens Model for your particular sensor, in which case you should select the closest appropriate model. When in doubt, try specifying ``brown`` first."
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:39
+msgid "Example Images"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:41
+msgid "The following examples are all data taken with a standard Rectilinear Lens. Manual selection of the various Camera Lens Models is demonstrated to show some differences in how this will affect reconstruction."
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:44
+msgid "``auto`` : Rectilinear Data"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:48
+msgid "Rectilinear data rendered by ``auto`` Camera Lens Model"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:48
+msgid "This Point Cloud shows a proper reconstruction via the ``auto`` (``brown``) Camera Lens Model, which is appropriate for this sensor."
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:51
+msgid "``brown`` : Rectilinear Data"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:55
+msgid "Rectilinear data rendered by ``brown`` Camera Lens Model"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:55
+msgid "As in the prior example, this Point Cloud is reconstructed via the ``brown`` Camera Lens Model."
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:58
+msgid "``fisheye`` : Rectilinear Data"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:62
+msgid "Rectilinear data rendered by ``fisheye`` Camera Lens Model"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:62
+msgid "In this Point Cloud reconstruction, severe bowling and other artifacts have been introduced via the use of the wrong Camera Lens Model."
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:65
+msgid "``perspective`` : Rectilinear Data"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:70
+msgid "Rectilinear data rendered by ``perspective`` Camera Lens Model"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:70
+msgid "This Point Cloud rendered well, very similar to the ``auto`` and ``brown`` examples. One may see artifacts in the ``perspective`` Camera Lens Model in very large collections, or over very flat/homogenus terrain (agricultural fields). In such cases, forcing ``brown`` may help."
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:73
+msgid "``spherical`` : Rectilinear Data"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:78
+msgid "Rectilinear data rendered by ``spherical`` Camera Lens Model"
+msgstr ""
+
+#: ../../../arguments_edit/camera-lens.rst:78
+msgid "This Point Cloud failed to reconstruct properly due to the manual selection of the ``fisheye`` Camera Lens Model. Similar failures to reconstruct can often indicate the wrong manual selection, or in edge cases, wrong ``auto`` selection of the Camera Lens Model, and you are advised to try another Model that is more appropriate."
+msgstr ""
