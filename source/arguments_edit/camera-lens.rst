@@ -24,15 +24,15 @@ Time            ●○○ | Low
 ----
 
 What Are Camera Lens Models?
--------------------
+----------------------------
 Camera Lens Models are projection/distortion models that OpenSFM uses to correct for the optics of the camera platforms that record our images. These corrections are essential for proper camera/scene modeling, and therefore, proper reconstruction of the data.
 
 When are manual selections appropriate?
--------------------------------
+---------------------------------------
 Manually choosing a Camera Lens Model is currently only recommended in the case of Spherical Cameras (GoPro Fusion, GoPro Max, Insta360, Kodak PixPro, etc.) as these are currently not detected automatically by OpenSFM.
 
 Why would one use a particular Camera Lens Model?
-----------------------------
+-------------------------------------------------
 In rare cases, OpenSFM may not be able to detect (or retrieve from its Camera database) the correct Camera Lens Model for your particular sensor, in which case you should select the closest appropriate model. When in doubt, try specifying ``brown`` first.
 
 Example Images
@@ -48,7 +48,7 @@ The following examples are all data taken with a standard Rectilinear Lens. Manu
   This Point Cloud shows a proper reconstruction via the ``auto`` (``brown``) Camera Lens Model, which is appropriate for this sensor.
 
 ``brown`` : Rectilinear Data
-^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. figure:: https://user-images.githubusercontent.com/19295950/127077753-580a174e-7572-4315-8801-224ce097d9fc.png
   :alt: Rectilinear data rendered by ``brown`` Camera Lens Model
 
