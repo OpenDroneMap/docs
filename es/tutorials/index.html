@@ -7,7 +7,7 @@
   
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   
-  <title>Tutoriales &mdash; documentación de OpenDroneMap - 2.6.0</title>
+  <title>Tutoriales &mdash; documentación de OpenDroneMap - 2.6.1</title>
   
 
   
@@ -69,7 +69,7 @@
             
             
               <div class="version">
-                2.6.0
+                2.6.1
               </div>
             
           
@@ -160,6 +160,26 @@
 <li class="toctree-l4"><a class="reference internal" href="#after-it-finishes-assuming-you-survive-that-long">Después de que termine (suponiendo que sobrevivas tanto tiempo)</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-potree-3d-viewer-module-on-webodm">Using Potree 3D viewer module on WebODM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cameras">Cameras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#textured-model">Textured model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#appearance">Appearance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#point-budget">Point budget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#field-of-view">Field of view</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eye-dome-lighting">Eye Dome-lighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#background">Background</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tools">Tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#measurement">Measurement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clipping">Clipping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#navigation">Navigation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#scene">Scene</a></li>
 </ul>
 </li>
 </ul>
@@ -747,8 +767,184 @@ export PATH=$PATH:/home/odm/ODM/
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">zcvf</span> <span class="n">archivename</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">folder</span>
 </pre></div>
 </div>
-<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst">esta página</a>!</p>
 </div>
+</div>
+</div>
+<div class="section" id="using-potree-3d-viewer-module-on-webodm">
+<h2>Using Potree 3D viewer module on WebODM<a class="headerlink" href="#using-potree-3d-viewer-module-on-webodm" title="Enlazar permanentemente con este título">¶</a></h2>
+<div class="section" id="cameras">
+<h3>Cameras<a class="headerlink" href="#cameras" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Activate this function to display camera positions.</p>
+<p>You can also click in the camera icon to display single images in a frame on the upper right corner. A click on the image frame toggles into full screen mode.</p>
+<p>Within the image frame there are links to download the image and the GeoJSON camera file.</p>
+<div class="figure align-center">
+<img alt="Camera locations" src="../_images/cameras.png" />
+</div>
+</div>
+<div class="section" id="textured-model">
+<h3>Textured model<a class="headerlink" href="#textured-model" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>Activate this function to show load the textured model. Depending on the file size and connection speed, it may take several seconds to load.</p>
+<div class="figure align-center">
+<img alt="Textured model" src="../_images/texturedmodel.png" />
+</div>
+</div>
+<div class="section" id="appearance">
+<h3>Appearance<a class="headerlink" href="#appearance" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="point-budget">
+<h4>Point budget<a class="headerlink" href="#point-budget" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>For both appearance and performance purposes, the point budget on the scene can be managed. Some old and less capable machines would benefit from a 500,000 point budget while most mid-range specs machine are capable of handling 1 to 2 million point budget.</p>
+<p>A 5 to 7 million point budget produces a smooth point cloud 3d model, but may result in a high resource demanding process.</p>
+<p>Default point budget value is set to 1,000,000.</p>
+</div>
+<div class="section" id="field-of-view">
+<h4>Field of view<a class="headerlink" href="#field-of-view" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>In order to control model elements to be included within the scene the field of view can be adjusted. Default value is set to 60 degrees.</p>
+<div class="figure align-center">
+<img alt="Field of view adjustment" src="../_images/FOV_animation.gif" />
+</div>
+</div>
+<div class="section" id="eye-dome-lighting">
+<h4>Eye Dome-lighting<a class="headerlink" href="#eye-dome-lighting" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>The Potree Point Cloud 3d viewer module can implement eye dome-lighting, a lighting model that accentuates the shapes of objects.</p>
+<p>Eye Dome-lighting group objects, shade their outlines and enhances depth perception in scientific visualization images. It is useful for recognition and measurement of structures within a model. It can be modified by adjusting Radius, Strength and Opacity.</p>
+<p>By default, Eye Dome-Lighting is enabled on Potree 3D viewer, but it can be disabled by clicking on the enable option.</p>
+<div class="figure align-center">
+<img alt="Eye dome lighting adjustment" src="../_images/EDL_animation.gif" />
+</div>
+</div>
+<div class="section" id="background">
+<h4>Background<a class="headerlink" href="#background" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Potree 3D viewer background can be modified. Available options are <strong>Skybox</strong> / <strong>Gradient</strong> / <strong>Black</strong> / <strong>White</strong> / <strong>None</strong></p>
+<div class="figure align-center">
+<img alt="Background selection" src="../_images/Background_animation.gif" />
+</div>
+</div>
+<div class="section" id="other">
+<h4>Other<a class="headerlink" href="#other" title="Enlazar permanentemente con este título">¶</a></h4>
+<p><strong>Splat Quality</strong> = Splat quality can be adjusted to standard or high quality, to improve the appearance of the model.</p>
+<p><strong>Min node size</strong> = Min node size option will impact the point density of the nodes represented.</p>
+<p><strong>Box</strong> = Display the boxes of the nodes.</p>
+<p><strong>Lock view</strong> = Lock the point cloud view, preventing to load or unload points to the model.</p>
+</div>
+</div>
+<div class="section" id="tools">
+<h3>Tools<a class="headerlink" href="#tools" title="Enlazar permanentemente con este título">¶</a></h3>
+<div class="section" id="measurement">
+<h4>Measurement<a class="headerlink" href="#measurement" title="Enlazar permanentemente con este título">¶</a></h4>
+<p>Potree 3D viewer module provides several tools for measurement. This tool set consist of 12 elements.
+It also has controls for showing or hiding the resulting measurement labels.</p>
+<p>Measurements are performed by left clicking on the desired points and for some tools right clicking is needed in order to terminate the process.</p>
+<div class="figure align-center">
+<img alt="Tools - Measurement tools" src="../_images/measurement.png" />
+</div>
+<p><strong>Angle</strong></p>
+<p>This tool measures the tridimensional angle formed by the lines connecting 3 points.
+To start a measurement, click on the angle icon, then left click on 3 point and the process will be automatically ended.
+Further information can also be obtained from selecting this element under the scene section.</p>
+<p><strong>Point</strong></p>
+<p>This tool highlights a selected point and display its XYZ coordinate.
+To start a measurement, click on the point icon, then click on the desired point and the process will be automatically ended.
+Further information can also be obtained from selecting this element under the scene section.</p>
+<p><strong>Distance</strong></p>
+<p>This tool measures the tridimensional distance of the lines connecting a series of points.
+To start a measurement, click on the distance icon and start clicking on the desired points (two or more). Right click to finish measurement.
+Further information such as Total length can also be obtained from selecting this element under the scene section.</p>
+<p><strong>Height</strong></p>
+<p>This tool measures the height or vertical distance between two points.
+To start a measurement, click on the height icon and then click on the desired two points. The process will be automatically ended.
+Further information can also be obtained from selecting this element under the scene section.</p>
+<div class="figure align-center">
+<img alt="Heigth measurement" src="../_images/height_animation.gif" />
+</div>
+<p><strong>Circle</strong></p>
+<p>This tool measures the radius of a circle formed by three points.
+To start a measurement, click on the circle icon and then click on the desired two points. The process will be automatically ended.
+Further information such as Circumference can also be obtained from selecting this element under the scene section.</p>
+<p><strong>Azimuth</strong></p>
+<p>This tool measures the azimuthal angle of a line. This line is formed by two points selected by the user, the angle is measured in degrees, clockwise from 0 to 360 and starting from the geographical north.
+To start a measurement, click on the azimuth icon and then click on the desired two points. The process will be automatically ended.
+Further information can also be obtained from selecting this element under the scene section.</p>
+<p><strong>Area</strong></p>
+<p>This tool measures the horizontal area formed by a polygon.
+To start a measurement, click on the area icon and start clicking on the points forming the desired polygon (three or more). Right click to finish measurement.
+Further information can also be obtained from selecting this element under the scene section.</p>
+<p><strong>Volume (cube)</strong></p>
+<p>This tool measures the volume formed by a cube.
+To start a measurement, click on the volume (cube) icon and click on the model to place the cube. It is possible relocate, redimension and rotate the cube using the displayed handlers. Right click to finish measurement.
+Further information can also be obtained from selecting this element under the scene section.</p>
+<p><strong>Volume (sphere)</strong></p>
+<p>This tool measures the volume formed by a sphere.
+To start a measurement, click on the volume (sphere) icon and click on the model to place the sphere. It is possible relocate, redimension and rotate the sphere using the displayed handlers. Right click to finish measurement.
+Further information can also be obtained from selecting this element under the scene section.</p>
+<p><strong>Height profile</strong></p>
+<p>This tool creates a height profile formed by a line on the model.
+To start a measurement, click on the Height profile icon and then form a line on the model by clicking on the desired points (two or more). Right click to finish measurement.
+Further information and options, such as «Show 2d Profile», can also been obtained from selecting this element under the scene section.</p>
+<div class="figure align-center">
+<img alt="Heigth profile" src="../_images/height_profile.png" />
+</div>
+<p><strong>Annotation</strong></p>
+<p>This tool creates an annotation label on a highlighted point on the model.
+To start a measurement, click on the annotation icon and then click on the desired point. The process will be automatically ended.
+To edit the annotation, select this element under the scene section, then edit Title and Description.</p>
+<p><strong>Remove measurements</strong></p>
+<p>This tool removes all measurements on the model.
+To remove all measurement, click on the «Remove measurements» icon.</p>
+</div>
+<div class="section" id="clipping">
+<h4>Clipping<a class="headerlink" href="#clipping" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="figure align-center">
+<img alt="Tools - Clipping tools" src="../_images/clipping.png" />
+</div>
+<p>Point cloud can be clipped by selecting an area. Clipping options include <strong>None</strong> / <strong>Highlight</strong> / <strong>Inside</strong> / <strong>Outside</strong></p>
+<p>To clip a point cloud, click on the volume clip icon, place the cube on the model and relocate, redimension and rotate to contain the desired area.
+Highlight is set by default as the clipping method. If display only the points contained within the cube click on «Inside», otherwise click on «Outside».</p>
+<p>To remove the clipping volume or polygons click on the «Remove all measurements» icon.</p>
+<div class="figure align-center">
+<img alt="Tools - Clipping" src="../_images/clipping_animation.gif" />
+</div>
+</div>
+<div class="section" id="navigation">
+<h4>Navigation<a class="headerlink" href="#navigation" title="Enlazar permanentemente con este título">¶</a></h4>
+<div class="figure align-center">
+<img alt="Tools - Navigation controls" src="../_images/navigation.png" />
+</div>
+<p>Potree 3D viewer have 4 Navigation controls which define its behavior.</p>
+<p><strong>Earth Control</strong></p>
+<p>Earth control navigated as anchored to the ground. Mouse left button moves the model horizontally, mouse wheel controls zoom and right button orbits the model.</p>
+<p><strong>Fly control</strong></p>
+<p>Fly control moves the camera as in birds eye using the keyboard. Keys «W» and «S» moves forward and backwards, respectively and in the direction of the camera, while «A» and «D» moves left and right respectively. Also, the «R» and «F» keys moves the camera up and down. The mouse left button changes the direction of the camera, mouse wheel controls zoom, and right button moves the camera in the XYZ axis.</p>
+<p>The speed for these movements can be controlled using the sliding control.</p>
+<p><strong>Helicopter control</strong></p>
+<p>Helicopter control moves the camera as in an aircraft using the keyboard. Keys «W» and «S» moves forward and backwards, respectively restricted in a horizontal plane, while «A» and «D» moves left and right respectively. Also, the «R» and «F» keys moves the camera up and down. The mouse left button changes the direction of the camera, mouse wheel controls zoom, and right button moves the model in the XY axis.</p>
+<p>The speed for these movements can be controlled using the sliding control.</p>
+<p><strong>Orbit Control</strong></p>
+<p>Orbit Control is the default navigation behavior. The mouse left button orbits the model, the wheel controls zoom and the right button moves the model in the XYZ axis.</p>
+<p><strong>Full extent</strong></p>
+<p>Full extent button restores the model view.</p>
+<p><strong>Navigation cube</strong></p>
+<p>Navigation cube displays a wireframe cube containing the model.</p>
+<p><strong>Compass</strong></p>
+<p>Compass button displays a compass on the upper right corner.</p>
+<p><strong>Camera animation</strong></p>
+<p>The camera animation button creates a camera animation path. Position of the camera is defined by the points on the green line while the points in the blue line are the location towards the camera is intended to be facing.</p>
+<p>To create an animation, adjust the points for the camera locations and camera direction, then select the camera element under the Scene section to create more point, change animation speed or play the animation.</p>
+<div class="figure align-center">
+<img alt="Tools - Navigation controls" src="../_images/camera_animation.gif" />
+</div>
+</div>
+</div>
+<div class="section" id="scene">
+<h3>Scene<a class="headerlink" href="#scene" title="Enlazar permanentemente con este título">¶</a></h3>
+<p>The Scene section displays a file tree containing all the scene elements.
+Elements are arranged in six groups, which are <strong>Point clouds</strong> / <strong>Measurements</strong> / <strong>Annotations</strong>
+/ <strong>Other</strong> / <strong>Vector</strong> / <strong>Images</strong></p>
+<p>Each element under these groups can be selected to get further information or to control its properties.</p>
+<p>For instance, point clouds properties can be modified to show elevation and also the color ramp cam be customized.</p>
+<div class="figure align-center">
+<img alt="Tools - Navigation controls" src="../_images/pointcloud_elevation.png" />
+</div>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst">esta página</a>!</p>
 </div>
 </div>
 </div>
