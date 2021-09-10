@@ -16,6 +16,8 @@ or similar) or more simply as a discussion topic on `the community forum <https:
 Try to start by searching these sources to see if someone else has already brought it up.  Sometimes a feature is already in 
 the works, or has at least been discussed.
 
+To request the addition of support for new drone cameras: please share a set of test images on the `datasets channel on the forum <https://community.opendronemap.org/c/datasets/10>`_. Without test images there's not much the developers can do.
+
 And importantly, the trick is to listen: if someone within the project says: "This is a big lift, 
 we need MONEY or TIME or SOMEONE TO HELP CODE IT" (or possibly a combination of the three) 
 then there are two answers that work really well in response:
