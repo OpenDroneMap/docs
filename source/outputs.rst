@@ -75,7 +75,7 @@ List of all outputs
     │   ├── metadata/
     │   ├── features/
     │   ├── matches/
-    │   ├── tracks.tsv
+    │   ├── tracks.csv
     │   ├── reconstruction.json
     │   ├── reconstruction.meshed.json
     │   ├── undistorted/
