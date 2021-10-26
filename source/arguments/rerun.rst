@@ -8,7 +8,7 @@
 rerun
 `````
 
-**Options:** *dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report*
+**Options:** *dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess*
 
 Rerun this stage only and stop. . Default: ``
 
