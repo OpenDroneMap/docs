@@ -1,3 +1,5 @@
+setup-tools
 sphinx==4.0.2
 sphinx-intl==2.0.1
 sphinx-rtd-theme==0.5.2
+wheel
