@@ -3,6 +3,7 @@
 import argparse, os, urllib.request, ast, sys
 from io import StringIO
 from string import Template
+from pathlib import Path
 
 parser = argparse.ArgumentParser(description='Extract ODM strings.')
 parser.add_argument('input', type=str,
@@ -31,13 +32,13 @@ class ArgumentParserStub(argparse.ArgumentParser):
 
         for name, value in kwargs.items():
             options[args[0]][str(name)] = str(value)
-    
+
     def add_mutually_exclusive_group(self):
         return ArgumentParserStub()
 
 # Voodoo! :)
 # ( parse AST, extract "def config()" function, set module to only
-# contain that function, execute module in current scope, 
+# contain that function, execute module in current scope,
 # run config function)
 root = ast.parse(config_file)
 new_body = []
@@ -56,7 +57,7 @@ exec(compile(root, filename="<ast>", mode="exec"))
 
 # Misc variables needed to get config to run
 __version__ = '?'
-class context:    
+class context:
     root_path = ''
     num_cores = 4
 class io:
@@ -88,7 +89,7 @@ if len(options) > 0:
 
     keys = list(options.keys())
     keys.sort(key=lambda a: a.replace("-", ""))
-    
+
     with open(argstmplfile) as f:
         argstmpl = Template(f.read())
 
@@ -99,14 +100,14 @@ if len(options) > 0:
             # Use longest name
             opt_name = max(arg_map + (opt_name, ), key=len)
         return opt_name.replace("--", "")
-    
+
     def get_opt_descr(opt):
         return options[opt].get('help', '').replace("*", "\*")
-    
+
     def get_opt_choices(opt):
         return options[opt].get('choices', options[opt].get('metavar', '')).replace('[', '').replace(']', '').replace(',', ' | ').replace('\'', '')
 
-    for opt in keys:
+    for idx,opt in enumerate(keys):
         opt_name = get_opt_name(opt)
 
         include_file = os.path.join(argsoutdir + "_edit", "%s.rst" % opt_name)
@@ -115,37 +116,27 @@ if len(options) > 0:
                 f.write("\n")
             print("Wrote %s" % include_file)
 
+        argument_edit = Path(include_file).read_text()
+
         kwargs = {
             'opt': opt_name,
-            'ticks': '`' * len(opt_name),
+            'ticks': '*' * len(opt_name),
             'descr': get_opt_descr(opt),
             'parameter': "**Options:** *%s*" % get_opt_choices(opt) if get_opt_choices(opt) else "",
-            'include': ".. include:: ../arguments_edit/%s" % os.path.basename(include_file),
+            # 'include': ".. include:: ../arguments_edit/%s" % os.path.basename(include_file),
             'editfile': os.path.join("arguments_edit", os.path.basename(include_file)),
+            'edit': argument_edit,
         }
 
-        argsoutfile = os.path.join(argsoutdir, opt_name + ".rst")
-        with open(argsoutfile, "w") as f:
-            f.write(argstmpl.substitute(**kwargs))
-        print("Wrote %s" % argsoutfile)
+        arg = argstmpl.substitute(**kwargs)
 
-    for opt in keys:
-        subst += ":ref:`%s<%s>` %s\n  %s\n\n" % (
-            get_opt_name(opt),
-            get_opt_name(opt),
-            get_opt_choices(opt),
-            get_opt_descr(opt)
-        )
+        if idx == 0:
+            header = Path(tmplfile).read_text()
+            with open(outfile, "w") as f:
+                f.write(header)
 
-    with open(tmplfile) as f:
-        tmpl = Template(f.read())
-
-
-    with open(outfile, "w") as f:
-        f.write(tmpl.substitute(arguments=subst))
-
-    print("Wrote %s" % outfile)
-
+        with open(outfile, "a") as f:
+            f.write(arg)
 
 else:
     print("No strings found")
