@@ -42,7 +42,7 @@ Press the "Fork" button at the top of this page.
 sudo apt-get install -y git python3 python3-pip
 ```
 
-### MacOS 
+### MacOS
 
 We recommend to use [Brew](https://brew.sh/) for installing Python3.
 
@@ -103,7 +103,7 @@ Then if there are no errors, run:
 make livehtml
 ```
 
-Note that if WebODM is running you should temporarely stop it while you edit the documentation.
+Note that if WebODM is running you should temporarily stop it while you edit the documentation.
 
 ## Step 4. Start Editing
 
@@ -176,7 +176,7 @@ Bold text needs to have a space before, then a double asterisk (`**`) that touch
 ```plain
 Check out the `ODM documentation <https://docs.opendronemap.org/>`_!
 ```
-Links need to have a space before, then a backtick or grave accent (\`), then the text that will become the link on the page (in the above example: "ODM documentation"), then a space, then a less than symbol (`<`), then the complete URL, then a greater than symbol and underscore (`>_`). 
+Links need to have a space before, then a backtick or grave accent (\`), then the text that will become the link on the page (in the above example: "ODM documentation"), then a space, then a less than symbol (`<`), then the complete URL, then a greater than symbol and underscore (`>_`).
 
 ![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_link_transifex.png)
 ![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_link_en.png)
@@ -184,7 +184,7 @@ Links need to have a space before, then a backtick or grave accent (\`), then th
 
 ### Code
 
-Code snippets need to have a space before, then a double backtick or grave accent (\`\`) that touches the first character of the code text, then the code text, then a double backtick or grave accent (\`\`) that touches the last character of the code text, then a space. 
+Code snippets need to have a space before, then a double backtick or grave accent (\`\`) that touches the first character of the code text, then the code text, then a double backtick or grave accent (\`\`) that touches the last character of the code text, then a space.
 
 **NOTE:** Code snippets may be referring to specific software commands and so often should NOT be translated.
 
@@ -207,7 +207,7 @@ You need to configure your account. For this, you need to create an API Token fo
 tx init --token $TOKEN --no-interactive
 ```
 
-If there are changes in the English `*.rst` source files, you can update the `.pot` files: 
+If there are changes in the English `*.rst` source files, you can update the `.pot` files:
 `sphinx-build -b gettext source source/locale/en/pot`
 
 If there are **new** English `.rst` source files, you can map them by updating the `./.tx/config` file.
@@ -223,7 +223,7 @@ To fetch translations from Transifex:
 ```
 tx pull --use-git-timestamps --all
 ```
-or 
+or
 ```
 tx pull --use-git-timestamps -l "sw,ar,es,fr,te,fil"
 ```
@@ -244,7 +244,7 @@ Start up your Python virtual environment if it's not already with `source venv/b
 
 You can also run the build for just one specific language, for example:
 
-``` 
+```
 sphinx-build -b dirhtml -D language='sw' source "_build/html/sw/"
 ```
 
@@ -257,7 +257,7 @@ Warning, treated as error:
 /path/to/my/project/OpenDroneMap/docs/source/multispectral.rst:25:<translated>:1:Inline interpreted text or phrase reference start-string without end-string.
 ```
 
-Look at the source file and line that is mentioned. In this case the file is `source/multispectral.rst` and the line is the number after the colon after the filename (`25`). Looking at the file we see that line 25 is the last line and the "Help edit these docs!" link. 
+Look at the source file and line that is mentioned. In this case the file is `source/multispectral.rst` and the line is the number after the colon after the filename (`25`). Looking at the file we see that line 25 is the last line and the "Help edit these docs!" link.
 
 Go to Transifex, go to the resource, and go to the string. The warning/error message should help you understand what went wrong. In this case the link syntax wasn't matched correctly. Fix and save the translation.
 
