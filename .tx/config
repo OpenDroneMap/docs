@@ -1,87 +1,9 @@
 [main]
 host = https://www.transifex.com
 
-[opendronemap_docs.map-accuracy]
-file_filter = source/locale/<lang>/LC_MESSAGES/map-accuracy.po
-source_file = source/locale/en/pot/map-accuracy.pot
-source_lang = en
-type = PO
-
-[opendronemap_docs.geo]
-file_filter = source/locale/<lang>/LC_MESSAGES/geo.po
-source_file = source/locale/en/pot/geo.pot
-source_lang = en
-type = PO
-
-[opendronemap_docs.masks]
-file_filter = source/locale/<lang>/LC_MESSAGES/masks.po
-source_file = source/locale/en/pot/masks.pot
-source_lang = en
-type = PO
-
 [opendronemap_docs.arguments]
 file_filter = source/locale/<lang>/LC_MESSAGES/arguments.po
 source_file = source/locale/en/pot/arguments.pot
-source_lang = en
-type = PO
-
-[opendronemap_docs.tutorials]
-file_filter = source/locale/<lang>/LC_MESSAGES/tutorials.po
-source_file = source/locale/en/pot/tutorials.pot
-source_lang = en
-type = PO
-
-[opendronemap_docs.large]
-file_filter = source/locale/<lang>/LC_MESSAGES/large.po
-source_file = source/locale/en/pot/large.pot
-source_lang = en
-type = PO
-
-[opendronemap_docs.multispectral]
-file_filter = source/locale/<lang>/LC_MESSAGES/multispectral.po
-source_file = source/locale/en/pot/multispectral.pot
-source_lang = en
-type = PO
-
-[opendronemap_docs.resources]
-file_filter = source/locale/<lang>/LC_MESSAGES/resources.po
-source_file = source/locale/en/pot/resources.pot
-source_lang = en
-type = PO
-
-[opendronemap_docs.installation]
-file_filter = source/locale/<lang>/LC_MESSAGES/installation.po
-source_file = source/locale/en/pot/installation.pot
-source_lang = en
-type = PO
-
-[opendronemap_docs.flying]
-file_filter = source/locale/<lang>/LC_MESSAGES/flying.po
-source_file = source/locale/en/pot/flying.pot
-source_lang = en
-type = PO
-
-[opendronemap_docs.outputs]
-file_filter = source/locale/<lang>/LC_MESSAGES/outputs.po
-source_file = source/locale/en/pot/outputs.pot
-source_lang = en
-type = PO
-
-[opendronemap_docs.gcp]
-file_filter = source/locale/<lang>/LC_MESSAGES/gcp.po
-source_file = source/locale/en/pot/gcp.pot
-source_lang = en
-type = PO
-
-[opendronemap_docs.index]
-file_filter = source/locale/<lang>/LC_MESSAGES/index.po
-source_file = source/locale/en/pot/index.pot
-source_lang = en
-type = PO
-
-[opendronemap_docs.requesting-features]
-file_filter = source/locale/<lang>/LC_MESSAGES/requesting-features.po
-source_file = source/locale/en/pot/requesting-features.pot
 source_lang = en
 type = PO
 
@@ -91,3 +13,86 @@ source_file = source/locale/en/pot/contributing.pot
 source_lang = en
 type = PO
 
+[opendronemap_docs.faq]
+file_filter = source/locale/<lang>/LC_MESSAGES/faq.po
+source_file = source/locale/en/pot/faq.pot
+source_lang = en
+type = PO
+
+[opendronemap_docs.flying]
+file_filter = source/locale/<lang>/LC_MESSAGES/flying.po
+source_file = source/locale/en/pot/flying.pot
+source_lang = en
+type = PO
+
+[opendronemap_docs.gcp]
+file_filter = source/locale/<lang>/LC_MESSAGES/gcp.po
+source_file = source/locale/en/pot/gcp.pot
+source_lang = en
+type = PO
+
+[opendronemap_docs.geo]
+file_filter = source/locale/<lang>/LC_MESSAGES/geo.po
+source_file = source/locale/en/pot/geo.pot
+source_lang = en
+type = PO
+
+[opendronemap_docs.index]
+file_filter = source/locale/<lang>/LC_MESSAGES/index.po
+source_file = source/locale/en/pot/index.pot
+source_lang = en
+type = PO
+
+[opendronemap_docs.installation]
+file_filter = source/locale/<lang>/LC_MESSAGES/installation.po
+source_file = source/locale/en/pot/installation.pot
+source_lang = en
+type = PO
+
+[opendronemap_docs.large]
+file_filter = source/locale/<lang>/LC_MESSAGES/large.po
+source_file = source/locale/en/pot/large.pot
+source_lang = en
+type = PO
+
+[opendronemap_docs.map-accuracy]
+file_filter = source/locale/<lang>/LC_MESSAGES/map-accuracy.po
+source_file = source/locale/en/pot/map-accuracy.pot
+source_lang = en
+type = PO
+
+[opendronemap_docs.masks]
+file_filter = source/locale/<lang>/LC_MESSAGES/masks.po
+source_file = source/locale/en/pot/masks.pot
+source_lang = en
+type = PO
+
+[opendronemap_docs.multispectral]
+file_filter = source/locale/<lang>/LC_MESSAGES/multispectral.po
+source_file = source/locale/en/pot/multispectral.pot
+source_lang = en
+type = PO
+
+[opendronemap_docs.outputs]
+file_filter = source/locale/<lang>/LC_MESSAGES/outputs.po
+source_file = source/locale/en/pot/outputs.pot
+source_lang = en
+type = PO
+
+[opendronemap_docs.requesting-features]
+file_filter = source/locale/<lang>/LC_MESSAGES/requesting-features.po
+source_file = source/locale/en/pot/requesting-features.pot
+source_lang = en
+type = PO
+
+[opendronemap_docs.resources]
+file_filter = source/locale/<lang>/LC_MESSAGES/resources.po
+source_file = source/locale/en/pot/resources.pot
+source_lang = en
+type = PO
+
+[opendronemap_docs.tutorials]
+file_filter = source/locale/<lang>/LC_MESSAGES/tutorials.po
+source_file = source/locale/en/pot/tutorials.pot
+source_lang = en
+type = PO
