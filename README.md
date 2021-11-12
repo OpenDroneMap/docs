@@ -95,6 +95,8 @@ pip install -r requirements.txt
 
 After running `source venv/bin/activate` there should be some indication that the Python virtual environment is active (see the `(venv)` that appears at the start of terminal prompt in the screengrab below). **Note:** The next time you can `cd` into the docs folder and just run `source venv/bin/activate`. There should be no need to rerun the `pip install` and `virtualenv` commands.
 
+Note: If you've installed `sphinx` on your system, you may run into issues with commands using that version instead of the version inside your virtualenv.
+
 ![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/terminal_venv.png)
 
 Then if there are no errors, run:
@@ -204,34 +206,17 @@ This project uses [Transifex](https://www.transifex.com/) and the [`transifex-cl
 You need to configure your account. For this, you need to create an API Token for your user to access this service through the command line. This can be done under your Transifex [User’s Settings](https://www.transifex.com/user/settings/api/). Set it up to use the token:
 
 ```
-tx init --token $TOKEN --no-interactive
+tx init --token $TOKEN --skipsetup
 ```
-
-If there are changes in the English `*.rst` source files, you can update the `.pot` files:
-`sphinx-build -b gettext source source/locale/en/pot`
 
 If there are **new** English `.rst` source files, you can map them by updating the `./.tx/config` file.
 
-To then update the English source on Transifex:
-
+After updating the individual argument files with `make autogenerate`, you can run
 ```
-tx push --source
-```
-
-To fetch translations from Transifex:
-
-```
-tx pull --use-git-timestamps --all
-```
-or
-```
-tx pull --use-git-timestamps -l "sw,ar,es,fr,te,fil"
-```
-
-Alternatively, you can pull only a specific language. For example:
-
-```
-tx pull -l sw
+make updatepot
+make updatelangpo
+make pushlang
+make pulllang
 ```
 
 To add a new language, do it through the Transifex interface and then add a new line to the Makefile `deploy` command.
