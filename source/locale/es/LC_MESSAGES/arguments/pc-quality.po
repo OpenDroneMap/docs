@@ -1,0 +1,41 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.6.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-12 15:01-0500\n"
+"PO-Revision-Date: 2021-11-12 20:55+0000\n"
+"Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: es\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+
+#: ../../arguments/pc-quality.rst:9
+msgid "pc-quality"
+msgstr ""
+
+#: ../../arguments/pc-quality.rst:11
+msgid "**Options:** *ultra |  high |  medium |  low |  lowest*"
+msgstr ""
+
+#: ../../arguments/pc-quality.rst:13
+msgid ""
+"Set point cloud quality. Higher quality generates better, denser point "
+"clouds, but requires more memory and takes longer. Each step up in quality "
+"increases processing time roughly by a factor of 4x.. Default: ``medium``"
+msgstr ""
+
+#: ../../arguments/pc-quality.rst:18
+msgid ""
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
+"contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/pc-"
+"quality.rst>`_!"
+msgstr ""

@@ -1,208 +1,212 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2020, OpenDroneMap
-# This file is distributed under the same license as the OpenDroneMap package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
 # Translators:
 # Khadija Abdulla <khastylez@gmail.com>, 2020
 # danbjoseph <danbjoseph@gmail.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 08:47-0400\n"
+"POT-Creation-Date: 2021-11-12 15:01-0500\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
-"Language-Team: Arabic (https://www.transifex.com/americanredcross/teams/111882/ar/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: ar\n"
-"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5;\n"
+"Language-Team: Arabic "
+"(https://www.transifex.com/americanredcross/teams/111882/ar/)\n"
+"Plural-Forms: nplurals=6; plural=n==0 ? 0 : n==1 ? 1 : n==2 ? 2 : "
+"n%100>=3 && n%100<=10 ? 3 : n%100>=11 && n%100<=99 ? 4 : 5\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: ../../../tutorials.rst:5
+#: ../../tutorials.rst:5
 msgid "Tutorials"
 msgstr "دروس"
 
-#: ../../../tutorials.rst:7
+#: ../../tutorials.rst:7
 msgid "Below you will find instructions for some common use cases."
 msgstr "ستجد أدناه تعليمات لبعض حالات الاستخدام الشائعة."
 
-#: ../../../tutorials.rst:11
+#: ../../tutorials.rst:11
 msgid "Creating High Quality Orthophotos"
 msgstr "إنشاء Orthophotos عالية الجودة"
 
-#: ../../../tutorials.rstNone
 msgid "image of OpenDroneMap orthophoto"
 msgstr ""
 
-#: ../../../tutorials.rst:17
+#: ../../tutorials.rst:17
 msgid ""
-"Without any parameter tweaks, ODM chooses a good compromise between quality,"
-" speed and memory usage. If you want to get higher quality results, you need"
-" to tweak some parameters:"
+"Without any parameter tweaks, ODM chooses a good compromise between "
+"quality, speed and memory usage. If you want to get higher quality "
+"results, you need to tweak some parameters:"
 msgstr ""
 "بدون أي تعديلات في المعلمات ، يختار ODM حل وسط جيد بين الجودة والسرعة "
-"واستخدام الذاكرة. إذا كنت ترغب في الحصول على نتائج عالية الجودة ، فأنت بحاجة"
-" إلى تعديل بعض المعلمات:"
+"واستخدام الذاكرة. إذا كنت ترغب في الحصول على نتائج عالية الجودة ، فأنت "
+"بحاجة إلى تعديل بعض المعلمات:"
 
-#: ../../../tutorials.rst:19
+#: ../../tutorials.rst:19
 msgid ""
-"``--orthophoto-resolution`` is the resolution of the orthophoto in cm/pixel."
-" Decrease this value for a higher resolution result."
+"``--orthophoto-resolution`` is the resolution of the orthophoto in "
+"cm/pixel. Decrease this value for a higher resolution result."
 msgstr ""
 "Resolution '' هي دقة صورة Orthophoto بالسنتيمتر / بكسل. إنقاص هذه القيمة "
 "للحصول على نتيجة دقة أعلى."
 
-#: ../../../tutorials.rst:20
+#: ../../tutorials.rst:20
 msgid ""
 "``--ignore-gsd`` is a flag that instructs ODM to skip certain memory and "
 "speed optimizations that directly affect the orthophoto. Using this flag "
 "will increase runtime and memory usage, but may produce sharper results."
 msgstr ""
-"\"--ignore-gsd\" هي علامة توجه تعليمات ODM لتخطي بعض الذاكرة وتحسينات السرعة"
-" التي تؤثر بشكل مباشر على الصورة. سيؤدي استخدام هذه العلامة إلى زيادة وقت "
-"التشغيل واستخدام الذاكرة ، ولكن قد ينتج عنه نتائج أكثر وضوحًا."
+"\"--ignore-gsd\" هي علامة توجه تعليمات ODM لتخطي بعض الذاكرة وتحسينات "
+"السرعة التي تؤثر بشكل مباشر على الصورة. سيؤدي استخدام هذه العلامة إلى "
+"زيادة وقت التشغيل واستخدام الذاكرة ، ولكن قد ينتج عنه نتائج أكثر وضوحًا."
 
-#: ../../../tutorials.rst:21
+#: ../../tutorials.rst:21
 msgid ""
-"``--texturing-nadir-weight`` should be increased to ``29-32`` in urban areas"
-" to reconstruct better edges of roofs. It should be decreased to ``0-6`` in "
-"grassy / flat areas."
+"``--texturing-nadir-weight`` should be increased to ``29-32`` in urban "
+"areas to reconstruct better edges of roofs. It should be decreased to "
+"``0-6`` in grassy / flat areas."
 msgstr ""
 "يجب زيادة ``-texturing-nadir-weight`` إلى ``29-32`` في المناطق الحضرية "
-"لإعادة بناء حواف أفضل للأسقف. يجب تخفيضها إلى \"0-6\" في المناطق العشبية / "
-"المسطحة."
+"لإعادة بناء حواف أفضل للأسقف. يجب تخفيضها إلى \"0-6\" في المناطق العشبية "
+"/ المسطحة."
 
-#: ../../../tutorials.rst:22
+#: ../../tutorials.rst:22
 msgid "``--texturing-data-term`` should be set to `area` in forest areas."
 msgstr "يجب تعيين ``--texturing-data-term`` على \"المنطقة\" في مناطق الغابات."
 
-#: ../../../tutorials.rst:23
+#: ../../tutorials.rst:23
 msgid ""
 "``--mesh-size`` should be increased to ``300000-600000`` and ``--mesh-"
-"octree-depth`` should be increased to ``10-11`` in urban areas to recreate "
-"better buildings / roofs."
+"octree-depth`` should be increased to ``10-11`` in urban areas to "
+"recreate better buildings / roofs."
 msgstr ""
-"يجب زيادة ``mesh-size--`` إلى ``300000-600000`` و ``--mesh-octree-depth`` "
-"يجب زيادتها إلى ``10-11`` في المناطق الحضرية لإعادة إنشاء مباني / أسقف أفضل."
+"يجب زيادة ``mesh-size--`` إلى ``300000-600000`` و ``--mesh-octree-depth``"
+" يجب زيادتها إلى ``10-11`` في المناطق الحضرية لإعادة إنشاء مباني / أسقف "
+"أفضل."
 
-#: ../../../tutorials.rst:27
+#: ../../tutorials.rst:27
 msgid "Calibrating the Camera"
 msgstr "معايرة الكاميرا"
 
-#: ../../../tutorials.rst:29
+#: ../../tutorials.rst:29
 msgid ""
 "Camera calibration is a special challenge with commodity cameras. "
 "Temperature changes, vibrations, focus, and other factors can affect the "
-"derived parameters with substantial effects on resulting data. Automatic or "
-"self calibration is possible and desirable with drone flights, but depending"
-" on the flight pattern, automatic calibration may not remove all distortion "
-"from the resulting products. James and Robson (2014) in their paper "
-"`Mitigating systematic error in topographic models derived from UAV and "
-"ground‐based image networks "
-"<https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609>`_ address how to"
-" minimize the distortion from self-calibration."
+"derived parameters with substantial effects on resulting data. Automatic "
+"or self calibration is possible and desirable with drone flights, but "
+"depending on the flight pattern, automatic calibration may not remove all"
+" distortion from the resulting products. James and Robson (2014) in their"
+" paper `Mitigating systematic error in topographic models derived from "
+"UAV and ground‐based image networks "
+"<https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609>`_ address how"
+" to minimize the distortion from self-calibration."
 msgstr ""
-"تعد معايرة الأميرة تحديًا خاصًا مع كاميرات السلع. يمكن أن تؤثر التغيرات في "
-"درجات الحرارة والاهتزازات والتركيز والعوامل الأخرى على المعلمات المشتقة مع "
-"تأثيرات كبيرة على البيانات الناتجة. المعايرة التلقائية أو الذاتية ممكنة "
-"ومرغوب فيها مع رحلات الطائرات بدون طيار ، ولكن اعتمادًا على نمط الرحلة ، قد "
-"لا تؤدي المعايرة التلقائية إلى إزالة كل التشويه من المنتجات الناتجة. جيمس "
-"وروبسون (2014) في ورقتهما بعنوان `` التخفيف من الخطأ المنهجي في النماذج "
-"الطبوغرافية المشتقة من الطائرات بدون طيار وشبكات الصور الأرضية "
-"<https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609> \"_ معالجة كيف "
-"لتقليل التشويه من المعايرة الذاتية."
+"تعد معايرة الأميرة تحديًا خاصًا مع كاميرات السلع. يمكن أن تؤثر التغيرات "
+"في درجات الحرارة والاهتزازات والتركيز والعوامل الأخرى على المعلمات "
+"المشتقة مع تأثيرات كبيرة على البيانات الناتجة. المعايرة التلقائية أو "
+"الذاتية ممكنة ومرغوب فيها مع رحلات الطائرات بدون طيار ، ولكن اعتمادًا على"
+" نمط الرحلة ، قد لا تؤدي المعايرة التلقائية إلى إزالة كل التشويه من "
+"المنتجات الناتجة. جيمس وروبسون (2014) في ورقتهما بعنوان `` التخفيف من "
+"الخطأ المنهجي في النماذج الطبوغرافية المشتقة من الطائرات بدون طيار وشبكات"
+" الصور الأرضية "
+"<https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609> \"_ معالجة "
+"كيف لتقليل التشويه من المعايرة الذاتية."
 
-#: ../../../tutorials.rstNone ../../../tutorials.rstNone
 msgid "image of lens distortion effect on bowling of data"
 msgstr ""
 
-#: ../../../tutorials.rst:35
+#: ../../tutorials.rst:35
 msgid ""
-"*Bowling effect on point cloud over 13,000+ image dataset collected by World"
-" Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, "
+"*Bowling effect on point cloud over 13,000+ image dataset collected by "
+"World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, "
 "Tanzania.*"
 msgstr ""
-"* تأثير البولينج على السحابة النقطية أكثر من 13000 مجموعة بيانات للصور تم "
-"جمعها من قبل البنك الدولي في تنزانيا حول حوض الفيضانات المعرض للفيضانات ، "
-"دار السلام ، تنزانيا. *"
+"* تأثير البولينج على السحابة النقطية أكثر من 13000 مجموعة بيانات للصور تم"
+" جمعها من قبل البنك الدولي في تنزانيا حول حوض الفيضانات المعرض للفيضانات "
+"، دار السلام ، تنزانيا. *"
 
-#: ../../../tutorials.rst:37
+#: ../../tutorials.rst:37
 msgid ""
 "To mitigate this effect, there are a few options but the simplest are as "
-"follows: fly two patterns separated by 20°, and rather than having a nadir "
-"(straight down pointing) camera, use one that tilts forward by 5°."
+"follows: fly two patterns separated by 20°, and rather than having a "
+"nadir (straight down pointing) camera, use one that tilts forward by 5°."
 msgstr ""
 "للتخفيف من هذا التأثير ، هناك عدد قليل من الخيارات ولكن أبسطها على النحو "
 "التالي: حلّق بنمطين مفصولين بـ 20 درجة ، وبدلاً من أن يكون لديك كاميرا "
 "(إشارة مستقيمة لأسفل) ، استخدم واحدًا يميل إلى الأمام بمقدار 5 درجات."
 
-#: ../../../tutorials.rstNone
 msgid "animation showing optimum"
 msgstr ""
 
-#: ../../../tutorials.rst:45
+#: ../../tutorials.rst:45
 msgid ""
-"As this approach to flying can be take longer than typical flights, a pilot "
-"or team can fly a small area using the above approach. OpenDroneMap will "
-"generate a calibration file called cameras.json that then can be imported to"
-" be used to calibrate another flight that is more efficiently flown."
+"As this approach to flying can be take longer than typical flights, a "
+"pilot or team can fly a small area using the above approach. OpenDroneMap"
+" will generate a calibration file called cameras.json that then can be "
+"imported to be used to calibrate another flight that is more efficiently "
+"flown."
 msgstr ""
 "نظرًا لأن هذا النهج في الطيران يمكن أن يستغرق وقتًا أطول من الرحلات "
 "النموذجية ، يمكن للطيار أو الفريق أن يطير في منطقة صغيرة باستخدام النهج "
-"أعلاه. ستقوم OpenDroneMap بإنشاء ملف معايرة يسمى camera.json يمكن استيراده "
-"بعد ذلك لاستخدامه لمعايرة رحلة أخرى يتم نقلها بكفاءة أكبر."
+"أعلاه. ستقوم OpenDroneMap بإنشاء ملف معايرة يسمى camera.json يمكن "
+"استيراده بعد ذلك لاستخدامه لمعايرة رحلة أخرى يتم نقلها بكفاءة أكبر."
 
-#: ../../../tutorials.rst:47
+#: ../../tutorials.rst:47
 msgid ""
-"Alternatively, the following experimental method can be applied: fly with "
-"much lower overlap, but two *crossgrid* flights (sometimes called "
+"Alternatively, the following experimental method can be applied: fly with"
+" much lower overlap, but two *crossgrid* flights (sometimes called "
 "crosshatch) separated by 20° with a 5° forward facing camera."
 msgstr ""
-"بدلاً من ذلك ، يمكن تطبيق الطريقة التجريبية التالية: حلّق بتداخل أقل بكثير ،"
-" لكن رحلتين * متصالبتين * (تسمى أحيانًا التقاطع المائل) مفصولتين بزاوية 20 "
-"درجة مع كاميرا أمامية 5 درجات."
+"بدلاً من ذلك ، يمكن تطبيق الطريقة التجريبية التالية: حلّق بتداخل أقل "
+"بكثير ، لكن رحلتين * متصالبتين * (تسمى أحيانًا التقاطع المائل) مفصولتين "
+"بزاوية 20 درجة مع كاميرا أمامية 5 درجات."
 
-#: ../../../tutorials.rst:49
+#: ../../tutorials.rst:49
+#, python-format
 msgid ""
 "Crossgrid overlap percentages can be lower than parallel flights. To get "
-"good 3D results, you will require 68% overlap and sidelap for an equivalent "
-"83% overlap and sidelap."
+"good 3D results, you will require 68% overlap and sidelap for an "
+"equivalent 83% overlap and sidelap."
 msgstr ""
-"مكن أن تكون نسب التداخل بين خطوط الشبكة أقل من الرحلات المتوازية. للحصول على"
-" نتائج جيدة ثلاثية الأبعاد ، ستحتاج إلى تداخل 68٪ و sidelap لما يعادل 83٪ "
-"تداخل و sidelap."
+"مكن أن تكون نسب التداخل بين خطوط الشبكة أقل من الرحلات المتوازية. للحصول "
+"على نتائج جيدة ثلاثية الأبعاد ، ستحتاج إلى تداخل 68٪ و sidelap لما يعادل "
+"83٪ تداخل و sidelap."
 
-#: ../../../tutorials.rst:50
+#: ../../tutorials.rst:50
+#, python-format
 msgid ""
-"To get good 2D and 2.5D (digital elevation model) results, you will require "
-"42% overlap and sidelap for an equivalent 70% overlap and sidelap."
+"To get good 2D and 2.5D (digital elevation model) results, you will "
+"require 42% overlap and sidelap for an equivalent 70% overlap and "
+"sidelap."
 msgstr ""
 "للحصول على نتائج جيدة ثنائية الأبعاد و 2.5 D (نموذج الارتفاع الرقمي) ، "
 "ستحتاج إلى 42٪ تداخل و sidelap للحصول على 70٪ تراكب و sidelap مكافئ."
 
-#: ../../../tutorials.rstNone
 msgid "animation showing experimental optimum"
 msgstr ""
 
-#: ../../../tutorials.rst:56
+#: ../../tutorials.rst:56
 msgid ""
-"Vertically separated flight lines also improve accuracy, but less so than a "
-"camera that is forward facing by 5°."
+"Vertically separated flight lines also improve accuracy, but less so than"
+" a camera that is forward facing by 5°."
 msgstr ""
-"كما تحسن خطوط الطيران المنفصلة عموديًا الدقة ، ولكنها أقل دقة من الكاميرا "
-"التي تواجه الأمام بمقدار 5 درجات."
+"كما تحسن خطوط الطيران المنفصلة عموديًا الدقة ، ولكنها أقل دقة من الكاميرا"
+" التي تواجه الأمام بمقدار 5 درجات."
 
-#: ../../../tutorials.rstNone
 msgid ""
 "figure showing effect of vertically separated flight lines and forward "
 "facing cameras on improving self calibration"
 msgstr ""
 
-#: ../../../tutorials.rst:62
+#: ../../tutorials.rst:62
 msgid ""
 "From James and Robson (2014), `CC BY 4.0 "
 "<https://creativecommons.org/licenses/by/4.0>`_"
@@ -210,597 +214,593 @@ msgstr ""
 "من James and Robson (2014), `CC BY 4.0 "
 "<https://creativecommons.org/licenses/by/4.0>`_"
 
-#: ../../../tutorials.rst:66
+#: ../../tutorials.rst:66
 msgid "Creating Digital Elevation Models"
 msgstr "إنشاء نماذج الارتفاعات الرقمية"
 
-#: ../../../tutorials.rst:68
+#: ../../tutorials.rst:68
 msgid ""
-"By default ODM does not create DEMs. To create a digital terrain model, make"
-" sure to pass the ``--dtm`` flag. To create a digital surface model, be sure"
-" to pass the ``--dsm`` flag."
+"By default ODM does not create DEMs. To create a digital terrain model, "
+"make sure to pass the ``--dtm`` flag. To create a digital surface model, "
+"be sure to pass the ``--dsm`` flag."
 msgstr ""
 "بشكل افتراضي لا يُنشئ ODM DEMs. لإنشاء نموذج تضاريس رقمي ، تأكد من تمرير "
 "علامة \"--dtm\". لإنشاء نموذج سطح رقمي ، تأكد من تمرير علامة \"--dsm\"."
 
-#: ../../../tutorials.rstNone
 msgid "image of OpenDroneMap derived digital surface model"
 msgstr ""
 
-#: ../../../tutorials.rst:74
+#: ../../tutorials.rst:74
 msgid ""
-"For DTM generation, a Simple Morphological Filter (smrf) is used to classify"
-" points in ground vs. non-ground and only the ground points are used. The "
-"``smrf`` filter can be controlled via several parameters:"
+"For DTM generation, a Simple Morphological Filter (smrf) is used to "
+"classify points in ground vs. non-ground and only the ground points are "
+"used. The ``smrf`` filter can be controlled via several parameters:"
 msgstr ""
-"بالنسبة لتوليد DTM ، يتم استخدام مرشح مورفولوجي بسيط (smrf) لتصنيف النقاط في"
-" الأرض مقابل غير الأرض ويتم استخدام نقاط الأرض فقط. يمكن التحكم في مرشح `` "
-"smrf '' من خلال عدة معلمات:"
+"بالنسبة لتوليد DTM ، يتم استخدام مرشح مورفولوجي بسيط (smrf) لتصنيف النقاط"
+" في الأرض مقابل غير الأرض ويتم استخدام نقاط الأرض فقط. يمكن التحكم في "
+"مرشح `` smrf '' من خلال عدة معلمات:"
 
-#: ../../../tutorials.rst:76
+#: ../../tutorials.rst:76
 msgid ""
-"``--smrf-scalar`` scaling value. Increase this parameter for terrains with "
-"lots of height variation."
+"``--smrf-scalar`` scaling value. Increase this parameter for terrains "
+"with lots of height variation."
 msgstr ""
-"قيمة القياس `` - smrf-scalar ''. قم بزيادة هذه المعلمة للتضاريس مع الكثير من"
-" الاختلافات في الارتفاع."
+"قيمة القياس `` - smrf-scalar ''. قم بزيادة هذه المعلمة للتضاريس مع الكثير"
+" من الاختلافات في الارتفاع."
 
-#: ../../../tutorials.rst:77
+#: ../../tutorials.rst:77
 msgid ""
-"``--smrf-slope`` slope parameter, which is a measure of \"slope tolerance\"."
-" Increase this parameter for terrains with lots of height variation. Should "
-"be set to something higher than 0.1 and not higher than 1.2."
+"``--smrf-slope`` slope parameter, which is a measure of \"slope "
+"tolerance\". Increase this parameter for terrains with lots of height "
+"variation. Should be set to something higher than 0.1 and not higher than"
+" 1.2."
 msgstr ""
-"معلمة المنحدر `` - smrf-slope '' ، وهو مقياس لـ \"تحمل المنحدر\". قم بزيادة "
-"هذه المعلمة للتضاريس مع الكثير من الاختلافات في الارتفاع. يجب ضبطه على شيء "
-"أعلى من 0.1 وليس أعلى من 1.2."
+"معلمة المنحدر `` - smrf-slope '' ، وهو مقياس لـ \"تحمل المنحدر\". قم "
+"بزيادة هذه المعلمة للتضاريس مع الكثير من الاختلافات في الارتفاع. يجب ضبطه"
+" على شيء أعلى من 0.1 وليس أعلى من 1.2."
 
-#: ../../../tutorials.rst:78
+#: ../../tutorials.rst:78
 msgid ""
-"``--smrf-threshold`` elevation threshold. Set this parameter to the minimum "
-"height (in meters) that you expect non-ground objects to be."
+"``--smrf-threshold`` elevation threshold. Set this parameter to the "
+"minimum height (in meters) that you expect non-ground objects to be."
 msgstr ""
-"عتبة ارتفاع \"- smrf-threshold\". اضبط هذه المعلمة على الحد الأدنى للارتفاع "
-"(بالأمتار) الذي تتوقعه من الكائنات غير الأرضية."
+"عتبة ارتفاع \"- smrf-threshold\". اضبط هذه المعلمة على الحد الأدنى "
+"للارتفاع (بالأمتار) الذي تتوقعه من الكائنات غير الأرضية."
 
-#: ../../../tutorials.rst:79
+#: ../../tutorials.rst:79
 msgid ""
-"``--smrf-window`` window radius parameter (in meters) that corresponds to "
-"the size of the largest feature (building, trees, etc.) to be removed. "
+"``--smrf-window`` window radius parameter (in meters) that corresponds to"
+" the size of the largest feature (building, trees, etc.) to be removed. "
 "Should be set to a value higher than 10."
 msgstr ""
-"`` --smrf-window '' معلمة نصف قطر النافذة (بالأمتار) التي تتوافق مع حجم أكبر"
-" ميزة (المبنى والأشجار وما إلى ذلك) المراد إزالتها. يجب ضبطه على قيمة أعلى "
-"من 10."
+"`` --smrf-window '' معلمة نصف قطر النافذة (بالأمتار) التي تتوافق مع حجم "
+"أكبر ميزة (المبنى والأشجار وما إلى ذلك) المراد إزالتها. يجب ضبطه على قيمة"
+" أعلى من 10."
 
-#: ../../../tutorials.rst:81
+#: ../../tutorials.rst:81
 msgid ""
-"Changing these options can affect the result of DTMs significantly. The best"
-" source to read to understand how the parameters affect the output is to "
-"read the original paper `An improved simple morphological filter for the "
-"terrain classification of airborne LIDAR data "
+"Changing these options can affect the result of DTMs significantly. The "
+"best source to read to understand how the parameters affect the output is"
+" to read the original paper `An improved simple morphological filter for "
+"the terrain classification of airborne LIDAR data "
 "<https://www.researchgate.net/publication/258333806_An_Improved_Simple_Morphological_Filter_for_the_Terrain_Classification_of_Airborne_LIDAR_Data>`_"
 " (PDF freely available)."
 msgstr ""
-"يمكن أن يؤثر تغيير هذه الخيارات على نتيجة DTM بشكل كبير. أفضل مصدر للقراءة "
-"لفهم كيفية تأثير المعلمات على الإخراج هو قراءة الورقة الأصلية `مرشح "
-"مورفولوجي بسيط محسن لتصنيف التضاريس لبيانات LIDAR المحمولة جواً "
+"يمكن أن يؤثر تغيير هذه الخيارات على نتيجة DTM بشكل كبير. أفضل مصدر "
+"للقراءة لفهم كيفية تأثير المعلمات على الإخراج هو قراءة الورقة الأصلية "
+"`مرشح مورفولوجي بسيط محسن لتصنيف التضاريس لبيانات LIDAR المحمولة جواً "
 "<https://www.researchgate.net/publication/258333806_An_Improved_Simple_Morphological_Filter_for_the_Terrain_Classification_of_AirDatae_LIDAR_DATA>`_"
 " (PDF متاح مجانًا)."
 
-#: ../../../tutorials.rst:83
-msgid ""
-"Overall the ``--smrf-threshold`` option has the biggest impact on results."
+#: ../../tutorials.rst:83
+msgid "Overall the ``--smrf-threshold`` option has the biggest impact on results."
 msgstr "بشكل عام ، فإن خيار \"- smrf-threshold\" له أكبر الأثر على النتائج."
 
-#: ../../../tutorials.rst:85
+#: ../../tutorials.rst:85
 msgid ""
 "SMRF is good at avoiding Type I errors (small number of ground points "
 "mistakenly classified as non-ground) but only \"acceptable\" at avoiding "
 "Type II errors (large number non-ground points mistakenly classified as "
-"ground). This needs to be taken in consideration when generating DTMs that "
-"are meant to be used visually, since objects mistaken for ground look like "
-"artifacts in the final DTM."
+"ground). This needs to be taken in consideration when generating DTMs "
+"that are meant to be used visually, since objects mistaken for ground "
+"look like artifacts in the final DTM."
 msgstr ""
-"SMRF جيد في تجنب أخطاء النوع الأول (عدد صغير من نقاط الأرض المصنفة خطأً على "
-"أنها غير أرضية) ولكنها \"مقبولة\" فقط في تجنب أخطاء النوع الثاني (عدد كبير "
-"من النقاط غير الأرضية مصنفة خطأً كأرضية). يجب أن يؤخذ هذا في الاعتبار عند "
-"إنشاء DTMs التي من المفترض أن يتم استخدامها بصريًا ، لأن الكائنات التي تم "
-"الخلط بينها وبين الأرض تبدو وكأنها قطع أثرية في DTM النهائية."
+"SMRF جيد في تجنب أخطاء النوع الأول (عدد صغير من نقاط الأرض المصنفة خطأً "
+"على أنها غير أرضية) ولكنها \"مقبولة\" فقط في تجنب أخطاء النوع الثاني (عدد"
+" كبير من النقاط غير الأرضية مصنفة خطأً كأرضية). يجب أن يؤخذ هذا في "
+"الاعتبار عند إنشاء DTMs التي من المفترض أن يتم استخدامها بصريًا ، لأن "
+"الكائنات التي تم الخلط بينها وبين الأرض تبدو وكأنها قطع أثرية في DTM "
+"النهائية."
 
-#: ../../../tutorials.rst:91
+#: ../../tutorials.rst:91
 msgid "Two other important parameters affect DEM generation:"
 msgstr "هناك معلمتان مهمتان أخريان تؤثران على توليد DEM:"
 
-#: ../../../tutorials.rst:93
+#: ../../tutorials.rst:93
 msgid ""
 "``--dem-resolution`` which sets the output resolution of the DEM raster "
 "(cm/pixel)"
 msgstr "\"--dem-Resolution '' الذي يضبط دقة خرج DEM النقطية (سم / بكسل)"
 
-#: ../../../tutorials.rst:94
+#: ../../tutorials.rst:94
 msgid ""
 "``--dem-gapfill-steps`` which determines the number of progressive DEM "
 "layers to use. For urban scenes increasing this value to `4-5` can help "
-"produce better interpolation results in the areas that are left empty by the"
-" SMRF filter."
+"produce better interpolation results in the areas that are left empty by "
+"the SMRF filter."
 msgstr ""
 "\"-dem-gapfill-steps '' الذي يحدد عدد طبقات DEM التقدمية التي سيتم "
 "استخدامها. بالنسبة للمشاهد الحضرية ، يمكن أن تساعد زيادة هذه القيمة إلى "
-"\"4-5\" في تحقيق نتائج أفضل في الاستيفاء في المناطق التي تُركت فارغة بواسطة "
-"مرشح SMRF."
+"\"4-5\" في تحقيق نتائج أفضل في الاستيفاء في المناطق التي تُركت فارغة "
+"بواسطة مرشح SMRF."
 
-#: ../../../tutorials.rst:96
+#: ../../tutorials.rst:96
 msgid "Example of how to generate a DTM::"
 msgstr "مثال على كيفية إنشاء DTM ::"
 
-#: ../../../tutorials.rst:102
+#: ../../tutorials.rst:102
 msgid "Measuring stockpile volume"
 msgstr ""
 
-#: ../../../tutorials.rst:105
+#: ../../tutorials.rst:105
 msgid "Fieldwork planning"
 msgstr ""
 
-#: ../../../tutorials.rst:107
+#: ../../tutorials.rst:107
 msgid ""
 "Weather conditions modify illumination and thus impact the photography "
-"results. Best results are obtained with evenly overcast or clear skies. Also"
-" look for low wind speeds that allow the camera to remain stable during the "
-"data collection process. In order to avoid shadows which on one side of the "
-"stockpile can obstruct feature detection and lessen the number of resulting "
-"points, always prefer the flights during the midday, when the sun is at the "
-"nadir so everything is consistently illuminated. Also ensure that your naked"
-" eye horizontal visibility distance is congruent with the planned flight "
-"distances for the specific project, so image quality is not adversely "
-"impacted by dust, fog, smoke, volcanic ash or pollution."
+"results. Best results are obtained with evenly overcast or clear skies. "
+"Also look for low wind speeds that allow the camera to remain stable "
+"during the data collection process. In order to avoid shadows which on "
+"one side of the stockpile can obstruct feature detection and lessen the "
+"number of resulting points, always prefer the flights during the midday, "
+"when the sun is at the nadir so everything is consistently illuminated. "
+"Also ensure that your naked eye horizontal visibility distance is "
+"congruent with the planned flight distances for the specific project, so "
+"image quality is not adversely impacted by dust, fog, smoke, volcanic ash"
+" or pollution."
 msgstr ""
 
-#: ../../../tutorials.rst:112
+#: ../../tutorials.rst:112
 msgid "Flight pattern"
 msgstr ""
 
-#: ../../../tutorials.rst:114
+#: ../../tutorials.rst:114
 msgid ""
 "Most stockpile measurement jobs does not require a crosshatch pattern or "
-"angled gimbal as the resting angle of stockpile materials allows the camera "
-"to capture the entire stockpile sides. Only some special cases where erosion"
-" or machinery operations causes steep angles on the faces of the stockpile "
-"would benefit of the crosshatch flight pattern and angled camera gimbal but "
-"consider that these additional recognized features come at a cost, (in field"
-" labor and processing time) and the resulting improvements are sometimes "
-"negligible."
+"angled gimbal as the resting angle of stockpile materials allows the "
+"camera to capture the entire stockpile sides. Only some special cases "
+"where erosion or machinery operations causes steep angles on the faces of"
+" the stockpile would benefit of the crosshatch flight pattern and angled "
+"camera gimbal but consider that these additional recognized features come"
+" at a cost, (in field labor and processing time) and the resulting "
+"improvements are sometimes negligible."
 msgstr ""
 
-#: ../../../tutorials.rst:116
+#: ../../tutorials.rst:116
 msgid ""
 "In most of the cases a lawn mower flight pattern is capable of producing "
 "highly accurate stockpile models."
 msgstr ""
 
-#: ../../../tutorials.rstNone
 msgid "a simple lawnmower flight pattern can produce accurate results"
 msgstr ""
 
-#: ../../../tutorials.rst:122
+#: ../../tutorials.rst:122
 msgid ""
-"Recommended overlap would be between 75% and 80% with a sidelap in the order"
-" of 65% to 70%. It is also recommended to slightly increase overlap and "
-"sidelap as the flight height is increased."
+"Recommended overlap would be between 75% and 80% with a sidelap in the "
+"order of 65% to 70%. It is also recommended to slightly increase overlap "
+"and sidelap as the flight height is increased."
 msgstr ""
 
-#: ../../../tutorials.rst:125
+#: ../../tutorials.rst:125
 msgid "Flight height"
 msgstr ""
 
-#: ../../../tutorials.rst:127
+#: ../../tutorials.rst:127
+#, python-format
 msgid ""
-"Flight height can be influenced by different camera models, but in a general"
-" way and in order to ensure a balance between image quality and flight "
-"optimization, it is recommended to be executed at heights 3 to 4 times the "
-"tallest stockpile height. So for a 10 meter stockpile, images can be "
-"captured at a height of 40 meters. As the flight height is increased, it is "
-"also recommended to increase overlap, so for a 40 meter height flight you "
-"can set a 65% sidelap and 75% overlap, but for a planned height of 80 meters"
-" a 70% sidelap and 80% overlap allowing features to be recognized and "
-"properly processed."
+"Flight height can be influenced by different camera models, but in a "
+"general way and in order to ensure a balance between image quality and "
+"flight optimization, it is recommended to be executed at heights 3 to 4 "
+"times the tallest stockpile height. So for a 10 meter stockpile, images "
+"can be captured at a height of 40 meters. As the flight height is "
+"increased, it is also recommended to increase overlap, so for a 40 meter "
+"height flight you can set a 65% sidelap and 75% overlap, but for a "
+"planned height of 80 meters a 70% sidelap and 80% overlap allowing "
+"features to be recognized and properly processed."
 msgstr ""
 
-#: ../../../tutorials.rst:131
+#: ../../tutorials.rst:131
 msgid "GCPs"
 msgstr ""
 
-#: ../../../tutorials.rst:133
+#: ../../tutorials.rst:133
 msgid ""
 "To achieve accuracy levels better than 3%, the use of GCP’s is advised. "
-"Typically 5 distributed GCP are sufficient to ensure accurate results. When "
-"placing or measuring GCP, equipment accuracy should be greater than the GSD."
-" Survey grade GNSS and total stations  are intended to provide the required "
-"millimetric accuracy."
+"Typically 5 distributed GCP are sufficient to ensure accurate results. "
+"When placing or measuring GCP, equipment accuracy should be greater than "
+"the GSD. Survey grade GNSS and total stations  are intended to provide "
+"the required millimetric accuracy."
 msgstr ""
 
-#: ../../../tutorials.rst:136
+#: ../../tutorials.rst:136
 msgid ""
 "For further information on the use of GCPs, please refer to the `Ground "
 "Control Points section <https://docs.opendronemap.org/gcp.html>`_."
 msgstr ""
 
-#: ../../../tutorials.rst:139
+#: ../../tutorials.rst:139
 msgid "Processing parameters"
 msgstr ""
 
-#: ../../../tutorials.rst:141
+#: ../../tutorials.rst:141
 msgid ""
 "A highly accurate model can be achieved using WebODM high resolution "
 "predefined settings. Then you can further adjust some parameters as "
 "necessary."
 msgstr ""
 
-#: ../../../tutorials.rst:144
+#: ../../tutorials.rst:144
 msgid ""
-"If using ODM, these this reference values can help you configure the process"
-" settings."
+"If using ODM, these this reference values can help you configure the "
+"process settings."
 msgstr ""
 
-#: ../../../tutorials.rst:146
+#: ../../tutorials.rst:146
 msgid "--dsm: true"
 msgstr ""
 
-#: ../../../tutorials.rst:148
+#: ../../tutorials.rst:148
 msgid "--dem-resolution 2.0"
 msgstr ""
 
-#: ../../../tutorials.rst:150
+#: ../../tutorials.rst:150
 msgid "--orthophoto-resolution 1.0"
 msgstr ""
 
-#: ../../../tutorials.rst:152
+#: ../../tutorials.rst:152
 msgid "--feature-quality high"
 msgstr ""
 
-#: ../../../tutorials.rst:154
+#: ../../tutorials.rst:154
 msgid "--pc-quality high"
 msgstr ""
 
-#: ../../../tutorials.rst:157
+#: ../../tutorials.rst:157
 msgid "Measuring"
 msgstr ""
 
-#: ../../../tutorials.rst:159
+#: ../../tutorials.rst:159
+#, python-format
 msgid ""
 "As almost 50% of the material will be found in the first 20% of the "
-"stockpile height, special care should be taken in adequately defining the "
-"base plane."
+"stockpile height, special care should be taken in adequately defining the"
+" base plane."
 msgstr ""
 
-#: ../../../tutorials.rstNone
+#, python-format
 msgid ""
-"almost 50% of the material will be found in the first 20% of the stockpile "
-"height"
+"almost 50% of the material will be found in the first 20% of the "
+"stockpile height"
 msgstr ""
 
-#: ../../../tutorials.rst:165
+#: ../../tutorials.rst:165
 msgid ""
 "In WebODM Dashboard, clic on \"view map\" to start a 2D view of your "
 "project."
 msgstr ""
 
-#: ../../../tutorials.rst:167
+#: ../../tutorials.rst:167
 msgid ""
 "Once in the 2D map view, clic on the \"Measure volume, area and length\" "
 "button."
 msgstr ""
 
-#: ../../../tutorials.rstNone
 msgid "clic on the \"Measure volume, area and length\" button"
 msgstr ""
 
-#: ../../../tutorials.rst:173
+#: ../../tutorials.rst:173
 msgid "then clic on \"Create a new measurement\""
 msgstr ""
 
-#: ../../../tutorials.rstNone
 msgid "clic on \"Create a new measurement\""
 msgstr ""
 
-#: ../../../tutorials.rst:179
+#: ../../tutorials.rst:179
 msgid "Start placing the points to define the stockpile base plane"
 msgstr ""
 
-#: ../../../tutorials.rstNone
 msgid "Define the stockpile base plane"
 msgstr ""
 
-#: ../../../tutorials.rst:185
+#: ../../tutorials.rst:185
 msgid "Clic on \"Finish measurement\" to finish the process."
 msgstr ""
 
-#: ../../../tutorials.rstNone ../../../tutorials.rstNone
 msgid "Clic on \"Finish measurement\" to finish the process"
 msgstr ""
 
-#: ../../../tutorials.rst:191
+#: ../../tutorials.rst:191
 msgid ""
-"Dialog box will show the  message \"Computing ...\" for a few seconds, and "
-"after the computing is finished the volume measurement value will be "
+"Dialog box will show the  message \"Computing ...\" for a few seconds, "
+"and after the computing is finished the volume measurement value will be "
 "displayed."
 msgstr ""
 
-#: ../../../tutorials.rst:197
+#: ../../tutorials.rst:197
 msgid ""
-"If you are using the command line OpenDroneMap you can use the dsm files to "
-"measure the stockpile volumes using other programs."
+"If you are using the command line OpenDroneMap you can use the dsm files "
+"to measure the stockpile volumes using other programs."
 msgstr ""
 
-#: ../../../tutorials.rst:199
+#: ../../tutorials.rst:199
 msgid ""
-"Also consider that once the limits of the stockpile are set in software like"
-" `QGis <https://www.qgis.org>`_, you will find there are some ways to "
-"determine the base plane. So for isolated stockpiles which boundaries are "
-"mostly visible, a linear approach can be used. While for stockpiles set in "
-"slopes or in bins, the base plane is better defined by the lowest point. "
-"Creation of a triangulated 3D surface to define the base plane is advised "
-"for large stockpiles. This is also valid for stockpiles paced on irregular "
-"surfaces."
+"Also consider that once the limits of the stockpile are set in software "
+"like `QGis <https://www.qgis.org>`_, you will find there are some ways to"
+" determine the base plane. So for isolated stockpiles which boundaries "
+"are mostly visible, a linear approach can be used. While for stockpiles "
+"set in slopes or in bins, the base plane is better defined by the lowest "
+"point. Creation of a triangulated 3D surface to define the base plane is "
+"advised for large stockpiles. This is also valid for stockpiles paced on "
+"irregular surfaces."
 msgstr ""
 
-#: ../../../tutorials.rst:203
+#: ../../tutorials.rst:203
 msgid "Expected accuracy"
 msgstr ""
 
-#: ../../../tutorials.rst:205
+#: ../../tutorials.rst:205
 msgid ""
-"For carefully planned and executed projects, and specially when GSD is less "
-"than 1 cm, the expected accuracy should be in the range of 1% to 2%. The "
-"resulting accuracy is comparable to the commercially available "
-"photogrammetry software and the obtained using survey grade GNSS equipment."
+"For carefully planned and executed projects, and specially when GSD is "
+"less than 1 cm, the expected accuracy should be in the range of 1% to 2%."
+" The resulting accuracy is comparable to the commercially available "
+"photogrammetry software and the obtained using survey grade GNSS "
+"equipment."
 msgstr ""
 
-#: ../../../tutorials.rst:212
+#: ../../tutorials.rst:212
 msgid "Using Docker"
 msgstr "باستخدام  Docker"
 
-#: ../../../tutorials.rst:214
+#: ../../tutorials.rst:214
 msgid ""
-"Since many users employ docker to deploy OpenDroneMap, it can be useful to "
-"understand some basic commands in order to interrogate the docker instances "
-"when things go wrong, or we are curious about what is happening. Docker is a"
-" containerized environment intended, among other things, to make it easier "
-"to deploy software independent of the local environment. In this way, it is "
-"similar to virtual machines."
+"Since many users employ docker to deploy OpenDroneMap, it can be useful "
+"to understand some basic commands in order to interrogate the docker "
+"instances when things go wrong, or we are curious about what is "
+"happening. Docker is a containerized environment intended, among other "
+"things, to make it easier to deploy software independent of the local "
+"environment. In this way, it is similar to virtual machines."
 msgstr ""
-"نظرًا لأن العديد من المستخدمين يستخدمون عامل إرساء لنشر OpenDroneMap ، فقد "
-"يكون من المفيد فهم بعض الأوامر الأساسية من أجل استجواب حالات عامل الميناء "
-"عندما تسوء الأمور ، أو نشعر بالفضول حيال ما يحدث. Docker هي بيئة حاويات تهدف"
-" ، من بين أمور أخرى ، إلى تسهيل نشر البرامج بشكل مستقل عن البيئة المحلية. "
-"بهذه الطريقة ، فهي تشبه الأجهزة الافتراضية."
+"نظرًا لأن العديد من المستخدمين يستخدمون عامل إرساء لنشر OpenDroneMap ، "
+"فقد يكون من المفيد فهم بعض الأوامر الأساسية من أجل استجواب حالات عامل "
+"الميناء عندما تسوء الأمور ، أو نشعر بالفضول حيال ما يحدث. Docker هي بيئة "
+"حاويات تهدف ، من بين أمور أخرى ، إلى تسهيل نشر البرامج بشكل مستقل عن "
+"البيئة المحلية. بهذه الطريقة ، فهي تشبه الأجهزة الافتراضية."
 
-#: ../../../tutorials.rst:216
+#: ../../tutorials.rst:216
 msgid "A few simple commands can make our docker experience much better."
 msgstr "يمكن لبعض الأوامر البسيطة أن تجعل تجربة docker أفضل بكثير."
 
-#: ../../../tutorials.rst:219
+#: ../../tutorials.rst:219
 msgid "Listing Docker Machines"
 msgstr "ادراج Docker ماكينات"
 
-#: ../../../tutorials.rst:221
+#: ../../tutorials.rst:221
 msgid ""
-"We can start by listing available docker machines on the current machine we "
-"are running as follows:"
+"We can start by listing available docker machines on the current machine "
+"we are running as follows:"
 msgstr ""
-"يمكننا البدء بإدراج آلات الرصيف المتوفرة على الجهاز الحالي الذي نقوم بتشغيله"
-" على النحو التالي:"
+"يمكننا البدء بإدراج آلات الرصيف المتوفرة على الجهاز الحالي الذي نقوم "
+"بتشغيله على النحو التالي:"
 
-#: ../../../tutorials.rst:230
+#: ../../tutorials.rst:230
 msgid ""
-"If we want to see machines that may not be running but still exist, we can "
-"add the `-a` flag:"
+"If we want to see machines that may not be running but still exist, we "
+"can add the `-a` flag:"
 msgstr ""
-"إذا أردنا رؤية الأجهزة التي قد لا تعمل ولكنها لا تزال موجودة ، فيمكننا إضافة"
-" علامة \"-a\":"
+"إذا أردنا رؤية الأجهزة التي قد لا تعمل ولكنها لا تزال موجودة ، فيمكننا "
+"إضافة علامة \"-a\":"
 
-#: ../../../tutorials.rst:243
+#: ../../tutorials.rst:243
 msgid "Accessing logs on the instance"
 msgstr "الوصول إلى السجلات على سبيل المثال"
 
-#: ../../../tutorials.rst:245
+#: ../../tutorials.rst:245
 msgid ""
 "Using either the `CONTAINER ID` or the name, we can access any logs "
 "available on the machine as follows:"
 msgstr ""
-"باستخدام \"  CONTAINER ID\" أو الاسم ، يمكننا الوصول إلى أي سجلات متاحة على "
-"الجهاز على النحو التالي:"
+"باستخدام \"  CONTAINER ID\" أو الاسم ، يمكننا الوصول إلى أي سجلات متاحة "
+"على الجهاز على النحو التالي:"
 
-#: ../../../tutorials.rst:251
+#: ../../tutorials.rst:251
 msgid ""
-"This is likely to be unwieldy large, but we can use a pipe `|` character and"
-" other tools to extract just what we need from the logs. For example we can "
-"move through the log slowly using the `more` command:"
+"This is likely to be unwieldy large, but we can use a pipe `|` character "
+"and other tools to extract just what we need from the logs. For example "
+"we can move through the log slowly using the `more` command:"
 msgstr ""
 "من المحتمل أن يكون هذا كبير الحجم غير عملي ، ولكن يمكننا استخدام حرف `|` "
 "للأنبوب وأدوات أخرى لاستخراج ما نحتاجه فقط من السجلات. على سبيل المثال ، "
 "يمكننا التنقل عبر السجل ببطء باستخدام الأمر `more`:"
 
-#: ../../../tutorials.rst:267
+#: ../../tutorials.rst:267
 msgid ""
 "Pressing `Enter` or `Space`, arrow keys or `Page Up` or `Page Down` keys "
-"will now help us navigate through the logs. The lower case letter `Q` will "
-"let us escape back to the command line."
+"will now help us navigate through the logs. The lower case letter `Q` "
+"will let us escape back to the command line."
 msgstr ""
-"الضغط على `Enter` أو` Space` أو مفاتيح الأسهم أو `Page Up` أو` Page Down` "
-"سيساعدنا الآن في التنقل عبر السجلات. الحرف الصغير `Q` سيتيح لنا الهروب إلى "
-"سطر الأوامر."
+"الضغط على `Enter` أو` Space` أو مفاتيح الأسهم أو `Page Up` أو` Page Down`"
+" سيساعدنا الآن في التنقل عبر السجلات. الحرف الصغير `Q` سيتيح لنا الهروب "
+"إلى سطر الأوامر."
 
-#: ../../../tutorials.rst:269
+#: ../../tutorials.rst:269
 msgid ""
-"We can also extract just the end of the logs using the `tail` commmand as "
-"follows:"
+"We can also extract just the end of the logs using the `tail` commmand as"
+" follows:"
 msgstr "يمكننا أيضًا استخراج نهاية السجلات فقط باستخدام أمر \"الذيل\" كما يلي:"
 
-#: ../../../tutorials.rst:280
+#: ../../tutorials.rst:280
 msgid ""
-"The value `-5` tells the tail command to give us just the last 5 lines of "
-"the logs."
-msgstr ""
-"تخبر القيمة `-5` الأمر tail بإعطائنا الأسطر الخمسة الأخيرة فقط من السجلات."
+"The value `-5` tells the tail command to give us just the last 5 lines of"
+" the logs."
+msgstr "تخبر القيمة `-5` الأمر tail بإعطائنا الأسطر الخمسة الأخيرة فقط من السجلات."
 
-#: ../../../tutorials.rst:283
+#: ../../tutorials.rst:283
 msgid "Command line access to instances"
 msgstr "وصول سطر الأوامر إلى المثيلات"
 
-#: ../../../tutorials.rst:285
+#: ../../tutorials.rst:285
 msgid ""
-"Sometimes we need to go a little deeper in our exploration of the process "
-"for OpenDroneMap. For this, we can get direct command line access to the "
-"machines. For this, we can use `docker exec` to execute a `bash` command "
-"line shell in the machine of interest as follows:"
+"Sometimes we need to go a little deeper in our exploration of the process"
+" for OpenDroneMap. For this, we can get direct command line access to the"
+" machines. For this, we can use `docker exec` to execute a `bash` command"
+" line shell in the machine of interest as follows:"
 msgstr ""
-"في بعض الأحيان نحتاج إلى التعمق أكثر في استكشافنا لعملية OpenDroneMap. لهذا "
-"، يمكننا الحصول على وصول مباشر لسطر الأوامر إلى الأجهزة. لهذا ، يمكننا "
-"استخدام `docker exec` لتنفيذ قذيفة سطر الأوامر` bash` في الجهاز المعني على "
-"النحو التالي:"
+"في بعض الأحيان نحتاج إلى التعمق أكثر في استكشافنا لعملية OpenDroneMap. "
+"لهذا ، يمكننا الحصول على وصول مباشر لسطر الأوامر إلى الأجهزة. لهذا ، "
+"يمكننا استخدام `docker exec` لتنفيذ قذيفة سطر الأوامر` bash` في الجهاز "
+"المعني على النحو التالي:"
 
-#: ../../../tutorials.rst:292
-msgid ""
-"Now we are logged into our docker instance and can explore the machine."
-msgstr ""
-"الآن تم تسجيل دخولنا إلى مثيل عامل الميناء لدينا ويمكننا استكشاف الجهاز."
+#: ../../tutorials.rst:292
+msgid "Now we are logged into our docker instance and can explore the machine."
+msgstr "الآن تم تسجيل دخولنا إلى مثيل عامل الميناء لدينا ويمكننا استكشاف الجهاز."
 
-#: ../../../tutorials.rst:295
+#: ../../tutorials.rst:295
 msgid "Cleaning up after Docker"
 msgstr "التنظيف بعد Docker"
 
-#: ../../../tutorials.rst:297
+#: ../../tutorials.rst:297
 msgid ""
-"Docker has a lamentable use of space and by default does not clean up excess"
-" data and machines when processes are complete. This can be advantageous if "
-"we need to access a process that has since terminated, but carries the "
-"burden of using increasing amounts of storage over time. Maciej Łebkowski "
-"has an `excellent overview of how to manage excess disk usage in docker "
-"<https://lebkowski.name/docker-volumes/>`_."
+"Docker has a lamentable use of space and by default does not clean up "
+"excess data and machines when processes are complete. This can be "
+"advantageous if we need to access a process that has since terminated, "
+"but carries the burden of using increasing amounts of storage over time. "
+"Maciej Łebkowski has an `excellent overview of how to manage excess disk "
+"usage in docker <https://lebkowski.name/docker-volumes/>`_."
 msgstr ""
-"تمتع Docker باستخدام مؤسف للمساحة ولا يقوم افتراضيًا بتنظيف البيانات والآلات"
-" الزائدة عند اكتمال العمليات. يمكن أن يكون ذلك مفيدًا إذا احتجنا إلى الوصول "
-"إلى عملية تم إنهاؤها منذ ذلك الحين ، ولكنها تحمل عبء استخدام كميات متزايدة "
-"من التخزين بمرور الوقت. يقدم Maciej Łebkowski `نظرة عامة ممتازة على كيفية "
-"إدارة الاستخدام الزائد للقرص في عامل الميناء <https://lebkowski.name/docker-"
-"volumes/>` _."
+"تمتع Docker باستخدام مؤسف للمساحة ولا يقوم افتراضيًا بتنظيف البيانات "
+"والآلات الزائدة عند اكتمال العمليات. يمكن أن يكون ذلك مفيدًا إذا احتجنا "
+"إلى الوصول إلى عملية تم إنهاؤها منذ ذلك الحين ، ولكنها تحمل عبء استخدام "
+"كميات متزايدة من التخزين بمرور الوقت. يقدم Maciej Łebkowski `نظرة عامة "
+"ممتازة على كيفية إدارة الاستخدام الزائد للقرص في عامل الميناء "
+"<https://lebkowski.name/docker-volumes/>` _."
 
-#: ../../../tutorials.rst:301
+#: ../../tutorials.rst:301
 msgid "Using ODM from low-bandwidth location"
 msgstr "استخدام ODM من موقع النطاق الترددي المنخفض"
 
-#: ../../../tutorials.rst:304
+#: ../../tutorials.rst:304
 msgid "What is this and who is it for?"
 msgstr "ما هذا ومن هو؟"
 
-#: ../../../tutorials.rst:306
-msgid ""
-"Via `Ivan Gayton's repo <https://github.com/ivangayton/GDAL_scripts/>`_."
-msgstr ""
-"عبر  `Ivan Gayton's repo <https://github.com/ivangayton/GDAL_scripts/>`_"
+#: ../../tutorials.rst:306
+msgid "Via `Ivan Gayton's repo <https://github.com/ivangayton/GDAL_scripts/>`_."
+msgstr "عبر  `Ivan Gayton's repo <https://github.com/ivangayton/GDAL_scripts/>`_"
 
-#: ../../../tutorials.rst:308
+#: ../../tutorials.rst:308
 msgid ""
-"`OpenDroneMap <https://www.opendronemap.org/>`__ can’t always be effectively"
-" set up locally—it takes a fairly powerful machine to process large "
-"datasets—so a cloud machine can sometimes be the answer for people in the "
-"field. However, bandwidth is a problem in many low-income settings. This "
-"constraint can’t be solved completely, but the following method does a "
-"reasonable job of reducing the bandwidth needed to process drone imagery "
-"datasets on the cloud from African locations."
+"`OpenDroneMap <https://www.opendronemap.org/>`__ can’t always be "
+"effectively set up locally—it takes a fairly powerful machine to process "
+"large datasets—so a cloud machine can sometimes be the answer for people "
+"in the field. However, bandwidth is a problem in many low-income "
+"settings. This constraint can’t be solved completely, but the following "
+"method does a reasonable job of reducing the bandwidth needed to process "
+"drone imagery datasets on the cloud from African locations."
 msgstr ""
-"<https://www.opendronemap.org/>\" __ لا يمكن دائمًا إعدادها بشكل فعال محليًا"
-" - يتطلب الأمر جهازًا قويًا إلى حد ما لمعالجة مجموعات البيانات الكبيرة - لذا"
-" يمكن أن تكون الآلة السحابية أحيانًا هي الحل للأشخاص في حقل. ومع ذلك ، فإن "
-"عرض النطاق الترددي يمثل مشكلة في العديد من الإعدادات منخفضة الدخل. لا يمكن "
-"حل هذا القيد تمامًا ، ولكن الطريقة التالية تؤدي مهمة معقولة لتقليل النطاق "
-"الترددي اللازم لمعالجة مجموعات بيانات صور الطائرات بدون طيار على السحابة من "
-"المواقع الأفريقية."
+"<https://www.opendronemap.org/>\" __ لا يمكن دائمًا إعدادها بشكل فعال "
+"محليًا - يتطلب الأمر جهازًا قويًا إلى حد ما لمعالجة مجموعات البيانات "
+"الكبيرة - لذا يمكن أن تكون الآلة السحابية أحيانًا هي الحل للأشخاص في حقل."
+" ومع ذلك ، فإن عرض النطاق الترددي يمثل مشكلة في العديد من الإعدادات "
+"منخفضة الدخل. لا يمكن حل هذا القيد تمامًا ، ولكن الطريقة التالية تؤدي "
+"مهمة معقولة لتقليل النطاق الترددي اللازم لمعالجة مجموعات بيانات صور "
+"الطائرات بدون طيار على السحابة من المواقع الأفريقية."
 
-#: ../../../tutorials.rst:316
+#: ../../tutorials.rst:316
 msgid ""
 "Here we present a tricky but workable process to create an OpenDroneMap "
-"cloud machine (*not* CloudODM, mind you, just a cloud-based instance of ODM "
-"that you run from the command line) and use it to remotely process large "
-"photo sets. It requires familiarity with Unix command line use, ssh, a "
-"Digital Ocean account (Amazon AWS would work as well, possibly with slight "
-"differences in the setup), and a moderate level of general computer "
-"literacy. If you aren’t fairly computer-savvy and willing to fuss with a "
-"slightly tricky setup, `CloudODM <https://www.opendronemap.org/cloudodm/>`__"
-" is what you should be looking at."
+"cloud machine (*not* CloudODM, mind you, just a cloud-based instance of "
+"ODM that you run from the command line) and use it to remotely process "
+"large photo sets. It requires familiarity with Unix command line use, "
+"ssh, a Digital Ocean account (Amazon AWS would work as well, possibly "
+"with slight differences in the setup), and a moderate level of general "
+"computer literacy. If you aren’t fairly computer-savvy and willing to "
+"fuss with a slightly tricky setup, `CloudODM "
+"<https://www.opendronemap.org/cloudodm/>`__ is what you should be looking"
+" at."
 msgstr ""
 "نقدم هنا عملية صعبة ولكنها عملية لإنشاء جهاز سحابة OpenDroneMap (* لا * "
 "CloudODM ، ضع في اعتبارك أنه مجرد نسخة مستندة إلى السحابة من ODM تقوم "
-"بتشغيلها من سطر الأوامر) واستخدامها لمعالجة مجموعات الصور الكبيرة عن بُعد. "
-"إنه يتطلب معرفة باستخدام سطر أوامر Unix و ssh وحساب Digital Ocean (قد يعمل "
-"Amazon AWS أيضًا ، ربما مع اختلافات طفيفة في الإعداد) ، ومستوى معتدل من "
-"معرفة الكمبيوتر العامة. إذا لم تكن على دراية بالكمبيوتر إلى حد ما وترغب في "
-"إثارة ضجة مع إعداد صعب قليلاً ، فإن \"CloudODM "
+"بتشغيلها من سطر الأوامر) واستخدامها لمعالجة مجموعات الصور الكبيرة عن "
+"بُعد. إنه يتطلب معرفة باستخدام سطر أوامر Unix و ssh وحساب Digital Ocean "
+"(قد يعمل Amazon AWS أيضًا ، ربما مع اختلافات طفيفة في الإعداد) ، ومستوى "
+"معتدل من معرفة الكمبيوتر العامة. إذا لم تكن على دراية بالكمبيوتر إلى حد "
+"ما وترغب في إثارة ضجة مع إعداد صعب قليلاً ، فإن \"CloudODM "
 "<https://www.opendronemap.org/cloudodm/>\" __ هو ما يجب أن تنظر إليه."
 
-#: ../../../tutorials.rst:327
+#: ../../tutorials.rst:327
 msgid ""
-"The whole process is mostly targeted at someone flying substantial missions "
-"in an African or similar location looking to process data ASAP while still "
-"in a field setting. Therefore it emphasizes a workflow intended to reduce "
-"bandwidth/data transfer, rather than just the simplest way of running ODM."
+"The whole process is mostly targeted at someone flying substantial "
+"missions in an African or similar location looking to process data ASAP "
+"while still in a field setting. Therefore it emphasizes a workflow "
+"intended to reduce bandwidth/data transfer, rather than just the simplest"
+" way of running ODM."
 msgstr ""
 "تستهدف العملية برمتها في الغالب شخصًا يقوم بمهام كبيرة في موقع أفريقي أو "
-"موقع مماثل يتطلع إلى معالجة البيانات في أسرع وقت ممكن بينما لا يزال في بيئة "
-"ميدانية. ولذلك ، فإنه يؤكد على سير العمل الذي يهدف إلى تقليل نقل البيانات / "
-"النطاق الترددي ، بدلاً من أبسط طريقة لتشغيل ODM."
+"موقع مماثل يتطلع إلى معالجة البيانات في أسرع وقت ممكن بينما لا يزال في "
+"بيئة ميدانية. ولذلك ، فإنه يؤكد على سير العمل الذي يهدف إلى تقليل نقل "
+"البيانات / النطاق الترددي ، بدلاً من أبسط طريقة لتشغيل ODM."
 
-#: ../../../tutorials.rst:334
+#: ../../tutorials.rst:334
 msgid "Steps"
 msgstr "خطوات"
 
-#: ../../../tutorials.rst:337
+#: ../../tutorials.rst:337
 msgid "Install"
 msgstr "تثبيت"
 
-#: ../../../tutorials.rst:339
+#: ../../tutorials.rst:339
 msgid ""
-"Create a Digital Ocean droplet with at least 4GB of RAM. That’ll cost about "
-"$20/month. Less than 4GB of RAM and the install will probably fail. When we "
-"actually run the ODM process we’ll resize it to a much larger—and more "
-"expensive—cloud machine, but between runs you can downsize it between runs "
-"to the second-cheapest droplet which costs only $10/month (the cheapest "
-"droplet, at $5/month, comes with such a small drive that you can’t downsize "
-"back to it)."
+"Create a Digital Ocean droplet with at least 4GB of RAM. That’ll cost "
+"about $20/month. Less than 4GB of RAM and the install will probably fail."
+" When we actually run the ODM process we’ll resize it to a much "
+"larger—and more expensive—cloud machine, but between runs you can "
+"downsize it between runs to the second-cheapest droplet which costs only "
+"$10/month (the cheapest droplet, at $5/month, comes with such a small "
+"drive that you can’t downsize back to it)."
 msgstr ""
-"قم بإنشاء قطرة محيط رقمية مع ذاكرة وصول عشوائي بسعة 4 جيجابايت على الأقل. "
-"سيكلفك ذلك حوالي 20 دولارًا / شهريًا. من المحتمل أن يفشل التثبيت أقل من 4 "
-"غيغابايت من ذاكرة الوصول العشوائي. عندما نقوم بتشغيل عملية ODM فعليًا ، "
-"سنقوم بتغيير حجمها إلى جهاز سحابي أكبر بكثير وأكثر تكلفة ، ولكن بين الجري "
-"يمكنك تقليصها بين الجري إلى ثاني أرخص قطيرة والتي تكلف 10 دولارات فقط في "
-"الشهر (أرخص قطرة ، بسعر 5 دولارات شهريًا ، ويأتي مع محرك أقراص صغير لا يمكنك"
-" تقليصه)."
+"قم بإنشاء قطرة محيط رقمية مع ذاكرة وصول عشوائي بسعة 4 جيجابايت على الأقل."
+" سيكلفك ذلك حوالي 20 دولارًا / شهريًا. من المحتمل أن يفشل التثبيت أقل من "
+"4 غيغابايت من ذاكرة الوصول العشوائي. عندما نقوم بتشغيل عملية ODM فعليًا ،"
+" سنقوم بتغيير حجمها إلى جهاز سحابي أكبر بكثير وأكثر تكلفة ، ولكن بين "
+"الجري يمكنك تقليصها بين الجري إلى ثاني أرخص قطيرة والتي تكلف 10 دولارات "
+"فقط في الشهر (أرخص قطرة ، بسعر 5 دولارات شهريًا ، ويأتي مع محرك أقراص "
+"صغير لا يمكنك تقليصه)."
 
-#: ../../../tutorials.rst:347
+#: ../../tutorials.rst:347
 msgid "Should be an Ubuntu 18.04 instance to ensure dependency compatibility"
 msgstr "يجب أن يكون نسخة Ubuntu 18.04 لضمان توافق التبعية"
 
-#: ../../../tutorials.rst:349
+#: ../../tutorials.rst:349
 msgid ""
 "Create a user with sudo privileges. `Digital Ocean’s insanely good "
 "documentation <https://www.digitalocean.com/community/tutorials/initial-"
-"server-setup-with-ubuntu-18-04>`__ can help you figure this out. In our case"
-" we set up a user called ``odm``, so connecting to it is via the command "
-"``ssh odm@xxx.xxx.xxx.xxx`` (where the x’s stand for the IPv4 address of "
-"your server). If you want to follow this example closely, *do* use the "
-"username ``odm``; then your install path will be ``/home/odm/ODM/`` and will"
-" match all of the examples in this document."
+"server-setup-with-ubuntu-18-04>`__ can help you figure this out. In our "
+"case we set up a user called ``odm``, so connecting to it is via the "
+"command ``ssh odm@xxx.xxx.xxx.xxx`` (where the x’s stand for the IPv4 "
+"address of your server). If you want to follow this example closely, *do*"
+" use the username ``odm``; then your install path will be "
+"``/home/odm/ODM/`` and will match all of the examples in this document."
 msgstr ""
 
-#: ../../../tutorials.rst:358
+#: ../../tutorials.rst:358
 msgid ""
-"Go ahead and execute ``sudo apt update`` and ``sudo apt upgrade`` to ensure "
-"your server isn’t dangerously without updates. Make sure to stay with Ubuntu"
-" 18.04."
+"Go ahead and execute ``sudo apt update`` and ``sudo apt upgrade`` to "
+"ensure your server isn’t dangerously without updates. Make sure to stay "
+"with Ubuntu 18.04."
 msgstr ""
 
-#: ../../../tutorials.rst:362
+#: ../../tutorials.rst:362
 msgid ""
 "Download and install ODM on it from the `ODM Github "
 "<https://github.com/OpenDroneMap/ODM>`__ (regular, not WebODM) with the "
@@ -810,78 +810,80 @@ msgstr ""
 "<https://github.com/OpenDroneMap/ODM>` __ (عادي ، وليس WebODM) باستخدام "
 "الأوامر التالية:"
 
-#: ../../../tutorials.rst:372
+#: ../../tutorials.rst:372
 msgid ""
-"If you do this from the default home folder of your user (i.e. ``odm``) the "
-"path to the install will be ``/home/odm/ODM`` (abbreviated as ``~/ODM/``)."
+"If you do this from the default home folder of your user (i.e. ``odm``) "
+"the path to the install will be ``/home/odm/ODM`` (abbreviated as "
+"``~/ODM/``)."
 msgstr ""
-"إذا قمت بذلك من المجلد الرئيسي الافتراضي للمستخدم (أي `` odm '') ، فسيكون "
-"المسار إلى التثبيت هو '' home / odm / ODM '' (يُختصر باسم `` ~ / ODM / '')."
+"إذا قمت بذلك من المجلد الرئيسي الافتراضي للمستخدم (أي `` odm '') ، فسيكون"
+" المسار إلى التثبيت هو '' home / odm / ODM '' (يُختصر باسم `` ~ / ODM / "
+"'')."
 
-#: ../../../tutorials.rst:375
+#: ../../tutorials.rst:375
 msgid ""
 "There are some environmental variables that need to be set. Open the "
 "~/.bashrc file on your machine and add the following 3 lines at the end "
-"(From `the ODM github <https://github.com/OpenDroneMap/ODM>`__). The file "
-"can be opened with ``nano ~/.bashrc`` (or whatever text editor you use in "
-"lieu of nano). Be sure to replace ``/home/odm/`` with the correct path to "
-"the location where you extracted OpenDroneMap if you didn’t do everything "
-"exactly as in our example (for example if you used a different username in "
-"your server setup):"
+"(From `the ODM github <https://github.com/OpenDroneMap/ODM>`__). The file"
+" can be opened with ``nano ~/.bashrc`` (or whatever text editor you use "
+"in lieu of nano). Be sure to replace ``/home/odm/`` with the correct path"
+" to the location where you extracted OpenDroneMap if you didn’t do "
+"everything exactly as in our example (for example if you used a different"
+" username in your server setup):"
 msgstr ""
-"هناك بعض المتغيرات البيئية التي يجب تحديدها. افتح ملف ~/.bashrc على جهازك "
-"وأضف الأسطر الثلاثة 3 في النهاية (من `github ODM "
-"<https://github.com/OpenDroneMap/ODM>` __). يمكن فتح الملف باستخدام ``nano "
-"~/.bashrc`` (أو أي محرر نصوص تستخدمه بدلاً من nano). تأكد من استبدال "
-"``/home/odm/`` بالمسار الصحيح إلى الموقع الذي قمت باستخراج OpenDroneMap إذا "
-"لم تفعل كل شيء تمامًا كما في مثالنا (على سبيل المثال إذا كنت تستخدم اسم "
-"مستخدم مختلفًا في إعداد الخادم الخاص بك) :"
+"هناك بعض المتغيرات البيئية التي يجب تحديدها. افتح ملف ~/.bashrc على جهازك"
+" وأضف الأسطر الثلاثة 3 في النهاية (من `github ODM "
+"<https://github.com/OpenDroneMap/ODM>` __). يمكن فتح الملف باستخدام "
+"``nano ~/.bashrc`` (أو أي محرر نصوص تستخدمه بدلاً من nano). تأكد من "
+"استبدال ``/home/odm/`` بالمسار الصحيح إلى الموقع الذي قمت باستخراج "
+"OpenDroneMap إذا لم تفعل كل شيء تمامًا كما في مثالنا (على سبيل المثال إذا"
+" كنت تستخدم اسم مستخدم مختلفًا في إعداد الخادم الخاص بك) :"
 
-#: ../../../tutorials.rst:390
+#: ../../tutorials.rst:390
 msgid ""
 "Note that the ODM github readme contains a slight error, the install "
-"directory name will be ODM, not OpenDroneMap (you’ll see this if you compare"
-" the above instructions to the ones on the ODM GitHub)."
+"directory name will be ODM, not OpenDroneMap (you’ll see this if you "
+"compare the above instructions to the ones on the ODM GitHub)."
 msgstr ""
-"لاحظ أن الملف التمهيدي لـ github الخاص بـ ODM يحتوي على خطأ بسيط ، سيكون اسم"
-" دليل التثبيت هو ODM ، وليس OpenDroneMap (سترى هذا إذا قارنت الإرشادات "
-"المذكورة أعلاه بالإرشادات الموجودة على ODM GitHub)."
+"لاحظ أن الملف التمهيدي لـ github الخاص بـ ODM يحتوي على خطأ بسيط ، سيكون "
+"اسم دليل التثبيت هو ODM ، وليس OpenDroneMap (سترى هذا إذا قارنت الإرشادات"
+" المذكورة أعلاه بالإرشادات الموجودة على ODM GitHub)."
 
-#: ../../../tutorials.rst:394
+#: ../../tutorials.rst:394
 msgid ""
-"In order to prevent a crash wherein the split-merge process fails to locate "
-"its own executable, we add the following lines to ``~/.bashrc`` (adjust "
-"paths if you’ve set things up differently from our example):"
+"In order to prevent a crash wherein the split-merge process fails to "
+"locate its own executable, we add the following lines to ``~/.bashrc`` "
+"(adjust paths if you’ve set things up differently from our example):"
 msgstr ""
-"لمنع حدوث عطل حيث تفشل عملية الدمج المقسم في تحديد موقع الملف التنفيذي الخاص"
-" بها ، نضيف الأسطر التالية إلى ``~/.bashrc`` (اضبط المسارات إذا قمت بإعداد "
-"الأشياء بشكل مختلف عن مثالنا):"
+"لمنع حدوث عطل حيث تفشل عملية الدمج المقسم في تحديد موقع الملف التنفيذي "
+"الخاص بها ، نضيف الأسطر التالية إلى ``~/.bashrc`` (اضبط المسارات إذا قمت "
+"بإعداد الأشياء بشكل مختلف عن مثالنا):"
 
-#: ../../../tutorials.rst:404
+#: ../../tutorials.rst:404
 msgid ""
 "Now you’ll need a second cloud hard drive (a “Volume” in Digital Ocean "
 "jargon) big enough to manage your project. Rule of thumb seems to be 10 "
-"times the size of your raw image set; we’ve got a 100GB image set and set up"
-" a 1000GB volume (once the run is done you should be able to get rid of most"
-" of this expensive drive capacity, but it’s needed to complete the process)."
-" Set up the volume, attach it to your droplet, and `configure its mount "
-"point <https://www.digitalocean.com/docs/volumes/how-to/mount/>`__ (in this "
-"example we’re setting it to ``/mnt/odmdata/``)."
+"times the size of your raw image set; we’ve got a 100GB image set and set"
+" up a 1000GB volume (once the run is done you should be able to get rid "
+"of most of this expensive drive capacity, but it’s needed to complete the"
+" process). Set up the volume, attach it to your droplet, and `configure "
+"its mount point <https://www.digitalocean.com/docs/volumes/how-"
+"to/mount/>`__ (in this example we’re setting it to ``/mnt/odmdata/``)."
 msgstr ""
 "ستحتاج الآن إلى محرك أقراص ثابت سحابي ثانٍ (\"حجم\" في المصطلح الرقمي "
-"للمحيط) كبير بما يكفي لإدارة مشروعك. يبدو أن القاعدة الأساسية هي 10 أضعاف "
-"حجم مجموعة صورك الخام ؛ لدينا مجموعة من الصور بحجم 100 جيجابايت وقمنا بإعداد"
-" وحدة تخزين بحجم 1000 جيجابايت (بمجرد الانتهاء من التشغيل ، يجب أن تكون "
-"قادرًا على التخلص من معظم سعة محرك الأقراص الباهظة الثمن هذه ، ولكن يلزم "
-"إكمال العملية). قم بإعداد الصوت وإرفاقه بالقطرة الخاصة بك ، و `تكوين نقطة "
-"التحميل الخاصة به <https://www.digitalocean.com/docs/volumes/how-"
+"للمحيط) كبير بما يكفي لإدارة مشروعك. يبدو أن القاعدة الأساسية هي 10 أضعاف"
+" حجم مجموعة صورك الخام ؛ لدينا مجموعة من الصور بحجم 100 جيجابايت وقمنا "
+"بإعداد وحدة تخزين بحجم 1000 جيجابايت (بمجرد الانتهاء من التشغيل ، يجب أن "
+"تكون قادرًا على التخلص من معظم سعة محرك الأقراص الباهظة الثمن هذه ، ولكن "
+"يلزم إكمال العملية). قم بإعداد الصوت وإرفاقه بالقطرة الخاصة بك ، و `تكوين"
+" نقطة التحميل الخاصة به <https://www.digitalocean.com/docs/volumes/how-"
 "to/mount/>`__ (في هذا المثال ، نقوم بتعيينه إلى ``/mnt/odmdata/``)."
 
-#: ../../../tutorials.rst:415
+#: ../../tutorials.rst:415
 msgid "Prep data and project"
 msgstr "إعداد البيانات والمشروع"
 
-#: ../../../tutorials.rst:417
+#: ../../tutorials.rst:417
 msgid ""
 "Now push your images onto the server. You can use `Secure Copy (scp) "
 "<https://en.wikipedia.org/wiki/Secure_copy>`__ like so: ``scp -r "
@@ -891,17 +893,17 @@ msgstr ""
 "<https://en.wikipedia.org/wiki/Secure_copy>`__ مثل ذلك: ``scp -r "
 "/path/to/my/imagefolder odm@xxx.xxx.xxx.xxx:/mnt/odmdata/``."
 
-#: ../../../tutorials.rst:421
+#: ../../tutorials.rst:421
 msgid ""
-"This pushes the entire folder full of images (that’s what the ``-r`` option "
-"does, “recursive”) into the remote location (in our example, into the volume"
-" we attached to the cloud machine at ``/mnt/odmdata/``."
+"This pushes the entire folder full of images (that’s what the ``-r`` "
+"option does, “recursive”) into the remote location (in our example, into "
+"the volume we attached to the cloud machine at ``/mnt/odmdata/``."
 msgstr ""
-"يؤدي هذا إلى دفع المجلد بالكامل المليء بالصور (هذا ما يفعله الخيار \"-r\" ، "
-"\"العودية\") في الموقع البعيد (في مثالنا ، في الحجم الذي نعلقه على الجهاز "
-"السحابي على ``/mnt/odmdata/``."
+"يؤدي هذا إلى دفع المجلد بالكامل المليء بالصور (هذا ما يفعله الخيار \"-r\""
+" ، \"العودية\") في الموقع البعيد (في مثالنا ، في الحجم الذي نعلقه على "
+"الجهاز السحابي على ``/mnt/odmdata/``."
 
-#: ../../../tutorials.rst:425
+#: ../../tutorials.rst:425
 msgid ""
 "This will take some bandwidth. No way around the size of the files.\\ `1 "
 "<#footnote1>`__, \\ `2 <#footnote2>`__\\"
@@ -909,11 +911,11 @@ msgstr ""
 "سيستغرق هذا بعض عرض النطاق الترددي. لا توجد طريقة حول حجم الملفات.\\ `1 "
 "<#footnote1>`__, \\ `2 <#footnote2>`__\\"
 
-#: ../../../tutorials.rst:429
+#: ../../tutorials.rst:429
 msgid "Directory structure"
 msgstr "بنية الدليل"
 
-#: ../../../tutorials.rst:431
+#: ../../tutorials.rst:431
 msgid ""
 "ODM requires the directories on the machine to be set up just so. The "
 "critical bits are the install folder (if you installed as above, it’s "
@@ -921,106 +923,108 @@ msgid ""
 "``/mnt/odmdata/myproject/``)"
 msgstr ""
 "يتطلب ODM إعداد الدلائل الموجودة على الجهاز فقط. البتات الحرجة هي مجلد "
-"التثبيت (إذا قمت بتثبيته كما هو موضح أعلاه ، فهو ``/home/odm/ODM/`` ومجلد "
-"المشروع (i.e. ``/mnt/odmdata/myproject/``))"
+"التثبيت (إذا قمت بتثبيته كما هو موضح أعلاه ، فهو ``/home/odm/ODM/`` ومجلد"
+" المشروع (i.e. ``/mnt/odmdata/myproject/``))"
 
-#: ../../../tutorials.rst:436
+#: ../../tutorials.rst:436
 msgid ""
-"ODM’s settings.yaml file specifies a single parent directory containing all "
-"projects. This is what goes in the project path line of the settings.yaml "
-"file (slightly confusingly, this is actually the *parent* directory of the "
-"individual project directories, which are specified by the project name "
-"parameter when calling ODM). Edit settings.yaml and set the project_path "
-"parameter to (as per our example setup) ``/mnt/odmdata/``, which in this "
-"case points to the Volume we created. Individual project directories are "
-"created within that."
+"ODM’s settings.yaml file specifies a single parent directory containing "
+"all projects. This is what goes in the project path line of the "
+"settings.yaml file (slightly confusingly, this is actually the *parent* "
+"directory of the individual project directories, which are specified by "
+"the project name parameter when calling ODM). Edit settings.yaml and set "
+"the project_path parameter to (as per our example setup) "
+"``/mnt/odmdata/``, which in this case points to the Volume we created. "
+"Individual project directories are created within that."
 msgstr ""
-"يحدد ملف settings.yaml الخاص بـ ODM دليل أصل واحد يحتوي على كافة المشاريع. "
-"هذا هو ما يحدث في سطر مسار المشروع لملف settings.yaml (بشكل مثير للارتباك "
-"قليلاً ، هذا في الواقع هو الدليل * الأصل * لأدلة المشروع الفردية ، والتي يتم"
-" تحديدها بواسطة معلمة اسم المشروع عند استدعاء ODM). قم بتحرير الإعدادات. "
-"yaml وقم بتعيين معلمة project_path إلى (وفقًا لإعداد المثال الخاص بنا) "
-"``/mnt/odmdata/`` ، والتي تشير في هذه الحالة إلى المجلد الذي أنشأناه. يتم "
-"إنشاء أدلة المشاريع الفردية في ذلك."
+"يحدد ملف settings.yaml الخاص بـ ODM دليل أصل واحد يحتوي على كافة "
+"المشاريع. هذا هو ما يحدث في سطر مسار المشروع لملف settings.yaml (بشكل "
+"مثير للارتباك قليلاً ، هذا في الواقع هو الدليل * الأصل * لأدلة المشروع "
+"الفردية ، والتي يتم تحديدها بواسطة معلمة اسم المشروع عند استدعاء ODM). قم"
+" بتحرير الإعدادات. yaml وقم بتعيين معلمة project_path إلى (وفقًا لإعداد "
+"المثال الخاص بنا) ``/mnt/odmdata/`` ، والتي تشير في هذه الحالة إلى المجلد"
+" الذي أنشأناه. يتم إنشاء أدلة المشاريع الفردية في ذلك."
 
-#: ../../../tutorials.rst:445
+#: ../../tutorials.rst:445
 msgid ""
-"Individual project directories, i.e. ``/mnt/odmdata/myproject/`` contain the"
-" gcp_list.txt file, the image_groups.txt file, and the images folder for "
-"each project``\\`"
+"Individual project directories, i.e. ``/mnt/odmdata/myproject/`` contain "
+"the gcp_list.txt file, the image_groups.txt file, and the images folder "
+"for each project``\\`"
 msgstr ""
 "دلائل المشروع الفردية ، أي``/mnt/odmdata/myproject/`` `تحتوي على ملف "
 "gcp_list.txt ، ملف image_groups.txt ، ومجلد الصور لكل مشروع``\\`"
 
-#: ../../../tutorials.rst:448
+#: ../../tutorials.rst:448
 msgid ""
-"The images folder, i.e. ``/mnt/odmdata/myproject/images/`` contains all of "
-"the images. If you set it up like this, the images don’t get re-copied "
-"because they’re already in the directory that ODM wants them in."
+"The images folder, i.e. ``/mnt/odmdata/myproject/images/`` contains all "
+"of the images. If you set it up like this, the images don’t get re-copied"
+" because they’re already in the directory that ODM wants them in."
 msgstr ""
-"يحتوي مجلد الصور ، أي ```/mnt/odmdata/myproject/images/`` على جميع الصور. "
-"إذا قمت بإعداده على هذا النحو ، فلن تتم إعادة نسخ الصور لأنها موجودة بالفعل "
-"في الدليل الذي يريدها ODM."
+"يحتوي مجلد الصور ، أي ```/mnt/odmdata/myproject/images/`` على جميع الصور."
+" إذا قمت بإعداده على هذا النحو ، فلن تتم إعادة نسخ الصور لأنها موجودة "
+"بالفعل في الدليل الذي يريدها ODM."
 
-#: ../../../tutorials.rst:452
+#: ../../tutorials.rst:452
 msgid ""
-"Modify settings.yaml to specify the parent directory of the project folder "
-"(in this case the Volume we created, ``/mnt/odmdata/``). Make sure the "
-"images are in the correct spot, i.e. ``/mnt/odmdata/myproject/images`` and "
-"the other ancillary files (gcp_list.txt and image_groups.txt) are in the "
-"root folder ``/mnt/odmdata/myproject/``"
+"Modify settings.yaml to specify the parent directory of the project "
+"folder (in this case the Volume we created, ``/mnt/odmdata/``). Make sure"
+" the images are in the correct spot, i.e. "
+"``/mnt/odmdata/myproject/images`` and the other ancillary files "
+"(gcp_list.txt and image_groups.txt) are in the root folder "
+"``/mnt/odmdata/myproject/``"
 msgstr ""
-"قم بتعديل settings.yaml لتحديد الدليل الأصلي لمجلد المشروع (في هذه الحالة "
-"المجلد الذي أنشأناه ، `` / mnt / odmdata / ``). تأكد من أن الصور في الموضع "
-"الصحيح ، مثل  ``/mnt/odmdata/myproject/images`` والملفات المساعدة الأخرى "
-"(gcp_list.txt و image_groups.txt) في المجلد الجذر "
+"قم بتعديل settings.yaml لتحديد الدليل الأصلي لمجلد المشروع (في هذه الحالة"
+" المجلد الذي أنشأناه ، `` / mnt / odmdata / ``). تأكد من أن الصور في "
+"الموضع الصحيح ، مثل  ``/mnt/odmdata/myproject/images`` والملفات المساعدة "
+"الأخرى (gcp_list.txt و image_groups.txt) في المجلد الجذر "
 "``/mnt/odmdata/myproject/``"
 
-#: ../../../tutorials.rst:458
+#: ../../tutorials.rst:458
 msgid ""
 "if you have the images in separate folders for individual AOI blocks or "
-"flights (which you will if your flight management was organized), you can "
-"create an image_groups.txt file with the incantations ``for i in *; do cd "
-"$i; for j in *; do echo \"$j $i\" >> ../$i.txt; done; cd ../; done;`` and "
-"``cd ../``, ``for i in myproject/*.txt; do cat $i >> image_groups.txt; "
-"done;``. That should create a file with the correct structure: a list of all"
-" image files and a “group name” after each one (which in this case will "
-"simply be the name of the folder it came from). Then move all of the image "
-"files into a single directory called images in the project root dir (so "
-"``/mnt/odmdata/myproject/images/``). The image_groups.txt file will allow "
-"ODM to keep track of which images belong to the same batch, even though "
-"they’re all in a single directory."
+"flights (which you will if your flight management was organized), you can"
+" create an image_groups.txt file with the incantations ``for i in *; do "
+"cd $i; for j in *; do echo \"$j $i\" >> ../$i.txt; done; cd ../; done;`` "
+"and ``cd ../``, ``for i in myproject/*.txt; do cat $i >> "
+"image_groups.txt; done;``. That should create a file with the correct "
+"structure: a list of all image files and a “group name” after each one "
+"(which in this case will simply be the name of the folder it came from). "
+"Then move all of the image files into a single directory called images in"
+" the project root dir (so ``/mnt/odmdata/myproject/images/``). The "
+"image_groups.txt file will allow ODM to keep track of which images belong"
+" to the same batch, even though they’re all in a single directory."
 msgstr ""
 "إذا كانت لديك الصور في مجلدات منفصلة لكتل ​​أو رحلات طيران فردية (والتي "
 "ستفعلها إذا تم تنظيم إدارة رحلتك) ، فيمكنك إنشاء ملف image_groups.txt مع "
 "التعويذات ``لـ i in * ؛ هل cd $ i ؛ for j in *؛ do echo \"$ j $ i\" >> "
 "../$i.txt؛ فعله؛ مؤتمر نزع السلاح ../ ؛ فعل ؛`` و ``cd ../`` ، ``لأني في "
-"myproject / *. txt ؛ do cat $ i >> image_groups.txt؛ فعل ؛``. من المفترض أن "
-"يؤدي ذلك إلى إنشاء ملف بهيكل صحيح: قائمة بجميع ملفات الصور و \"اسم "
-"المجموعة\" بعد كل ملف (والذي سيكون في هذه الحالة ببساطة اسم المجلد الذي جاء "
-"منه). ثم انقل جميع ملفات الصور إلى دليل واحد يسمى الصور في دليل جذر المشروع "
-"(لذا ``/mnt/odmdata/myproject/images/``). سيسمح ملف image_groups.txt لـ ODM "
-"بتتبع الصور التي تنتمي إلى نفس الدفعة ، على الرغم من أنها كلها في دليل واحد."
+"myproject / *. txt ؛ do cat $ i >> image_groups.txt؛ فعل ؛``. من المفترض "
+"أن يؤدي ذلك إلى إنشاء ملف بهيكل صحيح: قائمة بجميع ملفات الصور و \"اسم "
+"المجموعة\" بعد كل ملف (والذي سيكون في هذه الحالة ببساطة اسم المجلد الذي "
+"جاء منه). ثم انقل جميع ملفات الصور إلى دليل واحد يسمى الصور في دليل جذر "
+"المشروع (لذا ``/mnt/odmdata/myproject/images/``). سيسمح ملف "
+"image_groups.txt لـ ODM بتتبع الصور التي تنتمي إلى نفس الدفعة ، على الرغم"
+" من أنها كلها في دليل واحد."
 
-#: ../../../tutorials.rst:474
+#: ../../tutorials.rst:474
 msgid "Resize droplet, pull pin, run away"
 msgstr "تغيير حجم القطرة ، وسحب دبوس ، والهروب"
 
-#: ../../../tutorials.rst:476
+#: ../../tutorials.rst:476
 msgid ""
-"Shut down and resize your machine to an appropriately monstrous number of "
-"CPUs and amount of memory. I use the memory-optimized machine with 24 "
-"dedicated vCPUs and 192GB of RAM (which costs about $1.60/hr—which adds up "
-"fast, it’s over $1000/month). Restart, and get to work quickly so as not to "
-"waste expensive big-droplet time."
+"Shut down and resize your machine to an appropriately monstrous number of"
+" CPUs and amount of memory. I use the memory-optimized machine with 24 "
+"dedicated vCPUs and 192GB of RAM (which costs about $1.60/hr—which adds "
+"up fast, it’s over $1000/month). Restart, and get to work quickly so as "
+"not to waste expensive big-droplet time."
 msgstr ""
-"قم بإيقاف تشغيل جهازك وتغيير حجمه إلى عدد هائل من وحدات المعالجة المركزية "
-"وكمية الذاكرة المناسبة. أستخدم الجهاز المُحسّن للذاكرة مع 24 وحدة vCPU مخصصة"
-" و 192 غيغابايت من ذاكرة الوصول العشوائي (والتي تكلف حوالي 1.60 دولارًا في "
-"الساعة - والتي تضيف بسرعة ، تزيد عن 1000 دولار / شهر). إعادة التشغيل ، "
-"والبدء في العمل بسرعة حتى لا تضيع وقتًا كبيرًا."
+"قم بإيقاف تشغيل جهازك وتغيير حجمه إلى عدد هائل من وحدات المعالجة المركزية"
+" وكمية الذاكرة المناسبة. أستخدم الجهاز المُحسّن للذاكرة مع 24 وحدة vCPU "
+"مخصصة و 192 غيغابايت من ذاكرة الوصول العشوائي (والتي تكلف حوالي 1.60 "
+"دولارًا في الساعة - والتي تضيف بسرعة ، تزيد عن 1000 دولار / شهر). إعادة "
+"التشغيل ، والبدء في العمل بسرعة حتى لا تضيع وقتًا كبيرًا."
 
-#: ../../../tutorials.rst:481
+#: ../../tutorials.rst:481
 msgid ""
 "Launch the ODM process via ssh using nohup (so that if you’re cut off, "
 "processing will continue)"
@@ -1028,97 +1032,97 @@ msgstr ""
 "ابدأ تشغيل عملية ODM عبر ssh باستخدام nohup (بحيث إذا تم قطع الاتصال ، "
 "فستستمر المعالجة)"
 
-#: ../../../tutorials.rst:484
+#: ../../tutorials.rst:484
 msgid ""
 "Alternately you can use GNU screen to launch the process from a screen "
 "session which won’t stop if your connection is interrupted; launch "
 "``screen``, and use ``<ctrl> a <ctrl> d`` to detach, ``screen -r`` to re-"
 "attach. But using screen won’t get you a log file of all of the console "
-"output unless you do something specific to capture that, while nohup gives "
-"you a file with all of the console output, including error messages, for "
-"free."
+"output unless you do something specific to capture that, while nohup "
+"gives you a file with all of the console output, including error "
+"messages, for free."
 msgstr ""
-"بدلاً من ذلك ، يمكنك استخدام شاشة GNU لبدء العملية من جلسة الشاشة التي لن "
-"تتوقف إذا انقطع اتصالك ؛ قم بتشغيل `` الشاشة '' ، واستخدم `` <ctrl> a <ctrl>"
-" d '' لفصل \"الشاشة - r\" لإعادة توصيلها. لكن استخدام الشاشة لن ​​يمنحك ملف "
-"سجل لجميع مخرجات وحدة التحكم ما لم تفعل شيئًا محددًا لالتقاط ذلك ، بينما "
-"يمنحك nohup ملفًا يحتوي على جميع مخرجات وحدة التحكم ، بما في ذلك رسائل الخطأ"
-" ، مجانًا"
+"بدلاً من ذلك ، يمكنك استخدام شاشة GNU لبدء العملية من جلسة الشاشة التي لن"
+" تتوقف إذا انقطع اتصالك ؛ قم بتشغيل `` الشاشة '' ، واستخدم `` <ctrl> a "
+"<ctrl> d '' لفصل \"الشاشة - r\" لإعادة توصيلها. لكن استخدام الشاشة لن "
+"​​يمنحك ملف سجل لجميع مخرجات وحدة التحكم ما لم تفعل شيئًا محددًا لالتقاط "
+"ذلك ، بينما يمنحك nohup ملفًا يحتوي على جميع مخرجات وحدة التحكم ، بما في "
+"ذلك رسائل الخطأ ، مجانًا"
 
-#: ../../../tutorials.rst:491
+#: ../../tutorials.rst:491
 msgid ""
 "Note: as of 2020-03 the normal incantation ``python run.py -i "
 "/path/to/image/folder project_name`` seems *not* to work; the ``-i`` or "
-"``--image`` parameter causes a weird error. So we drop the -i parameter, and"
-" rely on the project directory line in the settings.yaml file to direct ODM "
-"to the right place. Now using (including a split-merge):"
+"``--image`` parameter causes a weird error. So we drop the -i parameter, "
+"and rely on the project directory line in the settings.yaml file to "
+"direct ODM to the right place. Now using (including a split-merge):"
 msgstr ""
 "ملاحظة: اعتبارًا من 2020-03، يبدو أن التعطيل العادي `` python run.py -i "
-"/path/to/image/folder project_nam '' يبدو * غير * يعمل ؛ تؤدي المعلمة \"-i\""
-" أو \"--image\" إلى حدوث خطأ غريب. لذا نسقط المعلمة -i ، ونعتمد على سطر دليل"
-" المشروع في ملف settings.yaml لتوجيه ODM إلى المكان الصحيح. الآن باستخدام "
-"(بما في ذلك الدمج المقسم):"
+"/path/to/image/folder project_nam '' يبدو * غير * يعمل ؛ تؤدي المعلمة "
+"\"-i\" أو \"--image\" إلى حدوث خطأ غريب. لذا نسقط المعلمة -i ، ونعتمد على"
+" سطر دليل المشروع في ملف settings.yaml لتوجيه ODM إلى المكان الصحيح. الآن"
+" باستخدام (بما في ذلك الدمج المقسم):"
 
-#: ../../../tutorials.rst:502
+#: ../../tutorials.rst:502
 msgid ""
-"This points ODM at the folder (in this example) ``/mnt/odmdata/myproject/``."
-" Provided the image_groups.txt and gcp_list.txt are in this folder, the "
-"images are in ``/mnt/odmdata/myproject/images/``, and the project path in "
-"settings.yaml is ``/mnt/odmdata/`` it will not waste time and space copying "
-"images."
+"This points ODM at the folder (in this example) "
+"``/mnt/odmdata/myproject/``. Provided the image_groups.txt and "
+"gcp_list.txt are in this folder, the images are in "
+"``/mnt/odmdata/myproject/images/``, and the project path in settings.yaml"
+" is ``/mnt/odmdata/`` it will not waste time and space copying images."
 msgstr ""
 "هذا يشير إلى ODM في المجلد (في هذا المثال) ```/mnt/odmdata/myproject/``. "
-"بشرط أن يكون ملف image_groups.txt و gcp_list.txt في هذا المجلد ، فإن الصور "
-"موجودة في ``/mnt/odmdata/myproject/images/`` ، ومسار المشروع في الإعدادات. "
-"yaml هو ``/mnt/odmdata/``  لن تضيع الوقت ونسخ الصور الفضائية."
+"بشرط أن يكون ملف image_groups.txt و gcp_list.txt في هذا المجلد ، فإن "
+"الصور موجودة في ``/mnt/odmdata/myproject/images/`` ، ومسار المشروع في "
+"الإعدادات. yaml هو ``/mnt/odmdata/``  لن تضيع الوقت ونسخ الصور الفضائية."
 
-#: ../../../tutorials.rst:509
+#: ../../tutorials.rst:509
 msgid ""
 "Note that this assumes you have an image_groups.txt file. If not, this "
-"``-split-overlap 0`` will probably fuck things up, and the ``--split 1`` is "
-"literally a random number that will be ignored after the image_groups.txt "
-"file is loaded (I think it normally controls how many groups it splits a set"
-" of images into, but in our case we’re assuming the images are already "
-"grouped sensibly). If you don’t have a large dataset (>1000 images), omit "
-"the ``--split`` and ``--split-overlap`` options."
+"``-split-overlap 0`` will probably fuck things up, and the ``--split 1`` "
+"is literally a random number that will be ignored after the "
+"image_groups.txt file is loaded (I think it normally controls how many "
+"groups it splits a set of images into, but in our case we’re assuming the"
+" images are already grouped sensibly). If you don’t have a large dataset "
+"(>1000 images), omit the ``--split`` and ``--split-overlap`` options."
 msgstr ""
-"لاحظ أن هذا يفترض أن لديك ملف image_groups.txt. إذا لم يكن الأمر كذلك ، فمن "
-"المحتمل أن يؤدي هذا \"-split-interap 0\" إلى تلاعب الأمور ، و \"--plit 1\" "
-"هو حرفيا رقم عشوائي سيتم تجاهله بعد تحميل ملف image_groups.txt (أعتقد ذلك "
-"تتحكم عادةً في عدد المجموعات التي تقوم بتقسيم مجموعة من الصور إليها ، ولكن "
-"في حالتنا نحن نفترض أن الصور مجمعة بالفعل بشكل معقول). إذا لم يكن لديك "
-"مجموعة بيانات كبيرة (> 1000 صورة) ، فاحذف خياري \"- تقسيم\" و \"- تقسيم "
-"متداخل\"."
+"لاحظ أن هذا يفترض أن لديك ملف image_groups.txt. إذا لم يكن الأمر كذلك ، "
+"فمن المحتمل أن يؤدي هذا \"-split-interap 0\" إلى تلاعب الأمور ، و \"--"
+"plit 1\" هو حرفيا رقم عشوائي سيتم تجاهله بعد تحميل ملف image_groups.txt "
+"(أعتقد ذلك تتحكم عادةً في عدد المجموعات التي تقوم بتقسيم مجموعة من الصور "
+"إليها ، ولكن في حالتنا نحن نفترض أن الصور مجمعة بالفعل بشكل معقول). إذا "
+"لم يكن لديك مجموعة بيانات كبيرة (> 1000 صورة) ، فاحذف خياري \"- تقسيم\" و"
+" \"- تقسيم متداخل\"."
 
-#: ../../../tutorials.rst:518
+#: ../../tutorials.rst:518
 msgid "Follow the progress using tail (so that you’ll know when it’s done)"
 msgstr "اتبع التقدم باستخدام الذيل (حتى تعرف متى يتم ذلك)"
 
-#: ../../../tutorials.rst:524
+#: ../../tutorials.rst:524
 msgid ""
-"You may want to keep an eye on htop (to get a sense of the resource usage so"
-" that in future you can only spin up a machine as large as necessary)"
+"You may want to keep an eye on htop (to get a sense of the resource usage"
+" so that in future you can only spin up a machine as large as necessary)"
 msgstr ""
 "قد ترغب في مراقبة htop (للحصول على فكرة عن استخدام الموارد حتى تتمكن في "
 "المستقبل من تدوير آلة كبيرة بقدر الضرورة)"
 
-#: ../../../tutorials.rst:529
+#: ../../tutorials.rst:529
 msgid "After it finishes (assuming you survive that long)"
 msgstr "بعد الانتهاء (بافتراض أنك تعيش طويلاً)"
 
-#: ../../../tutorials.rst:531
+#: ../../tutorials.rst:531
 msgid ""
-"As soon as processing is done, shut down the machine and resize it back down"
-" to the inexpensive minimum capacity."
+"As soon as processing is done, shut down the machine and resize it back "
+"down to the inexpensive minimum capacity."
 msgstr ""
 "بمجرد الانتهاء من المعالجة ، أغلق الماكينة وقم بتغيير حجمها مرة أخرى إلى "
 "الحد الأدنى للسعة غير المكلفة."
 
-#: ../../../tutorials.rst:533
+#: ../../tutorials.rst:533
 msgid "Start the machine back up, and log in via ssh."
 msgstr "قم بتشغيل الجهاز احتياطيًا ، وقم بتسجيل الدخول عبر ssh."
 
-#: ../../../tutorials.rst:534
+#: ../../tutorials.rst:534
 msgid ""
 "If you want to save download bandwidth, you can compress the orthophoto "
 "using GDAL. Don’t add overviews, do that on your local machine to avoid "
@@ -1128,7 +1132,7 @@ msgstr ""
 "باستخدام GDAL. لا تضيف نظرة عامة ، افعل ذلك على جهازك المحلي لتجنب تكبير "
 "الملف قبل تنزيله."
 
-#: ../../../tutorials.rst:542
+#: ../../tutorials.rst:542
 msgid ""
 "Download using scp: ``scp "
 "odm@xxx.xxx.xxx.xxx:/mnt/odmdata/myproject/odm_orthophoto/odm_orthophoto.tif``"
@@ -1138,27 +1142,522 @@ msgstr ""
 "odm@xxx.xxx.xxx.xxx:/mnt/odmdata/myproject/odm_orthophoto/odm_orthophoto.tif``"
 " (أو احصل على النسخة المضغوطة التي أنشأتها في الخطوة الأخيرة) "
 
-#: ../../../tutorials.rst:546
+#: ../../tutorials.rst:546
 msgid ""
 "Once you get the file on your local computer, you can use QGIS to add "
 "overviews (“pyramids”) or use the GDAL command ``gdaladdo -r average "
 "/path/to/image.tif 2 4 8 16 32 64 128 256 512 1024``."
 msgstr ""
-"بمجرد الحصول على الملف على جهاز الكمبيوتر المحلي الخاص بك ، يمكنك استخدام "
-"QGIS لإضافة نظرة عامة (\"الأهرامات\") أو استخدام أمر GDAL  ``gdaladdo -r "
-"average /path/to/image.tif 2 4 8 16 32 64 128 256 512 1024``."
+"بمجرد الحصول على الملف على جهاز الكمبيوتر المحلي الخاص بك ، يمكنك استخدام"
+" QGIS لإضافة نظرة عامة (\"الأهرامات\") أو استخدام أمر GDAL  ``gdaladdo -r"
+" average /path/to/image.tif 2 4 8 16 32 64 128 256 512 1024``."
 
-#: ../../../tutorials.rst:550
+#: ../../tutorials.rst:550
 msgid ""
-"You can archive the odm_texturing, odm_georeferencing, and odm-dem folders "
-"using tar to make them easier to download in one piece (and maybe smaller)."
+"You can archive the odm_texturing, odm_georeferencing, and odm-dem "
+"folders using tar to make them easier to download in one piece (and maybe"
+" smaller)."
 msgstr ""
-"يمكنك أرشفة مجلدات odm_texturing و odm_georeferencing و odm-dem باستخدام tar"
-" لتسهيل عملية التنزيل في قطعة واحدة (وربما أصغر)."
+"يمكنك أرشفة مجلدات odm_texturing و odm_georeferencing و odm-dem باستخدام "
+"tar لتسهيل عملية التنزيل في قطعة واحدة (وربما أصغر)."
 
-#: ../../../tutorials.rst:560
+#: ../../tutorials.rst:561
+msgid "Using Potree 3D viewer module on WebODM"
+msgstr ""
+
+#: ../../tutorials.rst:564
+msgid "Cameras"
+msgstr ""
+
+#: ../../tutorials.rst:565
+msgid "Activate this function to display camera positions."
+msgstr ""
+
+#: ../../tutorials.rst:567
 msgid ""
-"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
-"contribution>`_ and help improve `this page "
+"You can also click in the camera icon to display single images in a frame"
+" on the upper right corner. A click on the image frame toggles into full "
+"screen mode."
+msgstr ""
+
+#: ../../tutorials.rst:569
+msgid ""
+"Within the image frame there are links to download the image and the "
+"GeoJSON camera file."
+msgstr ""
+
+msgid "Camera locations"
+msgstr ""
+
+#: ../../tutorials.rst:576
+msgid "Textured model"
+msgstr ""
+
+#: ../../tutorials.rst:578
+msgid ""
+"Activate this function to show load the textured model. Depending on the "
+"file size and connection speed, it may take several seconds to load."
+msgstr ""
+
+#: ../../tutorials.rst:585
+msgid "Appearance"
+msgstr ""
+
+#: ../../tutorials.rst:590
+msgid "Point budget"
+msgstr ""
+
+#: ../../tutorials.rst:591
+msgid ""
+"For both appearance and performance purposes, the point budget on the "
+"scene can be managed. Some old and less capable machines would benefit "
+"from a 500,000 point budget while most mid-range specs machine are "
+"capable of handling 1 to 2 million point budget."
+msgstr ""
+
+#: ../../tutorials.rst:593
+msgid ""
+"A 5 to 7 million point budget produces a smooth point cloud 3d model, but"
+" may result in a high resource demanding process."
+msgstr ""
+
+#: ../../tutorials.rst:595
+msgid "Default point budget value is set to 1,000,000."
+msgstr ""
+
+#: ../../tutorials.rst:598
+msgid "Field of view"
+msgstr ""
+
+#: ../../tutorials.rst:600
+msgid ""
+"In order to control model elements to be included within the scene the "
+"field of view can be adjusted. Default value is set to 60 degrees."
+msgstr ""
+
+msgid "Field of view adjustment"
+msgstr ""
+
+#: ../../tutorials.rst:608
+msgid "Eye Dome-lighting"
+msgstr ""
+
+#: ../../tutorials.rst:610
+msgid ""
+"The Potree Point Cloud 3d viewer module can implement eye dome-lighting, "
+"a lighting model that accentuates the shapes of objects."
+msgstr ""
+
+#: ../../tutorials.rst:612
+msgid ""
+"Eye Dome-lighting group objects, shade their outlines and enhances depth "
+"perception in scientific visualization images. It is useful for "
+"recognition and measurement of structures within a model. It can be "
+"modified by adjusting Radius, Strength and Opacity."
+msgstr ""
+
+#: ../../tutorials.rst:614
+msgid ""
+"By default, Eye Dome-Lighting is enabled on Potree 3D viewer, but it can "
+"be disabled by clicking on the enable option."
+msgstr ""
+
+msgid "Eye dome lighting adjustment"
+msgstr ""
+
+#: ../../tutorials.rst:622
+msgid "Background"
+msgstr ""
+
+#: ../../tutorials.rst:624
+msgid ""
+"Potree 3D viewer background can be modified. Available options are "
+"**Skybox** / **Gradient** / **Black** / **White** / **None**"
+msgstr ""
+
+msgid "Background selection"
+msgstr ""
+
+#: ../../tutorials.rst:631
+msgid "Other"
+msgstr ""
+
+#: ../../tutorials.rst:633
+msgid ""
+"**Splat Quality** = Splat quality can be adjusted to standard or high "
+"quality, to improve the appearance of the model."
+msgstr ""
+
+#: ../../tutorials.rst:635
+msgid ""
+"**Min node size** = Min node size option will impact the point density of"
+" the nodes represented."
+msgstr ""
+
+#: ../../tutorials.rst:637
+msgid "**Box** = Display the boxes of the nodes."
+msgstr ""
+
+#: ../../tutorials.rst:639
+msgid ""
+"**Lock view** = Lock the point cloud view, preventing to load or unload "
+"points to the model."
+msgstr ""
+
+#: ../../tutorials.rst:642
+msgid "Tools"
+msgstr ""
+
+#: ../../tutorials.rst:645
+msgid "Measurement"
+msgstr ""
+
+#: ../../tutorials.rst:647
+msgid ""
+"Potree 3D viewer module provides several tools for measurement. This tool"
+" set consist of 12 elements. It also has controls for showing or hiding "
+"the resulting measurement labels."
+msgstr ""
+
+#: ../../tutorials.rst:650
+msgid ""
+"Measurements are performed by left clicking on the desired points and for"
+" some tools right clicking is needed in order to terminate the process."
+msgstr ""
+
+msgid "Tools - Measurement tools"
+msgstr ""
+
+#: ../../tutorials.rst:656
+msgid "**Angle**"
+msgstr ""
+
+#: ../../tutorials.rst:658
+msgid ""
+"This tool measures the tridimensional angle formed by the lines "
+"connecting 3 points. To start a measurement, click on the angle icon, "
+"then left click on 3 point and the process will be automatically ended. "
+"Further information can also be obtained from selecting this element "
+"under the scene section."
+msgstr ""
+
+#: ../../tutorials.rst:662
+msgid "**Point**"
+msgstr ""
+
+#: ../../tutorials.rst:664
+msgid ""
+"This tool highlights a selected point and display its XYZ coordinate. To "
+"start a measurement, click on the point icon, then click on the desired "
+"point and the process will be automatically ended. Further information "
+"can also be obtained from selecting this element under the scene section."
+msgstr ""
+
+#: ../../tutorials.rst:668
+msgid "**Distance**"
+msgstr ""
+
+#: ../../tutorials.rst:670
+msgid ""
+"This tool measures the tridimensional distance of the lines connecting a "
+"series of points. To start a measurement, click on the distance icon and "
+"start clicking on the desired points (two or more). Right click to finish"
+" measurement. Further information such as Total length can also be "
+"obtained from selecting this element under the scene section."
+msgstr ""
+
+#: ../../tutorials.rst:674
+msgid "**Height**"
+msgstr ""
+
+#: ../../tutorials.rst:676
+msgid ""
+"This tool measures the height or vertical distance between two points. To"
+" start a measurement, click on the height icon and then click on the "
+"desired two points. The process will be automatically ended. Further "
+"information can also be obtained from selecting this element under the "
+"scene section."
+msgstr ""
+
+msgid "Heigth measurement"
+msgstr ""
+
+#: ../../tutorials.rst:684
+msgid "**Circle**"
+msgstr ""
+
+#: ../../tutorials.rst:686
+msgid ""
+"This tool measures the radius of a circle formed by three points. To "
+"start a measurement, click on the circle icon and then click on the "
+"desired two points. The process will be automatically ended. Further "
+"information such as Circumference can also be obtained from selecting "
+"this element under the scene section."
+msgstr ""
+
+#: ../../tutorials.rst:690
+msgid "**Azimuth**"
+msgstr ""
+
+#: ../../tutorials.rst:692
+msgid ""
+"This tool measures the azimuthal angle of a line. This line is formed by "
+"two points selected by the user, the angle is measured in degrees, "
+"clockwise from 0 to 360 and starting from the geographical north. To "
+"start a measurement, click on the azimuth icon and then click on the "
+"desired two points. The process will be automatically ended. Further "
+"information can also be obtained from selecting this element under the "
+"scene section."
+msgstr ""
+
+#: ../../tutorials.rst:696
+msgid "**Area**"
+msgstr ""
+
+#: ../../tutorials.rst:698
+msgid ""
+"This tool measures the horizontal area formed by a polygon. To start a "
+"measurement, click on the area icon and start clicking on the points "
+"forming the desired polygon (three or more). Right click to finish "
+"measurement. Further information can also be obtained from selecting this"
+" element under the scene section."
+msgstr ""
+
+#: ../../tutorials.rst:702
+msgid "**Volume (cube)**"
+msgstr ""
+
+#: ../../tutorials.rst:704
+msgid ""
+"This tool measures the volume formed by a cube. To start a measurement, "
+"click on the volume (cube) icon and click on the model to place the cube."
+" It is possible relocate, redimension and rotate the cube using the "
+"displayed handlers. Right click to finish measurement. Further "
+"information can also be obtained from selecting this element under the "
+"scene section."
+msgstr ""
+
+#: ../../tutorials.rst:708
+msgid "**Volume (sphere)**"
+msgstr ""
+
+#: ../../tutorials.rst:710
+msgid ""
+"This tool measures the volume formed by a sphere. To start a measurement,"
+" click on the volume (sphere) icon and click on the model to place the "
+"sphere. It is possible relocate, redimension and rotate the sphere using "
+"the displayed handlers. Right click to finish measurement. Further "
+"information can also be obtained from selecting this element under the "
+"scene section."
+msgstr ""
+
+#: ../../tutorials.rst:714
+msgid "**Height profile**"
+msgstr ""
+
+#: ../../tutorials.rst:716
+msgid ""
+"This tool creates a height profile formed by a line on the model. To "
+"start a measurement, click on the Height profile icon and then form a "
+"line on the model by clicking on the desired points (two or more). Right "
+"click to finish measurement. Further information and options, such as "
+"\"Show 2d Profile\", can also been obtained from selecting this element "
+"under the scene section."
+msgstr ""
+
+msgid "Heigth profile"
+msgstr ""
+
+#: ../../tutorials.rst:724
+msgid "**Annotation**"
+msgstr ""
+
+#: ../../tutorials.rst:726
+msgid ""
+"This tool creates an annotation label on a highlighted point on the "
+"model. To start a measurement, click on the annotation icon and then "
+"click on the desired point. The process will be automatically ended. To "
+"edit the annotation, select this element under the scene section, then "
+"edit Title and Description."
+msgstr ""
+
+#: ../../tutorials.rst:730
+msgid "**Remove measurements**"
+msgstr ""
+
+#: ../../tutorials.rst:732
+msgid ""
+"This tool removes all measurements on the model. To remove all "
+"measurement, click on the \"Remove measurements\" icon."
+msgstr ""
+
+#: ../../tutorials.rst:737
+msgid "Clipping"
+msgstr ""
+
+msgid "Tools - Clipping tools"
+msgstr ""
+
+#: ../../tutorials.rst:744
+msgid ""
+"Point cloud can be clipped by selecting an area. Clipping options include"
+" **None** / **Highlight** / **Inside** / **Outside**"
+msgstr ""
+
+#: ../../tutorials.rst:746
+msgid ""
+"To clip a point cloud, click on the volume clip icon, place the cube on "
+"the model and relocate, redimension and rotate to contain the desired "
+"area. Highlight is set by default as the clipping method. If display only"
+" the points contained within the cube click on \"Inside\", otherwise "
+"click on \"Outside\"."
+msgstr ""
+
+#: ../../tutorials.rst:749
+msgid ""
+"To remove the clipping volume or polygons click on the \"Remove all "
+"measurements\" icon."
+msgstr ""
+
+msgid "Tools - Clipping"
+msgstr ""
+
+#: ../../tutorials.rst:756
+msgid "Navigation"
+msgstr ""
+
+msgid "Tools - Navigation controls"
+msgstr ""
+
+#: ../../tutorials.rst:762
+msgid "Potree 3D viewer have 4 Navigation controls which define its behavior."
+msgstr ""
+
+#: ../../tutorials.rst:764
+msgid "**Earth Control**"
+msgstr ""
+
+#: ../../tutorials.rst:766
+msgid ""
+"Earth control navigated as anchored to the ground. Mouse left button "
+"moves the model horizontally, mouse wheel controls zoom and right button "
+"orbits the model."
+msgstr ""
+
+#: ../../tutorials.rst:768
+msgid "**Fly control**"
+msgstr ""
+
+#: ../../tutorials.rst:770
+msgid ""
+"Fly control moves the camera as in birds eye using the keyboard. Keys "
+"\"W\" and \"S\" moves forward and backwards, respectively and in the "
+"direction of the camera, while \"A\" and \"D\" moves left and right "
+"respectively. Also, the \"R\" and \"F\" keys moves the camera up and "
+"down. The mouse left button changes the direction of the camera, mouse "
+"wheel controls zoom, and right button moves the camera in the XYZ axis."
+msgstr ""
+
+#: ../../tutorials.rst:772 ../../tutorials.rst:778
+msgid "The speed for these movements can be controlled using the sliding control."
+msgstr ""
+
+#: ../../tutorials.rst:774
+msgid "**Helicopter control**"
+msgstr ""
+
+#: ../../tutorials.rst:776
+msgid ""
+"Helicopter control moves the camera as in an aircraft using the keyboard."
+" Keys \"W\" and \"S\" moves forward and backwards, respectively "
+"restricted in a horizontal plane, while \"A\" and \"D\" moves left and "
+"right respectively. Also, the \"R\" and \"F\" keys moves the camera up "
+"and down. The mouse left button changes the direction of the camera, "
+"mouse wheel controls zoom, and right button moves the model in the XY "
+"axis."
+msgstr ""
+
+#: ../../tutorials.rst:780
+msgid "**Orbit Control**"
+msgstr ""
+
+#: ../../tutorials.rst:782
+msgid ""
+"Orbit Control is the default navigation behavior. The mouse left button "
+"orbits the model, the wheel controls zoom and the right button moves the "
+"model in the XYZ axis."
+msgstr ""
+
+#: ../../tutorials.rst:784
+msgid "**Full extent**"
+msgstr ""
+
+#: ../../tutorials.rst:786
+msgid "Full extent button restores the model view."
+msgstr ""
+
+#: ../../tutorials.rst:788
+msgid "**Navigation cube**"
+msgstr ""
+
+#: ../../tutorials.rst:790
+msgid "Navigation cube displays a wireframe cube containing the model."
+msgstr ""
+
+#: ../../tutorials.rst:792
+msgid "**Compass**"
+msgstr ""
+
+#: ../../tutorials.rst:794
+msgid "Compass button displays a compass on the upper right corner."
+msgstr ""
+
+#: ../../tutorials.rst:796
+msgid "**Camera animation**"
+msgstr ""
+
+#: ../../tutorials.rst:798
+msgid ""
+"The camera animation button creates a camera animation path. Position of "
+"the camera is defined by the points on the green line while the points in"
+" the blue line are the location towards the camera is intended to be "
+"facing."
+msgstr ""
+
+#: ../../tutorials.rst:800
+msgid ""
+"To create an animation, adjust the points for the camera locations and "
+"camera direction, then select the camera element under the Scene section "
+"to create more point, change animation speed or play the animation."
+msgstr ""
+
+#: ../../tutorials.rst:808
+msgid "Scene"
+msgstr ""
+
+#: ../../tutorials.rst:810
+msgid ""
+"The Scene section displays a file tree containing all the scene elements."
+" Elements are arranged in six groups, which are **Point clouds** / "
+"**Measurements** / **Annotations** / **Other** / **Vector** / **Images**"
+msgstr ""
+
+#: ../../tutorials.rst:814
+msgid ""
+"Each element under these groups can be selected to get further "
+"information or to control its properties."
+msgstr ""
+
+#: ../../tutorials.rst:816
+msgid ""
+"For instance, point clouds properties can be modified to show elevation "
+"and also the color ramp cam be customized."
+msgstr ""
+
+#: ../../tutorials.rst:823
+msgid ""
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ and help improve `this page "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_!"
 msgstr ""
+
