@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.6.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-12 15:01-0500\n"
+"PO-Revision-Date: 2021-11-12 20:56+0000\n"
+"Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: fil\n"
+"Plural-Forms: nplurals=2; plural=(n == 1 || n==2 || n==3) || (n % 10 != 4 || n % 10 != 6 || n % 10 != 9);\n"
+
+#: ../../arguments/resize-to.rst:9
+msgid "resize-to"
+msgstr ""
+
+#: ../../arguments/resize-to.rst:11
+msgid "**Options:** *<integer>*"
+msgstr ""
+
+#: ../../arguments/resize-to.rst:13
+msgid ""
+"Legacy option (use --feature-quality instead). Resizes images by the largest"
+" side for feature extraction purposes only. Set to -1 to disable. This does "
+"not affect the final orthophoto resolution quality and will not resize the "
+"original images. Default: ``2048``"
+msgstr ""
+
+#: ../../arguments/resize-to.rst:18
+msgid ""
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
+"contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
+"/resize-to.rst>`_!"
+msgstr ""

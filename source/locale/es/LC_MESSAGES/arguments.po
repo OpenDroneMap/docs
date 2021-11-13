@@ -9,9 +9,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.5.7\n"
+"Project-Id-Version: OpenDroneMap 2.6.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 08:47-0400\n"
+"POT-Creation-Date: 2021-11-12 15:01-0500\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
@@ -21,15 +21,37 @@ msgstr ""
 "Language: es\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 
-#: ../../../arguments.rst:2
+#: ../../arguments.rst:2
 msgid "Options and Flags"
 msgstr "Opciones e indicadores"
 
-#: ../../../arguments.rst:5
-msgid ":ref:`build-overviews<build-overviews>`"
+#: ../../arguments.rst:5
+msgid ":ref:`auto-boundary<auto-boundary>`"
 msgstr ""
 
-#: ../../../arguments.rst:5
+#: ../../arguments.rst:5
+msgid ""
+"Automatically set a boundary using camera shot locations to limit the area "
+"of the reconstruction. This can help remove far away background artifacts "
+"(sky, background landscapes, etc.). See also --boundary. Default: ``False``"
+msgstr ""
+
+#: ../../arguments.rst:8
+msgid ":ref:`boundary<boundary>` <json>"
+msgstr ""
+
+#: ../../arguments.rst:8
+msgid ""
+"GeoJSON polygon limiting the area of the reconstruction. Can be specified "
+"either as path to a GeoJSON file or as a JSON string representing the "
+"contents of a GeoJSON file. Default: ``"
+msgstr ""
+
+#: ../../arguments.rst:11
+msgid ":ref:`build-overviews<build-overviews>`"
+msgstr ":ref:`build-overviews<build-overviews>`"
+
+#: ../../arguments.rst:11
 msgid ""
 "Build orthophoto overviews for faster display in programs such as QGIS. "
 "Default: ``False``"
@@ -37,13 +59,15 @@ msgstr ""
 "Crea vistas generales de la ortofoto para una visualización mas rápida en "
 "programas como QGIS. Predeterminado: ``False``"
 
-#: ../../../arguments.rst:8
+#: ../../arguments.rst:14
 msgid ""
 ":ref:`camera-lens<camera-lens>` auto |  perspective |  brown |  fisheye |  "
 "spherical"
 msgstr ""
+":ref:`camera-lens<camera-lens>` auto |  perspective |  brown |  fisheye |  "
+"spherical"
 
-#: ../../../arguments.rst:8
+#: ../../arguments.rst:14
 msgid ""
 "Set a camera projection type. Manually setting a value can help improve "
 "geometric undistortion. By default the application tries to determine a lens"
@@ -54,11 +78,11 @@ msgstr ""
 "la aplicación intenta determinar un tipo de lente a partir de los metadatos "
 "de las imágenes. Predeterminado: ``auto``"
 
-#: ../../../arguments.rst:11
+#: ../../arguments.rst:17
 msgid ":ref:`cameras<cameras>` <json>"
-msgstr ""
+msgstr ":ref:`cameras<cameras>` <json>"
 
-#: ../../../arguments.rst:11
+#: ../../arguments.rst:17
 msgid ""
 "Use the camera parameters computed from another dataset instead of "
 "calculating them. Can be specified either as path to a cameras.json file or "
@@ -70,29 +94,32 @@ msgstr ""
 "archivo camera.json o como una cadena JSON que representa el contenido de un"
 " archivo camera.json. Default: ``"
 
-#: ../../../arguments.rst:14
+#: ../../arguments.rst:20
 msgid ":ref:`cog<cog>`"
-msgstr ""
+msgstr ":ref:`cog<cog>`"
 
-#: ../../../arguments.rst:14
+#: ../../arguments.rst:20
 msgid ""
 "Create Cloud-Optimized GeoTIFFs instead of normal GeoTIFFs. Default: "
 "``False``"
 msgstr ""
+"Cree GeoTIFF optimizados para la nube en lugar de GeoTIFF normales. "
+"Predeterminado: ``False``"
 
-#: ../../../arguments.rst:17
+#: ../../arguments.rst:23
 msgid ":ref:`copy-to<copy-to>` <path>"
-msgstr ""
+msgstr ":ref:`copy-to<copy-to>` <path>"
 
-#: ../../../arguments.rst:17
+#: ../../arguments.rst:23
 msgid "Copy output results to this folder after processing."
 msgstr ""
+"Copie los resultados de salida en esta carpeta después del procesamiento."
 
-#: ../../../arguments.rst:20
+#: ../../arguments.rst:26
 msgid ":ref:`crop<crop>` <positive float>"
-msgstr ""
+msgstr ":ref:`crop<crop>` <positive float>"
 
-#: ../../../arguments.rst:20
+#: ../../arguments.rst:26
 msgid ""
 "Automatically crop image outputs by creating a smooth buffer around the "
 "dataset boundaries, shrinked by N meters. Use 0 to disable cropping. "
@@ -102,19 +129,19 @@ msgstr ""
 "amortiguación suave alrededor de los límites del conjunto de datos, reducido"
 " en N metros. Utilice 0 para deshabilitar el recorte. Predeterminado: ``3``"
 
-#: ../../../arguments.rst:23
+#: ../../arguments.rst:29
 msgid ":ref:`debug<debug>`"
-msgstr ""
+msgstr ":ref:`debug<debug>`"
 
-#: ../../../arguments.rst:23
+#: ../../arguments.rst:29
 msgid "Print debug messages. Default: ``False``"
 msgstr "Imprime mensajes de depuración. Predeterminado: ``False``"
 
-#: ../../../arguments.rst:26
+#: ../../arguments.rst:32
 msgid ":ref:`dem-decimation<dem-decimation>` <positive integer>"
-msgstr ""
+msgstr ":ref:`dem-decimation<dem-decimation>` <positive integer>"
 
-#: ../../../arguments.rst:26
+#: ../../arguments.rst:32
 msgid ""
 "Decimate the points before generating the DEM. 1 is no decimation (full "
 "quality). 100 decimates ~99%% of the points. Useful for speeding up "
@@ -123,11 +150,11 @@ msgstr ""
 "Diezma los puntos antes de generar el DEM. ``1`` no diezma (calidad total). "
 "``100`` diezma ~ 99% de los puntos. Útil para acelerar la generación."
 
-#: ../../../arguments.rst:29
+#: ../../arguments.rst:35
 msgid ":ref:`dem-euclidean-map<dem-euclidean-map>`"
-msgstr ""
+msgstr ":ref:`dem-euclidean-map<dem-euclidean-map>`"
 
-#: ../../../arguments.rst:29
+#: ../../arguments.rst:35
 msgid ""
 "Computes an euclidean raster map for each DEM. The map reports the distance "
 "from each cell to the nearest NODATA value (before any hole filling takes "
@@ -139,11 +166,11 @@ msgstr ""
 "rellene cualquier agujero). Esto puede resultar útil para aislar las áreas "
 "que se han rellenado."
 
-#: ../../../arguments.rst:32
+#: ../../arguments.rst:38
 msgid ":ref:`dem-gapfill-steps<dem-gapfill-steps>` <positive integer>"
-msgstr ""
+msgstr ":ref:`dem-gapfill-steps<dem-gapfill-steps>` <positive integer>"
 
-#: ../../../arguments.rst:32
+#: ../../arguments.rst:38
 msgid ""
 "Number of steps used to fill areas with gaps. Set to 0 to disable gap "
 "filling. Starting with a radius equal to the output resolution, N different "
@@ -158,11 +185,11 @@ msgstr ""
 " (IDW) y se fusionan. Luego, los espacios restantes se fusionan utilizando "
 "la interpolación de vecino más cercano. Predeterminado:``3``"
 
-#: ../../../arguments.rst:35
+#: ../../arguments.rst:41
 msgid ":ref:`dem-resolution<dem-resolution>` <float>"
-msgstr ""
+msgstr ":ref:`dem-resolution<dem-resolution>` <float>"
 
-#: ../../../arguments.rst:35
+#: ../../arguments.rst:41
 msgid ""
 "DSM/DTM resolution in cm / pixel. Note that this value is capped by a ground"
 " sampling distance (GSD) estimate. To remove the cap, check --ignore-gsd "
@@ -172,11 +199,11 @@ msgstr ""
 "distancia de muestreo del terreno (GSD) estimada. Para remover este límite, "
 "active tambien --ignore-gsd. Predeterminado: ``5``"
 
-#: ../../../arguments.rst:38
+#: ../../arguments.rst:44
 msgid ":ref:`depthmap-resolution<depthmap-resolution>` <positive float>"
-msgstr ""
+msgstr ":ref:`depthmap-resolution<depthmap-resolution>` <positive float>"
 
-#: ../../../arguments.rst:38
+#: ../../arguments.rst:44
 msgid ""
 "Legacy option (use --pc-quality instead). Controls the density of the point "
 "cloud by setting the resolution of the depthmap images. Higher values take "
@@ -187,44 +214,50 @@ msgstr ""
 "profundidad. Los valores más altos tardan más en calcularse, pero producen "
 "nubes de puntos más densas. Predeterminado: ``640`` "
 
-#: ../../../arguments.rst:41
+#: ../../arguments.rst:47
 msgid ":ref:`dsm<dsm>`"
-msgstr ""
+msgstr ":ref:`dsm<dsm>`"
 
-#: ../../../arguments.rst:41
+#: ../../arguments.rst:47
 msgid ""
 "Use this tag to build a DSM (Digital Surface Model, ground + objects) using "
 "a progressive morphological filter. Check the --dem\\* parameters for finer "
 "tuning. Default: ``False``"
 msgstr ""
+"Utilice esta etiqueta para construir un DSM (modelo digital de superficie, "
+"suelo + objetos) utilizando un filtro morfológico progresivo. Verifique los "
+"parámetros --dem\\* para un ajuste más fino. Predeterminado: ``False``"
 
-#: ../../../arguments.rst:44
+#: ../../arguments.rst:50
 msgid ":ref:`dtm<dtm>`"
-msgstr ""
+msgstr ":ref:`dtm<dtm>`"
 
-#: ../../../arguments.rst:44
+#: ../../arguments.rst:50
 msgid ""
 "Use this tag to build a DTM (Digital Terrain Model, ground only) using a "
 "simple morphological filter. Check the --dem\\* and --smrf\\* parameters for"
 " finer tuning. Default: ``False``"
 msgstr ""
+"Utilice esta etiqueta para construir un DTM (Modelo Digital de Terreno, solo"
+" suelo) utilizando un filtro morfológico simple. Verifique los parámetros "
+"--dem\\* y smrf\\* para un ajuste mas fino. Predeterminado: ``False``"
 
-#: ../../../arguments.rst:47
+#: ../../arguments.rst:53
 msgid ""
 ":ref:`end-with<end-with>` dataset |  split |  merge |  opensfm |  openmvs |"
 "  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  "
-"odm_dem |  odm_orthophoto |  odm_report"
+"odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess"
 msgstr ""
 
-#: ../../../arguments.rst:47
-msgid "End processing at this stage. . Default: ``odm_report``"
-msgstr "Finalizar procesamiento en esta etapa. Default: ``odm_report``"
+#: ../../arguments.rst:53
+msgid "End processing at this stage. . Default: ``odm_postprocess``"
+msgstr ""
 
-#: ../../../arguments.rst:50
+#: ../../arguments.rst:56
 msgid ":ref:`fast-orthophoto<fast-orthophoto>`"
-msgstr ""
+msgstr ":ref:`fast-orthophoto<fast-orthophoto>`"
 
-#: ../../../arguments.rst:50
+#: ../../arguments.rst:56
 msgid ""
 "Skips dense reconstruction and 3D model generation. It generates an "
 "orthophoto directly from the sparse reconstruction. If you just need an "
@@ -236,13 +269,15 @@ msgstr ""
 "opción, si solo necesita una ortofoto y no necesita un modelo 3D completo. "
 "Predeterminado: ``False``"
 
-#: ../../../arguments.rst:53
+#: ../../arguments.rst:59
 msgid ""
 ":ref:`feature-quality<feature-quality>` ultra |  high |  medium |  low |  "
 "lowest"
 msgstr ""
+":ref:`feature-quality<feature-quality>` ultra |  high |  medium |  low |  "
+"lowest"
 
-#: ../../../arguments.rst:53
+#: ../../arguments.rst:59
 msgid ""
 "Set feature extraction quality. Higher quality generates better features, "
 "but requires more memory and takes longer. . Default: ``high``"
@@ -251,11 +286,11 @@ msgstr ""
 " genera mejores características, pero requiere más memoria y lleva más "
 "tiempo. Predeterminado: ``high``"
 
-#: ../../../arguments.rst:56
-msgid ":ref:`feature-type<feature-type>` sift |  hahog"
+#: ../../arguments.rst:62
+msgid ":ref:`feature-type<feature-type>` sift |  orb |  hahog"
 msgstr ""
 
-#: ../../../arguments.rst:56
+#: ../../arguments.rst:62
 msgid ""
 "Choose the algorithm for extracting keypoints and computing descriptors. . "
 "Default: ``sift``"
@@ -263,11 +298,11 @@ msgstr ""
 "Elija el algoritmo para extraer puntos clave y calcular descriptores. "
 "Predeterminado: ``sift``"
 
-#: ../../../arguments.rst:59
+#: ../../arguments.rst:65
 msgid ":ref:`force-gps<force-gps>`"
-msgstr ""
+msgstr ":ref:`force-gps<force-gps>`"
 
-#: ../../../arguments.rst:59
+#: ../../arguments.rst:65
 msgid ""
 "Use images' GPS exif data for reconstruction, even if there are GCPs "
 "present.This flag is useful if you have high precision GPS measurements. If "
@@ -278,11 +313,11 @@ msgstr ""
 "GPS de alta precisión. Si no hay GCP, esta bandera no hace nada. "
 "Predeterminado: ``False``"
 
-#: ../../../arguments.rst:62
+#: ../../arguments.rst:68
 msgid ":ref:`gcp<gcp>` <path string>"
-msgstr ""
+msgstr ":ref:`gcp<gcp>` <path string>"
 
-#: ../../../arguments.rst:62
+#: ../../arguments.rst:68
 msgid ""
 "Path to the file containing the ground control points used for "
 "georeferencing. The file needs to use the following format: EPSG:<code> or "
@@ -294,11 +329,11 @@ msgstr ""
 "<+proj definition>geo_x geo_y geo_z im_x im_y image_name [gcp_name] [extra1]"
 " [extra2] Predeterminado: ``None``"
 
-#: ../../../arguments.rst:65
+#: ../../arguments.rst:71
 msgid ":ref:`geo<geo>` <path string>"
-msgstr ""
+msgstr ":ref:`geo<geo>` <path string>"
 
-#: ../../../arguments.rst:65
+#: ../../arguments.rst:71
 msgid ""
 "Path to the image geolocation file containing the camera center coordinates "
 "used for georeferencing. Note that omega/phi/kappa are currently not "
@@ -315,11 +350,11 @@ msgstr ""
 "(degrees)] [phi (degrees)] [kappa (degrees)] [horz accuracy (meters)] [vert "
 "accuracy (meters)] Predeterminado: ``None``"
 
-#: ../../../arguments.rst:68
+#: ../../arguments.rst:74
 msgid ":ref:`gps-accuracy<gps-accuracy>` <positive float>"
-msgstr ""
+msgstr ":ref:`gps-accuracy<gps-accuracy>` <positive float>"
 
-#: ../../../arguments.rst:68
+#: ../../arguments.rst:74
 msgid ""
 "Set a value in meters for the GPS Dilution of Precision (DOP) information "
 "for all images. If your images are tagged with high precision GPS "
@@ -336,19 +371,19 @@ msgstr ""
 "esta opción a veces puede ayudar a controlar los efectos de combadura en "
 "áreas extensas. Predeterminado: ``10``"
 
-#: ../../../arguments.rst:71
+#: ../../arguments.rst:77
 msgid ":ref:`help<help>`"
-msgstr ""
+msgstr ":ref:`help<help>`"
 
-#: ../../../arguments.rst:71
+#: ../../arguments.rst:77
 msgid "show this help message and exit"
 msgstr "muestra este mensaje de ayuda y sale"
 
-#: ../../../arguments.rst:74
+#: ../../arguments.rst:80
 msgid ":ref:`ignore-gsd<ignore-gsd>`"
-msgstr ""
+msgstr ":ref:`ignore-gsd<ignore-gsd>`"
 
-#: ../../../arguments.rst:74
+#: ../../arguments.rst:80
 msgid ""
 "Ignore Ground Sampling Distance (GSD). GSD caps the maximum resolution of "
 "image outputs and resizes images when necessary, resulting in faster "
@@ -363,11 +398,11 @@ msgstr ""
 "resultar en una calidad de salida de imagen ligeramente mejor. "
 "Predeterminado: ``False``"
 
-#: ../../../arguments.rst:77
+#: ../../arguments.rst:83
 msgid ":ref:`matcher-distance<matcher-distance>` <integer>"
-msgstr ""
+msgstr ":ref:`matcher-distance<matcher-distance>` <integer>"
 
-#: ../../../arguments.rst:77
+#: ../../arguments.rst:83
 msgid ""
 "Distance threshold in meters to find pre-matching images based on GPS exif "
 "data. Set both matcher-neighbors and this to 0 to skip pre-matching. "
@@ -376,11 +411,11 @@ msgstr ""
 "92%match\n"
 "Umbral de distancia en metros, para encontrar imágenes pre-coincidentes basado en la información exif de GPS. Establezca ambos matcher-neighbors y este en 0 para saltar la comparación previa. Predeterminado: ``0``"
 
-#: ../../../arguments.rst:80
+#: ../../arguments.rst:86
 msgid ":ref:`matcher-neighbors<matcher-neighbors>` <integer>"
-msgstr ""
+msgstr ":ref:`matcher-neighbors<matcher-neighbors>` <integer>"
 
-#: ../../../arguments.rst:80
+#: ../../arguments.rst:86
 msgid ""
 "Number of nearest images to pre-match based on GPS exif data. Set to 0 to "
 "skip pre-matching. Neighbors works together with Distance parameter, set "
@@ -391,283 +426,370 @@ msgstr ""
 "parámetro Neighbors trabaja junto con el parámetro Distance, establezca "
 "ambos en 0 para no utilizar la comparación previa. Predeterminado: ``8``"
 
-#: ../../../arguments.rst:83
+#: ../../arguments.rst:89
 msgid ":ref:`matcher-type<matcher-type>` flann |  bow"
-msgstr ""
+msgstr ":ref:`matcher-type<matcher-type>` flann |  bow"
 
-#: ../../../arguments.rst:83
+#: ../../arguments.rst:89
 msgid ""
 "Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of "
 "Words. FLANN is slower, but more stable. BOW is faster, but can sometimes "
 "miss valid matches. . Default: ``flann``"
 msgstr ""
+"Algoritmo de emparejamiento, FLANN biblioteca rápida para vecinos más "
+"cercanos aproximados o BOW bolsa de palabras. FLANN es más lento, pero más "
+"estable. BOW es más rápido, pero a veces puede perder coincidencias válidas."
+" Predeterminado: ``flann``"
 
-#: ../../../arguments.rst:86
+#: ../../arguments.rst:92
 msgid ":ref:`max-concurrency<max-concurrency>` <positive integer>"
-msgstr ""
+msgstr ":ref:`max-concurrency<max-concurrency>` <positive integer>"
 
-#: ../../../arguments.rst:86
+#: ../../arguments.rst:92
 msgid ""
 "The maximum number of processes to use in various processes. Peak memory "
 "requirement is ~1GB per thread and 2 megapixel image resolution. Default: "
 "``4``"
 msgstr ""
+"El número máximo de procesos a utilizar en varios procesos. El requisito de "
+"memoria máxima es de ~1 GB por hilo y una resolución de imagen de 2 "
+"megapíxeles. Predeterminado: ``4``"
 
-#: ../../../arguments.rst:89
+#: ../../arguments.rst:95
 msgid ":ref:`merge<merge>` all |  pointcloud |  orthophoto |  dem"
-msgstr ""
+msgstr ":ref:`merge<merge>` all |  pointcloud |  orthophoto |  dem"
 
-#: ../../../arguments.rst:89
+#: ../../arguments.rst:95
 msgid ""
 "Choose what to merge in the merge step in a split dataset. By default all "
 "available outputs are merged. Options: ['all', 'pointcloud', 'orthophoto', "
 "'dem']. Default: ``all``"
 msgstr ""
+"Elija qué combinar en el paso de combinación en un conjunto de datos "
+"dividido. De forma predeterminada, se combinan todas las salidas "
+"disponibles. Opciones: ['all', 'pointcloud', 'orthophoto', 'dem']. "
+"Predeterminado: ``all``"
 
-#: ../../../arguments.rst:92
+#: ../../arguments.rst:98
 msgid ":ref:`mesh-octree-depth<mesh-octree-depth>` <integer: 1 <= x <= 14>"
-msgstr ""
+msgstr ":ref:`mesh-octree-depth<mesh-octree-depth>` <integer: 1 <= x <= 14>"
 
-#: ../../../arguments.rst:92
+#: ../../arguments.rst:98
 msgid ""
 "Octree depth used in the mesh reconstruction, increase to get more vertices,"
 " recommended values are 8-12. Default: ``11``"
 msgstr ""
+"Profundidad octree utilizada en la reconstrucción de la malla, aumentar para"
+" obtener mas vértices, los valores recomendados son 8-12. Predeterminado: "
+"``11``"
 
-#: ../../../arguments.rst:95
+#: ../../arguments.rst:101
 msgid ":ref:`mesh-size<mesh-size>` <positive integer>"
-msgstr ""
+msgstr ":ref:`mesh-size<mesh-size>` <positive integer>"
 
-#: ../../../arguments.rst:95
+#: ../../arguments.rst:101
 msgid "The maximum vertex count of the output mesh. Default: ``200000``"
 msgstr ""
+"El conteo máximo de vértices de la malla de salida. Predeterminado: "
+"``200000``"
 
-#: ../../../arguments.rst:98
+#: ../../arguments.rst:104
 msgid ":ref:`min-num-features<min-num-features>` <integer>"
-msgstr ""
+msgstr ":ref:`min-num-features<min-num-features>` <integer>"
 
-#: ../../../arguments.rst:98
+#: ../../arguments.rst:104
 msgid ""
 "Minimum number of features to extract per image. More features can be useful"
 " for finding more matches between images, potentially allowing the "
 "reconstruction of areas with little overlap or insufficient features. More "
 "features also slow down processing. Default: ``8000``"
 msgstr ""
+"Número mínimo de rasgos característicos para extraer por imagen. Un mayor "
+"número de rasgos característicos puede ser útil para encontrar más "
+"coincidencias entre imágenes, lo que podría permitir la reconstrucción de "
+"áreas con poca superposición o rasgos insuficientes. Más rasgos "
+"característicos también ralentizan el procesamiento. Predeterminado: "
+"``8000``"
 
-#: ../../../arguments.rst:101
+#: ../../arguments.rst:107
 msgid ":ref:`name<name>` <dataset name>"
-msgstr ""
+msgstr ":ref:`name<name>` <dataset name>"
 
-#: ../../../arguments.rst:101
+#: ../../arguments.rst:107
 msgid ""
 "Name of dataset (i.e subfolder name within project folder). Default: "
 "``code``"
 msgstr ""
+"Nombre del conjunto de datos (e.g el nombre de la subcarpeta dentro de la "
+"carpeta del proyecto). Predeterminado: ``code``"
 
-#: ../../../arguments.rst:104
+#: ../../arguments.rst:110
 msgid ":ref:`optimize-disk-space<optimize-disk-space>`"
-msgstr ""
+msgstr ":ref:`optimize-disk-space<optimize-disk-space>`"
 
-#: ../../../arguments.rst:104
+#: ../../arguments.rst:110
 msgid ""
 "Delete heavy intermediate files to optimize disk space usage. This affects "
 "the ability to restart the pipeline from an intermediate stage, but allows "
 "datasets to be processed on machines that don't have sufficient disk space "
 "available. Default: ``False``"
 msgstr ""
+"Elimine archivos intermedios pesados para optimizar el uso del espacio en "
+"disco. Esto afecta la capacidad de reiniciar el proceso desde una etapa "
+"intermedia, pero permite que los conjuntos de datos se procesen en máquinas "
+"que no tienen suficiente espacio en disco disponible. Predeterminado: "
+"``False``"
 
-#: ../../../arguments.rst:107
+#: ../../arguments.rst:113
 msgid ""
 ":ref:`orthophoto-compression<orthophoto-compression>` JPEG |  LZW |  "
 "PACKBITS |  DEFLATE |  LZMA |  NONE"
 msgstr ""
+":ref:`orthophoto-compression<orthophoto-compression>` JPEG |  LZW |  "
+"PACKBITS |  DEFLATE |  LZMA |  NONE"
 
-#: ../../../arguments.rst:107
+#: ../../arguments.rst:113
 msgid "Set the compression to use for orthophotos. . Default: ``DEFLATE``"
 msgstr ""
+"Establezca la compresión que se utilizará para las ortofotos. . "
+"Predeterminado: ``DEFLATE``"
 
-#: ../../../arguments.rst:110
+#: ../../arguments.rst:116
 msgid ":ref:`orthophoto-cutline<orthophoto-cutline>`"
-msgstr ""
+msgstr ":ref:`orthophoto-cutline<orthophoto-cutline>`"
 
-#: ../../../arguments.rst:110
+#: ../../arguments.rst:116
 msgid ""
 "Generates a polygon around the cropping area that cuts the orthophoto around"
 " the edges of features. This polygon can be useful for stitching seamless "
 "mosaics with multiple overlapping orthophotos. Default: ``False``"
 msgstr ""
+"Genera un polígono alrededor del área de recorte que corta la ortofoto "
+"alrededor de los bordes de las entidades. Este polígono puede resultar útil "
+"para unir mosaicos sin costuras con varias ortofotos superpuestas. "
+"Predeterminado: ``False``"
 
-#: ../../../arguments.rst:113
+#: ../../arguments.rst:119
 msgid ":ref:`orthophoto-kmz<orthophoto-kmz>`"
-msgstr ""
+msgstr ":ref:`orthophoto-kmz<orthophoto-kmz>`"
 
-#: ../../../arguments.rst:113
+#: ../../arguments.rst:119
 msgid ""
 "Set this parameter if you want to generate a Google Earth (KMZ) rendering of"
 " the orthophoto. Default: ``False``"
 msgstr ""
+"Establezca este parámetro si desea generar una representación de Google "
+"Earth (KMZ) de la ortofoto. Predeterminado: ``False``"
 
-#: ../../../arguments.rst:116
+#: ../../arguments.rst:122
 msgid ":ref:`orthophoto-no-tiled<orthophoto-no-tiled>`"
-msgstr ""
+msgstr ":ref:`orthophoto-no-tiled<orthophoto-no-tiled>`"
 
-#: ../../../arguments.rst:116
+#: ../../arguments.rst:122
 msgid "Set this parameter if you want a striped GeoTIFF. Default: ``False``"
 msgstr ""
+"Configure este parámetro si desea un GeoTIFF a rayas. Predeterminado: "
+"``False``"
 
-#: ../../../arguments.rst:119
+#: ../../arguments.rst:125
 msgid ":ref:`orthophoto-png<orthophoto-png>`"
-msgstr ""
+msgstr ":ref:`orthophoto-png<orthophoto-png>`"
 
-#: ../../../arguments.rst:119
+#: ../../arguments.rst:125
 msgid ""
 "Set this parameter if you want to generate a PNG rendering of the "
 "orthophoto. Default: ``False``"
 msgstr ""
+"Establezca este parámetro si desea generar una representación PNG de la "
+"ortofoto. Predeterminado: ``False``"
 
-#: ../../../arguments.rst:122
+#: ../../arguments.rst:128
 msgid ":ref:`orthophoto-resolution<orthophoto-resolution>` <float > 0.0>"
-msgstr ""
+msgstr ":ref:`orthophoto-resolution<orthophoto-resolution>` <float > 0.0>"
 
-#: ../../../arguments.rst:122
+#: ../../arguments.rst:128
 msgid ""
 "Orthophoto resolution in cm / pixel. Note that this value is capped by a "
 "ground sampling distance (GSD) estimate. To remove the cap, check --ignore-"
 "gsd also. Default: ``5``"
 msgstr ""
+"Resolución de ortofoto en cm/pixel. Tenga en cuenta que este valor está "
+"limitado por una estimación de la distancia de muestreo del suelo (GSD). "
+"Para quitar este límite, marque --ignore-gsd también. Predeterminado: ``5``"
 
-#: ../../../arguments.rst:125
+#: ../../arguments.rst:131
 msgid ":ref:`pc-classify<pc-classify>`"
-msgstr ""
+msgstr ":ref:`pc-classify<pc-classify>`"
 
-#: ../../../arguments.rst:125
+#: ../../arguments.rst:131
 msgid ""
 "Classify the point cloud outputs using a Simple Morphological Filter. You "
 "can control the behavior of this option by tweaking the --dem-\\* "
 "parameters. Default: ``False``"
 msgstr ""
+"Clasifique los resultados de la nube de puntos usando un filtro morfológico "
+"simple. Puede controlar el comportamiento de esta opción ajustando los "
+"parámetros --dem-\\*. Predeterminado: ``False``"
 
-#: ../../../arguments.rst:128
+#: ../../arguments.rst:134
 msgid ":ref:`pc-csv<pc-csv>`"
-msgstr ""
+msgstr ":ref:`pc-csv<pc-csv>`"
 
-#: ../../../arguments.rst:128
+#: ../../arguments.rst:134
 msgid "Export the georeferenced point cloud in CSV format. Default: ``False``"
 msgstr ""
+"Exportar la nube de puntos georeferenciada en formato CSV. Predeterminado: "
+"``False``"
 
-#: ../../../arguments.rst:131
+#: ../../arguments.rst:137
 msgid ":ref:`pc-ept<pc-ept>`"
-msgstr ""
+msgstr ":ref:`pc-ept<pc-ept>`"
 
-#: ../../../arguments.rst:131
+#: ../../arguments.rst:137
 msgid ""
 "Export the georeferenced point cloud in Entwine Point Tile (EPT) format. "
 "Default: ``False``"
 msgstr ""
+"Exportar la nube de puntos georeferenciada en formato Entwine Point Tile "
+"(EPT). Predeterminado: ``False``"
 
-#: ../../../arguments.rst:134
+#: ../../arguments.rst:140
 msgid ":ref:`pc-filter<pc-filter>` <positive float>"
-msgstr ""
+msgstr ":ref:`pc-filter<pc-filter>` <positive float>"
 
-#: ../../../arguments.rst:134
+#: ../../arguments.rst:140
 msgid ""
 "Filters the point cloud by removing points that deviate more than N standard"
 " deviations from the local mean. Set to 0 to disable filtering. Default: "
 "``2.5``"
 msgstr ""
+"Filtrar la nube de puntos removiendo los puntos que se desvían mas de N "
+"desviaciones estándar de la media local. Establecer en 0 para deshabilitar "
+"el filtrado. Predeterminado: ``2.5``"
 
-#: ../../../arguments.rst:137
+#: ../../arguments.rst:143
 msgid ":ref:`pc-geometric<pc-geometric>`"
-msgstr ""
+msgstr ":ref:`pc-geometric<pc-geometric>`"
 
-#: ../../../arguments.rst:137
+#: ../../arguments.rst:143
 msgid ""
 "Improve the accuracy of the point cloud by computing geometrically "
 "consistent depthmaps. This increases processing time, but can improve "
 "results in urban scenes. Default: ``False``"
 msgstr ""
+"Mejore la precisión de la nube de puntos calculado mapas de profundidad "
+"geométricamente consistentes. Esto aumenta el tiempo de procesamiento, pero "
+"puede mejorar los resultados en escenas urbanas. Predeterminado: ``False``"
 
-#: ../../../arguments.rst:140
+#: ../../arguments.rst:146
 msgid ":ref:`pc-las<pc-las>`"
-msgstr ""
+msgstr ":ref:`pc-las<pc-las>`"
 
-#: ../../../arguments.rst:140
+#: ../../arguments.rst:146
 msgid "Export the georeferenced point cloud in LAS format. Default: ``False``"
 msgstr ""
+"Exportar la nube de puntos georeferenciada en formato LAS. Predeterminado: "
+"``False``"
 
-#: ../../../arguments.rst:143
+#: ../../arguments.rst:149
 msgid ":ref:`pc-quality<pc-quality>` ultra |  high |  medium |  low |  lowest"
 msgstr ""
+":ref:`pc-quality<pc-quality>` ultra |  high |  medium |  low |  lowest"
 
-#: ../../../arguments.rst:143
+#: ../../arguments.rst:149
 msgid ""
 "Set point cloud quality. Higher quality generates better, denser point "
 "clouds, but requires more memory and takes longer. Each step up in quality "
 "increases processing time roughly by a factor of 4x.. Default: ``medium``"
 msgstr ""
+"Establecer la calidad de la nube de puntos. Una calidad más alta genera "
+"nubes de puntos mejores y más densas, pero requiere más memoria y lleva más "
+"tiempo. Cada aumento en la calidad aumenta el tiempo de procesamiento "
+"aproximadamente en un factor de 4x. . Default: ``medium``"
 
-#: ../../../arguments.rst:146
+#: ../../arguments.rst:152
 msgid ":ref:`pc-rectify<pc-rectify>`"
-msgstr ""
+msgstr ":ref:`pc-rectify<pc-rectify>`"
 
-#: ../../../arguments.rst:146
+#: ../../arguments.rst:152
 msgid ""
 "Perform ground rectification on the point cloud. This means that wrongly "
 "classified ground points will be re-classified and gaps will be filled. "
 "Useful for generating DTMs. Default: ``False``"
 msgstr ""
+"Realice una rectificación del terreno en la nube de puntos. Esto significa "
+"que los puntos del terreno clasificados incorrectamente se volverán a "
+"clasificar y se llenarán los vacíos. Útil para generar DTM. Predeterminado: "
+"``False``"
 
-#: ../../../arguments.rst:149
+#: ../../arguments.rst:155
 msgid ":ref:`pc-sample<pc-sample>` <positive float>"
-msgstr ""
+msgstr ":ref:`pc-sample<pc-sample>` <positive float>"
 
-#: ../../../arguments.rst:149
+#: ../../arguments.rst:155
 msgid ""
 "Filters the point cloud by keeping only a single point around a radius N (in"
 " meters). This can be useful to limit the output resolution of the point "
 "cloud and remove duplicate points. Set to 0 to disable sampling. Default: "
 "``0``"
 msgstr ""
+"Filtra la nube de puntos manteniendo solo un punto alrededor de un radio N "
+"(en metros). Esto puede resultar útil para limitar la resolución de salida "
+"de la nube de puntos y eliminar puntos duplicados. Establecer en 0 para "
+"deshabilitar el muestreo. Predeterminado: ``0``"
 
-#: ../../../arguments.rst:152
+#: ../../arguments.rst:158
 msgid ":ref:`pc-tile<pc-tile>`"
-msgstr ""
+msgstr ":ref:`pc-tile<pc-tile>`"
 
-#: ../../../arguments.rst:152
+#: ../../arguments.rst:158
 msgid ""
 "Reduce the memory usage needed for depthmap fusion by splitting large scenes"
 " into tiles. Turn this on if your machine doesn't have much RAM and/or "
 "you've set --pc-quality to high or ultra. Experimental. Default: ``False``"
 msgstr ""
+"Reduzca el uso de memoria necesario para la fusión de mapas de profundidad "
+"dividiendo escenas grandes en mosaicos. Active esta opción si su máquina no "
+"tiene mucha RAM y/o ha configurado --pc-quality en alto o ultra. "
+"Experimental. Predeterminado: ``False``"
 
-#: ../../../arguments.rst:155
+#: ../../arguments.rst:161
 msgid ":ref:`primary-band<primary-band>` <string>"
-msgstr ""
+msgstr ":ref:`primary-band<primary-band>` <string>"
 
-#: ../../../arguments.rst:155
+#: ../../arguments.rst:161
 msgid ""
 "When processing multispectral datasets, you can specify the name of the "
 "primary band that will be used for reconstruction. It's recommended to "
 "choose a band which has sharp details and is in focus. Default: ``auto``"
 msgstr ""
+"Al procesar conjuntos de datos multiespectrales, ODM alineará "
+"automáticamente las imágenes para cada banda. Si las imágenes se han "
+"posprocesado y ya están alineadas, utilice esta opción. Predeterminado: "
+"``auto``"
 
-#: ../../../arguments.rst:158
+#: ../../arguments.rst:164
 msgid ":ref:`project-path<project-path>` <path>"
-msgstr ""
+msgstr ":ref:`project-path<project-path>` <path>"
 
-#: ../../../arguments.rst:158
+#: ../../arguments.rst:164
 msgid ""
 "Path to the project folder. Your project folder should contain subfolders "
 "for each dataset. Each dataset should have an \"images\" folder."
 msgstr ""
+"Ruta a la carpeta del proyecto. Tu carpeta de proyecto debe contener "
+"subcarpetas para cada juego de datos. Cada juego de datos debe tener una "
+"carpeta \"images\"."
 
-#: ../../../arguments.rst:161
+#: ../../arguments.rst:167
 msgid ""
 ":ref:`radiometric-calibration<radiometric-calibration>` none |  camera |  "
 "camera+sun"
 msgstr ""
+":ref:`radiometric-calibration<radiometric-calibration>` none |  camera |  "
+"camera+sun"
 
-#: ../../../arguments.rst:161
+#: ../../arguments.rst:167
 msgid ""
 "Set the radiometric calibration to perform on images. When processing "
 "multispectral and thermal images you should set this option to obtain "
@@ -679,311 +801,395 @@ msgid ""
 "via a downwelling light sensor (DLS) taking in consideration the angle of "
 "the sun. . Default: ``none``"
 msgstr ""
+"Configure la calibración radiométrica para ejecutar en las imágenes. Al "
+"procesar imágenes térmicas y multiespectrales, debe configurar esta opción "
+"para obtener valores de reflectancia/temperatura (de lo contrario, obtendrá "
+"valores numéricos digitales). [cámara] aplica nivel de negro, viñeteado, "
+"ganancia de gradiente de fila/compensación de exposición (si se encuentran "
+"etiquetas EXIF apropiadas) y calcula valores de temperatura absolutos. "
+"[cámara + sol] es experimental, aplica todas las correcciones de [cámara] y "
+"compensa la radiación espectral registrada a través de un sensor de luz "
+"descendente (DLS) teniendo en cuenta el ángulo del sol. . Predeterminado: "
+"``none``"
 
-#: ../../../arguments.rst:164
+#: ../../arguments.rst:170
 msgid ""
 ":ref:`rerun<rerun>` dataset |  split |  merge |  opensfm |  openmvs |  "
 "odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  "
-"odm_dem |  odm_orthophoto |  odm_report"
+"odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess"
 msgstr ""
 
-#: ../../../arguments.rst:164
+#: ../../arguments.rst:170
 msgid "Rerun this stage only and stop. . Default: ``"
 msgstr ""
+"Vuelva a ejecutar el procesamiento desde esta etapa y detener. . "
+"Predeterminado: ``"
 
-#: ../../../arguments.rst:167
+#: ../../arguments.rst:173
 msgid ":ref:`rerun-all<rerun-all>`"
-msgstr ""
+msgstr ":ref:`rerun-all<rerun-all>`"
 
-#: ../../../arguments.rst:167
+#: ../../arguments.rst:173
 msgid ""
 "Permanently delete all previous results and rerun the processing pipeline."
 msgstr ""
+"Eliminar permanentemente todos los resultados previos y reiniciar el "
+"procesamiento."
 
-#: ../../../arguments.rst:170
+#: ../../arguments.rst:176
 msgid ""
 ":ref:`rerun-from<rerun-from>` dataset |  split |  merge |  opensfm |  "
 "openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  "
-"odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report"
+"odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report |  "
+"odm_postprocess"
 msgstr ""
 
-#: ../../../arguments.rst:170
+#: ../../arguments.rst:176
 msgid "Rerun processing from this stage. . Default: ``"
 msgstr ""
+"Vuelva a ejecutar el procesamiento desde esta etapa. . Predeterminado: ``"
 
-#: ../../../arguments.rst:173
+#: ../../arguments.rst:179
 msgid ":ref:`resize-to<resize-to>` <integer>"
-msgstr ""
+msgstr ":ref:`resize-to<resize-to>` <integer>"
 
-#: ../../../arguments.rst:173
+#: ../../arguments.rst:179
 msgid ""
 "Legacy option (use --feature-quality instead). Resizes images by the largest"
 " side for feature extraction purposes only. Set to -1 to disable. This does "
 "not affect the final orthophoto resolution quality and will not resize the "
 "original images. Default: ``2048``"
 msgstr ""
+"Opción legada (use --feature-quality en su lugar). Cambia el tamaño de las "
+"imágenes por el lado más grande solo para fines de extracción de "
+"características. Establecer en -1 para deshabilitar. Esto no afecta la "
+"calidad de la resolución final de la ortofoto y no redimensionará las "
+"imágenes originales. Predeterminado: ``2048``"
 
-#: ../../../arguments.rst:176
+#: ../../arguments.rst:182
 msgid ":ref:`skip-3dmodel<skip-3dmodel>`"
-msgstr ""
+msgstr ":ref:`skip-3dmodel<skip-3dmodel>`"
 
-#: ../../../arguments.rst:176
+#: ../../arguments.rst:182
 msgid ""
 "Skip generation of a full 3D model. This can save time if you only need 2D "
 "results such as orthophotos and DEMs. Default: ``False``"
 msgstr ""
+"Omita la generación de un modelo 3D completo. Esto puede ahorrar tiempo si "
+"solo necesita resultados 2D como ortofotos y DEM. Predeterminado: ``False``"
 
-#: ../../../arguments.rst:179
+#: ../../arguments.rst:185
 msgid ":ref:`skip-band-alignment<skip-band-alignment>`"
-msgstr ""
+msgstr ":ref:`skip-band-alignment<skip-band-alignment>`"
 
-#: ../../../arguments.rst:179
+#: ../../arguments.rst:185
 msgid ""
 "When processing multispectral datasets, ODM will automatically align the "
 "images for each band. If the images have been postprocessed and are already "
 "aligned, use this option. Default: ``False``"
 msgstr ""
+"Cuando se procesan conjunto de datos miltiespectrales, puede especificar el "
+"nombre de la banda principal que se utilizará en la reconstrucción. Se "
+"recomienda elegir una banda que tenga detalles nítidos y esté enfocada. "
+"Predeterminado: ``False``"
 
-#: ../../../arguments.rst:182
+#: ../../arguments.rst:188
 msgid ":ref:`skip-report<skip-report>`"
-msgstr ""
+msgstr ":ref:`skip-report<skip-report>`"
 
-#: ../../../arguments.rst:182
+#: ../../arguments.rst:188
 msgid ""
 "Skip generation of PDF report. This can save time if you don't need a "
 "report. Default: ``False``"
 msgstr ""
+"No generar informe PDF. Esto puede ahorrar tiempo si no necesita de dicho "
+"informe. Default: ``False``"
 
-#: ../../../arguments.rst:185
+#: ../../arguments.rst:191
 msgid ":ref:`sm-cluster<sm-cluster>` <string>"
-msgstr ""
+msgstr ":ref:`sm-cluster<sm-cluster>` <string>"
 
-#: ../../../arguments.rst:185
+#: ../../arguments.rst:191
 msgid ""
 "URL to a ClusterODM instance for distributing a split-merge workflow on "
 "multiple nodes in parallel. Default: ``None``"
 msgstr ""
+"URL a una instancia de ClusterODM para distribuir un flujo de trabajo de "
+"split-merge en varios nodos en paralelo. Predeterminado: ``None``"
 
-#: ../../../arguments.rst:188
+#: ../../arguments.rst:194
 msgid ":ref:`smrf-scalar<smrf-scalar>` <positive float>"
-msgstr ""
+msgstr ":ref:`smrf-scalar<smrf-scalar>` <positive float>"
 
-#: ../../../arguments.rst:188
+#: ../../arguments.rst:194
 msgid ""
 "Simple Morphological Filter elevation scalar parameter. Default: ``1.25``"
 msgstr ""
+"Parámetro de elevación escalar del Filtro Morfológico Simple. "
+"Predeterminado: ``1.25``"
 
-#: ../../../arguments.rst:191
+#: ../../arguments.rst:197
 msgid ":ref:`smrf-slope<smrf-slope>` <positive float>"
-msgstr ""
+msgstr ":ref:`smrf-slope<smrf-slope>` <positive float>"
 
-#: ../../../arguments.rst:191
+#: ../../arguments.rst:197
 msgid ""
 "Simple Morphological Filter slope parameter (rise over run). Default: "
 "``0.15``"
 msgstr ""
+"Parámetro de pendiente del filtro morfológico simple (desplazamiento "
+"vertical entre el desplazamiento horizontal). Predeterminado: ``0.15``"
 
-#: ../../../arguments.rst:194
+#: ../../arguments.rst:200
 msgid ":ref:`smrf-threshold<smrf-threshold>` <positive float>"
-msgstr ""
+msgstr ":ref:`smrf-threshold<smrf-threshold>` <positive float>"
 
-#: ../../../arguments.rst:194
+#: ../../arguments.rst:200
 msgid ""
 "Simple Morphological Filter elevation threshold parameter (meters). Default:"
 " ``0.5``"
 msgstr ""
+"Parámetro de umbral de elevación del Filtro Morfológico Simple (metros). "
+"Predeterminado: ``0.5``"
 
-#: ../../../arguments.rst:197
+#: ../../arguments.rst:203
 msgid ":ref:`smrf-window<smrf-window>` <positive float>"
-msgstr ""
+msgstr ":ref:`smrf-window<smrf-window>` <positive float>"
 
-#: ../../../arguments.rst:197
+#: ../../arguments.rst:203
 msgid ""
 "Simple Morphological Filter window radius parameter (meters). Default: "
 "``18.0``"
 msgstr ""
+"Parámetro de radio de la ventana del filtro morfológico simple (metros). "
+"Predeterminado: ``18.0``"
 
-#: ../../../arguments.rst:200
+#: ../../arguments.rst:206
 msgid ":ref:`split<split>` <positive integer>"
-msgstr ""
+msgstr ":ref:`split<split>` <positive integer>"
 
-#: ../../../arguments.rst:200
+#: ../../arguments.rst:206
 msgid ""
 "Average number of images per submodel. When splitting a large dataset into "
 "smaller submodels, images are grouped into clusters. This value regulates "
 "the number of images that each cluster should have on average. Default: "
 "``999999``"
 msgstr ""
+"Número medio de imágenes por submodelo. Al dividir un conjunto de datos "
+"grande en submodelos más pequeños, las imágenes se agrupan en cúmulos. Este "
+"valor regula la cantidad de imágenes que debe tener cada grupo en promedio. "
+"Predeterminado: ``999999``"
 
-#: ../../../arguments.rst:203
+#: ../../arguments.rst:209
 msgid ":ref:`split-image-groups<split-image-groups>` <path string>"
-msgstr ""
+msgstr ":ref:`split-image-groups<split-image-groups>` <path string>"
 
-#: ../../../arguments.rst:203
+#: ../../arguments.rst:209
 msgid ""
 "Path to the image groups file that controls how images should be split into "
 "groups. The file needs to use the following format: image_name "
 "group_nameDefault: ``None``"
 msgstr ""
+"Ruta al archivo de grupos de imágenes que controla cómo se deben dividir las"
+" imágenes en grupos. El archivo debe utilizar el siguiente formato: "
+"image_name group_name Predeterminado: ``None``"
 
-#: ../../../arguments.rst:206
+#: ../../arguments.rst:212
 msgid ":ref:`split-overlap<split-overlap>` <positive integer>"
-msgstr ""
+msgstr ":ref:`split-overlap<split-overlap>` <positive integer>"
 
-#: ../../../arguments.rst:206
+#: ../../arguments.rst:212
 msgid ""
 "Radius of the overlap between submodels. After grouping images into "
 "clusters, images that are closer than this radius to a cluster are added to "
 "the cluster. This is done to ensure that neighboring submodels overlap. "
 "Default: ``150``"
 msgstr ""
+"Radio de superposición entre submodelos. Después de agrupar las imágenes en "
+"clusters, las que están más cerca que este radio al cluster son añadidas al "
+"cluster. Esto se hace para asegurar que los submodelos se superpongan. "
+"Default: ``150``"
 
-#: ../../../arguments.rst:209
+#: ../../arguments.rst:215
 msgid ":ref:`texturing-data-term<texturing-data-term>` gmi |  area"
-msgstr ""
+msgstr ":ref:`texturing-data-term<texturing-data-term>` gmi |  area"
 
-#: ../../../arguments.rst:209
+#: ../../arguments.rst:215
 msgid ""
 "When texturing the 3D mesh, for each triangle, choose to prioritize images "
 "with sharp features (gmi) or those that cover the largest area (area). "
 "Default: ``gmi``"
 msgstr ""
+"Al texturizar la malla 3D, para cada triángulo, elija priorizar las imágenes"
+" con características nítidas (gmi) o aquellas que cubren el área más grande "
+"(área). Predeterminado: ``gmi``"
 
-#: ../../../arguments.rst:212
+#: ../../arguments.rst:218
 msgid ":ref:`texturing-keep-unseen-faces<texturing-keep-unseen-faces>`"
-msgstr ""
+msgstr ":ref:`texturing-keep-unseen-faces<texturing-keep-unseen-faces>`"
 
-#: ../../../arguments.rst:212
+#: ../../arguments.rst:218
 msgid ""
 "Keep faces in the mesh that are not seen in any camera. Default:  ``False``"
 msgstr ""
+"Mantén las caras en la malla que no se ven en ninguna cámara. "
+"Predeterminado: ``False``"
 
-#: ../../../arguments.rst:215
+#: ../../arguments.rst:221
 msgid ""
 ":ref:`texturing-outlier-removal-type<texturing-outlier-removal-type>` none |"
 "  gauss_clamping |  gauss_damping"
 msgstr ""
+":ref:`texturing-outlier-removal-type<texturing-outlier-removal-type>` none |"
+"  gauss_clamping |  gauss_damping"
 
-#: ../../../arguments.rst:215
+#: ../../arguments.rst:221
 msgid ""
 "Type of photometric outlier removal method. . Default: ``gauss_clamping``"
 msgstr ""
+"Tipo de método de eliminación de valores atípicos fotométricos. "
+"Predeterminado:  ``gauss_clamping``"
 
-#: ../../../arguments.rst:218
+#: ../../arguments.rst:224
 msgid ""
 ":ref:`texturing-skip-global-seam-leveling<texturing-skip-global-seam-"
 "leveling>`"
 msgstr ""
+":ref:`texturing-skip-global-seam-leveling<texturing-skip-global-seam-"
+"leveling>`"
 
-#: ../../../arguments.rst:218
+#: ../../arguments.rst:224
 msgid ""
 "Skip normalization of colors across all images. Useful when processing "
 "radiometric data. Default: ``False``"
 msgstr ""
+"Omita la normalización de colores en todas las imágenes. Útil al procesar "
+"datos radiométricos. Predeterminado: ``False``"
 
-#: ../../../arguments.rst:221
+#: ../../arguments.rst:227
 msgid ""
 ":ref:`texturing-skip-local-seam-leveling<texturing-skip-local-seam-"
 "leveling>`"
 msgstr ""
+":ref:`texturing-skip-local-seam-leveling<texturing-skip-local-seam-"
+"leveling>`"
 
-#: ../../../arguments.rst:221
+#: ../../arguments.rst:227
 msgid "Skip the blending of colors near seams. Default: ``False``"
 msgstr ""
+"Omitir la combinación de colores cerca de las costuras. Predeterminado: "
+"``False``"
 
-#: ../../../arguments.rst:224
+#: ../../arguments.rst:230
 msgid ":ref:`texturing-tone-mapping<texturing-tone-mapping>` none |  gamma"
-msgstr ""
+msgstr ":ref:`texturing-tone-mapping<texturing-tone-mapping>` none |  gamma"
 
-#: ../../../arguments.rst:224
+#: ../../arguments.rst:230
 msgid ""
 "Turn on gamma tone mapping or none for no tone mapping. Can be one of "
 "['none', 'gamma']. Default: ``none``"
 msgstr ""
+"Active el mapeo de tonos gamma o ninguno si no hay mapeo de tonos. Puede ser"
+" una de las ['none', 'gamma']. Predeterminado: ``none``"
 
-#: ../../../arguments.rst:227
+#: ../../arguments.rst:233
 msgid ":ref:`tiles<tiles>`"
-msgstr ""
+msgstr ":ref:`tiles<tiles>`"
 
-#: ../../../arguments.rst:227
+#: ../../arguments.rst:233
 msgid ""
 "Generate static tiles for orthophotos and DEMs that are suitable for viewers"
 " like Leaflet or OpenLayers. Default: ``False``"
 msgstr ""
+"Genere mosaicos estáticos para ortofotos y DEM que sean adecuados para "
+"visualizadores como Leaflet u OpenLayers. Predeterminado: ``False``"
 
-#: ../../../arguments.rst:230
+#: ../../arguments.rst:236
 msgid ":ref:`time<time>`"
-msgstr ""
+msgstr ":ref:`time<time>`"
 
-#: ../../../arguments.rst:230
+#: ../../arguments.rst:236
 msgid "Generates a benchmark file with runtime info. Default: ``False``"
 msgstr ""
+"Genera un archivo de referencia con información del tiempo de ejecución. "
+"Predeterminado: ``False``"
 
-#: ../../../arguments.rst:233
+#: ../../arguments.rst:239
 msgid ":ref:`use-3dmesh<use-3dmesh>`"
-msgstr ""
+msgstr ":ref:`use-3dmesh<use-3dmesh>`"
 
-#: ../../../arguments.rst:233
+#: ../../arguments.rst:239
 msgid ""
 "Use a full 3D mesh to compute the orthophoto instead of a 2.5D mesh. This "
 "option is a bit faster and provides similar results in planar areas. "
 "Default: ``False``"
 msgstr ""
+"Utilice una malla 3D completa para calcular la ortofoto en lugar de una "
+"malla 2.5D. Esta opción es un poco más rápida y proporciona resultados "
+"similares en áreas planas. Predeterminado: ``False``"
 
-#: ../../../arguments.rst:236
+#: ../../arguments.rst:242
 msgid ":ref:`use-exif<use-exif>`"
-msgstr ""
+msgstr ":ref:`use-exif<use-exif>`"
 
-#: ../../../arguments.rst:236
+#: ../../arguments.rst:242
 msgid ""
 "Use this tag if you have a GCP File but want to use the EXIF information for"
 " georeferencing instead. Default: ``False``"
 msgstr ""
+"Use esta etiqueta si tiene un archivo GCP pero desea usar la información "
+"EXIF para georreferenciación. Predeterminado: ``False``"
 
-#: ../../../arguments.rst:239
+#: ../../arguments.rst:245
 msgid ":ref:`use-fixed-camera-params<use-fixed-camera-params>`"
-msgstr ""
+msgstr ":ref:`use-fixed-camera-params<use-fixed-camera-params>`"
 
-#: ../../../arguments.rst:239
+#: ../../arguments.rst:245
 msgid ""
 "Turn off camera parameter optimization during bundle adjustment. This can be"
 " sometimes useful for improving results that exhibit doming/bowling or when "
 "images are taken with a rolling shutter camera. Default: ``False``"
 msgstr ""
+"Desactive la optimización de los parámetros de la cámara durante el ajuste "
+"en paquete. A veces, esto puede ser útil para mejorar los resultados que "
+"exhiben domos/bolos o cuando las imágenes se toman con una cámara con "
+"obturador rolling shutter. Predeterminado: ``False``"
 
-#: ../../../arguments.rst:242
+#: ../../arguments.rst:248
 msgid ":ref:`use-hybrid-bundle-adjustment<use-hybrid-bundle-adjustment>`"
-msgstr ""
+msgstr ":ref:`use-hybrid-bundle-adjustment<use-hybrid-bundle-adjustment>`"
 
-#: ../../../arguments.rst:242
+#: ../../arguments.rst:248
 msgid ""
 "Run local bundle adjustment for every image added to the reconstruction and "
 "a global adjustment every 100 images. Speeds up reconstruction for very "
 "large datasets. Default: ``False``"
 msgstr ""
+"Ejecute un paquete de ajustes local para cada imagen agregada a la "
+"reconstrucción y un ajuste global cada 100 imágenes. Acelera la "
+"reconstrucción de conjuntos de datos muy grandes. Predeterminado: ``False``"
 
-#: ../../../arguments.rst:245
+#: ../../arguments.rst:251
 msgid ":ref:`verbose<verbose>`"
-msgstr ""
+msgstr ":ref:`verbose<verbose>`"
 
-#: ../../../arguments.rst:245
+#: ../../arguments.rst:251
 msgid "Print additional messages to the console. Default: ``False``"
 msgstr "Imprime mensajes adicionales en la consola. Predeterminado: ``False``"
 
-#: ../../../arguments.rst:251
+#: ../../arguments.rst:257
 msgid ":ref:`version<version>`"
-msgstr ""
+msgstr ":ref:`version<version>`"
 
-#: ../../../arguments.rst:248
+#: ../../arguments.rst:254
 msgid "Displays version number and exits."
 msgstr "Muestra el número de versión y sale."
 
-#: ../../../arguments.rst:253
+#: ../../arguments.rst:259
 msgid ""
-"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
-"contribution>`_ and help improve `this page "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments.rst>`_!"
+"If you want to add more details to a command, `learn to edit "
+"<https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_"
+" and help improve the matching file in the ``arguments_edit`` `project "
+"folder  "
+"<https://github.com/OpenDroneMap/docs/tree/publish/source/arguments_edit>`_!"
 msgstr ""
-"`Aprende a editar <https://github.com/opendronemap/docs#how-to-make-your-"
-"first-contribution>`_ y ayuda a mejorar `esta página "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments.rst>`_!"
