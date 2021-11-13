@@ -42,7 +42,7 @@ Press the "Fork" button at the top of this page.
 sudo apt-get install -y git python3 python3-pip
 ```
 
-### MacOS 
+### MacOS
 
 We recommend to use [Brew](https://brew.sh/) for installing Python3.
 
@@ -95,6 +95,8 @@ pip install -r requirements.txt
 
 After running `source venv/bin/activate` there should be some indication that the Python virtual environment is active (see the `(venv)` that appears at the start of terminal prompt in the screengrab below). **Note:** The next time you can `cd` into the docs folder and just run `source venv/bin/activate`. There should be no need to rerun the `pip install` and `virtualenv` commands.
 
+Note: If you've installed `sphinx` on your system, you may run into issues with commands using that version instead of the version inside your virtualenv.
+
 ![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/terminal_venv.png)
 
 Then if there are no errors, run:
@@ -103,7 +105,7 @@ Then if there are no errors, run:
 make livehtml
 ```
 
-Note that if WebODM is running you should temporarely stop it while you edit the documentation.
+Note that if WebODM is running you should temporarily stop it while you edit the documentation.
 
 ## Step 4. Start Editing
 
@@ -176,7 +178,7 @@ Bold text needs to have a space before, then a double asterisk (`**`) that touch
 ```plain
 Check out the `ODM documentation <https://docs.opendronemap.org/>`_!
 ```
-Links need to have a space before, then a backtick or grave accent (\`), then the text that will become the link on the page (in the above example: "ODM documentation"), then a space, then a less than symbol (`<`), then the complete URL, then a greater than symbol and underscore (`>_`). 
+Links need to have a space before, then a backtick or grave accent (\`), then the text that will become the link on the page (in the above example: "ODM documentation"), then a space, then a less than symbol (`<`), then the complete URL, then a greater than symbol and underscore (`>_`).
 
 ![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_link_transifex.png)
 ![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_link_en.png)
@@ -184,7 +186,7 @@ Links need to have a space before, then a backtick or grave accent (\`), then th
 
 ### Code
 
-Code snippets need to have a space before, then a double backtick or grave accent (\`\`) that touches the first character of the code text, then the code text, then a double backtick or grave accent (\`\`) that touches the last character of the code text, then a space. 
+Code snippets need to have a space before, then a double backtick or grave accent (\`\`) that touches the first character of the code text, then the code text, then a double backtick or grave accent (\`\`) that touches the last character of the code text, then a space.
 
 **NOTE:** Code snippets may be referring to specific software commands and so often should NOT be translated.
 
@@ -204,34 +206,17 @@ This project uses [Transifex](https://www.transifex.com/) and the [`transifex-cl
 You need to configure your account. For this, you need to create an API Token for your user to access this service through the command line. This can be done under your Transifex [User’s Settings](https://www.transifex.com/user/settings/api/). Set it up to use the token:
 
 ```
-tx init --token $TOKEN --no-interactive
+tx init --token $TOKEN --skipsetup
 ```
-
-If there are changes in the English `*.rst` source files, you can update the `.pot` files: 
-`sphinx-build -b gettext source source/locale/en/pot`
 
 If there are **new** English `.rst` source files, you can map them by updating the `./.tx/config` file.
 
-To then update the English source on Transifex:
-
+After updating the individual argument files with `make autogenerate`, you can run
 ```
-tx push --source
-```
-
-To fetch translations from Transifex:
-
-```
-tx pull --use-git-timestamps --all
-```
-or 
-```
-tx pull --use-git-timestamps -l "sw,ar,es,fr,te,fil"
-```
-
-Alternatively, you can pull only a specific language. For example:
-
-```
-tx pull -l sw
+make updatepot
+make updatelangpo
+make pushlang
+make pulllang
 ```
 
 To add a new language, do it through the Transifex interface and then add a new line to the Makefile `deploy` command.
@@ -244,7 +229,7 @@ Start up your Python virtual environment if it's not already with `source venv/b
 
 You can also run the build for just one specific language, for example:
 
-``` 
+```
 sphinx-build -b dirhtml -D language='sw' source "_build/html/sw/"
 ```
 
@@ -257,7 +242,7 @@ Warning, treated as error:
 /path/to/my/project/OpenDroneMap/docs/source/multispectral.rst:25:<translated>:1:Inline interpreted text or phrase reference start-string without end-string.
 ```
 
-Look at the source file and line that is mentioned. In this case the file is `source/multispectral.rst` and the line is the number after the colon after the filename (`25`). Looking at the file we see that line 25 is the last line and the "Help edit these docs!" link. 
+Look at the source file and line that is mentioned. In this case the file is `source/multispectral.rst` and the line is the number after the colon after the filename (`25`). Looking at the file we see that line 25 is the last line and the "Help edit these docs!" link.
 
 Go to Transifex, go to the resource, and go to the string. The warning/error message should help you understand what went wrong. In this case the link syntax wasn't matched correctly. Fix and save the translation.
 

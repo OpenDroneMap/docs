@@ -1,0 +1,53 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.6.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-12 15:01-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+
+#: ../../flying.rst:2
+msgid "Flying Tips"
+msgstr ""
+
+#: ../../flying.rst:4
+msgid "The `Humanitarian OpenStreetMap team <https://www.hotosm.org/>`_ has guidelines on `flying for UAV mapping <https://uav-guidelines.openaerialmap.org/>`_:"
+msgstr ""
+
+#: ../../flying.rst:6
+msgid "`Choosing the right UAV <https://uav-guidelines.openaerialmap.org/pages/05-choosing-the-right-uav/>`_"
+msgstr ""
+
+#: ../../flying.rst:8
+msgid "`Choosing the right sensor <https://uav-guidelines.openaerialmap.org/pages/06-choosing-the-sensor/>`_"
+msgstr ""
+
+#: ../../flying.rst:10
+msgid "`Mission preparation <https://uav-guidelines.openaerialmap.org/pages/07-preparing-for-the-uav-mission/>`_"
+msgstr ""
+
+#: ../../flying.rst:12
+msgid "The guidelines are intended for drone mapping projects on islands, but have general use for all drone mappers."
+msgstr ""
+
+#: ../../flying.rst:14
+msgid "See also DroneDeploy's guide on `Making Successful Maps <https://support.dronedeploy.com/docs/making-successful-maps>`_, which provides great tips on mission planning."
+msgstr ""
+
+#: ../../flying.rst:16
+msgid "Finally, lens distortion is a challenge in projects requiring accurate 3D data. See our section in these docs on `Camera Calibration </tutorials/#calibrating-the-camera>`_."
+msgstr ""
+
+#: ../../flying.rst:19
+msgid "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/flying.rst>`_!"
+msgstr ""

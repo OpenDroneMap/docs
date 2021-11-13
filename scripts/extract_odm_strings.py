@@ -2,6 +2,7 @@
 
 import argparse, os, urllib.request, ast, sys
 from io import StringIO
+from pathlib import Path
 from string import Template
 
 parser = argparse.ArgumentParser(description='Extract ODM strings.')
@@ -31,13 +32,13 @@ class ArgumentParserStub(argparse.ArgumentParser):
 
         for name, value in kwargs.items():
             options[args[0]][str(name)] = str(value)
-    
+
     def add_mutually_exclusive_group(self):
         return ArgumentParserStub()
 
 # Voodoo! :)
 # ( parse AST, extract "def config()" function, set module to only
-# contain that function, execute module in current scope, 
+# contain that function, execute module in current scope,
 # run config function)
 root = ast.parse(config_file)
 new_body = []
@@ -56,7 +57,7 @@ exec(compile(root, filename="<ast>", mode="exec"))
 
 # Misc variables needed to get config to run
 __version__ = '?'
-class context:    
+class context:
     root_path = ''
     num_cores = 4
 class io:
@@ -88,7 +89,7 @@ if len(options) > 0:
 
     keys = list(options.keys())
     keys.sort(key=lambda a: a.replace("-", ""))
-    
+
     with open(argstmplfile) as f:
         argstmpl = Template(f.read())
 
@@ -99,10 +100,10 @@ if len(options) > 0:
             # Use longest name
             opt_name = max(arg_map + (opt_name, ), key=len)
         return opt_name.replace("--", "")
-    
+
     def get_opt_descr(opt):
         return options[opt].get('help', '').replace("*", "\*")
-    
+
     def get_opt_choices(opt):
         return options[opt].get('choices', options[opt].get('metavar', '')).replace('[', '').replace(']', '').replace(',', ' | ').replace('\'', '')
 
@@ -115,12 +116,14 @@ if len(options) > 0:
                 f.write("\n")
             print("Wrote %s" % include_file)
 
+        argument_edit = Path(include_file).read_text()
+
         kwargs = {
             'opt': opt_name,
             'ticks': '`' * len(opt_name),
             'descr': get_opt_descr(opt),
             'parameter': "**Options:** *%s*" % get_opt_choices(opt) if get_opt_choices(opt) else "",
-            'include': ".. include:: ../arguments_edit/%s" % os.path.basename(include_file),
+            'include': argument_edit,
             'editfile': os.path.join("arguments_edit", os.path.basename(include_file)),
         }
 
