@@ -1,80 +1,39 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="fr" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Sorties OpenDroneMap &mdash; Documentation OpenDroneMap 2.6.4</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
+  <title>Sorties OpenDroneMap &mdash; Documentation OpenDroneMap 2.6.6</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Recherche" href="../search/" />
     <link rel="next" title="Ground Control Points" href="../gcp/" />
     <link rel="prev" title="version" href="../arguments/version/" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../" class="icon icon-home"> OpenDroneMap
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                2.6.4
+                2.6.6
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
     <input type="text" name="q" placeholder="Rechercher docs" />
@@ -82,18 +41,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation et Préambule</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation/#hardware-recommendations">Recommendations en matériel</a></li>
@@ -185,6 +133,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../arguments/">Options et indicateurs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary/">auto-boundary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">boundary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/build-overviews/">build-overviews</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#what-are-overviews">What Are Overviews?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
@@ -211,7 +161,17 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/cameras/">cameras</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#what-are-cloud-optimized-geotiffs-cogs">What Are Cloud Optimized GeoTIFFs (COGs)?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#when-are-cogs-appropriate">When are COGs appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#why-would-one-use-cogs">Why would one use COGs?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#true-cog">True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/copy-to/">copy-to</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/crop/">crop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/debug/">debug</a></li>
@@ -370,102 +330,61 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../">OpenDroneMap</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Sorties OpenDroneMap</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/outputs.rst.txt" rel="nofollow"> Afficher la source de la page</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="opendronemap-outputs">
-<h1>Sorties OpenDroneMap<a class="headerlink" href="#opendronemap-outputs" title="Lien permanent vers ce titre">¶</a></h1>
+             
+  <section id="opendronemap-outputs">
+<h1>Sorties OpenDroneMap<a class="headerlink" href="#opendronemap-outputs" title="Lien permanent vers ce titre"></a></h1>
 <p>Vous trouverez ci-dessous quelques-uns des résultats utiles produits par ODM.</p>
-<div class="section" id="point-cloud">
-<h2>Nuage de points<a class="headerlink" href="#point-cloud" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="point-cloud">
+<h2>Nuage de points<a class="headerlink" href="#point-cloud" title="Lien permanent vers ce titre"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_georeferencing/odm_georeferenced_model.ply/laz/csv</span></code> – Le nuage de points géoréférencé dans différents formats de fichiers</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap derived point cloud" src="../_images/pointcloud.png" />
-</div>
+</figure>
 <p><em>Nuage de points au-dessus de l’Université d’État de Zanzibar, avec l’aimable autorisation de</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
-</div>
-<div class="section" id="d-textured-model">
-<h2>Modèle texturé 3D<a class="headerlink" href="#d-textured-model" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="d-textured-model">
+<h2>Modèle texturé 3D<a class="headerlink" href="#d-textured-model" title="Lien permanent vers ce titre"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_texturing/odm_textured_model.obj</span></code> – Le maillage de surface texturé <code class="docutils literal notranslate"><span class="pre">odm_texturing/odm_textured_model_geo.obj</span></code> – Le maillage de surface géoréférencé et texturé</p>
 <p>Vous pouvez accéder au nuage de points et aux maillages texturés à l’aide de MeshLab. Ouvrez MeshLab et choisissez Fichier:Importer Maillage et choisissez votre maillage texturé à partir d’un emplacement similaire au suivant : <code class="docutils literal notranslate"><span class="pre">odm_texturing\odm_textured_model.obj</span></code></p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap derived textured mesh" src="../_images/UR_3D.gif" />
-</div>
+</figure>
 <p><em>Maillage texturé avec l’aimable autorisation de</em> <a class="reference external" href="https://twitter.com/opendronemap">OpenDroneMap</a></p>
-</div>
-<div class="section" id="orthophoto">
-<h2>Orthophoto<a class="headerlink" href="#orthophoto" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="orthophoto">
+<h2>Orthophoto<a class="headerlink" href="#orthophoto" title="Lien permanent vers ce titre"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_orthophoto/odm_orthphoto.tif</span></code> – Orthophoto GeoTIFF. Vous pouvez l’utiliser dans QGIS en tant que couche raster.</p>
 <p><code class="docutils literal notranslate"><span class="pre">odm_orthophoto/odm_orthphoto.original.tif</span></code> – L’orthophoto dans son état d’origine non rogné.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap orthophoto" src="../_images/orthophoto.png" />
-</div>
+</figure>
 <p><em>Orthophoto de l’Université d’État de Zanzibar, avec l’aimable autorisation de</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
-</div>
-<div class="section" id="dtm-dsm">
-<h2>DTM/DSM<a class="headerlink" href="#dtm-dsm" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="dtm-dsm">
+<h2>DTM/DSM<a class="headerlink" href="#dtm-dsm" title="Lien permanent vers ce titre"></a></h2>
 <p>Le DTM/DSM ne sera créé que si les options <code class="docutils literal notranslate"><span class="pre">--dtm</span></code> ou <code class="docutils literal notranslate"><span class="pre">--dsm</span></code> sont utilisées. Voir <a class="reference external" href="https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-models">tutoriel sur les modèles d’élévation</a> pour plus d’options de création.</p>
 <p>Les données seront stockées dans:</p>
 <blockquote>
@@ -474,13 +393,13 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">odm_dem/dsm.tif</span></code></p></li>
 </ul>
 </div></blockquote>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap derived digital surface model" src="../_images/digitalsurfacemodel.png" />
-</div>
+</figure>
 <p><em>Modèle de surface numérique sur l’Université d’État de Zanzibar, avec l’aimable autorisation de</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
-</div>
-<div class="section" id="list-of-all-outputs">
-<h2>Liste de toutes les sorties<a class="headerlink" href="#list-of-all-outputs" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+<section id="list-of-all-outputs">
+<h2>Liste de toutes les sorties<a class="headerlink" href="#list-of-all-outputs" title="Lien permanent vers ce titre"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
 ├── images/
 │   ├── img-1234.jpg
@@ -525,55 +444,38 @@
 </pre></div>
 </div>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Apprenez à éditer</a> et aidez à améliorer <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/outputs.rst">cette page</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../gcp/" class="btn btn-neutral float-right" title="Ground Control Points" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
         <a href="../arguments/version/" class="btn btn-neutral float-left" title="version" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../gcp/" class="btn btn-neutral float-right" title="Ground Control Points" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, OpenDroneMap.
-
-    </p>
+    <p>&#169; Copyright 2020, OpenDroneMap.</p>
   </div>
-    
-    
-    
-    Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
-    
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
-    
-    fourni par <a href="https://readthedocs.org">Read the Docs</a>. 
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

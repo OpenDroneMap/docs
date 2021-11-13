@@ -1,79 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="en" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>build-overviews &mdash; OpenDroneMap 2.6.4 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-
-  
-  
+  <title>build-overviews &mdash; OpenDroneMap 2.6.6 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
     <link rel="next" title="camera-lens" href="../camera-lens/" />
-    <link rel="prev" title="Options and Flags" href="../" /> 
+    <link rel="prev" title="boundary" href="../boundary/" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../" class="icon icon-home"> OpenDroneMap
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                2.6.4
+                2.6.6
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -81,18 +40,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../installation/">Installation and Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../installation/#hardware-recommendations">Hardware Recommendations</a></li>
@@ -184,6 +132,8 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">Options and Flags</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../auto-boundary/">auto-boundary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../boundary/">boundary</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">build-overviews</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#what-are-overviews">What Are Overviews?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
@@ -210,7 +160,17 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../cameras/">cameras</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../cog/">cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../cog/">cog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../cog/#what-are-cloud-optimized-geotiffs-cogs">What Are Cloud Optimized GeoTIFFs (COGs)?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cog/#when-are-cogs-appropriate">When are COGs appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cog/#why-would-one-use-cogs">Why would one use COGs?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../cog/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../cog/#true-cog">True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../cog/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../copy-to/">copy-to</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../crop/">crop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../debug/">debug</a></li>
@@ -369,75 +329,33 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../">OpenDroneMap</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../">Options and Flags</a> &raquo;</li>
-        
       <li>build-overviews</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/arguments/build-overviews.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="build-overviews">
-<span id="id1"></span><h1>build-overviews<a class="headerlink" href="#build-overviews" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="build-overviews">
+<span id="id1"></span><h1>build-overviews<a class="headerlink" href="#build-overviews" title="Permalink to this headline"></a></h1>
 <p>Build orthophoto overviews for faster display in programs such as QGIS. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 <div class="line-block">
 <div class="line">Parameter Type:</div>
@@ -484,14 +402,14 @@
 </tbody>
 </table>
 <hr class="docutils" />
-<div class="section" id="what-are-overviews">
-<h2>What Are Overviews?<a class="headerlink" href="#what-are-overviews" title="Permalink to this headline">¶</a></h2>
+<section id="what-are-overviews">
+<h2>What Are Overviews?<a class="headerlink" href="#what-are-overviews" title="Permalink to this headline"></a></h2>
 <p>Overviews (sometimes referred to as pyramids) are an optimization that reduce the time it takes to render GeoTIFF files; Larger file-size is the tradeoff for this increased rendering performance.</p>
 <p>Overviews are lower-resolution copies of the raster data (Power of two factor [128x128, 256x256, etc]) that are stored either internally or externally in a sidecar.</p>
 <p>In the case of OpenDroneMap, the Overviews will always be internal.</p>
-</div>
-<div class="section" id="when-are-overviews-appropriate">
-<h2>When are Overviews appropriate?<a class="headerlink" href="#when-are-overviews-appropriate" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="when-are-overviews-appropriate">
+<h2>When are Overviews appropriate?<a class="headerlink" href="#when-are-overviews-appropriate" title="Permalink to this headline"></a></h2>
 <p>One would likely want to use Overviews for nearly every instance, with some few (relatively rare) exceptions.</p>
 <blockquote>
 <div><ul class="simple">
@@ -499,78 +417,65 @@
 <li><p>Reading software does not support internal Overviews</p></li>
 </ul>
 </div></blockquote>
-</div>
-<div class="section" id="why-would-one-use-overviews">
-<h2>Why would one use Overviews?<a class="headerlink" href="#why-would-one-use-overviews" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="why-would-one-use-overviews">
+<h2>Why would one use Overviews?<a class="headerlink" href="#why-would-one-use-overviews" title="Permalink to this headline"></a></h2>
 <p>Overviews speed preview of the raster data by allowing the program rendering the raster to choose the closest size pyramid to match the resolution of the display extent that it is being rendered into, potentially saving a significant amount of time retrieving the full-size raster, buffering it, and then downscaling it for display.</p>
 <p>In the case of WebODM, Overviews are used to create dynamic tiles for rapid display and navigation of the 2D web map.</p>
-</div>
-<div class="section" id="example-images">
-<h2>Example Images<a class="headerlink" href="#example-images" title="Permalink to this headline">¶</a></h2>
-<div class="section" id="true-build-overviews">
-<h3>True: <code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code><a class="headerlink" href="#true-build-overviews" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-default" id="id2">
+</section>
+<section id="example-images">
+<h2>Example Images<a class="headerlink" href="#example-images" title="Permalink to this headline"></a></h2>
+<section id="true-build-overviews">
+<h3>True: <code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code><a class="headerlink" href="#true-build-overviews" title="Permalink to this headline"></a></h3>
+<figure class="align-default" id="id2">
 <img alt="QGIS displaying the generated Overviews" src="https://user-images.githubusercontent.com/19295950/127073339-6b2a0a4f-6ede-4dc1-8da4-5bc9646de304.png" />
-<p class="caption"><span class="caption-text">The Layer Properties panel demonstrates that this OpenDroneMap-generated GeoTIFF has internal Overviews.</span><a class="headerlink" href="#id2" title="Permalink to this image">¶</a></p>
-</div>
-</div>
-<div class="section" id="false-null">
-<h3>False: <code class="docutils literal notranslate"><span class="pre">null</span></code><a class="headerlink" href="#false-null" title="Permalink to this headline">¶</a></h3>
-<div class="figure align-default" id="id3">
+<figcaption>
+<p><span class="caption-text">The Layer Properties panel demonstrates that this OpenDroneMap-generated GeoTIFF has internal Overviews.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="false-null">
+<h3>False: <code class="docutils literal notranslate"><span class="pre">null</span></code><a class="headerlink" href="#false-null" title="Permalink to this headline"></a></h3>
+<figure class="align-default" id="id3">
 <img alt="QGIS displaying the file is lacking Overviews" src="https://user-images.githubusercontent.com/19295950/127074349-a3f84c4c-d05c-4bf1-bd7c-790781ad0fe3.png" />
-<p class="caption"><span class="caption-text">The Layer Properties panel demonstrates that this OpenDroneMap-generated GeoTIFF lacks internal Overviews.</span><a class="headerlink" href="#id3" title="Permalink to this image">¶</a></p>
-</div>
+<figcaption>
+<p><span class="caption-text">The Layer Properties panel demonstrates that this OpenDroneMap-generated GeoTIFF lacks internal Overviews.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/build-overviews.rst">this page</a>!</p>
-</div>
-</div>
-</div>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../boundary/" class="btn btn-neutral float-left" title="boundary" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../camera-lens/" class="btn btn-neutral float-right" title="camera-lens" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
-        <a href="../" class="btn btn-neutral float-left" title="Options and Flags" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, OpenDroneMap.
-
-    </p>
+    <p>&#169; Copyright 2020, OpenDroneMap.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

@@ -1,80 +1,39 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="es" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Cómo solicitar funciones &mdash; documentación de OpenDroneMap - 2.6.4</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
+  <title>Cómo solicitar funciones &mdash; documentación de OpenDroneMap - 2.6.6</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../genindex/" />
     <link rel="search" title="Búsqueda" href="../search/" />
     <link rel="next" title="Como contribuir" href="../contributing/" />
     <link rel="prev" title="Soporte multiespectral" href="../multispectral/" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../" class="icon icon-home"> OpenDroneMap
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                2.6.4
+                2.6.6
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
     <input type="text" name="q" placeholder="Buscar documentos" />
@@ -82,18 +41,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/">Instalación y Guía de Introducción</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation/#hardware-recommendations">Recomendaciones de Hardware</a></li>
@@ -185,6 +133,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../arguments/">Opciones e indicadores</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary/">auto-boundary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">boundary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/build-overviews/">build-overviews</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#what-are-overviews">What Are Overviews?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
@@ -211,7 +161,17 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/cameras/">cameras</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#what-are-cloud-optimized-geotiffs-cogs">What Are Cloud Optimized GeoTIFFs (COGs)?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#when-are-cogs-appropriate">When are COGs appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#why-would-one-use-cogs">Why would one use COGs?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#true-cog">True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/copy-to/">copy-to</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/crop/">crop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/debug/">debug</a></li>
@@ -321,7 +281,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../geo/">Archivos de geolocalización de imagen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../masks/">Usar máscaras de imagen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../large/">División de grandes conjuntos de datos</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../large/">Splitting Large Datasets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">Calibrar imágenes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../large/#local-split-merge">Split-merge local</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../large/#distributed-split-merge">Split-Merge distribuido</a><ul>
@@ -370,73 +330,32 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../">OpenDroneMap</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Cómo solicitar funciones</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/requesting-features.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="how-to-request-features">
-<h1>Cómo solicitar funciones<a class="headerlink" href="#how-to-request-features" title="Enlazar permanentemente con este título">¶</a></h1>
+             
+  <section id="how-to-request-features">
+<h1>Cómo solicitar funciones<a class="headerlink" href="#how-to-request-features" title="Enlazar permanentemente con este título"></a></h1>
 <p>Todo el software necesita comentarios de los usuarios y solicitudes de funciones para crecer y mantener la alineación con las necesidades de sus usuarios.</p>
 <p>OpenDroneMap es un software FOSS. Los proyectos gratuitos y de código abierto (FOSS) son interesantes por dentro y por fuera: desde fuera, los que tienen éxito sienten que deberían poder hacer cualquier cosa y es difícil saber qué es una solicitud razonable. Desde el interior de un proyecto, pueden sentirse muy limitados en recursos: principalmente por tiempo, dinero y sobrecarga de oportunidades.</p>
 <p>Se puede enviar una solicitud de función como problemas en el repositorio de Github correspondiente (por ejemplo, <a class="reference external" href="https://github.com/OpenDroneMap/WebODM/issues">WebODM</a> or <a class="reference external" href="https://github.com/OpenDroneMap/ODM/issues">ODM</a>  o similar) o más simplemente como un tema de discusión en <a class="reference external" href="https://community.opendronemap.org/">el foro de la comunidad</a>. Intente comenzar buscando en estas fuentes para ver si alguien más ya lo mencionó. A veces, una característica ya está en proceso, o al menos se ha discutido.</p>
@@ -451,54 +370,37 @@
 </div></blockquote>
 <p>Nos alegra que esté emocionado de ver nuevas funciones agregadas al proyecto. Algunas funciones nuevas necesitan soporte y otras son más fáciles de implementar. Haremos todo lo posible para ayudarlo a comprender dónde se encuentra su solicitud y agradecemos cualquier apoyo que pueda brindar.</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/requesting-features.rst">esta página</a>!</p>
-</div>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../contributing/" class="btn btn-neutral float-right" title="Como contribuir" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
         <a href="../multispectral/" class="btn btn-neutral float-left" title="Soporte multiespectral" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../contributing/" class="btn btn-neutral float-right" title="Como contribuir" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Derechos de autor 2020, OpenDroneMap.
-
-    </p>
+    <p>&#169; Derechos de autor 2020, OpenDroneMap.</p>
   </div>
-    
-    
-    
-    Construido con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
-    
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
-    
-    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>. 
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

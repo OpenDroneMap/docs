@@ -1,80 +1,39 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="es" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Como contribuir &mdash; documentación de OpenDroneMap - 2.6.4</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
+  <title>Como contribuir &mdash; documentación de OpenDroneMap - 2.6.6</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../genindex/" />
     <link rel="search" title="Búsqueda" href="../search/" />
     <link rel="next" title="Frequently Asked Questions" href="../faq/" />
     <link rel="prev" title="Cómo solicitar funciones" href="../requesting-features/" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../" class="icon icon-home"> OpenDroneMap
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                2.6.4
+                2.6.6
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
     <input type="text" name="q" placeholder="Buscar documentos" />
@@ -82,18 +41,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/">Instalación y Guía de Introducción</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation/#hardware-recommendations">Recomendaciones de Hardware</a></li>
@@ -185,6 +133,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../arguments/">Opciones e indicadores</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary/">auto-boundary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">boundary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/build-overviews/">build-overviews</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#what-are-overviews">What Are Overviews?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
@@ -211,7 +161,17 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/cameras/">cameras</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#what-are-cloud-optimized-geotiffs-cogs">What Are Cloud Optimized GeoTIFFs (COGs)?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#when-are-cogs-appropriate">When are COGs appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#why-would-one-use-cogs">Why would one use COGs?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#true-cog">True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/copy-to/">copy-to</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/crop/">crop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/debug/">debug</a></li>
@@ -321,7 +281,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../geo/">Archivos de geolocalización de imagen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../masks/">Usar máscaras de imagen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../large/">División de grandes conjuntos de datos</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../large/">Splitting Large Datasets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">Calibrar imágenes</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../large/#local-split-merge">Split-merge local</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../large/#distributed-split-merge">Split-Merge distribuido</a><ul>
@@ -370,80 +330,39 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../">OpenDroneMap</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Como contribuir</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/contributing.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="how-to-contribute">
-<h1>Como contribuir<a class="headerlink" href="#how-to-contribute" title="Enlazar permanentemente con este título">¶</a></h1>
+             
+  <section id="how-to-contribute">
+<h1>Como contribuir<a class="headerlink" href="#how-to-contribute" title="Enlazar permanentemente con este título"></a></h1>
 <p>OpenDroneMap depende de las contribuciones de la comunidad. Puedes contribuir de muchas formas, aunque no seas programador.</p>
-<div class="section" id="community-forum">
-<h2>Foro comunitario<a class="headerlink" href="#community-forum" title="Enlazar permanentemente con este título">¶</a></h2>
+<section id="community-forum">
+<h2>Foro comunitario<a class="headerlink" href="#community-forum" title="Enlazar permanentemente con este título"></a></h2>
 <p>Si quieres involucrarte, tienes un porblema o quieres conectarte, <a class="reference external" href="https://community.opendronemap.org/">el foro</a> es un excelente lugar para comenzar. Es posible que que encuentres tus preguntas ya respondidas o puedes encontrar consejos utiles y recursos. Tambien puedes contribuir con tus conjuntos de datos de acceso abierto para que otros los puedan explorar. Es un buen lugar para revisar antes de enviar informes de errores oponerse ne contacto con los desarrolladores antes de escribir una nueva caracterisitca.</p>
-</div>
-<div class="section" id="reporting-bugs">
-<h2>Reportando Errores<a class="headerlink" href="#reporting-bugs" title="Enlazar permanentemente con este título">¶</a></h2>
+</section>
+<section id="reporting-bugs">
+<h2>Reportando Errores<a class="headerlink" href="#reporting-bugs" title="Enlazar permanentemente con este título"></a></h2>
 <p>Errores son rastreados como problemas de Github. Por favor crea un porblema en el repositorio y etiquetalo con la etiqueta del error.</p>
 <p>Explica el problema e incluye detalles adicionales para ayudar a los mantenedores a reproducir el problema:</p>
 <ul class="simple">
@@ -463,8 +382,8 @@ Un lanzamiento estable? un clon de un master?</p></li>
 <li><p><strong>Cual es el nombre y la version del sistema operativo que estas usando?</strong></p></li>
 <li><p><strong>Estas usando ODM en una maquina virtual o Docker?</strong> Si es asi, que software de maquina virtualestas usando y que sistema operativo y versiones estas usando para el host y el guest?</p></li>
 </ul>
-<div class="section" id="template-for-submitting-bug-reports">
-<h3>Plantilla Para Enviar Informes de Errores<a class="headerlink" href="#template-for-submitting-bug-reports" title="Enlazar permanentemente con este título">¶</a></h3>
+<section id="template-for-submitting-bug-reports">
+<h3>Plantilla Para Enviar Informes de Errores<a class="headerlink" href="#template-for-submitting-bug-reports" title="Enlazar permanentemente con este título"></a></h3>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[Short description of problem here]
 
 **Reproduction Steps:**
@@ -495,10 +414,10 @@ Un lanzamiento estable? un clon de un master?</p></li>
 * Problem happens with all datasets and projects, not only some datasets or projects: [Yes/No]
 </pre></div>
 </div>
-</div>
-</div>
-<div class="section" id="pull-requests">
-<h2>Solicitudes de Extraxion<a class="headerlink" href="#pull-requests" title="Enlazar permanentemente con este título">¶</a></h2>
+</section>
+</section>
+<section id="pull-requests">
+<h2>Solicitudes de Extraxion<a class="headerlink" href="#pull-requests" title="Enlazar permanentemente con este título"></a></h2>
 <ul class="simple">
 <li><p>Incluye capturas de pantalla y GIFs animados en tus solicitudes de extraccion siempre que sea posible.</p></li>
 <li><p>Sigue la guia de estilo de PEP8 Python.</p></li>
@@ -521,55 +440,38 @@ Un lanzamiento estable? un clon de un master?</p></li>
 </li>
 </ul>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst">esta página</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../faq/" class="btn btn-neutral float-right" title="Frequently Asked Questions" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
         <a href="../requesting-features/" class="btn btn-neutral float-left" title="Cómo solicitar funciones" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../faq/" class="btn btn-neutral float-right" title="Frequently Asked Questions" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Derechos de autor 2020, OpenDroneMap.
-
-    </p>
+    <p>&#169; Derechos de autor 2020, OpenDroneMap.</p>
   </div>
-    
-    
-    
-    Construido con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
-    
+
+  Compilado con <a href="https://www.sphinx-doc.org/">Sphinx</a> usando un
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">tema</a>
-    
-    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>. 
+    proporcionado por <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

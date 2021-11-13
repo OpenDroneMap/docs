@@ -1,6 +1,12 @@
 Options and Flags
 -----------------
 
+:ref:`auto-boundary<auto-boundary>` 
+  Automatically set a boundary using camera shot locations to limit the area of the reconstruction. This can help remove far away background artifacts (sky, background landscapes, etc.). See also --boundary. Default: ``False``
+
+:ref:`boundary<boundary>` <json>
+  GeoJSON polygon limiting the area of the reconstruction. Can be specified either as path to a GeoJSON file or as a JSON string representing the contents of a GeoJSON file. Default: ``
+
 :ref:`build-overviews<build-overviews>` 
   Build orthophoto overviews for faster display in programs such as QGIS. Default: ``False``
 
@@ -43,8 +49,8 @@ Options and Flags
 :ref:`dtm<dtm>` 
   Use this tag to build a DTM (Digital Terrain Model, ground only) using a simple morphological filter. Check the --dem\* and --smrf\* parameters for finer tuning. Default: ``False``
 
-:ref:`end-with<end-with>` dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report
-  End processing at this stage. . Default: ``odm_report``
+:ref:`end-with<end-with>` dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess
+  End processing at this stage. . Default: ``odm_postprocess``
 
 :ref:`fast-orthophoto<fast-orthophoto>` 
   Skips dense reconstruction and 3D model generation. It generates an orthophoto directly from the sparse reconstruction. If you just need an orthophoto and do not need a full 3D model, turn on this option. Default: ``False``
@@ -52,7 +58,7 @@ Options and Flags
 :ref:`feature-quality<feature-quality>` ultra |  high |  medium |  low |  lowest
   Set feature extraction quality. Higher quality generates better features, but requires more memory and takes longer. . Default: ``high``
 
-:ref:`feature-type<feature-type>` sift |  hahog
+:ref:`feature-type<feature-type>` sift |  orb |  hahog
   Choose the algorithm for extracting keypoints and computing descriptors. . Default: ``sift``
 
 :ref:`force-gps<force-gps>` 
@@ -160,13 +166,13 @@ Options and Flags
 :ref:`radiometric-calibration<radiometric-calibration>` none |  camera |  camera+sun
   Set the radiometric calibration to perform on images. When processing multispectral and thermal images you should set this option to obtain reflectance/temperature values (otherwise you will get digital number values). [camera] applies black level, vignetting, row gradient gain/exposure compensation (if appropriate EXIF tags are found) and computes absolute temperature values. [camera+sun] is experimental, applies all the corrections of [camera], plus compensates for spectral radiance registered via a downwelling light sensor (DLS) taking in consideration the angle of the sun. . Default: ``none``
 
-:ref:`rerun<rerun>` dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report
+:ref:`rerun<rerun>` dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess
   Rerun this stage only and stop. . Default: ``
 
 :ref:`rerun-all<rerun-all>` 
   Permanently delete all previous results and rerun the processing pipeline.
 
-:ref:`rerun-from<rerun-from>` dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report
+:ref:`rerun-from<rerun-from>` dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess
   Rerun processing from this stage. . Default: ``
 
 :ref:`resize-to<resize-to>` <integer>
@@ -250,7 +256,7 @@ Options and Flags
 
 
 
-`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments.rst>`_!
+If you want to add more details to a command, `learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve the matching file in the ``arguments_edit`` `project folder  <https://github.com/OpenDroneMap/docs/tree/publish/source/arguments_edit>`_!
 
 .. toctree::
     :maxdepth: 1

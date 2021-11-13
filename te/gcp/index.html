@@ -1,80 +1,39 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="te" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>గ్రౌండ్ కంట్రోల్ పాయింట్లు &mdash; OpenDroneMap 2.6.4 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
+  <title>గ్రౌండ్ కంట్రోల్ పాయింట్లు &mdash; OpenDroneMap 2.6.6 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
     <link rel="next" title="మ్యాప్ ఖచ్చితత్వం" href="../map-accuracy/" />
     <link rel="prev" title="OpenDroneMap అవుట్‌పుట్‌లు" href="../outputs/" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../" class="icon icon-home"> OpenDroneMap
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                2.6.4
+                2.6.6
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -82,18 +41,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation/#hardware-recommendations">Hardware Recommendations</a></li>
@@ -185,6 +133,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../arguments/">ఎంపికలు మరియు ఫ్లాగ్స్</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary/">auto-boundary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">boundary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/build-overviews/">build-overviews</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#what-are-overviews">What Are Overviews?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
@@ -211,7 +161,17 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/cameras/">cameras</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#what-are-cloud-optimized-geotiffs-cogs">What Are Cloud Optimized GeoTIFFs (COGs)?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#when-are-cogs-appropriate">When are COGs appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#why-would-one-use-cogs">Why would one use COGs?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#true-cog">True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/copy-to/">copy-to</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/crop/">crop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/debug/">debug</a></li>
@@ -321,7 +281,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../geo/">చిత్రం జియోలొకేషన్ ఫైల్స్</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../masks/">ఇమేజ్ మాస్క్‌లను ఉపయోగించడం</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../large/">పెద్ద డేటాసెట్లను విభజించడం</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../large/">Splitting Large Datasets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">Calibrate images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../large/#local-split-merge">Local Split-Merge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../large/#distributed-split-merge">Distributed Split-Merge</a><ul>
@@ -370,85 +330,44 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../">OpenDroneMap</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-        
       <li>గ్రౌండ్ కంట్రోల్ పాయింట్లు</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/gcp.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="ground-control-points">
-<h1>గ్రౌండ్ కంట్రోల్ పాయింట్లు<a class="headerlink" href="#ground-control-points" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="ground-control-points">
+<h1>గ్రౌండ్ కంట్రోల్ పాయింట్లు<a class="headerlink" href="#ground-control-points" title="Permalink to this headline"></a></h1>
 <p>డేటాలోని వక్రీకరణలను సరిదిద్దడానికి మరియు సమన్వయ వ్యవస్థలను తెలుసుకోవడానికి డేటాను సూచించడానికి గ్రౌండ్ కంట్రోల్ పాయింట్లు ఉపయోగపడతాయి.</p>
 <p>గ్రౌండ్ కంట్రోల్ పాయింట్ (జిసిపి) అనేది భూమిపై చేసిన స్థానం కొలత, సాధారణంగా అధిక ఖచ్చితత్వంతో కూడిన జిపిఎస్‌ను ఉపయోగిస్తుంది. (టోఫానిన్ 2019)</p>
 <p>గ్రౌండ్ కంట్రోల్ పాయింట్లను పేవ్మెంట్ కార్నర్స్, పార్కింగ్ స్థలంలో లైన్లు లేదా కలర్ ఫ్లోర్ టైల్స్ వంటి ప్రస్తుత నిర్మాణాలను సెట్ చేయవచ్చు, లేకపోతే భూమిపై ఉంచిన లక్ష్యాలను ఉపయోగించి సెట్ చేయవచ్చు.</p>
 <p>లక్ష్యాలను బకెట్ మూతలు నుండి నేల పలకలు వరకు అనేక రకాల పదార్థాలతో కొనుగోలు చేయవచ్చు లేదా నిర్మించవచ్చు.</p>
-<div class="section" id="recommended-practices-for-gcp-setting">
-<h2>జిసిపి సెట్టింగ్ కోసం సిఫార్సు చేసిన పద్ధతులు<a class="headerlink" href="#recommended-practices-for-gcp-setting" title="Permalink to this headline">¶</a></h2>
+<section id="recommended-practices-for-gcp-setting">
+<h2>జిసిపి సెట్టింగ్ కోసం సిఫార్సు చేసిన పద్ధతులు<a class="headerlink" href="#recommended-practices-for-gcp-setting" title="Permalink to this headline"></a></h2>
 <p>అన్ని కెమెరా స్థానాల కోసం గ్రౌండ్ కంట్రోల్ పాయింట్లను కనిపించేలా ఉంచండి. Ground హించిన భూమి నమూనా దూరం, ప్రకాశం, వృక్షసంపద, భవనాలు మరియు ప్రస్తుతం ఉన్న అన్ని అడ్డంకులను పరిగణించండి.</p>
 <p>అధిక మరియు తక్కువ ఎత్తులను కప్పి, ప్రాజెక్ట్‌లోని జిసిపిల సమాన సమాంతర పంపిణీని సేకరించండి. చాలా ఉద్యోగాలకు కనీసం 5 జిసిపి పనిచేస్తుంది, మరియు పెద్ద ప్రాజెక్టులకు 8 - 10 సరిపోతాయి. GCP అంతరం చిత్ర పాదముద్ర కంటే పెద్దదిగా ఉండాలని భావించి, మూలల్లో మరియు మధ్యలో కొన్ని పాయింట్లను గుర్తించండి, తద్వారా మీరు ఒకే చిత్రంలో ఒకటి కంటే ఎక్కువ GCP ని చూడలేరు.</p>
 <p>ప్రతి జిసిపి కనీసం 5 చిత్రాలలో కనబడుతుందని నిర్ధారించడానికి, ప్రాజెక్ట్ చుట్టుకొలత నుండి 10 నుండి 30 మీటర్ల పాయింట్లను వేరు చేయండి. ఈ దూరం అతివ్యాప్తిపై ఆధారపడి ఉంటుంది, కాబట్టి అతివ్యాప్తి పెరగడం చుట్టుకొలత నుండి అవసరమైన దూరాన్ని తగ్గిస్తుంది.</p>
-</div>
-<div class="section" id="gcp-file-format">
-<h2>GCP ఫైల్ ఫార్మాట్<a class="headerlink" href="#gcp-file-format" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="gcp-file-format">
+<h2>GCP ఫైల్ ఫార్మాట్<a class="headerlink" href="#gcp-file-format" title="Permalink to this headline"></a></h2>
 <p>GCP ఫైల్ యొక్క ఆకృతి సులభం.</p>
 <blockquote>
 <div><ul class="simple">
@@ -476,9 +395,9 @@
 <p>పదునైన మూలలు జిసిపిలకు మంచి ఎంపికలు. మీరు మీ సర్వే ప్రాంతం చుట్టూ సమానంగా GCP లను కూడా ఉంచాలి / కనుగొనాలి.</p>
 <p>మీ ప్రాజెక్ట్ ఫోల్డర్ యొక్క బేస్ లో `` gcp_list.txt`` ఫైల్ తప్పక సృష్టించబడాలి.</p>
 <p>మంచి ఫలితాల కోసం మీ ఫైల్‌లో హెడర్ తర్వాత కనీసం 15 పంక్తులు ఉండాలి (ప్రతి పాయింట్‌కు 3 చిత్రాలతో 5 పాయింట్లు).</p>
-</div>
-<div class="section" id="user-interfaces">
-<h2>వినియోగదారు ఇంటర్‌ఫేస్‌లు<a class="headerlink" href="#user-interfaces" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="user-interfaces">
+<h2>వినియోగదారు ఇంటర్‌ఫేస్‌లు<a class="headerlink" href="#user-interfaces" title="Permalink to this headline"></a></h2>
 <p>GCP ఫైళ్ళను సృష్టించడానికి మీరు రెండు యూజర్ ఇంటర్ఫేస్లలో ఒకదాన్ని ఉపయోగించవచ్చు:</p>
 <blockquote>
 <div><ul class="simple">
@@ -486,8 +405,8 @@
 <li><p><a class="reference external" href="https://github.com/uav4geo/GCPEditorPro">జిసిపి ఎడిటర్ ప్రో</a></p></li>
 </ul>
 </div></blockquote>
-<div class="section" id="id1">
-<h3>POSM GCPi<a class="headerlink" href="#id1" title="Permalink to this headline">¶</a></h3>
+<section id="id1">
+<h3>POSM GCPi<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
 <p>POSM GCPi అప్రమేయంగా WebODM లో లోడ్ అవుతుంది. <cite>WebODM డెమో &lt;http://demo.webodm.org/plugins/posm-gcpi/&gt;</cite> _ వద్ద ఒక ఉదాహరణ అందుబాటులో ఉంది. తెలిసిన గ్రౌండ్ కంట్రోల్ XYZ విలువలతో దీన్ని ఉపయోగించడానికి, ఈ క్రింది వాటిని చేస్తారు:</p>
 <p>మీ జిసిపిల యొక్క ప్రొజె 4 స్ట్రింగ్‌తో హెడర్‌తో జిసిపి పేరు (జిసిపి ఇంటర్‌ఫేస్‌లో కనిపించే లేబుల్ ఇది), x, y మరియు z మాత్రమే ఉండే జిసిపి జాబితాను సృష్టించండి (అవి ప్లానార్ కోఆర్డినేట్‌లో ఉన్నాయని నిర్ధారించుకోండి UTM వంటి వ్యవస్థ. ఇది ఇలా ఉండాలి:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="n">proj</span><span class="o">=</span><span class="n">utm</span> <span class="o">+</span><span class="n">zone</span><span class="o">=</span><span class="mi">37</span> <span class="o">+</span><span class="n">south</span> <span class="o">+</span><span class="n">ellps</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">datum</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">units</span><span class="o">=</span><span class="n">m</span> <span class="o">+</span><span class="n">no_defs</span>
@@ -499,9 +418,9 @@
 </pre></div>
 </div>
 <p>అప్పుడు ఈ జిసిపి జాబితాను ఇంటర్‌ఫేస్‌లోకి లోడ్ చేయవచ్చు, చిత్రాలను లోడ్ చేయవచ్చు మరియు ప్రతి జిసిపిలను చిత్రంలో ఉంచవచ్చు.</p>
-</div>
-<div class="section" id="id2">
-<h3>జిసిపి ఎడిటర్ ప్రో<a class="headerlink" href="#id2" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="id2">
+<h3>జిసిపి ఎడిటర్ ప్రో<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
 <p>ఈ అనువర్తనాన్ని విడిగా ఇన్‌స్టాల్ చేయాలి లేదా <cite>https://github.com/uav4geo/GCPEditorPro &lt;https://github.com/uav4geo/GCPEditorPro&gt;`_</cite> నుండి వెబ్‌ఓడిఎం ప్లగిన్‌గా లోడ్ చేయవచ్చు.</p>
 <p>Gcp పేరు, నార్తింగ్, ఈస్టింగ్ మరియు ఎలివేషన్ ఉన్న CSV ఫైల్‌ను సృష్టించండి.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GCP</span> <span class="n">Label</span><span class="p">,</span><span class="n">Northing</span><span class="p">,</span><span class="n">Easting</span><span class="p">,</span><span class="n">Elevation</span>
@@ -512,61 +431,44 @@
 </div>
 <p>అప్పుడు ప్రధాన స్క్రీన్ నుండి CSV ని దిగుమతి చేసి, <code class="docutils literal notranslate"><span class="pre">ʻEPSG</span> <span class="pre">/</span> <span class="pre">PROJ</span></code> పెట్టెలో` <code class="docutils literal notranslate"><span class="pre">+proj=utm</span> <span class="pre">+zone=37</span> <span class="pre">+south</span> <span class="pre">+ellps=WGS84</span> <span class="pre">+datum=WGS84</span> <span class="pre">+units=m</span> <span class="pre">+no_defs</span></code> అని టైప్ చేయండి.</p>
 <p>కింది స్క్రీన్ సంబంధిత చిత్రాలను ట్యాగ్ చేయడానికి మరియు దిగుమతి చేయడానికి GCP లను ఎన్నుకోవాల్సిన మ్యాప్‌ను ప్రదర్శిస్తుంది.</p>
-</div>
-</div>
-<div class="section" id="references">
-<h2>ప్రస్తావనలు<a class="headerlink" href="#references" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="references">
+<h2>ప్రస్తావనలు<a class="headerlink" href="#references" title="Permalink to this headline"></a></h2>
 <p>టోఫానిన్, పియరో. <a class="reference external" href="https://odmbook.com/">ఓపెన్ డ్రోన్ మ్యాప్: ది మిస్సింగ్ గైడ్.</a> మాస్సెరానో లాబ్స్ LLC, 2019.</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/gcp.rst">this page</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../map-accuracy/" class="btn btn-neutral float-right" title="మ్యాప్ ఖచ్చితత్వం" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../outputs/" class="btn btn-neutral float-left" title="OpenDroneMap అవుట్‌పుట్‌లు" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../map-accuracy/" class="btn btn-neutral float-right" title="మ్యాప్ ఖచ్చితత్వం" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, OpenDroneMap.
-
-    </p>
+    <p>&#169; Copyright 2020, OpenDroneMap.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

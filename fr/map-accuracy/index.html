@@ -1,80 +1,39 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="fr" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Précision de la carte &mdash; Documentation OpenDroneMap 2.6.4</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
+  <title>Précision de la carte &mdash; Documentation OpenDroneMap 2.6.6</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Recherche" href="../search/" />
     <link rel="next" title="Fichiers de géolocalisation d’images" href="../geo/" />
     <link rel="prev" title="Ground Control Points" href="../gcp/" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../" class="icon icon-home"> OpenDroneMap
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                2.6.4
+                2.6.6
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
     <input type="text" name="q" placeholder="Rechercher docs" />
@@ -82,18 +41,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation et Préambule</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation/#hardware-recommendations">Recommendations en matériel</a></li>
@@ -185,6 +133,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../arguments/">Options et indicateurs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary/">auto-boundary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">boundary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/build-overviews/">build-overviews</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#what-are-overviews">What Are Overviews?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
@@ -211,7 +161,17 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/cameras/">cameras</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#what-are-cloud-optimized-geotiffs-cogs">What Are Cloud Optimized GeoTIFFs (COGs)?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#when-are-cogs-appropriate">When are COGs appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#why-would-one-use-cogs">Why would one use COGs?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#true-cog">True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/copy-to/">copy-to</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/crop/">crop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/debug/">debug</a></li>
@@ -370,96 +330,55 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../">OpenDroneMap</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Précision de la carte</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/map-accuracy.rst.txt" rel="nofollow"> Afficher la source de la page</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="map-accuracy">
-<h1>Précision de la carte<a class="headerlink" href="#map-accuracy" title="Lien permanent vers ce titre">¶</a></h1>
+             
+  <section id="map-accuracy">
+<h1>Précision de la carte<a class="headerlink" href="#map-accuracy" title="Lien permanent vers ce titre"></a></h1>
 <p>La précision peut être définie comme le degré ou la proximité avec laquelle les informations sur une carte correspondent aux valeurs du monde réel. Par conséquent, lorsque nous parlons d’exactitude, nous parlons de qualité des données et du nombre d’erreurs contenues dans un certain ensemble de données (Pascual 2011).</p>
 <p><strong>Précision relative ou locale</strong></p>
 <p>La précision locale ou relative peut être définie comme le degré auquel les distances entre deux points sur une carte correspondent aux distances réelles entre ces points dans le monde réel.</p>
 <p>La précision relative est indépendante de l’emplacement de la carte dans le monde, donc une carte peut avoir une précision relative élevée (en taille et en forme) mais sa position dans le monde peut être décalée (Figure 1).</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Model showing high relative accuracy" src="../_images/rel_accuracy.png" />
-</div>
+</figure>
 <p><em>Figure 1. Modèle montrant une précision relative élevée mais mal placé par rapport à sa position réelle dans le monde</em></p>
 <p><strong>Précision absolue ou globale</strong></p>
 <p>La précision absolue est la précision de la reconstruction par rapport à sa position réelle sur la planète (Pix4D 2019). La figure 2 montre un modèle de précision relative et absolue, car les points sont correctement placés en fonction de sa position dans le monde réel.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="Model showing high absolute accuracy" src="../_images/abs_accuracy.png" />
-</div>
+</figure>
 <p><em>Figure 2. Modèle montrant une précision relative et absolue élevée. Placé correctement en fonction de sa position réelle dans le monde</em></p>
 <p><strong>Un niveau de précision pour chaque projet</strong></p>
 <p>Chaque projet a une précision spécifique qui doit être respectée. Par exemple, évaluer l’avancement d’un chantier de construction ou mesurer une zone touchée par un incendie ne nécessite pas l’utilisation de GCP, car une précision absolue n’aura pas d’impact sur le processus de prise de décision. D’autre part, il existe des tâches pour lesquelles la précision est critique, par exemple les évaluations de conformité de projet et l’arpentage des titres fonciers, qui nécessitent une précision relative et absolue plus élevée.</p>
-<div class="section" id="what-to-expect">
-<h2>A quoi s’attendre<a class="headerlink" href="#what-to-expect" title="Lien permanent vers ce titre">¶</a></h2>
+<section id="what-to-expect">
+<h2>A quoi s’attendre<a class="headerlink" href="#what-to-expect" title="Lien permanent vers ce titre"></a></h2>
 <p>En termes généraux, on peut s’attendre à ce que la précision relative soit de l’ordre de 1 à 3 fois la GSD moyenne pour l’ensemble de données. Et quant à la précision absolue, il faut considérer qu’elle dépend de l’unité GPS montée dans le drone mais la précision horizontale d’un GPS standard est généralement de l’ordre de 2 à 6 mètres et la précision verticale entre 3 à 4 fois la précision horizontale.</p>
 <p>Lors de l’utilisation de GCP, la précision absolue peut être améliorée à 2,5 fois GSD pour la précision horizontale et à 4 fois la GSD pour la précision verticale (Madawalagama 2016).</p>
 <p>À un GSD de 1 cm, la précision est comparable à celle du RTK GNSS, et se situe à l’échelle 1:200 selon les normes de précision cartographique NSDI et FGDC dans des conditions sous-optimales (Barry 2013).</p>
-<div class="section" id="aspects-impacting-map-accuracy">
-<h3>Aspects affectant la précision de la carte<a class="headerlink" href="#aspects-impacting-map-accuracy" title="Lien permanent vers ce titre">¶</a></h3>
+<section id="aspects-impacting-map-accuracy">
+<h3>Aspects affectant la précision de la carte<a class="headerlink" href="#aspects-impacting-map-accuracy" title="Lien permanent vers ce titre"></a></h3>
 <p><strong>Météo</strong></p>
 <p>Les conditions météorologiques ont un impact direct sur les résultats de la photogrammétrie, il est donc important de prendre en compte la couverture nuageuse, la vitesse du vent, l’humidité, l’altitude du soleil et d’autres facteurs influençant la stabilité du drone et l’éclairage du terrain.</p>
 <p><strong>Caméras</strong></p>
@@ -468,10 +387,10 @@
 <p>Plus l’altitude de vol est élevée, plus l’empreinte de l’image et le GSD sont grands. Le GSD plus grand résultant, la précision sera diminuée car il y aura moins de détails dans les caractéristiques reconnaissables. Lorsqu’un GSD plus petit est requis, une altitude de 3 à 4 fois la hauteur du point le plus élevé est recommandée.</p>
 <p><strong>Vitesse de Vol</strong></p>
 <p>La vitesse de vol a un effet particulier dans les caméras équipées d’un obturateur roulant, tandis que celles équipées d’un obturateur global ou mécanique tendent à réduire cet effet. Les drones équipés de systèmes de positionnement RTK sont également affectés par la vitesse, mais en survolant chaque photo prise, vous pouvez obtenir une très bonne précision. Si au contraire vous vous déplacez lors de chaque prise de photo, la précision sera limitée par deux facteurs : la vitesse à laquelle vous vous déplacez multipliée par les incréments de 1 seconde de RTK (Mather 2020).</p>
-</div>
-</div>
-<div class="section" id="references">
-<h2>Références<a class="headerlink" href="#references" title="Lien permanent vers ce titre">¶</a></h2>
+</section>
+</section>
+<section id="references">
+<h2>Références<a class="headerlink" href="#references" title="Lien permanent vers ce titre"></a></h2>
 <p>Barry, P., &amp; Coakley, R. « Précision de la photogrammétrie UAV par rapport au réseau RTK GPS. » Enquêtes de base. 2013. <a class="reference external" href="http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf">http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf</a> (consulté le 10 13, 2020).</p>
 <p>Déploiement de drones. Comment utiliser les points de contrôle au sol ? : Un guide d’utilisation des points de contrôle au sol avec un logiciel de cartographie par drone. 5 8, 2017. <a class="reference external" href="https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/">https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/</a> (consulté le 7 9, 2020).</p>
 <p>Madawalagama, S.L., Munasinghe, N., Dampegama, S.D.P.J. et Samarakoon, L. « Cartographie aérienne à faible coût avec qualité grand public. » 37e Conférence asiatique sur la télédétection. Colombo, Sri Lanka, 2016.</p>
@@ -479,55 +398,38 @@
 <p>Pascual, Manuel S. GIS Lounge : Données SIG : un regard sur l’exactitude, la précision et les types d’erreurs. 11 6, 2011. <a class="reference external" href="https://www.gislounge.com/gis-data-a-look-at-accuracy-precision-and-types-of-errors/">https://www.gislounge.com/gis-data-a-look-at-accuracy-precision-and-types-of-errors/</a> (consulté le 09/07/2020).</p>
 <p>Pix4D. « Qu’est-ce que la précision dans un projet de cartographie aérienne ? » Pix4D. 25 de 05 de 2019. <a class="reference external" href="https://www.pix4d.com/blog/accuracy-aerial-mapping">https://www.pix4d.com/blog/accuracy-aerial-mapping</a> (consulté le 10 13, 2020).</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Apprenez à éditer</a> et aidez à améliorer <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/map-accuracy.rst">cette page</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../geo/" class="btn btn-neutral float-right" title="Fichiers de géolocalisation d’images" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pied de page">
         <a href="../gcp/" class="btn btn-neutral float-left" title="Ground Control Points" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Précédent</a>
+        <a href="../geo/" class="btn btn-neutral float-right" title="Fichiers de géolocalisation d’images" accesskey="n" rel="next">Suivant <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, OpenDroneMap.
-
-    </p>
+    <p>&#169; Copyright 2020, OpenDroneMap.</p>
   </div>
-    
-    
-    
-    Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
-    
+
+  Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">thème</a>
-    
-    fourni par <a href="https://readthedocs.org">Read the Docs</a>. 
+    fourni par <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

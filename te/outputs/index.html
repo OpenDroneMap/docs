@@ -1,80 +1,39 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="te" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>OpenDroneMap అవుట్‌పుట్‌లు &mdash; OpenDroneMap 2.6.4 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
+  <title>OpenDroneMap అవుట్‌పుట్‌లు &mdash; OpenDroneMap 2.6.6 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
         <script src="../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
     <link rel="next" title="గ్రౌండ్ కంట్రోల్ పాయింట్లు" href="../gcp/" />
     <link rel="prev" title="version" href="../arguments/version/" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../" class="icon icon-home"> OpenDroneMap
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                2.6.4
+                2.6.6
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -82,18 +41,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Getting Started</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation/#hardware-recommendations">Hardware Recommendations</a></li>
@@ -185,6 +133,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../arguments/">ఎంపికలు మరియు ఫ్లాగ్స్</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary/">auto-boundary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">boundary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/build-overviews/">build-overviews</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#what-are-overviews">What Are Overviews?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
@@ -211,7 +161,17 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/cameras/">cameras</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#what-are-cloud-optimized-geotiffs-cogs">What Are Cloud Optimized GeoTIFFs (COGs)?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#when-are-cogs-appropriate">When are COGs appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#why-would-one-use-cogs">Why would one use COGs?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#true-cog">True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/copy-to/">copy-to</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/crop/">crop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/debug/">debug</a></li>
@@ -321,7 +281,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../geo/">చిత్రం జియోలొకేషన్ ఫైల్స్</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../masks/">ఇమేజ్ మాస్క్‌లను ఉపయోగించడం</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../large/">పెద్ద డేటాసెట్లను విభజించడం</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../large/">Splitting Large Datasets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">Calibrate images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../large/#local-split-merge">Local Split-Merge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../large/#distributed-split-merge">Distributed Split-Merge</a><ul>
@@ -370,102 +330,61 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../">OpenDroneMap</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-        
       <li>OpenDroneMap అవుట్‌పుట్‌లు</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/outputs.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="opendronemap-outputs">
-<h1>OpenDroneMap అవుట్‌పుట్‌లు<a class="headerlink" href="#opendronemap-outputs" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="opendronemap-outputs">
+<h1>OpenDroneMap అవుట్‌పుట్‌లు<a class="headerlink" href="#opendronemap-outputs" title="Permalink to this headline"></a></h1>
 <p>ODM ఉత్పత్తి చేసే కొన్ని ఉపయోగకరమైన ఉత్పాదనలు క్రింద ఇవ్వబడ్డాయి.</p>
-<div class="section" id="point-cloud">
-<h2>పాయింట్ క్లౌడ్<a class="headerlink" href="#point-cloud" title="Permalink to this headline">¶</a></h2>
+<section id="point-cloud">
+<h2>పాయింట్ క్లౌడ్<a class="headerlink" href="#point-cloud" title="Permalink to this headline"></a></h2>
 <p>`` odm_georeferencing / odm_georeferenced_model.ply / laz / csv`` - వేర్వేరు ఫైల్ ఫార్మాట్లలో భౌగోళిక సూచించిన పాయింట్ క్లౌడ్</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap derived point cloud" src="../_images/pointcloud.png" />
-</div>
+</figure>
 <p><em>Point cloud over State University Zanzibar, courtesy of</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
-</div>
-<div class="section" id="d-textured-model">
-<h2>3D ఆకృతి మోడల్<a class="headerlink" href="#d-textured-model" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="d-textured-model">
+<h2>3D ఆకృతి మోడల్<a class="headerlink" href="#d-textured-model" title="Permalink to this headline"></a></h2>
 <p>`` odm_texturing / odm_textured_model.obj`` - ఆకృతి చేసిన ఉపరితల మెష్ `` odm_texturing / odm_textured_model_geo.obj`` - భౌగోళిక మరియు ఉపరితల ఉపరితల మెష్</p>
 <p>మీరు మెష్ లాబ్ ఉపయోగించి పాయింట్ క్లౌడ్ మరియు ఆకృతి మెష్లను యాక్సెస్ చేయవచ్చు. మెష్‌ల్యాబ్‌ను తెరిచి, ఫైల్‌ను ఎంచుకోండి: మెష్‌ను దిగుమతి చేయండి మరియు కింది వాటికి సమానమైన స్థానం నుండి మీ ఆకృతి మెష్‌ను ఎంచుకోండి: `` odm_texturing odm_textured_model.obj``</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap derived textured mesh" src="../_images/UR_3D.gif" />
-</div>
+</figure>
 <p><em>Textured mesh courtesy of</em> <a class="reference external" href="https://twitter.com/opendronemap">OpenDroneMap</a></p>
-</div>
-<div class="section" id="orthophoto">
-<h2>ఆర్థోఫోటో<a class="headerlink" href="#orthophoto" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="orthophoto">
+<h2>ఆర్థోఫోటో<a class="headerlink" href="#orthophoto" title="Permalink to this headline"></a></h2>
 <p>`` odm_orthophoto / odm_orthphoto.tif`` - GeoTIFF ఆర్థోఫోటో. మీరు దీన్ని QGIS లో రాస్టర్ లేయర్‌గా ఉపయోగించవచ్చు.</p>
 <p><code class="docutils literal notranslate"><span class="pre">odm_orthophoto/odm_orthphoto.original.tif</span></code> -- The orthophoto in its original un-cropped state.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap orthophoto" src="../_images/orthophoto.png" />
-</div>
+</figure>
 <p><em>Orthophoto over State University Zanzibar, courtesy of</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
-</div>
-<div class="section" id="dtm-dsm">
-<h2>DTM / DSM<a class="headerlink" href="#dtm-dsm" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="dtm-dsm">
+<h2>DTM / DSM<a class="headerlink" href="#dtm-dsm" title="Permalink to this headline"></a></h2>
 <p>`` --Dtm`` లేదా `` --dsm`` ఎంపికలు ఉపయోగించినట్లయితే మాత్రమే DTM / DSM సృష్టించబడుతుంది. సృష్టించే మరిన్ని ఎంపికల కోసం ఎలివేషన్ మోడళ్లపై &lt;ట్యుటోరియల్ &lt;<a class="reference external" href="https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-models">https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-models</a>&gt;`_ చూడండి.</p>
 <p>డేటా వీటిలో నిల్వ చేయబడుతుంది:</p>
 <blockquote>
@@ -474,13 +393,13 @@
 <li><p><code class="docutils literal notranslate"><span class="pre">odm_dem/dsm.tif</span></code></p></li>
 </ul>
 </div></blockquote>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of OpenDroneMap derived digital surface model" src="../_images/digitalsurfacemodel.png" />
-</div>
+</figure>
 <p><em>Digital surface model over State University Zanzibar, courtesy of</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
-</div>
-<div class="section" id="list-of-all-outputs">
-<h2>అన్ని ఉత్పాదనల జాబితా<a class="headerlink" href="#list-of-all-outputs" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="list-of-all-outputs">
+<h2>అన్ని ఉత్పాదనల జాబితా<a class="headerlink" href="#list-of-all-outputs" title="Permalink to this headline"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
 ├── images/
 │   ├── img-1234.jpg
@@ -525,55 +444,38 @@
 </pre></div>
 </div>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/outputs.rst">this page</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../gcp/" class="btn btn-neutral float-right" title="గ్రౌండ్ కంట్రోల్ పాయింట్లు" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../arguments/version/" class="btn btn-neutral float-left" title="version" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../gcp/" class="btn btn-neutral float-right" title="గ్రౌండ్ కంట్రోల్ పాయింట్లు" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, OpenDroneMap.
-
-    </p>
+    <p>&#169; Copyright 2020, OpenDroneMap.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

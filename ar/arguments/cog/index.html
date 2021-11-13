@@ -1,80 +1,39 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="ar" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>cog &mdash; OpenDroneMap 2.6.4 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-
-  
-  
+  <title>cog &mdash; OpenDroneMap 2.6.6 documentation</title>
+      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../../" src="../../_static/documentation_options.js"></script>
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
         <script src="../../_static/doctools.js"></script>
         <script src="../../_static/translations.js"></script>
-    
-    <script type="text/javascript" src="../../_static/js/theme.js"></script>
-
-    
+    <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="بحث" href="../../search/" />
     <link rel="next" title="copy-to" href="../copy-to/" />
     <link rel="prev" title="cameras" href="../cameras/" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../../" class="icon icon-home"> OpenDroneMap
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                2.6.4
+                2.6.6
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -82,18 +41,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../../installation/">التثبيت والبدء</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../installation/#hardware-recommendations">توصيات الأجهزة</a></li>
@@ -185,6 +133,8 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">الخيارات والإعلام</a><ul class="current">
+<li class="toctree-l2"><a class="reference internal" href="../auto-boundary/">auto-boundary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../boundary/">boundary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../build-overviews/">build-overviews</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../build-overviews/#what-are-overviews">What Are Overviews?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../build-overviews/#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
@@ -211,7 +161,17 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../cameras/">cameras</a></li>
-<li class="toctree-l2 current"><a class="current reference internal" href="#">cog</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">cog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-are-cloud-optimized-geotiffs-cogs">What Are Cloud Optimized GeoTIFFs (COGs)?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#when-are-cogs-appropriate">When are COGs appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-would-one-use-cogs">Why would one use COGs?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#true-cog">True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../copy-to/">copy-to</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../crop/">crop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../debug/">debug</a></li>
@@ -321,7 +281,7 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../../geo/">Image Geolocation Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../../masks/">Using Image Masks</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../../large/">تقسيم مجموعات البيانات الكبيرة</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../../large/">Splitting Large Datasets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../../large/#calibrate-images">معايرة الصور</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../large/#local-split-merge">دمج التجزئة المحلية</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../large/#distributed-split-merge">دمج سبليت الموزعة</a><ul>
@@ -370,125 +330,170 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../../">OpenDroneMap</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
-        
           <li><a href="../">الخيارات والإعلام</a> &raquo;</li>
-        
       <li>cog</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../../_sources/arguments/cog.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="cog">
-<span id="id1"></span><h1>cog<a class="headerlink" href="#cog" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="cog">
+<span id="id1"></span><h1>cog<a class="headerlink" href="#cog" title="Permalink to this headline"></a></h1>
 <p>Create Cloud-Optimized GeoTIFFs instead of normal GeoTIFFs. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
-<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/cog.rst">this page</a>!</p>
+<div class="line-block">
+<div class="line">Parameter Type:</div>
+<div class="line-block">
+<div class="line"><strong>Boolean</strong></div>
 </div>
+<div class="line">Parameter Domain:</div>
+<div class="line-block">
+<div class="line">True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code></div>
+<div class="line">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
+</div>
+<div class="line">Parameter Default:</div>
+<div class="line-block">
+<div class="line">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
+</div>
+</div>
+<hr class="docutils" />
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 40%" />
+<col style="width: 60%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Resource</p></th>
+<th class="head"><p>Impact</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CPU</p></td>
+<td><p>●●○ | Medium</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPU</p></td>
+<td><p>○○○ | None</p></td>
+</tr>
+<tr class="row-even"><td><p>HDD</p></td>
+<td><p>●●○ | Medium</p></td>
+</tr>
+<tr class="row-odd"><td><p>RAM</p></td>
+<td><p>●●○ | Medium</p></td>
+</tr>
+<tr class="row-even"><td><p>Time</p></td>
+<td><p>●●○ | Medium</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<section id="what-are-cloud-optimized-geotiffs-cogs">
+<h2>What Are Cloud Optimized GeoTIFFs (COGs)?<a class="headerlink" href="#what-are-cloud-optimized-geotiffs-cogs" title="Permalink to this headline"></a></h2>
+<p>Cloud Optimized GeoTIFFs (COGs hereafter) are a special formulation of GeoTIFF files that take advantage of internal overivews as well as tiling (and various forms of compression).</p>
+<p>In the case of WebODM, all GeoTIFFs will be generated as COGs because the 2D Map View uses the special attributes of COGs to enable rapid display and preview of the data generated by WebODM.</p>
+</section>
+<section id="when-are-cogs-appropriate">
+<h2>When are COGs appropriate?<a class="headerlink" href="#when-are-cogs-appropriate" title="Permalink to this headline"></a></h2>
+<p>COGs are most appropriate when the GeoTIFF is going to be hosted online and/or accessed by a program which can take advantage of HTTP GetRange Requests and/or internal overviews and tiles.</p>
+</section>
+<section id="why-would-one-use-cogs">
+<h2>Why would one use COGs?<a class="headerlink" href="#why-would-one-use-cogs" title="Permalink to this headline"></a></h2>
+<p>The COG structure (internal overviews and tiling) allows for rapid viewing of the data in programs which are capable of reading tiled data and overviews (most GIS software [QGIS etc]). This advantage holds true whether or not the file is hosted online and served via HTTP or whether it is stored locally.</p>
+<p>With these features in place, a COG should display much more quickly in a given application than a more legacy formatted GeoTIFF with no overviews and striped structure.</p>
+</section>
+<section id="example-images">
+<h2>Example Images<a class="headerlink" href="#example-images" title="Permalink to this headline"></a></h2>
+<section id="true-cog">
+<h3>True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code><a class="headerlink" href="#true-cog" title="Permalink to this headline"></a></h3>
+<figure class="align-default" id="id2">
+<img alt="GDAL Info showing LAYOUT=COG" src="https://user-images.githubusercontent.com/19295950/127079824-c85fa5a9-842a-4f28-a380-b6404aac7ef2.png" />
+<figcaption>
+<p><span class="caption-text">The Raster Information tool in QGIS can print information from gdalinfo which can be used to confirm the conformance of a GeoTIFF to the COG spec.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id3">
+<img alt="QGIS Layer Properties showing Internal Overviews" src="https://user-images.githubusercontent.com/19295950/138731905-d10483bd-b91b-4f63-bfb4-89c0f50bf74b.png" />
+<figcaption>
+<p><span class="caption-text">The Layer Properties panel can show that there are in fact internal overviews. Keep in mind that not every GeoTIFF has internal overviews, but every COG must.</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id4">
+<img alt="QGIS Layer Properties showing an on-disk file size of 8.78 MB" src="https://user-images.githubusercontent.com/19295950/138733095-fb5f07ef-fbb0-48f4-8401-25cbf5294b9d.png" />
+<figcaption>
+<p><span class="caption-text">Note that the on-disk file size is 8.78 MB for the COG due to the presence of internal overviews when compared to the 6.30 MB of the non-COG GeoTIFF below.</span><a class="headerlink" href="#id4" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="false-null">
+<h3>False: <code class="docutils literal notranslate"><span class="pre">null</span></code><a class="headerlink" href="#false-null" title="Permalink to this headline"></a></h3>
+<figure class="align-default" id="id5">
+<img alt="GDAL Info not showing LAYOUT=COG" src="https://user-images.githubusercontent.com/19295950/127080115-7e09ba30-140f-402d-b00a-8bb0c7bc72ff.png" />
+<figcaption>
+<p><span class="caption-text">The Raster Information tool in QGIS does not show LAYOUT=COG, which indicates that this GeoTIFF does not meet the COG spec.</span><a class="headerlink" href="#id5" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id6">
+<img alt="QGIS Layer Properties not showing Internal Overviews" src="https://user-images.githubusercontent.com/19295950/138732051-d227c98d-10a5-46de-ac99-8c5ffb0a12b2.png" />
+<figcaption>
+<p><span class="caption-text">The Layer Properties panel shows that the GeoTIFF lacks all levels of Internal Pyramids.</span><a class="headerlink" href="#id6" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<figure class="align-default" id="id7">
+<img alt="QGIS Layer Properties showing an on-disk file size of 6.30 MB" src="https://user-images.githubusercontent.com/19295950/138733132-a9c4f8b4-673a-426b-a665-bde5e89e4de3.png" />
+<figcaption>
+<p><span class="caption-text">Note that the on-disk file size is 6.30 MB for the COG due to the lack of internal overviews when compared to the 8.78 MB of the COG GeoTIFF above.</span><a class="headerlink" href="#id7" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/cog.rst">this page</a>!</p>
+</section>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../copy-to/" class="btn btn-neutral float-right" title="copy-to" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../cameras/" class="btn btn-neutral float-left" title="cameras" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../copy-to/" class="btn btn-neutral float-right" title="copy-to" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169;  حقوق النشر 2020, OpenDroneMap
-
-    </p>
+    <p>&#169;  حقوق النشر 2020, OpenDroneMap</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>

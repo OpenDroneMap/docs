@@ -1,79 +1,38 @@
-
-
 <!DOCTYPE html>
 <html class="writer-html5" lang="fil" >
 <head>
-  <meta charset="utf-8" />
-  
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  
-  <title>Splitting Large Datasets &mdash; OpenDroneMap 2.6.4 documentation</title>
-  
-
-  
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-  <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-
-  
-  
+  <title>Splitting Large Datasets &mdash; OpenDroneMap 2.6.6 documentation</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  
-
-  
-  
-
-  
-
-  
   <!--[if lt IE 9]>
     <script src="../_static/js/html5shiv.min.js"></script>
   <![endif]-->
   
-    
-      <script type="text/javascript" id="documentation_options" data-url_root="../" src="../_static/documentation_options.js"></script>
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
         <script src="../_static/doctools.js"></script>
-    
-    <script type="text/javascript" src="../_static/js/theme.js"></script>
-
-    
+    <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
     <link rel="next" title="Karagdagang Sanggunian" href="../resources/" />
     <link rel="prev" title="Gamit ang Image Masks" href="../masks/" /> 
 </head>
 
-<body class="wy-body-for-nav">
-
-   
+<body class="wy-body-for-nav"> 
   <div class="wy-grid-for-nav">
-    
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-          
-
-          
             <a href="../" class="icon icon-home"> OpenDroneMap
-          
-
-          
           </a>
-
-          
-            
-            
               <div class="version">
-                2.6.4
+                2.6.6
               </div>
-            
-          
-
-          
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
     <input type="text" name="q" placeholder="Search docs" />
@@ -81,18 +40,7 @@
     <input type="hidden" name="area" value="default" />
   </form>
 </div>
-
-          
-        </div>
-
-        
-        <div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="main navigation">
-          
-            
-            
-              
-            
-            
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul>
 <li class="toctree-l1"><a class="reference internal" href="../installation/">Instalasyon at Paano Simulan</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation/#hardware-recommendations">Hardware Recommendations</a></li>
@@ -184,6 +132,8 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../arguments/">Mga Opsyon at Tanda</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary/">auto-boundary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">boundary</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/build-overviews/">build-overviews</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#what-are-overviews">What Are Overviews?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
@@ -210,7 +160,17 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/cameras/">cameras</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#what-are-cloud-optimized-geotiffs-cogs">What Are Cloud Optimized GeoTIFFs (COGs)?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#when-are-cogs-appropriate">When are COGs appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#why-would-one-use-cogs">Why would one use COGs?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#true-cog">True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/copy-to/">copy-to</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/crop/">crop</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/debug/">debug</a></li>
@@ -369,86 +329,45 @@
 </li>
 </ul>
 
-            
-          
         </div>
-        
       </div>
     </nav>
 
-    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap">
-
-      
-      <nav class="wy-nav-top" aria-label="top navigation">
-        
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
           <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
           <a href="../">OpenDroneMap</a>
-        
       </nav>
 
-
       <div class="wy-nav-content">
-        
         <div class="rst-content">
-        
-          
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-<div role="navigation" aria-label="breadcrumbs navigation">
-
+          <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-    
       <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-        
       <li>Splitting Large Datasets</li>
-    
-    
       <li class="wy-breadcrumbs-aside">
-        
-          
             <a href="../_sources/large.rst.txt" rel="nofollow"> View page source</a>
-          
-        
       </li>
-    
   </ul>
-
-  
   <hr/>
 </div>
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
-            
-  <div class="section" id="splitting-large-datasets">
-<h1>Splitting Large Datasets<a class="headerlink" href="#splitting-large-datasets" title="Permalink to this headline">¶</a></h1>
+             
+  <section id="splitting-large-datasets">
+<h1>Splitting Large Datasets<a class="headerlink" href="#splitting-large-datasets" title="Permalink to this headline"></a></h1>
 <p>sa ODM bersiyon <code class="docutils literal notranslate"><span class="pre">0.6.0</span></code>, maaaring hatiin ang malalaking datasets sa mas maliliit na grupo na tinatawag na submodels</p>
 <p>Bakit gagamitin ang split-merge pipeline? Kung may napakalaking bilang ng imahe sa dataset, split-merge ang makaktulong sa pagpaparocess na maging mas maayos sa malaking machine (mangangailangan ito ng mas maliit na memory). Kung maraming machine ang nakakonekta sa iisang network, pwede i-proseso ang submodels ng parallel, papayagan nito ang horizontal scaling at pagproseso ng libong imahe ng mabilis.</p>
 <p>Ang split-merge ay gumagana sa WebODM sa labas ng box basta ang process nodes ay sumosoporta sa slit-merge, sa pagenable ng <code class="docutils literal notranslate"><span class="pre">--split</span></code> option kapag gumagawa ng bagong task.</p>
-<div class="section" id="calibrate-images">
-<h2>Calibrate images<a class="headerlink" href="#calibrate-images" title="Permalink to this headline">¶</a></h2>
+<section id="calibrate-images">
+<h2>Calibrate images<a class="headerlink" href="#calibrate-images" title="Permalink to this headline"></a></h2>
 <p>Ang image calibration ay rekomendado (pero hindi required) para sa large datasets dahil ang error propagation dahilan ng image distortion ay maaaring magsanhi ng bowl effect sa mga models. Ang image calibration instruction ay makikita sa <a class="reference external" href="tutorials.html#calibrating-the-camera">Calibrate Images</a>.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of lens distortion effect on bowling of data" src="../_images/msimbasi_bowling.png" />
-</div>
+</figure>
 <p>Bowling effect sa point cloud over 13,000+ na image dataset na nakolekta ng World Bank Tanzania sa flood prone Msimbasi Basin, Dar es Salaam, Tanzania.</p>
-</div>
-<div class="section" id="local-split-merge">
-<h2>Local Split-Merge<a class="headerlink" href="#local-split-merge" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="local-split-merge">
+<h2>Local Split-Merge<a class="headerlink" href="#local-split-merge" title="Permalink to this headline"></a></h2>
 <p>Ang pagsplit ng dataset sa mas maayos na submodels at sunod-sunod na pagproseso n lahat ng submodels sa iisang machine ay madali lamang! Gamitin lang ang <code class="docutils literal notranslate"><span class="pre">--split</span></code> at <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code> para mapagdesisyunan ang karaniwan na bilang ng mga imahe kada submodel at i-overlap (sa metro) sa pagitan ng submodels ayon sa pagkakabanggit.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split <span class="m">400</span> --split-overlap <span class="m">100</span>
 </pre></div>
@@ -463,15 +382,15 @@
 </pre></div>
 </div>
 <p>gagawa ng 3 submodels. Siguraduhin na daanan ang <code class="docutils literal notranslate"><span class="pre">--split-overlap</span> <span class="pre">0</span></code> kung mano-mano na magbibigay ng <code class="docutils literal notranslate"><span class="pre">image_groups.txt</span></code> file.</p>
-</div>
-<div class="section" id="distributed-split-merge">
-<h2>Distributed Split-Merge<a class="headerlink" href="#distributed-split-merge" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="distributed-split-merge">
+<h2>Distributed Split-Merge<a class="headerlink" href="#distributed-split-merge" title="Permalink to this headline"></a></h2>
 <p>Ang ODM ay awtomatikong namamahagi ng proseso kada submodel sa maramihan na machines sa pamamagitan ng <a class="reference external" href="https://github.com/OpenDroneMap/NodeODM">NodeODM</a> nodes, na inayos sa pamamagitan ng <a class="reference external" href="https://github.com/OpenDroneMap/ClusterODM">ClusterODM</a>.</p>
-<div class="figure align-center">
+<figure class="align-center">
 <img alt="image of lens distortion effect on bowling of data" src="../_images/clusterodm.png" />
-</div>
-<div class="section" id="getting-started-with-distributed-split-merge">
-<h3>Paano simulan ang Distributed Split-Merge<a class="headerlink" href="#getting-started-with-distributed-split-merge" title="Permalink to this headline">¶</a></h3>
+</figure>
+<section id="getting-started-with-distributed-split-merge">
+<h3>Paano simulan ang Distributed Split-Merge<a class="headerlink" href="#getting-started-with-distributed-split-merge" title="Permalink to this headline"></a></h3>
 <p>Ang unang hakbang ay ang simulan ang ClusterODM</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti -p <span class="m">3001</span>:3000 -p <span class="m">8080</span>:8080 opendronemap/clusterodm
 </pre></div>
@@ -498,9 +417,9 @@ Escape character is <span class="s1">&#39;^]&#39;</span>.
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split <span class="m">800</span> --split-overlap <span class="m">120</span> --sm-cluster http://&lt;cluster-odm-ip&gt;:3001
 </pre></div>
 </div>
-</div>
-<div class="section" id="understanding-the-cluster">
-<h3>Pagkaunawa sa Cluster<a class="headerlink" href="#understanding-the-cluster" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="understanding-the-cluster">
+<h3>Pagkaunawa sa Cluster<a class="headerlink" href="#understanding-the-cluster" title="Permalink to this headline"></a></h3>
 <p>Kapag konektado via telnet, posible na magtanong sa kung ano na ang kalagayan ng cluster. Halimbawa, pwedeng gamitin ang command na HELP para hanapin ang mga available na commands.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># HELP</span>
 NODE ADD &lt;hostname&gt; &lt;port&gt; <span class="o">[</span>token<span class="o">]</span> - Add new node
@@ -534,17 +453,17 @@ OK
 <span class="m">1</span><span class="o">)</span> localhost:3000 <span class="o">[</span>online<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.3&gt; <span class="o">[</span>L<span class="o">]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="accessing-the-logs">
-<h3>Pag-access sa Logs<a class="headerlink" href="#accessing-the-logs" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="accessing-the-logs">
+<h3>Pag-access sa Logs<a class="headerlink" href="#accessing-the-logs" title="Permalink to this headline"></a></h3>
 <p>Habang ang proseso ay umaandar, posible rin na ilista ang mga task at tignan ang mga task output.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># TASK LIST</span>
 <span class="c1"># TASK OUTPUT &lt;taskId&gt; [lines]</span>
 </pre></div>
 </div>
-</div>
-<div class="section" id="autoscaling-clusterodm">
-<h3>Autoscaling ClusterODM<a class="headerlink" href="#autoscaling-clusterodm" title="Permalink to this headline">¶</a></h3>
+</section>
+<section id="autoscaling-clusterodm">
+<h3>Autoscaling ClusterODM<a class="headerlink" href="#autoscaling-clusterodm" title="Permalink to this headline"></a></h3>
 <p>Ang ClusterODM ay mayroon din opsiyon na autoscalesa maramihan na plataporma kasama ng, hanggang ngayon, Amazon at Digital Ocean. Tinutulungan nito ang user na mababaan ang presyo na nauugnay sa always-on na mga pagkakataon pati na rin ang kakayanan na scale ang proseso base sa demand.</p>
 <p>Para i-set up ang autoscaling, dapat na:</p>
 <ul class="simple">
@@ -579,66 +498,49 @@ info: Found docker-machine executable
 </pre></div>
 </div>
 <p>Sa paraan na ito, ang lahat ng tasks ay awtomatikong napapadala sa autoscaler.</p>
-</div>
-</div>
-<div class="section" id="limitations">
-<h2>Mga limitasyon<a class="headerlink" href="#limitations" title="Permalink to this headline">¶</a></h2>
+</section>
+</section>
+<section id="limitations">
+<h2>Mga limitasyon<a class="headerlink" href="#limitations" title="Permalink to this headline"></a></h2>
 <p>Ang 3D textured meshes ay kasalukuyan na hindi name-merge bilang parte ng workflow (pino-point out lamang ang clouds, DEMS at orthophotos are).</p>
 <p>Ang GCPs ay suportado ng buo pero kailangan ng kahit man lang 3 GCP points kada submodel para sa georeferencing na magsimula.  Kung ang submodel ay may mas kaunti sa 3 GCPs, ang kombinasyon ng natitirang GCPs + EXIF data ang gagamitin (na medyo hindi kasing eksakto). Nirerekomenda na gamitin ang <code class="docutils literal notranslate"><span class="pre">image_groups.txt</span></code> file para eksaktong macontrol ang submodel split habang ginagamit ang GCPs.</p>
-</div>
-<div class="section" id="acknowledgments">
-<h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline">¶</a></h2>
+</section>
+<section id="acknowledgments">
+<h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline"></a></h2>
 <p>Malaking pagpugay kay Pau at sa mga tao ng Mapillary para sa kanilang kamangha-mangha na kontribusyon sa OpenDroneMap sa pamamagitan ng kanilang OpenSfM code, na isang pangunahing sangkap ng split-merge pipeline. Inaabangan namin ang kaunlaran at pagtulak sa mga limitasyon ng OpenDronMap at  makita kung gaano kalaki ang dataset na mapa-process.</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst">this page</a>!</p>
-</div>
-</div>
+</section>
+</section>
 
 
            </div>
-           
           </div>
-          <footer>
-    <div class="rst-footer-buttons" role="navigation" aria-label="footer navigation">
-        <a href="../resources/" class="btn btn-neutral float-right" title="Karagdagang Sanggunian" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../masks/" class="btn btn-neutral float-left" title="Gamit ang Image Masks" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../resources/" class="btn btn-neutral float-right" title="Karagdagang Sanggunian" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
 
   <div role="contentinfo">
-    <p>
-        &#169; Copyright 2020, OpenDroneMap.
-
-    </p>
+    <p>&#169; Copyright 2020, OpenDroneMap.</p>
   </div>
-    
-    
-    
-    Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
-    
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
     <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
-    
-    provided by <a href="https://readthedocs.org">Read the Docs</a>. 
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
 
 </footer>
         </div>
       </div>
-
     </section>
-
   </div>
-  
-
-  <script type="text/javascript">
+  <script>
       jQuery(function () {
           SphinxRtdTheme.Navigation.enable(true);
       });
-  </script>
-
-  
-  
-    
-   
+  </script> 
 
 </body>
 </html>
