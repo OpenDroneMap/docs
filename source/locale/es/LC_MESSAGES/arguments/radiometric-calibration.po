@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# israel Villarreal <israelbar@gmail.com>, 2021
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-12 15:01-0500\n"
 "PO-Revision-Date: 2021-11-12 20:56+0000\n"
+"Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +23,11 @@ msgstr ""
 
 #: ../../arguments/radiometric-calibration.rst:9
 msgid "radiometric-calibration"
-msgstr ""
+msgstr "radiometric-calibration"
 
 #: ../../arguments/radiometric-calibration.rst:11
 msgid "**Options:** *none |  camera |  camera+sun*"
-msgstr ""
+msgstr "**Opciones:** *none |  camera |  camera+sun*"
 
 #: ../../arguments/radiometric-calibration.rst:13
 msgid ""
@@ -37,6 +41,16 @@ msgid ""
 "via a downwelling light sensor (DLS) taking in consideration the angle of "
 "the sun. . Default: ``none``"
 msgstr ""
+"Configure la calibración radiométrica para ejecutar en las imágenes. Al "
+"procesar imágenes térmicas y multiespectrales, debe configurar esta opción "
+"para obtener valores de reflectancia/temperatura (de lo contrario, obtendrá "
+"valores numéricos digitales). [cámara] aplica nivel de negro, viñeteado, "
+"ganancia de gradiente de fila/compensación de exposición (si se encuentran "
+"etiquetas EXIF apropiadas) y calcula valores de temperatura absolutos. "
+"[cámara + sol] es experimental, aplica todas las correcciones de [cámara] y "
+"compensa la radiación espectral registrada a través de un sensor de luz "
+"descendente (DLS) teniendo en cuenta el ángulo del sol. . Predeterminado: "
+"``none``"
 
 #: ../../arguments/radiometric-calibration.rst:18
 msgid ""
@@ -45,3 +59,7 @@ msgid ""
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
 "/radiometric-calibration.rst>`_!"
 msgstr ""
+"`Aprende a editar <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ y ayuda a mejorar `esta página "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
+"/radiometric-calibration.rst>`_!"

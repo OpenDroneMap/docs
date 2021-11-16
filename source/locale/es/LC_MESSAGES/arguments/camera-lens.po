@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# israel Villarreal <israelbar@gmail.com>, 2021
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-12 15:01-0500\n"
 "PO-Revision-Date: 2021-11-12 20:52+0000\n"
+"Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +23,11 @@ msgstr ""
 
 #: ../../arguments/camera-lens.rst:9
 msgid "camera-lens"
-msgstr ""
+msgstr "camera-lens"
 
 #: ../../arguments/camera-lens.rst:11
 msgid "**Options:** *auto |  perspective |  brown |  fisheye |  spherical*"
-msgstr ""
+msgstr "**Opciones:** *auto |  perspective |  brown |  fisheye |  spherical*"
 
 #: ../../arguments/camera-lens.rst:13
 msgid ""
@@ -31,88 +35,94 @@ msgid ""
 "geometric undistortion. By default the application tries to determine a lens"
 " type from the images metadata. . Default: ``auto``"
 msgstr ""
+"Establezca un tipo de proyección de la cámara. Establecer manualmente un "
+"valor puede ayudar a mejorar la distorsión geométrica. De forma "
+"predeterminada, la aplicación intenta determinar un tipo de lente a partir "
+"de los metadatos de las imágenes. Predeterminado: ``auto``"
 
 #: ../../arguments/camera-lens.rst:15
 msgid "Parameter Type:"
-msgstr ""
+msgstr "Tipo de parámetro:"
 
 #: ../../arguments/camera-lens.rst:16
 msgid "**String**"
-msgstr ""
+msgstr "**Cadena**"
 
 #: ../../arguments/camera-lens.rst:17
 msgid "Parameter Domain:"
-msgstr ""
+msgstr "Dominio de parámetros:"
 
 #: ../../arguments/camera-lens.rst:18
 msgid "``auto`` : Automatic selection of best camera projection model."
 msgstr ""
+"``auto`` : Selección automática del mejor modelo de proyección de cámara."
 
 #: ../../arguments/camera-lens.rst:19
 msgid ""
 "``brown`` : Robust rectilinear projection model. Preferred by ``auto``."
 msgstr ""
+"``brown`` : Modelo robusto de proyección rectilínea. Preferred by ``auto``."
 
 #: ../../arguments/camera-lens.rst:20
 msgid "``fisheye`` : Wide-angle / non-rectilinear projection model."
-msgstr ""
+msgstr "``fisheye`` : Modelo de proyección gran angular / no rectilíneo."
 
 #: ../../arguments/camera-lens.rst:21
 msgid "``perspective`` : Legacy rectilinear projection model."
-msgstr ""
+msgstr "``perspective`` : Modelo de proyección rectilíneo heredado."
 
 #: ../../arguments/camera-lens.rst:22
 msgid "``spherical`` : 360° camera projection model."
-msgstr ""
+msgstr "``spherical`` : Modelo de proyección de cámara de 360 °."
 
 #: ../../arguments/camera-lens.rst:23
 msgid "Parameter Default:"
-msgstr ""
+msgstr "Parámetro predeterminado:"
 
 #: ../../arguments/camera-lens.rst:24
 msgid "``auto``"
-msgstr ""
+msgstr "``auto``"
 
 #: ../../arguments/camera-lens.rst:29
 msgid "Resource"
-msgstr ""
+msgstr "Recurso"
 
 #: ../../arguments/camera-lens.rst:29
 msgid "Impact"
-msgstr ""
+msgstr "Impacto"
 
 #: ../../arguments/camera-lens.rst:31
 msgid "CPU"
-msgstr ""
+msgstr "CPU"
 
 #: ../../arguments/camera-lens.rst:31 ../../arguments/camera-lens.rst:33
 #: ../../arguments/camera-lens.rst:34 ../../arguments/camera-lens.rst:35
 msgid "●○○ | Low"
-msgstr ""
+msgstr "●○○ | Bajo"
 
 #: ../../arguments/camera-lens.rst:32
 msgid "GPU"
-msgstr ""
+msgstr "GPU"
 
 #: ../../arguments/camera-lens.rst:32
 msgid "○○○ | None"
-msgstr ""
+msgstr "○○○ | Ninguno"
 
 #: ../../arguments/camera-lens.rst:33
 msgid "HDD"
-msgstr ""
+msgstr "HDD"
 
 #: ../../arguments/camera-lens.rst:34
 msgid "RAM"
-msgstr ""
+msgstr "RAM"
 
 #: ../../arguments/camera-lens.rst:35
 msgid "Time"
-msgstr ""
+msgstr "Tiempo"
 
 #: ../../arguments/camera-lens.rst:41
 msgid "What Are Camera Lens Models?"
-msgstr ""
+msgstr "¿que son los modelos de lentes de cámara?"
 
 #: ../../arguments/camera-lens.rst:42
 msgid ""
@@ -121,10 +131,15 @@ msgid ""
 " corrections are essential for proper camera/scene modeling, and therefore, "
 "proper reconstruction of the data."
 msgstr ""
+"Los modelos de lentes de cámara son modelos de proyección / distorsión que "
+"OpenSFM usa para corregir la óptica de las plataformas de cámara que "
+"registran nuestras imágenes. Estas correcciones son esenciales para el "
+"modelado adecuado de la cámara/escena y, por lo tanto, la reconstrucción "
+"adecuada de los datos."
 
 #: ../../arguments/camera-lens.rst:45
 msgid "When are manual selections appropriate?"
-msgstr ""
+msgstr "¿Cuándo son apropiadas las selecciones manuales?"
 
 #: ../../arguments/camera-lens.rst:46
 msgid ""
@@ -132,10 +147,14 @@ msgid ""
 "case of Spherical Cameras (GoPro Fusion, GoPro Max, Insta360, Kodak PixPro, "
 "etc.) as these are currently not detected automatically by OpenSFM."
 msgstr ""
+"Actualmente, la elección manual de un modelo de lente de cámara solo se "
+"recomienda en el caso de las cámaras esféricas (GoPro Fusion, GoPro Max, "
+"Insta360, Kodak PixPro, etc.), ya que OpenSFM no las detecta "
+"automáticamente."
 
 #: ../../arguments/camera-lens.rst:49
 msgid "Why would one use a particular Camera Lens Model?"
-msgstr ""
+msgstr "¿Por qué se utilizaría un modelo de lente de cámara en particular?"
 
 #: ../../arguments/camera-lens.rst:50
 msgid ""
@@ -144,10 +163,15 @@ msgid ""
 "in which case you should select the closest appropriate model. When in "
 "doubt, try specifying ``brown`` first."
 msgstr ""
+"En casos excepcionales, es posible que OpenSFM no pueda detectar (o "
+"recuperar de su base de datos de cámaras) el modelo de lente de cámara "
+"correcto para su sensor en particular, en cuyo caso debe seleccionar el "
+"modelo apropiado más cercano. En caso de duda, intente primero especificando"
+" ``brown``."
 
 #: ../../arguments/camera-lens.rst:53
 msgid "Example Images"
-msgstr ""
+msgstr "Imágenes de ejemplo"
 
 #: ../../arguments/camera-lens.rst:55
 msgid ""
@@ -155,56 +179,72 @@ msgid ""
 "Manual selection of the various Camera Lens Models is demonstrated to show "
 "some differences in how this will affect reconstruction."
 msgstr ""
+"Los siguientes ejemplos son todos los datos tomados con una lente rectilínea"
+" estándar. Se demuestra que la selección manual de los distintos modelos de "
+"lentes de cámara muestra algunas diferencias en cómo esto afectará la "
+"reconstrucción."
 
 #: ../../arguments/camera-lens.rst:58
 msgid "``auto`` : Rectilinear Data"
-msgstr ""
+msgstr "``auto`` : Datos rectilíneos"
 
 #: ../../arguments/camera-lens.rst:62
 msgid "Rectilinear data rendered by ``auto`` Camera Lens Model"
 msgstr ""
+"Datos rectilíneos representados por el modelo de lente de cámara ``auto``"
 
 #: ../../arguments/camera-lens.rst:62
 msgid ""
 "This Point Cloud shows a proper reconstruction via the ``auto`` (``brown``) "
 "Camera Lens Model, which is appropriate for this sensor."
 msgstr ""
+"Esta nube de puntos muestra una reconstrucción adecuada a través del modelo "
+"de lente de cámara ``auto`` (``brown``), que es apropiado para este sensor."
 
 #: ../../arguments/camera-lens.rst:65
 msgid "``brown`` : Rectilinear Data"
-msgstr ""
+msgstr "``brown`` : Datos rectilíneos"
 
 #: ../../arguments/camera-lens.rst:69
 msgid "Rectilinear data rendered by ``brown`` Camera Lens Model"
 msgstr ""
+"Datos rectilíneos representados por el modelo de lente de cámara ``brown``"
 
 #: ../../arguments/camera-lens.rst:69
 msgid ""
 "As in the prior example, this Point Cloud is reconstructed via the ``brown``"
 " Camera Lens Model."
 msgstr ""
+"Como en el ejemplo anterior, esta nube de puntos se reconstruye mediante el "
+"modelo de lente de cámara ``brown``."
 
 #: ../../arguments/camera-lens.rst:72
 msgid "``fisheye`` : Rectilinear Data"
-msgstr ""
+msgstr "``fisheye`` : Datos rectilíneos"
 
 #: ../../arguments/camera-lens.rst:76
 msgid "Rectilinear data rendered by ``fisheye`` Camera Lens Model"
 msgstr ""
+"Datos rectilíneos representados por el modelo de lente de cámara ``fisheye``"
 
 #: ../../arguments/camera-lens.rst:76
 msgid ""
 "In this Point Cloud reconstruction, severe bowling and other artifacts have "
 "been introduced via the use of the wrong Camera Lens Model."
 msgstr ""
+"En esta reconstrucción de la nube de puntos, se han introducido bolos "
+"severos y otros artefactos mediante el uso del modelo de lente de cámara "
+"incorrecto."
 
 #: ../../arguments/camera-lens.rst:79
 msgid "``perspective`` : Rectilinear Data"
-msgstr ""
+msgstr "``perspective`` : Datos rectilíneos"
 
 #: ../../arguments/camera-lens.rst:84
 msgid "Rectilinear data rendered by ``perspective`` Camera Lens Model"
 msgstr ""
+"Datos rectilíneos representados por el modelo de lente de cámara de "
+"``perspective``"
 
 #: ../../arguments/camera-lens.rst:84
 msgid ""
@@ -213,14 +253,21 @@ msgid ""
 "very large collections, or over very flat/homogenus terrain (agricultural "
 "fields). In such cases, forcing ``brown`` may help."
 msgstr ""
+"Esta nube de puntos se renderizó bien, muy similar a los ejemplos ``auto`` y"
+" ``brown``. Uno puede ver artefactos en el modelo de lente de cámara de "
+"``perspective`` en colecciones muy grandes, o sobre terreno muy "
+"plano/homogéneo (campos agrícolas). En tales casos, forzar el ``brown`` "
+"puede ayudar."
 
 #: ../../arguments/camera-lens.rst:87
 msgid "``spherical`` : Rectilinear Data"
-msgstr ""
+msgstr "``spherical`` : Datos rectilíneos"
 
 #: ../../arguments/camera-lens.rst:92
 msgid "Rectilinear data rendered by ``spherical`` Camera Lens Model"
 msgstr ""
+"Datos rectilíneos representados por el modelo de lente de cámara "
+"``esférico``"
 
 #: ../../arguments/camera-lens.rst:92
 msgid ""
@@ -230,6 +277,12 @@ msgid ""
 "selection of the Camera Lens Model, and you are advised to try another Model"
 " that is more appropriate."
 msgstr ""
+"Esta nube de puntos no se pudo reconstruir correctamente debido a la "
+"selección manual del modelo de lente de cámara ``ojo de pez``. Las fallas "
+"similares en la reconstrucción a menudo pueden indicar una selección manual "
+"incorrecta o, en casos extremos, una selección ``automática`` incorrecta del"
+" modelo de lente de la cámara, y se le recomienda que pruebe con otro modelo"
+" que sea más apropiado."
 
 #: ../../arguments/camera-lens.rst:95
 msgid ""
@@ -238,3 +291,7 @@ msgid ""
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
 "/camera-lens.rst>`_!"
 msgstr ""
+"`Aprende a editar <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ y ayuda a mejorar `esta página "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
+"/camera-lens.rst>`_!"

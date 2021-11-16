@@ -27,7 +27,7 @@ msgstr "Opciones e indicadores"
 
 #: ../../arguments.rst:5
 msgid ":ref:`auto-boundary<auto-boundary>`"
-msgstr ""
+msgstr ":ref:`auto-boundary<auto-boundary>`"
 
 #: ../../arguments.rst:5
 msgid ""
@@ -35,10 +35,14 @@ msgid ""
 "of the reconstruction. This can help remove far away background artifacts "
 "(sky, background landscapes, etc.). See also --boundary. Default: ``False``"
 msgstr ""
+"Establezca automáticamente un límite utilizando las ubicaciones de las tomas"
+" de la cámara para limitar el área de la reconstrucción. Esto puede ayudar a"
+" eliminar los artefactos lejanos en el fondo(cielo, paisajes de fondo, "
+"etc.). Véase también --boundary. Predeterminado: ``False``"
 
 #: ../../arguments.rst:8
 msgid ":ref:`boundary<boundary>` <json>"
-msgstr ""
+msgstr ":ref:`boundary<boundary>` <json>"
 
 #: ../../arguments.rst:8
 msgid ""
@@ -46,6 +50,9 @@ msgid ""
 "either as path to a GeoJSON file or as a JSON string representing the "
 "contents of a GeoJSON file. Default: ``"
 msgstr ""
+"Polígono GeoJSON que limita el área de reconstrucción. Se puede especificar "
+"como ruta a un archivo GeoJSON o como una cadena JSON que representa el "
+"contenido de un archivo GeoJSON. Predeterminado: ``"
 
 #: ../../arguments.rst:11
 msgid ":ref:`build-overviews<build-overviews>`"
@@ -248,10 +255,14 @@ msgid ""
 "  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  "
 "odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess"
 msgstr ""
+":ref:`end-with<end-with>` dataset |  split |  merge |  opensfm |  openmvs |"
+"  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  "
+"odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess"
 
 #: ../../arguments.rst:53
 msgid "End processing at this stage. . Default: ``odm_postprocess``"
 msgstr ""
+"Finalizar procesamiento en esta etapa. Predeterminado: ``odm_postprocess``"
 
 #: ../../arguments.rst:56
 msgid ":ref:`fast-orthophoto<fast-orthophoto>`"
@@ -288,7 +299,7 @@ msgstr ""
 
 #: ../../arguments.rst:62
 msgid ":ref:`feature-type<feature-type>` sift |  orb |  hahog"
-msgstr ""
+msgstr ":ref:`feature-type<feature-type>` sift |  orb |  hahog"
 
 #: ../../arguments.rst:62
 msgid ""
@@ -818,6 +829,9 @@ msgid ""
 "odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  "
 "odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess"
 msgstr ""
+":ref:`rerun<rerun>` dataset |  split |  merge |  opensfm |  openmvs |  "
+"odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  "
+"odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess"
 
 #: ../../arguments.rst:170
 msgid "Rerun this stage only and stop. . Default: ``"
@@ -843,6 +857,10 @@ msgid ""
 "odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report |  "
 "odm_postprocess"
 msgstr ""
+":ref:`rerun-from<rerun-from>` dataset |  split |  merge |  opensfm |  "
+"openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  "
+"odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report |  "
+"odm_postprocess"
 
 #: ../../arguments.rst:176
 msgid "Rerun processing from this stage. . Default: ``"
@@ -1193,3 +1211,8 @@ msgid ""
 "folder  "
 "<https://github.com/OpenDroneMap/docs/tree/publish/source/arguments_edit>`_!"
 msgstr ""
+"Si quiere agregar mas detalles a un comando, `aprende a editar  "
+"<https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_"
+" y ayuda a mejorar el archivo coincidente en  ``arguments_edit`` `carpeta "
+"del proyecto  "
+"<https://github.com/OpenDroneMap/docs/tree/publish/source/arguments_edit>`_!"

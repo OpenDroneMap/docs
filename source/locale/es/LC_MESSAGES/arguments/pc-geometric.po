@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# israel Villarreal <israelbar@gmail.com>, 2021
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-12 15:01-0500\n"
 "PO-Revision-Date: 2021-11-12 20:55+0000\n"
+"Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +23,7 @@ msgstr ""
 
 #: ../../arguments/pc-geometric.rst:9
 msgid "pc-geometric"
-msgstr ""
+msgstr "pc-geometric"
 
 #: ../../arguments/pc-geometric.rst:13
 msgid ""
@@ -27,6 +31,9 @@ msgid ""
 "consistent depthmaps. This increases processing time, but can improve "
 "results in urban scenes. Default: ``False``"
 msgstr ""
+"Mejore la precisión de la nube de puntos calculado mapas de profundidad "
+"geométricamente consistentes. Esto aumenta el tiempo de procesamiento, pero "
+"puede mejorar los resultados en escenas urbanas. Predeterminado: ``False``"
 
 #: ../../arguments/pc-geometric.rst:18
 msgid ""
@@ -35,3 +42,7 @@ msgid ""
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/pc-"
 "geometric.rst>`_!"
 msgstr ""
+"`Aprende a editar <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ y ayuda a mejorar `esta página "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/pc-"
+"geometric.rst>`_!"

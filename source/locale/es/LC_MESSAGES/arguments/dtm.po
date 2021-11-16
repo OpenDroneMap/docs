@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# israel Villarreal <israelbar@gmail.com>, 2021
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-12 15:01-0500\n"
 "PO-Revision-Date: 2021-11-12 20:53+0000\n"
+"Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +23,7 @@ msgstr ""
 
 #: ../../arguments/dtm.rst:9
 msgid "dtm"
-msgstr ""
+msgstr "dtm"
 
 #: ../../arguments/dtm.rst:13
 msgid ""
@@ -27,6 +31,9 @@ msgid ""
 "simple morphological filter. Check the --dem\\* and --smrf\\* parameters for"
 " finer tuning. Default: ``False``"
 msgstr ""
+"Utilice esta etiqueta para construir un DTM (Modelo Digital de Terreno, solo"
+" suelo) utilizando un filtro morfológico simple. Verifique los parámetros "
+"--dem\\* y smrf\\* para un ajuste mas fino. Predeterminado: ``False``"
 
 #: ../../arguments/dtm.rst:18
 msgid ""
@@ -34,3 +41,6 @@ msgid ""
 "contribution>`_ and help improve `this page "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/dtm.rst>`_!"
 msgstr ""
+"`Aprende a editar <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ y ayuda a mejorar `esta página "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/dtm.rst>`_!"
