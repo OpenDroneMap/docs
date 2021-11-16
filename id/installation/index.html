@@ -1,0 +1,776 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="id" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Cara memulai dan instalasi &mdash; Dokumentasi OpenDroneMap 2.6.7</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Indeks" href="../genindex/" />
+    <link rel="search" title="Pencarian" href="../search/" />
+    <link rel="next" title="Tutorial" href="../tutorials/" />
+    <link rel="prev" title="Selamat datang di dokumentasi OpenDroneMap" href="../" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../" class="icon icon-home"> OpenDroneMap
+          </a>
+              <div class="version">
+                2.6.7
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Cara memulai dan instalasi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#hardware-recommendations">Rekomendasi Perangkat Keras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Instalasi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-check-virtualization-support">Langkah 1. Periksa Dukungan Virtualisasi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-install-requirements">Langkah 2. Instal Persyaratan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-check-memory-and-cpu-allocation">Langkah 3. Periksa Alokasi Memori dan CPU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-download-webodm">Langkah 4. Unduh WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-launch-webodm">Langkah 4. Luncurkan WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Langkah 1. Periksa Dukungan Virtualisasi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Langkah 2. Instal Persyaratan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Langkah 3. Periksa Alokasi Memori dan CPU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-download-and-launch-webodm">Langkah 4. Unduh dan Jalankan WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-install-requirements">Langkah 1. Instal Persyaratan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-check-additional-requirements">Langkah 2. Periksa Persyaratan Tambahan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-download-and-launch-webodm">Langkah 3. Unduh dan Jalankan WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-commands-and-troubleshooting">Perintah Dasar dan Pemecahan Masalah</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hello-webodm">Halo, WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#running-on-more-than-one-machine">Berjalan di lebih dari satu mesin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-high-quality-orthophotos">Membuat Ortofoto Kualitas Tinggi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#calibrating-the-camera">Mengkalibrasi kamera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-digital-elevation-models">Membuat Model Elevasi Digital</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-docker">Menggunakan Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#listing-docker-machines">Daftar Mesin Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#accessing-logs-on-the-instance">Mengakses catatan server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#command-line-access-to-instances">perintah konsol akses ke server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#cleaning-up-after-docker">Membersihkan setelah Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-odm-from-low-bandwidth-location">Menggunakan ODM dari lokasi bandwidth rendah</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#what-is-this-and-who-is-it-for">Untuk apa ini dan untuk siapa?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#steps">Langkah-langkah</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#install">Instal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#prep-data-and-project">Siapkan data dan proyek</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#resize-droplet-pull-pin-run-away">Resize droplet, pull pin, run away</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#after-it-finishes-assuming-you-survive-that-long">Setelah itu selesai (dengan asumsi anda bertahan selama itu)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-potree-3d-viewer-module-on-webodm">Using Potree 3D viewer module on WebODM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#cameras">Cameras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#textured-model">Textured model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#appearance">Appearance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#point-budget">Point budget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#field-of-view">Field of view</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#eye-dome-lighting">Eye Dome-lighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#background">Background</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#other">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#tools">Tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#measurement">Measurement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#clipping">Clipping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#navigation">Navigation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#scene">Scene</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arguments/">Opsi dan Bendera</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary/">auto-boundary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">boundary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/build-overviews/">build-overviews</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#what-are-overviews">What Are Overviews?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#why-would-one-use-overviews">Why would one use Overviews?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/build-overviews/#true-build-overviews">True: <code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/build-overviews/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/camera-lens/">camera-lens</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#what-are-camera-lens-models">What Are Camera Lens Models?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#when-are-manual-selections-appropriate">When are manual selections appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#why-would-one-use-a-particular-camera-lens-model">Why would one use a particular Camera Lens Model?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#auto-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">auto</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#brown-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">brown</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#fisheye-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">fisheye</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#perspective-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">perspective</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#spherical-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">spherical</span></code> : Rectilinear Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/cameras/">cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#what-are-cloud-optimized-geotiffs-cogs">What Are Cloud Optimized GeoTIFFs (COGs)?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#when-are-cogs-appropriate">When are COGs appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#why-would-one-use-cogs">Why would one use COGs?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#true-cog">True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/copy-to/">copy-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/crop/">crop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/debug/">debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-decimation/">dem-decimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-euclidean-map/">dem-euclidean-map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-gapfill-steps/">dem-gapfill-steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-resolution/">dem-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/depthmap-resolution/">depthmap-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dsm/">dsm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dtm/">dtm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/end-with/">end-with</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/fast-orthophoto/">fast-orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/feature-quality/">feature-quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/feature-type/">feature-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/force-gps/">force-gps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/gcp/">gcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/geo/">geo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/gps-accuracy/">gps-accuracy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/help/">help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/ignore-gsd/">ignore-gsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/matcher-distance/">matcher-distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/matcher-neighbors/">matcher-neighbors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/matcher-type/">matcher-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/max-concurrency/">max-concurrency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/merge/">merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/mesh-octree-depth/">mesh-octree-depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/mesh-size/">mesh-size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/min-num-features/">min-num-features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/name/">name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/optimize-disk-space/">optimize-disk-space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-compression/">orthophoto-compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-cutline/">orthophoto-cutline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-kmz/">orthophoto-kmz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-no-tiled/">orthophoto-no-tiled</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-png/">orthophoto-png</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-resolution/">orthophoto-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-classify/">pc-classify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-csv/">pc-csv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-ept/">pc-ept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-filter/">pc-filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-geometric/">pc-geometric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-las/">pc-las</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-quality/">pc-quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-rectify/">pc-rectify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-sample/">pc-sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-tile/">pc-tile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/primary-band/">primary-band</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/project-path/">project-path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/radiometric-calibration/">radiometric-calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rerun/">rerun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rerun-all/">rerun-all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rerun-from/">rerun-from</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/resize-to/">resize-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-3dmodel/">skip-3dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-band-alignment/">skip-band-alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-report/">skip-report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/sm-cluster/">sm-cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-scalar/">smrf-scalar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-slope/">smrf-slope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-threshold/">smrf-threshold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-window/">smrf-window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/split/">split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/split-image-groups/">split-image-groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/split-overlap/">split-overlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-data-term/">texturing-data-term</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-keep-unseen-faces/">texturing-keep-unseen-faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-outlier-removal-type/">texturing-outlier-removal-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-global-seam-leveling/">texturing-skip-global-seam-leveling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-local-seam-leveling/">texturing-skip-local-seam-leveling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-tone-mapping/">texturing-tone-mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/tiles/">tiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/time/">time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-3dmesh/">use-3dmesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-exif/">use-exif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-fixed-camera-params/">use-fixed-camera-params</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-hybrid-bundle-adjustment/">use-hybrid-bundle-adjustment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/verbose/">verbose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/version/">version</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../outputs/">Keluaran OpenDroneMap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#point-cloud">Point Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#d-textured-model">Model Bertekstur 3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#orthophoto">Orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#list-of-all-outputs">Daftar keseluruhan keluaran</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gcp/">Titik Ikat Bumi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#recommended-practices-for-gcp-setting">Praktik yang direkomendasikan untuk setelan GCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#gcp-file-format">Format berkas GCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#user-interfaces">Antarmuka Pengguna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gcp/#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gcp/#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#references">Referensi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">Akurasi Peta</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#what-to-expect">What to expect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aspects-impacting-map-accuracy">Aspects impacting map accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#references">Referensi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../geo/">Berkas Citra Geolokasi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../masks/">Menggunakan Mask Gambar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large/">Memecah Data Besar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">Kalibrasi gambar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#local-split-merge">Membagi-Menggabungkan Lokal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#distributed-split-merge">Membagi-Menggabungkan Terdistribusi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../large/#getting-started-with-distributed-split-merge">Memulai dengan Didistribusikan Membagi-Menggabungkan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#understanding-the-cluster">Memahami Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#accessing-the-logs">Mengakses Log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#autoscaling-clusterodm">ClusterODM Penskalaan Otomatis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#limitations">Batasan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#acknowledgments">Ucapan Terima Kasih</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/">Preferensi tambahan</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-users">Untuk para Pengguna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-developers">Untuk para Pengembang</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../flying/">Kiat Menerbangkan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multispectral/">Multispectral Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#hardware">Perangkat keras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#usage">Penggunaan</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../requesting-features/">Bagaimana Meminta Fitur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/">Cara Kontribusi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#community-forum">Forum Komunitas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#reporting-bugs">Melaporkan Bug.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/#template-for-submitting-bug-reports">Template For Submitting Bug Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#pull-requests">Pull Requests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faq/#data-processing">Data Processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#can-i-process-two-or-more-orthophoto-geotiffs-to-stitch-them-together">Can I process two or more orthophoto GeoTIFFs to stitch them together?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/#licensing">Licensing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#i-want-to-build-a-commercial-application-that-includes-odm-do-i-need-a-commercial-license">I want to build a commercial application that includes ODM. Do I need a commercial license?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#are-there-other-licensing-options-aside-from-the-agplv3">Are there other licensing options aside from the AGPLv3?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">OpenDroneMap</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+      <li>Cara memulai dan instalasi</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation-and-getting-started">
+<h1>Cara memulai dan instalasi<a class="headerlink" href="#installation-and-getting-started" title="Link permanen untuk headline ini"></a></h1>
+<p>Bagian ini dikutip dan dimodifikasi dengan izin dari <a class="reference external" href="https://odmbook.com">OpenDroneMap: Panduan yang Hilang</a>, oleh Piero Toffanin.</p>
+<p>Sampai saat ini OpenDroneMap adalah istilah yang digunakan untuk merujuk ke aplikasi baris perintah tunggal (yang sekarang dikenal sebagai proyek ODM). Dengan perkembangan terkini dari antarmuka web, API, dan alat lainnya, OpenDroneMap telah menjadi ekosistem berbagai aplikasi untuk memproses, menganalisis, dan menampilkan data udara. Ekosistem ini terdiri dari beberapa komponen:</p>
+<figure class="align-center">
+<img alt="ODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/odm-logo-64x64.png" />
+</figure>
+<ul class="simple">
+<li><p><strong>ODM</strong> adalah mesin pemroses, yang dapat digunakan dari baris perintah. Ini mengambil gambar sebagai input dan menghasilkan berbagai output, termasuk point cloud, model 3D, dan orthophotos</p></li>
+</ul>
+<figure class="align-center">
+<img alt="NodeODM Logo" src="../_images/NodeODMLogo.png" />
+</figure>
+<ul class="simple">
+<li><p><strong>NodeODM</strong> adalah API ringan yang dibangun di atas ODM. Ini memungkinkan pengguna dan aplikasi untuk mengakses fungsi ODM melalui jaringan komputer</p></li>
+</ul>
+<figure class="align-center">
+<img alt="WebODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/webodm-icon-64x64.png" />
+</figure>
+<ul class="simple">
+<li><p><strong>WebODM</strong> adalah antarmuka pengguna yang ramah yang mencakup penampil peta, penampil 3D, login pengguna, sistem plugin, dan banyak fitur lain yang diharapkan dari platform pemetaan drone modern</p></li>
+</ul>
+<figure class="align-center">
+<img alt="CloudODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2019/01/cloudodm-64x64.png" />
+</figure>
+<ul class="simple">
+<li><p><strong>CloudODM</strong> adalah klien baris perintah kecil untuk berkomunikasi dengan ODM melalui NodeODM API</p></li>
+</ul>
+<figure class="align-center">
+<img alt="PyODM Logo" src="../_images/PyODMLogo.png" />
+</figure>
+<ul class="simple">
+<li><p><strong>PyODM</strong> adalah Python SDK untuk membuat tugas melalui NodeODM API. Kami membahasnya lebih detail di bab &quot;Pemrosesan Otomatis Dengan Python&quot;</p></li>
+</ul>
+<figure class="align-center">
+<img alt="ClusterODM Logo" src="../_images/ClusterODMLogo.png" />
+</figure>
+<ul class="simple">
+<li><p><strong>ClusterODM</strong> is a load balancer for connecting together multiple NodeODM instances</p></li>
+</ul>
+<p>ODM, NodeODM dan WebODM tersedia di semua platform utama (Windows, macOS, dan Linux) melalui program yang disebut docker, yang diperlukan untuk menjalankan perangkat lunak. Docker menawarkan cara untuk menjalankan &quot;kontainer&quot;. Kontainer adalah salinan paket dari seluruh sistem, perangkat lunaknya, dan dependensinya. Kontainer ini berjalan dalam lingkungan virtual. Di Linux, lingkungan virtual ini tersedia dari sistem operasi dan sangat efisien. Di macOS dan Windows, penampung berjalan dalam VM, jadi ada sedikit tambahan. tetapi masih sangat cocok untuk menjalankan perangkat lunak. Setelah terinstal, pengguna tidak perlu terlalu khawatir tentang docker, karena ia beroperasi (hampir) secara transparan.</p>
+<p>Tanpa docker tidak mungkin menjalankan ODM di Windows atau macOS. Pada platform ini, ODM tidak dapat berjalan secara aslinya. Upaya pengembangan di masa mendatang sedang difokuskan pada pemanfaatan Subsistem Windows baru untuk Linux (WSL) dan kemungkinan untuk membuat port asli dari semua dependensi ke macOS, yang akan membuat penginstalan jauh lebih mudah.</p>
+<p>On Ubuntu Linux 18.04 it’s feasible to run all OpenDroneMap software natively. However, because there’s very little performance penalty for running docker on Linux and docker is straightforward to setup on this platform, we don’t recommend it. On Linux the advantages of containerization far outweigh a tiny performance penalty. With docker users also get easy one-step updates of the software, so that’s nice.</p>
+<section id="hardware-recommendations">
+<h2>Rekomendasi Perangkat Keras<a class="headerlink" href="#hardware-recommendations" title="Link permanen untuk headline ini"></a></h2>
+<p>Persyaratan minimal untuk menjalankan perangkat lunak adalah:</p>
+<ul class="simple">
+<li><p>CPU 64bit diproduksi pada atau setelah 2010</p></li>
+<li><p>Media penyimpanan 20 GB</p></li>
+<li><p>RAM 4 GB</p></li>
+</ul>
+<p>Tidak lebih dari 100-200 gambar yang dapat diproses dengan spesifikasi di atas (software akan kehabisan memori). Persyaratan yang direkomendasikan adalah:</p>
+<ul class="simple">
+<li><p>CPU Generasi Terakhir</p></li>
+<li><p>Media penyimpanan 100 GB</p></li>
+<li><p>RAM 16 GB</p></li>
+</ul>
+<p>Di atas akan memungkinkan beberapa ratus gambar untuk diproses tanpa terlalu banyak masalah. CPU dengan lebih banyak core akan memungkinkan pemrosesan lebih cepat, sementara kartu grafis (GPU) saat ini tidak berdampak pada kinerja. Untuk memproses lebih banyak gambar, tambahkan lebih banyak ruang disk dan RAM secara linier ke jumlah gambar yang perlu anda proses.</p>
+</section>
+<section id="installation">
+<span id="docker-installation"></span><h2>Instalasi<a class="headerlink" href="#installation" title="Link permanen untuk headline ini"></a></h2>
+<p>Kami menyarankan orang-orang menggunakan <cite>docker &lt;https://www.docker.com&gt;</cite> _ untuk menjalankan ODM, baik anda menggunakan Windows, macOS atau Linux.</p>
+<section id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Link permanen untuk headline ini"></a></h3>
+<p>Untuk menjalankan OpenDroneMap Anda membutuhkan setidaknya Windows 7. Versi Windows sebelumnya tidak didukung.</p>
+<section id="step-1-check-virtualization-support">
+<h4>Langkah 1. Periksa Dukungan Virtualisasi<a class="headerlink" href="#step-1-check-virtualization-support" title="Link permanen untuk headline ini"></a></h4>
+<p>Docker memerlukan fitur dari CPU anda yang disebut virtualisasi, yang memungkinkannya menjalankan mesin virtual (VM). Pastikan anda telah mengaktifkannya! Terkadang ini dinonaktifkan. Untuk memeriksanya, pada Windows 8 atau lebih tinggi ada dapat membuka <strong>Task Manager</strong> (tekan CTRL + SHIFT + ESC) dan beralih ke tab <strong>Performance</strong>.</p>
+<figure class="align-center">
+<img alt="Image of checking virtualization in Windows 8 or higher" src="../_images/virtualizationcheck.png" />
+</figure>
+<p><em>Virtualisasi harus diaktifkan</em></p>
+<p>Di Windows 7 untuk mengetahui apakah anda telah mengaktifkan virtualisasi, anda dapat menggunakan <a class="reference external" href="http://www.microsoft.com/en-us/download/details.aspx?id=592">Alat Deteksi Virtualisasi Berbantuan Perangkat Keras Microsoft®</a> sebagai gantinya.</p>
+<p>If virtualization is disabled, you’ll need to enable it. The procedure unfortunately is a bit different for each computer model, so the best way to do this is to look up on a search engine “how to enable vtx for &lt;type your computer model here&gt;”. Often times it’s a matter of restarting the computer, immediately pressing F2 or F12 during startup, navigating the boot menu and changing the settings to enable virtualization (often called “VT-X”).</p>
+<figure class="align-center">
+<img alt="Table of different bios keys" src="../_images/bioskeys.png" />
+</figure>
+<p><em>Tombol umum yang harus ditekan saat komputer dihidupkan untuk mengakses menu boot untuk berbagai vendor PC</em></p>
+</section>
+<section id="step-2-install-requirements">
+<h4>Langkah 2. Instal Persyaratan<a class="headerlink" href="#step-2-install-requirements" title="Link permanen untuk headline ini"></a></h4>
+<p>Pertama kali, kamu harus menginstal:</p>
+<ul class="simple">
+<li><p>Git: <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p></li>
+<li><p>Python (versi terakhir 3): <a class="reference external" href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a></p></li>
+</ul>
+<p>Untuk Python 3, pastikan Anda mencentang <strong>Menambahkan Python 3.x ke PATH</strong> selama instalasi.</p>
+<figure class="align-center">
+<img alt="Screenshot of Python3 installation process" src="../_images/installpython3.png" />
+</figure>
+<p><em>Jangan lupa untuk menambahkan Python yang dapat dieksekusi ke PATH anda (sehingga anda dapat menjalankan perintah dengannya)</em></p>
+<p>Kemudian, hanya jika anda menggunakan Windows 10 Home, Windows 8 (versi apa pun) atau Windows 7 (versi apa pun), instal:</p>
+<ul class="simple">
+<li><p>Kotak Alat Docker: <a class="reference external" href="https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe">https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe</a></p></li>
+</ul>
+<p>Jika anda menggunakan Windows 10 Professional atau versi yang lebih baru, anda harus menginstalnya:</p>
+<ul class="simple">
+<li><p>Docker untuk Windows: <a class="reference external" href="https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe">https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe</a></p></li>
+</ul>
+<p>Harap <strong>JANGAN</strong> menginstal kedua program docker. Keduanya berbeda dan akan membuat kekacauan jika keduanya dipasang.</p>
+<p>After installing docker, launch it from the Desktop icon that is created from the installation (<strong>Docker Quickstart</strong> in the case of Docker Toolbox, <strong>Docker for Windows</strong> for Docker for Windows). This is important, do not skip this step. If there are errors, follow the prompts on screen to fix them.</p>
+</section>
+<section id="step-3-check-memory-and-cpu-allocation">
+<h4>Langkah 3. Periksa Alokasi Memori dan CPU<a class="headerlink" href="#step-3-check-memory-and-cpu-allocation" title="Link permanen untuk headline ini"></a></h4>
+<p>Docker di Windows bekerja dengan menjalankan VM di latar belakang (anggap VM sebagai &quot;emulator komputer&quot;). VM ini memiliki sejumlah memori yang dialokasikan dan WebODM hanya dapat menggunakan memori sebanyak yang dialokasikan.</p>
+<p>If you installed Docker Toolbox (see below if you installed Docker for Windows instead):</p>
+<ol class="arabic simple">
+<li><p>Buka aplikasi <strong>VirtualBox Manager</strong></p></li>
+<li><p>Right click the <strong>default</strong> VM and press <strong>Close (ACPI Shutdown)</strong> to stop the machine</p></li>
+<li><p>Right click the <strong>default</strong> VM and press <strong>Settings...</strong></p></li>
+<li><p>Pindahkan penggeser <strong>Memori Dasar</strong> dari panel <strong>Sistem</strong> dan alokasikan 60-70% dari semua memori yang tersedia, secara opsional menambahkan 50% prosesor yang tersedia dari tab <strong>Prosesor</strong> juga</p></li>
+</ol>
+<figure class="align-center">
+<img alt="Screenshot of VirtualBox Settings" src="../_images/virtualboxsettings.png" />
+</figure>
+<p><em>VirtualBox default VM settings</em></p>
+<p>Then press <strong>OK</strong>, right click the <strong>default</strong> VM and press <strong>Start</strong>.</p>
+<p>Jika anda menginstal Docker untuk Windows sebagai gantinya:</p>
+<ol class="arabic simple">
+<li><p>Lihat di baki sistem dan klik kanan ikon &quot;paus putih&quot;.</p></li>
+<li><p>Dari menu, tekan <strong>Pengaturan...</strong></p></li>
+<li><p>From the panel, click <strong>Advanced</strong> and use the sliders to allocate 60-70% of available memory and use half of all available CPUs.</p></li>
+<li><p>Tekan <strong>Terapkan</strong>.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="Screenshot of Docker Icon" src="../_images/dockericon.png" />
+</figure>
+<p><em>Langkah 1 Ikon Docker</em></p>
+<figure class="align-center">
+<img alt="Screenshot of Docker Settings" src="../_images/dockersettings.png" />
+</figure>
+<p><em>Langkah 3 &amp; 4 Pengaturan Docker</em></p>
+</section>
+<section id="step-4-download-webodm">
+<h4>Langkah 4. Unduh WebODM<a class="headerlink" href="#step-4-download-webodm" title="Link permanen untuk headline ini"></a></h4>
+<p>Buka program <strong>Git Gui</strong> yang sudah diinstal dengan Git. Dari sana:</p>
+<ul class="simple">
+<li><p>Saat Git Gui terbuka, klik opsi 'Gandakan Repositori yang Ada'</p></li>
+<li><p>Di <strong>Lokasi Sumber</strong> ketik: <a class="reference external" href="https://github.com/OpenDroneMap/WebODM">https://github.com/OpenDroneMap/WebODM</a></p></li>
+<li><p>In <strong>Target Directory</strong> click browse and navigate to a folder of your choosing (create one if necessary)</p></li>
+<li><p>Tekan <strong>Gandakan</strong></p></li>
+</ul>
+<figure class="align-center">
+<img alt="Screenshot of Git Gui" src="../_images/gitgui.png" />
+</figure>
+<p><em>Git Gui</em></p>
+<p>Jika unduhan berhasil, anda sekarang akan melihat jendela ini:</p>
+<figure class="align-center">
+<img alt="Screenshot of Git Gui after successful download" src="../_images/gitguisuccess.png" />
+</figure>
+<p><em>Git Gui setelah berhasil mengunduh (Gandakan)</em></p>
+<p>Go to the <strong>Repository</strong> menu, then click <strong>Create Desktop Icon</strong>. This will allow you to come back to this application easily in the future.</p>
+</section>
+<section id="step-4-launch-webodm">
+<h4>Langkah 4. Luncurkan WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Link permanen untuk headline ini"></a></h4>
+<p>From Git Gui, go to the <strong>Repository</strong> menu, then click <strong>Git Bash</strong>. From the command line terminal type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start<span class="p">&amp;</span>
+</pre></div>
+</div>
+<p>Beberapa komponen akan diunduh ke mesin anda pada saat ini, termasuk WebODM, NodeODM, dan ODM. Setelah mengunduh, anda akan disambut oleh layar berikut:</p>
+<figure class="align-center">
+<img alt="Screenshot of after successfully downloading WebODM" src="../_images/webodmsuccess.png" />
+</figure>
+<p><em>Keluaran konsol setelah memulai WebODM untuk pertama kalinya</em></p>
+<ul class="simple">
+<li><p>Jika anda menggunakan Docker untuk Windows, buka browser web ke <a class="reference external" href="http://localhost:8000">http://localhost:8000</a></p></li>
+<li><p>If you are using Docker Toolbox, find the IP address to connect to by typing:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker-machine ip
+</pre></div>
+</div>
+<p>Anda harus mendapatkan hasil seperti berikut:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">192</span>.168.1.100
+</pre></div>
+</div>
+<p>Kemudian sambungkan ke <a class="reference external" href="http://192.168.1.100:8000">http://192.168.1.100:8000</a> (mengganti alamat IP dengan yang benar).</p>
+</section>
+</section>
+<section id="macos">
+<h3>macOS<a class="headerlink" href="#macos" title="Link permanen untuk headline ini"></a></h3>
+<p>Most modern (post 2010) Mac computers running macOS Sierra 10.12 or higher can run OpenDroneMap using docker, as long as hardware virtualization is supported (see below).</p>
+<section id="id1">
+<h4>Langkah 1. Periksa Dukungan Virtualisasi<a class="headerlink" href="#id1" title="Link permanen untuk headline ini"></a></h4>
+<p>Open a Terminal window and type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sysctl kern.hv_support
+</pre></div>
+</div>
+<p>Anda akan mendapatkan tanggapan yang mirip dengan berikut ini:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kern.hv_support: <span class="m">1</span>
+</pre></div>
+</div>
+<p>Jika hasilnya <em>kern.hv_support: 1</em>, maka Mac Anda didukung! Lanjutkan dengan Langkah 2.</p>
+<p>Jika hasilnya <em>kern.hv_support: 0</em>, sayangnya itu berarti Mac Anda terlalu tua untuk menjalankan OpenDroneMap. :(</p>
+</section>
+<section id="id2">
+<h4>Langkah 2. Instal Persyaratan<a class="headerlink" href="#id2" title="Link permanen untuk headline ini"></a></h4>
+<p>Hanya ada dua program untuk diinstal:</p>
+<ol class="arabic simple">
+<li><p>Docker: <a class="reference external" href="https://download.docker.com/mac/stable/Docker.dmg">https://download.docker.com/mac/stable/Docker.dmg</a></p></li>
+<li><p>Git: <a class="reference external" href="https://sourceforge.net/projects/git-osx-installer/files/">https://sourceforge.net/projects/git-osx-installer/files/</a></p></li>
+</ol>
+<p>Setelah menginstal Docker anda akan menemukan ikon yang terlihat seperti ikan paus di bilah tugas.</p>
+<figure class="align-center">
+<img alt="Screenshot of Docker whale" src="../_images/macwhale.png" />
+</figure>
+<p><em>Aplikasi Docker berjalan</em></p>
+<p>You can verify that docker is running properly by opening the <strong>Terminal</strong> app and typing:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker run hello-world
+</pre></div>
+</div>
+<p>Yang harus dikembalikan</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Hello from Docker!
+</pre></div>
+</div>
+<p>Untuk memverifikasi bahwa git telah diinstal, cukup ketik:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git --version
+</pre></div>
+</div>
+<p>Yang seharusnya mengembalikan sesuatu yang mirip dengan berikut ini:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git version <span class="m">2</span>.20.1 <span class="o">(</span>Apple Git-117<span class="o">)</span>
+</pre></div>
+</div>
+<p>If you get a “bash: git: command not found”, try to restart your <strong>Terminal</strong> app and double-check for any errors during the install process.</p>
+</section>
+<section id="id3">
+<h4>Langkah 3. Periksa Alokasi Memori dan CPU<a class="headerlink" href="#id3" title="Link permanen untuk headline ini"></a></h4>
+<p>Docker on macOS works by running a VM in the background (think of it as a “computer emulator”). This VM has a certain amount of memory allocated and WebODM can only use as much memory as it’s allocated.</p>
+<ol class="arabic simple">
+<li><p>Right click the whale icon from the task bar and click <strong>Preferences</strong>...</p></li>
+<li><p>Select the <strong>Advanced</strong> tab</p></li>
+<li><p>Adjust the CPUs slider to use half of all available CPUs and the memory to use 60-70% of all available memory</p></li>
+<li><p>Tekan <strong>Terapkan &amp; Mulai Ulang</strong></p></li>
+</ol>
+<figure class="align-center">
+<img alt="Screenshot of Docker advanced settings" src="../_images/dockeradvanced.png" />
+</figure>
+<p><em>Pengaturan lanjutan Docker</em></p>
+</section>
+<section id="step-4-download-and-launch-webodm">
+<h4>Langkah 4. Unduh dan Jalankan WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Link permanen untuk headline ini"></a></h4>
+<p>From a <strong>Terminal</strong> type:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
+$ <span class="nb">cd</span> WebODM
+$ ./webodm.sh start
+</pre></div>
+</div>
+<p>Kemudian buka browser web ke <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
+</section>
+</section>
+<section id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="Link permanen untuk headline ini"></a></h3>
+<p>OpenDroneMap can run on any Linux distribution that supports docker. According to <a class="reference external" href="https://docs.docker.com/install/">docker’s documentation website</a> the officially supported distributions are CentOS, Debian, Ubuntu and Fedora, with static binaries available for others. If you have to pick a distribution solely for running OpenDroneMap, Ubuntu is the recommended way to go.</p>
+<section id="step-1-install-requirements">
+<h4>Langkah 1. Instal Persyaratan<a class="headerlink" href="#step-1-install-requirements" title="Link permanen untuk headline ini"></a></h4>
+<p>Ada empat program yang perlu diinstal:</p>
+<ol class="arabic simple">
+<li><p>Docker</p></li>
+<li><p>Git</p></li>
+<li><p>Python (2 atau 3)</p></li>
+<li><p>Pip</p></li>
+</ol>
+<p>Kami tidak mungkin mencakup proses instalasi untuk setiap distribusi Linux di luar sana, jadi kami akan membatasi instruksi hanya untuk distribusi yang secara resmi didukung oleh docker. Dalam semua kasus, ini hanya masalah membuka prompt terminal dan mengetik beberapa perintah.</p>
+<section id="install-on-ubuntu-debian">
+<h5>Instal di Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Link permanen untuk headline ini"></a></h5>
+<p>Perintah untuk mengetik:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt update
+$ curl -fsSL https://get.docker.com -o get-docker.sh
+$ sh get-docker.sh
+$ sudo apt install -y git python python-pip
+</pre></div>
+</div>
+</section>
+<section id="install-on-centos-rhel">
+<h5>Instal di CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Link permanen untuk headline ini"></a></h5>
+<p>Perintah untuk mengetik:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
+$ sh get-docker.sh
+$ sudo yum -y install git python python-pip
+</pre></div>
+</div>
+</section>
+<section id="install-on-fedora">
+<h5>Instal di Fedora<a class="headerlink" href="#install-on-fedora" title="Link permanen untuk headline ini"></a></h5>
+<p>Perintah untuk mengetik:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
+$ sh get-docker.sh
+$ sudo dnf install git python python-pip
+</pre></div>
+</div>
+</section>
+<section id="install-on-arch">
+<h5>Instal di Arch<a class="headerlink" href="#install-on-arch" title="Link permanen untuk headline ini"></a></h5>
+<p>Perintah untuk mengetik:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pacman -Sy docker git python python-pip
+</pre></div>
+</div>
+</section>
+</section>
+<section id="step-2-check-additional-requirements">
+<h4>Langkah 2. Periksa Persyaratan Tambahan<a class="headerlink" href="#step-2-check-additional-requirements" title="Link permanen untuk headline ini"></a></h4>
+<p>Selain ketiga program di atas, menulis skrip docker juga diperlukan. Terkadang sudah terpasang dengan docker, tapi terkadang tidak. Untuk memverifikasi apakah sudah terpasang coba ketik:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker-compose --version
+</pre></div>
+</div>
+<p>Anda akan melihat sesuatu yang mirip dengan berikut ini:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose version <span class="m">1</span>.22.0, build f46880f
+</pre></div>
+</div>
+<p>Jika sebaliknya anda mendapatkan sesuatu yang mirip dengan berikut ini:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose: <span class="nb">command</span> not found
+</pre></div>
+</div>
+<p>Anda dapat menginstalnya dengan menggunakan pip:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pip install docker-compose
+</pre></div>
+</div>
+</section>
+<section id="step-3-download-and-launch-webodm">
+<h4>Langkah 3. Unduh dan Jalankan WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Link permanen untuk headline ini"></a></h4>
+<p>Dari tipe terminal:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
+$ <span class="nb">cd</span> WebODM
+$ ./webodm.sh start
+</pre></div>
+</div>
+<p>Kemudian buka browser web ke <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
+</section>
+</section>
+</section>
+<section id="basic-commands-and-troubleshooting">
+<h2>Perintah Dasar dan Pemecahan Masalah<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Link permanen untuk headline ini"></a></h2>
+<p>Hal yang keren tentang penggunaan docker adalah 99% tugas yang anda perlukan saat menggunakan WebODM dapat dilakukan melalui skrip ./webodm.sh. Anda telah menjumpai salah satunya:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start
+</pre></div>
+</div>
+<p>which takes care of starting WebODM and setting up a default processing node (node-odm-1). If you want to stop WebODM, you can already guess what the command is:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh stop
+</pre></div>
+</div>
+<p>There are several other commands you can use, along with different flags. Flags are parameters passed to the ./webodm.sh command and are typically prefixed with “–”. The <strong>port</strong> flag for example instructs WebODM to use a different network port:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start --port <span class="m">80</span>
+</pre></div>
+</div>
+<p>Perintah berguna lainnya tercantum di bawah ini:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Restart WebODM (useful if things get stuck)</span>
+$ ./webodm.sh restart
+
+<span class="c1"># Reset the admin user&#39;s password if you forget it</span>
+$ ./webodm.sh resetadminpassword newpass
+
+<span class="c1"># Update everything to the latest version</span>
+$ ./webodm.sh update
+
+<span class="c1"># Store processing results in the specified folder instead of the default location (inside docker)</span>
+$ ./webodm.sh restart --media-dir /path/to/webodm_results
+
+<span class="c1"># See all options</span>
+$ ./webodm.sh --help
+</pre></div>
+</div>
+<p><a class="reference external" href="https://community.opendronemap.org">Forum komunitas</a>  adalah tempat yang tepat untuk meminta bantuan jika anda mengalami kebuntuan selama salah satu langkah penginstalan dan untuk pertanyaan umum tentang penggunaan skrip ./webodm.sh.</p>
+</section>
+<section id="hello-webodm">
+<h2>Halo, WebODM!<a class="headerlink" href="#hello-webodm" title="Link permanen untuk headline ini"></a></h2>
+<p>Setelah menjalankan ./webodm.sh mulai dan membuka WebODM di browser, anda akan disambut dengan pesan selamat datang dan akan diminta untuk membuat pengguna pertama. Luangkan waktu untuk membiasakan diri dengan antarmuka web dan menjelajahi berbagai menunya.</p>
+<figure class="align-center">
+<img alt="Screenshot of WebODM Dashboard" src="../_images/webodmdashboard.png" />
+</figure>
+<p><em>Dasbor WebODM</em></p>
+<p>Notice that under the <strong>Processing Nodes</strong> menu there’s a &quot;node-odm-1&quot; node already configured for you to use. This is a NodeODM node and has been created automatically by WebODM. This node is running on the same machine as WebODM.</p>
+<p>Selamat jika anda sudah sampai sejauh ini! Sekarang saatnya mulai memproses beberapa data.</p>
+<figure class="align-center">
+<img alt="Image of celebratory dance" src="../_images/congratulations.png" />
+</figure>
+<section id="running-on-more-than-one-machine">
+<h3>Berjalan di lebih dari satu mesin<a class="headerlink" href="#running-on-more-than-one-machine" title="Link permanen untuk headline ini"></a></h3>
+<p><strong>Opsional:</strong> Jika anda memiliki komputer lain, anda dapat mengulangi proses instalasi (menginstal docker, git, python, dll.) dan meluncurkan node NodeODM baru dengan mengetik dari jendela Terminal / Git Bash:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --rm -it -p <span class="m">3000</span>:3000 opendronemap/nodeodm -q <span class="m">1</span> --token secret
+</pre></div>
+</div>
+<p>The above command asks docker to launch a new container using the opendronemap/nodeodm image from Docker Hub (the latest version of NodeODM), using port 3000, setting a maximum number of concurrent tasks to 1 and to protect the node from unauthorized access using the password &quot;secret&quot;.</p>
+<p>From WebODM you can then press the <strong>Add New</strong> button under <strong>Processing Nodes</strong>. For the <strong>hostname/IP</strong> field type the IP of the second computer. For the <strong>port</strong> field type “3000”. For the <strong>token</strong> field type “secret”. You can also add an optional <strong>label</strong> for your node, such as “second computer”. Then press <strong>Save</strong>.</p>
+<p>Jika semuanya berjalan dengan baik, anda sekarang harus memiliki dua node pemrosesan! Anda akan dapat memproses banyak tugas secara paralel menggunakan dua mesin berbeda.</p>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Belajar mengedit</a> dan membantu meningkatkan <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst">halaman ini</a>!</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../" class="btn btn-neutral float-left" title="Selamat datang di dokumentasi OpenDroneMap" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../tutorials/" class="btn btn-neutral float-right" title="Tutorial" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Hak cipta 2020, OpenDroneMap.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

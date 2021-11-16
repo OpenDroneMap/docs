@@ -7,8 +7,8 @@
 Welcome to OpenDroneMap's documentation
 =======================================
 
-| 
-| 
+|
+|
 
 There is a `guide <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ on using GitHub to contribute. Anyone is welcome to share their knowledge and improve our documentation. You can also report problems using `GitHub issues <https://github.com/OpenDroneMap/docs/issues>`_.
 
@@ -18,11 +18,12 @@ The documentation is available in several languages. Some translations are incom
 - `Filipino <https://docs.opendronemap.org/fil>`_
 - `French <https://docs.opendronemap.org/fr>`_
 - `Spanish <https://docs.opendronemap.org/es>`_
+- `Indonesian <https://docs.opendronemap.org/id>`_
 - `Swahili <https://docs.opendronemap.org/sw>`_
 - `Telugu <https://docs.opendronemap.org/te>`_
 
-| 
-| 
+|
+|
 
 .. figure:: images/seedling.png
     :alt: image of seedling
@@ -40,7 +41,7 @@ The documentation is available in several languages. Some translations are incom
     :align: right
     :height: 60
     :width: 60
-		
+
 .. toctree::
     tutorials
     arguments

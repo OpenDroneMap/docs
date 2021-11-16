@@ -1,0 +1,474 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="id" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Titik Ikat Bumi &mdash; Dokumentasi OpenDroneMap 2.6.7</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Indeks" href="../genindex/" />
+    <link rel="search" title="Pencarian" href="../search/" />
+    <link rel="next" title="Akurasi Peta" href="../map-accuracy/" />
+    <link rel="prev" title="Keluaran OpenDroneMap" href="../outputs/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../" class="icon icon-home"> OpenDroneMap
+          </a>
+              <div class="version">
+                2.6.7
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/">Cara memulai dan instalasi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hardware-recommendations">Rekomendasi Perangkat Keras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#installation">Instalasi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-check-virtualization-support">Langkah 1. Periksa Dukungan Virtualisasi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-install-requirements">Langkah 2. Instal Persyaratan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-check-memory-and-cpu-allocation">Langkah 3. Periksa Alokasi Memori dan CPU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-webodm">Langkah 4. Unduh WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-launch-webodm">Langkah 4. Luncurkan WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id1">Langkah 1. Periksa Dukungan Virtualisasi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id2">Langkah 2. Instal Persyaratan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id3">Langkah 3. Periksa Alokasi Memori dan CPU</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-and-launch-webodm">Langkah 4. Unduh dan Jalankan WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-install-requirements">Langkah 1. Instal Persyaratan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-check-additional-requirements">Langkah 2. Periksa Persyaratan Tambahan</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-download-and-launch-webodm">Langkah 3. Unduh dan Jalankan WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#basic-commands-and-troubleshooting">Perintah Dasar dan Pemecahan Masalah</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hello-webodm">Halo, WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#running-on-more-than-one-machine">Berjalan di lebih dari satu mesin</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutorial</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-high-quality-orthophotos">Membuat Ortofoto Kualitas Tinggi</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#calibrating-the-camera">Mengkalibrasi kamera</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-digital-elevation-models">Membuat Model Elevasi Digital</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-docker">Menggunakan Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#listing-docker-machines">Daftar Mesin Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#accessing-logs-on-the-instance">Mengakses catatan server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#command-line-access-to-instances">perintah konsol akses ke server</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#cleaning-up-after-docker">Membersihkan setelah Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-odm-from-low-bandwidth-location">Menggunakan ODM dari lokasi bandwidth rendah</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#what-is-this-and-who-is-it-for">Untuk apa ini dan untuk siapa?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#steps">Langkah-langkah</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#install">Instal</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#prep-data-and-project">Siapkan data dan proyek</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#resize-droplet-pull-pin-run-away">Resize droplet, pull pin, run away</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#after-it-finishes-assuming-you-survive-that-long">Setelah itu selesai (dengan asumsi anda bertahan selama itu)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-potree-3d-viewer-module-on-webodm">Using Potree 3D viewer module on WebODM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#cameras">Cameras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#textured-model">Textured model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#appearance">Appearance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#point-budget">Point budget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#field-of-view">Field of view</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#eye-dome-lighting">Eye Dome-lighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#background">Background</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#other">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#tools">Tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#measurement">Measurement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#clipping">Clipping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#navigation">Navigation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#scene">Scene</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arguments/">Opsi dan Bendera</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary/">auto-boundary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">boundary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/build-overviews/">build-overviews</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#what-are-overviews">What Are Overviews?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#why-would-one-use-overviews">Why would one use Overviews?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/build-overviews/#true-build-overviews">True: <code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/build-overviews/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/camera-lens/">camera-lens</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#what-are-camera-lens-models">What Are Camera Lens Models?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#when-are-manual-selections-appropriate">When are manual selections appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#why-would-one-use-a-particular-camera-lens-model">Why would one use a particular Camera Lens Model?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#auto-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">auto</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#brown-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">brown</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#fisheye-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">fisheye</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#perspective-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">perspective</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#spherical-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">spherical</span></code> : Rectilinear Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/cameras/">cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#what-are-cloud-optimized-geotiffs-cogs">What Are Cloud Optimized GeoTIFFs (COGs)?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#when-are-cogs-appropriate">When are COGs appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#why-would-one-use-cogs">Why would one use COGs?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#true-cog">True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/copy-to/">copy-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/crop/">crop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/debug/">debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-decimation/">dem-decimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-euclidean-map/">dem-euclidean-map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-gapfill-steps/">dem-gapfill-steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-resolution/">dem-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/depthmap-resolution/">depthmap-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dsm/">dsm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dtm/">dtm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/end-with/">end-with</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/fast-orthophoto/">fast-orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/feature-quality/">feature-quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/feature-type/">feature-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/force-gps/">force-gps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/gcp/">gcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/geo/">geo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/gps-accuracy/">gps-accuracy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/help/">help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/ignore-gsd/">ignore-gsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/matcher-distance/">matcher-distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/matcher-neighbors/">matcher-neighbors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/matcher-type/">matcher-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/max-concurrency/">max-concurrency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/merge/">merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/mesh-octree-depth/">mesh-octree-depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/mesh-size/">mesh-size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/min-num-features/">min-num-features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/name/">name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/optimize-disk-space/">optimize-disk-space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-compression/">orthophoto-compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-cutline/">orthophoto-cutline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-kmz/">orthophoto-kmz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-no-tiled/">orthophoto-no-tiled</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-png/">orthophoto-png</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-resolution/">orthophoto-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-classify/">pc-classify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-csv/">pc-csv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-ept/">pc-ept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-filter/">pc-filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-geometric/">pc-geometric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-las/">pc-las</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-quality/">pc-quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-rectify/">pc-rectify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-sample/">pc-sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-tile/">pc-tile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/primary-band/">primary-band</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/project-path/">project-path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/radiometric-calibration/">radiometric-calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rerun/">rerun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rerun-all/">rerun-all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rerun-from/">rerun-from</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/resize-to/">resize-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-3dmodel/">skip-3dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-band-alignment/">skip-band-alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-report/">skip-report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/sm-cluster/">sm-cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-scalar/">smrf-scalar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-slope/">smrf-slope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-threshold/">smrf-threshold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-window/">smrf-window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/split/">split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/split-image-groups/">split-image-groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/split-overlap/">split-overlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-data-term/">texturing-data-term</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-keep-unseen-faces/">texturing-keep-unseen-faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-outlier-removal-type/">texturing-outlier-removal-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-global-seam-leveling/">texturing-skip-global-seam-leveling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-local-seam-leveling/">texturing-skip-local-seam-leveling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-tone-mapping/">texturing-tone-mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/tiles/">tiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/time/">time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-3dmesh/">use-3dmesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-exif/">use-exif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-fixed-camera-params/">use-fixed-camera-params</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-hybrid-bundle-adjustment/">use-hybrid-bundle-adjustment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/verbose/">verbose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/version/">version</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../outputs/">Keluaran OpenDroneMap</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#point-cloud">Point Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#d-textured-model">Model Bertekstur 3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#orthophoto">Orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#list-of-all-outputs">Daftar keseluruhan keluaran</a></li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Titik Ikat Bumi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#recommended-practices-for-gcp-setting">Praktik yang direkomendasikan untuk setelan GCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#gcp-file-format">Format berkas GCP</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#user-interfaces">Antarmuka Pengguna</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#references">Referensi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">Akurasi Peta</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#what-to-expect">What to expect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aspects-impacting-map-accuracy">Aspects impacting map accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#references">Referensi</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../geo/">Berkas Citra Geolokasi</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../masks/">Menggunakan Mask Gambar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large/">Memecah Data Besar</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">Kalibrasi gambar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#local-split-merge">Membagi-Menggabungkan Lokal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#distributed-split-merge">Membagi-Menggabungkan Terdistribusi</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../large/#getting-started-with-distributed-split-merge">Memulai dengan Didistribusikan Membagi-Menggabungkan</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#understanding-the-cluster">Memahami Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#accessing-the-logs">Mengakses Log</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#autoscaling-clusterodm">ClusterODM Penskalaan Otomatis</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#limitations">Batasan</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#acknowledgments">Ucapan Terima Kasih</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/">Preferensi tambahan</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-users">Untuk para Pengguna</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-developers">Untuk para Pengembang</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../flying/">Kiat Menerbangkan</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multispectral/">Multispectral Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#hardware">Perangkat keras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#usage">Penggunaan</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../requesting-features/">Bagaimana Meminta Fitur</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/">Cara Kontribusi</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#community-forum">Forum Komunitas</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#reporting-bugs">Melaporkan Bug.</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/#template-for-submitting-bug-reports">Template For Submitting Bug Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#pull-requests">Pull Requests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/">Frequently Asked Questions</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faq/#data-processing">Data Processing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#can-i-process-two-or-more-orthophoto-geotiffs-to-stitch-them-together">Can I process two or more orthophoto GeoTIFFs to stitch them together?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/#licensing">Licensing</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#i-want-to-build-a-commercial-application-that-includes-odm-do-i-need-a-commercial-license">I want to build a commercial application that includes ODM. Do I need a commercial license?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#are-there-other-licensing-options-aside-from-the-agplv3">Are there other licensing options aside from the AGPLv3?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">OpenDroneMap</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
+      <li>Titik Ikat Bumi</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/gcp.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="ground-control-points">
+<h1>Titik Ikat Bumi<a class="headerlink" href="#ground-control-points" title="Link permanen untuk headline ini"></a></h1>
+<p>Titik Ikat Bumi berguna untuk mengoreksi distorsi pada data dan mereferensikan data untuk mengetahui sistem koordinat.</p>
+<p>Titik Ikat Bumi (GCP) adalah pengukuran posisi yang dilakukan di tanah, biasanya menggunakan GPS presisi tinggi. (Toffanin 2019)</p>
+<p>Titik Ikat Bumi dapat diatur dengan struktur yang ada seperti sudut perkerasan, garis di tempat parkir atau ubin lantai warna kontras, jika tidak dapat diatur menggunakan target yang ditempatkan di tanah.</p>
+<p>Target dapat dibeli atau dibangun dengan berbagai macam bahan mulai dari tutup ember hingga ubin lantai.</p>
+<section id="recommended-practices-for-gcp-setting">
+<h2>Praktik yang direkomendasikan untuk setelan GCP<a class="headerlink" href="#recommended-practices-for-gcp-setting" title="Link permanen untuk headline ini"></a></h2>
+<p>Pastikan titik Ikat bumi terlihat untuk semua lokasi kamera. Pertimbangkan jarak pengambilan sampel tanah/ground yang diharapkan, iluminasi, vegetasi, bangunan dan semua hambatan yang ada.</p>
+<p>Dapatkan GCP yang merata horizontal dalam project, yang mencakup elevasi tinggi dan rendah. Minimal 5 GCP berfungsi untuk sebagian besar pekerjaan, dan untuk proyek yang lebih besar 8 - 10 sudah cukup. Temukan beberapa titik di dekat pojok dan titik lainnya di tengah, mengingat jarak GCP harus lebih besar dari footprint gambar, sehingga Anda tidak dapat melihat lebih dari satu GCP dalam satu gambar.</p>
+<p>Untuk memastikan setiap GCP ditemukan setidaknya di 5 gambar, pisahkan titik 10 hingga 30 meter dari perimeter project. Jarak ini bergantung pada tumpang tindih, sehingga peningkatan tumpang tindih akan mengurangi jarak yang diperlukan dari perimeter.</p>
+</section>
+<section id="gcp-file-format">
+<h2>Format berkas GCP<a class="headerlink" href="#gcp-file-format" title="Link permanen untuk headline ini"></a></h2>
+<p>Format berkas GCP itu sederhana.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>Baris pertama harus berisi nama proyeksi yang digunakan untuk koordinat geografis. Ini bisa ditentukan baik sebagai string PROJ (misalnya. <code class="docutils literal notranslate"><span class="pre">+proj=utm</span> <span class="pre">+zone=10</span> <span class="pre">+ellps=WGS84</span> <span class="pre">+datum=WGS84</span> <span class="pre">+units=m</span> <span class="pre">+no_defs</span></code>), kode EPSG (misalnya. <code class="docutils literal notranslate"><span class="pre">EPSG:4326</span></code>) atau seperti <code class="docutils literal notranslate"><span class="pre">WGS84</span> <span class="pre">UTM</span> <span class="pre">&lt;zone&gt;[N|S]</span></code> nilai (misalnya. <code class="docutils literal notranslate"><span class="pre">WGS84</span> <span class="pre">UTM</span> <span class="pre">16N</span></code>)</p></li>
+<li><p>Baris berikutnya adalah koordinat X, Y &amp; Z, piksel terkait, nama file gambar, dan fields tambahan opsional, dipisahkan oleh tab atau spasi:</p></li>
+<li><p>Nilai elevasi dapat diatur ke &quot;NaN&quot; untuk menunjukkan tidak ada nilai</p></li>
+<li><p>Kolom ke-7 (opsional) biasanya berisi label GCP.</p></li>
+</ul>
+</div></blockquote>
+<p>Format berkas GCP:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">projection</span><span class="o">&gt;</span>
+<span class="n">geo_x</span> <span class="n">geo_y</span> <span class="n">geo_z</span> <span class="n">im_x</span> <span class="n">im_y</span> <span class="n">image_name</span> <span class="p">[</span><span class="n">gcp_name</span><span class="p">]</span> <span class="p">[</span><span class="n">extra1</span><span class="p">]</span> <span class="p">[</span><span class="n">extra2</span><span class="p">]</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Contoh:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="n">proj</span><span class="o">=</span><span class="n">utm</span> <span class="o">+</span><span class="n">zone</span><span class="o">=</span><span class="mi">10</span> <span class="o">+</span><span class="n">ellps</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">datum</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">units</span><span class="o">=</span><span class="n">m</span> <span class="o">+</span><span class="n">no_defs</span>
+<span class="mf">544256.7</span> <span class="mf">5320919.9</span> <span class="mi">5</span> <span class="mi">3044</span> <span class="mi">2622</span> <span class="n">IMG_0525</span><span class="o">.</span><span class="n">jpg</span>
+<span class="mf">544157.7</span> <span class="mf">5320899.2</span> <span class="mi">5</span> <span class="mi">4193</span> <span class="mi">1552</span> <span class="n">IMG_0585</span><span class="o">.</span><span class="n">jpg</span>
+<span class="mf">544033.4</span> <span class="mf">5320876.0</span> <span class="mi">5</span> <span class="mi">1606</span> <span class="mi">2763</span> <span class="n">IMG_0690</span><span class="o">.</span><span class="n">jpg</span>
+</pre></div>
+</div>
+<p>Jika Anda memasukkan file GCP `` gcp_list.txt`` maka ODM akan secara otomatis mendeteksinya. Jika memiliki nama lain, Anda dapat menentukan menggunakan `` --gcp &lt;path&gt;`` Jika Anda memiliki file gcp dan ingin melakukan georeferensi dengan exif, Anda dapat menentukan `` --use-exif``. Jika Anda memiliki pengukuran GPS presisi tinggi di gambar Anda (RTK) dan ingin menggunakan informasi itu bersama dengan file gcp, Anda dapat menentukan `` --force-gps ''.</p>
+<p><cite>Postingan ini memiliki beberapa informasi tentang menempatkan target Ground Control sebelum penerbangan &lt;http://diydrones.com/profiles/blogs/ground-control-points-gcps-for-aerial-photography&gt;</cite> _, tetapi jika Anda sudah memiliki gambar , Anda dapat menemukan poin Anda sendiri di gambar post facto. Anda harus menemukan objek kontras tinggi yang ditemukan di ** setidaknya ** 3 foto, dan Anda menemukan minimal 5 objek.</p>
+<p>Sudut tajam adalah pilihan yang bagus untuk GCP. Anda juga harus menempatkan / menemukan GCP secara merata di sekitar area survei Anda</p>
+<p>File `` gcp_list.txt`` harus dibuat di dasar folder proyek Anda.</p>
+<p>Untuk hasil yang bagus, file Anda harus memiliki minimal 15 baris setelah header (5 poin dengan 3 gambar untuk setiap poin).</p>
+</section>
+<section id="user-interfaces">
+<h2>Antarmuka Pengguna<a class="headerlink" href="#user-interfaces" title="Link permanen untuk headline ini"></a></h2>
+<p>Anda dapat menggunakan salah satu dari dua antarmuka pengguna untuk membuat file GCP:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/posm/posm-gcpi">POSM GCPi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/uav4geo/GCPEditorPro">GCP Editor Pro</a></p></li>
+</ul>
+</div></blockquote>
+<section id="id1">
+<h3>POSM GCPi<a class="headerlink" href="#id1" title="Link permanen untuk headline ini"></a></h3>
+<p>POSM GCPi dimuat secara default di WebODM. Contoh tersedia di <cite>Demo WebODM &lt;http://demo.webodm.org/plugins/posm-gcpi/&gt;</cite> _. Untuk menggunakan ini dengan nilai XYZ ground control yang diketahui, seseorang akan melakukan hal berikut:</p>
+<p>Buat daftar GCP yang hanya menyertakan nama gcp (ini adalah label yang akan terlihat di antarmuka GCP), x, y, dan z, dengan header proj4 dengan string GCP Anda (pastikan mereka dalam koordinat planar sistem, seperti UTM. Seharusnya terlihat seperti ini:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="n">proj</span><span class="o">=</span><span class="n">utm</span> <span class="o">+</span><span class="n">zone</span><span class="o">=</span><span class="mi">37</span> <span class="o">+</span><span class="n">south</span> <span class="o">+</span><span class="n">ellps</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">datum</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">units</span><span class="o">=</span><span class="n">m</span> <span class="o">+</span><span class="n">no_defs</span>
+<span class="n">gcp01</span> <span class="mf">529356.250827686</span> <span class="mf">9251137.5643209</span> <span class="mf">8.465</span>
+<span class="n">gcp02</span> <span class="mf">530203.125367657</span> <span class="mf">9250140.80991621</span> <span class="mf">15.781</span>
+<span class="n">gcp03</span> <span class="mf">530292.136003818</span> <span class="mf">9250745.02372435</span> <span class="mf">11.977</span>
+<span class="n">gcp04</span> <span class="mf">530203.125367657</span> <span class="mf">9250140.80991621</span> <span class="mf">15.781</span>
+<span class="n">gcp05</span> <span class="mf">530292.136003818</span> <span class="mf">9250745.02372435</span> <span class="mf">11.977</span>
+</pre></div>
+</div>
+<p>Kemudian seseorang dapat memuat daftar GCP ini ke antarmuka, memuat gambar, dan menempatkan setiap GCP dalam gambar.</p>
+</section>
+<section id="id2">
+<h3>GCP Editor Pro<a class="headerlink" href="#id2" title="Link permanen untuk headline ini"></a></h3>
+<p>Aplikasi ini perlu dipasang secara terpisah atau dapat dimuat sebagai plugin WebODM dari <a class="reference external" href="https://github.com/uav4geo/GCPEditorPro">https://github.com/uav4geo/GCPEditorPro</a></p>
+<p>Buat berkas CSV yang menyertakan nama gcp, arah utara, arah timur, dan elevasi.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GCP</span> <span class="n">Label</span><span class="p">,</span><span class="n">Northing</span><span class="p">,</span><span class="n">Easting</span><span class="p">,</span><span class="n">Elevation</span>
+<span class="n">gcp01</span><span class="p">,</span><span class="mf">529356.250827686</span><span class="p">,</span><span class="mf">9251137.5643209</span><span class="p">,</span><span class="mf">8.465</span>
+<span class="n">gcp02</span><span class="p">,</span><span class="mf">530203.125367657</span><span class="p">,</span><span class="mf">9250140.80991621</span><span class="p">,</span><span class="mf">15.781</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Kemudian impor CSV dari layar utama dan ketik <code class="docutils literal notranslate"><span class="pre">+proj=utm</span> <span class="pre">+zone=37</span> <span class="pre">+south</span> <span class="pre">+ellps=WGS84</span> <span class="pre">+datum=WGS84</span> <span class="pre">+units=m</span> <span class="pre">+no_defs</span></code> di kotak <code class="docutils literal notranslate"><span class="pre">EPSG/PROJ</span></code>.</p>
+<p>Layar berikut akan menampilkan peta tempat memilih GCP untuk diberi tag dan mengimpor gambar masing-masing.</p>
+</section>
+</section>
+<section id="references">
+<h2>Referensi<a class="headerlink" href="#references" title="Link permanen untuk headline ini"></a></h2>
+<p>Toffanin, Piero. <a class="reference external" href="https://odmbook.com/">Buka Peta Drone: Panduan yang Hilang.</a> MasseranoLabs LLC, 2019.</p>
+<p><cite>Belajar untuk mengedit &lt;https://github.com/opendronemap/docs#how-to-make-your-first-contribution&gt;</cite> _ dan membantu meningkatkan <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/gcp.rst">halaman ini</a>!</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../outputs/" class="btn btn-neutral float-left" title="Keluaran OpenDroneMap" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../map-accuracy/" class="btn btn-neutral float-right" title="Akurasi Peta" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Hak cipta 2020, OpenDroneMap.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
