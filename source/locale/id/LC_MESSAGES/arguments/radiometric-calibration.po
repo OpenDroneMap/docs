@@ -1,0 +1,47 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.6.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-12 15:01-0500\n"
+"PO-Revision-Date: 2021-11-12 20:56+0000\n"
+"Language-Team: Indonesian (https://www.transifex.com/americanredcross/teams/111882/id/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../arguments/radiometric-calibration.rst:9
+msgid "radiometric-calibration"
+msgstr ""
+
+#: ../../arguments/radiometric-calibration.rst:11
+msgid "**Options:** *none |  camera |  camera+sun*"
+msgstr ""
+
+#: ../../arguments/radiometric-calibration.rst:13
+msgid ""
+"Set the radiometric calibration to perform on images. When processing "
+"multispectral and thermal images you should set this option to obtain "
+"reflectance/temperature values (otherwise you will get digital number "
+"values). [camera] applies black level, vignetting, row gradient "
+"gain/exposure compensation (if appropriate EXIF tags are found) and computes"
+" absolute temperature values. [camera+sun] is experimental, applies all the "
+"corrections of [camera], plus compensates for spectral radiance registered "
+"via a downwelling light sensor (DLS) taking in consideration the angle of "
+"the sun. . Default: ``none``"
+msgstr ""
+
+#: ../../arguments/radiometric-calibration.rst:18
+msgid ""
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
+"contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
+"/radiometric-calibration.rst>`_!"
+msgstr ""

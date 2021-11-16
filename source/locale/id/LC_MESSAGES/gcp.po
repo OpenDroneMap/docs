@@ -1,0 +1,320 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Ridho Dwi Dharmawan <ridhodwidh@gmail.com>, 2020
+# Husni Mubarok <husn.mubarok@gmail.com>, 2020
+# Ahmad Nurrohim <ahmadnurrohim45@gmail.com>, 2020
+# danbjoseph <danbjoseph@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.6.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-12 15:01-0500\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2021\n"
+"Language-Team: Indonesian (https://www.transifex.com/americanredcross/teams/111882/id/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../gcp.rst:3
+msgid "Ground Control Points"
+msgstr "Titik Ikat Bumi"
+
+#: ../../gcp.rst:5
+msgid ""
+"Ground control points are useful for correcting distortions in the data and "
+"referencing the data to know coordinate systems."
+msgstr ""
+"Titik Ikat Bumi berguna untuk mengoreksi distorsi pada data dan "
+"mereferensikan data untuk mengetahui sistem koordinat."
+
+#: ../../gcp.rst:7
+msgid ""
+"A Ground Control Point (GCP) is a position measurement made on the ground, "
+"typically using a high precision GPS. (Toffanin 2019)"
+msgstr ""
+"Titik Ikat Bumi (GCP) adalah pengukuran posisi yang dilakukan di tanah, "
+"biasanya menggunakan GPS presisi tinggi. (Toffanin 2019)"
+
+#: ../../gcp.rst:9
+msgid ""
+"Ground control points can be set existing structures like pavement corners, "
+"lines on a parking lot or contrasting color floor tiles, otherwise can be "
+"set using targets placed on the ground."
+msgstr ""
+"Titik Ikat Bumi dapat diatur dengan struktur yang ada seperti sudut "
+"perkerasan, garis di tempat parkir atau ubin lantai warna kontras, jika "
+"tidak dapat diatur menggunakan target yang ditempatkan di tanah."
+
+#: ../../gcp.rst:11
+msgid ""
+"Targets can be purchased or build with an ample variety of materials ranging"
+" from bucket lids to floor tiles."
+msgstr ""
+"Target dapat dibeli atau dibangun dengan berbagai macam bahan mulai dari "
+"tutup ember hingga ubin lantai."
+
+#: ../../gcp.rst:15
+msgid "Recommended practices for GCP setting"
+msgstr "Praktik yang direkomendasikan untuk setelan GCP"
+
+#: ../../gcp.rst:17
+msgid ""
+"Keep ground control points visible for all camera locations. Consider the "
+"expected ground sampling distance, illumination, vegetation, buildings and "
+"all the existing obstacles."
+msgstr ""
+"Pastikan titik Ikat bumi terlihat untuk semua lokasi kamera. Pertimbangkan "
+"jarak pengambilan sampel tanah/ground yang diharapkan, iluminasi, vegetasi, "
+"bangunan dan semua hambatan yang ada."
+
+#: ../../gcp.rst:19
+msgid ""
+"Procure an evenly horizontal distribution of the GCPs within the project, "
+"covering high and low elevations. A minimum of 5 GCP works for most of the "
+"jobs, and for larger projects 8 – 10 are sufficient. Locate some points near"
+" the corners and others in the center, considering that GCP spacing should "
+"be larger than the image footprint so that you can’t see more than one GCP "
+"in a single image."
+msgstr ""
+"Dapatkan GCP yang merata horizontal dalam project, yang mencakup elevasi "
+"tinggi dan rendah. Minimal 5 GCP berfungsi untuk sebagian besar pekerjaan, "
+"dan untuk proyek yang lebih besar 8 - 10 sudah cukup. Temukan beberapa titik"
+" di dekat pojok dan titik lainnya di tengah, mengingat jarak GCP harus lebih"
+" besar dari footprint gambar, sehingga Anda tidak dapat melihat lebih dari "
+"satu GCP dalam satu gambar."
+
+#: ../../gcp.rst:21
+msgid ""
+"In order to ensure each GCP are found in at least 5 images, separate the "
+"points 10 to 30 meters from the perimeter of the project. This distance is "
+"dependent of the overlapping, so increasing overlapping should reduce the "
+"required distance from the perimeter."
+msgstr ""
+"Untuk memastikan setiap GCP ditemukan setidaknya di 5 gambar, pisahkan titik"
+" 10 hingga 30 meter dari perimeter project. Jarak ini bergantung pada "
+"tumpang tindih, sehingga peningkatan tumpang tindih akan mengurangi jarak "
+"yang diperlukan dari perimeter."
+
+#: ../../gcp.rst:25
+msgid "GCP file format"
+msgstr "Format berkas GCP"
+
+#: ../../gcp.rst:27
+msgid "The format of the GCP file is simple."
+msgstr "Format berkas GCP itu sederhana."
+
+#: ../../gcp.rst:29
+msgid ""
+"The first line should contain the name of the projection used for the geo "
+"coordinates. This can be specified either as a PROJ string (e.g. ``+proj=utm"
+" +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), EPSG code (e.g. "
+"``EPSG:4326``) or as a ``WGS84 UTM <zone>[N|S]`` value (eg. ``WGS84 UTM "
+"16N``)"
+msgstr ""
+"Baris pertama harus berisi nama proyeksi yang digunakan untuk koordinat "
+"geografis. Ini bisa ditentukan baik sebagai string PROJ (misalnya. "
+"``+proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), kode "
+"EPSG (misalnya. ``EPSG:4326``) atau seperti ``WGS84 UTM <zone>[N|S]`` nilai "
+"(misalnya. ``WGS84 UTM 16N``)"
+
+#: ../../gcp.rst:30
+msgid ""
+"Subsequent lines are the X, Y & Z coordinates, your associated pixels, the "
+"image filename and optional extra fields, separated by tabs or spaces:"
+msgstr ""
+"Baris berikutnya adalah koordinat X, Y & Z, piksel terkait, nama file "
+"gambar, dan fields tambahan opsional, dipisahkan oleh tab atau spasi:"
+
+#: ../../gcp.rst:31
+msgid "Elevation values can be set to \"NaN\" to indicate no value"
+msgstr "Nilai elevasi dapat diatur ke \"NaN\" untuk menunjukkan tidak ada nilai"
+
+#: ../../gcp.rst:32
+msgid "The 7th column (optional) typically contains the label of the GCP."
+msgstr "Kolom ke-7 (opsional) biasanya berisi label GCP."
+
+#: ../../gcp.rst:34
+msgid "GCP file format::"
+msgstr "Format berkas GCP::"
+
+#: ../../gcp.rst:40
+msgid "Example::"
+msgstr "Contoh::"
+
+#: ../../gcp.rst:47
+msgid ""
+"If you supply a GCP file called ``gcp_list.txt`` then ODM will automatically"
+" detect it. If it has another name you can specify using ``--gcp <path>``. "
+"If you have a gcp file and want to do georeferencing with exif instead, then"
+" you can specify ``--use-exif``. If you have high precision GPS measurements"
+" in your images (RTK) and want to use that information along with a gcp "
+"file, you can specify ``--force-gps``."
+msgstr ""
+"Jika Anda memasukkan file GCP `` gcp_list.txt`` maka ODM akan secara "
+"otomatis mendeteksinya. Jika memiliki nama lain, Anda dapat menentukan "
+"menggunakan `` --gcp <path>`` Jika Anda memiliki file gcp dan ingin "
+"melakukan georeferensi dengan exif, Anda dapat menentukan `` --use-exif``. "
+"Jika Anda memiliki pengukuran GPS presisi tinggi di gambar Anda (RTK) dan "
+"ingin menggunakan informasi itu bersama dengan file gcp, Anda dapat "
+"menentukan `` --force-gps ''."
+
+#: ../../gcp.rst:49
+msgid ""
+"`This post has some information about placing Ground Control Targets before "
+"a flight <http://diydrones.com/profiles/blogs/ground-control-points-gcps-"
+"for-aerial-photography>`_, but if you already have images, you can find your"
+" own points in the images post facto. It's important that you find high-"
+"contrast objects that are found in **at least** 3 photos, and that you find "
+"a minimum of 5 objects."
+msgstr ""
+"`Postingan ini memiliki beberapa informasi tentang menempatkan target Ground"
+" Control sebelum penerbangan <http://diydrones.com/profiles/blogs/ground-"
+"control-points-gcps-for-aerial-photography>` _, tetapi jika Anda sudah "
+"memiliki gambar , Anda dapat menemukan poin Anda sendiri di gambar post "
+"facto. Anda harus menemukan objek kontras tinggi yang ditemukan di ** "
+"setidaknya ** 3 foto, dan Anda menemukan minimal 5 objek."
+
+#: ../../gcp.rst:51
+msgid ""
+"Sharp corners are good picks for GCPs. You should also place/find the GCPs "
+"evenly around your survey area."
+msgstr ""
+"Sudut tajam adalah pilihan yang bagus untuk GCP. Anda juga harus menempatkan"
+" / menemukan GCP secara merata di sekitar area survei Anda"
+
+#: ../../gcp.rst:53
+msgid ""
+"The ``gcp_list.txt`` file must be created in the base of your project "
+"folder."
+msgstr "File `` gcp_list.txt`` harus dibuat di dasar folder proyek Anda."
+
+#: ../../gcp.rst:55
+msgid ""
+"For good results your file should have a minimum of 15 lines after the "
+"header (5 points with 3 images to each point)."
+msgstr ""
+"Untuk hasil yang bagus, file Anda harus memiliki minimal 15 baris setelah "
+"header (5 poin dengan 3 gambar untuk setiap poin)."
+
+#: ../../gcp.rst:59
+msgid "User Interfaces"
+msgstr "Antarmuka Pengguna"
+
+#: ../../gcp.rst:61
+msgid "You can use one of two user interfaces for creating GCP files:"
+msgstr ""
+"Anda dapat menggunakan salah satu dari dua antarmuka pengguna untuk membuat "
+"file GCP:"
+
+#: ../../gcp.rst:63
+msgid "`POSM GCPi <https://github.com/posm/posm-gcpi>`_"
+msgstr "`POSM GCPi <https://github.com/posm/posm-gcpi>`_"
+
+#: ../../gcp.rst:64
+msgid "`GCP Editor Pro <https://github.com/uav4geo/GCPEditorPro>`_"
+msgstr "`GCP Editor Pro <https://github.com/uav4geo/GCPEditorPro>`_"
+
+#: ../../gcp.rst:68
+msgid "POSM GCPi"
+msgstr "POSM GCPi"
+
+#: ../../gcp.rst:70
+msgid ""
+"The POSM GCPi is loaded by default on WebODM. An example is available at "
+"`the WebODM Demo <http://demo.webodm.org/plugins/posm-gcpi/>`_. To use this "
+"with known ground control XYZ values, one would do the following:"
+msgstr ""
+"POSM GCPi dimuat secara default di WebODM. Contoh tersedia di `Demo WebODM "
+"<http://demo.webodm.org/plugins/posm-gcpi/>` _. Untuk menggunakan ini dengan"
+" nilai XYZ ground control yang diketahui, seseorang akan melakukan hal "
+"berikut:"
+
+#: ../../gcp.rst:72
+msgid ""
+"Create a GCP list that only includes gcp name (this is the label that will "
+"be seen in the GCP interface), x, y, and z, with a header with a proj4 "
+"string of your GCPs (make sure they are in a planar coordinate system, such "
+"as UTM. It should look something like this:"
+msgstr ""
+"Buat daftar GCP yang hanya menyertakan nama gcp (ini adalah label yang akan "
+"terlihat di antarmuka GCP), x, y, dan z, dengan header proj4 dengan string "
+"GCP Anda (pastikan mereka dalam koordinat planar sistem, seperti UTM. "
+"Seharusnya terlihat seperti ini:"
+
+#: ../../gcp.rst:83
+msgid ""
+"Then one can load this GCP list into the interface, load the images, and "
+"place each of the GCPs in the image."
+msgstr ""
+"Kemudian seseorang dapat memuat daftar GCP ini ke antarmuka, memuat gambar, "
+"dan menempatkan setiap GCP dalam gambar."
+
+#: ../../gcp.rst:87
+msgid "GCP Editor Pro"
+msgstr "GCP Editor Pro"
+
+#: ../../gcp.rst:89
+msgid ""
+"This app needs to be installed separately or can be loaded as a WebODM "
+"plugin from `https://github.com/uav4geo/GCPEditorPro "
+"<https://github.com/uav4geo/GCPEditorPro>`_"
+msgstr ""
+"Aplikasi ini perlu dipasang secara terpisah atau dapat dimuat sebagai plugin"
+" WebODM dari `https://github.com/uav4geo/GCPEditorPro "
+"<https://github.com/uav4geo/GCPEditorPro>`_"
+
+#: ../../gcp.rst:91
+msgid ""
+"Create a CSV file that includes the gcp name, northing, easting and "
+"elevation."
+msgstr ""
+"Buat berkas CSV yang menyertakan nama gcp, arah utara, arah timur, dan "
+"elevasi."
+
+#: ../../gcp.rst:100
+msgid ""
+"Then import the CSV from the main screen and type ``+proj=utm +zone=37 "
+"+south +ellps=WGS84 +datum=WGS84 +units=m +no_defs`` in the ``EPSG/PROJ`` "
+"box."
+msgstr ""
+"Kemudian impor CSV dari layar utama dan ketik ``+proj=utm +zone=37 +south "
+"+ellps=WGS84 +datum=WGS84 +units=m +no_defs`` di kotak ``EPSG/PROJ``."
+
+#: ../../gcp.rst:102
+msgid ""
+"The following screen will display a map from where to select the GCPs to tag"
+" and import the respective images."
+msgstr ""
+"Layar berikut akan menampilkan peta tempat memilih GCP untuk diberi tag dan "
+"mengimpor gambar masing-masing."
+
+#: ../../gcp.rst:106
+msgid "References"
+msgstr "Referensi"
+
+#: ../../gcp.rst:108
+msgid ""
+"Toffanin, Piero. `Open Drone Map: The Missing Guide. "
+"<https://odmbook.com/>`_ MasseranoLabs LLC, 2019."
+msgstr ""
+"Toffanin, Piero. `Buka Peta Drone: Panduan yang Hilang. "
+"<https://odmbook.com/>`_ MasseranoLabs LLC, 2019."
+
+#: ../../gcp.rst:111
+msgid ""
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
+"contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/gcp.rst>`_!"
+msgstr ""
+"`Belajar untuk mengedit <https://github.com/opendronemap/docs#how-to-make-"
+"your-first-contribution>` _ dan membantu meningkatkan `halaman ini "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/gcp.rst>`_!"
