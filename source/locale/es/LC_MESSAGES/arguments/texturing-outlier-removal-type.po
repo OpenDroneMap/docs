@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# israel Villarreal <israelbar@gmail.com>, 2021
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-12 15:01-0500\n"
 "PO-Revision-Date: 2021-11-12 20:57+0000\n"
+"Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,16 +23,18 @@ msgstr ""
 
 #: ../../arguments/texturing-outlier-removal-type.rst:9
 msgid "texturing-outlier-removal-type"
-msgstr ""
+msgstr "texturing-outlier-removal-type"
 
 #: ../../arguments/texturing-outlier-removal-type.rst:11
 msgid "**Options:** *none |  gauss_clamping |  gauss_damping*"
-msgstr ""
+msgstr "**Opciones:** *none |  gauss_clamping |  gauss_damping*"
 
 #: ../../arguments/texturing-outlier-removal-type.rst:13
 msgid ""
 "Type of photometric outlier removal method. . Default: ``gauss_clamping``"
 msgstr ""
+"Tipo de método de eliminación de valores atípicos fotométricos. "
+"Predeterminado:  ``gauss_clamping``"
 
 #: ../../arguments/texturing-outlier-removal-type.rst:18
 msgid ""
@@ -37,3 +43,7 @@ msgid ""
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
 "/texturing-outlier-removal-type.rst>`_!"
 msgstr ""
+"`Aprende a editar <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ y ayuda a mejorar `esta página "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
+"/texturing-outlier-removal-type.rst>`_!"

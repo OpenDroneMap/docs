@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# israel Villarreal <israelbar@gmail.com>, 2021
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-12 15:01-0500\n"
 "PO-Revision-Date: 2021-11-12 20:55+0000\n"
+"Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +23,13 @@ msgstr ""
 
 #: ../../arguments/orthophoto-no-tiled.rst:9
 msgid "orthophoto-no-tiled"
-msgstr ""
+msgstr "orthophoto-no-tiled"
 
 #: ../../arguments/orthophoto-no-tiled.rst:13
 msgid "Set this parameter if you want a striped GeoTIFF. Default: ``False``"
 msgstr ""
+"Configure este parámetro si desea un GeoTIFF a rayas. Predeterminado: "
+"``False``"
 
 #: ../../arguments/orthophoto-no-tiled.rst:18
 msgid ""
@@ -32,3 +38,7 @@ msgid ""
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
 "/orthophoto-no-tiled.rst>`_!"
 msgstr ""
+"`Aprende a editar <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ y ayuda a mejorar `esta página "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
+"/orthophoto-no-tiled.rst>`_!"

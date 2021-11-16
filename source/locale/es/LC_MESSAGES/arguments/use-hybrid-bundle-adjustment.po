@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# israel Villarreal <israelbar@gmail.com>, 2021
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-12 15:01-0500\n"
 "PO-Revision-Date: 2021-11-12 20:58+0000\n"
+"Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,7 +23,7 @@ msgstr ""
 
 #: ../../arguments/use-hybrid-bundle-adjustment.rst:9
 msgid "use-hybrid-bundle-adjustment"
-msgstr ""
+msgstr "use-hybrid-bundle-adjustment"
 
 #: ../../arguments/use-hybrid-bundle-adjustment.rst:13
 msgid ""
@@ -27,6 +31,9 @@ msgid ""
 "a global adjustment every 100 images. Speeds up reconstruction for very "
 "large datasets. Default: ``False``"
 msgstr ""
+"Ejecute un paquete de ajustes local para cada imagen agregada a la "
+"reconstrucción y un ajuste global cada 100 imágenes. Acelera la "
+"reconstrucción de conjuntos de datos muy grandes. Predeterminado: ``False``"
 
 #: ../../arguments/use-hybrid-bundle-adjustment.rst:18
 msgid ""
@@ -35,3 +42,7 @@ msgid ""
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
 "/use-hybrid-bundle-adjustment.rst>`_!"
 msgstr ""
+"`Aprende a editar <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ y ayuda a mejorar `esta página "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
+"/use-hybrid-bundle-adjustment.rst>`_!"

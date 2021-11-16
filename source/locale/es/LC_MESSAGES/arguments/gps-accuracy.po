@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# israel Villarreal <israelbar@gmail.com>, 2021
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-12 15:01-0500\n"
 "PO-Revision-Date: 2021-11-12 20:53+0000\n"
+"Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +23,11 @@ msgstr ""
 
 #: ../../arguments/gps-accuracy.rst:9
 msgid "gps-accuracy"
-msgstr ""
+msgstr "gps-accuracy"
 
 #: ../../arguments/gps-accuracy.rst:11
 msgid "**Options:** *<positive float>*"
-msgstr ""
+msgstr "**Opciones:** *<positive float>*"
 
 #: ../../arguments/gps-accuracy.rst:13
 msgid ""
@@ -34,6 +38,13 @@ msgid ""
 "Lowering this option can sometimes help control bowling-effects over large "
 "areas. Default: ``10``"
 msgstr ""
+"Establezca un valor en metros para la información de Dilución de precisión "
+"de GPS (DOP) para todas las imágenes. Si sus imágenes están etiquetadas con "
+"información GPS de alta precisión (RTK), este valor se establecerá "
+"automáticamente en consecuencia. Puede utilizar esta opción para "
+"configurarla manualmente en caso de que falle la reconstrucción. Reducir "
+"esta opción a veces puede ayudar a controlar los efectos de combadura en "
+"áreas extensas. Predeterminado: ``10``"
 
 #: ../../arguments/gps-accuracy.rst:18
 msgid ""
@@ -42,3 +53,7 @@ msgid ""
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
 "/gps-accuracy.rst>`_!"
 msgstr ""
+"`Aprende a editar <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ y ayuda a mejorar `esta página "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
+"/gps-accuracy.rst>`_!"

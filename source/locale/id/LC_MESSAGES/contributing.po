@@ -1,0 +1,207 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# Husni Mubarok <husn.mubarok@gmail.com>, 2021
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.6.6\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-11-12 15:01-0500\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: Husni Mubarok <husn.mubarok@gmail.com>, 2021\n"
+"Language-Team: Indonesian (https://www.transifex.com/americanredcross/teams/111882/id/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: id\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+
+#: ../../contributing.rst:4
+msgid "How To Contribute"
+msgstr "Cara Kontribusi"
+
+#: ../../contributing.rst:6
+msgid ""
+"OpenDroneMap relies on community contributions. You can contribute in many "
+"ways, even if you are not a programmer."
+msgstr ""
+"OpenDroneMap bergantung pada kontribusi komunitas. Kamu bisa berkontribusi "
+"dalam berbagai hal, meskipun kamu bukan seorang pemrogram."
+
+#: ../../contributing.rst:9
+msgid "Community Forum"
+msgstr "Forum Komunitas"
+
+#: ../../contributing.rst:11
+msgid ""
+"If you are looking to get involved, are stuck on a problem, or want to reach"
+" out, `the forum <https://community.opendronemap.org/>`_ is a great place to"
+" start. You may find your questions already answered or else you can find "
+"other useful tips and resources. You can also contribute your open access "
+"datasets for others to explore. It is a good place go before submitting bug "
+"reports or getting in touch with developers before writing a new feature."
+msgstr ""
+"Jika kamu berniat untuk terlibat, mentok dipermasalahan atau ingin "
+"bergabung, `forum berikut <https://community.opendronemap.org/>`_ merupakan "
+"tempat yang cocok untuk memulai. Bisa jadi pertanyaanmu sudah terjawab atau "
+"kamu bisa mendapatkan beberapa kiat-kiat jitu lain. Kamu juga bisa "
+"berkontribusi data terbuka milikmu agar yang lain dapat mencoba. Forum ini "
+"adalah wahana yang bagus sebelum mencoba melaporkan bug atau mencoba untuk "
+"terhubung dengan pengembang sebelum membuat fitur baru."
+
+#: ../../contributing.rst:14
+msgid "Reporting Bugs"
+msgstr "Melaporkan Bug."
+
+#: ../../contributing.rst:16
+msgid ""
+"Bugs are tracked as Github issues. Please create an issue in the repository "
+"and tag it with the Bug tag."
+msgstr ""
+"Bug dilacak sebagai isu di Github. Silahkan buat sebuah isu di repositori "
+"dan tandai dengan tag Bug."
+
+#: ../../contributing.rst:18
+msgid ""
+"Explain the problem and include additional details to help maintainers "
+"reproduce the problem:"
+msgstr ""
+"Mengutarakan masalah dan berikan detil tambahan agar dapat membantu "
+"pengelola mereka ulang masalahnya:"
+
+#: ../../contributing.rst:20
+msgid ""
+"**Use a clear and descriptive title** for the issue to identify the problem."
+msgstr ""
+"**Gunakan judul yang jelas dan desktriptif** tentang isunya untuk "
+"mempermudah mengenali masalahnya."
+
+#: ../../contributing.rst:21
+msgid ""
+"**Describe the exact steps which reproduce the problem** in as many details "
+"as possible. For example, start by explaining how you run ODM (Docker, "
+"Vagrant, etc), e.g. which command exactly you used in the terminal. When "
+"listing steps, **don't just say what you did, but explain how you did it.**"
+msgstr ""
+
+#: ../../contributing.rst:22
+msgid ""
+"**Provide specific examples to demonstrate the steps.** Include links to "
+"files or GitHub projects, or copy/pasteable snippets, which you use in those"
+" examples. If you're providing snippets in the issue, use `Markdown code "
+"blocks <https://help.github.com/articles/markdown-basics/#multiple-lines>`_."
+msgstr ""
+
+#: ../../contributing.rst:23
+msgid ""
+"**Describe the behavior you observed after following the steps** and point "
+"out what exactly is the problem with that behavior."
+msgstr ""
+
+#: ../../contributing.rst:24
+msgid "**Explain which behavior you expected to see instead and why.**"
+msgstr ""
+"**Jelaskan perilaku mana yang Anda harapkan sebagai gantinya dan mengapa?**"
+
+#: ../../contributing.rst:25
+msgid ""
+"**Include screenshots and animated GIFs** which show you following the "
+"described steps and clearly demonstrate the problem. You can use `this tool "
+"to record GIFs on macOS and Windows <http://www.cockos.com/licecap/>`_, and "
+"`this tool <https://github.com/colinkeenan/silentcast>`_ or `this one "
+"<https://github.com/GNOME/byzanz>`_ on Linux."
+msgstr ""
+
+#: ../../contributing.rst:26
+msgid ""
+"**If the problem is related to performance,** please post your machine's "
+"specs (host and guest machine)."
+msgstr ""
+
+#: ../../contributing.rst:27
+msgid ""
+"**If the problem wasn't triggered by a specific action,** describe what you "
+"were doing before the problem happened and share more information using the "
+"guidelines below."
+msgstr ""
+
+#: ../../contributing.rst:29
+msgid "Include details about your configuration and environment:"
+msgstr "Sertakan detil tentang konfigurasimu dan lingkungannya:"
+
+#: ../../contributing.rst:31
+msgid ""
+"**Which version of ODM are you using?** A stable release? a clone of master?"
+msgstr ""
+
+#: ../../contributing.rst:32
+msgid "**What's the name and version of the OS you're using?**"
+msgstr ""
+
+#: ../../contributing.rst:33
+msgid ""
+"**Are you running ODM in a virtual machine or Docker?** If so, which VM "
+"software are you using and which operating systems and versions are used for"
+" the host and the guest?"
+msgstr ""
+
+#: ../../contributing.rst:36
+msgid "Template For Submitting Bug Reports"
+msgstr ""
+
+#: ../../contributing.rst:69
+msgid "Pull Requests"
+msgstr ""
+
+#: ../../contributing.rst:71
+msgid ""
+"Include screenshots and animated GIFs in your pull request whenever "
+"possible."
+msgstr ""
+
+#: ../../contributing.rst:72
+msgid "Follow the PEP8 Python Style Guide."
+msgstr "Ikuti Panduan Gaya Python PEP8"
+
+#: ../../contributing.rst:73
+msgid "End files with a newline."
+msgstr ""
+
+#: ../../contributing.rst:76
+msgid "Avoid platform-dependent code:"
+msgstr "Hindari kode yang bergantung kepada platform:"
+
+#: ../../contributing.rst:75
+msgid "Use require('fs-plus').getHomeDirectory() to get the home directory."
+msgstr ""
+
+#: ../../contributing.rst:76
+msgid "Use path.join() to concatenate filenames."
+msgstr "gunakan path.join() untuk menggabungkan nama berkas."
+
+#: ../../contributing.rst:77
+msgid ""
+"Use os.tmpdir() rather than /tmp when you need to reference the temporary "
+"directory."
+msgstr ""
+
+#: ../../contributing.rst:80
+msgid ""
+"Using a plain return when returning explicitly at the end of a function."
+msgstr ""
+
+#: ../../contributing.rst:79
+msgid "Not return null, return undefined, null, or undefined"
+msgstr ""
+
+#: ../../contributing.rst:82
+msgid ""
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
+"contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst>`_!"
+msgstr ""

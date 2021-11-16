@@ -3,6 +3,9 @@
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
 # 
+# Translators:
+# israel Villarreal <israelbar@gmail.com>, 2021
+# 
 #, fuzzy
 msgid ""
 msgstr ""
@@ -10,6 +13,7 @@ msgstr ""
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-11-12 15:01-0500\n"
 "PO-Revision-Date: 2021-11-12 20:54+0000\n"
+"Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
 "Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
@@ -19,11 +23,11 @@ msgstr ""
 
 #: ../../arguments/max-concurrency.rst:9
 msgid "max-concurrency"
-msgstr ""
+msgstr "max-concurrency"
 
 #: ../../arguments/max-concurrency.rst:11
 msgid "**Options:** *<positive integer>*"
-msgstr ""
+msgstr "**Opciones:** *<positive integer>*"
 
 #: ../../arguments/max-concurrency.rst:13
 msgid ""
@@ -31,6 +35,9 @@ msgid ""
 "requirement is ~1GB per thread and 2 megapixel image resolution. Default: "
 "``4``"
 msgstr ""
+"El número máximo de procesos a utilizar en varios procesos. El requisito de "
+"memoria máxima es de ~1 GB por hilo y una resolución de imagen de 2 "
+"megapíxeles. Predeterminado: ``4``"
 
 #: ../../arguments/max-concurrency.rst:18
 msgid ""
@@ -39,3 +46,7 @@ msgid ""
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
 "/max-concurrency.rst>`_!"
 msgstr ""
+"`Aprende a editar <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ y ayuda a mejorar `esta página "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
+"/max-concurrency.rst>`_!"
