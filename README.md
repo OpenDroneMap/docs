@@ -16,17 +16,23 @@ Once you have an account there are two ways to contribute. One is quick for smal
 
 # The Quick Method
 
-Simply browse to https://github.com/OpenDroneMap/docs/tree/publish/source and press one of the files. Each file corresponds to a page of the documentation. Press the "Edit" icon.
+Browse to https://github.com/OpenDroneMap/docs/tree/publish/source. Each row in the table corresponds to a page in the documentation. Tap on the file name, in the second (2nd) column from left. Press the "Edit" icon.
 
 ![image](https://user-images.githubusercontent.com/1951843/54656313-78e26500-4a9b-11e9-9d7f-412bf7c36a2b.png)
 
-Make your changes, then select "Create a new branch for this commit and start a pull request". Complete the form that appears and wait for your changes to be approved! That's it!
+Make your changes, then scroll down and tap the "Propose Changes" button. 
+
+When the next page is displayed, tap the "Create pull request" button. Wait for your changes to be approved! That's it!
+
+You may want to read the English Style Guide for github https://github.com/raywenderlich/english-style-guide.
 
 # The Pro Method
 
 For quick changes the method above is quick and fast. But if you want to write docs like a pro, in your own text editor of choice, follow these steps.
 
 Depending on your operating system, you should follow these steps to create a local copy of the documentation. This way you can modify and check the results before sending them for review.
+
+You may want to read the English Style Guide for github https://github.com/raywenderlich/english-style-guide.
 
 ## Step 1. Make a Copy (fork) This Repository
 
