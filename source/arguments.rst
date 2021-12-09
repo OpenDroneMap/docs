@@ -58,7 +58,7 @@ Options and Flags
 :ref:`feature-quality<feature-quality>` ultra |  high |  medium |  low |  lowest
   Set feature extraction quality. Higher quality generates better features, but requires more memory and takes longer. . Default: ``high``
 
-:ref:`feature-type<feature-type>` sift |  orb |  hahog
+:ref:`feature-type<feature-type>` akaze |  hahog |  orb |  sift
   Choose the algorithm for extracting keypoints and computing descriptors. . Default: ``sift``
 
 :ref:`force-gps<force-gps>` 
@@ -85,8 +85,8 @@ Options and Flags
 :ref:`matcher-neighbors<matcher-neighbors>` <integer>
   Number of nearest images to pre-match based on GPS exif data. Set to 0 to skip pre-matching. Neighbors works together with Distance parameter, set both to 0 to not use pre-matching. Default: ``8``
 
-:ref:`matcher-type<matcher-type>` flann |  bow
-  Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of Words. FLANN is slower, but more stable. BOW is faster, but can sometimes miss valid matches. . Default: ``flann``
+:ref:`matcher-type<matcher-type>` bow |  bruteforce |  flann
+  Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of Words. FLANN is slower, but more stable. BOW is faster, but can sometimes miss valid matches. BRUTEFORCE is very slow but robust.. Default: ``flann``
 
 :ref:`max-concurrency<max-concurrency>` <positive integer>
   The maximum number of processes to use in various processes. Peak memory requirement is ~1GB per thread and 2 megapixel image resolution. Default: ``4``
