@@ -8,7 +8,7 @@
 feature-type
 ````````````
 
-**Options:** *sift |  orb |  hahog*
+**Options:** *akaze |  hahog |  orb |  sift*
 
 Choose the algorithm for extracting keypoints and computing descriptors. . Default: ``sift``
 

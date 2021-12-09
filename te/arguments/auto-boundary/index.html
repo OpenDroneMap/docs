@@ -133,8 +133,36 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">ఎంపికలు మరియు ఫ్లాగ్స్</a><ul class="current">
-<li class="toctree-l2 current"><a class="current reference internal" href="#">auto-boundary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../boundary/">boundary</a></li>
+<li class="toctree-l2 current"><a class="current reference internal" href="#">auto-boundary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-auto-boundary">What Is Auto-Boundary?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#when-is-auto-boundary-helpful">When Is Auto-Boundary Helpful?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#why-would-one-use-auto-boundary">Why would one use auto-boundary?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#true-auto-boundary">True: <code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../boundary/">boundary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boundary/#what-is-boundary-geojson">What is Boundary [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../boundary/#when-is-boundary-geojson-appropriate">When is Boundary [GeoJSON] appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../boundary/#why-would-one-use-boundary-geojson">Why would one use Boundary [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../boundary/#how-would-one-create-boundary-geojson">How would one create Boundary [GeoJSON]?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../boundary/#geojson-io">GeoJSON.io</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boundary/#qgis">QGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boundary/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../boundary/#true-boundary-geojson-point-cloud">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Point Cloud</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boundary/#true-boundary-geojson-orthophoto">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Orthophoto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boundary/#true-boundary-geojson-digital-elevation-model">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Digital Elevation Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boundary/#true-boundary-geojson-3d-model-textured-mesh">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - 3D Model/Textured Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boundary/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../build-overviews/">build-overviews</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../build-overviews/#what-are-overviews">What Are Overviews?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../build-overviews/#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
@@ -358,7 +386,88 @@
   <section id="auto-boundary">
 <span id="id1"></span><h1>auto-boundary<a class="headerlink" href="#auto-boundary" title="Permalink to this headline"></a></h1>
 <p>Automatically set a boundary using camera shot locations to limit the area of the reconstruction. This can help remove far away background artifacts (sky, background landscapes, etc.). See also --boundary. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<div class="line-block">
+<div class="line">Parameter Type:</div>
+<div class="line-block">
+<div class="line"><strong>Boolean</strong></div>
+</div>
+<div class="line">Parameter Domain:</div>
+<div class="line-block">
+<div class="line">True: <code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code></div>
+<div class="line">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
+</div>
+<div class="line">Parameter Default:</div>
+<div class="line-block">
+<div class="line">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></div>
+</div>
+</div>
+<hr class="docutils" />
+<table class="docutils align-default">
+<colgroup>
+<col style="width: 44%" />
+<col style="width: 56%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Resource</p></th>
+<th class="head"><p>Impact</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>CPU</p></td>
+<td><p>●○○ | Low</p></td>
+</tr>
+<tr class="row-odd"><td><p>GPU</p></td>
+<td><p>○○○ | None</p></td>
+</tr>
+<tr class="row-even"><td><p>HDD</p></td>
+<td><p>○○○ | None</p></td>
+</tr>
+<tr class="row-odd"><td><p>RAM</p></td>
+<td><p>●○○ | Low</p></td>
+</tr>
+<tr class="row-even"><td><p>Time</p></td>
+<td><p>●○○ | Low</p></td>
+</tr>
+</tbody>
+</table>
+<hr class="docutils" />
+<section id="what-is-auto-boundary">
+<h2>What Is Auto-Boundary?<a class="headerlink" href="#what-is-auto-boundary" title="Permalink to this headline"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code> is a process that seeks to limit the boundaries of the reconstruction based upon a K-Means filtered Convex Hull buffered by 20x the mean GSD of the dataset.</p>
+</section>
+<section id="when-is-auto-boundary-helpful">
+<h2>When Is Auto-Boundary Helpful?<a class="headerlink" href="#when-is-auto-boundary-helpful" title="Permalink to this headline"></a></h2>
+<p><code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code> is appropriate to use on any dataset where one might possibly consider limiting the area of reconstruction due to the presence of sky or far-away background that they would not normally consider part of the desired reconstruction.</p>
+<p><code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code> does not have a meaningful impact on nadir (or near-nadir) imagery without sky/background, making it superflous, but safe, to include.</p>
+<p>In other words, if you would consider masking the image, <code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code> is likely a good choice.</p>
+</section>
+<section id="why-would-one-use-auto-boundary">
+<h2>Why would one use auto-boundary?<a class="headerlink" href="#why-would-one-use-auto-boundary" title="Permalink to this headline"></a></h2>
+<p>Auto-Boundary is most helpful in preventing the reconstruction area from growing needlessly large when things like sky, clouds, or far-away features like treelines get included in the reconstruction.</p>
+<p>By preventing the boundaries of the reconstruction from growing needlessly large, Out-Of-Memory errors become far less likely, and one will likely see a decrease in processing time due to the smaller area being reconstructed.</p>
+</section>
+<section id="example-images">
+<h2>Example Images<a class="headerlink" href="#example-images" title="Permalink to this headline"></a></h2>
+<section id="true-auto-boundary">
+<h3>True: <code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code><a class="headerlink" href="#true-auto-boundary" title="Permalink to this headline"></a></h3>
+<figure class="align-default" id="id2">
+<img alt="WebODM displaying the reconstruction extent of a terrestrial orbit survey of a Northern Catalpa tree." src="https://user-images.githubusercontent.com/19295950/140864618-2a0c95f2-669e-45dc-b5c5-df82a555e4e5.png" />
+<figcaption>
+<p><span class="caption-text">The WebODM 3D View shows the full extent of the reconstruction, bounded by the <code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code> option.</span><a class="headerlink" href="#id2" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
+</section>
+<section id="false-null">
+<h3>False: <code class="docutils literal notranslate"><span class="pre">null</span></code><a class="headerlink" href="#false-null" title="Permalink to this headline"></a></h3>
+<figure class="align-default" id="id3">
+<img alt="WebODM displaying the reconstruction extent of a terrestrial orbit survey of a Northern Catalpa tree." src="https://user-images.githubusercontent.com/19295950/140864753-db3695c5-3ba2-48fb-a644-3e591913de72.png" />
+<figcaption>
+<p><span class="caption-text">The WebODM 3D View shows the full extent of the recosntruction. Compared to the <code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code> reconstruction above, one can see that the full reconstruction area is much larger (and therefore more visually sparse).</span><a class="headerlink" href="#id3" title="Permalink to this image"></a></p>
+</figcaption>
+</figure>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/auto-boundary.rst">this page</a>!</p>
+</section>
+</section>
 </section>
 
 

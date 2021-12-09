@@ -133,8 +133,36 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Opciones e indicadores</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="auto-boundary/">auto-boundary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="boundary/">boundary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto-boundary/">auto-boundary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="auto-boundary/#what-is-auto-boundary">What Is Auto-Boundary?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auto-boundary/#when-is-auto-boundary-helpful">When Is Auto-Boundary Helpful?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auto-boundary/#why-would-one-use-auto-boundary">Why would one use auto-boundary?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auto-boundary/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="auto-boundary/#true-auto-boundary">True: <code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="auto-boundary/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="boundary/">boundary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="boundary/#what-is-boundary-geojson">What is Boundary [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boundary/#when-is-boundary-geojson-appropriate">When is Boundary [GeoJSON] appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boundary/#why-would-one-use-boundary-geojson">Why would one use Boundary [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boundary/#how-would-one-create-boundary-geojson">How would one create Boundary [GeoJSON]?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boundary/#geojson-io">GeoJSON.io</a></li>
+<li class="toctree-l4"><a class="reference internal" href="boundary/#qgis">QGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boundary/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boundary/#true-boundary-geojson-point-cloud">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Point Cloud</a></li>
+<li class="toctree-l4"><a class="reference internal" href="boundary/#true-boundary-geojson-orthophoto">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Orthophoto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="boundary/#true-boundary-geojson-digital-elevation-model">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Digital Elevation Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="boundary/#true-boundary-geojson-3d-model-textured-mesh">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - 3D Model/Textured Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="boundary/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="build-overviews/">build-overviews</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="build-overviews/#what-are-overviews">¿Que son las vistas generales?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="build-overviews/#when-are-overviews-appropriate">¿Cuando son apropiadas las vistas generales?</a></li>
@@ -395,7 +423,7 @@
 </dd>
 <dt><a class="reference internal" href="feature-quality/#feature-quality"><span class="std std-ref">feature-quality</span></a> ultra |  high |  medium |  low |  lowest</dt><dd><p>Establezca la calidad de extracción de características. Una calidad más alta genera mejores características, pero requiere más memoria y lleva más tiempo. Predeterminado: <code class="docutils literal notranslate"><span class="pre">high</span></code></p>
 </dd>
-<dt><a class="reference internal" href="feature-type/#feature-type"><span class="std std-ref">feature-type</span></a> sift |  orb |  hahog</dt><dd><p>Elija el algoritmo para extraer puntos clave y calcular descriptores. Predeterminado: <code class="docutils literal notranslate"><span class="pre">sift</span></code></p>
+<dt><a class="reference internal" href="feature-type/#feature-type"><span class="std std-ref">feature-type</span></a> akaze |  hahog |  orb |  sift</dt><dd><p>Elija el algoritmo para extraer puntos clave y calcular descriptores. Predeterminado: <code class="docutils literal notranslate"><span class="pre">sift</span></code></p>
 </dd>
 <dt><a class="reference internal" href="force-gps/#force-gps"><span class="std std-ref">force-gps</span></a></dt><dd><p>Utilice los datos exif de GPS de las imágenes para la reconstrucción, incluso si hay GCP presentes. Esta bandera es útil si tiene mediciones de GPS de alta precisión. Si no hay GCP, esta bandera no hace nada. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -414,7 +442,7 @@ Umbral de distancia en metros, para encontrar imágenes pre-coincidentes basado 
 </dd>
 <dt><a class="reference internal" href="matcher-neighbors/#matcher-neighbors"><span class="std std-ref">matcher-neighbors</span></a> &lt;integer&gt;</dt><dd><p>Número de imágenes cercanas a la comparación previa basado en la información exif de GPS. Establezca en 0 para omitir la comparación previa. El parámetro Neighbors trabaja junto con el parámetro Distance, establezca ambos en 0 para no utilizar la comparación previa. Predeterminado: <code class="docutils literal notranslate"><span class="pre">8</span></code></p>
 </dd>
-<dt><a class="reference internal" href="matcher-type/#matcher-type"><span class="std std-ref">matcher-type</span></a> flann |  bow</dt><dd><p>Algoritmo de emparejamiento, FLANN biblioteca rápida para vecinos más cercanos aproximados o BOW bolsa de palabras. FLANN es más lento, pero más estable. BOW es más rápido, pero a veces puede perder coincidencias válidas. Predeterminado: <code class="docutils literal notranslate"><span class="pre">flann</span></code></p>
+<dt><a class="reference internal" href="matcher-type/#matcher-type"><span class="std std-ref">matcher-type</span></a> bow |  bruteforce |  flann</dt><dd><p>Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of Words. FLANN is slower, but more stable. BOW is faster, but can sometimes miss valid matches. BRUTEFORCE is very slow but robust.. Default: <code class="docutils literal notranslate"><span class="pre">flann</span></code></p>
 </dd>
 <dt><a class="reference internal" href="max-concurrency/#max-concurrency"><span class="std std-ref">max-concurrency</span></a> &lt;positive integer&gt;</dt><dd><p>El número máximo de procesos a utilizar en varios procesos. El requisito de memoria máxima es de ~1 GB por hilo y una resolución de imagen de 2 megapíxeles. Predeterminado: <code class="docutils literal notranslate"><span class="pre">4</span></code></p>
 </dd>

@@ -133,8 +133,36 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="reference internal" href="../">الخيارات والإعلام</a><ul class="current">
-<li class="toctree-l2"><a class="reference internal" href="../auto-boundary/">auto-boundary</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../boundary/">boundary</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../auto-boundary/">auto-boundary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../auto-boundary/#what-is-auto-boundary">What Is Auto-Boundary?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../auto-boundary/#when-is-auto-boundary-helpful">When Is Auto-Boundary Helpful?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../auto-boundary/#why-would-one-use-auto-boundary">Why would one use auto-boundary?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../auto-boundary/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../auto-boundary/#true-auto-boundary">True: <code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../auto-boundary/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../boundary/">boundary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../boundary/#what-is-boundary-geojson">What is Boundary [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../boundary/#when-is-boundary-geojson-appropriate">When is Boundary [GeoJSON] appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../boundary/#why-would-one-use-boundary-geojson">Why would one use Boundary [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../boundary/#how-would-one-create-boundary-geojson">How would one create Boundary [GeoJSON]?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../boundary/#geojson-io">GeoJSON.io</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boundary/#qgis">QGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../boundary/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../boundary/#true-boundary-geojson-point-cloud">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Point Cloud</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boundary/#true-boundary-geojson-orthophoto">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Orthophoto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boundary/#true-boundary-geojson-digital-elevation-model">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Digital Elevation Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boundary/#true-boundary-geojson-3d-model-textured-mesh">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - 3D Model/Textured Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../boundary/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="../build-overviews/">build-overviews</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../build-overviews/#what-are-overviews">What Are Overviews?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../build-overviews/#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
@@ -357,8 +385,8 @@
              
   <section id="matcher-type">
 <span id="id1"></span><h1>matcher-type<a class="headerlink" href="#matcher-type" title="Permalink to this headline"></a></h1>
-<p><strong>Options:</strong> <em>flann |  bow</em></p>
-<p>Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of Words. FLANN is slower, but more stable. BOW is faster, but can sometimes miss valid matches. . Default: <code class="docutils literal notranslate"><span class="pre">flann</span></code></p>
+<p><strong>Options:</strong> <em>bow |  bruteforce |  flann</em></p>
+<p>Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of Words. FLANN is slower, but more stable. BOW is faster, but can sometimes miss valid matches. BRUTEFORCE is very slow but robust.. Default: <code class="docutils literal notranslate"><span class="pre">flann</span></code></p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/matcher-type.rst">this page</a>!</p>
 </section>
 
