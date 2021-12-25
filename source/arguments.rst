@@ -68,7 +68,7 @@ Options and Flags
   Path to the file containing the ground control points used for georeferencing. The file needs to use the following format: EPSG:<code> or <+proj definition>geo_x geo_y geo_z im_x im_y image_name [gcp_name] [extra1] [extra2]Default: ``None``
 
 :ref:`geo<geo>` <path string>
-  Path to the image geolocation file containing the camera center coordinates used for georeferencing. Note that omega/phi/kappa are currently not supported (you can set them to 0). The file needs to use the following format: EPSG:<code> or <+proj definition>image_name geo_x geo_y geo_z [omega (degrees)] [phi (degrees)] [kappa (degrees)] [horz accuracy (meters)] [vert accuracy (meters)]Default: ``None``
+  Path to the image geolocation file containing camera coordinates and orientation angles used for georeferencing. The file has the following format. First line: EPSG:<code> or <+proj definition> Subsequent lines: image_name geo_x geo_y geo_z [omega (degrees)] [phi (degrees)] [kappa (degrees)] [horz accuracy (meters)] [vert accuracy (meters)]  By default only camera coordinates are used and orientation angles are ignored. In order to use camera orientation angles as well, set option ``sfm-algorithm`` to ``triangulation``. Default: ``None``
 
 :ref:`gps-accuracy<gps-accuracy>` <positive float>
   Set a value in meters for the GPS Dilution of Precision (DOP) information for all images. If your images are tagged with high precision GPS information (RTK), this value will be automatically set accordingly. You can use this option to manually set it in case the reconstruction fails. Lowering this option can sometimes help control bowling-effects over large areas. Default: ``10``
@@ -177,6 +177,9 @@ Options and Flags
 
 :ref:`resize-to<resize-to>` <integer>
   Legacy option (use --feature-quality instead). Resizes images by the largest side for feature extraction purposes only. Set to -1 to disable. This does not affect the final orthophoto resolution quality and will not resize the original images. Default: ``2048``
+
+:ref:`sfm-algorithm <incremental | triangulation>`
+  Selects the structure from motion algorithm. If set to ``incremental`` then orientation angles in both EXIF data and geolocation files are ignored. To use these angles for georeferencing, set to ``triangulation``. Default: ``incremental``
 
 :ref:`skip-3dmodel<skip-3dmodel>` 
   Skip generation of a full 3D model. This can save time if you only need 2D results such as orthophotos and DEMs. Default: ``False``
