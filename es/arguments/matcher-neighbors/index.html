@@ -21,7 +21,7 @@
     <link rel="index" title="Índice" href="../../genindex/" />
     <link rel="search" title="Búsqueda" href="../../search/" />
     <link rel="next" title="matcher-type" href="../matcher-type/" />
-    <link rel="prev" title="matcher-distance" href="../matcher-distance/" /> 
+    <link rel="prev" title="ignore-gsd" href="../ignore-gsd/" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -220,7 +220,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../gps-accuracy/">gps-accuracy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../help/">help</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../ignore-gsd/">ignore-gsd</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../matcher-distance/">matcher-distance</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">matcher-neighbors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../matcher-type/">matcher-type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../max-concurrency/">max-concurrency</a></li>
@@ -253,8 +252,10 @@
 <li class="toctree-l2"><a class="reference internal" href="../rerun-all/">rerun-all</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../rerun-from/">rerun-from</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../resize-to/">resize-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sfm-algorithm/">sfm-algorithm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../skip-3dmodel/">skip-3dmodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../skip-band-alignment/">skip-band-alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../skip-orthophoto/">skip-orthophoto</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../skip-report/">skip-report</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sm-cluster/">sm-cluster</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../smrf-scalar/">smrf-scalar</a></li>
@@ -386,7 +387,7 @@
   <section id="matcher-neighbors">
 <span id="id1"></span><h1>matcher-neighbors<a class="headerlink" href="#matcher-neighbors" title="Enlazar permanentemente con este título"></a></h1>
 <p><strong>Opciones:</strong> <em>&lt;integer&gt;</em></p>
-<p>Número de imágenes cercanas a la comparación previa basado en la información exif de GPS. Establezca en 0 para omitir la comparación previa. El parámetro Neighbors trabaja junto con el parámetro Distance, establezca ambos en 0 para no utilizar la comparación previa. Predeterminado: <code class="docutils literal notranslate"><span class="pre">8</span></code></p>
+<p>Number of nearest images to pre-match based on GPS exif data. Set to 0 to skip pre-matching. Default: <code class="docutils literal notranslate"><span class="pre">8</span></code></p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/matcher-neighbors.rst">esta página</a>!</p>
 </section>
 
@@ -394,7 +395,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="../matcher-distance/" class="btn btn-neutral float-left" title="matcher-distance" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../ignore-gsd/" class="btn btn-neutral float-left" title="ignore-gsd" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
         <a href="../matcher-type/" class="btn btn-neutral float-right" title="matcher-type" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

@@ -10,7 +10,7 @@ matcher-neighbors
 
 **Options:** *<integer>*
 
-Number of nearest images to pre-match based on GPS exif data. Set to 0 to skip pre-matching. Neighbors works together with Distance parameter, set both to 0 to not use pre-matching. Default: ``8``
+Number of nearest images to pre-match based on GPS exif data. Set to 0 to skip pre-matching. Default: ``8``
 
 
 

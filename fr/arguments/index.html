@@ -220,7 +220,6 @@
 <li class="toctree-l2"><a class="reference internal" href="gps-accuracy/">gps-accuracy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="help/">help</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ignore-gsd/">ignore-gsd</a></li>
-<li class="toctree-l2"><a class="reference internal" href="matcher-distance/">matcher-distance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="matcher-neighbors/">matcher-neighbors</a></li>
 <li class="toctree-l2"><a class="reference internal" href="matcher-type/">matcher-type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="max-concurrency/">max-concurrency</a></li>
@@ -253,8 +252,10 @@
 <li class="toctree-l2"><a class="reference internal" href="rerun-all/">rerun-all</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rerun-from/">rerun-from</a></li>
 <li class="toctree-l2"><a class="reference internal" href="resize-to/">resize-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sfm-algorithm/">sfm-algorithm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skip-3dmodel/">skip-3dmodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skip-band-alignment/">skip-band-alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip-orthophoto/">skip-orthophoto</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skip-report/">skip-report</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sm-cluster/">sm-cluster</a></li>
 <li class="toctree-l2"><a class="reference internal" href="smrf-scalar/">smrf-scalar</a></li>
@@ -429,7 +430,7 @@
 </dd>
 <dt><a class="reference internal" href="gcp/#gcp"><span class="std std-ref">gcp</span></a> &lt;path string&gt;</dt><dd><p>Chemin d’accès au fichier contenant les points de contrôle au sol utilisés pour le géoréférencement. Le fichier doit utiliser le format suivant : EPSG :&lt;code&gt; ou &lt;+proj definition&gt;geo_x geo_y geo_z im_x im_y image_name [gcp_name] [extra1] [extra2]Par défaut : <code class="docutils literal notranslate"><span class="pre">Aucun</span></code></p>
 </dd>
-<dt><a class="reference internal" href="geo/#geo"><span class="std std-ref">geo</span></a> &lt;path string&gt;</dt><dd><p>Path to the image geolocation file containing camera coordinates and orientation angles used for georeferencing. The file has the following format. First line: EPSG:&lt;code&gt; or &lt;+proj definition&gt; Subsequent lines: image_name geo_x geo_y geo_z [omega (degrees)] [phi (degrees)] [kappa (degrees)] [horz accuracy (meters)] [vert accuracy (meters)]  By default only camera coordinates are used and orientation angles are ignored. In order to use camera orientation angles as well, set option <code class="docutils literal notranslate"><span class="pre">sfm-algorithm</span></code> to <code class="docutils literal notranslate"><span class="pre">triangulation</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+<dt><a class="reference internal" href="geo/#geo"><span class="std std-ref">geo</span></a> &lt;path string&gt;</dt><dd><p>Chemin d’accès au fichier de géolocalisation de l’image contenant les coordonnées du centre de la caméra utilisées pour le géoréférencement. Notez que les oméga/phi/kappa ne sont actuellement pas pris en charge (vous pouvez les définir sur 0). Le fichier doit utiliser le format suivant : EPSG :&lt;code&gt; ou &lt;+proj definition&gt;nom_image geo_x geo_y geo_z [omega (degrés)] [phi (degrés)] [kappa (degrés)] [horz precision (meters)] [vert precision ( mètres)]Par défaut : <code class="docutils literal notranslate"><span class="pre">Aucun</span></code></p>
 </dd>
 <dt><a class="reference internal" href="gps-accuracy/#gps-accuracy"><span class="std std-ref">gps-accuracy</span></a> &lt;positive float&gt;</dt><dd><p>Définissez une valeur en mètres pour les informations GPS Dilution of Precision (DOP) pour toutes les images. Si vos images sont balisées avec des informations GPS de haute précision (RTK), cette valeur sera automatiquement définie en conséquence. Vous pouvez utiliser cette option pour le définir manuellement au cas où la reconstruction échouerait. Abaisser cette option peut parfois aider à contrôler les effets de bowling sur de grandes surfaces. Par défaut : <code class="docutils literal notranslate"><span class="pre">10</span></code></p>
 </dd>
@@ -437,9 +438,7 @@
 </dd>
 <dt><a class="reference internal" href="ignore-gsd/#ignore-gsd"><span class="std std-ref">ignore-gsd</span></a></dt><dd><p>Ignorer la distance d’échantillonnage au sol (GSD). GSD limite la résolution maximale des sorties d’image et redimensionne les images si nécessaire, ce qui accélère le traitement et réduit l’utilisation de la mémoire. Étant donné que le GSD est une estimation, l’ignorer peut parfois entraîner une qualité de sortie d’image légèrement meilleure. Par défaut : <code class="docutils literal notranslate"><span class="pre">Faux</span></code></p>
 </dd>
-<dt><a class="reference internal" href="matcher-distance/#matcher-distance"><span class="std std-ref">matcher-distance</span></a> &lt;integer&gt;</dt><dd><p>Seuil de distance en mètres pour trouver des images pré-correspondantes basées sur les données exif GPS. Définissez les deux matcher-neighbors et ceci sur 0 pour ignorer la pré-correspondance. Par défaut : <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
-</dd>
-<dt><a class="reference internal" href="matcher-neighbors/#matcher-neighbors"><span class="std std-ref">matcher-neighbors</span></a> &lt;integer&gt;</dt><dd><p>Nombre d’images les plus proches à pré-matcher en fonction des données exif GPS. Réglez sur 0 pour ignorer la pré-correspondance. Les voisins fonctionnent avec le paramètre Distance, définissez les deux sur 0 pour ne pas utiliser la pré-appariement. Par défaut : <code class="docutils literal notranslate"><span class="pre">8</span></code></p>
+<dt><a class="reference internal" href="matcher-neighbors/#matcher-neighbors"><span class="std std-ref">matcher-neighbors</span></a> &lt;integer&gt;</dt><dd><p>Number of nearest images to pre-match based on GPS exif data. Set to 0 to skip pre-matching. Default: <code class="docutils literal notranslate"><span class="pre">8</span></code></p>
 </dd>
 <dt><a class="reference internal" href="matcher-type/#matcher-type"><span class="std std-ref">matcher-type</span></a> bow |  bruteforce |  flann</dt><dd><p>Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of Words. FLANN is slower, but more stable. BOW is faster, but can sometimes miss valid matches. BRUTEFORCE is very slow but robust.. Default: <code class="docutils literal notranslate"><span class="pre">flann</span></code></p>
 </dd>
@@ -503,11 +502,13 @@
 </dd>
 <dt><a class="reference internal" href="resize-to/#resize-to"><span class="std std-ref">resize-to</span></a> &lt;integer&gt;</dt><dd><p>Option héritée (utilisez plutôt –feature-quality). Redimensionne les images par le côté le plus large à des fins d’extraction de caractéristiques uniquement. Réglez sur -1 pour désactiver. Cela n’affecte pas la qualité de la résolution finale de l’orthophoto et ne redimensionnera pas les images originales. Par défaut : <code class="docutils literal notranslate"><span class="pre">2048</span></code></p>
 </dd>
-<dt><span class="xref std std-ref">sfm-algorithm</span></dt><dd><p>Selects the structure from motion algorithm. If set to <code class="docutils literal notranslate"><span class="pre">incremental</span></code> then orientation angles in both EXIF data and geolocation files are ignored. To use these angles for georeferencing, set to <code class="docutils literal notranslate"><span class="pre">triangulation</span></code>. Default: <code class="docutils literal notranslate"><span class="pre">incremental</span></code></p>
+<dt><a class="reference internal" href="sfm-algorithm/#sfm-algorithm"><span class="std std-ref">sfm-algorithm</span></a> incremental |  triangulation</dt><dd><p>Choose the structure from motion algorithm. For aerial datasets, if camera GPS positions and angles are available, triangulation can generate better results. . Default: <code class="docutils literal notranslate"><span class="pre">incremental</span></code></p>
 </dd>
 <dt><a class="reference internal" href="skip-3dmodel/#skip-3dmodel"><span class="std std-ref">skip-3dmodel</span></a></dt><dd><p>Ignorer la génération d’un modèle 3D complet. Cela peut vous faire gagner du temps si vous n’avez besoin que de résultats 2D tels que des orthophotos et des DEM. Par défaut : <code class="docutils literal notranslate"><span class="pre">Faux</span></code></p>
 </dd>
 <dt><a class="reference internal" href="skip-band-alignment/#skip-band-alignment"><span class="std std-ref">skip-band-alignment</span></a></dt><dd><p>Lors du traitement d’ensembles de données multispectrales, ODM alignera automatiquement les images pour chaque bande. Si les images ont été post-traitées et sont déjà alignées, utilisez cette option. Par défaut : <code class="docutils literal notranslate"><span class="pre">Faux</span></code></p>
+</dd>
+<dt><a class="reference internal" href="skip-orthophoto/#skip-orthophoto"><span class="std std-ref">skip-orthophoto</span></a></dt><dd><p>Skip generation of the orthophoto. This can save time if you only need 3D results or DEMs. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="skip-report/#skip-report"><span class="std std-ref">skip-report</span></a></dt><dd><p>Ignorer la génération du rapport PDF. Cela peut vous faire gagner du temps si vous n’avez pas besoin d’un rapport. Par défaut : <code class="docutils literal notranslate"><span class="pre">Faux</span></code></p>
 </dd>
@@ -585,7 +586,6 @@
 <li class="toctree-l1"><a class="reference internal" href="gps-accuracy/">gps-accuracy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="help/">help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ignore-gsd/">ignore-gsd</a></li>
-<li class="toctree-l1"><a class="reference internal" href="matcher-distance/">matcher-distance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matcher-neighbors/">matcher-neighbors</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matcher-type/">matcher-type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="max-concurrency/">max-concurrency</a></li>
@@ -618,8 +618,10 @@
 <li class="toctree-l1"><a class="reference internal" href="rerun-all/">rerun-all</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rerun-from/">rerun-from</a></li>
 <li class="toctree-l1"><a class="reference internal" href="resize-to/">resize-to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sfm-algorithm/">sfm-algorithm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="skip-3dmodel/">skip-3dmodel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="skip-band-alignment/">skip-band-alignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skip-orthophoto/">skip-orthophoto</a></li>
 <li class="toctree-l1"><a class="reference internal" href="skip-report/">skip-report</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sm-cluster/">sm-cluster</a></li>
 <li class="toctree-l1"><a class="reference internal" href="smrf-scalar/">smrf-scalar</a></li>
