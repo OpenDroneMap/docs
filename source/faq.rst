@@ -28,3 +28,13 @@ Nope, sorry!
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/faq.rst>`_!
 
+*********
+Memory issues
+*********
+Your computer is running out of memory, what can I do?
+-------------------------------------------------------------------------------------------
+1. First you can buy more RAM, this is the ultimate and final solution.
+2. Alternatively you can resize the images when uploading.
+3. If using Windows and Docker, you can add a row in your .wslconfig file so that Docker will use a swapfile: "swapfile=C:\\temp\\wsl-swap.vhdx"
+4. In Linux you can do the same, add a swap file or a partition.
+In Both cases you will need preferably a fast SSD or an NVME drive, but it will be still slow.
