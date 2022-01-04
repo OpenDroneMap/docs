@@ -353,6 +353,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#are-there-other-licensing-options-aside-from-the-agplv3">Are there other licensing options aside from the AGPLv3?</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#memory-issues">Memory issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#your-computer-is-running-out-of-memory-what-can-i-do">Your computer is running out of memory, what can I do?</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -400,6 +404,23 @@
 <h3>Are there other licensing options aside from the AGPLv3?<a class="headerlink" href="#are-there-other-licensing-options-aside-from-the-agplv3" title="Permalink to this headline"></a></h3>
 <p>Nope, sorry!</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/faq.rst">this page</a>!</p>
+</section>
+</section>
+<section id="memory-issues">
+<h2>Memory issues<a class="headerlink" href="#memory-issues" title="Permalink to this headline"></a></h2>
+<section id="your-computer-is-running-out-of-memory-what-can-i-do">
+<h3>Your computer is running out of memory, what can I do?<a class="headerlink" href="#your-computer-is-running-out-of-memory-what-can-i-do" title="Permalink to this headline"></a></h3>
+<ol class="arabic simple">
+<li><p>First you can buy more RAM, this is the ultimate and final solution.</p></li>
+<li><p>Alternatively you can resize the images when uploading.</p></li>
+<li><p>If using Windows and Docker, you can add a row in your .wslconfig file so that Docker will use a swapfile:</p></li>
+</ol>
+<blockquote>
+<div><p>“swap=128GB”
+“swapfile=C:\temp\wsl-swap.vhdx”</p>
+</div></blockquote>
+<p>4. In Linux you can do the same, add a swap file or a partition.
+In Both cases you will need preferably a fast SSD or an NVME drive, but it will be still slow.</p>
 </section>
 </section>
 </section>
