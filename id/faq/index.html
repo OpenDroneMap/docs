@@ -355,7 +355,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#memory-issues">Memory issues</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#your-computer-is-running-out-of-memory-what-can-i-do">Your computer is running out of memory, what can I do?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#your-computer-is-running-out-of-memory-what-can-you-do">Your computer is running out of memory, what can you do?</a></li>
 </ul>
 </li>
 </ul>
@@ -409,19 +409,20 @@
 </section>
 <section id="memory-issues">
 <h2>Memory issues<a class="headerlink" href="#memory-issues" title="Link permanen untuk headline ini"></a></h2>
-<section id="your-computer-is-running-out-of-memory-what-can-i-do">
-<h3>Your computer is running out of memory, what can I do?<a class="headerlink" href="#your-computer-is-running-out-of-memory-what-can-i-do" title="Link permanen untuk headline ini"></a></h3>
+<section id="your-computer-is-running-out-of-memory-what-can-you-do">
+<h3>Your computer is running out of memory, what can you do?<a class="headerlink" href="#your-computer-is-running-out-of-memory-what-can-you-do" title="Link permanen untuk headline ini"></a></h3>
 <ol class="arabic simple">
 <li><p>First you can buy more RAM, this is the ultimate and final solution.</p></li>
-<li><p>Alternatively you can resize the images when uploading.</p></li>
-<li><p>If using Windows and Docker, you can add a row in your .wslconfig file so that Docker will use a swapfile:</p></li>
+<li><p>Alternatively you can resize the images when uploading and/or tweak your quality settings.</p></li>
+<li><p>If you are using Windows with Docker+WSL2, (<a class="reference external" href="https://docs.docker.com/desktop/windows/wsl/">https://docs.docker.com/desktop/windows/wsl/</a>) you can add two rows in your .wslconfig file so that Docker will use a swapfile:</p></li>
 </ol>
 <blockquote>
-<div><p>&quot;swap=128GB&quot;
-&quot;swapfile=C:\temp\wsl-swap.vhdx&quot;</p>
+<div><p>&quot;swap=128GB&quot; # you will need 128GB of disk space of course
+&quot;swapfile=C:\temp\wsl-swap.vhdx&quot; # this is where the swap file will be stored</p>
 </div></blockquote>
-<p>4. In Linux you can do the same, add a swap file or a partition.
-In Both cases you will need preferably a fast SSD or an NVME drive, but it will be still slow.</p>
+<p>Full documentation: <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/wsl-config">https://docs.microsoft.com/en-us/windows/wsl/wsl-config</a>
+4. In Linux you can do the same as 3. adding a swap file or a partition dedicated to swap. For more information, please consult your search engine of choice as there are a lot of different distributions and methods to add swap.
+In both cases you will need preferably a fast SSD or an NVME drive, and  the computing process will be still a LOT slower.</p>
 </section>
 </section>
 </section>
