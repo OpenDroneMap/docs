@@ -6,6 +6,7 @@ from pathlib import Path
 from string import Template
 
 parser = argparse.ArgumentParser(description='Extract ODM strings.')
+# https://raw.githubusercontent.com/OpenDroneMap/ODM/master/opendm/config.py
 parser.add_argument('input', type=str,
                     help='URL to ODM\'s config.py')
 args = parser.parse_args()
