@@ -17,7 +17,7 @@ Options and Flags
 :ref:`build-overviews<build-overviews>` 
   Build orthophoto overviews for faster display in programs such as QGIS. Default: ``False``
 
-:ref:`camera-lens<camera-lens>` auto |  perspective |  brown |  fisheye |  spherical
+:ref:`camera-lens<camera-lens>` auto |  perspective |  brown |  fisheye |  spherical |  equirectangular |  dual
   Set a camera projection type. Manually setting a value can help improve geometric undistortion. By default the application tries to determine a lens type from the images metadata. . Default: ``auto``
 
 :ref:`cameras<cameras>` <json>
