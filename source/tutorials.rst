@@ -296,6 +296,65 @@ Cleaning up after Docker
 
 Docker has a lamentable use of space and by default does not clean up excess data and machines when processes are complete. This can be advantageous if we need to access a process that has since terminated, but carries the burden of using increasing amounts of storage over time. Maciej Łebkowski has an `excellent overview of how to manage excess disk usage in docker <https://lebkowski.name/docker-volumes/>`_.
 
+*****************
+Using Singularity
+*****************
+
+'Singularity <https://sylabs.io/>'_ is another container platform able to run Docker images. Singularity could be used from laptop to large HPC clusters, local university or company clusters, a single server, in the cloud...
+A container is a single file without anything else to install
+
+Downloading image
+=================
+Singularity can use ODM Docker container after their download. It creates .sif images
+
+For latest ODM Docker image
+::
+    > singularity pull --disable-cache  docker://opendronemap/odm:latest
+
+For latest ODM GPU Docker image
+
+::
+    > singularity pull --disable-cache  docker://opendronemap/odm:gpu
+
+Using Singularity SIF image
+===========================
+
+As Singularity has a different way to map directories than Docker, a bash script file is a good solution to map ODM directories. 
+Here is a linux example for ODM ::
+
+   images_dir=/path_to_image_dir/
+   name=`basename $images_dir`
+   output_dir=/path_to_output_directories/$name
+   mkdir -p $output_dir 
+
+   singularity run
+   --bind $images_dir:/$output_dir/code/images,\
+   --writable-tmpfs odm_latest.sif  \
+   --orthophoto-png --mesh-octree-depth 12 --ignore-gsd --dtm \
+   --smrf-threshold 0.4 --smrf-window 24 --dsm --pc-csv --pc-las --orthophoto-kmz \
+   --ignore-gsd  --matcher-type flann --feature-quality ultra --max-concurrency 16 \
+   --use-hybrid-bundle-adjustment --build-overviews --time --min-num-features 10000 \
+   --debug --project-path $output_dir
+
+
+Here is a linux example for the ODM with GPU::
+
+   images_dir=/path_to_image_dir/
+   name=`basename $images_dir`
+   output_dir=/path_to_output_directories/$name
+   mkdir -p $output_dir 
+
+   singularity run
+   --bind $images_dir:/$output_dir/code/images,\
+   --writable-tmpfs odm_latest.sif  \
+   --orthophoto-png --mesh-octree-depth 12 --ignore-gsd --dtm \
+   --smrf-threshold 0.4 --smrf-window 24 --dsm --pc-csv --pc-las --orthophoto-kmz \
+   --ignore-gsd  --matcher-type flann --feature-quality ultra --max-concurrency 16 \
+   --use-hybrid-bundle-adjustment --build-overviews --time --min-num-features 10000 \
+   --debug --project-path $output_dir
+
+
+
 *************************************
 Using ODM from low-bandwidth location
 *************************************
