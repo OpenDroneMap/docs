@@ -334,7 +334,7 @@ Here is a linux example for ODM ::
    --smrf-threshold 0.4 --smrf-window 24 --dsm --pc-csv --pc-las --orthophoto-kmz \
    --ignore-gsd  --matcher-type flann --feature-quality ultra --max-concurrency 16 \
    --use-hybrid-bundle-adjustment --build-overviews --time --min-num-features 10000 \
-   --debug --project-path $output_dir
+   --project-path $output_dir
 
 
 Here is a linux example for the ODM with GPU::
@@ -351,7 +351,7 @@ Here is a linux example for the ODM with GPU::
    --smrf-threshold 0.4 --smrf-window 24 --dsm --pc-csv --pc-las --orthophoto-kmz \
    --ignore-gsd  --matcher-type flann --feature-quality ultra --max-concurrency 16 \
    --use-hybrid-bundle-adjustment --build-overviews --time --min-num-features 10000 \
-   --debug --project-path $output_dir
+   --project-path $output_dir
 
 
 
