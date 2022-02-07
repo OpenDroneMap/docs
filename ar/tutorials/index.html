@@ -627,10 +627,9 @@ A container is a single file without anything else to install</p>
 </pre></div>
 </div>
 <p>For latest ODM GPU Docker image</p>
-<dl class="simple">
-<dt>::</dt><dd><p>&gt; singularity pull --disable-cache  docker://opendronemap/odm:gpu</p>
-</dd>
-</dl>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">singularity</span> <span class="n">pull</span> <span class="o">--</span><span class="n">disable</span><span class="o">-</span><span class="n">cache</span>  <span class="n">docker</span><span class="p">:</span><span class="o">//</span><span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span><span class="p">:</span><span class="n">gpu</span>
+</pre></div>
+</div>
 </section>
 <section id="using-singularity-sif-image">
 <h3>Using Singularity SIF image<a class="headerlink" href="#using-singularity-sif-image" title="Permalink to this headline"></a></h3>
@@ -651,7 +650,7 @@ singularity run
 --project-path $output_dir
 </pre></div>
 </div>
-<p>Here is a linux example for the ODM with GPU:</p>
+<p>Here is a linux example for the ODM with GPU</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>images_dir=/path_to_image_dir/
 name=`basename $images_dir`
 output_dir=/path_to_output_directories/$name

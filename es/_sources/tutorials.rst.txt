@@ -312,7 +312,6 @@ For latest ODM Docker image
     > singularity pull --disable-cache  docker://opendronemap/odm:latest
 
 For latest ODM GPU Docker image
-
 ::
     > singularity pull --disable-cache  docker://opendronemap/odm:gpu
 
@@ -337,7 +336,7 @@ Here is a linux example for ODM ::
    --project-path $output_dir
 
 
-Here is a linux example for the ODM with GPU::
+Here is a linux example for the ODM with GPU ::
 
    images_dir=/path_to_image_dir/
    name=`basename $images_dir`
