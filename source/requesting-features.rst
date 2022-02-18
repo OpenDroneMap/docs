@@ -10,6 +10,12 @@ to do anything, and it’s hard to know what a reasonable request is. From the i
 project, they can feel very resource constrained: largely by time, money, and opportunity 
 overload.
 
+**Demanding that a feature be implemented is probably not going to convince the development team to do so**. Imagine 
+if somebody knocked on your door and asked you to "stop reading this page right now and come to my house to cook me dinner!". Your first response might very reasonably be "who on earth is this person and why should I spend my time and energy fulfilling his agenda instead of my own?".
+
+**Suggesting** that a feature be implemented is a more effective (and cordial) way to ask for new features, especially if you're prepared to offer some of your own resources (time, funds or both) to help get the feature implemented. Explaining why 
+*your* suggestion can benefit others can also help. If the feature benefits you exclusively, it might be harder to convince others to do the work for you.
+
 A feature request can be submitted as issues on the applicable Github repository (e.g., 
 `WebODM <https://github.com/OpenDroneMap/WebODM/issues>`_ or `ODM <https://github.com/OpenDroneMap/ODM/issues>`_ 
 or similar) or more simply as a discussion topic on `the community forum <https://community.opendronemap.org/>`_.  
