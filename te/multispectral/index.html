@@ -338,6 +338,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">మల్టీస్పెక్ట్రల్ సపోర్ట్</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#hardware">హార్డ్వేర్</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#usage">వాడుక</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#sentera-agx710">Sentera AGX710</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../requesting-features/">ఫీచర్లను ఎలా అభ్యర్థించాలి</a></li>
@@ -401,7 +402,7 @@
 <blockquote>
 <div><ul class="simple">
 <li><p><cite>మైకాసెన్స్ రెడ్‌ఎడ్జ్ -1010 మరియు ఆల్టస్ &lt;https://www.micasense.com/&gt;</cite> _</p></li>
-<li><p><cite>సెంటెరా 6 ఎక్స్ &lt;https://sentera.com/6x/&gt;</cite> _</p></li>
+<li><p><a class="reference external" href="https://sentera.com/data-capture/6x-multispectral/">Sentera 6X</a></p></li>
 </ul>
 </div></blockquote>
 <p>ఇతర కెమెరాలు కూడా పనిచేయవచ్చు. <cite>డేటాసెట్లను పంచుకోవడం &lt;https://community.opendronemap.org/c/datasets/10&gt;</cite> _ ఇతర కెమెరాలతో సంగ్రహించడం ద్వారా ఈ జాబితాను విస్తరించడానికి మీరు మాకు సహాయపడగలరు.</p>
@@ -410,6 +411,34 @@
 <h2>వాడుక<a class="headerlink" href="#usage" title="Permalink to this headline"></a></h2>
 <p>రేడియోమెట్రిక్ సాధారణీకరణను ప్రారంభించడానికి అన్ని చిత్రాల నుండి అన్ని చిత్రాలను ఒకేసారి ప్రాసెస్ చేయండి (బ్యాండ్‌లను బహుళ ఫోల్డర్‌లుగా వేరు చేయవద్దు) మరియు <cite>- రేడియోమెట్రిక్-కాలిబ్రేషన్</cite> పరామితిని పాస్ చేయండి. చిత్రాలు బహుళ-కెమెరా సెటప్‌లో భాగమైతే, ఫలితంగా వచ్చే ఆర్థోఫోటోలో N బ్యాండ్‌లు ఉంటాయి, ప్రతి కెమెరాకు ఒకటి (+ ఆల్ఫా).</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst">this page</a>!</p>
+</section>
+<section id="sentera-agx710">
+<h2>Sentera AGX710<a class="headerlink" href="#sentera-agx710" title="Permalink to this headline"></a></h2>
+<p>While this sensor is not officialy supported by ODM, the following workflow gives some good results.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>all JPGs from the NDRE directory should be renamed with the exact following pattern 0000X_NIR.jpg. No extra '_' should be present in the file names ie 10_51_14_IMG_00008.jpg =&gt; 00008_NIR.jpg</p></li>
+<li><p>all JPGs from the nRGB directory should be renamed with the exact following pattern 0000X_RGB.jpg. No extra '_' should be present in the file names ie 10_51_14_IMG_00023.jpg =&gt; 00023_RGB.jpg</p></li>
+<li><p>All renamed XXXX_NIR.jpg and XXXX_RGB.jpg should be placed in the same folder</p></li>
+<li><p>The following command could be used to create an odm_orthophoto.tif file</p></li>
+</ul>
+</div></blockquote>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span>  <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">v</span>  <span class="n">input_image_dir</span><span class="o">/</span><span class="p">:</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">images</span> \
+<span class="o">-</span><span class="n">v</span> <span class="n">output_dir</span><span class="o">/</span><span class="n">odm_georeferencing</span><span class="p">:</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_georeferencing</span>  \
+<span class="o">-</span><span class="n">v</span> <span class="n">output_dir</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="p">:</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span> \
+<span class="o">-</span><span class="n">v</span> <span class="n">output_dir</span><span class="o">/</span><span class="n">odm_report</span><span class="p">:</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_report</span> \
+<span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span> <span class="o">--</span><span class="n">auto</span><span class="o">-</span><span class="n">boundary</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>After the successful ODM processing, odm_orthophoto.tif bands names could be accurately renamed using contrib/ndvi/rename_sentera_agx710_multispectral_tif.py script</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python3</span> <span class="n">contrib</span><span class="o">/</span><span class="n">ndvi</span><span class="o">/</span><span class="n">rename_sentera_agx710_multispectral_tif</span><span class="o">.</span><span class="n">py</span>  <span class="n">output_dir</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">tif</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>output_dir/odm_orthophoto.tif could be open with <a class="reference external" href="https://qgis.org/">QGIS</a> with correct band names</p></li>
+</ul>
 </section>
 </section>
 
