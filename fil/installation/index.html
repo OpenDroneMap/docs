@@ -43,6 +43,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Instalasyon at Paano Simulan</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quickstart">Quickstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hardware-recommendations">Hardware Recommendations</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Installation</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a><ul>
@@ -395,46 +396,12 @@
   <section id="installation-and-getting-started">
 <h1>Instalasyon at Paano Simulan<a class="headerlink" href="#installation-and-getting-started" title="Permalink to this headline"></a></h1>
 <p>Ang seksiyon na ito ay binago ng bahagya ng may permisyon galing sa <a class="reference external" href="https://odmbook.com">OpenDroneMap: The Missing Guide</a>, na gawa ni Piero Toffanin.</p>
-<p>Ang OpenDroneMap ay isang salita na ginagamit patukoy sa isang single command line na programa (na kilala rin bilang ODM na proyekto). Sa kamakailan lamang na progreso ng web interface, ang API ay ibang tools, pati na rin ang OpenDroneMap ang naging pinagmulan ng iba't-ibang programa upang ma-proseso, ma-suri at makita ang aerial data. ang ekosistem na ito ay ginawa para sa iilang  component:</p>
-<figure class="align-center">
-<img alt="ODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/odm-logo-64x64.png" />
-</figure>
-<ul class="simple">
-<li><p>Ang <strong>ODM</strong> ay ang processing engine, na pwedeng gamitin sa command line. Tinatanggap nito ang mga imahe bilang input at nagpo-produce ng iba't-ibang outputs katulad ng point clouds, 3D models at orthophotos.</p></li>
-</ul>
-<figure class="align-center">
-<img alt="NodeODM Logo" src="../_images/NodeODMLogo.png" />
-</figure>
-<ul class="simple">
-<li><p>Ang <strong>NodeODM</strong> ay isang light-weight API na nasa taas ng ODM. Ina-allow nito ang gumagamit ng aplikasyon na ma-access ang mga functions ng ODM sa computer network.</p></li>
-</ul>
-<figure class="align-center">
-<img alt="WebODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/webodm-icon-64x64.png" />
-</figure>
-<ul class="simple">
-<li><p>Ang <strong>WebODM</strong> ay isang friendly user na interface na may kasamang map viewer, 3D viewer, user logins, plugin system at marami pang iba na ine-expect sa modern drone mapping platforms.</p></li>
-</ul>
-<figure class="align-center">
-<img alt="CloudODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2019/01/cloudodm-64x64.png" />
-</figure>
-<ul class="simple">
-<li><p>Ang <strong>CloudODM</strong> ay isang maliit na command line client na nagcocommunicate sa ODM via NodeODM API</p></li>
-</ul>
-<figure class="align-center">
-<img alt="PyODM Logo" src="../_images/PyODMLogo.png" />
-</figure>
-<ul class="simple">
-<li><p>Ang <strong>PyODM</strong> ay Python SDK na gumagawa ng tasks via NodeODM API. Mababasa ang detalye sa “Automated Processing With Python” na chapter</p></li>
-</ul>
-<figure class="align-center">
-<img alt="ClusterODM Logo" src="../_images/ClusterODMLogo.png" />
-</figure>
-<ul class="simple">
-<li><p>Ang <strong>ClusterODM</strong> ay isang load balancer na pang connect ng multiple NodeODM instances</p></li>
-</ul>
-<p>Ang ODM, NoteODM at WebODM ay mayroon sa lahat ng pangunahin na plataporma (Windows, macOS at Linux) sa pamamagitan ng programang docker, na kailangan para patakbuhin ang software. Ang docker ay naghahandog ng paraan kung paano patatakbuhin ang “containers”. Ang containers ay kaha ng mga kopya ng kabuoan na sisyema, ang software nito at ang dependencies. Ang mga container na ito ay tumatakbo sa loob ng virtual environment. Sa linux, mayroong virtual environment sa operating system at ito ay mahusay na klase. Sa macOS at Windows naman, ang container ay napapatakbo sa pamamagitan ng VM, so may kaunting oberhed ngunit naaangkop pa rin sa pagpapatakbo ng software. Kapag na-install, ang gagamit ay hindi na kelangan magalala sa docker dahil ito ay gumagana (madalas) ng malinaw.</p>
-<p>Kung walang docker, hindi posible na magpatakbo ng ODM sa macOS at Windows. Sa mga plataporma na ito, ang ODM ay hindi tatakbo ng kusa. Ang paghahanada para sa susunod na debelopment ay nakatuon sa pagkilos sa makabagong Windows Subsystem para sa Linux (WSL) at ang posibilidad na gawing native port ng lahat ng dependencies sa macOS na makakapagpadali sa pagi-install.</p>
-<p>Sa Ubuntu Linux 18.04 kaya patakbuhin ang lahat ng OpenDroneMap software. Ngutin, sa kadahilanan na may maliit na performance penalty sa pagpapatakbo ng docker sa Linux, and docker ay diretso sa pagset-up sa plataporma nito. Ito ay hindi inirerekomenda. Sa Linux, ang kalamangan ng containerization ay higit na malaki sa maliit na performance penalty. Sa docker, ang gagamit ay makakakuha ng mas madali na one-step updates ng software so ito ay maganda.</p>
+<section id="quickstart">
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline"></a></h2>
+<p>Installers for OpenDroneMap are available for purchase from UAV4Geo, and are the easiest way to get started and come with support.</p>
+<p><a class="reference external" href="https://opendronemap.org/webodm/download/#installer">https://opendronemap.org/webodm/download/#installer</a></p>
+<p>That said, OpenDroneMap is a free and open source ecoystem. Community support is available for those looking to install themselves and directions follow:</p>
+</section>
 <section id="hardware-recommendations">
 <h2>Hardware Recommendations<a class="headerlink" href="#hardware-recommendations" title="Permalink to this headline"></a></h2>
 <p>Ang pinakakonti na bilang ng requirements para patakbuhin ang software ay:</p>
@@ -450,6 +417,41 @@
 <li><p>16 GB RAM</p></li>
 </ul>
 <p>Ang nasa taas ay papayagan ang ilang daan na imahe na maprocess ng walang masyadong issue. Ang CPU na maraming core ay papahintulutan ang mas mabilis na pagproseso, samantalang ang graphics card (GPU) naman ay kasalukuyan na walang epekto sa performance. para sa pagprocess ng mas maraming imahe, magdagdag ng mas maraming disk space sa RAM linearly para sa bilang ng imahe na kailangan iprocess.</p>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Minimum RAM needed for N images</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Number of images</p></th>
+<th class="head"><p>RAM or RAM + Swap</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>40</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>250</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-even"><td><p>500</p></td>
+<td><p>32</p></td>
+</tr>
+<tr class="row-odd"><td><p>1500</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-even"><td><p>2500</p></td>
+<td><p>128</p></td>
+</tr>
+<tr class="row-odd"><td><p>3500</p></td>
+<td><p>192</p></td>
+</tr>
+<tr class="row-even"><td><p>5000</p></td>
+<td><p>256</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="installation">
 <span id="docker-installation"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>

@@ -44,6 +44,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">التثبيت والبدء</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quickstart">Quickstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hardware-recommendations">توصيات الأجهزة</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">التركيب</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a><ul>
@@ -396,46 +397,12 @@
   <section id="installation-and-getting-started">
 <h1>التثبيت والبدء<a class="headerlink" href="#installation-and-getting-started" title="Permalink to this headline"></a></h1>
 <p>تم اقتباس هذا القسم وتعديله بإذن من  <a class="reference external" href="https://odmbook.com">OpenDroneMap: الدليل المفقود</a>, by Piero Toffanin.</p>
-<p>حتى وقت قريب كان OpenDroneMap هو المصطلح المستخدم للإشارة إلى تطبيق سطر أوامر واحد (ما يعرف الآن بمشروع ODM). مع التطور الأخير لواجهة الويب وواجهة برمجة التطبيقات والأدوات الأخرى ، أصبحت OpenDroneMap نظامًا إيكولوجيًا من التطبيقات المختلفة لمعالجة البيانات الجوية وتحليلها وعرضها. يتكون هذا النظام البيئي من عدة مكونات:</p>
-<figure class="align-center">
-<img alt="ODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/odm-logo-64x64.png" />
-</figure>
-<ul class="simple">
-<li><p>** ODM ** هو محرك المعالجة ، والذي يمكن استخدامه من سطر الأوامر. يأخذ الصور كمدخلات وينتج مجموعة متنوعة من المخرجات ، بما في ذلك الغيوم النقطية ، والنماذج ثلاثية الأبعاد والصور التقويمية</p></li>
-</ul>
-<figure class="align-center">
-<img alt="NodeODM Logo" src="../_images/NodeODMLogo.png" />
-</figure>
-<ul class="simple">
-<li><p>** NodeODM ** عبارة عن واجهة برمجة تطبيقات خفيفة الوزن مبنية على أعلى ODM. يسمح للمستخدمين والتطبيقات للوصول إلى وظائف ODM عبر شبكة الكمبيوتر</p></li>
-</ul>
-<figure class="align-center">
-<img alt="WebODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/webodm-icon-64x64.png" />
-</figure>
-<ul class="simple">
-<li><p>** WebODM ** عبارة عن واجهة مستخدم سهلة الاستخدام تتضمن عارض خرائط وعارض ثلاثي الأبعاد وتسجيلات دخول المستخدمين ونظامًا إضافيًا والعديد من الميزات الأخرى المتوقعة من منصات رسم الخرائط الحديثة بطائرات بدون طيار</p></li>
-</ul>
-<figure class="align-center">
-<img alt="CloudODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2019/01/cloudodm-64x64.png" />
-</figure>
-<ul class="simple">
-<li><p>** CloudODM ** هو عميل سطر أوامر صغير للتواصل مع ODM عبر واجهة برمجة تطبيقات NodeODM</p></li>
-</ul>
-<figure class="align-center">
-<img alt="PyODM Logo" src="../_images/PyODMLogo.png" />
-</figure>
-<ul class="simple">
-<li><p>** PyODM ** هي Python SDK لإنشاء المهام عبر واجهة برمجة تطبيقات NodeODM. نغطيها بمزيد من التفصيل في فصل &quot;المعالجة الآلية باستخدام Python&quot;</p></li>
-</ul>
-<figure class="align-center">
-<img alt="ClusterODM Logo" src="../_images/ClusterODMLogo.png" />
-</figure>
-<ul class="simple">
-<li><p>** ClusterODM ** هو موازن تحميل لربط أمثلة NodeODM المتعددة معًا</p></li>
-</ul>
-<p>تتوفر ODM و NodeODM و WebODM على جميع المنصات الرئيسية (Windows و macOS و Linux) عبر برنامج يسمى docker ، وهو مطلوب لتشغيل البرنامج. تقدم شركة Docker طريقة لتشغيل &quot;الحاويات&quot;. الحاويات عبارة عن نُسخ مُعبّأة من نظام برمته وبرامجه وتبعياته. تعمل هذه الحاويات في بيئة افتراضية. تتوفر بيئة افتراضية على Linux من نظام التشغيل وهي فعالة للغاية. في نظامي التشغيل macOS و Windows ، يتم تشغيل الحاويات داخل جهاز ظاهري ، لذلك هناك القليل من النفقات العامة. لكنها لا تزال مناسبة جدًا لتشغيل البرنامج. بمجرد تثبيت المستخدمين ، لا داعي للقلق كثيرًا بشأن عامل الميناء ، لأنه يعمل (تقريبًا) بشفافية.</p>
-<p>بدون عامل إرساء ، لن يكون من الممكن تشغيل ODM على Windows أو macOS. لا يمكن تشغيل ODM على هذه الأنظمة الأساسية بشكل أصلي. يتم تركيز جهود التطوير المستقبلية على الاستفادة من نظام Windows الفرعي الجديد لنظام Linux (WSL) وإمكانية جعل المنفذ الأصلي لجميع التبعيات إلى macOS ، الأمر الذي سيجعل التثبيت أسهل بكثير.</p>
-<p>في Ubuntu Linux 18.04 ، من الممكن تشغيل جميع برامج OpenDroneMap أصلاً. ومع ذلك ، نظرًا لوجود القليل جدًا من عقوبة الأداء لتشغيل عامل الميناء على Linux ووصلة عامل الميناء مباشرة على الإعداد على هذا النظام الأساسي ، فإننا لا نوصي بذلك. في لينكس ، تفوق مزايا الحاويات بشكل كبير عقوبة الأداء الصغيرة. مع مستخدمي docker ، يحصلون أيضًا على تحديثات سهلة لخطوة واحدة للبرنامج ، وهذا أمر جيد.</p>
+<section id="quickstart">
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline"></a></h2>
+<p>Installers for OpenDroneMap are available for purchase from UAV4Geo, and are the easiest way to get started and come with support.</p>
+<p><a class="reference external" href="https://opendronemap.org/webodm/download/#installer">https://opendronemap.org/webodm/download/#installer</a></p>
+<p>That said, OpenDroneMap is a free and open source ecoystem. Community support is available for those looking to install themselves and directions follow:</p>
+</section>
 <section id="hardware-recommendations">
 <h2>توصيات الأجهزة<a class="headerlink" href="#hardware-recommendations" title="Permalink to this headline"></a></h2>
 <p>الحد الأدنى من المتطلبات لتشغيل البرنامج هي:</p>
@@ -451,6 +418,41 @@
 <li><p>ذاكرة رام 16 جيجا</p></li>
 </ul>
 <p>سيسمح ما سبق بمعالجة بضع مئات من الصور دون مشاكل كثيرة. ستسمح وحدة المعالجة المركزية (CPU) المزودة بمزيد من النوى بمعالجة أسرع ، بينما لا تؤثر بطاقة الرسومات (GPU) حاليًا على الأداء. لمعالجة المزيد من الصور ، أضف المزيد من مساحة القرص وذاكرة الوصول العشوائي خطيًا إلى عدد الصور التي تحتاج إلى معالجتها.</p>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Minimum RAM needed for N images</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Number of images</p></th>
+<th class="head"><p>RAM or RAM + Swap</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>40</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>250</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-even"><td><p>500</p></td>
+<td><p>32</p></td>
+</tr>
+<tr class="row-odd"><td><p>1500</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-even"><td><p>2500</p></td>
+<td><p>128</p></td>
+</tr>
+<tr class="row-odd"><td><p>3500</p></td>
+<td><p>192</p></td>
+</tr>
+<tr class="row-even"><td><p>5000</p></td>
+<td><p>256</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="installation">
 <span id="docker-installation"></span><h2>التركيب<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>

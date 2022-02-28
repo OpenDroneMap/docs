@@ -5,50 +5,14 @@ Installation and Getting Started
 
 This section is excerpted and modified with permission from `OpenDroneMap: The Missing Guide <https://odmbook.com>`_, by Piero Toffanin.
 
-Until recently OpenDroneMap was the term used to refer to a single command line application (what is now known as the ODM project).  With the recent development of a web interface, an API and other tools, OpenDroneMap has become an ecosystem of various applications to process, analyze and display aerial data. This ecosystem is made of several components:
+Quickstart
+----------
 
-.. figure:: https://www.opendronemap.org/wp-content/uploads/2018/07/odm-logo-64x64.png
-   :alt: ODM Logo
-   :align: center
+Installers for OpenDroneMap are available for purchase from UAV4Geo, and are the easiest way to get started and come with support.
 
-* **ODM** is the processing engine, which can be used from the command line. It takes images as input and produces a variety of outputs, including point clouds, 3D models and orthophotos
+https://opendronemap.org/webodm/download/#installer
 
-.. figure:: images/NodeODMLogo.png
-   :alt: NodeODM Logo
-   :align: center
-
-* **NodeODM** is a light-weight API built on top of ODM. It allows users and applications to access the functions of ODM over a computer network
-
-.. figure:: https://www.opendronemap.org/wp-content/uploads/2018/07/webodm-icon-64x64.png
-   :alt: WebODM Logo
-   :align: center
-
-* **WebODM** is a friendly user interface that includes a map viewer, a 3D viewer, user logins, a plugin system and many other features that are expected of modern drone mapping platforms
-
-.. figure:: https://www.opendronemap.org/wp-content/uploads/2019/01/cloudodm-64x64.png
-   :alt: CloudODM Logo
-   :align: center
-
-* **CloudODM** is a small command line client to communicate with ODM via the NodeODM API
-
-.. figure:: images/PyODMLogo.png
-   :alt: PyODM Logo
-   :align: center
-
-* **PyODM** is a Python SDK for creating tasks via the NodeODM API. We cover it in more detail in the “Automated Processing With Python” chapter
-
-.. figure:: images/ClusterODMLogo.png
-   :alt: ClusterODM Logo
-   :align: center
-
-* **ClusterODM** is a load balancer for connecting together multiple NodeODM instances
-
-ODM, NodeODM and WebODM are available on all major platforms (Windows, macOS and Linux) via a program called docker, which is required to run the software. Docker offers a way to run “containers”. Containers are packaged copies of an entire system, its software and its dependencies. These containers run within a virtual environment. On Linux this virtual environment is available from the operating system and is very efficient. On macOS and Windows the containers run within a VM, so there’s a bit of a overhead. but it’s still very suitable for running the software. Once installed users do not have to worry much about docker, as it operates (almost) transparently.
-
-Without docker it would not be possible to run ODM on Windows or macOS. On these platforms ODM cannot run natively. Future development efforts are being focused on leveraging the new Windows Subsystem for Linux (WSL) and the possibility to make a native port of all dependencies to macOS, which is going to make the installation much easier.
-
-On Ubuntu Linux 18.04 it’s feasible to run all OpenDroneMap software natively. However, because there’s very little performance penalty for running docker on Linux and docker is straightforward to setup on this platform, we don’t recommend it. On Linux the advantages of containerization far outweigh a tiny performance penalty. With docker users also get easy one-step updates of the software, so that’s nice.
-
+That said, OpenDroneMap is a free and open source ecoystem. Community support is available for those looking to install themselves and directions follow:
 
 Hardware Recommendations
 ------------------------
@@ -67,6 +31,17 @@ No more than 100-200 images can be processed with the above specifications (the 
 * 16 GB RAM
 
 The above will allow for a few hundred images to be processed without too many issues. A CPU with more cores will allow for faster processing, while a graphics card (GPU) currently has no impact on performance. For processing more images, add more disk space and RAM linearly to the number of images you need to process.
+
+.. csv-table:: Minimum RAM needed for N images
+  :header: "Number of images", "RAM or RAM + Swap"
+
+  "40","4"
+  "250","16"
+  "500","32"
+  "1500","64"
+  "2500","128"
+  "3500","192"
+  "5000","256"
 
 
 .. _docker-installation:

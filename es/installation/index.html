@@ -44,6 +44,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Instalación y Guía de Introducción</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quickstart">Quickstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hardware-recommendations">Recomendaciones de Hardware</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Instalación</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a><ul>
@@ -396,46 +397,12 @@
   <section id="installation-and-getting-started">
 <h1>Instalación y Guía de Introducción<a class="headerlink" href="#installation-and-getting-started" title="Enlazar permanentemente con este título"></a></h1>
 <p>Esta sección es extraída y modificada con el permiso de <a class="reference external" href="https://odmbook.com">OpenDroneMap: The Missing Guide</a>, realizada por Piero Toffanin.</p>
-<p>Hasta hace poco OpenDroneMap era el término usado para referirse a una aplicación de comando único (que ahora es conocido como el proyecto ODM). Con el reciente desarrollo de una interfaz web, una API y otras herramientas, OpenDroneMap se ha convertido en un ecosistema de varias aplicaciones para procesar, analizar y mostrar datos aéreos. Este ecosistema es hecho de varios componentes:</p>
-<figure class="align-center">
-<img alt="ODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/odm-logo-64x64.png" />
-</figure>
-<ul class="simple">
-<li><p><strong>ODM</strong> es un motor de procesamiento, que puede ser usado desde la línea de comando. Este toma imágenes como datos de entrada y produce una variedad de datos de salida, incluyendo nubes de puntos, modelos 3D y ortofotografías</p></li>
-</ul>
-<figure class="align-center">
-<img alt="NodeODM Logo" src="../_images/NodeODMLogo.png" />
-</figure>
-<ul class="simple">
-<li><p><strong>NodeODM</strong> es una aplicación ligera construida sobre ODM. Esta permite a usuarios y aplicaciones tener acceso a las funciones de ODM en una red de computadores</p></li>
-</ul>
-<figure class="align-center">
-<img alt="WebODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/webodm-icon-64x64.png" />
-</figure>
-<ul class="simple">
-<li><p><strong>WebODM</strong> es una interfaz fácil de usar que incluye un visualizador de mapas, un visualizador 3D, registros de los usuarios, un sistema de complementos y muchos más elementos que son esperados de las plataformas de cartografía con dron modernas</p></li>
-</ul>
-<figure class="align-center">
-<img alt="CloudODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2019/01/cloudodm-64x64.png" />
-</figure>
-<ul class="simple">
-<li><p><strong>CloudODM</strong> es un pequeño cliente de la línea de comandos para comunicarse con ODM vía la API NodeODM</p></li>
-</ul>
-<figure class="align-center">
-<img alt="PyODM Logo" src="../_images/PyODMLogo.png" />
-</figure>
-<ul class="simple">
-<li><p><strong>PyODM</strong> es un Python SDK para crear tareas vía la API NodeODM. Cubrimos este aspecto en mayor detalle en el capítulo  “Procesamiento Automático con Python”</p></li>
-</ul>
-<figure class="align-center">
-<img alt="ClusterODM Logo" src="../_images/ClusterODMLogo.png" />
-</figure>
-<ul class="simple">
-<li><p><strong>ClusterODM</strong> es un equilibrador de carga para conectar varias instancias de NodeODM</p></li>
-</ul>
-<p>ODM, NodeODM y WebODM están disponibles en todas las plataformas más importantes (Windows, macOS y Linux) vía un programa llamado docker, el cuál es requerido para hacer funcionar el software. Docker ofrece una manera de correr «contenedores». Los contenedores son copias empaquetadas de un sistema completo, su software y sus dependencias. Estos contenedores funcionan dentro de un ambiente virtual. En Linux este ambiente virtual está disponible desde el sistema operativo y es muy eficiente. En macOS y Windows, estos contenedores funcionan dentro de una máquina virtual, así que hay un poco de sobrecarga, sin embargo, es todavía muy adecuado para ejecutar el software. Una vez instalado los usuarios no deben preocuparse mucho acerca del docker, ya que este opera (casi) transparentemente.</p>
-<p>Sin Docker, no sería posible ejecutar ODM en Windows o macOS. En estas plataformas, ODM no se puede ejecutar de forma nativa. Los esfuerzos de desarrollo futuros se están centrando en aprovechar el nuevo Sub sistema de Windows para Linux (WSL) y la posibilidad de hacer un puerto nativo de todas las dependencias para macOS, lo que facilitará mucho la instalación.</p>
-<p>En Ubuntu Linux 18.04 es posible ejecutar todo el software OpenDroneMap de forma nativa. Sin embargo, como hay muy poca penalización de rendimiento por ejecutar Docker en Linux y Docker es fácil de configurar en esta plataforma, no lo recomendamos. En Linux, las ventajas de usar contenedores superan con creces la pequeña penalización de rendimiento. Con Docker los usuarios también obtienen fáciles actualizaciones del software, lo que está muy bien.</p>
+<section id="quickstart">
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Enlazar permanentemente con este título"></a></h2>
+<p>Installers for OpenDroneMap are available for purchase from UAV4Geo, and are the easiest way to get started and come with support.</p>
+<p><a class="reference external" href="https://opendronemap.org/webodm/download/#installer">https://opendronemap.org/webodm/download/#installer</a></p>
+<p>That said, OpenDroneMap is a free and open source ecoystem. Community support is available for those looking to install themselves and directions follow:</p>
+</section>
 <section id="hardware-recommendations">
 <h2>Recomendaciones de Hardware<a class="headerlink" href="#hardware-recommendations" title="Enlazar permanentemente con este título"></a></h2>
 <p>Los requisitos mínimos para ejecutar el software son:</p>
@@ -451,6 +418,41 @@
 <li><p>16GB de RAM</p></li>
 </ul>
 <p>Las especificaciones de arriba permitirán que unos cuantos cientos de imágenes sean procesados sin muchos problemas. Una CPU con más cores permitirán un procesamiento más rápido, mientras que una tarjeta gráfica (GPU) en el momento no tiene impacto alguno en el desempeño. Para procesar más imágenes, agregue más espacio en el disco y agregue más RAM de manera lineal con respecto al número de imágenes que necesita procesar</p>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Minimum RAM needed for N images</span><a class="headerlink" href="#id4" title="Enlace permanente a esta tabla"></a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Number of images</p></th>
+<th class="head"><p>RAM or RAM + Swap</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>40</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>250</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-even"><td><p>500</p></td>
+<td><p>32</p></td>
+</tr>
+<tr class="row-odd"><td><p>1500</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-even"><td><p>2500</p></td>
+<td><p>128</p></td>
+</tr>
+<tr class="row-odd"><td><p>3500</p></td>
+<td><p>192</p></td>
+</tr>
+<tr class="row-even"><td><p>5000</p></td>
+<td><p>256</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="installation">
 <span id="docker-installation"></span><h2>Instalación<a class="headerlink" href="#installation" title="Enlazar permanentemente con este título"></a></h2>

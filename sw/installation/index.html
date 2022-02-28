@@ -43,6 +43,7 @@
         </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
               <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Kuingiza na kuanza kutumia</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quickstart">Quickstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hardware-recommendations">Sifa za Hardware</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#installation">Uingizaji</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a><ul>
@@ -395,46 +396,12 @@
   <section id="installation-and-getting-started">
 <h1>Kuingiza na kuanza kutumia<a class="headerlink" href="#installation-and-getting-started" title="Permalink to this headline"></a></h1>
 <p>Kipengele hiki kimekubalika na kurahisishwa pamoja na ruhusa kutoka <a class="reference external" href="https://odmbook.com">OpenDroneMap: Maelekezo yaliokosekana</a>, by Piero Toffanin.</p>
-<p>Hadi sasa OpenDroneMap imekua ni term inayotumika kuwakilisha mstari mmoja wa camand application (ambayo sasa inajuulika kama ODM project). Pamoja na maendeleo ya sasa ya web interface ya API na tools nyengine, OpenDroneMap imekua tegemezi kwa application tofauti kwa kuchakata, kuchambua na kuonesha data za ardhini. Utegemeo huu umetengeneza baadhi ya vipengele:</p>
-<figure class="align-center">
-<img alt="ODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/odm-logo-64x64.png" />
-</figure>
-<ul class="simple">
-<li><p><strong>ODM</strong> ni mashine ya kuchakata, ambayo inaweza kutumika kutoka camand line. itachukua picha kama kiingizio na kutoa matokeo tofauti, ikiwemo point clouds, 3D model na orthophotos.</p></li>
-</ul>
-<figure class="align-center">
-<img alt="NodeODM Logo" src="../_images/NodeODMLogo.png" />
-</figure>
-<ul class="simple">
-<li><p><strong>NodeODM</strong> ni light-weight API iliojengwa juu ya ODM. Inaruhusu watumiaji na application kutumia function za ODM kwenye computer mtandao</p></li>
-</ul>
-<figure class="align-center">
-<img alt="WebODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2018/07/webodm-icon-64x64.png" />
-</figure>
-<ul class="simple">
-<li><p><strong>WebODM</strong> ni muonekano rahisi wa mtumiaji inayokusanya muonekano wa ramani, muonesho wa 3D, user login, mfumo wa plagin na vipengele vyengine ambavyo vinategemewa na drone mapping platform za kisasa</p></li>
-</ul>
-<figure class="align-center">
-<img alt="CloudODM Logo" src="https://www.opendronemap.org/wp-content/uploads/2019/01/cloudodm-64x64.png" />
-</figure>
-<ul class="simple">
-<li><p><strong>CloudODM</strong> ni mtari mdogo wa camand ya mteja kwa kuwasiliana na ODM kupitia NodeODM API</p></li>
-</ul>
-<figure class="align-center">
-<img alt="PyODM Logo" src="../_images/PyODMLogo.png" />
-</figure>
-<ul class="simple">
-<li><p><strong>PyODM</strong> ni Python SDK kwa kutengeza kazi kupitia NodeODM API. Tunavalisha maelezo zaidi ndani ya sura ya “Automated Processing With Python”</p></li>
-</ul>
-<figure class="align-center">
-<img alt="ClusterODM Logo" src="../_images/ClusterODMLogo.png" />
-</figure>
-<ul class="simple">
-<li><p><strong>ClusterODM</strong> ni usawa wa kubeba kwa kuunganisha pamoja NodeODM instance nyingi</p></li>
-</ul>
-<p>ODM, NodeODM na WebODM zinapatika katika platform kuu (Windows,macOS na Linux) kupitia programu inayoitwa docker, ambayo unatakiwa ifanye kazi software. Docker inatoa njia ya kutumia “containers”. Container zimekusanywa kukopiwa kwa system yote, ni software na inajitegemea. Container hii inarun ndani ya mazingira ya virtual. Katika Linux mazingira ya virtual hii yanapatika ndani ya operating system na ni rahisi kwa macOS na Windows,  container hio inatumika ndani ya VM, kwa hiyo kuna nafasi mbele. lakini bado ni sawa kutumia software. Mara ikiingizwa mtumiaji hana haja ya kujali kuhusu docker, kama inafanya kazi sawa (kiujumla).</p>
-<p>Bila ya docker itakuwa sio rahisi ODM na Windows au macOS kufanya kazi. Katika platform hizi ODM haziwezi kukufanya kazi inavyotakiwa. Maendeleo ya nguvu za baadae yatazingatia juu ya nguvu mpya za Windows subsystem kwa Linux (WSL) na rahisi kuanzisha port kwa tegemezi zote za macOS, ambazo zitafanyak uingizwa software kwa rahisi zaidi.</p>
-<p>Katika Ubuntu Linux 18.04 inawezekana kurun OpenDroneMap software zote wenyewe. Hata hivyo, kwa sababu kuna kuongezeka ufanisi kwa kufanya kazi docker kwenye Linux na docker ina njia nyepesi ya kupangilia katika platform hii, hatushauri hio. Katika Linux ya faida ya chombo kisichozidi uwezowe uliopewa. Kwa watumiaji wa docker pia wanapata urahisi katika kupangilia kuapdate software, kwa hio ni vizuri.</p>
+<section id="quickstart">
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline"></a></h2>
+<p>Installers for OpenDroneMap are available for purchase from UAV4Geo, and are the easiest way to get started and come with support.</p>
+<p><a class="reference external" href="https://opendronemap.org/webodm/download/#installer">https://opendronemap.org/webodm/download/#installer</a></p>
+<p>That said, OpenDroneMap is a free and open source ecoystem. Community support is available for those looking to install themselves and directions follow:</p>
+</section>
 <section id="hardware-recommendations">
 <h2>Sifa za Hardware<a class="headerlink" href="#hardware-recommendations" title="Permalink to this headline"></a></h2>
 <p>Nafasi ndogo inayotakiwa kwa kutumia software ni:</p>
@@ -450,6 +417,41 @@
 <li><p>16 GB RAM</p></li>
 </ul>
 <p>Sifa hizo zitaruhusu kwa picha kidogo mia moja kuchakatwa bila uzito mwingi. CPU iliyo na core nyingi itaruhu kuchakata haraka, wakati kadi ya picha (CPU) kwa wakati huo haina faida juu ya utendaji kazi. Kwa kuchakata picha zaidi, engeza kiendshi diski na RAM kulingana na picha unazotaka kuchakata.</p>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Minimum RAM needed for N images</span><a class="headerlink" href="#id4" title="Permalink to this table"></a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Number of images</p></th>
+<th class="head"><p>RAM or RAM + Swap</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>40</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>250</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-even"><td><p>500</p></td>
+<td><p>32</p></td>
+</tr>
+<tr class="row-odd"><td><p>1500</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-even"><td><p>2500</p></td>
+<td><p>128</p></td>
+</tr>
+<tr class="row-odd"><td><p>3500</p></td>
+<td><p>192</p></td>
+</tr>
+<tr class="row-even"><td><p>5000</p></td>
+<td><p>256</p></td>
+</tr>
+</tbody>
+</table>
 </section>
 <section id="installation">
 <span id="docker-installation"></span><h2>Uingizaji<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
