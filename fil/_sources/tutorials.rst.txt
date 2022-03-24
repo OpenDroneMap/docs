@@ -133,7 +133,7 @@ GCPs
 To achieve accuracy levels better than 3%, the use of GCP’s is advised. Typically 5 distributed GCP are sufficient to ensure accurate results.
 When placing or measuring GCP, equipment accuracy should be greater than the GSD. Survey grade GNSS and total stations  are intended to provide the required millimetric accuracy.
 
-For further information on the use of GCPs, please refer to the `Ground Control Points section <https://docs.opendronemap.org/gcp.html>`_.
+For further information on the use of GCPs, please refer to the `Ground Control Points section <https://docs.opendronemap.org/gcp/>`_.
 
 Processing parameters
 ======================
