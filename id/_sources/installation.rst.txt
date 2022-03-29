@@ -179,7 +179,7 @@ From Git Gui, go to the **Repository** menu, then click **Git Bash**. From the c
 
 .. code:: bash
 
-	$ ./webodm.sh start&
+	$ ./webodm.sh start &
 	
 Several components will download to your machine at this point, including WebODM, NodeODM and ODM. After the download you should be greeted by the following screen:
 
