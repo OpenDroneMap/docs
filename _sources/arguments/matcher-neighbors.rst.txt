@@ -8,9 +8,9 @@
 matcher-neighbors
 `````````````````
 
-**Options:** *<integer>*
+**Options:** *<positive integer>*
 
-Number of nearest images to pre-match based on GPS exif data. Set to 0 to skip pre-matching. Default: ``8``
+Perform image matching with the nearest images based on GPS exif data. Set to 0 to match by triangulation. Default: ``0``
 
 
 

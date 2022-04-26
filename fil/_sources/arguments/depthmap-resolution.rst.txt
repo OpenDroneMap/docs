@@ -10,7 +10,7 @@ depthmap-resolution
 
 **Options:** *<positive float>*
 
-Legacy option (use --pc-quality instead). Controls the density of the point cloud by setting the resolution of the depthmap images. Higher values take longer to compute but produce denser point clouds. Default: ``640``
+Controls the density of the point cloud by setting the resolution of the depthmap images. Higher values take longer to compute but produce denser point clouds. Overrides the value calculated by --pc-quality.Default: ``640``
 
 
 

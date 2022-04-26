@@ -10,7 +10,7 @@ min-num-features
 
 **Options:** *<integer>*
 
-Minimum number of features to extract per image. More features can be useful for finding more matches between images, potentially allowing the reconstruction of areas with little overlap or insufficient features. More features also slow down processing. Default: ``8000``
+Minimum number of features to extract per image. More features can be useful for finding more matches between images, potentially allowing the reconstruction of areas with little overlap or insufficient features. More features also slow down processing. Default: ``10000``
 
 
 

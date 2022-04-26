@@ -48,7 +48,7 @@ Options and Flags
   DSM/DTM resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate. To remove the cap, check --ignore-gsd also. Default: ``5``
 
 :ref:`depthmap-resolution<depthmap-resolution>` <positive float>
-  Legacy option (use --pc-quality instead). Controls the density of the point cloud by setting the resolution of the depthmap images. Higher values take longer to compute but produce denser point clouds. Default: ``640``
+  Controls the density of the point cloud by setting the resolution of the depthmap images. Higher values take longer to compute but produce denser point clouds. Overrides the value calculated by --pc-quality.Default: ``640``
 
 :ref:`dsm<dsm>` 
   Use this tag to build a DSM (Digital Surface Model, ground + objects) using a progressive morphological filter. Check the --dem\* parameters for finer tuning. Default: ``False``
@@ -86,8 +86,8 @@ Options and Flags
 :ref:`ignore-gsd<ignore-gsd>` 
   Ignore Ground Sampling Distance (GSD). GSD caps the maximum resolution of image outputs and resizes images when necessary, resulting in faster processing and lower memory usage. Since GSD is an estimate, sometimes ignoring it can result in slightly better image output quality. Default: ``False``
 
-:ref:`matcher-neighbors<matcher-neighbors>` <integer>
-  Number of nearest images to pre-match based on GPS exif data. Set to 0 to skip pre-matching. Default: ``8``
+:ref:`matcher-neighbors<matcher-neighbors>` <positive integer>
+  Perform image matching with the nearest images based on GPS exif data. Set to 0 to match by triangulation. Default: ``0``
 
 :ref:`matcher-type<matcher-type>` bow |  bruteforce |  flann
   Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of Words. FLANN is slower, but more stable. BOW is faster, but can sometimes miss valid matches. BRUTEFORCE is very slow but robust.. Default: ``flann``
@@ -105,7 +105,7 @@ Options and Flags
   The maximum vertex count of the output mesh. Default: ``200000``
 
 :ref:`min-num-features<min-num-features>` <integer>
-  Minimum number of features to extract per image. More features can be useful for finding more matches between images, potentially allowing the reconstruction of areas with little overlap or insufficient features. More features also slow down processing. Default: ``8000``
+  Minimum number of features to extract per image. More features can be useful for finding more matches between images, potentially allowing the reconstruction of areas with little overlap or insufficient features. More features also slow down processing. Default: ``10000``
 
 :ref:`name<name>` <dataset name>
   Name of dataset (i.e subfolder name within project folder). Default: ``code``
@@ -133,6 +133,9 @@ Options and Flags
 
 :ref:`pc-classify<pc-classify>` 
   Classify the point cloud outputs using a Simple Morphological Filter. You can control the behavior of this option by tweaking the --dem-\* parameters. Default: ``False``
+
+:ref:`pc-copc<pc-copc>` 
+  Save the georeferenced point cloud in Cloud Optimized Point Cloud (COPC) format. Default: ``False``
 
 :ref:`pc-csv<pc-csv>` 
   Export the georeferenced point cloud in CSV format. Default: ``False``
@@ -182,8 +185,8 @@ Options and Flags
 :ref:`resize-to<resize-to>` <integer>
   Legacy option (use --feature-quality instead). Resizes images by the largest side for feature extraction purposes only. Set to -1 to disable. This does not affect the final orthophoto resolution quality and will not resize the original images. Default: ``2048``
 
-:ref:`sfm-algorithm<sfm-algorithm>` incremental |  triangulation
-  Choose the structure from motion algorithm. For aerial datasets, if camera GPS positions and angles are available, triangulation can generate better results. . Default: ``incremental``
+:ref:`sfm-algorithm<sfm-algorithm>` incremental |  triangulation |  planar
+  Choose the structure from motion algorithm. For aerial datasets, if camera GPS positions and angles are available, triangulation can generate better results. For planar scenes captured at fixed altitude with nadir-only images, planar can be much faster. . Default: ``incremental``
 
 :ref:`skip-3dmodel<skip-3dmodel>` 
   Skip generation of a full 3D model. This can save time if you only need 2D results such as orthophotos and DEMs. Default: ``False``

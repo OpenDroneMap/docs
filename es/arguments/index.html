@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Opciones e indicadores &mdash; documentación de OpenDroneMap - 2.8.3</title>
+  <title>Opciones e indicadores &mdash; documentación de OpenDroneMap - 2.8.4</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -32,7 +32,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                2.8.3
+                2.8.4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -424,7 +424,7 @@
 </dd>
 <dt><a class="reference internal" href="dem-resolution/#dem-resolution"><span class="std std-ref">dem-resolution</span></a> &lt;float&gt;</dt><dd><p>Resolución de DSM/DTM en cm/pixel. Note que este valor esta limitado por la distancia de muestreo del terreno (GSD) estimada. Para remover este límite, active tambien –ignore-gsd. Predeterminado: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
 </dd>
-<dt><a class="reference internal" href="depthmap-resolution/#depthmap-resolution"><span class="std std-ref">depthmap-resolution</span></a> &lt;positive float&gt;</dt><dd><p>Opción heredada (use –pc-quality en su lugar). Controla la densidad de la nube de puntos estableciendo la resolución de las imágenes del mapa de profundidad. Los valores más altos tardan más en calcularse, pero producen nubes de puntos más densas. Predeterminado: <code class="docutils literal notranslate"><span class="pre">640</span></code></p>
+<dt><a class="reference internal" href="depthmap-resolution/#depthmap-resolution"><span class="std std-ref">depthmap-resolution</span></a> &lt;positive float&gt;</dt><dd><p>Controls the density of the point cloud by setting the resolution of the depthmap images. Higher values take longer to compute but produce denser point clouds. Overrides the value calculated by –pc-quality.Default: <code class="docutils literal notranslate"><span class="pre">640</span></code></p>
 </dd>
 <dt><a class="reference internal" href="dsm/#dsm"><span class="std std-ref">dsm</span></a></dt><dd><p>Utilice esta etiqueta para construir un DSM (modelo digital de superficie, suelo + objetos) utilizando un filtro morfológico progresivo. Verifique los parámetros –dem* para un ajuste más fino. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -450,7 +450,7 @@
 </dd>
 <dt><a class="reference internal" href="ignore-gsd/#ignore-gsd"><span class="std std-ref">ignore-gsd</span></a></dt><dd><p>Ignore la distancia de muestreo del suelo (GSD). La GSD limita la resolución máxima de las salidas de imagen y cambia el tamaño de las imágenes cuando es necesario, lo que resulta en un procesamiento más rápido y un menor uso de memoria. Dado que la GSD es una estimación, a veces ignorarlo puede resultar en una calidad de salida de imagen ligeramente mejor. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
-<dt><a class="reference internal" href="matcher-neighbors/#matcher-neighbors"><span class="std std-ref">matcher-neighbors</span></a> &lt;integer&gt;</dt><dd><p>Number of nearest images to pre-match based on GPS exif data. Set to 0 to skip pre-matching. Default: <code class="docutils literal notranslate"><span class="pre">8</span></code></p>
+<dt><a class="reference internal" href="matcher-neighbors/#matcher-neighbors"><span class="std std-ref">matcher-neighbors</span></a> &lt;positive integer&gt;</dt><dd><p>Perform image matching with the nearest images based on GPS exif data. Set to 0 to match by triangulation. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd>
 <dt><a class="reference internal" href="matcher-type/#matcher-type"><span class="std std-ref">matcher-type</span></a> bow |  bruteforce |  flann</dt><dd><p>Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of Words. FLANN is slower, but more stable. BOW is faster, but can sometimes miss valid matches. BRUTEFORCE is very slow but robust.. Default: <code class="docutils literal notranslate"><span class="pre">flann</span></code></p>
 </dd>
@@ -462,7 +462,7 @@
 </dd>
 <dt><a class="reference internal" href="mesh-size/#mesh-size"><span class="std std-ref">mesh-size</span></a> &lt;positive integer&gt;</dt><dd><p>El conteo máximo de vértices de la malla de salida. Predeterminado: <code class="docutils literal notranslate"><span class="pre">200000</span></code></p>
 </dd>
-<dt><a class="reference internal" href="min-num-features/#min-num-features"><span class="std std-ref">min-num-features</span></a> &lt;integer&gt;</dt><dd><p>Número mínimo de rasgos característicos para extraer por imagen. Un mayor número de rasgos característicos puede ser útil para encontrar más coincidencias entre imágenes, lo que podría permitir la reconstrucción de áreas con poca superposición o rasgos insuficientes. Más rasgos característicos también ralentizan el procesamiento. Predeterminado: <code class="docutils literal notranslate"><span class="pre">8000</span></code></p>
+<dt><a class="reference internal" href="min-num-features/#min-num-features"><span class="std std-ref">min-num-features</span></a> &lt;integer&gt;</dt><dd><p>Minimum number of features to extract per image. More features can be useful for finding more matches between images, potentially allowing the reconstruction of areas with little overlap or insufficient features. More features also slow down processing. Default: <code class="docutils literal notranslate"><span class="pre">10000</span></code></p>
 </dd>
 <dt><a class="reference internal" href="name/#name"><span class="std std-ref">name</span></a> &lt;dataset name&gt;</dt><dd><p>Nombre del conjunto de datos (e.g el nombre de la subcarpeta dentro de la carpeta del proyecto). Predeterminado: <code class="docutils literal notranslate"><span class="pre">code</span></code></p>
 </dd>
@@ -481,6 +481,8 @@
 <dt><a class="reference internal" href="orthophoto-resolution/#orthophoto-resolution"><span class="std std-ref">orthophoto-resolution</span></a> &lt;float &gt; 0.0&gt;</dt><dd><p>Resolución de ortofoto en cm/pixel. Tenga en cuenta que este valor está limitado por una estimación de la distancia de muestreo del suelo (GSD). Para quitar este límite, marque –ignore-gsd también. Predeterminado: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
 </dd>
 <dt><a class="reference internal" href="pc-classify/#pc-classify"><span class="std std-ref">pc-classify</span></a></dt><dd><p>Clasifique los resultados de la nube de puntos usando un filtro morfológico simple. Puede controlar el comportamiento de esta opción ajustando los parámetros –dem-*. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="pc-copc/#pc-copc"><span class="std std-ref">pc-copc</span></a></dt><dd><p>Save the georeferenced point cloud in Cloud Optimized Point Cloud (COPC) format. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="pc-csv/#pc-csv"><span class="std std-ref">pc-csv</span></a></dt><dd><p>Exportar la nube de puntos georeferenciada en formato CSV. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -514,7 +516,7 @@
 </dd>
 <dt><a class="reference internal" href="resize-to/#resize-to"><span class="std std-ref">resize-to</span></a> &lt;integer&gt;</dt><dd><p>Opción legada (use –feature-quality en su lugar). Cambia el tamaño de las imágenes por el lado más grande solo para fines de extracción de características. Establecer en -1 para deshabilitar. Esto no afecta la calidad de la resolución final de la ortofoto y no redimensionará las imágenes originales. Predeterminado: <code class="docutils literal notranslate"><span class="pre">2048</span></code></p>
 </dd>
-<dt><a class="reference internal" href="sfm-algorithm/#sfm-algorithm"><span class="std std-ref">sfm-algorithm</span></a> incremental |  triangulation</dt><dd><p>Choose the structure from motion algorithm. For aerial datasets, if camera GPS positions and angles are available, triangulation can generate better results. . Default: <code class="docutils literal notranslate"><span class="pre">incremental</span></code></p>
+<dt><a class="reference internal" href="sfm-algorithm/#sfm-algorithm"><span class="std std-ref">sfm-algorithm</span></a> incremental |  triangulation |  planar</dt><dd><p>Choose the structure from motion algorithm. For aerial datasets, if camera GPS positions and angles are available, triangulation can generate better results. For planar scenes captured at fixed altitude with nadir-only images, planar can be much faster. . Default: <code class="docutils literal notranslate"><span class="pre">incremental</span></code></p>
 </dd>
 <dt><a class="reference internal" href="skip-3dmodel/#skip-3dmodel"><span class="std std-ref">skip-3dmodel</span></a></dt><dd><p>Omita la generación de un modelo 3D completo. Esto puede ahorrar tiempo si solo necesita resultados 2D como ortofotos y DEM. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>

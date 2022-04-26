@@ -8,9 +8,9 @@
 sfm-algorithm
 `````````````
 
-**Options:** *incremental |  triangulation*
+**Options:** *incremental |  triangulation |  planar*
 
-Choose the structure from motion algorithm. For aerial datasets, if camera GPS positions and angles are available, triangulation can generate better results. . Default: ``incremental``
+Choose the structure from motion algorithm. For aerial datasets, if camera GPS positions and angles are available, triangulation can generate better results. For planar scenes captured at fixed altitude with nadir-only images, planar can be much faster. . Default: ``incremental``
 
 
 

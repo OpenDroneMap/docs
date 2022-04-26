@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Mga Opsyon at Tanda &mdash; OpenDroneMap 2.8.3 documentation</title>
+  <title>Mga Opsyon at Tanda &mdash; OpenDroneMap 2.8.4 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -31,7 +31,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                2.8.3
+                2.8.4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -423,7 +423,7 @@
 </dd>
 <dt><a class="reference internal" href="dem-resolution/#dem-resolution"><span class="std std-ref">dem-resolution</span></a> &lt;float&gt;</dt><dd><p>DSM/DTM resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate. To remove the cap, check --ignore-gsd also. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
 </dd>
-<dt><a class="reference internal" href="depthmap-resolution/#depthmap-resolution"><span class="std std-ref">depthmap-resolution</span></a> &lt;positive float&gt;</dt><dd><p>Legacy option (use --pc-quality instead). Controls the density of the point cloud by setting the resolution of the depthmap images. Higher values take longer to compute but produce denser point clouds. Default: <code class="docutils literal notranslate"><span class="pre">640</span></code></p>
+<dt><a class="reference internal" href="depthmap-resolution/#depthmap-resolution"><span class="std std-ref">depthmap-resolution</span></a> &lt;positive float&gt;</dt><dd><p>Controls the density of the point cloud by setting the resolution of the depthmap images. Higher values take longer to compute but produce denser point clouds. Overrides the value calculated by --pc-quality.Default: <code class="docutils literal notranslate"><span class="pre">640</span></code></p>
 </dd>
 <dt><a class="reference internal" href="dsm/#dsm"><span class="std std-ref">dsm</span></a></dt><dd><p>Use this tag to build a DSM (Digital Surface Model, ground + objects) using a progressive morphological filter. Check the --dem* parameters for finer tuning. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -449,7 +449,7 @@
 </dd>
 <dt><a class="reference internal" href="ignore-gsd/#ignore-gsd"><span class="std std-ref">ignore-gsd</span></a></dt><dd><p>Ignore Ground Sampling Distance (GSD). GSD caps the maximum resolution of image outputs and resizes images when necessary, resulting in faster processing and lower memory usage. Since GSD is an estimate, sometimes ignoring it can result in slightly better image output quality. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
-<dt><a class="reference internal" href="matcher-neighbors/#matcher-neighbors"><span class="std std-ref">matcher-neighbors</span></a> &lt;integer&gt;</dt><dd><p>Number of nearest images to pre-match based on GPS exif data. Set to 0 to skip pre-matching. Default: <code class="docutils literal notranslate"><span class="pre">8</span></code></p>
+<dt><a class="reference internal" href="matcher-neighbors/#matcher-neighbors"><span class="std std-ref">matcher-neighbors</span></a> &lt;positive integer&gt;</dt><dd><p>Perform image matching with the nearest images based on GPS exif data. Set to 0 to match by triangulation. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd>
 <dt><a class="reference internal" href="matcher-type/#matcher-type"><span class="std std-ref">matcher-type</span></a> bow |  bruteforce |  flann</dt><dd><p>Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of Words. FLANN is slower, but more stable. BOW is faster, but can sometimes miss valid matches. BRUTEFORCE is very slow but robust.. Default: <code class="docutils literal notranslate"><span class="pre">flann</span></code></p>
 </dd>
@@ -461,7 +461,7 @@
 </dd>
 <dt><a class="reference internal" href="mesh-size/#mesh-size"><span class="std std-ref">mesh-size</span></a> &lt;positive integer&gt;</dt><dd><p>The maximum vertex count of the output mesh. Default: <code class="docutils literal notranslate"><span class="pre">200000</span></code></p>
 </dd>
-<dt><a class="reference internal" href="min-num-features/#min-num-features"><span class="std std-ref">min-num-features</span></a> &lt;integer&gt;</dt><dd><p>Minimum number of features to extract per image. More features can be useful for finding more matches between images, potentially allowing the reconstruction of areas with little overlap or insufficient features. More features also slow down processing. Default: <code class="docutils literal notranslate"><span class="pre">8000</span></code></p>
+<dt><a class="reference internal" href="min-num-features/#min-num-features"><span class="std std-ref">min-num-features</span></a> &lt;integer&gt;</dt><dd><p>Minimum number of features to extract per image. More features can be useful for finding more matches between images, potentially allowing the reconstruction of areas with little overlap or insufficient features. More features also slow down processing. Default: <code class="docutils literal notranslate"><span class="pre">10000</span></code></p>
 </dd>
 <dt><a class="reference internal" href="name/#name"><span class="std std-ref">name</span></a> &lt;dataset name&gt;</dt><dd><p>Name of dataset (i.e subfolder name within project folder). Default: <code class="docutils literal notranslate"><span class="pre">code</span></code></p>
 </dd>
@@ -480,6 +480,8 @@
 <dt><a class="reference internal" href="orthophoto-resolution/#orthophoto-resolution"><span class="std std-ref">orthophoto-resolution</span></a> &lt;float &gt; 0.0&gt;</dt><dd><p>Orthophoto resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate. To remove the cap, check --ignore-gsd also. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
 </dd>
 <dt><a class="reference internal" href="pc-classify/#pc-classify"><span class="std std-ref">pc-classify</span></a></dt><dd><p>Classify the point cloud outputs using a Simple Morphological Filter. You can control the behavior of this option by tweaking the --dem-* parameters. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="pc-copc/#pc-copc"><span class="std std-ref">pc-copc</span></a></dt><dd><p>Save the georeferenced point cloud in Cloud Optimized Point Cloud (COPC) format. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="pc-csv/#pc-csv"><span class="std std-ref">pc-csv</span></a></dt><dd><p>Export the georeferenced point cloud in CSV format. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -513,7 +515,7 @@
 </dd>
 <dt><a class="reference internal" href="resize-to/#resize-to"><span class="std std-ref">resize-to</span></a> &lt;integer&gt;</dt><dd><p>Legacy option (use --feature-quality instead). Resizes images by the largest side for feature extraction purposes only. Set to -1 to disable. This does not affect the final orthophoto resolution quality and will not resize the original images. Default: <code class="docutils literal notranslate"><span class="pre">2048</span></code></p>
 </dd>
-<dt><a class="reference internal" href="sfm-algorithm/#sfm-algorithm"><span class="std std-ref">sfm-algorithm</span></a> incremental |  triangulation</dt><dd><p>Choose the structure from motion algorithm. For aerial datasets, if camera GPS positions and angles are available, triangulation can generate better results. . Default: <code class="docutils literal notranslate"><span class="pre">incremental</span></code></p>
+<dt><a class="reference internal" href="sfm-algorithm/#sfm-algorithm"><span class="std std-ref">sfm-algorithm</span></a> incremental |  triangulation |  planar</dt><dd><p>Choose the structure from motion algorithm. For aerial datasets, if camera GPS positions and angles are available, triangulation can generate better results. For planar scenes captured at fixed altitude with nadir-only images, planar can be much faster. . Default: <code class="docutils literal notranslate"><span class="pre">incremental</span></code></p>
 </dd>
 <dt><a class="reference internal" href="skip-3dmodel/#skip-3dmodel"><span class="std std-ref">skip-3dmodel</span></a></dt><dd><p>Skip generation of a full 3D model. This can save time if you only need 2D results such as orthophotos and DEMs. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
