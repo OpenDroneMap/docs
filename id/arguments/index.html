@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Opsi dan Bendera &mdash; Dokumentasi OpenDroneMap 2.8.4</title>
+  <title>Opsi dan Bendera &mdash; Dokumentasi OpenDroneMap 2.8.5</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -32,7 +32,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                2.8.4
+                2.8.5
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -398,6 +398,8 @@
   <section id="options-and-flags">
 <h1>Opsi dan Bendera<a class="headerlink" href="#options-and-flags" title="Link permanen untuk headline ini"></a></h1>
 <dl class="simple">
+<dt><span class="xref std std-ref">3d-tiles</span></dt><dd><p>Generate OGC 3D Tiles outputs. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
 <dt><a class="reference internal" href="auto-boundary/#auto-boundary"><span class="std std-ref">auto-boundary</span></a></dt><dd><p>Automatically set a boundary using camera shot locations to limit the area of the reconstruction. This can help remove far away background artifacts (sky, background landscapes, etc.). See also --boundary. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="boundary/#boundary"><span class="std std-ref">boundary</span></a> &lt;json&gt;</dt><dd><p>GeoJSON polygon limiting the area of the reconstruction. Can be specified either as path to a GeoJSON file or as a JSON string representing the contents of a GeoJSON file. Default: ``</p>
@@ -465,6 +467,8 @@
 <dt><a class="reference internal" href="min-num-features/#min-num-features"><span class="std std-ref">min-num-features</span></a> &lt;integer&gt;</dt><dd><p>Minimum number of features to extract per image. More features can be useful for finding more matches between images, potentially allowing the reconstruction of areas with little overlap or insufficient features. More features also slow down processing. Default: <code class="docutils literal notranslate"><span class="pre">10000</span></code></p>
 </dd>
 <dt><a class="reference internal" href="name/#name"><span class="std std-ref">name</span></a> &lt;dataset name&gt;</dt><dd><p>Name of dataset (i.e subfolder name within project folder). Default: <code class="docutils literal notranslate"><span class="pre">code</span></code></p>
+</dd>
+<dt><span class="xref std std-ref">no-gpu</span></dt><dd><p>Do not use GPU acceleration, even if it's available. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="optimize-disk-space/#optimize-disk-space"><span class="std std-ref">optimize-disk-space</span></a></dt><dd><p>Delete heavy intermediate files to optimize disk space usage. This affects the ability to restart the pipeline from an intermediate stage, but allows datasets to be processed on machines that don't have sufficient disk space available. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>

@@ -8,6 +8,9 @@
 Options and Flags
 -----------------
 
+:ref:`3d-tiles<3d-tiles>` 
+  Generate OGC 3D Tiles outputs. Default: ``False``
+
 :ref:`auto-boundary<auto-boundary>` 
   Automatically set a boundary using camera shot locations to limit the area of the reconstruction. This can help remove far away background artifacts (sky, background landscapes, etc.). See also --boundary. Default: ``False``
 
@@ -109,6 +112,9 @@ Options and Flags
 
 :ref:`name<name>` <dataset name>
   Name of dataset (i.e subfolder name within project folder). Default: ``code``
+
+:ref:`no-gpu<no-gpu>` 
+  Do not use GPU acceleration, even if it's available. Default: ``False``
 
 :ref:`optimize-disk-space<optimize-disk-space>` 
   Delete heavy intermediate files to optimize disk space usage. This affects the ability to restart the pipeline from an intermediate stage, but allows datasets to be processed on machines that don't have sufficient disk space available. Default: ``False``
