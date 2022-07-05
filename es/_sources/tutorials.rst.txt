@@ -308,12 +308,16 @@ Downloading image
 Singularity can use ODM Docker container after their download. It creates .sif images
 
 For latest ODM Docker image
-::
-    > singularity pull --disable-cache  docker://opendronemap/odm:latest
+
+.. code:: bash
+  
+  > singularity pull --disable-cache  docker://opendronemap/odm:latest
 
 For latest ODM GPU Docker image
-::
-    > singularity pull --disable-cache  docker://opendronemap/odm:gpu
+
+.. code:: bash
+  
+  > singularity pull --disable-cache  docker://opendronemap/odm:gpu
 
 Using Singularity SIF image
 ===========================

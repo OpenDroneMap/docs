@@ -416,7 +416,6 @@
 <section id="are-there-other-licensing-options-aside-from-the-agplv3">
 <h3>Are there other licensing options aside from the AGPLv3?<a class="headerlink" href="#are-there-other-licensing-options-aside-from-the-agplv3" title="Permalink to this headline"></a></h3>
 <p>Nope, sorry!</p>
-<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/faq.rst">this page</a>!</p>
 </section>
 </section>
 <section id="memory-issues">
@@ -426,15 +425,21 @@
 <ol class="arabic simple">
 <li><p>First you can buy more RAM, this is the ultimate and final solution.</p></li>
 <li><p>Alternatively you can resize the images when uploading and/or tweak your quality settings.</p></li>
-<li><p>If you are using Windows with Docker+WSL2, (<a class="reference external" href="https://docs.docker.com/desktop/windows/wsl/">https://docs.docker.com/desktop/windows/wsl/</a>) you can add two rows in your .wslconfig file so that Docker will use a swapfile:</p></li>
+<li><p>Configure a swapfile. In both Windows and Linux you will need preferably a fast SSD or an NVME drive, and the computing process will be still a LOT slower.</p></li>
 </ol>
 <blockquote>
-<div><p>&quot;swap=128GB&quot; # you will need 128GB of disk space of course
-&quot;swapfile=C:\temp\wsl-swap.vhdx&quot; # this is where the swap file will be stored</p>
+<div><ul class="simple">
+<li><p>If you are using Windows with <a class="reference external" href="https://docs.docker.com/desktop/windows/wsl/">Docker+WSL2</a> you can add two rows in your .wslconfig file so that Docker will use a swapfile. See also the full Microsoft documentation on <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/wsl-config">Advanced settings configuration in WSL</a>.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="s2">&quot;swap=128GB&quot;</span> <span class="c1"># you will need 128GB of disk space of course</span>
+<span class="s2">&quot;swapfile=C:</span><span class="se">\\</span><span class="s2">temp</span><span class="se">\\</span><span class="s2">wsl-swap.vhdx&quot;</span> <span class="c1"># this is where the swap file will be stored</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>In Linux you can add a swap file or a partition dedicated to swap. For more information, please consult your search engine of choice as there are a lot of different distributions and methods to add swap.</p></li>
+</ul>
 </div></blockquote>
-<p>Full documentation: <a class="reference external" href="https://docs.microsoft.com/en-us/windows/wsl/wsl-config">https://docs.microsoft.com/en-us/windows/wsl/wsl-config</a>
-4. In Linux you can do the same as 3. adding a swap file or a partition dedicated to swap. For more information, please consult your search engine of choice as there are a lot of different distributions and methods to add swap.
-In both cases you will need preferably a fast SSD or an NVME drive, and  the computing process will be still a LOT slower.</p>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/faq.rst">this page</a>!</p>
 </section>
 </section>
 </section>
