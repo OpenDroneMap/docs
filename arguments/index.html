@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Options and Flags &mdash; OpenDroneMap 2.8.5 documentation</title>
+  <title>Options and Flags &mdash; OpenDroneMap 2.8.7 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -31,7 +31,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                2.8.5
+                2.8.7
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -423,7 +423,7 @@
 </dd>
 <dt><a class="reference internal" href="dem-gapfill-steps/#dem-gapfill-steps"><span class="std std-ref">dem-gapfill-steps</span></a> &lt;positive integer&gt;</dt><dd><p>Number of steps used to fill areas with gaps. Set to 0 to disable gap filling. Starting with a radius equal to the output resolution, N different DEMs are generated with progressively bigger radius using the inverse distance weighted (IDW) algorithm and merged together. Remaining gaps are then merged using nearest neighbor interpolation. Default: <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
 </dd>
-<dt><a class="reference internal" href="dem-resolution/#dem-resolution"><span class="std std-ref">dem-resolution</span></a> &lt;float&gt;</dt><dd><p>DSM/DTM resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate. To remove the cap, check –ignore-gsd also. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
+<dt><a class="reference internal" href="dem-resolution/#dem-resolution"><span class="std std-ref">dem-resolution</span></a> &lt;float&gt;</dt><dd><p>DSM/DTM resolution in cm / pixel. Note that this value is capped to 2x the ground sampling distance (GSD) estimate. To remove the cap, check –ignore-gsd also. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
 </dd>
 <dt><a class="reference internal" href="depthmap-resolution/#depthmap-resolution"><span class="std std-ref">depthmap-resolution</span></a> &lt;positive float&gt;</dt><dd><p>Controls the density of the point cloud by setting the resolution of the depthmap images. Higher values take longer to compute but produce denser point clouds. Overrides the value calculated by –pc-quality.Default: <code class="docutils literal notranslate"><span class="pre">640</span></code></p>
 </dd>
@@ -518,6 +518,10 @@
 <dt><a class="reference internal" href="rerun-from/#rerun-from"><span class="std std-ref">rerun-from</span></a> dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess</dt><dd><p>Rerun processing from this stage. . Default: ``</p>
 </dd>
 <dt><a class="reference internal" href="resize-to/#resize-to"><span class="std std-ref">resize-to</span></a> &lt;integer&gt;</dt><dd><p>Legacy option (use –feature-quality instead). Resizes images by the largest side for feature extraction purposes only. Set to -1 to disable. This does not affect the final orthophoto resolution quality and will not resize the original images. Default: <code class="docutils literal notranslate"><span class="pre">2048</span></code></p>
+</dd>
+<dt><span class="xref std std-ref">rolling-shutter</span></dt><dd><p>Turn on rolling shutter correction. If the camera has a rolling shutter and the images were taken in motion, you can turn on this option to improve the accuracy of the results. See also –rolling-shutter-readout. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><span class="xref std std-ref">rolling-shutter-readout</span> &lt;positive integer&gt;</dt><dd><p>Override the rolling shutter readout time for your camera sensor (in milliseconds), instead of using the rolling shutter readout database. Note that not all cameras are present in the database. Set to 0 to use the database value. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd>
 <dt><a class="reference internal" href="sfm-algorithm/#sfm-algorithm"><span class="std std-ref">sfm-algorithm</span></a> incremental |  triangulation |  planar</dt><dd><p>Choose the structure from motion algorithm. For aerial datasets, if camera GPS positions and angles are available, triangulation can generate better results. For planar scenes captured at fixed altitude with nadir-only images, planar can be much faster. . Default: <code class="docutils literal notranslate"><span class="pre">incremental</span></code></p>
 </dd>
