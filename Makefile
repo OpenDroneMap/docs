@@ -44,7 +44,7 @@ pulllang:
 build:
 	@$(SPHINXBUILD) -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)/html" -nW
 	@$(SPHINXBUILD) -b dirhtml -D language='sw' "$(SOURCEDIR)" "$(BUILDDIR)/html/sw" -nW
-	@$(SPHINXBUILD) -b dirhtml -D language='ar' "$(SOURCEDIR)" "$(BUILDDIR)/html/ar" -nW
+	# @$(SPHINXBUILD) -b dirhtml -D language='ar' "$(SOURCEDIR)" "$(BUILDDIR)/html/ar" -nW
 	@$(SPHINXBUILD) -b dirhtml -D language='es' "$(SOURCEDIR)" "$(BUILDDIR)/html/es" -nW
 	@$(SPHINXBUILD) -b dirhtml -D language='fr' "$(SOURCEDIR)" "$(BUILDDIR)/html/fr" -nW
 	@$(SPHINXBUILD) -b dirhtml -D language='te' "$(SOURCEDIR)" "$(BUILDDIR)/html/te" -nW
@@ -59,7 +59,7 @@ build:
 allerr:
 	@$(SPHINXBUILD) -v -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)/html"
 	@$(SPHINXBUILD) -v -b dirhtml -D language='sw' "$(SOURCEDIR)" "$(BUILDDIR)/html/sw"
-	@$(SPHINXBUILD) -v -b dirhtml -D language='ar' "$(SOURCEDIR)" "$(BUILDDIR)/html/ar"
+	# @$(SPHINXBUILD) -v -b dirhtml -D language='ar' "$(SOURCEDIR)" "$(BUILDDIR)/html/ar"
 	@$(SPHINXBUILD) -v -b dirhtml -D language='es' "$(SOURCEDIR)" "$(BUILDDIR)/html/es"
 	@$(SPHINXBUILD) -v -b dirhtml -D language='fr' "$(SOURCEDIR)" "$(BUILDDIR)/html/fr"
 	@$(SPHINXBUILD) -v -b dirhtml -D language='te' "$(SOURCEDIR)" "$(BUILDDIR)/html/te"
