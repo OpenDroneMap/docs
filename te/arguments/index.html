@@ -20,7 +20,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
-    <link rel="next" title="auto-boundary" href="auto-boundary/" />
+    <link rel="next" title="3d-tiles" href="3d-tiles/" />
     <link rel="prev" title="Tutorials" href="../tutorials/" /> 
 </head>
 
@@ -139,6 +139,7 @@
 </ul>
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">ఎంపికలు మరియు ఫ్లాగ్స్</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3d-tiles/">3d-tiles</a></li>
 <li class="toctree-l2"><a class="reference internal" href="auto-boundary/">auto-boundary</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="auto-boundary/#what-is-auto-boundary">What Is Auto-Boundary?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="auto-boundary/#when-is-auto-boundary-helpful">When Is Auto-Boundary Helpful?</a></li>
@@ -234,6 +235,7 @@
 <li class="toctree-l2"><a class="reference internal" href="mesh-size/">mesh-size</a></li>
 <li class="toctree-l2"><a class="reference internal" href="min-num-features/">min-num-features</a></li>
 <li class="toctree-l2"><a class="reference internal" href="name/">name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="no-gpu/">no-gpu</a></li>
 <li class="toctree-l2"><a class="reference internal" href="optimize-disk-space/">optimize-disk-space</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orthophoto-compression/">orthophoto-compression</a></li>
 <li class="toctree-l2"><a class="reference internal" href="orthophoto-cutline/">orthophoto-cutline</a></li>
@@ -259,6 +261,8 @@
 <li class="toctree-l2"><a class="reference internal" href="rerun-all/">rerun-all</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rerun-from/">rerun-from</a></li>
 <li class="toctree-l2"><a class="reference internal" href="resize-to/">resize-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rolling-shutter/">rolling-shutter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rolling-shutter-readout/">rolling-shutter-readout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sfm-algorithm/">sfm-algorithm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skip-3dmodel/">skip-3dmodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skip-band-alignment/">skip-band-alignment</a></li>
@@ -398,7 +402,7 @@
   <section id="options-and-flags">
 <h1>ఎంపికలు మరియు ఫ్లాగ్స్<a class="headerlink" href="#options-and-flags" title="Permalink to this headline"></a></h1>
 <dl class="simple">
-<dt><span class="xref std std-ref">3d-tiles</span></dt><dd><p>Generate OGC 3D Tiles outputs. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<dt><a class="reference internal" href="3d-tiles/#d-tiles"><span class="std std-ref">3d-tiles</span></a></dt><dd><p>Generate OGC 3D Tiles outputs. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="auto-boundary/#auto-boundary"><span class="std std-ref">auto-boundary</span></a></dt><dd><p>Automatically set a boundary using camera shot locations to limit the area of the reconstruction. This can help remove far away background artifacts (sky, background landscapes, etc.). See also --boundary. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -468,7 +472,7 @@
 </dd>
 <dt><a class="reference internal" href="name/#name"><span class="std std-ref">name</span></a> &lt;dataset name&gt;</dt><dd><p>Name of dataset (i.e subfolder name within project folder). Default: <code class="docutils literal notranslate"><span class="pre">code</span></code></p>
 </dd>
-<dt><span class="xref std std-ref">no-gpu</span></dt><dd><p>Do not use GPU acceleration, even if it's available. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<dt><a class="reference internal" href="no-gpu/#no-gpu"><span class="std std-ref">no-gpu</span></a></dt><dd><p>Do not use GPU acceleration, even if it's available. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="optimize-disk-space/#optimize-disk-space"><span class="std std-ref">optimize-disk-space</span></a></dt><dd><p>Delete heavy intermediate files to optimize disk space usage. This affects the ability to restart the pipeline from an intermediate stage, but allows datasets to be processed on machines that don't have sufficient disk space available. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -520,9 +524,9 @@
 </dd>
 <dt><a class="reference internal" href="resize-to/#resize-to"><span class="std std-ref">resize-to</span></a> &lt;integer&gt;</dt><dd><p>Legacy option (use --feature-quality instead). Resizes images by the largest side for feature extraction purposes only. Set to -1 to disable. This does not affect the final orthophoto resolution quality and will not resize the original images. Default: <code class="docutils literal notranslate"><span class="pre">2048</span></code></p>
 </dd>
-<dt><span class="xref std std-ref">rolling-shutter</span></dt><dd><p>Turn on rolling shutter correction. If the camera has a rolling shutter and the images were taken in motion, you can turn on this option to improve the accuracy of the results. See also --rolling-shutter-readout. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<dt><a class="reference internal" href="rolling-shutter/#rolling-shutter"><span class="std std-ref">rolling-shutter</span></a></dt><dd><p>Turn on rolling shutter correction. If the camera has a rolling shutter and the images were taken in motion, you can turn on this option to improve the accuracy of the results. See also --rolling-shutter-readout. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
-<dt><span class="xref std std-ref">rolling-shutter-readout</span> &lt;positive integer&gt;</dt><dd><p>Override the rolling shutter readout time for your camera sensor (in milliseconds), instead of using the rolling shutter readout database. Note that not all cameras are present in the database. Set to 0 to use the database value. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+<dt><a class="reference internal" href="rolling-shutter-readout/#rolling-shutter-readout"><span class="std std-ref">rolling-shutter-readout</span></a> &lt;positive integer&gt;</dt><dd><p>Override the rolling shutter readout time for your camera sensor (in milliseconds), instead of using the rolling shutter readout database. Note that not all cameras are present in the database. Set to 0 to use the database value. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd>
 <dt><a class="reference internal" href="sfm-algorithm/#sfm-algorithm"><span class="std std-ref">sfm-algorithm</span></a> incremental |  triangulation |  planar</dt><dd><p>Choose the structure from motion algorithm. For aerial datasets, if camera GPS positions and angles are available, triangulation can generate better results. For planar scenes captured at fixed altitude with nadir-only images, planar can be much faster. . Default: <code class="docutils literal notranslate"><span class="pre">incremental</span></code></p>
 </dd>
@@ -582,6 +586,7 @@
 <p>If you want to add more details to a command, <a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">learn to edit</a> and help improve the matching file in the <code class="docutils literal notranslate"><span class="pre">arguments_edit</span></code> <a class="reference external" href="https://github.com/OpenDroneMap/docs/tree/publish/source/arguments_edit">project folder</a>!</p>
 <div class="toctree-wrapper compound">
 <ul>
+<li class="toctree-l1"><a class="reference internal" href="3d-tiles/">3d-tiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="auto-boundary/">auto-boundary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="boundary/">boundary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="build-overviews/">build-overviews</a></li>
@@ -616,6 +621,7 @@
 <li class="toctree-l1"><a class="reference internal" href="mesh-size/">mesh-size</a></li>
 <li class="toctree-l1"><a class="reference internal" href="min-num-features/">min-num-features</a></li>
 <li class="toctree-l1"><a class="reference internal" href="name/">name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="no-gpu/">no-gpu</a></li>
 <li class="toctree-l1"><a class="reference internal" href="optimize-disk-space/">optimize-disk-space</a></li>
 <li class="toctree-l1"><a class="reference internal" href="orthophoto-compression/">orthophoto-compression</a></li>
 <li class="toctree-l1"><a class="reference internal" href="orthophoto-cutline/">orthophoto-cutline</a></li>
@@ -641,6 +647,8 @@
 <li class="toctree-l1"><a class="reference internal" href="rerun-all/">rerun-all</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rerun-from/">rerun-from</a></li>
 <li class="toctree-l1"><a class="reference internal" href="resize-to/">resize-to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rolling-shutter/">rolling-shutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rolling-shutter-readout/">rolling-shutter-readout</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sfm-algorithm/">sfm-algorithm</a></li>
 <li class="toctree-l1"><a class="reference internal" href="skip-3dmodel/">skip-3dmodel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="skip-band-alignment/">skip-band-alignment</a></li>
@@ -677,7 +685,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../tutorials/" class="btn btn-neutral float-left" title="Tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="auto-boundary/" class="btn btn-neutral float-right" title="auto-boundary" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="3d-tiles/" class="btn btn-neutral float-right" title="3d-tiles" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>
