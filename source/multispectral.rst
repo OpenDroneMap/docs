@@ -25,7 +25,7 @@ Process all the images from all bands at once (do not separate the bands into mu
 Sentera AGX710
 --------------
 
-While this sensor is not officialy supported by ODM, the following workflow gives some good results.
+While this sensor is not officially supported by ODM, the following workflow gives some good results.
 
  * all JPGs from the NDRE directory should be renamed with the exact following pattern 0000X_NIR.jpg. No extra '_' should be present in the file names ie 10_51_14_IMG_00008.jpg => 00008_NIR.jpg
  * all JPGs from the nRGB directory should be renamed with the exact following pattern 0000X_RGB.jpg. No extra '_' should be present in the file names ie 10_51_14_IMG_00023.jpg => 00023_RGB.jpg

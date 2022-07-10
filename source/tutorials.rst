@@ -266,7 +266,7 @@ This is likely to be unwieldy large, but we can use a pipe `|` character and oth
 
 Pressing `Enter` or `Space`, arrow keys or `Page Up` or `Page Down` keys will now help us navigate through the logs. The lower case letter `Q` will let us escape back to the command line.
 
-We can also extract just the end of the logs using the `tail` commmand as follows:
+We can also extract just the end of the logs using the `tail` command as follows:
 
 ::
 
@@ -740,7 +740,7 @@ To start a measurement, click on the height icon and then click on the desired t
 Further information can also be obtained from selecting this element under the scene section.
 
 .. figure:: images/height_animation.gif
-   :alt: Heigth measurement
+   :alt: Height measurement
    :align: center
 
 **Circle**
@@ -780,7 +780,7 @@ To start a measurement, click on the Height profile icon and then form a line on
 Further information and options, such as "Show 2d Profile", can also been obtained from selecting this element under the scene section.
 
 .. figure:: images/height_profile.png
-   :alt: Heigth profile
+   :alt: Height profile
    :align: center
 
 **Annotation**

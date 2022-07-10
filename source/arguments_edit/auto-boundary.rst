@@ -28,7 +28,7 @@ When Is Auto-Boundary Helpful?
 ------------------------------
 ``--auto-boundary`` is appropriate to use on any dataset where one might possibly consider limiting the area of reconstruction due to the presence of sky or far-away background that they would not normally consider part of the desired reconstruction.
 
-``--auto-boundary`` does not have a meaningful impact on nadir (or near-nadir) imagery without sky/background, making it superflous, but safe, to include.
+``--auto-boundary`` does not have a meaningful impact on nadir (or near-nadir) imagery without sky/background, making it superfluous, but safe, to include.
 
 In other words, if you would consider masking the image, ``--auto-boundary`` is likely a good choice.
 
