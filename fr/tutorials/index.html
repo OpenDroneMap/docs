@@ -597,7 +597,7 @@ The resulting accuracy is comparable to the commercially available photogrammetr
 </pre></div>
 </div>
 <p>Pressing <cite>Enter</cite> or <cite>Space</cite>, arrow keys or <cite>Page Up</cite> or <cite>Page Down</cite> keys will now help us navigate through the logs. The lower case letter <cite>Q</cite> will let us escape back to the command line.</p>
-<p>We can also extract just the end of the logs using the <cite>tail</cite> commmand as follows:</p>
+<p>We can also extract just the end of the logs using the <cite>tail</cite> command as follows:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">logs</span> <span class="mi">2518817537</span><span class="n">ce</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="mi">5</span>
 <span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">Cropping</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">tif</span>
 <span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">running</span> <span class="n">gdalwarp</span> <span class="o">-</span><span class="n">cutline</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_georeferencing</span><span class="o">/</span><span class="n">odm_georeferenced_model</span><span class="o">.</span><span class="n">bounds</span><span class="o">.</span><span class="n">gpkg</span> <span class="o">-</span><span class="n">crop_to_cutline</span> <span class="o">-</span><span class="n">co</span> <span class="n">NUM_THREADS</span><span class="o">=</span><span class="mi">8</span> <span class="o">-</span><span class="n">co</span> <span class="n">BIGTIFF</span><span class="o">=</span><span class="n">IF_SAFER</span> <span class="o">-</span><span class="n">co</span> <span class="n">BLOCKYSIZE</span><span class="o">=</span><span class="mi">512</span> <span class="o">-</span><span class="n">co</span> <span class="n">COMPRESS</span><span class="o">=</span><span class="n">DEFLATE</span> <span class="o">-</span><span class="n">co</span> <span class="n">BLOCKXSIZE</span><span class="o">=</span><span class="mi">512</span> <span class="o">-</span><span class="n">co</span> <span class="n">TILED</span><span class="o">=</span><span class="n">YES</span> <span class="o">-</span><span class="n">co</span> <span class="n">PREDICTOR</span><span class="o">=</span><span class="mi">2</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">original</span><span class="o">.</span><span class="n">tif</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">tif</span> <span class="o">--</span><span class="n">config</span> <span class="n">GDAL_CACHEMAX</span> <span class="mf">48.95</span><span class="o">%</span>
@@ -1016,7 +1016,7 @@ Further information such as Total length can also be obtained from selecting thi
 To start a measurement, click on the height icon and then click on the desired two points. The process will be automatically ended.
 Further information can also be obtained from selecting this element under the scene section.</p>
 <figure class="align-center">
-<img alt="Heigth measurement" src="../_images/height_animation.gif" />
+<img alt="Height measurement" src="../_images/height_animation.gif" />
 </figure>
 <p><strong>Circle</strong></p>
 <p>This tool measures the radius of a circle formed by three points.
@@ -1043,7 +1043,7 @@ Further information can also be obtained from selecting this element under the s
 To start a measurement, click on the Height profile icon and then form a line on the model by clicking on the desired points (two or more). Right click to finish measurement.
 Further information and options, such as « Show 2d Profile », can also been obtained from selecting this element under the scene section.</p>
 <figure class="align-center">
-<img alt="Heigth profile" src="../_images/height_profile.png" />
+<img alt="Height profile" src="../_images/height_profile.png" />
 </figure>
 <p><strong>Annotation</strong></p>
 <p>This tool creates an annotation label on a highlighted point on the model.

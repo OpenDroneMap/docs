@@ -33,7 +33,7 @@ Options and Flags
   Copy output results to this folder after processing.
 
 :ref:`crop<crop>` <positive float>
-  Automatically crop image outputs by creating a smooth buffer around the dataset boundaries, shrinked by N meters. Use 0 to disable cropping. Default: ``3``
+  Automatically crop image outputs by creating a smooth buffer around the dataset boundaries, shrunk by N meters. Use 0 to disable cropping. Default: ``3``
 
 :ref:`debug<debug>` 
   Print debug messages. Default: ``False``

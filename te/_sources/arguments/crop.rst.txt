@@ -10,7 +10,7 @@ crop
 
 **Options:** *<positive float>*
 
-Automatically crop image outputs by creating a smooth buffer around the dataset boundaries, shrinked by N meters. Use 0 to disable cropping. Default: ``3``
+Automatically crop image outputs by creating a smooth buffer around the dataset boundaries, shrunk by N meters. Use 0 to disable cropping. Default: ``3``
 
 
 
