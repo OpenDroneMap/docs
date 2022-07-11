@@ -58,12 +58,12 @@ Creating A Polygon
 .. figure:: https://user-images.githubusercontent.com/19295950/145102194-7992ddf8-81ce-4ee9-bb81-b5d93cb05e25.png
   :alt: Choosing the "Draw Polygon" menu option in the Map View.
 
-  Selecting the "Draw Polygon" menu option will allow you to place verticies for your polygon by left-clicking on the map.
+  Selecting the "Draw Polygon" menu option will allow you to place vertices for your polygon by left-clicking on the map.
 
-Placing Verticies
-""""""""""""""""""
+Placing Vertices
+"""""""""""""""""
 .. figure:: https://user-images.githubusercontent.com/19295950/145102186-38a4107f-4c93-46f9-b423-3ce40fddff4b.png
-  :alt: Placing verticies in the Map View to create the boundary GeoJSON.
+  :alt: Placing vertices in the Map View to create the boundary GeoJSON.
   
   Choose the appropriate locations of the boundary of your polygon by left-clicking on the map to place a vertex. You can place as many vertices as you require.
 

@@ -19,7 +19,7 @@ livehtml:
 	sphinx-autobuild --open-browser --host 0.0.0.0 -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)/html"
 
 # this will update `arguments.rst` to match arguments in the ODM code
-# add any individual file for an arguement missing from `source/arguments_edit/`
+# add any individual file for an argument missing from `source/arguments_edit/`
 # update the files in `source/arguments/` including adding in
 # all user contributed content from files in `source/arguments_edit/`
 autogenerate:
