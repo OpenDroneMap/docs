@@ -10,6 +10,7 @@ While we aim to support as many cameras as possible, multispectral support has b
 
  * `MicaSense RedEdge-MX and Altum <https://www.micasense.com/>`_
  * `Sentera 6X <https://sentera.com/data-capture/6x-multispectral/>`_
+ * `DJI Phantom 4 Multispectral <https://www.dji.com/p4-multispectral>`_
 
 Other cameras might also work. You can help us expand this list by `sharing datasets <https://community.opendronemap.org/c/datasets/10>`_ captured with other cameras.
 
