@@ -406,6 +406,8 @@
 </dd>
 <dt><a class="reference internal" href="auto-boundary/#auto-boundary"><span class="std std-ref">auto-boundary</span></a></dt><dd><p>Establezca automáticamente un límite utilizando las ubicaciones de las tomas de la cámara para limitar el área de la reconstrucción. Esto puede ayudar a eliminar los artefactos lejanos en el fondo(cielo, paisajes de fondo, etc.). Véase también –boundary. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
+<dt><span class="xref std std-ref">auto-boundary-distance</span> &lt;positive float&gt;</dt><dd><p>Specify the distance between camera shot locations and the outer edge of the boundary when computing the boundary with –auto-boundary. Set to 0 to automatically choose a value. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
 <dt><a class="reference internal" href="boundary/#boundary"><span class="std std-ref">boundary</span></a> &lt;json&gt;</dt><dd><p>Polígono GeoJSON que limita el área de reconstrucción. Se puede especificar como ruta a un archivo GeoJSON o como una cadena JSON que representa el contenido de un archivo GeoJSON. Predeterminado: ``</p>
 </dd>
 <dt><a class="reference internal" href="build-overviews/#build-overviews"><span class="std std-ref">build-overviews</span></a></dt><dd><p>Crea vistas generales de la ortofoto para una visualización mas rápida en programas como QGIS. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
@@ -537,6 +539,8 @@
 <dt><a class="reference internal" href="skip-orthophoto/#skip-orthophoto"><span class="std std-ref">skip-orthophoto</span></a></dt><dd><p>Skip generation of the orthophoto. This can save time if you only need 3D results or DEMs. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="skip-report/#skip-report"><span class="std std-ref">skip-report</span></a></dt><dd><p>No generar informe PDF. Esto puede ahorrar tiempo si no necesita de dicho informe. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><span class="xref std std-ref">sky-removal</span></dt><dd><p>Automatically compute image masks using AI to remove the sky. Experimental. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="sm-cluster/#sm-cluster"><span class="std std-ref">sm-cluster</span></a> &lt;string&gt;</dt><dd><p>URL a una instancia de ClusterODM para distribuir un flujo de trabajo de split-merge en varios nodos en paralelo. Predeterminado: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>

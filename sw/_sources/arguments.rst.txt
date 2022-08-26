@@ -14,6 +14,9 @@ Options and Flags
 :ref:`auto-boundary<auto-boundary>` 
   Automatically set a boundary using camera shot locations to limit the area of the reconstruction. This can help remove far away background artifacts (sky, background landscapes, etc.). See also --boundary. Default: ``False``
 
+:ref:`auto-boundary-distance<auto-boundary-distance>` <positive float>
+  Specify the distance between camera shot locations and the outer edge of the boundary when computing the boundary with --auto-boundary. Set to 0 to automatically choose a value. Default: ``0``
+
 :ref:`boundary<boundary>` <json>
   GeoJSON polygon limiting the area of the reconstruction. Can be specified either as path to a GeoJSON file or as a JSON string representing the contents of a GeoJSON file. Default: ``
 
@@ -211,6 +214,9 @@ Options and Flags
 
 :ref:`skip-report<skip-report>` 
   Skip generation of PDF report. This can save time if you don't need a report. Default: ``False``
+
+:ref:`sky-removal<sky-removal>` 
+  Automatically compute image masks using AI to remove the sky. Experimental. Default: ``False``
 
 :ref:`sm-cluster<sm-cluster>` <string>
   URL to a ClusterODM instance for distributing a split-merge workflow on multiple nodes in parallel. Default: ``None``
