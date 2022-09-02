@@ -359,6 +359,8 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Frequently Asked Questions</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#data-processing">Data Processing</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#can-i-process-two-or-more-orthophoto-geotiffs-to-stitch-them-together">Can I process two or more orthophoto GeoTIFFs to stitch them together?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#the-software-is-not-using-all-of-my-cpu-cores-memory-gpu-all-of-the-times-is-it-normal">The software is not using all of my CPU cores / memory / GPU all of the times. Is it normal?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#if-i-use-the-native-version-of-the-software-how-can-i-allocate-more-resources-for-processing">If I use the native version of the software, how can I allocate more resources for processing?</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#licensing">Licensing</a><ul>
@@ -405,6 +407,14 @@
 <section id="can-i-process-two-or-more-orthophoto-geotiffs-to-stitch-them-together">
 <h3>Can I process two or more orthophoto GeoTIFFs to stitch them together?<a class="headerlink" href="#can-i-process-two-or-more-orthophoto-geotiffs-to-stitch-them-together" title="Permalink to this headline"></a></h3>
 <p>No. ODM is a photogrammetric pipeline and orthophotos do not have the necessary camera information since the images have already been orthorectified. You can use another program such as <a class="reference external" href="http://hugin.sourceforge.net/">Hugin</a> to do that.</p>
+</section>
+<section id="the-software-is-not-using-all-of-my-cpu-cores-memory-gpu-all-of-the-times-is-it-normal">
+<h3>The software is not using all of my CPU cores / memory / GPU all of the times. Is it normal?<a class="headerlink" href="#the-software-is-not-using-all-of-my-cpu-cores-memory-gpu-all-of-the-times-is-it-normal" title="Permalink to this headline"></a></h3>
+<p>Yes. The software tries to use all available resources, when possible, but not always. It's normal to see 10-15% resource utilization at several moments during processing.</p>
+</section>
+<section id="if-i-use-the-native-version-of-the-software-how-can-i-allocate-more-resources-for-processing">
+<h3>If I use the native version of the software, how can I allocate more resources for processing?<a class="headerlink" href="#if-i-use-the-native-version-of-the-software-how-can-i-allocate-more-resources-for-processing" title="Permalink to this headline"></a></h3>
+<p>No need; the native (non-docker) version of the software alredy uses all available resources.</p>
 </section>
 </section>
 <section id="licensing">
