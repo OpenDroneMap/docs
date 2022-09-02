@@ -11,6 +11,16 @@ Can I process two or more orthophoto GeoTIFFs to stitch them together?
 
 No. ODM is a photogrammetric pipeline and orthophotos do not have the necessary camera information since the images have already been orthorectified. You can use another program such as `Hugin <http://hugin.sourceforge.net/>`_ to do that.
 
+The software is not using all of my CPU cores / memory / GPU all of the times. Is it normal?
+---------------------------------------------------------------------------
+
+Yes. The software tries to use all available resources, when possible, but not always. It's normal to see 10-15% resource utilization at several points during processing.
+
+If I use the native version of the software, how can I allocate more resources for processing?
+----------------------------------------------------------------------------------------------
+
+No need; the native (non-docker) version of the software alredy uses all available resources.
+
 *********
 Licensing
 *********
