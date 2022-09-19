@@ -9,7 +9,7 @@ Hardware
 While we aim to support as many cameras as possible, multispectral support has been developed using the following cameras, so they will work better:
 
  * `MicaSense RedEdge-MX and Altum <https://www.micasense.com/>`_
- * `Sentera 6X <https://sentera.com/data-capture/6x-multispectral/>`_
+ * `Sentera 6X <https://sentera.com/products/fieldcapture/sensors/6x/>`_
  * `DJI Phantom 4 Multispectral <https://www.dji.com/p4-multispectral>`_
 
 Other cameras might also work. You can help us expand this list by `sharing datasets <https://community.opendronemap.org/c/datasets/10>`_ captured with other cameras.
