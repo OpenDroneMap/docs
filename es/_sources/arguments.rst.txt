@@ -17,6 +17,9 @@ Options and Flags
 :ref:`auto-boundary-distance<auto-boundary-distance>` <positive float>
   Specify the distance between camera shot locations and the outer edge of the boundary when computing the boundary with --auto-boundary. Set to 0 to automatically choose a value. Default: ``0``
 
+:ref:`bg-removal<bg-removal>` 
+  Automatically compute image masks using AI to remove the background. Experimental. Default: ``False``
+
 :ref:`boundary<boundary>` <json>
   GeoJSON polygon limiting the area of the reconstruction. Can be specified either as path to a GeoJSON file or as a JSON string representing the contents of a GeoJSON file. Default: ``
 

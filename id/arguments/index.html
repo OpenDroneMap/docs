@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Opsi dan Bendera &mdash; Dokumentasi OpenDroneMap 2.9.0</title>
+  <title>Opsi dan Bendera &mdash; Dokumentasi OpenDroneMap 2.9.1</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -32,7 +32,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                2.9.0
+                2.9.1
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -411,6 +411,8 @@
 <dt><a class="reference internal" href="auto-boundary/#auto-boundary"><span class="std std-ref">auto-boundary</span></a></dt><dd><p>Automatically set a boundary using camera shot locations to limit the area of the reconstruction. This can help remove far away background artifacts (sky, background landscapes, etc.). See also --boundary. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="auto-boundary-distance/#auto-boundary-distance"><span class="std std-ref">auto-boundary-distance</span></a> &lt;positive float&gt;</dt><dd><p>Specify the distance between camera shot locations and the outer edge of the boundary when computing the boundary with --auto-boundary. Set to 0 to automatically choose a value. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
+<dt><span class="xref std std-ref">bg-removal</span></dt><dd><p>Automatically compute image masks using AI to remove the background. Experimental. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="boundary/#boundary"><span class="std std-ref">boundary</span></a> &lt;json&gt;</dt><dd><p>GeoJSON polygon limiting the area of the reconstruction. Can be specified either as path to a GeoJSON file or as a JSON string representing the contents of a GeoJSON file. Default: ``</p>
 </dd>
