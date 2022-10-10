@@ -118,7 +118,7 @@ In most of the cases a lawn mower flight pattern is capable of producing highly 
 .. figure:: images/lawnmower_pattern.png
    :alt: a simple lawnmower flight pattern can produce accurate results
    :align: center
-   
+
 Recommended overlap would be between 75% and 80% with a sidelap in the order of 65% to 70%. It is also recommended to slightly increase overlap and sidelap as the flight height is increased.
 
 Flight height
@@ -159,17 +159,17 @@ Measuring
 As almost 50% of the material will be found in the first 20% of the stockpile height, special care should be taken in adequately defining the base plane.
 
 .. figure:: images/stockpile.png
-   :alt: almost 50% of the material will be found in the first 20% of the stockpile height 
+   :alt: almost 50% of the material will be found in the first 20% of the stockpile height
    :align: center
 
-In WebODM Dashboard, clic on "view map" to start a 2D view of your project. 
+In WebODM Dashboard, clic on "view map" to start a 2D view of your project.
 
 Once in the 2D map view, clic on the "Measure volume, area and length" button.
 
 .. figure:: images/measurement1.png
    :alt: clic on the "Measure volume, area and length" button
    :align: center
-   
+
 then clic on "Create a new measurement"
 
 .. figure:: images/measurement2.png
@@ -181,13 +181,13 @@ Start placing the points to define the stockpile base plane
 .. figure:: images/measurement3.png
    :alt: Define the stockpile base plane
    :align: center
- 
+
 Clic on "Finish measurement" to finish the process.
 
 .. figure:: images/measurement4.png
    :alt: Clic on "Finish measurement" to finish the process
    :align: center
-   
+
 Dialog box will show the  message "Computing ..." for a few seconds, and after the computing is finished the volume measurement value will be displayed.
 
 .. figure:: images/measurement7.png
@@ -310,25 +310,25 @@ Singularity can use ODM Docker container after their download. It creates .sif i
 For latest ODM Docker image
 
 .. code:: bash
-  
+
   > singularity pull --disable-cache  docker://opendronemap/odm:latest
 
 For latest ODM GPU Docker image
 
 .. code:: bash
-  
+
   > singularity pull --disable-cache  docker://opendronemap/odm:gpu
 
 Using Singularity SIF image
 ===========================
 
-As Singularity has a different way to map directories than Docker, a bash script file is a good solution to map ODM directories. 
+As Singularity has a different way to map directories than Docker, a bash script file is a good solution to map ODM directories.
 Here is a linux example for ODM ::
 
    images_dir=/path_to_image_dir/
    name=`basename $images_dir`
    output_dir=/path_to_output_directories/$name
-   mkdir -p $output_dir 
+   mkdir -p $output_dir
 
    singularity run
    --bind $images_dir:/$output_dir/code/images,\
@@ -345,7 +345,7 @@ Here is a linux example for the ODM with GPU ::
    images_dir=/path_to_image_dir/
    name=`basename $images_dir`
    output_dir=/path_to_output_directories/$name
-   mkdir -p $output_dir 
+   mkdir -p $output_dir
 
    singularity run
    --bind $images_dir:/$output_dir/code/images,\
@@ -408,15 +408,14 @@ Install
 
    -  Should be an Ubuntu 18.04 instance to ensure dependency
       compatibility
-   -  Create a user with sudo privileges. `Digital Ocean’s insanely good
-      documentation <https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04>`__
+   -  Create a user with sudo privileges. `Digital Ocean’s insanely good documentation <https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04>`__
       can help you figure this out. In our case we set up a user called
       ``odm``, so connecting to it is via the command
       ``ssh odm@xxx.xxx.xxx.xxx`` (where the x’s stand for the IPv4
       address of your server). If you want to follow this example
       closely, *do* use the username ``odm``; then your install path
       will be ``/home/odm/ODM/`` and will match all of the examples in
-      this document. 
+      this document.
    -  Go ahead and execute ``sudo apt update`` and ``sudo apt upgrade`` to ensure
       your server isn’t dangerously without updates. Make sure to stay with
       Ubuntu 18.04.
@@ -485,7 +484,7 @@ Prep data and project
       example, into the volume we attached to the cloud machine at
       ``/mnt/odmdata/``.
    -  This will take some bandwidth. No way around the size of the
-      files.\ `1 <#footnote1>`__, \ `2 <#footnote2>`__\ 
+      files.\ `1 <#footnote1>`__, \ `2 <#footnote2>`__\
 
 Directory structure
 ^^^^^^^^^^^^^^^^^^^
@@ -683,7 +682,7 @@ By default, Eye Dome-Lighting is enabled on Potree 3D viewer, but it can be disa
 Background
 ----------
 
-Potree 3D viewer background can be modified. Available options are **Skybox** / **Gradient** / **Black** / **White** / **None** 
+Potree 3D viewer background can be modified. Available options are **Skybox** / **Gradient** / **Black** / **White** / **None**
 
 .. figure:: images/Background_animation.gif
    :alt: Background selection
@@ -717,7 +716,7 @@ Measurements are performed by left clicking on the desired points and for some t
 
 **Angle**
 
-This tool measures the tridimensional angle formed by the lines connecting 3 points. 
+This tool measures the tridimensional angle formed by the lines connecting 3 points.
 To start a measurement, click on the angle icon, then left click on 3 point and the process will be automatically ended.
 Further information can also be obtained from selecting this element under the scene section.
 
@@ -869,7 +868,7 @@ To create an animation, adjust the points for the camera locations and camera di
 Scene
 =====
 
-The Scene section displays a file tree containing all the scene elements. 
+The Scene section displays a file tree containing all the scene elements.
 Elements are arranged in six groups, which are **Point clouds** / **Measurements** / **Annotations**
 / **Other** / **Vector** / **Images**
 
