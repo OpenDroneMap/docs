@@ -1,0 +1,568 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.9.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-10 13:31-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../arguments/boundary.rst:9
+msgid "boundary"
+msgstr ""
+
+#: ../../arguments/boundary.rst:11
+msgid "**Options:** *<json>*"
+msgstr ""
+
+#: ../../arguments/boundary.rst:13
+msgid ""
+"GeoJSON polygon limiting the area of the reconstruction. Can be specified"
+" either as path to a GeoJSON file or as a JSON string representing the "
+"contents of a GeoJSON file. Default: ``"
+msgstr ""
+
+#: ../../arguments/boundary.rst:15
+msgid "Parameter Type:"
+msgstr ""
+
+#: ../../arguments/boundary.rst:16
+msgid "**String**"
+msgstr ""
+
+#: ../../arguments/boundary.rst:17
+msgid "Parameter Domain:"
+msgstr ""
+
+#: ../../arguments/boundary.rst:18
+msgid "True: ``GeoJSON{}``"
+msgstr ""
+
+#: ../../arguments/boundary.rst:19 ../../arguments/boundary.rst:21
+#: ../../arguments/boundary.rst:261
+msgid "False: ``null``"
+msgstr ""
+
+#: ../../arguments/boundary.rst:20
+msgid "Parameter Default:"
+msgstr ""
+
+#: ../../arguments/boundary.rst:26
+msgid "Resource"
+msgstr ""
+
+#: ../../arguments/boundary.rst:26
+msgid "Impact"
+msgstr ""
+
+#: ../../arguments/boundary.rst:28
+msgid "CPU"
+msgstr ""
+
+#: ../../arguments/boundary.rst:28 ../../arguments/boundary.rst:32
+msgid "●●○ | Medium"
+msgstr ""
+
+#: ../../arguments/boundary.rst:29
+msgid "GPU"
+msgstr ""
+
+#: ../../arguments/boundary.rst:29 ../../arguments/boundary.rst:30
+msgid "○○○ | None"
+msgstr ""
+
+#: ../../arguments/boundary.rst:30
+msgid "HDD"
+msgstr ""
+
+#: ../../arguments/boundary.rst:31
+msgid "RAM"
+msgstr ""
+
+#: ../../arguments/boundary.rst:31
+msgid "●○○ | Low"
+msgstr ""
+
+#: ../../arguments/boundary.rst:32
+msgid "Time"
+msgstr ""
+
+#: ../../arguments/boundary.rst:38
+msgid "What is Boundary [GeoJSON]?"
+msgstr ""
+
+#: ../../arguments/boundary.rst:39
+msgid ""
+"The ``--boundary`` argument serves to constrain and \"crop\" all final "
+"output products of a processing task to the bounding box created by the "
+"GeoJSON string that is passed to the ``--boundary`` argument."
+msgstr ""
+
+#: ../../arguments/boundary.rst:42
+msgid "When is Boundary [GeoJSON] appropriate?"
+msgstr ""
+
+#: ../../arguments/boundary.rst:43
+msgid ""
+"Passing a ``--boundary`` GeoJSON is appropriate in any instance where one"
+" would want a specific subset of the entire reconstruction area."
+msgstr ""
+
+#: ../../arguments/boundary.rst:45
+msgid ""
+"If you are interested in the complete reconstruction, the ``--auto-"
+"boundary`` option would likely be more appropriate."
+msgstr ""
+
+#: ../../arguments/boundary.rst:47
+msgid ""
+"Further, given that the ``--boundary`` is applied after the products are "
+"generated (and thereby modifying them), it adds processing time to the "
+"dataset, and may not be appropriate if one's primary concern is "
+"generating a complete product as fast as possible."
+msgstr ""
+
+#: ../../arguments/boundary.rst:50
+msgid "Why would one use Boundary [GeoJSON]?"
+msgstr ""
+
+#: ../../arguments/boundary.rst:51
+msgid ""
+"One might want to use the ``--boundary`` function to limit the final "
+"products to a predefined Area Of Interest (AOI)."
+msgstr ""
+
+#: ../../arguments/boundary.rst:53
+msgid ""
+"As an example, you are tasked to survey a given property/lot. You decide "
+"to include 20m of overfly in your survey so that the reconstruction is "
+"clean and with sufficient overlap right up to the property boundaries. "
+"However, due to this overfly and your flight height you also capture and "
+"reconstruct bordering properties and homes that are not part of your "
+"survey AOI. Using a GeoJSON representation of the AOI property's "
+"boundary, you would then \"clip\" all of the final products to be just "
+"what is inside the GeoJSON boundary, providing you with a clean, focused,"
+" and \"safe\" representation of the survey AOI (and nothing beyond it)."
+msgstr ""
+
+#: ../../arguments/boundary.rst:56
+msgid "How would one create Boundary [GeoJSON]?"
+msgstr ""
+
+#: ../../arguments/boundary.rst:59
+msgid "GeoJSON.io"
+msgstr ""
+
+#: ../../arguments/boundary.rst:61
+msgid "`http://geojson.io <http://geojson.io>`_"
+msgstr ""
+
+#: ../../arguments/boundary.rst:61
+msgid "*A quick, simple webapp for creating GeoJSON files.*"
+msgstr ""
+
+#: ../../arguments/boundary.rst:64
+msgid "New GeoJSON"
+msgstr ""
+
+#: ../../arguments/boundary.rst:68
+msgid "GeoJSON.io interface with empty GeoJSON map and text."
+msgstr ""
+
+#: ../../arguments/boundary.rst:68
+msgid ""
+"After opening the above link to GeoJSON.io, one should pan and zoom the "
+"map preview to find their area of interest."
+msgstr ""
+
+#: ../../arguments/boundary.rst:71
+msgid "Creating A Polygon"
+msgstr ""
+
+#: ../../arguments/boundary.rst:75
+msgid "Choosing the \"Draw Polygon\" menu option in the Map View."
+msgstr ""
+
+#: ../../arguments/boundary.rst:75
+msgid ""
+"Selecting the \"Draw Polygon\" menu option will allow you to place "
+"vertices for your polygon by left-clicking on the map."
+msgstr ""
+
+#: ../../arguments/boundary.rst:78
+msgid "Placing Vertices"
+msgstr ""
+
+#: ../../arguments/boundary.rst:82
+msgid "Placing vertices in the Map View to create the boundary GeoJSON."
+msgstr ""
+
+#: ../../arguments/boundary.rst:82
+msgid ""
+"Choose the appropriate locations of the boundary of your polygon by left-"
+"clicking on the map to place a vertex. You can place as many vertices as "
+"you require."
+msgstr ""
+
+#: ../../arguments/boundary.rst:85
+msgid "Completing A Polygon"
+msgstr ""
+
+#: ../../arguments/boundary.rst:89
+msgid "Completed polygon in the Map View and GeoJSON text view."
+msgstr ""
+
+#: ../../arguments/boundary.rst:89
+msgid ""
+"To close the polygon, you left-click on your first vertex. You will be "
+"able to close your polygon once you have placed at least three vertices "
+"on the map. A completed polygon will have a different representation than"
+" one that is in-progress. It will have a darker border and a fill, "
+"implying that it is now a \"solid\" polygon. If your polygon looks like "
+"this, you are ready to save it."
+msgstr ""
+
+#: ../../arguments/boundary.rst:93
+msgid "Saving A Polygon"
+msgstr ""
+
+msgid "Saving the polygon using the Save menu and choosing GeoJSON."
+msgstr ""
+
+#: ../../arguments/boundary.rst:97
+msgid ""
+"Select \"Save\" and then \"GeoJSON\" to save the completed GeoJSON "
+"boundary to disk. Your browser will prompt or otherwise alert you that "
+"the file is ready to download. Alternatively, you can copy and paste the "
+"text-only representation of the GeoJSON boundary from the right panel "
+"with the \"JSON\" header."
+msgstr ""
+
+#: ../../arguments/boundary.rst:99
+msgid "Example GeoJSON textual representation:"
+msgstr ""
+
+#: ../../arguments/boundary.rst:140
+msgid "Downloading A Polygon"
+msgstr ""
+
+#: ../../arguments/boundary.rst:144
+msgid "Browser Download/Save file prompt for the generated GeoJSON file."
+msgstr ""
+
+#: ../../arguments/boundary.rst:144
+msgid ""
+"Once the GeoJSON file has been chosen for saving, the browser will prompt"
+" you to save it to disk. Choose an appropriate location where you can "
+"access it at a later time to load into WebODM."
+msgstr ""
+
+#: ../../arguments/boundary.rst:147
+msgid "Setting Boundary [GeoJSON] In Task Options"
+msgstr ""
+
+#: ../../arguments/boundary.rst:151
+msgid "Task Options preview showing Boundary field and \"Load\" icon."
+msgstr ""
+
+#: ../../arguments/boundary.rst:151
+msgid ""
+"When you are editing the Task Options for your Task, you can choose to "
+"load the Boundary [GeoJSON] created above by clicking the \"Load\" icon. "
+"Alternatively, you can paste the textual representation of the boundary "
+"into the Boundary [GeoJSON] text box."
+msgstr ""
+
+#: ../../arguments/boundary.rst:154
+msgid "Boundary [GeoJSON] Loaded In Task Options"
+msgstr ""
+
+#: ../../arguments/boundary.rst:158
+msgid "Task Options preview showing loaded Boundary with GeoJSON text."
+msgstr ""
+
+#: ../../arguments/boundary.rst:158
+msgid ""
+"Once the Boundary [GeoJSON] has been loaded from disk or pasted from the "
+"system clipboard, you can confirm its presence by seeing the text in the "
+"text box. You can now save the Task Options to enable the Boundary "
+"[GeoJSON] for the processing Task."
+msgstr ""
+
+#: ../../arguments/boundary.rst:161
+msgid "QGIS"
+msgstr ""
+
+#: ../../arguments/boundary.rst:163
+msgid ""
+"`https://qgis.org/en/site/forusers/download.html "
+"<https://qgis.org/en/site/forusers/download.html>`_"
+msgstr ""
+
+#: ../../arguments/boundary.rst:163
+msgid "*A Free and Open Source Geographic Information System.*"
+msgstr ""
+
+#: ../../arguments/boundary.rst:166
+msgid "Creating A New Temporary Scratch Layer"
+msgstr ""
+
+#: ../../arguments/boundary.rst:170
+msgid ""
+"Choosing the \"Create A Temporary Scratch Layer\" tool to make an empty "
+"layer to create our Boundary [GeoJSON] within."
+msgstr ""
+
+#: ../../arguments/boundary.rst:170
+msgid ""
+"You will first need a layer to create your Boundary [GeoJSON] within, so "
+"creating a New Temporary Scratch layer is a way to do this without "
+"needing to setup a file on disk first."
+msgstr ""
+
+#: ../../arguments/boundary.rst:173
+msgid "New Temporary Scratch Layer Geometry Type"
+msgstr ""
+
+#: ../../arguments/boundary.rst:177
+msgid "Setting \"Polygon\" as the Geometry Type for the Temporary Scratch Layer."
+msgstr ""
+
+#: ../../arguments/boundary.rst:177
+msgid ""
+"There are numerous choices of geometry types that can be represented by a"
+" given layer. OpenDroneMap is designed to work with Single Polygon, so "
+"you will choose Polygon from the Geometry Type menu."
+msgstr ""
+
+#: ../../arguments/boundary.rst:180
+msgid "New Temporary Scratch Layer Settings"
+msgstr ""
+
+#: ../../arguments/boundary.rst:184
+msgid "Leaving the remaining settings in their Default state."
+msgstr ""
+
+#: ../../arguments/boundary.rst:184
+msgid ""
+"Similar to Geometry Types, there are a large number of settings and "
+"options you can adjust for a Temporary Scratch Layer. You should leave "
+"these at their pictured defaults for usage with OpenDroneMap."
+msgstr ""
+
+#: ../../arguments/boundary.rst:187
+msgid "Adding an Orthophoto Background"
+msgstr ""
+
+#: ../../arguments/boundary.rst:191
+msgid ""
+"Browsing to a generated Orthophoto from WebODM that covers the Area Of "
+"Interest (AOI)."
+msgstr ""
+
+#: ../../arguments/boundary.rst:191
+msgid ""
+"If you have run the task already without a Boundary [GeoJSON], you can "
+"load the generated Orthophoto from OpenDroneMap into QGIS to use as your "
+"basemap for creating your Boundary [GeoJSON]. This should ensure that "
+"your boundary polygon exactly matches the data in your Task, as different"
+" basemaps can have errors of 1-10m or more. If have not generated an "
+"Orthophoto for your Area Of Interest (AOI), you can use one of the "
+"various methods within QGIS to add a basemap. Just be mindful of possible"
+" differences in location, angle, skew, scale, and other registration "
+"changes that can occur between your data and a basemap provider's data."
+msgstr ""
+
+#: ../../arguments/boundary.rst:195
+msgid "Adding A Polyon Feature"
+msgstr ""
+
+#: ../../arguments/boundary.rst:199
+msgid ""
+"Selecting the \"Add A Polygon Feature\" tool to begin creating a boundary"
+" polygon."
+msgstr ""
+
+#: ../../arguments/boundary.rst:199
+msgid ""
+"After selecting the \"Add A Polygon Feature\" tool, you can begin placing"
+" vertices on the map to create your boundary. To finish your polygon, you"
+" will right-click on the canvas. Similar to GeoJSON.io, a finished "
+"polygon will have a darker outline and a darker fill to indicate that it "
+"is \"solid\"."
+msgstr ""
+
+#: ../../arguments/boundary.rst:202
+msgid "Toggle Editing Off"
+msgstr ""
+
+#: ../../arguments/boundary.rst:206
+msgid ""
+"Clicking the \"Toggle Editing\" tool will prompt you to save your changes"
+" to the Temporary Scratch Layer."
+msgstr ""
+
+#: ../../arguments/boundary.rst:206
+msgid ""
+"Once you are finished with your boundary polygon, you can click the "
+"\"Toggle Editing\" tool to accept your changes and write them out to the "
+"Temporary Scratch Layer and make the layer valid for saving/exporting to "
+"disk."
+msgstr ""
+
+#: ../../arguments/boundary.rst:209
+msgid "Save Changes To Temporary Scratch Layer"
+msgstr ""
+
+#: ../../arguments/boundary.rst:213
+msgid ""
+"QGIS Dialog asking you to Save your changes to the Temporary Scratch "
+"Layer."
+msgstr ""
+
+#: ../../arguments/boundary.rst:213
+msgid ""
+"Clicking Save on this dialog will write the changes to the Temporary "
+"Scratch Layer and enable export/save functionality."
+msgstr ""
+
+#: ../../arguments/boundary.rst:216
+msgid "Export Temporary Scratch Layer Features"
+msgstr ""
+
+#: ../../arguments/boundary.rst:220
+msgid ""
+"A right-click on the Temporary Scratch Layer in the Layers panel will "
+"expose the Export menu item, with the Save Features As sub-menu item."
+msgstr ""
+
+#: ../../arguments/boundary.rst:220
+msgid ""
+"Right-click on the Temporary Scratch Layer in the Layers panel to bring "
+"up the Export menu and the Save Features As sub-menu item, selecting Save"
+" Features As. This will prompt you to choose the export format, location "
+"and file name, and settings for your layer."
+msgstr ""
+
+#: ../../arguments/boundary.rst:223
+msgid "Save Vector Layer As"
+msgstr ""
+
+#: ../../arguments/boundary.rst:227
+msgid ""
+"The \"Save Vector Layer As\" dialog showing Format as GeoJSON, an example"
+" of a valid File Name and path, CRS of EPSG:4326 and other default "
+"options."
+msgstr ""
+
+#: ../../arguments/boundary.rst:227
+msgid ""
+"This dialog will require you to choose GeoJSON as the format, a valid "
+"filename and path for the GeoJSON to be written out to disk with, and a "
+"valid CRS. The safest CRS choice with GeoJSON is EPSG:4326, so choose "
+"that if it is not chosen by default. All other options should be left as "
+"default and do not apply for OpenDroneMap usage."
+msgstr ""
+
+#: ../../arguments/boundary.rst:230
+msgid "Example Images"
+msgstr ""
+
+#: ../../arguments/boundary.rst:233
+msgid "True: ``--boundary [GeoJSON]`` - Point Cloud"
+msgstr ""
+
+#: ../../arguments/boundary.rst:237
+msgid ""
+"WebODM displaying the \"clipped\" reconstruction of the Brighton Beach "
+"dataset Point Cloud."
+msgstr ""
+
+#: ../../arguments/boundary.rst:237
+msgid ""
+"The WebODM 3D View shows the modified extent of the reconstruction Point "
+"Cloud, bounded by the GeoJSON proivded to the ``--boundary`` option."
+msgstr ""
+
+#: ../../arguments/boundary.rst:240
+msgid "True: ``--boundary [GeoJSON]`` - Orthophoto"
+msgstr ""
+
+#: ../../arguments/boundary.rst:244
+msgid ""
+"WebODM displaying the \"clipped\" reconstruction of the Brighton Beach "
+"dataset Orthophoto."
+msgstr ""
+
+#: ../../arguments/boundary.rst:244
+msgid ""
+"The WebODM 3D View shows the modified extent of the reconstruction "
+"Orthophoto, bounded by the GeoJSON proivded to the ``--boundary`` option."
+msgstr ""
+
+#: ../../arguments/boundary.rst:247
+msgid "True: ``--boundary [GeoJSON]`` - Digital Elevation Model"
+msgstr ""
+
+#: ../../arguments/boundary.rst:251
+msgid ""
+"WebODM displaying the \"clipped\" reconstruction of the Brighton Beach "
+"dataset Digital Elevation Model."
+msgstr ""
+
+#: ../../arguments/boundary.rst:251
+msgid ""
+"The WebODM 3D View shows the modified extent of the reconstruction "
+"Digital Elevation Model, bounded by the GeoJSON proivded to the "
+"``--boundary`` option."
+msgstr ""
+
+#: ../../arguments/boundary.rst:254
+msgid "True: ``--boundary [GeoJSON]`` - 3D Model/Textured Mesh"
+msgstr ""
+
+#: ../../arguments/boundary.rst:258
+msgid ""
+"WebODM displaying the \"clipped\" reconstruction of the Brighton Beach "
+"dataset 3D Model/Textured Mesh."
+msgstr ""
+
+#: ../../arguments/boundary.rst:258
+msgid ""
+"The WebODM 3D View shows the modified extent of the reconstruction 3D "
+"Model/Textured Mesh, bounded by the GeoJSON proivded to the "
+"``--boundary`` option."
+msgstr ""
+
+#: ../../arguments/boundary.rst:265
+msgid ""
+"WebODM displaying the full reconstruction of the Brighton Beach dataset "
+"Point Cloud."
+msgstr ""
+
+#: ../../arguments/boundary.rst:265
+msgid ""
+"The WebODM 3D View shows the full extent of the recosntruction. Compared "
+"to the ``--boundary`` reconstruction above, one can see that the full "
+"reconstruction area is much larger and includes many features outside of "
+"the Area Of Interest used to generate the GeoJSON."
+msgstr ""
+
+#: ../../arguments/boundary.rst:269
+msgid ""
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/boundary.rst>`_!"
+msgstr ""
+

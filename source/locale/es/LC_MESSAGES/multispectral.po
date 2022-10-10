@@ -1,31 +1,33 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2020, OpenDroneMap
-# This file is distributed under the same license as the OpenDroneMap package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
 # Translators:
 # israel Villarreal <israelbar@gmail.com>, 2021
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-06-22 19:54-0400\n"
+"POT-Creation-Date: 2022-10-10 13:31-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
-"Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: Spanish "
+"(https://www.transifex.com/americanredcross/teams/111882/es/)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: ../../../multispectral.rst:2
+#: ../../multispectral.rst:2
 msgid "Multispectral Support"
 msgstr "Soporte multiespectral"
 
-#: ../../../multispectral.rst:4
+#: ../../multispectral.rst:4
 msgid ""
 "Since version 0.9.9 ODM has basic support for radiometric normalization, "
 "which is able to generate reflectance orthophotos from multispectral "
@@ -33,66 +35,120 @@ msgid ""
 "different band sensors."
 msgstr ""
 "Desde la versión 0.9.9, ODM tiene soporte básico para la normalización "
-"radiométrica, que es capaz de generar ortofotos de reflectancia a partir de "
-"cámaras multiespectrales. Las cámaras multiespectrales capturan múltiples "
-"tomas de la escena utilizando diferentes sensores de banda."
+"radiométrica, que es capaz de generar ortofotos de reflectancia a partir "
+"de cámaras multiespectrales. Las cámaras multiespectrales capturan "
+"múltiples tomas de la escena utilizando diferentes sensores de banda."
 
-#: ../../../multispectral.rst:7
+#: ../../multispectral.rst:7
 msgid "Hardware"
 msgstr "Hardware"
 
-#: ../../../multispectral.rst:9
+#: ../../multispectral.rst:9
 msgid ""
-"While we aim to support as many cameras as possible, multispectral support "
-"has been developed using the following cameras, so they will work better:"
+"While we aim to support as many cameras as possible, multispectral "
+"support has been developed using the following cameras, so they will work"
+" better:"
 msgstr ""
-"Si bien nuestro objetivo es admitir tantas cámaras como sea posible, se ha "
-"desarrollado el soporte multiespectral utilizando las siguientes cámaras, "
-"por lo que funcionarán mejor:"
+"Si bien nuestro objetivo es admitir tantas cámaras como sea posible, se "
+"ha desarrollado el soporte multiespectral utilizando las siguientes "
+"cámaras, por lo que funcionarán mejor:"
 
-#: ../../../multispectral.rst:11
+#: ../../multispectral.rst:11
 msgid "`MicaSense RedEdge-MX and Altum <https://www.micasense.com/>`_"
 msgstr "`MicaSense RedEdge-MX and Altum <https://www.micasense.com/>`_"
 
-#: ../../../multispectral.rst:12
-msgid "`Sentera 6X <https://sentera.com/6x/>`_"
+#: ../../multispectral.rst:12
+#, fuzzy
+msgid "`Sentera 6X <https://sentera.com/products/fieldcapture/sensors/6x/>`_"
 msgstr "`Sentera 6X <https://sentera.com/6x/>`_"
 
-#: ../../../multispectral.rst:14
-msgid ""
-"Other cameras might also work. You can help us expand this list by `sharing "
-"datasets <https://community.opendronemap.org/c/datasets/10>`_ captured with "
-"other cameras."
+#: ../../multispectral.rst:13
+msgid "`DJI Phantom 4 Multispectral <https://www.dji.com/p4-multispectral>`_"
 msgstr ""
-"También pueden funcionar otras cámaras. Puede ayudarnos a ampliar esta lista"
-" `compartiendo conjuntos de datos "
-"<https://community.opendronemap.org/c/datasets/10>`_ capturados con otras "
-"cámaras."
 
-#: ../../../multispectral.rst:17
+#: ../../multispectral.rst:15
+msgid ""
+"Other cameras might also work. You can help us expand this list by "
+"`sharing datasets <https://community.opendronemap.org/c/datasets/10>`_ "
+"captured with other cameras."
+msgstr ""
+"También pueden funcionar otras cámaras. Puede ayudarnos a ampliar esta "
+"lista `compartiendo conjuntos de datos "
+"<https://community.opendronemap.org/c/datasets/10>`_ capturados con otras"
+" cámaras."
+
+#: ../../multispectral.rst:18
 msgid "Usage"
 msgstr "Uso"
 
-#: ../../../multispectral.rst:19
+#: ../../multispectral.rst:20
 msgid ""
 "Process all the images from all bands at once (do not separate the bands "
-"into multiple folders) and pass the `--radiometric-calibration` parameter to"
-" enable radiometric normalization. If the images are part of a multi-camera "
-"setup, the resulting orthophoto will have N bands, one for each camera (+ "
-"alpha)."
+"into multiple folders) and pass the `--radiometric-calibration` parameter"
+" to enable radiometric normalization. If the images are part of a multi-"
+"camera setup, the resulting orthophoto will have N bands, one for each "
+"camera (+ alpha)."
 msgstr ""
 "Procese todas las imágenes de todas las bandas a la vez (no separe las "
-"bandas en varias carpetas) y pase el parámetro `--radiometric-calibración` "
-"para permitir la normalización radiométrica. Si las imágenes son parte de "
-"una configuración multicámara, la ortofoto resultante tendrá N bandas, una "
-"para cada cámara (+ alfa)."
+"bandas en varias carpetas) y pase el parámetro `--radiometric-"
+"calibración` para permitir la normalización radiométrica. Si las imágenes"
+" son parte de una configuración multicámara, la ortofoto resultante "
+"tendrá N bandas, una para cada cámara (+ alfa)."
 
-#: ../../../multispectral.rst:22
+#: ../../multispectral.rst:23
 msgid ""
-"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
-"contribution>`_ and help improve `this page "
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ and help improve `this page "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst>`_!"
 msgstr ""
 "`Aprende a editar <https://github.com/opendronemap/docs#how-to-make-your-"
 "first-contribution>`_ y ayuda a mejorar `esta página "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst>`_!"
+
+#: ../../multispectral.rst:27
+msgid "Sentera AGX710"
+msgstr ""
+
+#: ../../multispectral.rst:29
+msgid ""
+"While this sensor is not officially supported by ODM, the following "
+"workflow gives some good results."
+msgstr ""
+
+#: ../../multispectral.rst:31
+msgid ""
+"all JPGs from the NDRE directory should be renamed with the exact "
+"following pattern 0000X_NIR.jpg. No extra '_' should be present in the "
+"file names ie 10_51_14_IMG_00008.jpg => 00008_NIR.jpg"
+msgstr ""
+
+#: ../../multispectral.rst:32
+msgid ""
+"all JPGs from the nRGB directory should be renamed with the exact "
+"following pattern 0000X_RGB.jpg. No extra '_' should be present in the "
+"file names ie 10_51_14_IMG_00023.jpg => 00023_RGB.jpg"
+msgstr ""
+
+#: ../../multispectral.rst:33
+msgid ""
+"All renamed XXXX_NIR.jpg and XXXX_RGB.jpg should be placed in the same "
+"folder"
+msgstr ""
+
+#: ../../multispectral.rst:34
+msgid "The following command could be used to create an odm_orthophoto.tif file"
+msgstr ""
+
+#: ../../multispectral.rst:44
+msgid ""
+"After the successful ODM processing, odm_orthophoto.tif bands names could"
+" be accurately renamed using "
+"contrib/ndvi/rename_sentera_agx710_multispectral_tif.py script"
+msgstr ""
+
+#: ../../multispectral.rst:50
+msgid ""
+"output_dir/odm_orthophoto.tif could be open with `QGIS "
+"<https://qgis.org/>`_ with correct band names"
+msgstr ""
+

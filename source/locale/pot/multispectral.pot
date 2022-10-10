@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.7.0\n"
+"Project-Id-Version: OpenDroneMap 2.9.1\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-28 10:32-0500\n"
+"POT-Creation-Date: 2022-10-10 13:31-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -37,21 +37,57 @@ msgid "`MicaSense RedEdge-MX and Altum <https://www.micasense.com/>`_"
 msgstr ""
 
 #: ../../multispectral.rst:12
-msgid "`Sentera 6X <https://sentera.com/6x/>`_"
+msgid "`Sentera 6X <https://sentera.com/products/fieldcapture/sensors/6x/>`_"
 msgstr ""
 
-#: ../../multispectral.rst:14
+#: ../../multispectral.rst:13
+msgid "`DJI Phantom 4 Multispectral <https://www.dji.com/p4-multispectral>`_"
+msgstr ""
+
+#: ../../multispectral.rst:15
 msgid "Other cameras might also work. You can help us expand this list by `sharing datasets <https://community.opendronemap.org/c/datasets/10>`_ captured with other cameras."
 msgstr ""
 
-#: ../../multispectral.rst:17
+#: ../../multispectral.rst:18
 msgid "Usage"
 msgstr ""
 
-#: ../../multispectral.rst:19
+#: ../../multispectral.rst:20
 msgid "Process all the images from all bands at once (do not separate the bands into multiple folders) and pass the `--radiometric-calibration` parameter to enable radiometric normalization. If the images are part of a multi-camera setup, the resulting orthophoto will have N bands, one for each camera (+ alpha)."
 msgstr ""
 
-#: ../../multispectral.rst:22
+#: ../../multispectral.rst:23
 msgid "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst>`_!"
+msgstr ""
+
+#: ../../multispectral.rst:27
+msgid "Sentera AGX710"
+msgstr ""
+
+#: ../../multispectral.rst:29
+msgid "While this sensor is not officially supported by ODM, the following workflow gives some good results."
+msgstr ""
+
+#: ../../multispectral.rst:31
+msgid "all JPGs from the NDRE directory should be renamed with the exact following pattern 0000X_NIR.jpg. No extra '_' should be present in the file names ie 10_51_14_IMG_00008.jpg => 00008_NIR.jpg"
+msgstr ""
+
+#: ../../multispectral.rst:32
+msgid "all JPGs from the nRGB directory should be renamed with the exact following pattern 0000X_RGB.jpg. No extra '_' should be present in the file names ie 10_51_14_IMG_00023.jpg => 00023_RGB.jpg"
+msgstr ""
+
+#: ../../multispectral.rst:33
+msgid "All renamed XXXX_NIR.jpg and XXXX_RGB.jpg should be placed in the same folder"
+msgstr ""
+
+#: ../../multispectral.rst:34
+msgid "The following command could be used to create an odm_orthophoto.tif file"
+msgstr ""
+
+#: ../../multispectral.rst:44
+msgid "After the successful ODM processing, odm_orthophoto.tif bands names could be accurately renamed using contrib/ndvi/rename_sentera_agx710_multispectral_tif.py script"
+msgstr ""
+
+#: ../../multispectral.rst:50
+msgid "output_dir/odm_orthophoto.tif could be open with `QGIS <https://qgis.org/>`_ with correct band names"
 msgstr ""

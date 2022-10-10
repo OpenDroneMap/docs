@@ -1,0 +1,38 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2022.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.9.1\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2022-10-10 13:31-0400\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../arguments/skip-orthophoto.rst:9
+msgid "skip-orthophoto"
+msgstr ""
+
+#: ../../arguments/skip-orthophoto.rst:13
+msgid ""
+"Skip generation of the orthophoto. This can save time if you only need 3D"
+" results or DEMs. Default: ``False``"
+msgstr ""
+
+#: ../../arguments/skip-orthophoto.rst:18
+msgid ""
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
+"/skip-orthophoto.rst>`_!"
+msgstr ""
+

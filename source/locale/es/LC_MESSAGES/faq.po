@@ -1,25 +1,27 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2020, OpenDroneMap
-# This file is distributed under the same license as the OpenDroneMap package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2021.
+#
 # Translators:
 # israel Villarreal <israelbar@gmail.com>, 2021
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.6.6\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-12 15:01-0500\n"
+"POT-Creation-Date: 2022-10-10 13:31-0400\n"
 "PO-Revision-Date: 2021-11-11 14:12+0000\n"
 "Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
-"Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Language-Team: Spanish "
+"(https://www.transifex.com/americanredcross/teams/111882/es/)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
 #: ../../faq.rst:3
 msgid "Frequently Asked Questions"
@@ -45,11 +47,37 @@ msgstr ""
 "ortorrectificadas. Puede usar otro programa como`Hugin "
 "<http://hugin.sourceforge.net/>`_ para hacer eso."
 
-#: ../../faq.rst:16
+#: ../../faq.rst:15
+msgid ""
+"The software is not using all of my CPU cores / memory / GPU all of the "
+"times. Is it normal?"
+msgstr ""
+
+#: ../../faq.rst:17
+#, python-format
+msgid ""
+"Yes. The software tries to use all available resources, when possible, "
+"but not always. It's normal to see 10-15% resource utilization at several"
+" moments during processing."
+msgstr ""
+
+#: ../../faq.rst:20
+msgid ""
+"If I use the native version of the software, how can I allocate more "
+"resources for processing?"
+msgstr ""
+
+#: ../../faq.rst:22
+msgid ""
+"No need; the native (non-docker) version of the software alredy uses all "
+"available resources."
+msgstr ""
+
+#: ../../faq.rst:26
 msgid "Licensing"
 msgstr "Licenciamiento"
 
-#: ../../faq.rst:19
+#: ../../faq.rst:29
 msgid ""
 "I want to build a commercial application that includes ODM. Do I need a "
 "commercial license?"
@@ -57,33 +85,76 @@ msgstr ""
 "Quiero crear una aplicación comercial que incluya ODM. ¿Necesito una "
 "licencia comercial?"
 
-#: ../../faq.rst:21
+#: ../../faq.rst:31
 msgid ""
 "ODM is free and open source software, released under the `AGPLv3 "
-"<https://github.com/OpenDroneMap/ODM/blob/master/LICENSE>`_. You are free to"
-" build and sell applications with it, just make sure to comply with the "
-"requirements of the license, in particular the disclose source requirement."
+"<https://github.com/OpenDroneMap/ODM/blob/master/LICENSE>`_. You are free"
+" to build and sell applications with it, just make sure to comply with "
+"the requirements of the license, in particular the disclose source "
+"requirement."
 msgstr ""
 "ODM es un software gratuito y de código abierto, publicado bajo  `AGPLv3 "
 "<https://github.com/OpenDroneMap/ODM/blob/master/LICENSE>`_. Tiene la "
-"libertad de crear y vender aplicaciones con él, solo asegúrese de cumplir "
-"con los requisitos de la licencia, en particular, el requisito de divulgar "
-"la fuente."
+"libertad de crear y vender aplicaciones con él, solo asegúrese de cumplir"
+" con los requisitos de la licencia, en particular, el requisito de "
+"divulgar la fuente."
 
-#: ../../faq.rst:24
+#: ../../faq.rst:34
 msgid "Are there other licensing options aside from the AGPLv3?"
 msgstr "¿Existen otras opciones de licencia además de AGPLv3?"
 
-#: ../../faq.rst:26
+#: ../../faq.rst:36
 msgid "Nope, sorry!"
 msgstr "¡No, lo siento!"
 
-#: ../../faq.rst:29
+#: ../../faq.rst:40
+msgid "Memory issues"
+msgstr ""
+
+#: ../../faq.rst:43
+msgid "Your computer is running out of memory, what can you do?"
+msgstr ""
+
+#: ../../faq.rst:45
+msgid "First you can buy more RAM, this is the ultimate and final solution."
+msgstr ""
+
+#: ../../faq.rst:46
 msgid ""
-"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
-"contribution>`_ and help improve `this page "
+"Alternatively you can resize the images when uploading and/or tweak your "
+"quality settings."
+msgstr ""
+
+#: ../../faq.rst:47
+msgid ""
+"Configure a swapfile. In both Windows and Linux you will need preferably "
+"a fast SSD or an NVME drive, and the computing process will be still a "
+"LOT slower."
+msgstr ""
+
+#: ../../faq.rst:49
+msgid ""
+"If you are using Windows with `Docker+WSL2 "
+"<https://docs.docker.com/desktop/windows/wsl/>`_ you can add two rows in "
+"your .wslconfig file so that Docker will use a swapfile. See also the "
+"full Microsoft documentation on `Advanced settings configuration in WSL "
+"<https://docs.microsoft.com/en-us/windows/wsl/wsl-config>`_."
+msgstr ""
+
+#: ../../faq.rst:56
+msgid ""
+"In Linux you can add a swap file or a partition dedicated to swap. For "
+"more information, please consult your search engine of choice as there "
+"are a lot of different distributions and methods to add swap."
+msgstr ""
+
+#: ../../faq.rst:60
+msgid ""
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ and help improve `this page "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/faq.rst>`_!"
 msgstr ""
 "`Aprende a editar <https://github.com/opendronemap/docs#how-to-make-your-"
 "first-contribution>`_ y ayuda a mejorar `esta página "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/faq.rst>`_!"
+

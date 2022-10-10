@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-12 15:01-0500\n"
+"POT-Creation-Date: 2022-10-10 13:31-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language: ar\n"
@@ -54,6 +54,26 @@ msgstr ""
 
 #: ../../requesting-features.rst:13
 msgid ""
+"**Demanding that a feature be implemented is probably not going to "
+"convince the development team to do so**. Imagine if somebody knocked on "
+"your door and asked you to \"stop reading this page right now and come to"
+" my house to cook me dinner!\". Your first response might very reasonably"
+" be \"who on earth is this person and why should I spend my time and "
+"energy fulfilling his agenda instead of my own?\"."
+msgstr ""
+
+#: ../../requesting-features.rst:16
+msgid ""
+"**Suggesting** that a feature be implemented is a more effective (and "
+"cordial) way to ask for new features, especially if you're prepared to "
+"offer some of your own resources (time, funds or both) to help get the "
+"feature implemented. Explaining why *your* suggestion can benefit others "
+"can also help. If the feature benefits you exclusively, it might be "
+"harder to convince others to do the work for you."
+msgstr ""
+
+#: ../../requesting-features.rst:19
+msgid ""
 "A feature request can be submitted as issues on the applicable Github "
 "repository (e.g., `WebODM "
 "<https://github.com/OpenDroneMap/WebODM/issues>`_ or `ODM "
@@ -71,7 +91,7 @@ msgstr ""
 "بالفعل. في بعض الأحيان تكون الميزة قيد العمل بالفعل ، أو تمت مناقشتها على"
 " الأقل."
 
-#: ../../requesting-features.rst:19
+#: ../../requesting-features.rst:25
 msgid ""
 "To request the addition of support for new drone cameras: please share a "
 "set of test images on the `datasets channel on the forum "
@@ -79,7 +99,7 @@ msgid ""
 " there's not much the developers can do."
 msgstr ""
 
-#: ../../requesting-features.rst:21
+#: ../../requesting-features.rst:27
 msgid ""
 "And importantly, the trick is to listen: if someone within the project "
 "says: \"This is a big lift, we need MONEY or TIME or SOMEONE TO HELP CODE"
@@ -91,7 +111,7 @@ msgstr ""
 "ترميزها\" (أو ربما مزيج من الثلاثة) ، فهناك إجابتان تعمل بشكل جيد في "
 "الاستجابة"
 
-#: ../../requesting-features.rst:25
+#: ../../requesting-features.rst:31
 msgid ""
 "*Ok. I didn’t know it was a big feature request! I hope someone comes "
 "along with the necessary resources. As a community member, I would be "
@@ -100,11 +120,11 @@ msgstr ""
 "*حسنا. لم أكن أعلم أنه كان طلب ميزة كبيرة! آمل أن يأتي شخص ما مع الموارد "
 "اللازمة. كعضو في المجتمع ، يسعدني أن أكون مستخدمًا ومُختبِرًا مبكرًا!*"
 
-#: ../../requesting-features.rst:27
+#: ../../requesting-features.rst:33
 msgid "or"
 msgstr "أو"
 
-#: ../../requesting-features.rst:29
+#: ../../requesting-features.rst:35
 msgid ""
 "*Let’s figure out if we can put together the resources to get this done! "
 "Here’s what I can contribute toward it: …*"
@@ -112,7 +132,7 @@ msgstr ""
 "*دعنا نكتشف ما إذا كان بإمكاننا تجميع الموارد لإنجاز ذلك! إليك ما يمكنني "
 "المساهمة فيه: ...*"
 
-#: ../../requesting-features.rst:31
+#: ../../requesting-features.rst:37
 msgid ""
 "We are glad you are excited to see new features added to the project.  "
 "Some new features need support, and some are easier to implement.  We'll "
@@ -123,7 +143,7 @@ msgstr ""
 "الميزات الجديدة إلى الدعم ، وبعضها أسهل في التنفيذ. سنبذل قصارى جهدنا "
 "لمساعدتك على فهم مكان سقوط طلبك ، ونقدر أي دعم يمكنك تقديمه."
 
-#: ../../requesting-features.rst:36
+#: ../../requesting-features.rst:42
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-"
 "first-contribution>`_ and help improve `this page "

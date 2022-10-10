@@ -1,277 +1,225 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2020, OpenDroneMap
-# This file is distributed under the same license as the OpenDroneMap package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
 # Translators:
 # Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-07-22 08:47-0400\n"
+"POT-Creation-Date: 2022-10-10 13:31-0400\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
-"Last-Translator: Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020\n"
-"Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
+"Last-Translator: Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, "
+"2020\n"
 "Language: fil\n"
-"Plural-Forms: nplurals=2; plural=(n == 1 || n==2 || n==3) || (n % 10 != 4 || n % 10 != 6 || n % 10 != 9);\n"
+"Language-Team: Filipino "
+"(https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
+"Plural-Forms: nplurals=2; plural=(n == 1 || n==2 || n==3) || (n % 10 != 4"
+" || n % 10 != 6 || n % 10 != 9)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
 
-#: ../../../installation.rst:4
+#: ../../installation.rst:4
 msgid "Installation and Getting Started"
 msgstr "Instalasyon at Paano Simulan"
 
-#: ../../../installation.rst:6
+#: ../../installation.rst:6
 msgid ""
-"This section is excerpted and modified with permission from `OpenDroneMap: "
-"The Missing Guide <https://odmbook.com>`_, by Piero Toffanin."
+"This section is excerpted and modified with permission from "
+"`OpenDroneMap: The Missing Guide <https://odmbook.com>`_, by Piero "
+"Toffanin."
 msgstr ""
 "Ang seksiyon na ito ay binago ng bahagya ng may permisyon galing sa "
-"`OpenDroneMap: The Missing Guide <https://odmbook.com>`_, na gawa ni Piero "
-"Toffanin."
+"`OpenDroneMap: The Missing Guide <https://odmbook.com>`_, na gawa ni "
+"Piero Toffanin."
 
-#: ../../../installation.rst:8
+#: ../../installation.rst:9
+msgid "Quickstart"
+msgstr ""
+
+#: ../../installation.rst:11
 msgid ""
-"Until recently OpenDroneMap was the term used to refer to a single command "
-"line application (what is now known as the ODM project).  With the recent "
-"development of a web interface, an API and other tools, OpenDroneMap has "
-"become an ecosystem of various applications to process, analyze and display "
-"aerial data. This ecosystem is made of several components:"
-msgstr ""
-"Ang OpenDroneMap ay isang salita na ginagamit patukoy sa isang single "
-"command line na programa (na kilala rin bilang ODM na proyekto). Sa "
-"kamakailan lamang na progreso ng web interface, ang API ay ibang tools, pati"
-" na rin ang OpenDroneMap ang naging pinagmulan ng iba't-ibang programa upang"
-" ma-proseso, ma-suri at makita ang aerial data. ang ekosistem na ito ay "
-"ginawa para sa iilang  component:"
-
-#: ../../../installation.rstNone
-msgid "ODM Logo"
+"Installers for OpenDroneMap are available for purchase from UAV4Geo, and "
+"are the easiest way to get started and come with support."
 msgstr ""
 
-#: ../../../installation.rst:14
+#: ../../installation.rst:13
+msgid "https://opendronemap.org/webodm/download/#installer"
+msgstr ""
+
+#: ../../installation.rst:15
 msgid ""
-"**ODM** is the processing engine, which can be used from the command line. "
-"It takes images as input and produces a variety of outputs, including point "
-"clouds, 3D models and orthophotos"
-msgstr ""
-"Ang **ODM** ay ang processing engine, na pwedeng gamitin sa command line. "
-"Tinatanggap nito ang mga imahe bilang input at nagpo-produce ng iba't-ibang "
-"outputs katulad ng point clouds, 3D models at orthophotos."
-
-#: ../../../installation.rstNone
-msgid "NodeODM Logo"
+"That said, OpenDroneMap is a free and open source ecoystem. Community "
+"support is available for those looking to install themselves and "
+"directions follow:"
 msgstr ""
 
-#: ../../../installation.rst:20
-msgid ""
-"**NodeODM** is a light-weight API built on top of ODM. It allows users and "
-"applications to access the functions of ODM over a computer network"
-msgstr ""
-"Ang **NodeODM** ay isang light-weight API na nasa taas ng ODM. Ina-allow "
-"nito ang gumagamit ng aplikasyon na ma-access ang mga functions ng ODM sa "
-"computer network."
-
-#: ../../../installation.rstNone
-msgid "WebODM Logo"
-msgstr ""
-
-#: ../../../installation.rst:26
-msgid ""
-"**WebODM** is a friendly user interface that includes a map viewer, a 3D "
-"viewer, user logins, a plugin system and many other features that are "
-"expected of modern drone mapping platforms"
-msgstr ""
-"Ang **WebODM** ay isang friendly user na interface na may kasamang map "
-"viewer, 3D viewer, user logins, plugin system at marami pang iba na ine-"
-"expect sa modern drone mapping platforms."
-
-#: ../../../installation.rstNone
-msgid "CloudODM Logo"
-msgstr ""
-
-#: ../../../installation.rst:32
-msgid ""
-"**CloudODM** is a small command line client to communicate with ODM via the "
-"NodeODM API"
-msgstr ""
-"Ang **CloudODM** ay isang maliit na command line client na nagcocommunicate "
-"sa ODM via NodeODM API"
-
-#: ../../../installation.rstNone
-msgid "PyODM Logo"
-msgstr ""
-
-#: ../../../installation.rst:38
-msgid ""
-"**PyODM** is a Python SDK for creating tasks via the NodeODM API. We cover "
-"it in more detail in the “Automated Processing With Python” chapter"
-msgstr ""
-"Ang **PyODM** ay Python SDK na gumagawa ng tasks via NodeODM API. Mababasa "
-"ang detalye sa “Automated Processing With Python” na chapter"
-
-#: ../../../installation.rstNone
-msgid "ClusterODM Logo"
-msgstr ""
-
-#: ../../../installation.rst:44
-msgid ""
-"**ClusterODM** is a load balancer for connecting together multiple NodeODM "
-"instances"
-msgstr ""
-"Ang **ClusterODM** ay isang load balancer na pang connect ng multiple "
-"NodeODM instances"
-
-#: ../../../installation.rst:46
-msgid ""
-"ODM, NodeODM and WebODM are available on all major platforms (Windows, macOS"
-" and Linux) via a program called docker, which is required to run the "
-"software. Docker offers a way to run “containers”. Containers are packaged "
-"copies of an entire system, its software and its dependencies. These "
-"containers run within a virtual environment. On Linux this virtual "
-"environment is available from the operating system and is very efficient. On"
-" macOS and Windows the containers run within a VM, so there’s a bit of a "
-"overhead. but it’s still very suitable for running the software. Once "
-"installed users do not have to worry much about docker, as it operates "
-"(almost) transparently."
-msgstr ""
-"Ang ODM, NoteODM at WebODM ay mayroon sa lahat ng pangunahin na plataporma "
-"(Windows, macOS at Linux) sa pamamagitan ng programang docker, na kailangan "
-"para patakbuhin ang software. Ang docker ay naghahandog ng paraan kung paano"
-" patatakbuhin ang “containers”. Ang containers ay kaha ng mga kopya ng "
-"kabuoan na sisyema, ang software nito at ang dependencies. Ang mga container"
-" na ito ay tumatakbo sa loob ng virtual environment. Sa linux, mayroong "
-"virtual environment sa operating system at ito ay mahusay na klase. Sa macOS"
-" at Windows naman, ang container ay napapatakbo sa pamamagitan ng VM, so may"
-" kaunting oberhed ngunit naaangkop pa rin sa pagpapatakbo ng software. Kapag"
-" na-install, ang gagamit ay hindi na kelangan magalala sa docker dahil ito "
-"ay gumagana (madalas) ng malinaw."
-
-#: ../../../installation.rst:48
-msgid ""
-"Without docker it would not be possible to run ODM on Windows or macOS. On "
-"these platforms ODM cannot run natively. Future development efforts are "
-"being focused on leveraging the new Windows Subsystem for Linux (WSL) and "
-"the possibility to make a native port of all dependencies to macOS, which is"
-" going to make the installation much easier."
-msgstr ""
-"Kung walang docker, hindi posible na magpatakbo ng ODM sa macOS at Windows. "
-"Sa mga plataporma na ito, ang ODM ay hindi tatakbo ng kusa. Ang paghahanada "
-"para sa susunod na debelopment ay nakatuon sa pagkilos sa makabagong Windows"
-" Subsystem para sa Linux (WSL) at ang posibilidad na gawing native port ng "
-"lahat ng dependencies sa macOS na makakapagpadali sa pagi-install."
-
-#: ../../../installation.rst:50
-msgid ""
-"On Ubuntu Linux 18.04 it’s feasible to run all OpenDroneMap software "
-"natively. However, because there’s very little performance penalty for "
-"running docker on Linux and docker is straightforward to setup on this "
-"platform, we don’t recommend it. On Linux the advantages of containerization"
-" far outweigh a tiny performance penalty. With docker users also get easy "
-"one-step updates of the software, so that’s nice."
-msgstr ""
-"Sa Ubuntu Linux 18.04 kaya patakbuhin ang lahat ng OpenDroneMap software. "
-"Ngutin, sa kadahilanan na may maliit na performance penalty sa pagpapatakbo "
-"ng docker sa Linux, and docker ay diretso sa pagset-up sa plataporma nito. "
-"Ito ay hindi inirerekomenda. Sa Linux, ang kalamangan ng containerization ay"
-" higit na malaki sa maliit na performance penalty. Sa docker, ang gagamit ay"
-" makakakuha ng mas madali na one-step updates ng software so ito ay maganda."
-
-#: ../../../installation.rst:54
+#: ../../installation.rst:18
 msgid "Hardware Recommendations"
 msgstr "Hardware Recommendations"
 
-#: ../../../installation.rst:56
+#: ../../installation.rst:20
 msgid "The bare minimum requirements for running the software are:"
-msgstr ""
-"Ang pinakakonti na bilang ng requirements para patakbuhin ang software ay:"
+msgstr "Ang pinakakonti na bilang ng requirements para patakbuhin ang software ay:"
 
-#: ../../../installation.rst:59
+#: ../../installation.rst:23
 msgid "64bit CPU manufactured on or after 2010"
 msgstr "64bit CPU manufactured on or after 2010"
 
-#: ../../../installation.rst:60
+#: ../../installation.rst:24
 msgid "20 GB of disk space"
 msgstr "20 GB of disk space"
 
-#: ../../../installation.rst:61
+#: ../../installation.rst:25
 msgid "4 GB RAM"
 msgstr "4 GB RAM"
 
-#: ../../../installation.rst:63
+#: ../../installation.rst:27
 msgid ""
-"No more than 100-200 images can be processed with the above specifications "
-"(the software will run out of memory). Recommended requirements are:"
+"No more than 100-200 images can be processed with the above "
+"specifications (the software will run out of memory). Recommended "
+"requirements are:"
 msgstr ""
 "Hindi hihigit sa 100-200 na imahe ang kayang iprocess ng nabanggit na "
 "specification sa taas (mauubusan ng memory ang software). Ang mga "
 "rekomendado na requirement ay:"
 
-#: ../../../installation.rst:65
+#: ../../installation.rst:29
 msgid "Latest Generation CPU"
 msgstr "Pinakabago na Generation CPU"
 
-#: ../../../installation.rst:66
+#: ../../installation.rst:30
 msgid "100 GB of disk space"
 msgstr "100 GB of disk space"
 
-#: ../../../installation.rst:67
+#: ../../installation.rst:31
 msgid "16 GB RAM"
 msgstr "16 GB RAM"
 
-#: ../../../installation.rst:69
+#: ../../installation.rst:33
 msgid ""
-"The above will allow for a few hundred images to be processed without too "
-"many issues. A CPU with more cores will allow for faster processing, while a"
-" graphics card (GPU) currently has no impact on performance. For processing "
-"more images, add more disk space and RAM linearly to the number of images "
-"you need to process."
+"The above will allow for a few hundred images to be processed without too"
+" many issues. A CPU with more cores will allow for faster processing, "
+"while a graphics card (GPU) currently has no impact on performance. For "
+"processing more images, add more disk space and RAM linearly to the "
+"number of images you need to process."
 msgstr ""
-"Ang nasa taas ay papayagan ang ilang daan na imahe na maprocess ng walang "
-"masyadong issue. Ang CPU na maraming core ay papahintulutan ang mas mabilis "
-"na pagproseso, samantalang ang graphics card (GPU) naman ay kasalukuyan na "
-"walang epekto sa performance. para sa pagprocess ng mas maraming imahe, "
-"magdagdag ng mas maraming disk space sa RAM linearly para sa bilang ng imahe"
-" na kailangan iprocess."
+"Ang nasa taas ay papayagan ang ilang daan na imahe na maprocess ng walang"
+" masyadong issue. Ang CPU na maraming core ay papahintulutan ang mas "
+"mabilis na pagproseso, samantalang ang graphics card (GPU) naman ay "
+"kasalukuyan na walang epekto sa performance. para sa pagprocess ng mas "
+"maraming imahe, magdagdag ng mas maraming disk space sa RAM linearly para"
+" sa bilang ng imahe na kailangan iprocess."
 
-#: ../../../installation.rst:75
+#: ../../installation.rst:35
+msgid "Minimum RAM needed for N images"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "Number of images"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "RAM or RAM + Swap"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "40"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "4"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "250"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "16"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "500"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "32"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "1500"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "64"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "2500"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "128"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "3500"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "192"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "5000"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "256"
+msgstr ""
+
+#: ../../installation.rst:50
 msgid "Installation"
 msgstr "Installation"
 
-#: ../../../installation.rst:77
+#: ../../installation.rst:52
 msgid ""
-"We recommend people use `docker <https://www.docker.com>`_ for running ODM, "
-"whether you are on Windows, macOS or Linux."
+"We recommend people use `docker <https://www.docker.com>`_ for running "
+"ODM, whether you are on Windows, macOS or Linux."
 msgstr ""
 "Nirerekomenda  na gamitin ang `docker <https://www.docker.com>`_ para "
 "patakbuhin ang ODM, ikaw man ay gumagamit ng Windows, macOS o Linux."
 
-#: ../../../installation.rst:80
+#: ../../installation.rst:55
 msgid "Windows"
 msgstr "Windows"
 
-#: ../../../installation.rst:82
+#: ../../installation.rst:57
 msgid ""
 "To run OpenDroneMap you need at least Windows 7. Previous versions of "
 "Windows are not supported."
 msgstr ""
-"Para patakbuhin ang OpenDroneMap, kailangan mo ng kahit man lang Windows 7. "
-"Ang mga mas luma na bersiyon ng Windows ay hindi suportado."
+"Para patakbuhin ang OpenDroneMap, kailangan mo ng kahit man lang Windows "
+"7. Ang mga mas luma na bersiyon ng Windows ay hindi suportado."
 
-#: ../../../installation.rst:86 ../../../installation.rst:238
+#: ../../installation.rst:61 ../../installation.rst:213
 msgid "Step 1. Check Virtualization Support"
 msgstr "Step 1. I-check Virtualization Support"
 
-#: ../../../installation.rst:88
+#: ../../installation.rst:63
 msgid ""
-"Docker requires a feature from your CPU called virtualization, which allows "
-"it to run virtual machines (VMs). Make sure you have it enabled! Sometimes "
-"this is disabled. To check, on Windows 8 or higher you can open the **Task "
-"Manager** (press CTRL+SHIFT+ESC) and switch to the **Performance** tab."
+"Docker requires a feature from your CPU called virtualization, which "
+"allows it to run virtual machines (VMs). Make sure you have it enabled! "
+"Sometimes this is disabled. To check, on Windows 8 or higher you can open"
+" the **Task Manager** (press CTRL+SHIFT+ESC) and switch to the "
+"**Performance** tab."
 msgstr ""
 "Ang docker ay nangangailangan ng feature sa CPU na tinatawag na "
 "virtualization, ina-allow nito na patakbuhin ang virtual machines (VMs). "
@@ -279,43 +227,42 @@ msgstr ""
 "Windows 8 o mas mataas na bersiyon, buksan ang **Task Manager** (press "
 "CTRL+SHIFT+ESC) at i-switch sa **Performance** tab."
 
-#: ../../../installation.rstNone
 msgid "Image of checking virtualization in Windows 8 or higher"
 msgstr ""
 
-#: ../../../installation.rst:94
+#: ../../installation.rst:69
 msgid "*Virtualization should be enabled*"
 msgstr "*Virtualization should be enabled*"
 
-#: ../../../installation.rst:96
+#: ../../installation.rst:71
 msgid ""
 "On Windows 7 to see if you have virtualization enabled you can use the "
 "`Microsoft® Hardware-Assisted Virtualization Detection Tool <http:// "
 "www.microsoft.com/en-us/download/details.aspx?id=592>`_ instead."
 msgstr "Sa Windows 7, para makita kung naka-enable ang virtualization, "
 
-#: ../../../installation.rst:99
+#: ../../installation.rst:74
 msgid ""
 "If virtualization is disabled, you’ll need to enable it. The procedure "
-"unfortunately is a bit different for each computer model, so the best way to"
-" do this is to look up on a search engine “how to enable vtx for <type your "
-"computer model here>”. Often times it’s a matter of restarting the computer,"
-" immediately pressing F2 or F12 during startup, navigating the boot menu and"
-" changing the settings to enable virtualization (often called “VT-X”)."
+"unfortunately is a bit different for each computer model, so the best way"
+" to do this is to look up on a search engine “how to enable vtx for <type"
+" your computer model here>”. Often times it’s a matter of restarting the "
+"computer, immediately pressing F2 or F12 during startup, navigating the "
+"boot menu and changing the settings to enable virtualization (often "
+"called “VT-X”)."
 msgstr ""
-"Kung ang virtualization ay hindi gumagana, kailangan paganahin ito. Bagamat "
-"ang proseso ay higit na iba kada modelo ng komputer. Ang pinakamainam na "
-"paraan para gawin ito ay ang hanapin sa search engine ang “how to enable vtx"
-" for 1”. Kadalasan, kailangan ire-start ang kompyuter, mabilis na pagpindot "
-"ng F2 o F12 habang start-up, ang pag-navigate ng boot menu at pagpalit ng "
-"settings para mapahintulot ang virtualization (madals na tinatawag na "
-"“VT-X”)."
+"Kung ang virtualization ay hindi gumagana, kailangan paganahin ito. "
+"Bagamat ang proseso ay higit na iba kada modelo ng komputer. Ang "
+"pinakamainam na paraan para gawin ito ay ang hanapin sa search engine ang"
+" “how to enable vtx for 1”. Kadalasan, kailangan ire-start ang kompyuter,"
+" mabilis na pagpindot ng F2 o F12 habang start-up, ang pag-navigate ng "
+"boot menu at pagpalit ng settings para mapahintulot ang virtualization "
+"(madals na tinatawag na “VT-X”)."
 
-#: ../../../installation.rstNone
 msgid "Table of different bios keys"
 msgstr ""
 
-#: ../../../installation.rst:105
+#: ../../installation.rst:80
 msgid ""
 "*Common keys to press at computer startup to access the boot menu for "
 "various PC vendors*"
@@ -323,23 +270,23 @@ msgstr ""
 "*Common keys to press at computer startup to access the boot menu for "
 "various PC vendors*"
 
-#: ../../../installation.rst:108 ../../../installation.rst:257
+#: ../../installation.rst:83 ../../installation.rst:232
 msgid "Step 2. Install Requirements"
 msgstr "Step 2. Install Requirements"
 
-#: ../../../installation.rst:110
+#: ../../installation.rst:85
 msgid "First, you’ll need to install:"
 msgstr "Una, kailangan mong ma-install:"
 
-#: ../../../installation.rst:112
+#: ../../installation.rst:87
 msgid "Git: https://git-scm.com/downloads"
 msgstr "Git: https://git-scm.com/downloads"
 
-#: ../../../installation.rst:113
+#: ../../installation.rst:88
 msgid "Python (latest version 3): https://www.python.org/downloads/windows/"
 msgstr "Python (latest version 3): https://www.python.org/downloads/windows/"
 
-#: ../../../installation.rst:115
+#: ../../installation.rst:90
 msgid ""
 "For Python 3, make sure you check **Add Python 3.x to PATH** during the "
 "installation."
@@ -347,27 +294,26 @@ msgstr ""
 "Para sa Python 3, siguraduhin na i-check ang **Add Python 3.x to PATH** "
 "habang iniinstall."
 
-#: ../../../installation.rstNone
 msgid "Screenshot of Python3 installation process"
 msgstr ""
 
-#: ../../../installation.rst:121
+#: ../../installation.rst:96
 msgid ""
-"*Don’t forget to add the Python executable to your PATH (so that you can run"
-" commands with it)*"
+"*Don’t forget to add the Python executable to your PATH (so that you can "
+"run commands with it)*"
 msgstr ""
-"*Don’t forget to add the Python executable to your PATH (so that you can run"
-" commands with it)*"
+"*Don’t forget to add the Python executable to your PATH (so that you can "
+"run commands with it)*"
 
-#: ../../../installation.rst:123
+#: ../../installation.rst:98
 msgid ""
-"Then, only if you are on Windows 10 Home, Windows 8 (any version) or Windows"
-" 7 (any version), install:"
+"Then, only if you are on Windows 10 Home, Windows 8 (any version) or "
+"Windows 7 (any version), install:"
 msgstr ""
 "Kapag ikaw ay nasa Windows 10 Home, Windows 8 (kahit anong bersiyon) o "
 "WIndows 7 (kahit anong bersiyon), i-install:"
 
-#: ../../../installation.rst:125
+#: ../../installation.rst:100
 msgid ""
 "Docker Toolbox: "
 "https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe"
@@ -375,15 +321,16 @@ msgstr ""
 "Docker Toolbox: "
 "https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe"
 
-#: ../../../installation.rst:127
+#: ../../installation.rst:102
 msgid ""
-"If you are on Windows 10 Professional or a newer version, you should install"
-" instead:"
+"If you are on Windows 10 Professional or a newer version, you should "
+"install instead:"
 msgstr ""
 "Kung ang gamit ay Windows 10 Professional o mas bagong bersiyon, dapat "
 "i-install ito:"
 
-#: ../../../installation.rst:129
+#: ../../installation.rst:104
+#, python-format
 msgid ""
 "Docker for Windows: "
 "https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe"
@@ -391,221 +338,217 @@ msgstr ""
 "Docker for Windows: "
 "https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe"
 
-#: ../../../installation.rst:131
+#: ../../installation.rst:106
 msgid ""
-"Please do **NOT** install both docker programs. They are different and will "
-"create a mess if they are both installed."
+"Please do **NOT** install both docker programs. They are different and "
+"will create a mess if they are both installed."
 msgstr ""
 "**HUWAG** i-install ng sabay ang dalawang docker na programa. Sila ay "
 "magkaiba at maaring mahdulot ng gulo sa sistema."
 
-#: ../../../installation.rst:133
+#: ../../installation.rst:108
 msgid ""
 "After installing docker, launch it from the Desktop icon that is created "
-"from the installation (**Docker Quickstart** in the case of Docker Toolbox, "
-"**Docker for Windows** for Docker for Windows). This is important, do not "
-"skip this step. If there are errors, follow the prompts on screen to fix "
-"them."
+"from the installation (**Docker Quickstart** in the case of Docker "
+"Toolbox, **Docker for Windows** for Docker for Windows). This is "
+"important, do not skip this step. If there are errors, follow the prompts"
+" on screen to fix them."
 msgstr ""
 "Matapos i-install ang docker, simulan ito mula sa Desktop icon na ginawa "
 "mula sa installation (**Docker Quickstart** sa kaso ng Docker Toolbox, "
-"**Docker for Windows** para sa Docker na pang-Windows). Ito ay importante, "
-"wag lagpasan ang hakbang na ito. Kung may kamalian, sundan ang mga nakadikta"
-" sa screen para ayusin ito."
+"**Docker for Windows** para sa Docker na pang-Windows). Ito ay "
+"importante, wag lagpasan ang hakbang na ito. Kung may kamalian, sundan "
+"ang mga nakadikta sa screen para ayusin ito."
 
-#: ../../../installation.rst:136 ../../../installation.rst:299
+#: ../../installation.rst:111 ../../installation.rst:274
 msgid "Step 3. Check Memory and CPU Allocation"
 msgstr "Step 3. I-check ang Memory at CPU Allocation"
 
-#: ../../../installation.rst:138
+#: ../../installation.rst:113
 msgid ""
-"Docker on Windows works by running a VM in the background (think of a VM as "
-"a “computer emulator”). This VM has a certain amount of memory allocated and"
-" WebODM can only use as much memory as it’s allocated."
+"Docker on Windows works by running a VM in the background (think of a VM "
+"as a “computer emulator”). This VM has a certain amount of memory "
+"allocated and WebODM can only use as much memory as it’s allocated."
 msgstr ""
-"Ang docker sa Windows ay tumatakbo sa pamamagitan ng VM sa likod (isipin ang"
-" VM bilang “computer emulator”). Ang VM na ito ay may sapat ng laki ng "
-"memory na nakasubi at ang WebODM ay makakagamit lamang ng sapat na memorya "
-"na nakatabi para sa kanya."
+"Ang docker sa Windows ay tumatakbo sa pamamagitan ng VM sa likod (isipin "
+"ang VM bilang “computer emulator”). Ang VM na ito ay may sapat ng laki ng"
+" memory na nakasubi at ang WebODM ay makakagamit lamang ng sapat na "
+"memorya na nakatabi para sa kanya."
 
-#: ../../../installation.rst:140
+#: ../../installation.rst:115
 msgid ""
 "If you installed Docker Toolbox (see below if you installed Docker for "
 "Windows instead):"
 msgstr ""
-"Kung Docker Toolbox ang naka-install (tignan ang nasa ibaba kung Docker ang "
-"naka-install sa Windows):"
+"Kung Docker Toolbox ang naka-install (tignan ang nasa ibaba kung Docker "
+"ang naka-install sa Windows):"
 
-#: ../../../installation.rst:142
+#: ../../installation.rst:117
 msgid "Open the **VirtualBox Manager** application"
 msgstr "Buksan ang **VirtualBox Manager** application"
 
-#: ../../../installation.rst:143
+#: ../../installation.rst:118
 msgid ""
-"Right click the **default** VM and press **Close (ACPI Shutdown)** to stop "
-"the machine"
+"Right click the **default** VM and press **Close (ACPI Shutdown)** to "
+"stop the machine"
 msgstr ""
 "i-right click ang **default** ang VM at pindutin ang **Close (ACPI "
 "Shutdown)** para tumigil ang machine"
 
-#: ../../../installation.rst:144
+#: ../../installation.rst:119
 msgid "Right click the **default** VM and press **Settings...**"
 msgstr "i-right click ang **default** ang VM at pindutin ang **Settings...**"
 
-#: ../../../installation.rst:145
+#: ../../installation.rst:120
+#, python-format
 msgid ""
 "Move the **Base Memory** slider from the **System** panel and allocate "
 "60-70% of all available memory, optionally adding 50% of the available "
 "processors from the **Processor** tab also"
 msgstr ""
 
-#: ../../../installation.rstNone
 msgid "Screenshot of VirtualBox Settings"
 msgstr ""
 
-#: ../../../installation.rst:151
+#: ../../installation.rst:126
 msgid "*VirtualBox default VM settings*"
 msgstr "*VirtualBox default VM settings*"
 
-#: ../../../installation.rst:153
+#: ../../installation.rst:128
 msgid "Then press **OK**, right click the **default** VM and press **Start**."
 msgstr ""
 "Pindutin ang **OK**, i-right click ang **default** VM at pindutin ang "
 "**Start**."
 
-#: ../../../installation.rst:155
+#: ../../installation.rst:130
 msgid "If you installed Docker for Windows instead:"
 msgstr "Kung Docker para sa Windows ang naka-install:"
 
-#: ../../../installation.rst:157
+#: ../../installation.rst:132
 msgid "Look in the system tray and right click the “white whale” icon."
 msgstr "Tignan ang system tray at i-right click ang \"white whale\" na icon."
 
-#: ../../../installation.rst:158
+#: ../../installation.rst:133
 msgid "From the menu, press **Settings...**"
 msgstr "Mula sa menue, i-press ang **Settings...**"
 
-#: ../../../installation.rst:159
+#: ../../installation.rst:134
+#, python-format
 msgid ""
-"From the panel, click **Advanced** and use the sliders to allocate 60-70% of"
-" available memory and use half of all available CPUs."
+"From the panel, click **Advanced** and use the sliders to allocate 60-70%"
+" of available memory and use half of all available CPUs."
 msgstr ""
-"Mula sa panel, i-click ang **Advanced** at gamitin ang sliders para maisubi "
-"ang 60-70% na memory at gamitin ang kalahati ng available sa CPUs."
+"Mula sa panel, i-click ang **Advanced** at gamitin ang sliders para "
+"maisubi ang 60-70% na memory at gamitin ang kalahati ng available sa "
+"CPUs."
 
-#: ../../../installation.rst:160
+#: ../../installation.rst:135
 msgid "Press **Apply**."
 msgstr "Pindutin ang **Apply**."
 
-#: ../../../installation.rstNone
 msgid "Screenshot of Docker Icon"
 msgstr ""
 
-#: ../../../installation.rst:166
+#: ../../installation.rst:141
 msgid "*Step 1 Docker icon*"
 msgstr "*Step 1 Docker icon*"
 
-#: ../../../installation.rstNone
 msgid "Screenshot of Docker Settings"
 msgstr ""
 
-#: ../../../installation.rst:172
+#: ../../installation.rst:147
 msgid "*Step 3 & 4 Docker settings*"
 msgstr "*Step 3 & 4 Docker settings*"
 
-#: ../../../installation.rst:175
+#: ../../installation.rst:150
 msgid "Step 4. Download WebODM"
 msgstr "Step 4. Download WebODM"
 
-#: ../../../installation.rst:177
-msgid ""
-"Open the **Git Gui** program that comes installed with Git. From there:"
+#: ../../installation.rst:152
+msgid "Open the **Git Gui** program that comes installed with Git. From there:"
 msgstr "Buksan ang **Git Gui** na programa na kasama Git. galing dito:"
 
-#: ../../../installation.rst:179
+#: ../../installation.rst:154
 msgid "When Git Gui opens, click 'Clone Existing Repository' option"
 msgstr ""
-"Kapag nabuksan na ang Git Gui, i-click ang 'Clone Existing Repository' na "
-"option"
+"Kapag nabuksan na ang Git Gui, i-click ang 'Clone Existing Repository' na"
+" option"
 
-#: ../../../installation.rst:180
+#: ../../installation.rst:155
 msgid "In **Source Location** type: https://github.com/OpenDroneMap/WebODM"
 msgstr ""
 "Mula sa **Source Location** i-type ang: "
 "https://github.com/OpenDroneMap/WebODM"
 
-#: ../../../installation.rst:181
+#: ../../installation.rst:156
 msgid ""
 "In **Target Directory** click browse and navigate to a folder of your "
 "choosing (create one if necessary)"
 msgstr ""
-"Mula sa **Target Directory** i-click ang browse at magnavigate sa folder na "
-"gusto mo (gumawa ng folder kung kinakailangan)"
+"Mula sa **Target Directory** i-click ang browse at magnavigate sa folder "
+"na gusto mo (gumawa ng folder kung kinakailangan)"
 
-#: ../../../installation.rst:182
+#: ../../installation.rst:157
 msgid "Press **Clone**"
 msgstr "Pindutin ang **Clone**"
 
-#: ../../../installation.rstNone
 msgid "Screenshot of Git Gui"
 msgstr ""
 
-#: ../../../installation.rst:188
+#: ../../installation.rst:163
 msgid "*Git Gui*"
 msgstr "*Git Gui*"
 
-#: ../../../installation.rst:190
+#: ../../installation.rst:165
 msgid "If the download succeeded, you should now see this window:"
 msgstr "Kung ang pagda-download ay successful, makikita ang window na ito:"
 
-#: ../../../installation.rstNone
 msgid "Screenshot of Git Gui after successful download"
 msgstr ""
 
-#: ../../../installation.rst:196
+#: ../../installation.rst:171
 msgid "*Git Gui after successful download (clone)*"
 msgstr "*Git Gui after successful download (clone)*"
 
-#: ../../../installation.rst:198
+#: ../../installation.rst:173
 msgid ""
-"Go to the **Repository** menu, then click **Create Desktop Icon**. This will"
-" allow you to come back to this application easily in the future."
+"Go to the **Repository** menu, then click **Create Desktop Icon**. This "
+"will allow you to come back to this application easily in the future."
 msgstr ""
 "Pumunta sa **Repository** menu at i-click ang **Create Desktop Icon**. "
-"Matutulungan ka nito na bumalik sa madaling makapunta sa aplikasyon na ito "
-"balang araw."
+"Matutulungan ka nito na bumalik sa madaling makapunta sa aplikasyon na "
+"ito balang araw."
 
-#: ../../../installation.rst:201
+#: ../../installation.rst:176
 msgid "Step 4. Launch WebODM"
 msgstr "Step 4. Launch WebODM"
 
-#: ../../../installation.rst:203
+#: ../../installation.rst:178
 msgid ""
-"From Git Gui, go to the **Repository** menu, then click **Git Bash**. From "
-"the command line terminal type:"
+"From Git Gui, go to the **Repository** menu, then click **Git Bash**. "
+"From the command line terminal type:"
 msgstr ""
-"Mula sa Git Gui, pumunta sa **Repository** menu at i-click ang **Git Bash**."
-" Mula sa command line terminal i-type ang:"
+"Mula sa Git Gui, pumunta sa **Repository** menu at i-click ang **Git "
+"Bash**. Mula sa command line terminal i-type ang:"
 
-#: ../../../installation.rst:209
+#: ../../installation.rst:184
 msgid ""
-"Several components will download to your machine at this point, including "
-"WebODM, NodeODM and ODM. After the download you should be greeted by the "
-"following screen:"
+"Several components will download to your machine at this point, including"
+" WebODM, NodeODM and ODM. After the download you should be greeted by the"
+" following screen:"
 msgstr ""
-"Iba't ibang components na ang nadownload dapat ng iyong computer sa point na"
-" ito. Kasama na rito ang WebODM, NodeODM at ODM. Matapos ang pagda-download,"
-" ikaw ay babatiin ng mga sumusunod na mensahe sa screen:"
+"Iba't ibang components na ang nadownload dapat ng iyong computer sa point"
+" na ito. Kasama na rito ang WebODM, NodeODM at ODM. Matapos ang pagda-"
+"download, ikaw ay babatiin ng mga sumusunod na mensahe sa screen:"
 
-#: ../../../installation.rstNone
 msgid "Screenshot of after successfully downloading WebODM"
 msgstr ""
 
-#: ../../../installation.rst:215
+#: ../../installation.rst:190
 msgid "*Console output after starting WebODM for the first time*"
 msgstr "*Console output after starting WebODM for the first time*"
 
-#: ../../../installation.rst:217
+#: ../../installation.rst:192
 msgid ""
 "If you are using Docker for Windows, open a web browser to "
 "http://localhost:8000"
@@ -613,7 +556,7 @@ msgstr ""
 "Kung ikaw ay gumagamit ng Docker for Windows, buksan ang web browser sa "
 "http://localhost:8000"
 
-#: ../../../installation.rst:218
+#: ../../installation.rst:193
 msgid ""
 "If you are using Docker Toolbox, find the IP address to connect to by "
 "typing:"
@@ -621,429 +564,645 @@ msgstr ""
 "Kung ikaw ay gumagamit ng Docker Toolbox, hanapin ang IP address na "
 "magcoconnect sayo sa pamamagitan ng pagtype nito:"
 
-#: ../../../installation.rst:224
+#: ../../installation.rst:199
 msgid "You should get a result like the following:"
 msgstr "Dapat makatanggap ng resulta na katulad ng mga sumusunod:"
 
-#: ../../../installation.rst:230
+#: ../../installation.rst:205
 msgid ""
-"Then connect to http://192.168.1.100:8000 (replacing the IP address with the"
-" proper one)."
+"Then connect to http://192.168.1.100:8000 (replacing the IP address with "
+"the proper one)."
 msgstr ""
 "Tapos, magconnect sa http://192.168.1.100:8000 (replacing the IP address "
 "with the proper one)."
 
-#: ../../../installation.rst:233
+#: ../../installation.rst:208
 msgid "macOS"
 msgstr "macOS"
 
-#: ../../../installation.rst:235
+#: ../../installation.rst:210
 msgid ""
-"Most modern (post 2010) Mac computers running macOS Sierra 10.12 or higher "
-"can run OpenDroneMap using docker, as long as hardware virtualization is "
-"supported (see below)."
+"Most modern (post 2010) Mac computers running macOS Sierra 10.12 or "
+"higher can run OpenDroneMap using docker, as long as hardware "
+"virtualization is supported (see below)."
 msgstr ""
-"Karamihan ng modernong bersiyon ng Mac computers (post 2010) na may macOS "
-"Sierra 10.12 o mas mataas pa ay kayang gumamit ng OpenDroneMap gamit ang "
-"docker, hanggat ang hardware virtualization ay suportado (tignan ang nasa "
-"ibaba)."
+"Karamihan ng modernong bersiyon ng Mac computers (post 2010) na may macOS"
+" Sierra 10.12 o mas mataas pa ay kayang gumamit ng OpenDroneMap gamit ang"
+" docker, hanggat ang hardware virtualization ay suportado (tignan ang "
+"nasa ibaba)."
 
-#: ../../../installation.rst:240
+#: ../../installation.rst:215
 msgid "Open a Terminal window and type:"
 msgstr "Buksan ang Terminal na window at i-type ang:"
 
-#: ../../../installation.rst:246
+#: ../../installation.rst:221
 msgid "You will get a response similar to the following:"
 msgstr "Makakatanggap ng mensahe na katulad ng mga sumusunod:"
 
-#: ../../../installation.rst:252
+#: ../../installation.rst:227
 msgid ""
-"If the result is *kern.hv_support: 1*, then your Mac is supported! Continue "
-"with Step 2."
+"If the result is *kern.hv_support: 1*, then your Mac is supported! "
+"Continue with Step 2."
 msgstr ""
 "Ang iyong Mac ay suportado kung ang resulta na lumalabas ay "
 "*kern.hv_support: 1*. Sundan ang hakbang bilang 2."
 
-#: ../../../installation.rst:254
+#: ../../installation.rst:229
 msgid ""
-"If the result is *kern.hv_support: 0*, unfortunately it means your Mac is "
-"too old to run OpenDroneMap. :("
+"If the result is *kern.hv_support: 0*, unfortunately it means your Mac is"
+" too old to run OpenDroneMap. :("
 msgstr ""
 "Ang sistema ng iyong Mac ay luma na hindi na kakayanin ang OpenDroneMap "
 "kapag ang resulta na lumabas ay *kern.hv_support: 0*. :("
 
-#: ../../../installation.rst:259
+#: ../../installation.rst:234
 msgid "There are only two programs to install:"
 msgstr "Mayroon lamang dalawang programa na dapat i-install:"
 
-#: ../../../installation.rst:261
+#: ../../installation.rst:236
 msgid "Docker: https://download.docker.com/mac/stable/Docker.dmg"
 msgstr "Ang Docker: https://download.docker.com/mac/stable/Docker.dmg"
 
-#: ../../../installation.rst:262
+#: ../../installation.rst:237
 msgid "Git: https://sourceforge.net/projects/git-osx-installer/files/"
 msgstr "At ang Git: https://sourceforge.net/projects/git-osx-installer/files/"
 
-#: ../../../installation.rst:264
+#: ../../installation.rst:239
 msgid ""
-"After installing docker you should find an icon that looks like a whale in "
-"the task bar."
+"After installing docker you should find an icon that looks like a whale "
+"in the task bar."
 msgstr ""
-"Matapoa i-install ang docker, makikita ang simbolo na mukang balyena sa task"
-" bar."
+"Matapoa i-install ang docker, makikita ang simbolo na mukang balyena sa "
+"task bar."
 
-#: ../../../installation.rstNone
 msgid "Screenshot of Docker whale"
 msgstr ""
 
-#: ../../../installation.rst:270
+#: ../../installation.rst:245
 msgid "*Docker app running*"
 msgstr "*Ang Docker app ay tumatakbo*"
 
-#: ../../../installation.rst:272
+#: ../../installation.rst:247
 msgid ""
-"You can verify that docker is running properly by opening the **Terminal** "
-"app and typing:"
+"You can verify that docker is running properly by opening the "
+"**Terminal** app and typing:"
 msgstr ""
 "Upang masigurado na tumatakbo ng matiwasay ang docker, buksan ang "
 "**Terminal** na app at i-type ang mga sumusunod:"
 
-#: ../../../installation.rst:278
+#: ../../installation.rst:253
 msgid "Which should return"
 msgstr "Na dapat ay bumalik"
 
-#: ../../../installation.rst:284
+#: ../../installation.rst:259
 msgid "To verify that git is installed, simply type:"
 msgstr "Para masigurado na ang git ay na-install, i-type ang:"
 
-#: ../../../installation.rst:290
+#: ../../installation.rst:265
 msgid "Which should return something similar to the following:"
 msgstr "Na may babalik dapat na malapit sa mga sumusunod:"
 
-#: ../../../installation.rst:296
+#: ../../installation.rst:271
 msgid ""
 "If you get a “bash: git: command not found”, try to restart your "
-"**Terminal** app and double-check for any errors during the install process."
+"**Terminal** app and double-check for any errors during the install "
+"process."
 msgstr ""
 "Kapag nakatanggap ng “bash: git: command not found”, i-restart ang "
-"**Terminal** app at suriing mabuti kung may mga error habang inagi-install."
+"**Terminal** app at suriing mabuti kung may mga error habang inagi-"
+"install."
 
-#: ../../../installation.rst:301
+#: ../../installation.rst:276
 msgid ""
-"Docker on macOS works by running a VM in the background (think of it as a "
-"“computer emulator”). This VM has a certain amount of memory allocated and "
-"WebODM can only use as much memory as it’s allocated."
+"Docker on macOS works by running a VM in the background (think of it as a"
+" “computer emulator”). This VM has a certain amount of memory allocated "
+"and WebODM can only use as much memory as it’s allocated."
 msgstr ""
-"Ang docker ay tumatakbo lamang sa macOS sa pamamagitan ng paggamit ng VM sa "
-"background (isipin na ito ay parang \"computer emulator\"). Ang VM na ito ay"
-" may limitadong alokasyon lamang  ng memorya para sa WebODM."
+"Ang docker ay tumatakbo lamang sa macOS sa pamamagitan ng paggamit ng VM "
+"sa background (isipin na ito ay parang \"computer emulator\"). Ang VM na "
+"ito ay may limitadong alokasyon lamang  ng memorya para sa WebODM."
 
-#: ../../../installation.rst:303
-msgid ""
-"Right click the whale icon from the task bar and click **Preferences**..."
+#: ../../installation.rst:278
+msgid "Right click the whale icon from the task bar and click **Preferences**..."
 msgstr ""
 "I-right click ang balyena na simbulo sa task bar at piliin ang "
 "**Preferences**..."
 
-#: ../../../installation.rst:304
+#: ../../installation.rst:279
 msgid "Select the **Advanced** tab"
 msgstr "Piliin ang **Advanced** tab"
 
-#: ../../../installation.rst:305
+#: ../../installation.rst:280
+#, python-format
 msgid ""
-"Adjust the CPUs slider to use half of all available CPUs and the memory to "
-"use 60-70% of all available memory"
+"Adjust the CPUs slider to use half of all available CPUs and the memory "
+"to use 60-70% of all available memory"
 msgstr ""
 "I-adjust ang CPU slider para magamit ang kalahato ng kabuoang CPU at ang "
 "memoryang magagamit ay 60-70% ng kabuoang memorya."
 
-#: ../../../installation.rst:306
+#: ../../installation.rst:281
 msgid "Press **Apply & Restart**"
 msgstr "Pindutin ang *Apply & Restart**"
 
-#: ../../../installation.rstNone
 msgid "Screenshot of Docker advanced settings"
 msgstr ""
 
-#: ../../../installation.rst:312
+#: ../../installation.rst:287
 msgid "*Docker advanced settings*"
 msgstr "*Docker advanced settings*"
 
-#: ../../../installation.rst:315
+#: ../../installation.rst:290
 msgid "Step 4. Download and Launch WebODM"
 msgstr "Step 4. I-download at i-launch ang WebODM"
 
-#: ../../../installation.rst:317
+#: ../../installation.rst:292
 msgid "From a **Terminal** type:"
 msgstr "Mula sa **Terminal** i-type ang:"
 
-#: ../../../installation.rst:325 ../../../installation.rst:426
+#: ../../installation.rst:300 ../../installation.rst:401
 msgid "Then open a web browser to http://localhost:8000."
 msgstr "Tapos buksan ang web browser sa http://localhost:8000."
 
-#: ../../../installation.rst:328
+#: ../../installation.rst:303
 msgid "Linux"
 msgstr "Linux"
 
-#: ../../../installation.rst:330
+#: ../../installation.rst:305
 msgid ""
 "OpenDroneMap can run on any Linux distribution that supports docker. "
 "According to `docker’s documentation website "
-"<https://docs.docker.com/install/>`_ the officially supported distributions "
-"are CentOS, Debian, Ubuntu and Fedora, with static binaries available for "
-"others. If you have to pick a distribution solely for running OpenDroneMap, "
-"Ubuntu is the recommended way to go."
+"<https://docs.docker.com/install/>`_ the officially supported "
+"distributions are CentOS, Debian, Ubuntu and Fedora, with static binaries"
+" available for others. If you have to pick a distribution solely for "
+"running OpenDroneMap, Ubuntu is the recommended way to go."
 msgstr ""
-"Ang OpenDroneMap ay makakatakbo lamang sa kahit anong Linux na distribusyon "
-"na nagsusuporta sa docker. Ayon sa `docker’s documentation website "
-"<https://docs.docker.com/install/>`_ ang opisyal nasuportadong distribusyon "
-"ay ang CentOS, Debian, Ubuntu at Fedora, na may static binaries na mayroon "
-"para sa iba. Kung ikaw ay pipili ng distribusyon para sa pagpapatakbo ng "
-"OpenDroneMap, Ubunto ang rekomendado."
+"Ang OpenDroneMap ay makakatakbo lamang sa kahit anong Linux na "
+"distribusyon na nagsusuporta sa docker. Ayon sa `docker’s documentation "
+"website <https://docs.docker.com/install/>`_ ang opisyal nasuportadong "
+"distribusyon ay ang CentOS, Debian, Ubuntu at Fedora, na may static "
+"binaries na mayroon para sa iba. Kung ikaw ay pipili ng distribusyon para"
+" sa pagpapatakbo ng OpenDroneMap, Ubunto ang rekomendado."
 
-#: ../../../installation.rst:333
+#: ../../installation.rst:308
 msgid "Step 1. Install Requirements"
 msgstr "Step 1. Mga kailangan bago maginstall."
 
-#: ../../../installation.rst:335
+#: ../../installation.rst:310
 msgid "There are four programs that need to be installed:"
 msgstr "May apat na programa na dapat ma-install:"
 
-#: ../../../installation.rst:337
+#: ../../installation.rst:312
 msgid "Docker"
 msgstr "Docker"
 
-#: ../../../installation.rst:338
+#: ../../installation.rst:313
 msgid "Git"
 msgstr "Git"
 
-#: ../../../installation.rst:339
+#: ../../installation.rst:314
 msgid "Python (2 or 3)"
 msgstr "Python (2 or 3)"
 
-#: ../../../installation.rst:340
+#: ../../installation.rst:315
 msgid "Pip"
 msgstr "Pip"
 
-#: ../../../installation.rst:342
+#: ../../installation.rst:317
 msgid ""
 "We cannot possibly cover the installation process for every Linux "
-"distribution out there, so we’ll limit the instructions to those that are "
-"distributions officially supported by docker. In all cases it’s just a "
+"distribution out there, so we’ll limit the instructions to those that are"
+" distributions officially supported by docker. In all cases it’s just a "
 "matter of opening a terminal prompt and typing a few commands."
 msgstr ""
-"Hindi pwedeng takpan ang process ng installation kada Linux na distribusyon,"
-" kaya lilimitahan na lamang ang instruksiyon para sa distribusyon na opisyal"
-" na pang docker. Sa lahat ng kaso, ito ay isang bagay na pangbukas o "
-"terminal prompt at ang pag-type ng ilan na commands."
+"Hindi pwedeng takpan ang process ng installation kada Linux na "
+"distribusyon, kaya lilimitahan na lamang ang instruksiyon para sa "
+"distribusyon na opisyal na pang docker. Sa lahat ng kaso, ito ay isang "
+"bagay na pangbukas o terminal prompt at ang pag-type ng ilan na commands."
 
-#: ../../../installation.rst:345
+#: ../../installation.rst:320
 msgid "Install on Ubuntu / Debian"
 msgstr "Maginstall sa Ubuntu / Debian"
 
-#: ../../../installation.rst:347 ../../../installation.rst:359
-#: ../../../installation.rst:370 ../../../installation.rst:381
+#: ../../installation.rst:322 ../../installation.rst:334
+#: ../../installation.rst:345 ../../installation.rst:356
 msgid "Commands to type:"
 msgstr "Mga command na ita-type:"
 
-#: ../../../installation.rst:357
+#: ../../installation.rst:332
 msgid "Install on CentOS / RHEL"
 msgstr "Maginstall sa CentOS / RHEL"
 
-#: ../../../installation.rst:368
+#: ../../installation.rst:343
 msgid "Install on Fedora"
 msgstr "Maginstall sa Fedora"
 
-#: ../../../installation.rst:379
+#: ../../installation.rst:354
 msgid "Install on Arch"
 msgstr "Maginstall sa Arch"
 
-#: ../../../installation.rst:388
+#: ../../installation.rst:363
 msgid "Step 2. Check Additional Requirements"
 msgstr "Step 2. I-check ang mga karagdagan na requirements"
 
-#: ../../../installation.rst:390
+#: ../../installation.rst:365
 msgid ""
-"In addition to the three programs above, the dockercompose script is also "
-"needed. Sometimes it’s already installed with docker, but sometimes it "
+"In addition to the three programs above, the dockercompose script is also"
+" needed. Sometimes it’s already installed with docker, but sometimes it "
 "isn’t. To verify if it’s installed try to type:"
 msgstr ""
-"Bukod sa mga tatlong programa sa taas, ang dockercompose script ay kailangan"
-" din. Minsan, ito ay installed na kasama ng docker at minsan naman ay hindi."
-" Para ma-verify kung ito ay nakainstall na, itype ang:"
+"Bukod sa mga tatlong programa sa taas, ang dockercompose script ay "
+"kailangan din. Minsan, ito ay installed na kasama ng docker at minsan "
+"naman ay hindi. Para ma-verify kung ito ay nakainstall na, itype ang:"
 
-#: ../../../installation.rst:396
+#: ../../installation.rst:371
 msgid "You should see somethings similar to the following:"
 msgstr "Dapat makita ang mga sumusunod:"
 
-#: ../../../installation.rst:402
+#: ../../installation.rst:377
 msgid "If instead you get something similar to the following:"
 msgstr "Kung makatanggap naman ng mensahe na katulad ng sumusunod:"
 
-#: ../../../installation.rst:408
+#: ../../installation.rst:383
 msgid "you can install it by using pip:"
 msgstr "Mai-install mo ito gamit ang pip:"
 
-#: ../../../installation.rst:416
+#: ../../installation.rst:391
 msgid "Step 3. Download and Launch WebODM"
 msgstr "Step 3. Download and Launch WebODM"
 
-#: ../../../installation.rst:418
+#: ../../installation.rst:393
 msgid "From a terminal type:"
 msgstr "Mula sa terminal i-type ang:"
 
-#: ../../../installation.rst:429
+#: ../../installation.rst:404
 msgid "Basic Commands and Troubleshooting"
 msgstr "Basic na mga cCommands at Troubleshooting"
 
-#: ../../../installation.rst:431
+#: ../../installation.rst:406
+#, python-format
 msgid ""
-"The cool thing about using docker is that 99% of the tasks you’ll ever need "
-"to perform while using WebODM can be done via the ./webodm.sh script. You "
-"have already encountered one of them:"
+"The cool thing about using docker is that 99% of the tasks you’ll ever "
+"need to perform while using WebODM can be done via the ./webodm.sh "
+"script. You have already encountered one of them:"
 msgstr ""
-"Ang mainam na bagy sa paggamit ng dockey ay 99% ng mmga task na kailangan "
-"gamitin habang gamit ang WebODM ay magagawa sa pamamagitan ng ./webodm.sh "
-"script. Ikaw ay naka-encounter na ng isa sa mga ito:"
+"Ang mainam na bagy sa paggamit ng dockey ay 99% ng mmga task na kailangan"
+" gamitin habang gamit ang WebODM ay magagawa sa pamamagitan ng "
+"./webodm.sh script. Ikaw ay naka-encounter na ng isa sa mga ito:"
 
-#: ../../../installation.rst:437
+#: ../../installation.rst:412
 msgid ""
-"which takes care of starting WebODM and setting up a default processing node"
-" (node-odm-1). If you want to stop WebODM, you can already guess what the "
-"command is:"
+"which takes care of starting WebODM and setting up a default processing "
+"node (node-odm-1). If you want to stop WebODM, you can already guess what"
+" the command is:"
 msgstr ""
-"na nangangalaga sa pagsisimula ng WebODM at setting-up ng default processing"
-" node (node-odm-1). Kung gusto pahintuin ang WebODM, pwede ng hulaan kung "
-"ano ang command:"
+"na nangangalaga sa pagsisimula ng WebODM at setting-up ng default "
+"processing node (node-odm-1). Kung gusto pahintuin ang WebODM, pwede ng "
+"hulaan kung ano ang command:"
 
-#: ../../../installation.rst:443
+#: ../../installation.rst:418
 msgid ""
-"There are several other commands you can use, along with different flags. "
-"Flags are parameters passed to the ./webodm.sh command and are typically "
-"prefixed with “–”. The **port** flag for example instructs WebODM to use a "
-"different network port:"
+"There are several other commands you can use, along with different flags."
+" Flags are parameters passed to the ./webodm.sh command and are typically"
+" prefixed with “–”. The **port** flag for example instructs WebODM to use"
+" a different network port:"
 msgstr ""
-"Marami ang ibang commands na pwede gamitin kasama ng iba't-ibang flags. Ang "
-"flags ay parameter na ipinapasa sa ./webodm.sh command na may tipikal na "
-"prefix na “–”. Ang **port** flag halimbawa ay nagiinstruct sa WebODM na "
-"gamitin ang iba't-ibang network port:"
+"Marami ang ibang commands na pwede gamitin kasama ng iba't-ibang flags. "
+"Ang flags ay parameter na ipinapasa sa ./webodm.sh command na may tipikal"
+" na prefix na “–”. Ang **port** flag halimbawa ay nagiinstruct sa WebODM "
+"na gamitin ang iba't-ibang network port:"
 
-#: ../../../installation.rst:449
+#: ../../installation.rst:424
 msgid "Other useful commands are listed below:"
 msgstr "Ang ibang importanteng commands ay nakalista sa baba:"
 
-#: ../../../installation.rst:468
+#: ../../installation.rst:443
 msgid ""
-"`The community forum <https://community.opendronemap.org>`_ is a great place"
-" to ask for help if you     get stuck during any of the installation steps "
-"and for general questions on using the ./webodm.sh script."
+"`The community forum <https://community.opendronemap.org>`_ is a great "
+"place to ask for help if you     get stuck during any of the installation"
+" steps and for general questions on using the ./webodm.sh script."
 msgstr ""
-"Ang community forum na <https://community.opendronemap.org>`_ ay magandang "
-"lugar na pagtanungan kapag ikaw ay na-stuck sa kahit anong mga hakbang "
-"pangi-installasyon at para sa mga general na katanungan kung paano gumamit "
-"ng ./webodm.sh script."
+"Ang community forum na <https://community.opendronemap.org>`_ ay "
+"magandang lugar na pagtanungan kapag ikaw ay na-stuck sa kahit anong mga "
+"hakbang pangi-installasyon at para sa mga general na katanungan kung "
+"paano gumamit ng ./webodm.sh script."
 
-#: ../../../installation.rst:471
+#: ../../installation.rst:446
 msgid "Hello, WebODM!"
 msgstr "Hello, WebODM!"
 
-#: ../../../installation.rst:473
+#: ../../installation.rst:448
 msgid ""
-"After running ./webodm.sh start and opening WebODM in the browser, you will "
-"be greeted with a welcome message and will be asked to create the first "
-"user. Take some time to familiarize yourself with the web interface and "
-"explore its various menus."
+"After running ./webodm.sh start and opening WebODM in the browser, you "
+"will be greeted with a welcome message and will be asked to create the "
+"first user. Take some time to familiarize yourself with the web interface"
+" and explore its various menus."
 msgstr ""
-"Matapos patakbuhin ang ./webodm.sh simulan at buksan ang WebODM sa browser, "
-"ikaw ay makatatanggap ng pangbungad na mensahe at tatanungin na gawin ang "
-"first user. Bigyang oras at pagsanayan ang web interface at i-explore ang "
-"various menus."
+"Matapos patakbuhin ang ./webodm.sh simulan at buksan ang WebODM sa "
+"browser, ikaw ay makatatanggap ng pangbungad na mensahe at tatanungin na "
+"gawin ang first user. Bigyang oras at pagsanayan ang web interface at "
+"i-explore ang various menus."
 
-#: ../../../installation.rstNone
 msgid "Screenshot of WebODM Dashboard"
 msgstr ""
 
-#: ../../../installation.rst:479
+#: ../../installation.rst:454
 msgid "*WebODM Dashboard*"
 msgstr "*WebODM Dashboard*"
 
-#: ../../../installation.rst:481
+#: ../../installation.rst:456
 msgid ""
 "Notice that under the **Processing Nodes** menu there’s a \"node-odm-1\" "
-"node already configured for you to use. This is a NodeODM node and has been "
-"created automatically by WebODM. This node is running on the same machine as"
-" WebODM."
+"node already configured for you to use. This is a NodeODM node and has "
+"been created automatically by WebODM. This node is running on the same "
+"machine as WebODM."
 msgstr ""
 "Pansinin na sa ilalim ng **Processing Nodes** menu ay may \"node-odm-1\" "
-"node ay na-configure para sa iyo. Ito ay NodeODM node at nagawa ng awtomatik"
-" ng WebODM. Ang node na ito ay gumagana sa parehong machine tulad ng WebODM."
+"node ay na-configure para sa iyo. Ito ay NodeODM node at nagawa ng "
+"awtomatik ng WebODM. Ang node na ito ay gumagana sa parehong machine "
+"tulad ng WebODM."
 
-#: ../../../installation.rst:483
+#: ../../installation.rst:458
 msgid ""
 "If you’ve made it this far, congratulations! Now it’s time to start "
 "processing some data."
 msgstr ""
-"Kung umabot ka na sa ganito kalayo, congratulations! Oras na para simulan "
-"ang pagprocess ng mga data."
+"Kung umabot ka na sa ganito kalayo, congratulations! Oras na para simulan"
+" ang pagprocess ng mga data."
 
-#: ../../../installation.rstNone
 msgid "Image of celebratory dance"
 msgstr ""
 
-#: ../../../installation.rst:490
+#: ../../installation.rst:465
 msgid "Running on more than one machine"
 msgstr "Pagpapatakbo sa dalawa o mas marami pang machine"
 
-#: ../../../installation.rst:492
+#: ../../installation.rst:467
 msgid ""
 "**Optionally:** If you have another computer, you can repeat the "
-"installation process (install docker, git, python, etc.) and launch a new "
-"NodeODM node by typing from a Terminal/Git Bash window:"
+"installation process (install docker, git, python, etc.) and launch a new"
+" NodeODM node by typing from a Terminal/Git Bash window:"
 msgstr ""
 "**Optionally:** Kung ikaw ay may isa pang computer, mauulit mo ang "
 "installation process (install docker, git, python, etc.) at i-launch ang "
 "bagong NodeODM node sa pagta-type mula sa Terminal/Git Bash window:"
 
-#: ../../../installation.rst:498
+#: ../../installation.rst:473
 msgid ""
 "The above command asks docker to launch a new container using the "
-"opendronemap/nodeodm image from Docker Hub (the latest version of NodeODM), "
-"using port 3000, setting a maximum number of concurrent tasks to 1 and to "
-"protect the node from unauthorized access using the password \"secret\"."
+"opendronemap/nodeodm image from Docker Hub (the latest version of "
+"NodeODM), using port 3000, setting a maximum number of concurrent tasks "
+"to 1 and to protect the node from unauthorized access using the password "
+"\"secret\"."
 msgstr ""
-"Ang command sa taas ay nagre-require kay docker na i-launch ang makabagong "
-"container gamit ang opendronemap/nodeodm image mula sa Docker Hub "
-"(pinakabagong bersiyon ng NodeODM), gamit ang port 3000, nagset ng "
+"Ang command sa taas ay nagre-require kay docker na i-launch ang "
+"makabagong container gamit ang opendronemap/nodeodm image mula sa Docker "
+"Hub (pinakabagong bersiyon ng NodeODM), gamit ang port 3000, nagset ng "
 "pinakamataas na bilang ng concurrent tasks mula 1 at pinoprotektahan ang "
 "node mula sa hindi pinapahintulutan na pag-access gamit ang password na "
 "\"secret\"."
 
-#: ../../../installation.rst:500
+#: ../../installation.rst:475
 msgid ""
 "From WebODM you can then press the **Add New** button under **Processing "
-"Nodes**. For the **hostname/IP** field type the IP of the second computer. "
-"For the **port** field type “3000”. For the **token** field type “secret”. "
-"You can also add an optional **label** for your node, such as “second "
-"computer”. Then press **Save**."
+"Nodes**. For the **hostname/IP** field type the IP of the second "
+"computer. For the **port** field type “3000”. For the **token** field "
+"type “secret”. You can also add an optional **label** for your node, such"
+" as “second computer”. Then press **Save**."
 msgstr ""
-"Mula sa WebODM pwede mong piliin ang **Add New** button under **Processing "
-"Nodes**. Para sa **hostname/IP** field i-type ang IP ng pangalawang "
-"computer. Para sa **port** field type “3000”. Para sa **token** field type "
-"“secret”. Pwede mo rin dagdagan ng optional na **label** para sa iyong node,"
-" katulad ng “second computer”. Then press **Save**."
+"Mula sa WebODM pwede mong piliin ang **Add New** button under "
+"**Processing Nodes**. Para sa **hostname/IP** field i-type ang IP ng "
+"pangalawang computer. Para sa **port** field type “3000”. Para sa "
+"**token** field type “secret”. Pwede mo rin dagdagan ng optional na "
+"**label** para sa iyong node, katulad ng “second computer”. Then press "
+"**Save**."
 
-#: ../../../installation.rst:502
+#: ../../installation.rst:477
 msgid ""
-"If everything went well, you should now have two processing nodes! You will "
-"be able to process multiple tasks in parallel using two different machines."
+"If everything went well, you should now have two processing nodes! You "
+"will be able to process multiple tasks in parallel using two different "
+"machines."
 msgstr ""
 "Kung ang lahat ay nagawa ng maayos, dapat ay mayroon ka nang dalawang "
-"processing nodes! Kaya ng magprocess ng multiple tasks in parallel gamit ang"
-" dalawang magkaiba na machines."
+"processing nodes! Kaya ng magprocess ng multiple tasks in parallel gamit "
+"ang dalawang magkaiba na machines."
 
-#: ../../../installation.rst:505
+#: ../../installation.rst:480
 msgid ""
-"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
-"contribution>`_ and help improve `this page "
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ and help improve `this page "
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst>`_!"
 msgstr ""
+
+#~ msgid ""
+#~ "Until recently OpenDroneMap was the term"
+#~ " used to refer to a single "
+#~ "command line application (what is now"
+#~ " known as the ODM project).  With "
+#~ "the recent development of a web "
+#~ "interface, an API and other tools, "
+#~ "OpenDroneMap has become an ecosystem of"
+#~ " various applications to process, analyze"
+#~ " and display aerial data. This "
+#~ "ecosystem is made of several components:"
+#~ msgstr ""
+#~ "Ang OpenDroneMap ay isang salita na "
+#~ "ginagamit patukoy sa isang single "
+#~ "command line na programa (na kilala "
+#~ "rin bilang ODM na proyekto). Sa "
+#~ "kamakailan lamang na progreso ng web "
+#~ "interface, ang API ay ibang tools, "
+#~ "pati na rin ang OpenDroneMap ang "
+#~ "naging pinagmulan ng iba't-ibang programa "
+#~ "upang ma-proseso, ma-suri at "
+#~ "makita ang aerial data. ang ekosistem"
+#~ " na ito ay ginawa para sa "
+#~ "iilang  component:"
+
+#~ msgid "ODM Logo"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**ODM** is the processing engine, which"
+#~ " can be used from the command "
+#~ "line. It takes images as input and"
+#~ " produces a variety of outputs, "
+#~ "including point clouds, 3D models and"
+#~ " orthophotos"
+#~ msgstr ""
+#~ "Ang **ODM** ay ang processing engine,"
+#~ " na pwedeng gamitin sa command line."
+#~ " Tinatanggap nito ang mga imahe "
+#~ "bilang input at nagpo-produce ng "
+#~ "iba't-ibang outputs katulad ng point "
+#~ "clouds, 3D models at orthophotos."
+
+#~ msgid "NodeODM Logo"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**NodeODM** is a light-weight API "
+#~ "built on top of ODM. It allows "
+#~ "users and applications to access the "
+#~ "functions of ODM over a computer "
+#~ "network"
+#~ msgstr ""
+#~ "Ang **NodeODM** ay isang light-weight"
+#~ " API na nasa taas ng ODM. "
+#~ "Ina-allow nito ang gumagamit ng "
+#~ "aplikasyon na ma-access ang mga "
+#~ "functions ng ODM sa computer network."
+
+#~ msgid "WebODM Logo"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**WebODM** is a friendly user interface"
+#~ " that includes a map viewer, a "
+#~ "3D viewer, user logins, a plugin "
+#~ "system and many other features that "
+#~ "are expected of modern drone mapping "
+#~ "platforms"
+#~ msgstr ""
+#~ "Ang **WebODM** ay isang friendly user"
+#~ " na interface na may kasamang map "
+#~ "viewer, 3D viewer, user logins, plugin"
+#~ " system at marami pang iba na "
+#~ "ine-expect sa modern drone mapping "
+#~ "platforms."
+
+#~ msgid "CloudODM Logo"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**CloudODM** is a small command line "
+#~ "client to communicate with ODM via "
+#~ "the NodeODM API"
+#~ msgstr ""
+#~ "Ang **CloudODM** ay isang maliit na "
+#~ "command line client na nagcocommunicate "
+#~ "sa ODM via NodeODM API"
+
+#~ msgid "PyODM Logo"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**PyODM** is a Python SDK for "
+#~ "creating tasks via the NodeODM API. "
+#~ "We cover it in more detail in "
+#~ "the “Automated Processing With Python” "
+#~ "chapter"
+#~ msgstr ""
+#~ "Ang **PyODM** ay Python SDK na "
+#~ "gumagawa ng tasks via NodeODM API. "
+#~ "Mababasa ang detalye sa “Automated "
+#~ "Processing With Python” na chapter"
+
+#~ msgid "ClusterODM Logo"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "**ClusterODM** is a load balancer for"
+#~ " connecting together multiple NodeODM "
+#~ "instances"
+#~ msgstr ""
+#~ "Ang **ClusterODM** ay isang load "
+#~ "balancer na pang connect ng multiple "
+#~ "NodeODM instances"
+
+#~ msgid ""
+#~ "ODM, NodeODM and WebODM are available"
+#~ " on all major platforms (Windows, "
+#~ "macOS and Linux) via a program "
+#~ "called docker, which is required to "
+#~ "run the software. Docker offers a "
+#~ "way to run “containers”. Containers are"
+#~ " packaged copies of an entire system,"
+#~ " its software and its dependencies. "
+#~ "These containers run within a virtual"
+#~ " environment. On Linux this virtual "
+#~ "environment is available from the "
+#~ "operating system and is very efficient."
+#~ " On macOS and Windows the containers"
+#~ " run within a VM, so there’s a"
+#~ " bit of a overhead. but it’s "
+#~ "still very suitable for running the "
+#~ "software. Once installed users do not"
+#~ " have to worry much about docker, "
+#~ "as it operates (almost) transparently."
+#~ msgstr ""
+#~ "Ang ODM, NoteODM at WebODM ay "
+#~ "mayroon sa lahat ng pangunahin na "
+#~ "plataporma (Windows, macOS at Linux) sa"
+#~ " pamamagitan ng programang docker, na "
+#~ "kailangan para patakbuhin ang software. "
+#~ "Ang docker ay naghahandog ng paraan "
+#~ "kung paano patatakbuhin ang “containers”. "
+#~ "Ang containers ay kaha ng mga "
+#~ "kopya ng kabuoan na sisyema, ang "
+#~ "software nito at ang dependencies. Ang"
+#~ " mga container na ito ay tumatakbo"
+#~ " sa loob ng virtual environment. Sa"
+#~ " linux, mayroong virtual environment sa "
+#~ "operating system at ito ay mahusay "
+#~ "na klase. Sa macOS at Windows "
+#~ "naman, ang container ay napapatakbo sa"
+#~ " pamamagitan ng VM, so may kaunting"
+#~ " oberhed ngunit naaangkop pa rin sa"
+#~ " pagpapatakbo ng software. Kapag na-"
+#~ "install, ang gagamit ay hindi na "
+#~ "kelangan magalala sa docker dahil ito"
+#~ " ay gumagana (madalas) ng malinaw."
+
+#~ msgid ""
+#~ "Without docker it would not be "
+#~ "possible to run ODM on Windows or"
+#~ " macOS. On these platforms ODM cannot"
+#~ " run natively. Future development efforts"
+#~ " are being focused on leveraging the"
+#~ " new Windows Subsystem for Linux "
+#~ "(WSL) and the possibility to make "
+#~ "a native port of all dependencies "
+#~ "to macOS, which is going to make"
+#~ " the installation much easier."
+#~ msgstr ""
+#~ "Kung walang docker, hindi posible na "
+#~ "magpatakbo ng ODM sa macOS at "
+#~ "Windows. Sa mga plataporma na ito, "
+#~ "ang ODM ay hindi tatakbo ng kusa."
+#~ " Ang paghahanada para sa susunod na"
+#~ " debelopment ay nakatuon sa pagkilos "
+#~ "sa makabagong Windows Subsystem para sa"
+#~ " Linux (WSL) at ang posibilidad na"
+#~ " gawing native port ng lahat ng "
+#~ "dependencies sa macOS na makakapagpadali "
+#~ "sa pagi-install."
+
+#~ msgid ""
+#~ "On Ubuntu Linux 18.04 it’s feasible "
+#~ "to run all OpenDroneMap software "
+#~ "natively. However, because there’s very "
+#~ "little performance penalty for running "
+#~ "docker on Linux and docker is "
+#~ "straightforward to setup on this "
+#~ "platform, we don’t recommend it. On "
+#~ "Linux the advantages of containerization "
+#~ "far outweigh a tiny performance penalty."
+#~ " With docker users also get easy "
+#~ "one-step updates of the software, "
+#~ "so that’s nice."
+#~ msgstr ""
+#~ "Sa Ubuntu Linux 18.04 kaya patakbuhin"
+#~ " ang lahat ng OpenDroneMap software. "
+#~ "Ngutin, sa kadahilanan na may maliit "
+#~ "na performance penalty sa pagpapatakbo "
+#~ "ng docker sa Linux, and docker ay"
+#~ " diretso sa pagset-up sa plataporma"
+#~ " nito. Ito ay hindi inirerekomenda. "
+#~ "Sa Linux, ang kalamangan ng "
+#~ "containerization ay higit na malaki sa"
+#~ " maliit na performance penalty. Sa "
+#~ "docker, ang gagamit ay makakakuha ng "
+#~ "mas madali na one-step updates ng"
+#~ " software so ito ay maganda."
+

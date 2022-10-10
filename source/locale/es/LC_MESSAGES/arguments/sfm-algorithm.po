@@ -9,7 +9,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-28 10:32-0500\n"
+"POT-Creation-Date: 2022-10-10 13:31-0400\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -23,14 +23,15 @@ msgid "sfm-algorithm"
 msgstr ""
 
 #: ../../arguments/sfm-algorithm.rst:11
-msgid "**Options:** *incremental |  triangulation*"
+msgid "**Options:** *incremental |  triangulation |  planar*"
 msgstr ""
 
 #: ../../arguments/sfm-algorithm.rst:13
 msgid ""
 "Choose the structure from motion algorithm. For aerial datasets, if "
 "camera GPS positions and angles are available, triangulation can generate"
-" better results. . Default: ``incremental``"
+" better results. For planar scenes captured at fixed altitude with nadir-"
+"only images, planar can be much faster. . Default: ``incremental``"
 msgstr ""
 
 #: ../../arguments/sfm-algorithm.rst:18
@@ -40,4 +41,15 @@ msgid ""
 "<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
 "/sfm-algorithm.rst>`_!"
 msgstr ""
+
+#~ msgid "**Options:** *incremental |  triangulation*"
+#~ msgstr ""
+
+#~ msgid ""
+#~ "Choose the structure from motion "
+#~ "algorithm. For aerial datasets, if "
+#~ "camera GPS positions and angles are "
+#~ "available, triangulation can generate better"
+#~ " results. . Default: ``incremental``"
+#~ msgstr ""
 
