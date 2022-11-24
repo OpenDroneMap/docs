@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Opciones e indicadores &mdash; documentación de OpenDroneMap - 2.9.1</title>
+  <title>Opciones e indicadores &mdash; documentación de OpenDroneMap - 3.0.0</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -32,7 +32,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                2.9.1
+                3.0.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -428,8 +428,6 @@
 </dd>
 <dt><a class="reference internal" href="crop/#crop"><span class="std std-ref">crop</span></a> &lt;positive float&gt;</dt><dd><p>Automatically crop image outputs by creating a smooth buffer around the dataset boundaries, shrunk by N meters. Use 0 to disable cropping. Default: <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
 </dd>
-<dt><a class="reference internal" href="debug/#debug"><span class="std std-ref">debug</span></a></dt><dd><p>Imprime mensajes de depuración. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
-</dd>
 <dt><a class="reference internal" href="dem-decimation/#dem-decimation"><span class="std std-ref">dem-decimation</span></a> &lt;positive integer&gt;</dt><dd><p>Diezma los puntos antes de generar el DEM. <code class="docutils literal notranslate"><span class="pre">1</span></code> no diezma (calidad total). <code class="docutils literal notranslate"><span class="pre">100</span></code> diezma ~ 99% de los puntos. Útil para acelerar la generación.</p>
 </dd>
 <dt><a class="reference internal" href="dem-euclidean-map/#dem-euclidean-map"><span class="std std-ref">dem-euclidean-map</span></a></dt><dd><p>Calcula un mapa ráster euclidiano para cada DEM. El mapa informa la distancia desde cada celda al valor NODATA más cercano (antes de que se rellene cualquier agujero). Esto puede resultar útil para aislar las áreas que se han rellenado.</p>
@@ -437,8 +435,6 @@
 <dt><a class="reference internal" href="dem-gapfill-steps/#dem-gapfill-steps"><span class="std std-ref">dem-gapfill-steps</span></a> &lt;positive integer&gt;</dt><dd><p>Número de pasos utilizados para rellenar áreas con huecos. Establezca en 0 para deshabilitar el llenado de espacios. Comenzando con un radio igual a la resolución de salida, se generan N diferentes DEM con un radio progresivamente mayor utilizando el algoritmo de distancia inversa ponderada (IDW) y se fusionan. Luego, los espacios restantes se fusionan utilizando la interpolación de vecino más cercano. Predeterminado:<code class="docutils literal notranslate"><span class="pre">3</span></code></p>
 </dd>
 <dt><a class="reference internal" href="dem-resolution/#dem-resolution"><span class="std std-ref">dem-resolution</span></a> &lt;float&gt;</dt><dd><p>DSM/DTM resolution in cm / pixel. Note that this value is capped to 2x the ground sampling distance (GSD) estimate. To remove the cap, check –ignore-gsd also. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
-</dd>
-<dt><a class="reference internal" href="depthmap-resolution/#depthmap-resolution"><span class="std std-ref">depthmap-resolution</span></a> &lt;positive float&gt;</dt><dd><p>Controls the density of the point cloud by setting the resolution of the depthmap images. Higher values take longer to compute but produce denser point clouds. Overrides the value calculated by –pc-quality.Default: <code class="docutils literal notranslate"><span class="pre">640</span></code></p>
 </dd>
 <dt><a class="reference internal" href="dsm/#dsm"><span class="std std-ref">dsm</span></a></dt><dd><p>Utilice esta etiqueta para construir un DSM (modelo digital de superficie, suelo + objetos) utilizando un filtro morfológico progresivo. Verifique los parámetros –dem* para un ajuste más fino. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -456,7 +452,7 @@
 </dd>
 <dt><a class="reference internal" href="gcp/#gcp"><span class="std std-ref">gcp</span></a> &lt;path string&gt;</dt><dd><p>Ruta al archivo que contiene los puntos de control terrestre usados para georreferenciar. El archivo debe tener el siguiente formato: EPSG:&lt;code&gt; or &lt;+proj definition&gt;geo_x geo_y geo_z im_x im_y image_name [gcp_name] [extra1] [extra2] Predeterminado: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>
-<dt><a class="reference internal" href="geo/#geo"><span class="std std-ref">geo</span></a> &lt;path string&gt;</dt><dd><p>Ruta al archivo de geolocalización de las imágenes que contiene las coordenadas de los centros de las imágenes usadas para la georreferenciación. Note que actualmente no esta soportado omega/phi/kappa (los puede configurar en 0). El archivo debe tener el siguiente formato: EPSG:&lt;code&gt; or &lt;+proj definition&gt;image_name geo_x geo_y geo_z [omega (degrees)] [phi (degrees)] [kappa (degrees)] [horz accuracy (meters)] [vert accuracy (meters)] Predeterminado: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+<dt><a class="reference internal" href="geo/#geo"><span class="std std-ref">geo</span></a> &lt;path string&gt;</dt><dd><p>Path to the image geolocation file containing the camera center coordinates used for georeferencing. If you dont have values for omega/phi/kappa you can set them to 0. The file needs to use the following format: EPSG:&lt;code&gt; or &lt;+proj definition&gt;image_name geo_x geo_y geo_z [omega (degrees)] [phi (degrees)] [kappa (degrees)] [horz accuracy (meters)] [vert accuracy (meters)]Default: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>
 <dt><a class="reference internal" href="gps-accuracy/#gps-accuracy"><span class="std std-ref">gps-accuracy</span></a> &lt;positive float&gt;</dt><dd><p>Establezca un valor en metros para la información de Dilución de precisión de GPS (DOP) para todas las imágenes. Si sus imágenes están etiquetadas con información GPS de alta precisión (RTK), este valor se establecerá automáticamente en consecuencia. Puede utilizar esta opción para configurarla manualmente en caso de que falle la reconstrucción. Reducir esta opción a veces puede ayudar a controlar los efectos de combadura en áreas extensas. Predeterminado: <code class="docutils literal notranslate"><span class="pre">10</span></code></p>
 </dd>
@@ -506,8 +502,6 @@
 </dd>
 <dt><a class="reference internal" href="pc-filter/#pc-filter"><span class="std std-ref">pc-filter</span></a> &lt;positive float&gt;</dt><dd><p>Filtrar la nube de puntos removiendo los puntos que se desvían mas de N desviaciones estándar de la media local. Establecer en 0 para deshabilitar el filtrado. Predeterminado: <code class="docutils literal notranslate"><span class="pre">2.5</span></code></p>
 </dd>
-<dt><a class="reference internal" href="pc-geometric/#pc-geometric"><span class="std std-ref">pc-geometric</span></a></dt><dd><p>Mejore la precisión de la nube de puntos calculado mapas de profundidad geométricamente consistentes. Esto aumenta el tiempo de procesamiento, pero puede mejorar los resultados en escenas urbanas. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
-</dd>
 <dt><a class="reference internal" href="pc-las/#pc-las"><span class="std std-ref">pc-las</span></a></dt><dd><p>Exportar la nube de puntos georeferenciada en formato LAS. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="pc-quality/#pc-quality"><span class="std std-ref">pc-quality</span></a> ultra |  high |  medium |  low |  lowest</dt><dd><p>Establecer la calidad de la nube de puntos. Una calidad más alta genera nubes de puntos mejores y más densas, pero requiere más memoria y lleva más tiempo. Cada aumento en la calidad aumenta el tiempo de procesamiento aproximadamente en un factor de 4x. . Default: <code class="docutils literal notranslate"><span class="pre">medium</span></code></p>
@@ -530,8 +524,6 @@
 </dd>
 <dt><a class="reference internal" href="rerun-from/#rerun-from"><span class="std std-ref">rerun-from</span></a> dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess</dt><dd><p>Vuelva a ejecutar el procesamiento desde esta etapa. . Predeterminado: ``</p>
 </dd>
-<dt><a class="reference internal" href="resize-to/#resize-to"><span class="std std-ref">resize-to</span></a> &lt;integer&gt;</dt><dd><p>Opción legada (use –feature-quality en su lugar). Cambia el tamaño de las imágenes por el lado más grande solo para fines de extracción de características. Establecer en -1 para deshabilitar. Esto no afecta la calidad de la resolución final de la ortofoto y no redimensionará las imágenes originales. Predeterminado: <code class="docutils literal notranslate"><span class="pre">2048</span></code></p>
-</dd>
 <dt><a class="reference internal" href="rolling-shutter/#rolling-shutter"><span class="std std-ref">rolling-shutter</span></a></dt><dd><p>Turn on rolling shutter correction. If the camera has a rolling shutter and the images were taken in motion, you can turn on this option to improve the accuracy of the results. See also –rolling-shutter-readout. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="rolling-shutter-readout/#rolling-shutter-readout"><span class="std std-ref">rolling-shutter-readout</span></a> &lt;positive integer&gt;</dt><dd><p>Override the rolling shutter readout time for your camera sensor (in milliseconds), instead of using the rolling shutter readout database. Note that not all cameras are present in the database. Set to 0 to use the database value. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
@@ -550,6 +542,8 @@
 </dd>
 <dt><a class="reference internal" href="sm-cluster/#sm-cluster"><span class="std std-ref">sm-cluster</span></a> &lt;string&gt;</dt><dd><p>URL a una instancia de ClusterODM para distribuir un flujo de trabajo de split-merge en varios nodos en paralelo. Predeterminado: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>
+<dt><span class="xref std std-ref">sm-no-align</span></dt><dd><p>Skip alignment of submodels in split-merge. Useful if GPS is good enough on very large datasets. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
 <dt><a class="reference internal" href="smrf-scalar/#smrf-scalar"><span class="std std-ref">smrf-scalar</span></a> &lt;positive float&gt;</dt><dd><p>Parámetro de elevación escalar del Filtro Morfológico Simple. Predeterminado: <code class="docutils literal notranslate"><span class="pre">1.25</span></code></p>
 </dd>
 <dt><a class="reference internal" href="smrf-slope/#smrf-slope"><span class="std std-ref">smrf-slope</span></a> &lt;positive float&gt;</dt><dd><p>Parámetro de pendiente del filtro morfológico simple (desplazamiento vertical entre el desplazamiento horizontal). Predeterminado: <code class="docutils literal notranslate"><span class="pre">0.15</span></code></p>
@@ -564,21 +558,13 @@
 </dd>
 <dt><a class="reference internal" href="split-overlap/#split-overlap"><span class="std std-ref">split-overlap</span></a> &lt;positive integer&gt;</dt><dd><p>Radio de superposición entre submodelos. Después de agrupar las imágenes en clusters, las que están más cerca que este radio al cluster son añadidas al cluster. Esto se hace para asegurar que los submodelos se superpongan. Default: <code class="docutils literal notranslate"><span class="pre">150</span></code></p>
 </dd>
-<dt><a class="reference internal" href="texturing-data-term/#texturing-data-term"><span class="std std-ref">texturing-data-term</span></a> gmi |  area</dt><dd><p>Al texturizar la malla 3D, para cada triángulo, elija priorizar las imágenes con características nítidas (gmi) o aquellas que cubren el área más grande (área). Predeterminado: <code class="docutils literal notranslate"><span class="pre">gmi</span></code></p>
-</dd>
 <dt><a class="reference internal" href="texturing-keep-unseen-faces/#texturing-keep-unseen-faces"><span class="std std-ref">texturing-keep-unseen-faces</span></a></dt><dd><p>Mantén las caras en la malla que no se ven en ninguna cámara. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
-</dd>
-<dt><a class="reference internal" href="texturing-outlier-removal-type/#texturing-outlier-removal-type"><span class="std std-ref">texturing-outlier-removal-type</span></a> none |  gauss_clamping |  gauss_damping</dt><dd><p>Tipo de método de eliminación de valores atípicos fotométricos. Predeterminado:  <code class="docutils literal notranslate"><span class="pre">gauss_clamping</span></code></p>
 </dd>
 <dt><a class="reference internal" href="texturing-skip-global-seam-leveling/#texturing-skip-global-seam-leveling"><span class="std std-ref">texturing-skip-global-seam-leveling</span></a></dt><dd><p>Omita la normalización de colores en todas las imágenes. Útil al procesar datos radiométricos. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="texturing-skip-local-seam-leveling/#texturing-skip-local-seam-leveling"><span class="std std-ref">texturing-skip-local-seam-leveling</span></a></dt><dd><p>Omitir la combinación de colores cerca de las costuras. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
-<dt><a class="reference internal" href="texturing-tone-mapping/#texturing-tone-mapping"><span class="std std-ref">texturing-tone-mapping</span></a> none |  gamma</dt><dd><p>Active el mapeo de tonos gamma o ninguno si no hay mapeo de tonos. Puede ser una de las [“none”, “gamma”]. Predeterminado: <code class="docutils literal notranslate"><span class="pre">none</span></code></p>
-</dd>
 <dt><a class="reference internal" href="tiles/#tiles"><span class="std std-ref">tiles</span></a></dt><dd><p>Genere mosaicos estáticos para ortofotos y DEM que sean adecuados para visualizadores como Leaflet u OpenLayers. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
-</dd>
-<dt><a class="reference internal" href="time/#time"><span class="std std-ref">time</span></a></dt><dd><p>Genera un archivo de referencia con información del tiempo de ejecución. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="use-3dmesh/#use-3dmesh"><span class="std std-ref">use-3dmesh</span></a></dt><dd><p>Utilice una malla 3D completa para calcular la ortofoto en lugar de una malla 2.5D. Esta opción es un poco más rápida y proporciona resultados similares en áreas planas. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -587,8 +573,6 @@
 <dt><a class="reference internal" href="use-fixed-camera-params/#use-fixed-camera-params"><span class="std std-ref">use-fixed-camera-params</span></a></dt><dd><p>Desactive la optimización de los parámetros de la cámara durante el ajuste en paquete. A veces, esto puede ser útil para mejorar los resultados que exhiben domos/bolos o cuando las imágenes se toman con una cámara con obturador rolling shutter. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="use-hybrid-bundle-adjustment/#use-hybrid-bundle-adjustment"><span class="std std-ref">use-hybrid-bundle-adjustment</span></a></dt><dd><p>Ejecute un paquete de ajustes local para cada imagen agregada a la reconstrucción y un ajuste global cada 100 imágenes. Acelera la reconstrucción de conjuntos de datos muy grandes. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
-</dd>
-<dt><a class="reference internal" href="verbose/#verbose"><span class="std std-ref">verbose</span></a></dt><dd><p>Imprime mensajes adicionales en la consola. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="version/#version"><span class="std std-ref">version</span></a></dt><dd><p>Muestra el número de versión y sale.</p>
 </dd>
