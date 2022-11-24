@@ -41,9 +41,6 @@ Options and Flags
 :ref:`crop<crop>` <positive float>
   Automatically crop image outputs by creating a smooth buffer around the dataset boundaries, shrunk by N meters. Use 0 to disable cropping. Default: ``3``
 
-:ref:`debug<debug>` 
-  Print debug messages. Default: ``False``
-
 :ref:`dem-decimation<dem-decimation>` <positive integer>
   Decimate the points before generating the DEM. 1 is no decimation (full quality). 100 decimates ~99%% of the points. Useful for speeding up generation of DEM results in very large datasets. Default: ``1``
 
@@ -55,9 +52,6 @@ Options and Flags
 
 :ref:`dem-resolution<dem-resolution>` <float>
   DSM/DTM resolution in cm / pixel. Note that this value is capped to 2x the ground sampling distance (GSD) estimate. To remove the cap, check --ignore-gsd also. Default: ``5``
-
-:ref:`depthmap-resolution<depthmap-resolution>` <positive float>
-  Controls the density of the point cloud by setting the resolution of the depthmap images. Higher values take longer to compute but produce denser point clouds. Overrides the value calculated by --pc-quality.Default: ``640``
 
 :ref:`dsm<dsm>` 
   Use this tag to build a DSM (Digital Surface Model, ground + objects) using a progressive morphological filter. Check the --dem\* parameters for finer tuning. Default: ``False``
@@ -84,7 +78,7 @@ Options and Flags
   Path to the file containing the ground control points used for georeferencing. The file needs to use the following format: EPSG:<code> or <+proj definition>geo_x geo_y geo_z im_x im_y image_name [gcp_name] [extra1] [extra2]Default: ``None``
 
 :ref:`geo<geo>` <path string>
-  Path to the image geolocation file containing the camera center coordinates used for georeferencing. Note that omega/phi/kappa are currently not supported (you can set them to 0). The file needs to use the following format: EPSG:<code> or <+proj definition>image_name geo_x geo_y geo_z [omega (degrees)] [phi (degrees)] [kappa (degrees)] [horz accuracy (meters)] [vert accuracy (meters)]Default: ``None``
+  Path to the image geolocation file containing the camera center coordinates used for georeferencing. If you dont have values for omega/phi/kappa you can set them to 0. The file needs to use the following format: EPSG:<code> or <+proj definition>image_name geo_x geo_y geo_z [omega (degrees)] [phi (degrees)] [kappa (degrees)] [horz accuracy (meters)] [vert accuracy (meters)]Default: ``None``
 
 :ref:`gps-accuracy<gps-accuracy>` <positive float>
   Set a value in meters for the GPS Dilution of Precision (DOP) information for all images. If your images are tagged with high precision GPS information (RTK), this value will be automatically set accordingly. You can use this option to manually set it in case the reconstruction fails. Lowering this option can sometimes help control bowling-effects over large areas. Default: ``10``
@@ -158,9 +152,6 @@ Options and Flags
 :ref:`pc-filter<pc-filter>` <positive float>
   Filters the point cloud by removing points that deviate more than N standard deviations from the local mean. Set to 0 to disable filtering. Default: ``2.5``
 
-:ref:`pc-geometric<pc-geometric>` 
-  Improve the accuracy of the point cloud by computing geometrically consistent depthmaps. This increases processing time, but can improve results in urban scenes. Default: ``False``
-
 :ref:`pc-las<pc-las>` 
   Export the georeferenced point cloud in LAS format. Default: ``False``
 
@@ -194,9 +185,6 @@ Options and Flags
 :ref:`rerun-from<rerun-from>` dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess
   Rerun processing from this stage. . Default: ``
 
-:ref:`resize-to<resize-to>` <integer>
-  Legacy option (use --feature-quality instead). Resizes images by the largest side for feature extraction purposes only. Set to -1 to disable. This does not affect the final orthophoto resolution quality and will not resize the original images. Default: ``2048``
-
 :ref:`rolling-shutter<rolling-shutter>` 
   Turn on rolling shutter correction. If the camera has a rolling shutter and the images were taken in motion, you can turn on this option to improve the accuracy of the results. See also --rolling-shutter-readout. Default: ``False``
 
@@ -224,6 +212,9 @@ Options and Flags
 :ref:`sm-cluster<sm-cluster>` <string>
   URL to a ClusterODM instance for distributing a split-merge workflow on multiple nodes in parallel. Default: ``None``
 
+:ref:`sm-no-align<sm-no-align>` 
+  Skip alignment of submodels in split-merge. Useful if GPS is good enough on very large datasets. Default: ``False``
+
 :ref:`smrf-scalar<smrf-scalar>` <positive float>
   Simple Morphological Filter elevation scalar parameter. Default: ``1.25``
 
@@ -245,14 +236,8 @@ Options and Flags
 :ref:`split-overlap<split-overlap>` <positive integer>
   Radius of the overlap between submodels. After grouping images into clusters, images that are closer than this radius to a cluster are added to the cluster. This is done to ensure that neighboring submodels overlap. Default: ``150``
 
-:ref:`texturing-data-term<texturing-data-term>` gmi |  area
-  When texturing the 3D mesh, for each triangle, choose to prioritize images with sharp features (gmi) or those that cover the largest area (area). Default: ``gmi``
-
 :ref:`texturing-keep-unseen-faces<texturing-keep-unseen-faces>` 
   Keep faces in the mesh that are not seen in any camera. Default:  ``False``
-
-:ref:`texturing-outlier-removal-type<texturing-outlier-removal-type>` none |  gauss_clamping |  gauss_damping
-  Type of photometric outlier removal method. . Default: ``gauss_clamping``
 
 :ref:`texturing-skip-global-seam-leveling<texturing-skip-global-seam-leveling>` 
   Skip normalization of colors across all images. Useful when processing radiometric data. Default: ``False``
@@ -260,14 +245,8 @@ Options and Flags
 :ref:`texturing-skip-local-seam-leveling<texturing-skip-local-seam-leveling>` 
   Skip the blending of colors near seams. Default: ``False``
 
-:ref:`texturing-tone-mapping<texturing-tone-mapping>` none |  gamma
-  Turn on gamma tone mapping or none for no tone mapping. Can be one of ['none', 'gamma']. Default: ``none`` 
-
 :ref:`tiles<tiles>` 
   Generate static tiles for orthophotos and DEMs that are suitable for viewers like Leaflet or OpenLayers. Default: ``False``
-
-:ref:`time<time>` 
-  Generates a benchmark file with runtime info. Default: ``False``
 
 :ref:`use-3dmesh<use-3dmesh>` 
   Use a full 3D mesh to compute the orthophoto instead of a 2.5D mesh. This option is a bit faster and provides similar results in planar areas. Default: ``False``
@@ -280,9 +259,6 @@ Options and Flags
 
 :ref:`use-hybrid-bundle-adjustment<use-hybrid-bundle-adjustment>` 
   Run local bundle adjustment for every image added to the reconstruction and a global adjustment every 100 images. Speeds up reconstruction for very large datasets. Default: ``False``
-
-:ref:`verbose<verbose>` 
-  Print additional messages to the console. Default: ``False``
 
 :ref:`version<version>` 
   Displays version number and exits. 
