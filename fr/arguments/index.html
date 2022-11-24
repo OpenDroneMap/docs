@@ -152,6 +152,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="auto-boundary-distance/">auto-boundary-distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bg-removal/">bg-removal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="boundary/">boundary</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="boundary/#what-is-boundary-geojson">What is Boundary [GeoJSON]?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="boundary/#when-is-boundary-geojson-appropriate">When is Boundary [GeoJSON] appropriate?</a></li>
@@ -271,6 +272,7 @@
 <li class="toctree-l2"><a class="reference internal" href="skip-report/">skip-report</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sky-removal/">sky-removal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sm-cluster/">sm-cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sm-no-align/">sm-no-align</a></li>
 <li class="toctree-l2"><a class="reference internal" href="smrf-scalar/">smrf-scalar</a></li>
 <li class="toctree-l2"><a class="reference internal" href="smrf-slope/">smrf-slope</a></li>
 <li class="toctree-l2"><a class="reference internal" href="smrf-threshold/">smrf-threshold</a></li>
@@ -412,7 +414,7 @@
 </dd>
 <dt><a class="reference internal" href="auto-boundary-distance/#auto-boundary-distance"><span class="std std-ref">auto-boundary-distance</span></a> &lt;positive float&gt;</dt><dd><p>Specify the distance between camera shot locations and the outer edge of the boundary when computing the boundary with –auto-boundary. Set to 0 to automatically choose a value. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd>
-<dt><span class="xref std std-ref">bg-removal</span></dt><dd><p>Automatically compute image masks using AI to remove the background. Experimental. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<dt><a class="reference internal" href="bg-removal/#bg-removal"><span class="std std-ref">bg-removal</span></a></dt><dd><p>Automatically compute image masks using AI to remove the background. Experimental. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="boundary/#boundary"><span class="std std-ref">boundary</span></a> &lt;json&gt;</dt><dd><p>GeoJSON polygon limiting the area of the reconstruction. Can be specified either as path to a GeoJSON file or as a JSON string representing the contents of a GeoJSON file. Default: ``</p>
 </dd>
@@ -542,7 +544,7 @@
 </dd>
 <dt><a class="reference internal" href="sm-cluster/#sm-cluster"><span class="std std-ref">sm-cluster</span></a> &lt;string&gt;</dt><dd><p>URL vers une instance ClusterODM pour la distribution d’un workflow de fractionnement et de fusion sur plusieurs nœuds en parallèle. Par défaut : <code class="docutils literal notranslate"><span class="pre">Aucun</span></code></p>
 </dd>
-<dt><span class="xref std std-ref">sm-no-align</span></dt><dd><p>Skip alignment of submodels in split-merge. Useful if GPS is good enough on very large datasets. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<dt><a class="reference internal" href="sm-no-align/#sm-no-align"><span class="std std-ref">sm-no-align</span></a></dt><dd><p>Skip alignment of submodels in split-merge. Useful if GPS is good enough on very large datasets. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="smrf-scalar/#smrf-scalar"><span class="std std-ref">smrf-scalar</span></a> &lt;positive float&gt;</dt><dd><p>Simple Morphological Filter elevation scalar parameter. Default: <code class="docutils literal notranslate"><span class="pre">1.25</span></code></p>
 </dd>
@@ -583,6 +585,7 @@
 <li class="toctree-l1"><a class="reference internal" href="3d-tiles/">3d-tiles</a></li>
 <li class="toctree-l1"><a class="reference internal" href="auto-boundary/">auto-boundary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="auto-boundary-distance/">auto-boundary-distance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bg-removal/">bg-removal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="boundary/">boundary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="build-overviews/">build-overviews</a></li>
 <li class="toctree-l1"><a class="reference internal" href="camera-lens/">camera-lens</a></li>
@@ -651,6 +654,7 @@
 <li class="toctree-l1"><a class="reference internal" href="skip-report/">skip-report</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sky-removal/">sky-removal</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sm-cluster/">sm-cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sm-no-align/">sm-no-align</a></li>
 <li class="toctree-l1"><a class="reference internal" href="smrf-scalar/">smrf-scalar</a></li>
 <li class="toctree-l1"><a class="reference internal" href="smrf-slope/">smrf-slope</a></li>
 <li class="toctree-l1"><a class="reference internal" href="smrf-threshold/">smrf-threshold</a></li>
