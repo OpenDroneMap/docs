@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
@@ -394,8 +396,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>Splitting Large Datasets</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Splitting Large Datasets</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/large.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -406,12 +408,12 @@
            <div itemprop="articleBody">
              
   <section id="splitting-large-datasets">
-<h1>Splitting Large Datasets<a class="headerlink" href="#splitting-large-datasets" title="Permalink to this headline"></a></h1>
+<h1>Splitting Large Datasets<a class="headerlink" href="#splitting-large-datasets" title="Permalink to this heading"></a></h1>
 <p>ODM సంస్కరణ `` 0.6.0`` తో ప్రారంభించి, మీరు చాలా పెద్ద డేటాసెట్లను నిర్వహించదగిన భాగాలుగా విభజించవచ్చు (సబ్‌మోడల్స్ అని పిలుస్తారు), ప్రతి భాగం పైప్‌లైన్‌ను నడుపుతుంది, ఆపై విలీనం చేసిన DEM లు, ఆర్థోఫోటోలు మరియు పాయింట్ మేఘాలను ఉత్పత్తి చేస్తుంది. ఈ ప్రక్రియను &quot;స్ప్లిట్-విలీనం&quot; గా సూచిస్తారు.</p>
 <p>మీరు స్ప్లిట్-విలీన పైప్‌లైన్‌ను ఎందుకు ఉపయోగించవచ్చు? మీ డేటాసెట్‌లో మీకు చాలా ఎక్కువ సంఖ్యలో చిత్రాలు ఉంటే, స్ప్లిట్-విలీనం పెద్ద మెషీన్‌లో ప్రాసెసింగ్‌ను మరింత నిర్వహించగలిగేలా చేస్తుంది (దీనికి తక్కువ మెమరీ అవసరం). ఒకే నెట్‌వర్క్‌తో అనుసంధానించబడిన అనేక యంత్రాలు మీకు ఉంటే, మీరు సబ్‌మోడల్‌లను సమాంతరంగా ప్రాసెస్ చేయవచ్చు, తద్వారా క్షితిజ సమాంతర స్కేలింగ్ మరియు వేలాది చిత్రాలను మరింత త్వరగా ప్రాసెస్ చేయడానికి అనుమతిస్తుంది.</p>
 <p>Split-merge works in WebODM out of the box as long as the processing nodes support split-merge, by enabling the <code class="docutils literal notranslate"><span class="pre">--split</span></code> option when creating a new task.</p>
 <section id="calibrate-images">
-<h2>Calibrate images<a class="headerlink" href="#calibrate-images" title="Permalink to this headline"></a></h2>
+<h2>Calibrate images<a class="headerlink" href="#calibrate-images" title="Permalink to this heading"></a></h2>
 <p>Image calibration is recommended (but not required) for large datasets because error propagation due to image distortion could cause a bowl effect on the models. Calibration instructions can be found at      <a class="reference external" href="tutorials.html#calibrating-the-camera">Calibrate Images</a>.</p>
 <figure class="align-center">
 <img alt="image of lens distortion effect on bowling of data" src="../_images/msimbasi_bowling.png" />
@@ -419,7 +421,7 @@
 <p>Bowling effect on point cloud over 13,000+ image dataset collected by World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania.</p>
 </section>
 <section id="local-split-merge">
-<h2>Local Split-Merge<a class="headerlink" href="#local-split-merge" title="Permalink to this headline"></a></h2>
+<h2>Local Split-Merge<a class="headerlink" href="#local-split-merge" title="Permalink to this heading"></a></h2>
 <p>Splitting a dataset into more manageable submodels and sequentially processing all submodels on the same machine is easy! Just use <code class="docutils literal notranslate"><span class="pre">--split</span></code> and <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code> to decide the the average number of images per submodels and the overlap (in meters) between submodels respectively</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split <span class="m">400</span> --split-overlap <span class="m">100</span>
 </pre></div>
@@ -436,13 +438,13 @@
 <p>will create 3 submodels. Make sure to pass <code class="docutils literal notranslate"><span class="pre">--split-overlap</span> <span class="pre">0</span></code> if you manually provide a <code class="docutils literal notranslate"><span class="pre">image_groups.txt</span></code> file.</p>
 </section>
 <section id="distributed-split-merge">
-<h2>Distributed Split-Merge<a class="headerlink" href="#distributed-split-merge" title="Permalink to this headline"></a></h2>
+<h2>Distributed Split-Merge<a class="headerlink" href="#distributed-split-merge" title="Permalink to this heading"></a></h2>
 <p>ODM can also automatically distribute the processing of each submodel to multiple machines via <a class="reference external" href="https://github.com/OpenDroneMap/NodeODM">NodeODM</a> nodes, orchestrated via <a class="reference external" href="https://github.com/OpenDroneMap/ClusterODM">ClusterODM</a>.</p>
 <figure class="align-center">
 <img alt="image of lens distortion effect on bowling of data" src="../_images/clusterodm.png" />
 </figure>
 <section id="getting-started-with-distributed-split-merge">
-<h3>Getting Started with Distributed Split-Merge<a class="headerlink" href="#getting-started-with-distributed-split-merge" title="Permalink to this headline"></a></h3>
+<h3>Getting Started with Distributed Split-Merge<a class="headerlink" href="#getting-started-with-distributed-split-merge" title="Permalink to this heading"></a></h3>
 <p>The first step is start ClusterODM</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti -p <span class="m">3001</span>:3000 -p <span class="m">8080</span>:8080 opendronemap/clusterodm
 </pre></div>
@@ -471,7 +473,7 @@ Escape character is <span class="s1">&#39;^]&#39;</span>.
 </div>
 </section>
 <section id="understanding-the-cluster">
-<h3>Understanding the Cluster<a class="headerlink" href="#understanding-the-cluster" title="Permalink to this headline"></a></h3>
+<h3>Understanding the Cluster<a class="headerlink" href="#understanding-the-cluster" title="Permalink to this heading"></a></h3>
 <p>When connected via telnet, it is possible to interrogate what is happening on the cluster. For example, we can use the command HELP to find out available commands</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># HELP</span>
 NODE ADD &lt;hostname&gt; &lt;port&gt; <span class="o">[</span>token<span class="o">]</span> - Add new node
@@ -507,7 +509,7 @@ OK
 </div>
 </section>
 <section id="accessing-the-logs">
-<h3>Accessing the Logs<a class="headerlink" href="#accessing-the-logs" title="Permalink to this headline"></a></h3>
+<h3>Accessing the Logs<a class="headerlink" href="#accessing-the-logs" title="Permalink to this heading"></a></h3>
 <p>While a process is running, it is also possible to list the tasks, and view the task output</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># TASK LIST</span>
 <span class="c1"># TASK OUTPUT &lt;taskId&gt; [lines]</span>
@@ -515,7 +517,7 @@ OK
 </div>
 </section>
 <section id="autoscaling-clusterodm">
-<h3>Autoscaling ClusterODM<a class="headerlink" href="#autoscaling-clusterodm" title="Permalink to this headline"></a></h3>
+<h3>Autoscaling ClusterODM<a class="headerlink" href="#autoscaling-clusterodm" title="Permalink to this heading"></a></h3>
 <p>ClusterODM also includes the option to autoscale on multiple platforms, including, to date, Amazon and Digital Ocean. This allows users to reduce costs associated with always-on instances as well as being able to scale processing based on demand.</p>
 <p>To setup autoscaling you must:</p>
 <ul class="simple">
@@ -553,12 +555,12 @@ info: Found docker-machine executable
 </section>
 </section>
 <section id="limitations">
-<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this headline"></a></h2>
+<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this heading"></a></h2>
 <p>The 3D textured meshes are currently not being merged as part of the workflow (only point clouds, DEMs and orthophotos are).</p>
 <p>GCPs are fully supported, however, there needs to be at least 3 GCP points on each submodel for the georeferencing to take place. If a submodel has fewer than 3 GCPs, a combination of the remaining GCPs + EXIF data will be used instead (which is going to be less accurate). We recommend using the <code class="docutils literal notranslate"><span class="pre">image_groups.txt</span></code> file to accurately control the submodel split when using GCPs.</p>
 </section>
 <section id="acknowledgments">
-<h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline"></a></h2>
+<h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this heading"></a></h2>
 <p>Huge props to Pau and the folks at Mapillary for their amazing contributions to OpenDroneMap through their OpenSfM code, which is a key component of the split-merge pipeline. We look forward to further pushing the limits of OpenDroneMap and seeing how big a dataset we can process.</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst">this page</a>!</p>
 </section>

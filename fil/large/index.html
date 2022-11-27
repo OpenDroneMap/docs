@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -393,8 +395,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>Splitting Large Datasets</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Splitting Large Datasets</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/large.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -405,12 +407,12 @@
            <div itemprop="articleBody">
              
   <section id="splitting-large-datasets">
-<h1>Splitting Large Datasets<a class="headerlink" href="#splitting-large-datasets" title="Permalink to this headline"></a></h1>
+<h1>Splitting Large Datasets<a class="headerlink" href="#splitting-large-datasets" title="Permalink to this heading"></a></h1>
 <p>sa ODM bersiyon <code class="docutils literal notranslate"><span class="pre">0.6.0</span></code>, maaaring hatiin ang malalaking datasets sa mas maliliit na grupo na tinatawag na submodels</p>
 <p>Bakit gagamitin ang split-merge pipeline? Kung may napakalaking bilang ng imahe sa dataset, split-merge ang makaktulong sa pagpaparocess na maging mas maayos sa malaking machine (mangangailangan ito ng mas maliit na memory). Kung maraming machine ang nakakonekta sa iisang network, pwede i-proseso ang submodels ng parallel, papayagan nito ang horizontal scaling at pagproseso ng libong imahe ng mabilis.</p>
 <p>Ang split-merge ay gumagana sa WebODM sa labas ng box basta ang process nodes ay sumosoporta sa slit-merge, sa pagenable ng <code class="docutils literal notranslate"><span class="pre">--split</span></code> option kapag gumagawa ng bagong task.</p>
 <section id="calibrate-images">
-<h2>Calibrate images<a class="headerlink" href="#calibrate-images" title="Permalink to this headline"></a></h2>
+<h2>Calibrate images<a class="headerlink" href="#calibrate-images" title="Permalink to this heading"></a></h2>
 <p>Ang image calibration ay rekomendado (pero hindi required) para sa large datasets dahil ang error propagation dahilan ng image distortion ay maaaring magsanhi ng bowl effect sa mga models. Ang image calibration instruction ay makikita sa <a class="reference external" href="tutorials.html#calibrating-the-camera">Calibrate Images</a>.</p>
 <figure class="align-center">
 <img alt="image of lens distortion effect on bowling of data" src="../_images/msimbasi_bowling.png" />
@@ -418,7 +420,7 @@
 <p>Bowling effect sa point cloud over 13,000+ na image dataset na nakolekta ng World Bank Tanzania sa flood prone Msimbasi Basin, Dar es Salaam, Tanzania.</p>
 </section>
 <section id="local-split-merge">
-<h2>Local Split-Merge<a class="headerlink" href="#local-split-merge" title="Permalink to this headline"></a></h2>
+<h2>Local Split-Merge<a class="headerlink" href="#local-split-merge" title="Permalink to this heading"></a></h2>
 <p>Ang pagsplit ng dataset sa mas maayos na submodels at sunod-sunod na pagproseso n lahat ng submodels sa iisang machine ay madali lamang! Gamitin lang ang <code class="docutils literal notranslate"><span class="pre">--split</span></code> at <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code> para mapagdesisyunan ang karaniwan na bilang ng mga imahe kada submodel at i-overlap (sa metro) sa pagitan ng submodels ayon sa pagkakabanggit.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split <span class="m">400</span> --split-overlap <span class="m">100</span>
 </pre></div>
@@ -435,13 +437,13 @@
 <p>gagawa ng 3 submodels. Siguraduhin na daanan ang <code class="docutils literal notranslate"><span class="pre">--split-overlap</span> <span class="pre">0</span></code> kung mano-mano na magbibigay ng <code class="docutils literal notranslate"><span class="pre">image_groups.txt</span></code> file.</p>
 </section>
 <section id="distributed-split-merge">
-<h2>Distributed Split-Merge<a class="headerlink" href="#distributed-split-merge" title="Permalink to this headline"></a></h2>
+<h2>Distributed Split-Merge<a class="headerlink" href="#distributed-split-merge" title="Permalink to this heading"></a></h2>
 <p>Ang ODM ay awtomatikong namamahagi ng proseso kada submodel sa maramihan na machines sa pamamagitan ng <a class="reference external" href="https://github.com/OpenDroneMap/NodeODM">NodeODM</a> nodes, na inayos sa pamamagitan ng <a class="reference external" href="https://github.com/OpenDroneMap/ClusterODM">ClusterODM</a>.</p>
 <figure class="align-center">
 <img alt="image of lens distortion effect on bowling of data" src="../_images/clusterodm.png" />
 </figure>
 <section id="getting-started-with-distributed-split-merge">
-<h3>Paano simulan ang Distributed Split-Merge<a class="headerlink" href="#getting-started-with-distributed-split-merge" title="Permalink to this headline"></a></h3>
+<h3>Paano simulan ang Distributed Split-Merge<a class="headerlink" href="#getting-started-with-distributed-split-merge" title="Permalink to this heading"></a></h3>
 <p>Ang unang hakbang ay ang simulan ang ClusterODM</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti -p <span class="m">3001</span>:3000 -p <span class="m">8080</span>:8080 opendronemap/clusterodm
 </pre></div>
@@ -470,7 +472,7 @@ Escape character is <span class="s1">&#39;^]&#39;</span>.
 </div>
 </section>
 <section id="understanding-the-cluster">
-<h3>Pagkaunawa sa Cluster<a class="headerlink" href="#understanding-the-cluster" title="Permalink to this headline"></a></h3>
+<h3>Pagkaunawa sa Cluster<a class="headerlink" href="#understanding-the-cluster" title="Permalink to this heading"></a></h3>
 <p>Kapag konektado via telnet, posible na magtanong sa kung ano na ang kalagayan ng cluster. Halimbawa, pwedeng gamitin ang command na HELP para hanapin ang mga available na commands.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># HELP</span>
 NODE ADD &lt;hostname&gt; &lt;port&gt; <span class="o">[</span>token<span class="o">]</span> - Add new node
@@ -506,7 +508,7 @@ OK
 </div>
 </section>
 <section id="accessing-the-logs">
-<h3>Pag-access sa Logs<a class="headerlink" href="#accessing-the-logs" title="Permalink to this headline"></a></h3>
+<h3>Pag-access sa Logs<a class="headerlink" href="#accessing-the-logs" title="Permalink to this heading"></a></h3>
 <p>Habang ang proseso ay umaandar, posible rin na ilista ang mga task at tignan ang mga task output.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># TASK LIST</span>
 <span class="c1"># TASK OUTPUT &lt;taskId&gt; [lines]</span>
@@ -514,7 +516,7 @@ OK
 </div>
 </section>
 <section id="autoscaling-clusterodm">
-<h3>Autoscaling ClusterODM<a class="headerlink" href="#autoscaling-clusterodm" title="Permalink to this headline"></a></h3>
+<h3>Autoscaling ClusterODM<a class="headerlink" href="#autoscaling-clusterodm" title="Permalink to this heading"></a></h3>
 <p>Ang ClusterODM ay mayroon din opsiyon na autoscalesa maramihan na plataporma kasama ng, hanggang ngayon, Amazon at Digital Ocean. Tinutulungan nito ang user na mababaan ang presyo na nauugnay sa always-on na mga pagkakataon pati na rin ang kakayanan na scale ang proseso base sa demand.</p>
 <p>Para i-set up ang autoscaling, dapat na:</p>
 <ul class="simple">
@@ -552,12 +554,12 @@ info: Found docker-machine executable
 </section>
 </section>
 <section id="limitations">
-<h2>Mga limitasyon<a class="headerlink" href="#limitations" title="Permalink to this headline"></a></h2>
+<h2>Mga limitasyon<a class="headerlink" href="#limitations" title="Permalink to this heading"></a></h2>
 <p>Ang 3D textured meshes ay kasalukuyan na hindi name-merge bilang parte ng workflow (pino-point out lamang ang clouds, DEMS at orthophotos are).</p>
 <p>Ang GCPs ay suportado ng buo pero kailangan ng kahit man lang 3 GCP points kada submodel para sa georeferencing na magsimula.  Kung ang submodel ay may mas kaunti sa 3 GCPs, ang kombinasyon ng natitirang GCPs + EXIF data ang gagamitin (na medyo hindi kasing eksakto). Nirerekomenda na gamitin ang <code class="docutils literal notranslate"><span class="pre">image_groups.txt</span></code> file para eksaktong macontrol ang submodel split habang ginagamit ang GCPs.</p>
 </section>
 <section id="acknowledgments">
-<h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this headline"></a></h2>
+<h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this heading"></a></h2>
 <p>Malaking pagpugay kay Pau at sa mga tao ng Mapillary para sa kanilang kamangha-mangha na kontribusyon sa OpenDroneMap sa pamamagitan ng kanilang OpenSfM code, na isang pangunahing sangkap ng split-merge pipeline. Inaabangan namin ang kaunlaran at pagtulak sa mga limitasyon ng OpenDronMap at  makita kung gaano kalaki ang dataset na mapa-process.</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst">this page</a>!</p>
 </section>

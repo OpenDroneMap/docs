@@ -15,7 +15,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
@@ -393,9 +395,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../">Mga Opsyon at Tanda</a> &raquo;</li>
-      <li>auto-boundary</li>
+      <li><a href="../../" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../">Mga Opsyon at Tanda</a></li>
+      <li class="breadcrumb-item active">auto-boundary</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/arguments/auto-boundary.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -406,7 +408,7 @@
            <div itemprop="articleBody">
              
   <section id="auto-boundary">
-<span id="id1"></span><h1>auto-boundary<a class="headerlink" href="#auto-boundary" title="Permalink to this headline"></a></h1>
+<span id="id1"></span><h1>auto-boundary<a class="headerlink" href="#auto-boundary" title="Permalink to this heading"></a></h1>
 <p>Automatically set a boundary using camera shot locations to limit the area of the reconstruction. This can help remove far away background artifacts (sky, background landscapes, etc.). See also --boundary. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 <div class="line-block">
 <div class="line">Parameter Type:</div>
@@ -454,24 +456,24 @@
 </table>
 <hr class="docutils" />
 <section id="what-is-auto-boundary">
-<h2>What Is Auto-Boundary?<a class="headerlink" href="#what-is-auto-boundary" title="Permalink to this headline"></a></h2>
+<h2>What Is Auto-Boundary?<a class="headerlink" href="#what-is-auto-boundary" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code> is a process that seeks to limit the boundaries of the reconstruction based upon a K-Means filtered Convex Hull buffered by 20x the mean GSD of the dataset.</p>
 </section>
 <section id="when-is-auto-boundary-helpful">
-<h2>When Is Auto-Boundary Helpful?<a class="headerlink" href="#when-is-auto-boundary-helpful" title="Permalink to this headline"></a></h2>
+<h2>When Is Auto-Boundary Helpful?<a class="headerlink" href="#when-is-auto-boundary-helpful" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code> is appropriate to use on any dataset where one might possibly consider limiting the area of reconstruction due to the presence of sky or far-away background that they would not normally consider part of the desired reconstruction.</p>
 <p><code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code> does not have a meaningful impact on nadir (or near-nadir) imagery without sky/background, making it superfluous, but safe, to include.</p>
 <p>In other words, if you would consider masking the image, <code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code> is likely a good choice.</p>
 </section>
 <section id="why-would-one-use-auto-boundary">
-<h2>Why would one use auto-boundary?<a class="headerlink" href="#why-would-one-use-auto-boundary" title="Permalink to this headline"></a></h2>
+<h2>Why would one use auto-boundary?<a class="headerlink" href="#why-would-one-use-auto-boundary" title="Permalink to this heading"></a></h2>
 <p>Auto-Boundary is most helpful in preventing the reconstruction area from growing needlessly large when things like sky, clouds, or far-away features like treelines get included in the reconstruction.</p>
 <p>By preventing the boundaries of the reconstruction from growing needlessly large, Out-Of-Memory errors become far less likely, and one will likely see a decrease in processing time due to the smaller area being reconstructed.</p>
 </section>
 <section id="example-images">
-<h2>Example Images<a class="headerlink" href="#example-images" title="Permalink to this headline"></a></h2>
+<h2>Example Images<a class="headerlink" href="#example-images" title="Permalink to this heading"></a></h2>
 <section id="true-auto-boundary">
-<h3>True: <code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code><a class="headerlink" href="#true-auto-boundary" title="Permalink to this headline"></a></h3>
+<h3>True: <code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code><a class="headerlink" href="#true-auto-boundary" title="Permalink to this heading"></a></h3>
 <figure class="align-default" id="id2">
 <img alt="WebODM displaying the reconstruction extent of a terrestrial orbit survey of a Northern Catalpa tree." src="https://user-images.githubusercontent.com/19295950/140864618-2a0c95f2-669e-45dc-b5c5-df82a555e4e5.png" />
 <figcaption>
@@ -480,7 +482,7 @@
 </figure>
 </section>
 <section id="false-null">
-<h3>False: <code class="docutils literal notranslate"><span class="pre">null</span></code><a class="headerlink" href="#false-null" title="Permalink to this headline"></a></h3>
+<h3>False: <code class="docutils literal notranslate"><span class="pre">null</span></code><a class="headerlink" href="#false-null" title="Permalink to this heading"></a></h3>
 <figure class="align-default" id="id3">
 <img alt="WebODM displaying the reconstruction extent of a terrestrial orbit survey of a Northern Catalpa tree." src="https://user-images.githubusercontent.com/19295950/140864753-db3695c5-3ba2-48fb-a644-3e591913de72.png" />
 <figcaption>

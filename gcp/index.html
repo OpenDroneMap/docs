@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -393,8 +395,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>Ground Control Points</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Ground Control Points</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/gcp.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -405,19 +407,19 @@
            <div itemprop="articleBody">
              
   <section id="ground-control-points">
-<h1>Ground Control Points<a class="headerlink" href="#ground-control-points" title="Permalink to this headline"></a></h1>
+<h1>Ground Control Points<a class="headerlink" href="#ground-control-points" title="Permalink to this heading"></a></h1>
 <p>Ground control points are useful for correcting distortions in the data and referencing the data to know coordinate systems.</p>
 <p>A Ground Control Point (GCP) is a position measurement made on the ground, typically using a high precision GPS. (Toffanin 2019)</p>
 <p>Ground control points can be set existing structures like pavement corners, lines on a parking lot or contrasting color floor tiles, otherwise can be set using targets placed on the ground.</p>
 <p>Targets can be purchased or build with an ample variety of materials ranging from bucket lids to floor tiles.</p>
 <section id="recommended-practices-for-gcp-setting">
-<h2>Recommended practices for GCP setting<a class="headerlink" href="#recommended-practices-for-gcp-setting" title="Permalink to this headline"></a></h2>
+<h2>Recommended practices for GCP setting<a class="headerlink" href="#recommended-practices-for-gcp-setting" title="Permalink to this heading"></a></h2>
 <p>Keep ground control points visible for all camera locations. Consider the expected ground sampling distance, illumination, vegetation, buildings and all the existing obstacles.</p>
 <p>Procure an evenly horizontal distribution of the GCPs within the project, covering high and low elevations. A minimum of 5 GCP works for most of the jobs, and for larger projects 8 – 10 are sufficient. Locate some points near the corners and others in the center, considering that GCP spacing should be larger than the image footprint so that you can’t see more than one GCP in a single image.</p>
 <p>In order to ensure each GCP are found in at least 5 images, separate the points 10 to 30 meters from the perimeter of the project. This distance is dependent of the overlapping, so increasing overlapping should reduce the required distance from the perimeter.</p>
 </section>
 <section id="gcp-file-format">
-<h2>GCP file format<a class="headerlink" href="#gcp-file-format" title="Permalink to this headline"></a></h2>
+<h2>GCP file format<a class="headerlink" href="#gcp-file-format" title="Permalink to this heading"></a></h2>
 <p>The format of the GCP file is simple.</p>
 <blockquote>
 <div><ul class="simple">
@@ -447,7 +449,7 @@
 <p>For good results your file should have a minimum of 15 lines after the header (5 points with 3 images to each point).</p>
 </section>
 <section id="user-interfaces">
-<h2>User Interfaces<a class="headerlink" href="#user-interfaces" title="Permalink to this headline"></a></h2>
+<h2>User Interfaces<a class="headerlink" href="#user-interfaces" title="Permalink to this heading"></a></h2>
 <p>You can use one of two user interfaces for creating GCP files:</p>
 <blockquote>
 <div><ul class="simple">
@@ -456,7 +458,7 @@
 </ul>
 </div></blockquote>
 <section id="id1">
-<h3>POSM GCPi<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+<h3>POSM GCPi<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
 <p>The POSM GCPi is loaded by default on WebODM. An example is available at <a class="reference external" href="http://demo.webodm.org/plugins/posm-gcpi/">the WebODM Demo</a>. To use this with known ground control XYZ values, one would do the following:</p>
 <p>Create a GCP list that only includes gcp name (this is the label that will be seen in the GCP interface), x, y, and z, with a header with a proj4 string of your GCPs (make sure they are in a planar coordinate system, such as UTM. It should look something like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="n">proj</span><span class="o">=</span><span class="n">utm</span> <span class="o">+</span><span class="n">zone</span><span class="o">=</span><span class="mi">37</span> <span class="o">+</span><span class="n">south</span> <span class="o">+</span><span class="n">ellps</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">datum</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">units</span><span class="o">=</span><span class="n">m</span> <span class="o">+</span><span class="n">no_defs</span>
@@ -470,7 +472,7 @@
 <p>Then one can load this GCP list into the interface, load the images, and place each of the GCPs in the image.</p>
 </section>
 <section id="id2">
-<h3>GCP Editor Pro<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
+<h3>GCP Editor Pro<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
 <p>This app needs to be installed separately or can be loaded as a WebODM plugin from <a class="reference external" href="https://github.com/uav4geo/GCPEditorPro">https://github.com/uav4geo/GCPEditorPro</a></p>
 <p>Create a CSV file that includes the gcp name, northing, easting and elevation.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GCP</span> <span class="n">Label</span><span class="p">,</span><span class="n">Northing</span><span class="p">,</span><span class="n">Easting</span><span class="p">,</span><span class="n">Elevation</span>
@@ -484,7 +486,7 @@
 </section>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline"></a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
 <p>Toffanin, Piero. <a class="reference external" href="https://odmbook.com/">Open Drone Map: The Missing Guide.</a> MasseranoLabs LLC, 2019.</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/gcp.rst">this page</a>!</p>
 </section>

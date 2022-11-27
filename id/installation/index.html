@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Indeks" href="../genindex/" />
@@ -394,8 +396,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>Cara memulai dan instalasi</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Cara memulai dan instalasi</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/installation.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -406,16 +408,16 @@
            <div itemprop="articleBody">
              
   <section id="installation-and-getting-started">
-<h1>Cara memulai dan instalasi<a class="headerlink" href="#installation-and-getting-started" title="Link permanen untuk headline ini"></a></h1>
+<h1>Cara memulai dan instalasi<a class="headerlink" href="#installation-and-getting-started" title="Permalink to this heading"></a></h1>
 <p>Bagian ini dikutip dan dimodifikasi dengan izin dari <a class="reference external" href="https://odmbook.com">OpenDroneMap: Panduan yang Hilang</a>, oleh Piero Toffanin.</p>
 <section id="quickstart">
-<h2>Quickstart<a class="headerlink" href="#quickstart" title="Link permanen untuk headline ini"></a></h2>
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading"></a></h2>
 <p>Installers for OpenDroneMap are available for purchase from UAV4Geo, and are the easiest way to get started and come with support.</p>
 <p><a class="reference external" href="https://opendronemap.org/webodm/download/#installer">https://opendronemap.org/webodm/download/#installer</a></p>
 <p>That said, OpenDroneMap is a free and open source ecoystem. Community support is available for those looking to install themselves and directions follow:</p>
 </section>
 <section id="hardware-recommendations">
-<h2>Rekomendasi Perangkat Keras<a class="headerlink" href="#hardware-recommendations" title="Link permanen untuk headline ini"></a></h2>
+<h2>Rekomendasi Perangkat Keras<a class="headerlink" href="#hardware-recommendations" title="Permalink to this heading"></a></h2>
 <p>Persyaratan minimal untuk menjalankan perangkat lunak adalah:</p>
 <ul class="simple">
 <li><p>CPU 64bit diproduksi pada atau setelah 2010</p></li>
@@ -466,13 +468,13 @@
 </table>
 </section>
 <section id="installation">
-<span id="docker-installation"></span><h2>Instalasi<a class="headerlink" href="#installation" title="Link permanen untuk headline ini"></a></h2>
+<span id="docker-installation"></span><h2>Instalasi<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <p>Kami menyarankan orang-orang menggunakan <cite>docker &lt;https://www.docker.com&gt;</cite> _ untuk menjalankan ODM, baik anda menggunakan Windows, macOS atau Linux.</p>
 <section id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Link permanen untuk headline ini"></a></h3>
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this heading"></a></h3>
 <p>Untuk menjalankan OpenDroneMap Anda membutuhkan setidaknya Windows 7. Versi Windows sebelumnya tidak didukung.</p>
 <section id="step-1-check-virtualization-support">
-<h4>Langkah 1. Periksa Dukungan Virtualisasi<a class="headerlink" href="#step-1-check-virtualization-support" title="Link permanen untuk headline ini"></a></h4>
+<h4>Langkah 1. Periksa Dukungan Virtualisasi<a class="headerlink" href="#step-1-check-virtualization-support" title="Permalink to this heading"></a></h4>
 <p>Docker memerlukan fitur dari CPU anda yang disebut virtualisasi, yang memungkinkannya menjalankan mesin virtual (VM). Pastikan anda telah mengaktifkannya! Terkadang ini dinonaktifkan. Untuk memeriksanya, pada Windows 8 atau lebih tinggi ada dapat membuka <strong>Task Manager</strong> (tekan CTRL + SHIFT + ESC) dan beralih ke tab <strong>Performance</strong>.</p>
 <figure class="align-center">
 <img alt="Image of checking virtualization in Windows 8 or higher" src="../_images/virtualizationcheck.png" />
@@ -486,7 +488,7 @@
 <p><em>Tombol umum yang harus ditekan saat komputer dihidupkan untuk mengakses menu boot untuk berbagai vendor PC</em></p>
 </section>
 <section id="step-2-install-requirements">
-<h4>Langkah 2. Instal Persyaratan<a class="headerlink" href="#step-2-install-requirements" title="Link permanen untuk headline ini"></a></h4>
+<h4>Langkah 2. Instal Persyaratan<a class="headerlink" href="#step-2-install-requirements" title="Permalink to this heading"></a></h4>
 <p>Pertama kali, kamu harus menginstal:</p>
 <ul class="simple">
 <li><p>Git: <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p></li>
@@ -509,7 +511,7 @@
 <p>After installing docker, launch it from the Desktop icon that is created from the installation (<strong>Docker Quickstart</strong> in the case of Docker Toolbox, <strong>Docker for Windows</strong> for Docker for Windows). This is important, do not skip this step. If there are errors, follow the prompts on screen to fix them.</p>
 </section>
 <section id="step-3-check-memory-and-cpu-allocation">
-<h4>Langkah 3. Periksa Alokasi Memori dan CPU<a class="headerlink" href="#step-3-check-memory-and-cpu-allocation" title="Link permanen untuk headline ini"></a></h4>
+<h4>Langkah 3. Periksa Alokasi Memori dan CPU<a class="headerlink" href="#step-3-check-memory-and-cpu-allocation" title="Permalink to this heading"></a></h4>
 <p>Docker di Windows bekerja dengan menjalankan VM di latar belakang (anggap VM sebagai &quot;emulator komputer&quot;). VM ini memiliki sejumlah memori yang dialokasikan dan WebODM hanya dapat menggunakan memori sebanyak yang dialokasikan.</p>
 <p>If you installed Docker Toolbox (see below if you installed Docker for Windows instead):</p>
 <ol class="arabic simple">
@@ -540,7 +542,7 @@
 <p><em>Langkah 3 &amp; 4 Pengaturan Docker</em></p>
 </section>
 <section id="step-4-download-webodm">
-<h4>Langkah 4. Unduh WebODM<a class="headerlink" href="#step-4-download-webodm" title="Link permanen untuk headline ini"></a></h4>
+<h4>Langkah 4. Unduh WebODM<a class="headerlink" href="#step-4-download-webodm" title="Permalink to this heading"></a></h4>
 <p>Buka program <strong>Git Gui</strong> yang sudah diinstal dengan Git. Dari sana:</p>
 <ul class="simple">
 <li><p>Saat Git Gui terbuka, klik opsi 'Gandakan Repositori yang Ada'</p></li>
@@ -560,7 +562,7 @@
 <p>Go to the <strong>Repository</strong> menu, then click <strong>Create Desktop Icon</strong>. This will allow you to come back to this application easily in the future.</p>
 </section>
 <section id="step-4-launch-webodm">
-<h4>Langkah 4. Luncurkan WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Link permanen untuk headline ini"></a></h4>
+<h4>Langkah 4. Luncurkan WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Permalink to this heading"></a></h4>
 <p>From Git Gui, go to the <strong>Repository</strong> menu, then click <strong>Git Bash</strong>. From the command line terminal type:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start <span class="p">&amp;</span>
 </pre></div>
@@ -585,10 +587,10 @@
 </section>
 </section>
 <section id="macos">
-<h3>macOS<a class="headerlink" href="#macos" title="Link permanen untuk headline ini"></a></h3>
+<h3>macOS<a class="headerlink" href="#macos" title="Permalink to this heading"></a></h3>
 <p>Most modern (post 2010) Mac computers running macOS Sierra 10.12 or higher can run OpenDroneMap using docker, as long as hardware virtualization is supported (see below).</p>
 <section id="id1">
-<h4>Langkah 1. Periksa Dukungan Virtualisasi<a class="headerlink" href="#id1" title="Link permanen untuk headline ini"></a></h4>
+<h4>Langkah 1. Periksa Dukungan Virtualisasi<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
 <p>Open a Terminal window and type:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sysctl kern.hv_support
 </pre></div>
@@ -601,7 +603,7 @@
 <p>Jika hasilnya <em>kern.hv_support: 0</em>, sayangnya itu berarti Mac Anda terlalu tua untuk menjalankan OpenDroneMap. :(</p>
 </section>
 <section id="id2">
-<h4>Langkah 2. Instal Persyaratan<a class="headerlink" href="#id2" title="Link permanen untuk headline ini"></a></h4>
+<h4>Langkah 2. Instal Persyaratan<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
 <p>Hanya ada dua program untuk diinstal:</p>
 <ol class="arabic simple">
 <li><p>Docker: <a class="reference external" href="https://download.docker.com/mac/stable/Docker.dmg">https://download.docker.com/mac/stable/Docker.dmg</a></p></li>
@@ -631,7 +633,7 @@
 <p>If you get a “bash: git: command not found”, try to restart your <strong>Terminal</strong> app and double-check for any errors during the install process.</p>
 </section>
 <section id="id3">
-<h4>Langkah 3. Periksa Alokasi Memori dan CPU<a class="headerlink" href="#id3" title="Link permanen untuk headline ini"></a></h4>
+<h4>Langkah 3. Periksa Alokasi Memori dan CPU<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
 <p>Docker on macOS works by running a VM in the background (think of it as a “computer emulator”). This VM has a certain amount of memory allocated and WebODM can only use as much memory as it’s allocated.</p>
 <ol class="arabic simple">
 <li><p>Right click the whale icon from the task bar and click <strong>Preferences</strong>...</p></li>
@@ -645,7 +647,7 @@
 <p><em>Pengaturan lanjutan Docker</em></p>
 </section>
 <section id="step-4-download-and-launch-webodm">
-<h4>Langkah 4. Unduh dan Jalankan WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Link permanen untuk headline ini"></a></h4>
+<h4>Langkah 4. Unduh dan Jalankan WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Permalink to this heading"></a></h4>
 <p>From a <strong>Terminal</strong> type:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
 $ <span class="nb">cd</span> WebODM
@@ -656,10 +658,10 @@ $ ./webodm.sh start
 </section>
 </section>
 <section id="linux">
-<h3>Linux<a class="headerlink" href="#linux" title="Link permanen untuk headline ini"></a></h3>
+<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this heading"></a></h3>
 <p>OpenDroneMap can run on any Linux distribution that supports docker. According to <a class="reference external" href="https://docs.docker.com/install/">docker’s documentation website</a> the officially supported distributions are CentOS, Debian, Ubuntu and Fedora, with static binaries available for others. If you have to pick a distribution solely for running OpenDroneMap, Ubuntu is the recommended way to go.</p>
 <section id="step-1-install-requirements">
-<h4>Langkah 1. Instal Persyaratan<a class="headerlink" href="#step-1-install-requirements" title="Link permanen untuk headline ini"></a></h4>
+<h4>Langkah 1. Instal Persyaratan<a class="headerlink" href="#step-1-install-requirements" title="Permalink to this heading"></a></h4>
 <p>Ada empat program yang perlu diinstal:</p>
 <ol class="arabic simple">
 <li><p>Docker</p></li>
@@ -669,7 +671,7 @@ $ ./webodm.sh start
 </ol>
 <p>Kami tidak mungkin mencakup proses instalasi untuk setiap distribusi Linux di luar sana, jadi kami akan membatasi instruksi hanya untuk distribusi yang secara resmi didukung oleh docker. Dalam semua kasus, ini hanya masalah membuka prompt terminal dan mengetik beberapa perintah.</p>
 <section id="install-on-ubuntu-debian">
-<h5>Instal di Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Link permanen untuk headline ini"></a></h5>
+<h5>Instal di Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Permalink to this heading"></a></h5>
 <p>Perintah untuk mengetik:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt update
 $ curl -fsSL https://get.docker.com -o get-docker.sh
@@ -679,7 +681,7 @@ $ sudo apt install -y git python python-pip
 </div>
 </section>
 <section id="install-on-centos-rhel">
-<h5>Instal di CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Link permanen untuk headline ini"></a></h5>
+<h5>Instal di CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Permalink to this heading"></a></h5>
 <p>Perintah untuk mengetik:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
 $ sh get-docker.sh
@@ -688,7 +690,7 @@ $ sudo yum -y install git python python-pip
 </div>
 </section>
 <section id="install-on-fedora">
-<h5>Instal di Fedora<a class="headerlink" href="#install-on-fedora" title="Link permanen untuk headline ini"></a></h5>
+<h5>Instal di Fedora<a class="headerlink" href="#install-on-fedora" title="Permalink to this heading"></a></h5>
 <p>Perintah untuk mengetik:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
 $ sh get-docker.sh
@@ -697,7 +699,7 @@ $ sudo dnf install git python python-pip
 </div>
 </section>
 <section id="install-on-arch">
-<h5>Instal di Arch<a class="headerlink" href="#install-on-arch" title="Link permanen untuk headline ini"></a></h5>
+<h5>Instal di Arch<a class="headerlink" href="#install-on-arch" title="Permalink to this heading"></a></h5>
 <p>Perintah untuk mengetik:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pacman -Sy docker git python python-pip
 </pre></div>
@@ -705,7 +707,7 @@ $ sudo dnf install git python python-pip
 </section>
 </section>
 <section id="step-2-check-additional-requirements">
-<h4>Langkah 2. Periksa Persyaratan Tambahan<a class="headerlink" href="#step-2-check-additional-requirements" title="Link permanen untuk headline ini"></a></h4>
+<h4>Langkah 2. Periksa Persyaratan Tambahan<a class="headerlink" href="#step-2-check-additional-requirements" title="Permalink to this heading"></a></h4>
 <p>Selain ketiga program di atas, menulis skrip docker juga diperlukan. Terkadang sudah terpasang dengan docker, tapi terkadang tidak. Untuk memverifikasi apakah sudah terpasang coba ketik:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker-compose --version
 </pre></div>
@@ -724,7 +726,7 @@ $ sudo dnf install git python python-pip
 </div>
 </section>
 <section id="step-3-download-and-launch-webodm">
-<h4>Langkah 3. Unduh dan Jalankan WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Link permanen untuk headline ini"></a></h4>
+<h4>Langkah 3. Unduh dan Jalankan WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Permalink to this heading"></a></h4>
 <p>Dari tipe terminal:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
 $ <span class="nb">cd</span> WebODM
@@ -736,7 +738,7 @@ $ ./webodm.sh start
 </section>
 </section>
 <section id="basic-commands-and-troubleshooting">
-<h2>Perintah Dasar dan Pemecahan Masalah<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Link permanen untuk headline ini"></a></h2>
+<h2>Perintah Dasar dan Pemecahan Masalah<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Permalink to this heading"></a></h2>
 <p>Hal yang keren tentang penggunaan docker adalah 99% tugas yang anda perlukan saat menggunakan WebODM dapat dilakukan melalui skrip ./webodm.sh. Anda telah menjumpai salah satunya:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start
 </pre></div>
@@ -769,7 +771,7 @@ $ ./webodm.sh --help
 <p><a class="reference external" href="https://community.opendronemap.org">Forum komunitas</a>  adalah tempat yang tepat untuk meminta bantuan jika anda mengalami kebuntuan selama salah satu langkah penginstalan dan untuk pertanyaan umum tentang penggunaan skrip ./webodm.sh.</p>
 </section>
 <section id="hello-webodm">
-<h2>Halo, WebODM!<a class="headerlink" href="#hello-webodm" title="Link permanen untuk headline ini"></a></h2>
+<h2>Halo, WebODM!<a class="headerlink" href="#hello-webodm" title="Permalink to this heading"></a></h2>
 <p>Setelah menjalankan ./webodm.sh mulai dan membuka WebODM di browser, anda akan disambut dengan pesan selamat datang dan akan diminta untuk membuat pengguna pertama. Luangkan waktu untuk membiasakan diri dengan antarmuka web dan menjelajahi berbagai menunya.</p>
 <figure class="align-center">
 <img alt="Screenshot of WebODM Dashboard" src="../_images/webodmdashboard.png" />
@@ -781,7 +783,7 @@ $ ./webodm.sh --help
 <img alt="Image of celebratory dance" src="../_images/congratulations.png" />
 </figure>
 <section id="running-on-more-than-one-machine">
-<h3>Berjalan di lebih dari satu mesin<a class="headerlink" href="#running-on-more-than-one-machine" title="Link permanen untuk headline ini"></a></h3>
+<h3>Berjalan di lebih dari satu mesin<a class="headerlink" href="#running-on-more-than-one-machine" title="Permalink to this heading"></a></h3>
 <p><strong>Opsional:</strong> Jika anda memiliki komputer lain, anda dapat mengulangi proses instalasi (menginstal docker, git, python, dll.) dan meluncurkan node NodeODM baru dengan mengetik dari jendela Terminal / Git Bash:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --rm -it -p <span class="m">3000</span>:3000 opendronemap/nodeodm -q <span class="m">1</span> --token secret
 </pre></div>

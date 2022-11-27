@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Indeks" href="../genindex/" />
@@ -394,8 +396,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>Akurasi Peta</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Akurasi Peta</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/map-accuracy.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -406,7 +408,7 @@
            <div itemprop="articleBody">
              
   <section id="map-accuracy">
-<h1>Akurasi Peta<a class="headerlink" href="#map-accuracy" title="Link permanen untuk headline ini"></a></h1>
+<h1>Akurasi Peta<a class="headerlink" href="#map-accuracy" title="Permalink to this heading"></a></h1>
 <p>Accuracy can be defined as the degree or closeness to which the information on a map matches the values in the real world. Therefore, when we refer to accuracy, we are talking about quality of data and about number of errors contained in a certain dataset (Pascual 2011).</p>
 <p><strong>Relative or Local accuracy</strong></p>
 <p>Local or relative accuracy can be defined as the degree to which de distances between two points on a map correspond to the actually distances between those points in the real world.</p>
@@ -424,12 +426,12 @@
 <p><strong>An Accuracy level for each project</strong></p>
 <p>Each project has specific accuracy needs to be met. For instance assessing the progress in a construction site or measuring an area affected by a fire does not require the use of GCP, since absolute accuracy will not impact the decision making process. In the other hand, there are tasks on which accuracy is critical, for example project compliance evaluations and land title surveying, which require a higher relative and absolute accuracy.</p>
 <section id="what-to-expect">
-<h2>What to expect<a class="headerlink" href="#what-to-expect" title="Link permanen untuk headline ini"></a></h2>
+<h2>What to expect<a class="headerlink" href="#what-to-expect" title="Permalink to this heading"></a></h2>
 <p>In general terms, one can expect the relative accuracy to be in the order of 1 to 3 times the average GSD for the dataset. And as for the absolute accuracy, one must consider that it is dependent of the GPS unit mounted in the UAV but the horizontal accuracy of a standard GPS is usually in the range of 2 to 6 meters and the vertical accuracy between 3 to 4 times the horizontal accuracy.</p>
 <p>When using GCP, absolute accuracy can be improved to 2.5 times GSD for the horizontal accuracy and 4 times the GSD for the vertical accuracy (Madawalagama 2016).</p>
 <p>At a GSD of 1cm, the accuracy is to that of the RTK GNSS, and is within 1:200 scales according to NSDI &amp; FGDC mapping accuracy standards during sub-optimal conditions (Barry 2013).</p>
 <section id="aspects-impacting-map-accuracy">
-<h3>Aspects impacting map accuracy<a class="headerlink" href="#aspects-impacting-map-accuracy" title="Link permanen untuk headline ini"></a></h3>
+<h3>Aspects impacting map accuracy<a class="headerlink" href="#aspects-impacting-map-accuracy" title="Permalink to this heading"></a></h3>
 <p><strong>Cuaca</strong></p>
 <p>Weather conditions have direct impact in the photogrammetry results, so it is important to consider cloud coverage, wind speed, humidity, sun’s altitude and other factors influencing the UAV stability and terrain illumination.</p>
 <p><strong>Kamera</strong></p>
@@ -441,7 +443,7 @@
 </section>
 </section>
 <section id="references">
-<h2>Referensi<a class="headerlink" href="#references" title="Link permanen untuk headline ini"></a></h2>
+<h2>Referensi<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
 <p>Barry, P., &amp; Coakley, R. «Accuracy of UAV photogrammetry compared with Network RTK GPS.» Baseline Surveys. 2013. <a class="reference external" href="http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf">http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf</a>  (accessed 10 13, 2020).</p>
 <p>Drone Deploy. How Do I Use Ground Control Points?: A guide to using ground control points with drone mapping software. 5 8, 2017. <a class="reference external" href="https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/">https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/</a> (accessed 7 9, 2020).</p>
 <p>Madawalagama, S.L., Munasinghe, N., Dampegama, S.D.P.J. and Samarakoon, L. «Low-cost aerial mapping with consumer grade.» 37th Asian Conference on Remote Sensing. Colombo, Sri Lanka, 2016.</p>

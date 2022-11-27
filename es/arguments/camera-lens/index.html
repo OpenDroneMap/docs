@@ -15,7 +15,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../../genindex/" />
@@ -394,9 +396,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../">Opciones e indicadores</a> &raquo;</li>
-      <li>camera-lens</li>
+      <li><a href="../../" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../">Opciones e indicadores</a></li>
+      <li class="breadcrumb-item active">camera-lens</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/arguments/camera-lens.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
@@ -407,7 +409,7 @@
            <div itemprop="articleBody">
              
   <section id="camera-lens">
-<span id="id1"></span><h1>camera-lens<a class="headerlink" href="#camera-lens" title="Enlazar permanentemente con este título"></a></h1>
+<span id="id1"></span><h1>camera-lens<a class="headerlink" href="#camera-lens" title="Enlace permanente a este encabezado"></a></h1>
 <p><strong>Options:</strong> <em>auto |  perspective |  brown |  fisheye |  spherical |  equirectangular |  dual</em></p>
 <p>Establezca un tipo de proyección de la cámara. Establecer manualmente un valor puede ayudar a mejorar la distorsión geométrica. De forma predeterminada, la aplicación intenta determinar un tipo de lente a partir de los metadatos de las imágenes. Predeterminado: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p>
 <div class="line-block">
@@ -459,22 +461,22 @@
 </table>
 <hr class="docutils" />
 <section id="what-are-camera-lens-models">
-<h2>¿que son los modelos de lentes de cámara?<a class="headerlink" href="#what-are-camera-lens-models" title="Enlazar permanentemente con este título"></a></h2>
+<h2>¿que son los modelos de lentes de cámara?<a class="headerlink" href="#what-are-camera-lens-models" title="Enlace permanente a este encabezado"></a></h2>
 <p>Los modelos de lentes de cámara son modelos de proyección / distorsión que OpenSFM usa para corregir la óptica de las plataformas de cámara que registran nuestras imágenes. Estas correcciones son esenciales para el modelado adecuado de la cámara/escena y, por lo tanto, la reconstrucción adecuada de los datos.</p>
 </section>
 <section id="when-are-manual-selections-appropriate">
-<h2>¿Cuándo son apropiadas las selecciones manuales?<a class="headerlink" href="#when-are-manual-selections-appropriate" title="Enlazar permanentemente con este título"></a></h2>
+<h2>¿Cuándo son apropiadas las selecciones manuales?<a class="headerlink" href="#when-are-manual-selections-appropriate" title="Enlace permanente a este encabezado"></a></h2>
 <p>Actualmente, la elección manual de un modelo de lente de cámara solo se recomienda en el caso de las cámaras esféricas (GoPro Fusion, GoPro Max, Insta360, Kodak PixPro, etc.), ya que OpenSFM no las detecta automáticamente.</p>
 </section>
 <section id="why-would-one-use-a-particular-camera-lens-model">
-<h2>¿Por qué se utilizaría un modelo de lente de cámara en particular?<a class="headerlink" href="#why-would-one-use-a-particular-camera-lens-model" title="Enlazar permanentemente con este título"></a></h2>
+<h2>¿Por qué se utilizaría un modelo de lente de cámara en particular?<a class="headerlink" href="#why-would-one-use-a-particular-camera-lens-model" title="Enlace permanente a este encabezado"></a></h2>
 <p>En casos excepcionales, es posible que OpenSFM no pueda detectar (o recuperar de su base de datos de cámaras) el modelo de lente de cámara correcto para su sensor en particular, en cuyo caso debe seleccionar el modelo apropiado más cercano. En caso de duda, intente primero especificando <code class="docutils literal notranslate"><span class="pre">brown</span></code>.</p>
 </section>
 <section id="example-images">
-<h2>Imágenes de ejemplo<a class="headerlink" href="#example-images" title="Enlazar permanentemente con este título"></a></h2>
+<h2>Imágenes de ejemplo<a class="headerlink" href="#example-images" title="Enlace permanente a este encabezado"></a></h2>
 <p>Los siguientes ejemplos son todos los datos tomados con una lente rectilínea estándar. Se demuestra que la selección manual de los distintos modelos de lentes de cámara muestra algunas diferencias en cómo esto afectará la reconstrucción.</p>
 <section id="auto-rectilinear-data">
-<h3><code class="docutils literal notranslate"><span class="pre">auto</span></code> : Datos rectilíneos<a class="headerlink" href="#auto-rectilinear-data" title="Enlazar permanentemente con este título"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">auto</span></code> : Datos rectilíneos<a class="headerlink" href="#auto-rectilinear-data" title="Enlace permanente a este encabezado"></a></h3>
 <figure class="align-default" id="id2">
 <img alt="Datos rectilíneos representados por el modelo de lente de cámara ``auto``" src="https://user-images.githubusercontent.com/19295950/127077336-ae79a958-a953-4376-86fd-430d0e5457f2.png" />
 <figcaption>
@@ -483,7 +485,7 @@
 </figure>
 </section>
 <section id="brown-rectilinear-data">
-<h3><code class="docutils literal notranslate"><span class="pre">brown</span></code> : Datos rectilíneos<a class="headerlink" href="#brown-rectilinear-data" title="Enlazar permanentemente con este título"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">brown</span></code> : Datos rectilíneos<a class="headerlink" href="#brown-rectilinear-data" title="Enlace permanente a este encabezado"></a></h3>
 <figure class="align-default" id="id3">
 <img alt="Datos rectilíneos representados por el modelo de lente de cámara ``brown``" src="https://user-images.githubusercontent.com/19295950/127077753-580a174e-7572-4315-8801-224ce097d9fc.png" />
 <figcaption>
@@ -492,7 +494,7 @@
 </figure>
 </section>
 <section id="fisheye-rectilinear-data">
-<h3><code class="docutils literal notranslate"><span class="pre">fisheye</span></code> : Datos rectilíneos<a class="headerlink" href="#fisheye-rectilinear-data" title="Enlazar permanentemente con este título"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">fisheye</span></code> : Datos rectilíneos<a class="headerlink" href="#fisheye-rectilinear-data" title="Enlace permanente a este encabezado"></a></h3>
 <figure class="align-default" id="id4">
 <img alt="Datos rectilíneos representados por el modelo de lente de cámara ``fisheye``" src="https://user-images.githubusercontent.com/19295950/127077826-53d459fe-5e4e-4b10-8e70-fbddf775c4f7.png" />
 <figcaption>
@@ -501,7 +503,7 @@
 </figure>
 </section>
 <section id="perspective-rectilinear-data">
-<h3><code class="docutils literal notranslate"><span class="pre">perspective</span></code> : Datos rectilíneos<a class="headerlink" href="#perspective-rectilinear-data" title="Enlazar permanentemente con este título"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">perspective</span></code> : Datos rectilíneos<a class="headerlink" href="#perspective-rectilinear-data" title="Enlace permanente a este encabezado"></a></h3>
 <figure class="align-default" id="id5">
 <img alt="Datos rectilíneos representados por el modelo de lente de cámara de ``perspective``" src="https://user-images.githubusercontent.com/19295950/127077485-699f9e61-72a6-45f2-990f-f5748b6ee99f.png" />
 <figcaption>
@@ -510,7 +512,7 @@
 </figure>
 </section>
 <section id="spherical-rectilinear-data">
-<h3><code class="docutils literal notranslate"><span class="pre">spherical</span></code> : Datos rectilíneos<a class="headerlink" href="#spherical-rectilinear-data" title="Enlazar permanentemente con este título"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">spherical</span></code> : Datos rectilíneos<a class="headerlink" href="#spherical-rectilinear-data" title="Enlace permanente a este encabezado"></a></h3>
 <figure class="align-default" id="id6">
 <img alt="Datos rectilíneos representados por el modelo de lente de cámara ``esférico``" src="https://user-images.githubusercontent.com/19295950/127078960-27e35cbb-a378-4d0d-92e2-42dbfd1edd7c.png" />
 <figcaption>

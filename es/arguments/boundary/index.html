@@ -15,7 +15,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../../genindex/" />
@@ -394,9 +396,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../">Opciones e indicadores</a> &raquo;</li>
-      <li>boundary</li>
+      <li><a href="../../" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../">Opciones e indicadores</a></li>
+      <li class="breadcrumb-item active">boundary</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/arguments/boundary.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
@@ -407,7 +409,7 @@
            <div itemprop="articleBody">
              
   <section id="boundary">
-<span id="id1"></span><h1>boundary<a class="headerlink" href="#boundary" title="Enlazar permanentemente con este título"></a></h1>
+<span id="id1"></span><h1>boundary<a class="headerlink" href="#boundary" title="Enlace permanente a este encabezado"></a></h1>
 <p><strong>Opciones:</strong> <em>&lt;json&gt;</em></p>
 <p>Polígono GeoJSON que limita el área de reconstrucción. Se puede especificar como ruta a un archivo GeoJSON o como una cadena JSON que representa el contenido de un archivo GeoJSON. Predeterminado: ``</p>
 <div class="line-block">
@@ -456,30 +458,30 @@
 </table>
 <hr class="docutils" />
 <section id="what-is-boundary-geojson">
-<h2>What is Boundary [GeoJSON]?<a class="headerlink" href="#what-is-boundary-geojson" title="Enlazar permanentemente con este título"></a></h2>
+<h2>What is Boundary [GeoJSON]?<a class="headerlink" href="#what-is-boundary-geojson" title="Enlace permanente a este encabezado"></a></h2>
 <p>The <code class="docutils literal notranslate"><span class="pre">--boundary</span></code> argument serves to constrain and «crop» all final output products of a processing task to the bounding box created by the GeoJSON string that is passed to the <code class="docutils literal notranslate"><span class="pre">--boundary</span></code> argument.</p>
 </section>
 <section id="when-is-boundary-geojson-appropriate">
-<h2>When is Boundary [GeoJSON] appropriate?<a class="headerlink" href="#when-is-boundary-geojson-appropriate" title="Enlazar permanentemente con este título"></a></h2>
+<h2>When is Boundary [GeoJSON] appropriate?<a class="headerlink" href="#when-is-boundary-geojson-appropriate" title="Enlace permanente a este encabezado"></a></h2>
 <p>Passing a <code class="docutils literal notranslate"><span class="pre">--boundary</span></code> GeoJSON is appropriate in any instance where one would want a specific subset of the entire reconstruction area.</p>
 <p>If you are interested in the complete reconstruction, the <code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code> option would likely be more appropriate.</p>
 <p>Further, given that the <code class="docutils literal notranslate"><span class="pre">--boundary</span></code> is applied after the products are generated (and thereby modifying them), it adds processing time to the dataset, and may not be appropriate if one’s primary concern is generating a complete product as fast as possible.</p>
 </section>
 <section id="why-would-one-use-boundary-geojson">
-<h2>Why would one use Boundary [GeoJSON]?<a class="headerlink" href="#why-would-one-use-boundary-geojson" title="Enlazar permanentemente con este título"></a></h2>
+<h2>Why would one use Boundary [GeoJSON]?<a class="headerlink" href="#why-would-one-use-boundary-geojson" title="Enlace permanente a este encabezado"></a></h2>
 <p>One might want to use the <code class="docutils literal notranslate"><span class="pre">--boundary</span></code> function to limit the final products to a predefined Area Of Interest (AOI).</p>
 <p>As an example, you are tasked to survey a given property/lot. You decide to include 20m of overfly in your survey so that the reconstruction is clean and with sufficient overlap right up to the property boundaries. However, due to this overfly and your flight height you also capture and reconstruct bordering properties and homes that are not part of your survey AOI. Using a GeoJSON representation of the AOI property’s boundary, you would then «clip» all of the final products to be just what is inside the GeoJSON boundary, providing you with a clean, focused, and «safe» representation of the survey AOI (and nothing beyond it).</p>
 </section>
 <section id="how-would-one-create-boundary-geojson">
-<h2>How would one create Boundary [GeoJSON]?<a class="headerlink" href="#how-would-one-create-boundary-geojson" title="Enlazar permanentemente con este título"></a></h2>
+<h2>How would one create Boundary [GeoJSON]?<a class="headerlink" href="#how-would-one-create-boundary-geojson" title="Enlace permanente a este encabezado"></a></h2>
 <section id="geojson-io">
-<h3>GeoJSON.io<a class="headerlink" href="#geojson-io" title="Enlazar permanentemente con este título"></a></h3>
+<h3>GeoJSON.io<a class="headerlink" href="#geojson-io" title="Enlace permanente a este encabezado"></a></h3>
 <dl class="simple">
 <dt><a class="reference external" href="http://geojson.io">http://geojson.io</a></dt><dd><p><em>A quick, simple webapp for creating GeoJSON files.</em></p>
 </dd>
 </dl>
 <section id="new-geojson">
-<h4>New GeoJSON<a class="headerlink" href="#new-geojson" title="Enlazar permanentemente con este título"></a></h4>
+<h4>New GeoJSON<a class="headerlink" href="#new-geojson" title="Enlace permanente a este encabezado"></a></h4>
 <figure class="align-default" id="id2">
 <img alt="GeoJSON.io interface with empty GeoJSON map and text." src="https://user-images.githubusercontent.com/19295950/145102197-b44fea3b-01df-4f2f-9cde-f1c94ba2e8d3.png" />
 <figcaption>
@@ -488,7 +490,7 @@
 </figure>
 </section>
 <section id="creating-a-polygon">
-<h4>Creating A Polygon<a class="headerlink" href="#creating-a-polygon" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Creating A Polygon<a class="headerlink" href="#creating-a-polygon" title="Enlace permanente a este encabezado"></a></h4>
 <figure class="align-default" id="id3">
 <img alt="Choosing the &quot;Draw Polygon&quot; menu option in the Map View." src="https://user-images.githubusercontent.com/19295950/145102194-7992ddf8-81ce-4ee9-bb81-b5d93cb05e25.png" />
 <figcaption>
@@ -497,7 +499,7 @@
 </figure>
 </section>
 <section id="placing-vertices">
-<h4>Placing Vertices<a class="headerlink" href="#placing-vertices" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Placing Vertices<a class="headerlink" href="#placing-vertices" title="Enlace permanente a este encabezado"></a></h4>
 <figure class="align-default" id="id4">
 <img alt="Placing vertices in the Map View to create the boundary GeoJSON." src="https://user-images.githubusercontent.com/19295950/145102186-38a4107f-4c93-46f9-b423-3ce40fddff4b.png" />
 <figcaption>
@@ -506,7 +508,7 @@
 </figure>
 </section>
 <section id="completing-a-polygon">
-<h4>Completing A Polygon<a class="headerlink" href="#completing-a-polygon" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Completing A Polygon<a class="headerlink" href="#completing-a-polygon" title="Enlace permanente a este encabezado"></a></h4>
 <figure class="align-default" id="id5">
 <img alt="Completed polygon in the Map View and GeoJSON text view." src="https://user-images.githubusercontent.com/19295950/145102193-4e619f4e-e95d-4c3d-8f89-29a38015bce0.png" />
 <figcaption>
@@ -516,7 +518,7 @@ A completed polygon will have a different representation than one that is in-pro
 </figure>
 </section>
 <section id="saving-a-polygon">
-<h4>Saving A Polygon<a class="headerlink" href="#saving-a-polygon" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Saving A Polygon<a class="headerlink" href="#saving-a-polygon" title="Enlace permanente a este encabezado"></a></h4>
 <figure class="align-default" id="id6">
 <img alt="Saving the polygon using the Save menu and choosing GeoJSON." src="https://user-images.githubusercontent.com/19295950/145102199-a5d37bbf-d057-46d8-8baf-91817c7e2f30.png" />
 <figcaption>
@@ -566,7 +568,7 @@ A completed polygon will have a different representation than one that is in-pro
 </div>
 </section>
 <section id="downloading-a-polygon">
-<h4>Downloading A Polygon<a class="headerlink" href="#downloading-a-polygon" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Downloading A Polygon<a class="headerlink" href="#downloading-a-polygon" title="Enlace permanente a este encabezado"></a></h4>
 <figure class="align-default" id="id7">
 <img alt="Browser Download/Save file prompt for the generated GeoJSON file." src="https://user-images.githubusercontent.com/19295950/145103954-17ba7c31-fda6-4883-b7a6-3f0bacc266dd.png" />
 <figcaption>
@@ -575,7 +577,7 @@ A completed polygon will have a different representation than one that is in-pro
 </figure>
 </section>
 <section id="setting-boundary-geojson-in-task-options">
-<h4>Setting Boundary [GeoJSON] In Task Options<a class="headerlink" href="#setting-boundary-geojson-in-task-options" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Setting Boundary [GeoJSON] In Task Options<a class="headerlink" href="#setting-boundary-geojson-in-task-options" title="Enlace permanente a este encabezado"></a></h4>
 <figure class="align-default" id="id8">
 <img alt="Task Options preview showing Boundary field and &quot;Load&quot; icon." src="https://user-images.githubusercontent.com/19295950/145102200-02bd1c97-e0e8-4932-a77d-91562823b46e.png" />
 <figcaption>
@@ -584,7 +586,7 @@ A completed polygon will have a different representation than one that is in-pro
 </figure>
 </section>
 <section id="boundary-geojson-loaded-in-task-options">
-<h4>Boundary [GeoJSON] Loaded In Task Options<a class="headerlink" href="#boundary-geojson-loaded-in-task-options" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Boundary [GeoJSON] Loaded In Task Options<a class="headerlink" href="#boundary-geojson-loaded-in-task-options" title="Enlace permanente a este encabezado"></a></h4>
 <figure class="align-default" id="id9">
 <img alt="Task Options preview showing loaded Boundary with GeoJSON text." src="https://user-images.githubusercontent.com/19295950/145102196-8f87e4ac-197f-4ce0-ac6f-082772921ea0.png" />
 <figcaption>
@@ -594,13 +596,13 @@ A completed polygon will have a different representation than one that is in-pro
 </section>
 </section>
 <section id="qgis">
-<h3>QGIS<a class="headerlink" href="#qgis" title="Enlazar permanentemente con este título"></a></h3>
+<h3>QGIS<a class="headerlink" href="#qgis" title="Enlace permanente a este encabezado"></a></h3>
 <dl class="simple">
 <dt><a class="reference external" href="https://qgis.org/en/site/forusers/download.html">https://qgis.org/en/site/forusers/download.html</a></dt><dd><p><em>A Free and Open Source Geographic Information System.</em></p>
 </dd>
 </dl>
 <section id="creating-a-new-temporary-scratch-layer">
-<h4>Creating A New Temporary Scratch Layer<a class="headerlink" href="#creating-a-new-temporary-scratch-layer" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Creating A New Temporary Scratch Layer<a class="headerlink" href="#creating-a-new-temporary-scratch-layer" title="Enlace permanente a este encabezado"></a></h4>
 <figure class="align-default" id="id10">
 <img alt="Choosing the &quot;Create A Temporary Scratch Layer&quot; tool to make an empty layer to create our Boundary [GeoJSON] within." src="https://user-images.githubusercontent.com/19295950/145109912-9176cd94-1140-43ac-a371-96de2b874ec3.png" />
 <figcaption>
@@ -609,7 +611,7 @@ A completed polygon will have a different representation than one that is in-pro
 </figure>
 </section>
 <section id="new-temporary-scratch-layer-geometry-type">
-<h4>New Temporary Scratch Layer Geometry Type<a class="headerlink" href="#new-temporary-scratch-layer-geometry-type" title="Enlazar permanentemente con este título"></a></h4>
+<h4>New Temporary Scratch Layer Geometry Type<a class="headerlink" href="#new-temporary-scratch-layer-geometry-type" title="Enlace permanente a este encabezado"></a></h4>
 <figure class="align-default" id="id11">
 <img alt="Setting &quot;Polygon&quot; as the Geometry Type for the Temporary Scratch Layer." src="https://user-images.githubusercontent.com/19295950/145109915-ddbfed43-da5e-466b-a4b6-d6ff3b96a555.png" />
 <figcaption>
@@ -618,7 +620,7 @@ A completed polygon will have a different representation than one that is in-pro
 </figure>
 </section>
 <section id="new-temporary-scratch-layer-settings">
-<h4>New Temporary Scratch Layer Settings<a class="headerlink" href="#new-temporary-scratch-layer-settings" title="Enlazar permanentemente con este título"></a></h4>
+<h4>New Temporary Scratch Layer Settings<a class="headerlink" href="#new-temporary-scratch-layer-settings" title="Enlace permanente a este encabezado"></a></h4>
 <figure class="align-default" id="id12">
 <img alt="Leaving the remaining settings in their Default state." src="https://user-images.githubusercontent.com/19295950/145109917-58b6c147-bdae-45be-839d-5d56b1a22fe8.png" />
 <figcaption>
@@ -627,7 +629,7 @@ A completed polygon will have a different representation than one that is in-pro
 </figure>
 </section>
 <section id="adding-an-orthophoto-background">
-<h4>Adding an Orthophoto Background<a class="headerlink" href="#adding-an-orthophoto-background" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Adding an Orthophoto Background<a class="headerlink" href="#adding-an-orthophoto-background" title="Enlace permanente a este encabezado"></a></h4>
 <figure class="align-default" id="id13">
 <img alt="Browsing to a generated Orthophoto from WebODM that covers the Area Of Interest (AOI)." src="https://user-images.githubusercontent.com/19295950/145109918-df591ce8-3df4-485d-a775-81813b7e61ef.png" />
 <figcaption>
@@ -637,7 +639,7 @@ If have not generated an Orthophoto for your Area Of Interest (AOI), you can use
 </figure>
 </section>
 <section id="adding-a-polyon-feature">
-<h4>Adding A Polyon Feature<a class="headerlink" href="#adding-a-polyon-feature" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Adding A Polyon Feature<a class="headerlink" href="#adding-a-polyon-feature" title="Enlace permanente a este encabezado"></a></h4>
 <figure class="align-default" id="id14">
 <img alt="Selecting the &quot;Add A Polygon Feature&quot; tool to begin creating a boundary polygon." src="https://user-images.githubusercontent.com/19295950/145109907-b61afb3c-fdd2-4eef-872a-91f2ea97d887.png" />
 <figcaption>
@@ -646,7 +648,7 @@ If have not generated an Orthophoto for your Area Of Interest (AOI), you can use
 </figure>
 </section>
 <section id="toggle-editing-off">
-<h4>Toggle Editing Off<a class="headerlink" href="#toggle-editing-off" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Toggle Editing Off<a class="headerlink" href="#toggle-editing-off" title="Enlace permanente a este encabezado"></a></h4>
 <figure class="align-default" id="id15">
 <img alt="Clicking the &quot;Toggle Editing&quot; tool will prompt you to save your changes to the Temporary Scratch Layer." src="https://user-images.githubusercontent.com/19295950/145109924-42480f63-2cfa-427c-8414-f45d39f796f7.png" />
 <figcaption>
@@ -655,7 +657,7 @@ If have not generated an Orthophoto for your Area Of Interest (AOI), you can use
 </figure>
 </section>
 <section id="save-changes-to-temporary-scratch-layer">
-<h4>Save Changes To Temporary Scratch Layer<a class="headerlink" href="#save-changes-to-temporary-scratch-layer" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Save Changes To Temporary Scratch Layer<a class="headerlink" href="#save-changes-to-temporary-scratch-layer" title="Enlace permanente a este encabezado"></a></h4>
 <figure class="align-default" id="id16">
 <img alt="QGIS Dialog asking you to Save your changes to the Temporary Scratch Layer." src="https://user-images.githubusercontent.com/19295950/145109921-73ab273a-7180-40ea-ba3d-75ecb65c97f5.png" />
 <figcaption>
@@ -664,7 +666,7 @@ If have not generated an Orthophoto for your Area Of Interest (AOI), you can use
 </figure>
 </section>
 <section id="export-temporary-scratch-layer-features">
-<h4>Export Temporary Scratch Layer Features<a class="headerlink" href="#export-temporary-scratch-layer-features" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Export Temporary Scratch Layer Features<a class="headerlink" href="#export-temporary-scratch-layer-features" title="Enlace permanente a este encabezado"></a></h4>
 <figure class="align-default" id="id17">
 <img alt="A right-click on the Temporary Scratch Layer in the Layers panel will expose the Export menu item, with the Save Features As sub-menu item." src="https://user-images.githubusercontent.com/19295950/145109911-45d7dae3-49ce-40fb-8df0-85a164763810.png" />
 <figcaption>
@@ -673,7 +675,7 @@ If have not generated an Orthophoto for your Area Of Interest (AOI), you can use
 </figure>
 </section>
 <section id="save-vector-layer-as">
-<h4>Save Vector Layer As<a class="headerlink" href="#save-vector-layer-as" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Save Vector Layer As<a class="headerlink" href="#save-vector-layer-as" title="Enlace permanente a este encabezado"></a></h4>
 <figure class="align-default" id="id18">
 <img alt="The &quot;Save Vector Layer As&quot; dialog showing Format as GeoJSON, an example of a valid File Name and path, CRS of EPSG:4326 and other default options." src="https://user-images.githubusercontent.com/19295950/145109923-b55dfc1a-5c31-4382-8b1f-3bc6322b0f33.png" />
 <figcaption>
@@ -684,9 +686,9 @@ If have not generated an Orthophoto for your Area Of Interest (AOI), you can use
 </section>
 </section>
 <section id="example-images">
-<h2>Example Images<a class="headerlink" href="#example-images" title="Enlazar permanentemente con este título"></a></h2>
+<h2>Example Images<a class="headerlink" href="#example-images" title="Enlace permanente a este encabezado"></a></h2>
 <section id="true-boundary-geojson-point-cloud">
-<h3>True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Point Cloud<a class="headerlink" href="#true-boundary-geojson-point-cloud" title="Enlazar permanentemente con este título"></a></h3>
+<h3>True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Point Cloud<a class="headerlink" href="#true-boundary-geojson-point-cloud" title="Enlace permanente a este encabezado"></a></h3>
 <figure class="align-default" id="id19">
 <img alt="WebODM displaying the &quot;clipped&quot; reconstruction of the Brighton Beach dataset Point Cloud." src="https://user-images.githubusercontent.com/19295950/140858936-10fda65f-c278-46ae-95bd-7af8f8369554.png" />
 <figcaption>
@@ -695,7 +697,7 @@ If have not generated an Orthophoto for your Area Of Interest (AOI), you can use
 </figure>
 </section>
 <section id="true-boundary-geojson-orthophoto">
-<h3>True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Orthophoto<a class="headerlink" href="#true-boundary-geojson-orthophoto" title="Enlazar permanentemente con este título"></a></h3>
+<h3>True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Orthophoto<a class="headerlink" href="#true-boundary-geojson-orthophoto" title="Enlace permanente a este encabezado"></a></h3>
 <figure class="align-default" id="id20">
 <img alt="WebODM displaying the &quot;clipped&quot; reconstruction of the Brighton Beach dataset Orthophoto." src="https://user-images.githubusercontent.com/19295950/140859033-c6cab4f0-74b3-4266-b5ec-4a90da931340.png" />
 <figcaption>
@@ -704,7 +706,7 @@ If have not generated an Orthophoto for your Area Of Interest (AOI), you can use
 </figure>
 </section>
 <section id="true-boundary-geojson-digital-elevation-model">
-<h3>True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Digital Elevation Model<a class="headerlink" href="#true-boundary-geojson-digital-elevation-model" title="Enlazar permanentemente con este título"></a></h3>
+<h3>True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Digital Elevation Model<a class="headerlink" href="#true-boundary-geojson-digital-elevation-model" title="Enlace permanente a este encabezado"></a></h3>
 <figure class="align-default" id="id21">
 <img alt="WebODM displaying the &quot;clipped&quot; reconstruction of the Brighton Beach dataset Digital Elevation Model." src="https://user-images.githubusercontent.com/19295950/140859073-28db5174-9a40-42d8-86d6-f345d9dad5a8.png" />
 <figcaption>
@@ -713,7 +715,7 @@ If have not generated an Orthophoto for your Area Of Interest (AOI), you can use
 </figure>
 </section>
 <section id="true-boundary-geojson-3d-model-textured-mesh">
-<h3>True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - 3D Model/Textured Mesh<a class="headerlink" href="#true-boundary-geojson-3d-model-textured-mesh" title="Enlazar permanentemente con este título"></a></h3>
+<h3>True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - 3D Model/Textured Mesh<a class="headerlink" href="#true-boundary-geojson-3d-model-textured-mesh" title="Enlace permanente a este encabezado"></a></h3>
 <figure class="align-default" id="id22">
 <img alt="WebODM displaying the &quot;clipped&quot; reconstruction of the Brighton Beach dataset 3D Model/Textured Mesh." src="https://user-images.githubusercontent.com/19295950/140859125-4854e651-9eff-430d-956c-16f4d9a52dfd.png" />
 <figcaption>
@@ -722,7 +724,7 @@ If have not generated an Orthophoto for your Area Of Interest (AOI), you can use
 </figure>
 </section>
 <section id="false-null">
-<h3>False: <code class="docutils literal notranslate"><span class="pre">null</span></code><a class="headerlink" href="#false-null" title="Enlazar permanentemente con este título"></a></h3>
+<h3>False: <code class="docutils literal notranslate"><span class="pre">null</span></code><a class="headerlink" href="#false-null" title="Enlace permanente a este encabezado"></a></h3>
 <figure class="align-default" id="id23">
 <img alt="WebODM displaying the full reconstruction of the Brighton Beach dataset Point Cloud." src="https://user-images.githubusercontent.com/19295950/140858712-9bfd8c56-a52a-480e-b68d-d5a97bc516fd.png" />
 <figcaption>

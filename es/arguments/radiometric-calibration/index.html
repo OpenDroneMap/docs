@@ -15,7 +15,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../../genindex/" />
@@ -394,9 +396,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../">Opciones e indicadores</a> &raquo;</li>
-      <li>radiometric-calibration</li>
+      <li><a href="../../" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../">Opciones e indicadores</a></li>
+      <li class="breadcrumb-item active">radiometric-calibration</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/arguments/radiometric-calibration.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
@@ -407,7 +409,7 @@
            <div itemprop="articleBody">
              
   <section id="radiometric-calibration">
-<span id="id1"></span><h1>radiometric-calibration<a class="headerlink" href="#radiometric-calibration" title="Enlazar permanentemente con este título"></a></h1>
+<span id="id1"></span><h1>radiometric-calibration<a class="headerlink" href="#radiometric-calibration" title="Enlace permanente a este encabezado"></a></h1>
 <p><strong>Opciones:</strong> <em>none |  camera |  camera+sun</em></p>
 <p>Configure la calibración radiométrica para ejecutar en las imágenes. Al procesar imágenes térmicas y multiespectrales, debe configurar esta opción para obtener valores de reflectancia/temperatura (de lo contrario, obtendrá valores numéricos digitales). [cámara] aplica nivel de negro, viñeteado, ganancia de gradiente de fila/compensación de exposición (si se encuentran etiquetas EXIF apropiadas) y calcula valores de temperatura absolutos. [cámara + sol] es experimental, aplica todas las correcciones de [cámara] y compensa la radiación espectral registrada a través de un sensor de luz descendente (DLS) teniendo en cuenta el ángulo del sol. . Predeterminado: <code class="docutils literal notranslate"><span class="pre">none</span></code></p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/radiometric-calibration.rst">esta página</a>!</p>

@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
@@ -394,8 +396,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>Utiliser les images masque</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Utiliser les images masque</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/masks.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
@@ -406,7 +408,7 @@
            <div itemprop="articleBody">
              
   <section id="using-image-masks">
-<h1>Utiliser les images masque<a class="headerlink" href="#using-image-masks" title="Lien permanent vers ce titre"></a></h1>
+<h1>Utiliser les images masque<a class="headerlink" href="#using-image-masks" title="Lien permanent vers cette rubrique"></a></h1>
 <p>À partir d’ODM <code class="docutils literal notranslate"><span class="pre">2.0</span></code>, les gens peuvent fournir des masques d’image pour informer le logiciel d’ignorer la reconstruction sur certaines zones. Ceci est utile pour les cas où le ciel a été accidentellement inclus dans les photos d’entrée à partir de prises de vue obliques, ou simplement pour limiter la reconstruction d’un seul sujet.</p>
 <p>Pour ajouter un masque, créez simplement une nouvelle image en noir et blanc de la même dimension que l’image cible que vous souhaitez masquer (vous pouvez utiliser un programme tel que GIMP pour le faire). Colorez en noir les zones à exclure de la reconstruction.</p>
 <figure class="align-center">

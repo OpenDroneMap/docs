@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../genindex/" />
@@ -394,8 +396,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>Usar máscaras de imagen</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Usar máscaras de imagen</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/masks.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
@@ -406,7 +408,7 @@
            <div itemprop="articleBody">
              
   <section id="using-image-masks">
-<h1>Usar máscaras de imagen<a class="headerlink" href="#using-image-masks" title="Enlazar permanentemente con este título"></a></h1>
+<h1>Usar máscaras de imagen<a class="headerlink" href="#using-image-masks" title="Enlace permanente a este encabezado"></a></h1>
 <p>A partir de ODM <code class="docutils literal notranslate"><span class="pre">2.0</span></code>, las personas pueden proporcionar máscaras de imagen para informar al software de que omita la reconstrucción en ciertas áreas. Esto es útil para los casos en los que el cielo se incluyó accidentalmente en las fotos de entrada de tomas oblicuas, o simplemente para limitar la reconstrucción de un solo sujeto.</p>
 <p>Para agregar una máscara, simplemente cree una nueva imagen en blanco y negro de la misma dimensión que la imagen de destino que desea enmascarar (puede usar un programa como GIMP para hacer esto). Colorea de negro las zonas a excluir de la reconstrucción.</p>
 <figure class="align-center">

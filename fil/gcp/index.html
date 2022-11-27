@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -393,8 +395,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>Ground Control Points</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Ground Control Points</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/gcp.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -405,19 +407,19 @@
            <div itemprop="articleBody">
              
   <section id="ground-control-points">
-<h1>Ground Control Points<a class="headerlink" href="#ground-control-points" title="Permalink to this headline"></a></h1>
+<h1>Ground Control Points<a class="headerlink" href="#ground-control-points" title="Permalink to this heading"></a></h1>
 <p>Ang mga GCP ay kapaki-pakinabang para sa pagwawasto ng mga pagbaluktot sa datos at pagtukoy sa datos upang malaman ang mga coordinate system.</p>
 <p>Ang Ground Control Point (GCP) ay isang pagsukat sa posisyon na ginawa sa lupa, karaniwang ginagamitan ng isang mataas na katumpakan na GPS. (Toffanin 2019)</p>
 <p>Ang mga GCP ay maaaring itakda sa mga istraktura tulad ng mga sulok ng simento, mga linya sa isang paradahan o mga tile sa sahig na nagsasalitan ang kulay, kung hindi man ay maitatakda gamit ang mga target na nakalagay sa lupa.</p>
 <p>Maaaring mabili o gumawa ang mga target gamit ang samut-saring mga materyales tuland ng mga takip ng timba at ng mga tile sa sahig.</p>
 <section id="recommended-practices-for-gcp-setting">
-<h2>Mga nirerekumendang gawi para sa paglagay ng GCP<a class="headerlink" href="#recommended-practices-for-gcp-setting" title="Permalink to this headline"></a></h2>
+<h2>Mga nirerekumendang gawi para sa paglagay ng GCP<a class="headerlink" href="#recommended-practices-for-gcp-setting" title="Permalink to this heading"></a></h2>
 <p>Panatilihing nakikita ang mga GCP para sa lahat ng mga lokasyon ng camera. Isaalang-alang ang inaasahang  ng lupa, pag-iilaw, halaman,ground sampling distance, mga gusali at lahat ng mga hadlang.</p>
 <p>Kumuha ng pantay-pantay na distribusyon ng GCPs sa loob ng proyekto, na sinasakupan ang mataas at mababa na elevation. Ang pinakamaliit na value na pwede ay 5 GCP para sa mga karaniwan na trabaho. Para naman sa malalaking proyekto, ang 8-10 ay sapat na. I-locate ang mga points na malapit sa mga kanto at ang iba naman ay sa gitna habang isinasangalang-alang ang GCP na dapat ay mas malalaki kesa sa image footprint para mas makakita ng mahigit sa isang GCP sa isang imahe.</p>
 <p>Para masiguro na lahat ng GCP ay makikita sa 5 na imahe, ihiwalay ang points 10 to 30 meters mula sa perimeter ng proyekto. Ang distansiya na ito ay dependent sa overlapping, kung kaya ang pagdagdag ng overlapping ay makakabawas sa required na distansiya mula sa perimeter.</p>
 </section>
 <section id="gcp-file-format">
-<h2>GCP file format<a class="headerlink" href="#gcp-file-format" title="Permalink to this headline"></a></h2>
+<h2>GCP file format<a class="headerlink" href="#gcp-file-format" title="Permalink to this heading"></a></h2>
 <p>Ang format ng GCP file ay simple lamang.</p>
 <blockquote>
 <div><ul class="simple">
@@ -447,7 +449,7 @@
 <p>Para sa mas magandang resulta, ang iyong file ay dapat na magkaroon ng minimum na 15 na linya pagkatapos ng header (5 points na may 3 imahe kada point).</p>
 </section>
 <section id="user-interfaces">
-<h2>User Interfaces<a class="headerlink" href="#user-interfaces" title="Permalink to this headline"></a></h2>
+<h2>User Interfaces<a class="headerlink" href="#user-interfaces" title="Permalink to this heading"></a></h2>
 <p>Maaaring gumamit ng isa or dalawang user interfaces para sa paggawa ng GCP files:</p>
 <blockquote>
 <div><ul class="simple">
@@ -456,7 +458,7 @@
 </ul>
 </div></blockquote>
 <section id="id1">
-<h3>POSM GCPi<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h3>
+<h3>POSM GCPi<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
 <p>Ang POSM GCPi ay loaded by default sa WebODM. Isang halimbawa dito ay mahahanap sa <a class="reference external" href="http://demo.webodm.org/plugins/posm-gcpi/">the WebODM Demo</a>. Para gamitin ito sa ground control XYZ values, dapat gawin ang mga sumusunod:</p>
 <p>Gumawa ng GCP na listahan na may kasamang gcp names (ito ang label na makikita sa GCP interface), x, y, and z, na may header na proj4 string sa GCPs (siguraduhin na may planar coordinate system tulad ng UTM. Ganito ang magiging itsura dapat:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="n">proj</span><span class="o">=</span><span class="n">utm</span> <span class="o">+</span><span class="n">zone</span><span class="o">=</span><span class="mi">37</span> <span class="o">+</span><span class="n">south</span> <span class="o">+</span><span class="n">ellps</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">datum</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">units</span><span class="o">=</span><span class="n">m</span> <span class="o">+</span><span class="n">no_defs</span>
@@ -470,7 +472,7 @@
 <p>Pwedeng i-load ang GCP list sa interface, i-load ang imahe, at ilagay ang mga GPCs sa imahe.</p>
 </section>
 <section id="id2">
-<h3>GCP Editor Pro<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h3>
+<h3>GCP Editor Pro<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
 <p>Ang aplikasyon na ito ay dapat i-install ng hiwalay o di kaya naman ay pwedeng i-load bilang WebODM plugin mula sa <a class="reference external" href="https://github.com/uav4geo/GCPEditorPro">https://github.com/uav4geo/GCPEditorPro</a></p>
 <p>Gumawa ng CSV file na kasama ang GCP name, northing, easting and elevation.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GCP</span> <span class="n">Label</span><span class="p">,</span><span class="n">Northing</span><span class="p">,</span><span class="n">Easting</span><span class="p">,</span><span class="n">Elevation</span>
@@ -484,7 +486,7 @@
 </section>
 </section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this headline"></a></h2>
+<h2>References<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
 <p>Toffanin, Piero. <a class="reference external" href="https://odmbook.com/">Open Drone Map: The Missing Guide.</a> MasseranoLabs LLC, 2019.</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/gcp.rst">this page</a>!</p>
 </section>

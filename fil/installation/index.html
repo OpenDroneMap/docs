@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -393,8 +395,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>Instalasyon at Paano Simulan</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Instalasyon at Paano Simulan</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/installation.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -405,16 +407,16 @@
            <div itemprop="articleBody">
              
   <section id="installation-and-getting-started">
-<h1>Instalasyon at Paano Simulan<a class="headerlink" href="#installation-and-getting-started" title="Permalink to this headline"></a></h1>
+<h1>Instalasyon at Paano Simulan<a class="headerlink" href="#installation-and-getting-started" title="Permalink to this heading"></a></h1>
 <p>Ang seksiyon na ito ay binago ng bahagya ng may permisyon galing sa <a class="reference external" href="https://odmbook.com">OpenDroneMap: The Missing Guide</a>, na gawa ni Piero Toffanin.</p>
 <section id="quickstart">
-<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline"></a></h2>
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading"></a></h2>
 <p>Installers for OpenDroneMap are available for purchase from UAV4Geo, and are the easiest way to get started and come with support.</p>
 <p><a class="reference external" href="https://opendronemap.org/webodm/download/#installer">https://opendronemap.org/webodm/download/#installer</a></p>
 <p>That said, OpenDroneMap is a free and open source ecoystem. Community support is available for those looking to install themselves and directions follow:</p>
 </section>
 <section id="hardware-recommendations">
-<h2>Hardware Recommendations<a class="headerlink" href="#hardware-recommendations" title="Permalink to this headline"></a></h2>
+<h2>Hardware Recommendations<a class="headerlink" href="#hardware-recommendations" title="Permalink to this heading"></a></h2>
 <p>Ang pinakakonti na bilang ng requirements para patakbuhin ang software ay:</p>
 <ul class="simple">
 <li><p>64bit CPU manufactured on or after 2010</p></li>
@@ -465,13 +467,13 @@
 </table>
 </section>
 <section id="installation">
-<span id="docker-installation"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<span id="docker-installation"></span><h2>Installation<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <p>Nirerekomenda  na gamitin ang <a class="reference external" href="https://www.docker.com">docker</a> para patakbuhin ang ODM, ikaw man ay gumagamit ng Windows, macOS o Linux.</p>
 <section id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline"></a></h3>
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this heading"></a></h3>
 <p>Para patakbuhin ang OpenDroneMap, kailangan mo ng kahit man lang Windows 7. Ang mga mas luma na bersiyon ng Windows ay hindi suportado.</p>
 <section id="step-1-check-virtualization-support">
-<h4>Step 1. I-check Virtualization Support<a class="headerlink" href="#step-1-check-virtualization-support" title="Permalink to this headline"></a></h4>
+<h4>Step 1. I-check Virtualization Support<a class="headerlink" href="#step-1-check-virtualization-support" title="Permalink to this heading"></a></h4>
 <p>Ang docker ay nangangailangan ng feature sa CPU na tinatawag na virtualization, ina-allow nito na patakbuhin ang virtual machines (VMs). Siguraduhin na ito ay enabled! Minsan ito ay disabled. Para i-check sa Windows 8 o mas mataas na bersiyon, buksan ang <strong>Task Manager</strong> (press CTRL+SHIFT+ESC) at i-switch sa <strong>Performance</strong> tab.</p>
 <figure class="align-center">
 <img alt="Image of checking virtualization in Windows 8 or higher" src="../_images/virtualizationcheck.png" />
@@ -485,7 +487,7 @@
 <p><em>Common keys to press at computer startup to access the boot menu for various PC vendors</em></p>
 </section>
 <section id="step-2-install-requirements">
-<h4>Step 2. Install Requirements<a class="headerlink" href="#step-2-install-requirements" title="Permalink to this headline"></a></h4>
+<h4>Step 2. Install Requirements<a class="headerlink" href="#step-2-install-requirements" title="Permalink to this heading"></a></h4>
 <p>Una, kailangan mong ma-install:</p>
 <ul class="simple">
 <li><p>Git: <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p></li>
@@ -508,7 +510,7 @@
 <p>Matapos i-install ang docker, simulan ito mula sa Desktop icon na ginawa mula sa installation (<strong>Docker Quickstart</strong> sa kaso ng Docker Toolbox, <strong>Docker for Windows</strong> para sa Docker na pang-Windows). Ito ay importante, wag lagpasan ang hakbang na ito. Kung may kamalian, sundan ang mga nakadikta sa screen para ayusin ito.</p>
 </section>
 <section id="step-3-check-memory-and-cpu-allocation">
-<h4>Step 3. I-check ang Memory at CPU Allocation<a class="headerlink" href="#step-3-check-memory-and-cpu-allocation" title="Permalink to this headline"></a></h4>
+<h4>Step 3. I-check ang Memory at CPU Allocation<a class="headerlink" href="#step-3-check-memory-and-cpu-allocation" title="Permalink to this heading"></a></h4>
 <p>Ang docker sa Windows ay tumatakbo sa pamamagitan ng VM sa likod (isipin ang VM bilang “computer emulator”). Ang VM na ito ay may sapat ng laki ng memory na nakasubi at ang WebODM ay makakagamit lamang ng sapat na memorya na nakatabi para sa kanya.</p>
 <p>Kung Docker Toolbox ang naka-install (tignan ang nasa ibaba kung Docker ang naka-install sa Windows):</p>
 <ol class="arabic simple">
@@ -539,7 +541,7 @@
 <p><em>Step 3 &amp; 4 Docker settings</em></p>
 </section>
 <section id="step-4-download-webodm">
-<h4>Step 4. Download WebODM<a class="headerlink" href="#step-4-download-webodm" title="Permalink to this headline"></a></h4>
+<h4>Step 4. Download WebODM<a class="headerlink" href="#step-4-download-webodm" title="Permalink to this heading"></a></h4>
 <p>Buksan ang <strong>Git Gui</strong> na programa na kasama Git. galing dito:</p>
 <ul class="simple">
 <li><p>Kapag nabuksan na ang Git Gui, i-click ang 'Clone Existing Repository' na option</p></li>
@@ -559,7 +561,7 @@
 <p>Pumunta sa <strong>Repository</strong> menu at i-click ang <strong>Create Desktop Icon</strong>. Matutulungan ka nito na bumalik sa madaling makapunta sa aplikasyon na ito balang araw.</p>
 </section>
 <section id="step-4-launch-webodm">
-<h4>Step 4. Launch WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Permalink to this headline"></a></h4>
+<h4>Step 4. Launch WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Permalink to this heading"></a></h4>
 <p>Mula sa Git Gui, pumunta sa <strong>Repository</strong> menu at i-click ang <strong>Git Bash</strong>. Mula sa command line terminal i-type ang:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start <span class="p">&amp;</span>
 </pre></div>
@@ -584,10 +586,10 @@
 </section>
 </section>
 <section id="macos">
-<h3>macOS<a class="headerlink" href="#macos" title="Permalink to this headline"></a></h3>
+<h3>macOS<a class="headerlink" href="#macos" title="Permalink to this heading"></a></h3>
 <p>Karamihan ng modernong bersiyon ng Mac computers (post 2010) na may macOS Sierra 10.12 o mas mataas pa ay kayang gumamit ng OpenDroneMap gamit ang docker, hanggat ang hardware virtualization ay suportado (tignan ang nasa ibaba).</p>
 <section id="id1">
-<h4>Step 1. I-check Virtualization Support<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h4>
+<h4>Step 1. I-check Virtualization Support<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
 <p>Buksan ang Terminal na window at i-type ang:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sysctl kern.hv_support
 </pre></div>
@@ -600,7 +602,7 @@
 <p>Ang sistema ng iyong Mac ay luma na hindi na kakayanin ang OpenDroneMap kapag ang resulta na lumabas ay <em>kern.hv_support: 0</em>. :(</p>
 </section>
 <section id="id2">
-<h4>Step 2. Install Requirements<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h4>
+<h4>Step 2. Install Requirements<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
 <p>Mayroon lamang dalawang programa na dapat i-install:</p>
 <ol class="arabic simple">
 <li><p>Ang Docker: <a class="reference external" href="https://download.docker.com/mac/stable/Docker.dmg">https://download.docker.com/mac/stable/Docker.dmg</a></p></li>
@@ -630,7 +632,7 @@
 <p>Kapag nakatanggap ng “bash: git: command not found”, i-restart ang <strong>Terminal</strong> app at suriing mabuti kung may mga error habang inagi-install.</p>
 </section>
 <section id="id3">
-<h4>Step 3. I-check ang Memory at CPU Allocation<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h4>
+<h4>Step 3. I-check ang Memory at CPU Allocation<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
 <p>Ang docker ay tumatakbo lamang sa macOS sa pamamagitan ng paggamit ng VM sa background (isipin na ito ay parang &quot;computer emulator&quot;). Ang VM na ito ay may limitadong alokasyon lamang  ng memorya para sa WebODM.</p>
 <ol class="arabic simple">
 <li><p>I-right click ang balyena na simbulo sa task bar at piliin ang <strong>Preferences</strong>...</p></li>
@@ -644,7 +646,7 @@
 <p><em>Docker advanced settings</em></p>
 </section>
 <section id="step-4-download-and-launch-webodm">
-<h4>Step 4. I-download at i-launch ang WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Permalink to this headline"></a></h4>
+<h4>Step 4. I-download at i-launch ang WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Permalink to this heading"></a></h4>
 <p>Mula sa <strong>Terminal</strong> i-type ang:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
 $ <span class="nb">cd</span> WebODM
@@ -655,10 +657,10 @@ $ ./webodm.sh start
 </section>
 </section>
 <section id="linux">
-<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline"></a></h3>
+<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this heading"></a></h3>
 <p>Ang OpenDroneMap ay makakatakbo lamang sa kahit anong Linux na distribusyon na nagsusuporta sa docker. Ayon sa <a class="reference external" href="https://docs.docker.com/install/">docker’s documentation website</a> ang opisyal nasuportadong distribusyon ay ang CentOS, Debian, Ubuntu at Fedora, na may static binaries na mayroon para sa iba. Kung ikaw ay pipili ng distribusyon para sa pagpapatakbo ng OpenDroneMap, Ubunto ang rekomendado.</p>
 <section id="step-1-install-requirements">
-<h4>Step 1. Mga kailangan bago maginstall.<a class="headerlink" href="#step-1-install-requirements" title="Permalink to this headline"></a></h4>
+<h4>Step 1. Mga kailangan bago maginstall.<a class="headerlink" href="#step-1-install-requirements" title="Permalink to this heading"></a></h4>
 <p>May apat na programa na dapat ma-install:</p>
 <ol class="arabic simple">
 <li><p>Docker</p></li>
@@ -668,7 +670,7 @@ $ ./webodm.sh start
 </ol>
 <p>Hindi pwedeng takpan ang process ng installation kada Linux na distribusyon, kaya lilimitahan na lamang ang instruksiyon para sa distribusyon na opisyal na pang docker. Sa lahat ng kaso, ito ay isang bagay na pangbukas o terminal prompt at ang pag-type ng ilan na commands.</p>
 <section id="install-on-ubuntu-debian">
-<h5>Maginstall sa Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Permalink to this headline"></a></h5>
+<h5>Maginstall sa Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Permalink to this heading"></a></h5>
 <p>Mga command na ita-type:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt update
 $ curl -fsSL https://get.docker.com -o get-docker.sh
@@ -678,7 +680,7 @@ $ sudo apt install -y git python python-pip
 </div>
 </section>
 <section id="install-on-centos-rhel">
-<h5>Maginstall sa CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Permalink to this headline"></a></h5>
+<h5>Maginstall sa CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Permalink to this heading"></a></h5>
 <p>Mga command na ita-type:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
 $ sh get-docker.sh
@@ -687,7 +689,7 @@ $ sudo yum -y install git python python-pip
 </div>
 </section>
 <section id="install-on-fedora">
-<h5>Maginstall sa Fedora<a class="headerlink" href="#install-on-fedora" title="Permalink to this headline"></a></h5>
+<h5>Maginstall sa Fedora<a class="headerlink" href="#install-on-fedora" title="Permalink to this heading"></a></h5>
 <p>Mga command na ita-type:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
 $ sh get-docker.sh
@@ -696,7 +698,7 @@ $ sudo dnf install git python python-pip
 </div>
 </section>
 <section id="install-on-arch">
-<h5>Maginstall sa Arch<a class="headerlink" href="#install-on-arch" title="Permalink to this headline"></a></h5>
+<h5>Maginstall sa Arch<a class="headerlink" href="#install-on-arch" title="Permalink to this heading"></a></h5>
 <p>Mga command na ita-type:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pacman -Sy docker git python python-pip
 </pre></div>
@@ -704,7 +706,7 @@ $ sudo dnf install git python python-pip
 </section>
 </section>
 <section id="step-2-check-additional-requirements">
-<h4>Step 2. I-check ang mga karagdagan na requirements<a class="headerlink" href="#step-2-check-additional-requirements" title="Permalink to this headline"></a></h4>
+<h4>Step 2. I-check ang mga karagdagan na requirements<a class="headerlink" href="#step-2-check-additional-requirements" title="Permalink to this heading"></a></h4>
 <p>Bukod sa mga tatlong programa sa taas, ang dockercompose script ay kailangan din. Minsan, ito ay installed na kasama ng docker at minsan naman ay hindi. Para ma-verify kung ito ay nakainstall na, itype ang:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker-compose --version
 </pre></div>
@@ -723,7 +725,7 @@ $ sudo dnf install git python python-pip
 </div>
 </section>
 <section id="step-3-download-and-launch-webodm">
-<h4>Step 3. Download and Launch WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Permalink to this headline"></a></h4>
+<h4>Step 3. Download and Launch WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Permalink to this heading"></a></h4>
 <p>Mula sa terminal i-type ang:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
 $ <span class="nb">cd</span> WebODM
@@ -735,7 +737,7 @@ $ ./webodm.sh start
 </section>
 </section>
 <section id="basic-commands-and-troubleshooting">
-<h2>Basic na mga cCommands at Troubleshooting<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Permalink to this headline"></a></h2>
+<h2>Basic na mga cCommands at Troubleshooting<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Permalink to this heading"></a></h2>
 <p>Ang mainam na bagy sa paggamit ng dockey ay 99% ng mmga task na kailangan gamitin habang gamit ang WebODM ay magagawa sa pamamagitan ng ./webodm.sh script. Ikaw ay naka-encounter na ng isa sa mga ito:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start
 </pre></div>
@@ -768,7 +770,7 @@ $ ./webodm.sh --help
 <p>Ang community forum na &lt;<a class="reference external" href="https://community.opendronemap.org">https://community.opendronemap.org</a>&gt;`_ ay magandang lugar na pagtanungan kapag ikaw ay na-stuck sa kahit anong mga hakbang pangi-installasyon at para sa mga general na katanungan kung paano gumamit ng ./webodm.sh script.</p>
 </section>
 <section id="hello-webodm">
-<h2>Hello, WebODM!<a class="headerlink" href="#hello-webodm" title="Permalink to this headline"></a></h2>
+<h2>Hello, WebODM!<a class="headerlink" href="#hello-webodm" title="Permalink to this heading"></a></h2>
 <p>Matapos patakbuhin ang ./webodm.sh simulan at buksan ang WebODM sa browser, ikaw ay makatatanggap ng pangbungad na mensahe at tatanungin na gawin ang first user. Bigyang oras at pagsanayan ang web interface at i-explore ang various menus.</p>
 <figure class="align-center">
 <img alt="Screenshot of WebODM Dashboard" src="../_images/webodmdashboard.png" />
@@ -780,7 +782,7 @@ $ ./webodm.sh --help
 <img alt="Image of celebratory dance" src="../_images/congratulations.png" />
 </figure>
 <section id="running-on-more-than-one-machine">
-<h3>Pagpapatakbo sa dalawa o mas marami pang machine<a class="headerlink" href="#running-on-more-than-one-machine" title="Permalink to this headline"></a></h3>
+<h3>Pagpapatakbo sa dalawa o mas marami pang machine<a class="headerlink" href="#running-on-more-than-one-machine" title="Permalink to this heading"></a></h3>
 <p><strong>Optionally:</strong> Kung ikaw ay may isa pang computer, mauulit mo ang installation process (install docker, git, python, etc.) at i-launch ang bagong NodeODM node sa pagta-type mula sa Terminal/Git Bash window:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --rm -it -p <span class="m">3000</span>:3000 opendronemap/nodeodm -q <span class="m">1</span> --token secret
 </pre></div>

@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
@@ -394,8 +396,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>మ్యాప్ ఖచ్చితత్వం</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">మ్యాప్ ఖచ్చితత్వం</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/map-accuracy.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -406,7 +408,7 @@
            <div itemprop="articleBody">
              
   <section id="map-accuracy">
-<h1>మ్యాప్ ఖచ్చితత్వం<a class="headerlink" href="#map-accuracy" title="Permalink to this headline"></a></h1>
+<h1>మ్యాప్ ఖచ్చితత్వం<a class="headerlink" href="#map-accuracy" title="Permalink to this heading"></a></h1>
 <p>మ్యాప్‌లోని సమాచారం వాస్తవ ప్రపంచంలోని విలువలతో సరిపోయే డిగ్రీ లేదా సాన్నిహిత్యాన్ని ఖచ్చితత్వాన్ని నిర్వచించవచ్చు. అందువల్ల, మేము ఖచ్చితత్వాన్ని సూచించినప్పుడు, మేము డేటా నాణ్యత గురించి మరియు ఒక నిర్దిష్ట డేటాసెట్ (పాస్కల్ 2011) లో ఉన్న లోపాల సంఖ్య గురించి మాట్లాడుతున్నాము.</p>
 <p>** సాపేక్ష లేదా స్థానిక ఖచ్చితత్వం **</p>
 <p>స్థానిక లేదా సాపేక్ష ఖచ్చితత్వాన్ని మ్యాప్‌లోని రెండు పాయింట్ల మధ్య దూరం వాస్తవ ప్రపంచంలో ఆ పాయింట్ల మధ్య దూరాలకు అనుగుణంగా ఉంటుంది.</p>
@@ -424,12 +426,12 @@
 <p>** ప్రతి ప్రాజెక్ట్ కోసం ఖచ్చితత్వం స్థాయి **</p>
 <p>ప్రతి ప్రాజెక్ట్ నిర్దిష్ట ఖచ్చితత్వాన్ని కలిగి ఉండాలి. ఉదాహరణకు, నిర్మాణ స్థలంలో పురోగతిని అంచనా వేయడం లేదా అగ్నిప్రమాదం సంభవించిన ప్రాంతాన్ని కొలవడం GCP యొక్క ఉపయోగం అవసరం లేదు, ఎందుకంటే సంపూర్ణ ఖచ్చితత్వం నిర్ణయం తీసుకునే ప్రక్రియను ప్రభావితం చేయదు. మరోవైపు, ఖచ్చితత్వం కీలకమైన పనులు ఉన్నాయి, ఉదాహరణకు ప్రాజెక్ట్ వర్తింపు మూల్యాంకనాలు మరియు భూమి టైటిల్ సర్వేయింగ్, దీనికి అధిక సాపేక్ష మరియు సంపూర్ణ ఖచ్చితత్వం అవసరం.</p>
 <section id="what-to-expect">
-<h2>ఏమి ఆశించను<a class="headerlink" href="#what-to-expect" title="Permalink to this headline"></a></h2>
+<h2>ఏమి ఆశించను<a class="headerlink" href="#what-to-expect" title="Permalink to this heading"></a></h2>
 <p>సాధారణ పరంగా, డేటాసెట్ కోసం సగటు ఖచ్చితత్వం 1 నుండి 3 రెట్లు సాపేక్ష ఖచ్చితత్వం ఉంటుందని ఎవరైనా ఆశించవచ్చు. మరియు సంపూర్ణ ఖచ్చితత్వానికి, ఇది UAV లో అమర్చిన GPS యూనిట్ మీద ఆధారపడి ఉంటుందని పరిగణించాలి కాని ప్రామాణిక GPS యొక్క క్షితిజ సమాంతర ఖచ్చితత్వం సాధారణంగా 2 నుండి 6 మీటర్ల పరిధిలో ఉంటుంది మరియు నిలువు ఖచ్చితత్వం 3 నుండి 4 రెట్లు మధ్య ఉంటుంది సమాంతర ఖచ్చితత్వం.</p>
 <p>GCP ని ఉపయోగిస్తున్నప్పుడు, క్షితిజ సమాంతర ఖచ్చితత్వానికి సంపూర్ణ ఖచ్చితత్వాన్ని 2.5 రెట్లు GSD మరియు నిలువు ఖచ్చితత్వానికి 4 రెట్లు GSD గా మెరుగుపరచవచ్చు (మాడవాలాగామా 2016).</p>
 <p>1 సెం.మీ. యొక్క GSD వద్ద, ఖచ్చితత్వం RTK GNSS కు ఉంటుంది మరియు ఇది ఉప-ఆప్టిమల్ పరిస్థితులలో (బారీ 2013) NSDI &amp; FGDC మ్యాపింగ్ ఖచ్చితత్వ ప్రమాణాల ప్రకారం 1: 200 ప్రమాణాలలో ఉంటుంది.</p>
 <section id="aspects-impacting-map-accuracy">
-<h3>మ్యాప్ ఖచ్చితత్వాన్ని ప్రభావితం చేసే అంశాలు<a class="headerlink" href="#aspects-impacting-map-accuracy" title="Permalink to this headline"></a></h3>
+<h3>మ్యాప్ ఖచ్చితత్వాన్ని ప్రభావితం చేసే అంశాలు<a class="headerlink" href="#aspects-impacting-map-accuracy" title="Permalink to this heading"></a></h3>
 <p>** వాతావరణం **</p>
 <p>ఫోటోగ్రామెట్రీ ఫలితాల్లో వాతావరణ పరిస్థితులు ప్రత్యక్ష ప్రభావాన్ని చూపుతాయి, కాబట్టి క్లౌడ్ కవరేజ్, గాలి వేగం, తేమ, సూర్యుడి ఎత్తు మరియు UAV స్థిరత్వం మరియు భూభాగ ప్రకాశాన్ని ప్రభావితం చేసే ఇతర అంశాలను పరిగణనలోకి తీసుకోవడం చాలా ముఖ్యం.</p>
 <p>** కెమెరాలు **</p>
@@ -441,7 +443,7 @@
 </section>
 </section>
 <section id="references">
-<h2>ప్రస్తావనలు<a class="headerlink" href="#references" title="Permalink to this headline"></a></h2>
+<h2>ప్రస్తావనలు<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
 <p>బారీ, పి., &amp; కోక్లీ, ఆర్. Network నెట్‌వర్క్ RTK GPS తో పోలిస్తే UAV ఫోటోగ్రామెట్రీ యొక్క ఖచ్చితత్వం. » బేస్లైన్ సర్వేలు. 2013. <a class="reference external" href="http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf">http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf</a> (10 13, 2020 న వినియోగించబడింది).</p>
 <p>డ్రోన్ డిప్లాయ్. నేను గ్రౌండ్ కంట్రోల్ పాయింట్లను ఎలా ఉపయోగించగలను ?: డ్రోన్ మ్యాపింగ్ సాఫ్ట్‌వేర్‌తో గ్రౌండ్ కంట్రోల్ పాయింట్లను ఉపయోగించటానికి ఒక గైడ్. 5 8, 2017. <a class="reference external" href="https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/">https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/</a> (యాక్సెస్ చేయబడింది 7 9, 2020).</p>
 <p>మదవాలాగామ, ఎస్.ఎల్., మునసింగ్, ఎన్., దంపేగామ, ఎస్.డి.పి.జె. మరియు సమరకూన్, ఎల్. consu వినియోగదారుల గ్రేడ్‌తో తక్కువ-ధర ఏరియల్ మ్యాపింగ్. » రిమోట్ సెన్సింగ్‌పై 37 వ ఆసియా సమావేశం. కొలంబో, శ్రీలంక, 2016.</p>

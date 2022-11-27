@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -392,8 +394,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>Frequently Asked Questions</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Frequently Asked Questions</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/faq.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -404,37 +406,37 @@
            <div itemprop="articleBody">
              
   <section id="frequently-asked-questions">
-<h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this headline"></a></h1>
+<h1>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this heading"></a></h1>
 <section id="data-processing">
-<h2>Data Processing<a class="headerlink" href="#data-processing" title="Permalink to this headline"></a></h2>
+<h2>Data Processing<a class="headerlink" href="#data-processing" title="Permalink to this heading"></a></h2>
 <section id="can-i-process-two-or-more-orthophoto-geotiffs-to-stitch-them-together">
-<h3>Can I process two or more orthophoto GeoTIFFs to stitch them together?<a class="headerlink" href="#can-i-process-two-or-more-orthophoto-geotiffs-to-stitch-them-together" title="Permalink to this headline"></a></h3>
+<h3>Can I process two or more orthophoto GeoTIFFs to stitch them together?<a class="headerlink" href="#can-i-process-two-or-more-orthophoto-geotiffs-to-stitch-them-together" title="Permalink to this heading"></a></h3>
 <p>No. ODM is a photogrammetric pipeline and orthophotos do not have the necessary camera information since the images have already been orthorectified. You can use another program such as <a class="reference external" href="http://hugin.sourceforge.net/">Hugin</a> to do that.</p>
 </section>
 <section id="the-software-is-not-using-all-of-my-cpu-cores-memory-gpu-all-of-the-times-is-it-normal">
-<h3>The software is not using all of my CPU cores / memory / GPU all of the times. Is it normal?<a class="headerlink" href="#the-software-is-not-using-all-of-my-cpu-cores-memory-gpu-all-of-the-times-is-it-normal" title="Permalink to this headline"></a></h3>
+<h3>The software is not using all of my CPU cores / memory / GPU all of the times. Is it normal?<a class="headerlink" href="#the-software-is-not-using-all-of-my-cpu-cores-memory-gpu-all-of-the-times-is-it-normal" title="Permalink to this heading"></a></h3>
 <p>Yes. The software tries to use all available resources, when possible, but not always. It's normal to see 10-15% resource utilization at several moments during processing.</p>
 </section>
 <section id="if-i-use-the-native-version-of-the-software-how-can-i-allocate-more-resources-for-processing">
-<h3>If I use the native version of the software, how can I allocate more resources for processing?<a class="headerlink" href="#if-i-use-the-native-version-of-the-software-how-can-i-allocate-more-resources-for-processing" title="Permalink to this headline"></a></h3>
+<h3>If I use the native version of the software, how can I allocate more resources for processing?<a class="headerlink" href="#if-i-use-the-native-version-of-the-software-how-can-i-allocate-more-resources-for-processing" title="Permalink to this heading"></a></h3>
 <p>No need; the native (non-docker) version of the software alredy uses all available resources.</p>
 </section>
 </section>
 <section id="licensing">
-<h2>Licensing<a class="headerlink" href="#licensing" title="Permalink to this headline"></a></h2>
+<h2>Licensing<a class="headerlink" href="#licensing" title="Permalink to this heading"></a></h2>
 <section id="i-want-to-build-a-commercial-application-that-includes-odm-do-i-need-a-commercial-license">
-<h3>I want to build a commercial application that includes ODM. Do I need a commercial license?<a class="headerlink" href="#i-want-to-build-a-commercial-application-that-includes-odm-do-i-need-a-commercial-license" title="Permalink to this headline"></a></h3>
+<h3>I want to build a commercial application that includes ODM. Do I need a commercial license?<a class="headerlink" href="#i-want-to-build-a-commercial-application-that-includes-odm-do-i-need-a-commercial-license" title="Permalink to this heading"></a></h3>
 <p>ODM is free and open source software, released under the <a class="reference external" href="https://github.com/OpenDroneMap/ODM/blob/master/LICENSE">AGPLv3</a>. You are free to build and sell applications with it, just make sure to comply with the requirements of the license, in particular the disclose source requirement.</p>
 </section>
 <section id="are-there-other-licensing-options-aside-from-the-agplv3">
-<h3>Are there other licensing options aside from the AGPLv3?<a class="headerlink" href="#are-there-other-licensing-options-aside-from-the-agplv3" title="Permalink to this headline"></a></h3>
+<h3>Are there other licensing options aside from the AGPLv3?<a class="headerlink" href="#are-there-other-licensing-options-aside-from-the-agplv3" title="Permalink to this heading"></a></h3>
 <p>Nope, sorry!</p>
 </section>
 </section>
 <section id="memory-issues">
-<h2>Memory issues<a class="headerlink" href="#memory-issues" title="Permalink to this headline"></a></h2>
+<h2>Memory issues<a class="headerlink" href="#memory-issues" title="Permalink to this heading"></a></h2>
 <section id="your-computer-is-running-out-of-memory-what-can-you-do">
-<h3>Your computer is running out of memory, what can you do?<a class="headerlink" href="#your-computer-is-running-out-of-memory-what-can-you-do" title="Permalink to this headline"></a></h3>
+<h3>Your computer is running out of memory, what can you do?<a class="headerlink" href="#your-computer-is-running-out-of-memory-what-can-you-do" title="Permalink to this heading"></a></h3>
 <ol class="arabic simple">
 <li><p>First you can buy more RAM, this is the ultimate and final solution.</p></li>
 <li><p>Alternatively you can resize the images when uploading and/or tweak your quality settings.</p></li>

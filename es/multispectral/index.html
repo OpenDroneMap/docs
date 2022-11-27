@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../genindex/" />
@@ -394,8 +396,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>Soporte multiespectral</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Soporte multiespectral</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/multispectral.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
@@ -406,10 +408,10 @@
            <div itemprop="articleBody">
              
   <section id="multispectral-support">
-<h1>Soporte multiespectral<a class="headerlink" href="#multispectral-support" title="Enlazar permanentemente con este título"></a></h1>
+<h1>Soporte multiespectral<a class="headerlink" href="#multispectral-support" title="Enlace permanente a este encabezado"></a></h1>
 <p>Desde la versión 0.9.9, ODM tiene soporte básico para la normalización radiométrica, que es capaz de generar ortofotos de reflectancia a partir de cámaras multiespectrales. Las cámaras multiespectrales capturan múltiples tomas de la escena utilizando diferentes sensores de banda.</p>
 <section id="hardware">
-<h2>Hardware<a class="headerlink" href="#hardware" title="Enlazar permanentemente con este título"></a></h2>
+<h2>Hardware<a class="headerlink" href="#hardware" title="Enlace permanente a este encabezado"></a></h2>
 <p>Si bien nuestro objetivo es admitir tantas cámaras como sea posible, se ha desarrollado el soporte multiespectral utilizando las siguientes cámaras, por lo que funcionarán mejor:</p>
 <blockquote>
 <div><ul class="simple">
@@ -421,12 +423,12 @@
 <p>También pueden funcionar otras cámaras. Puede ayudarnos a ampliar esta lista <a class="reference external" href="https://community.opendronemap.org/c/datasets/10">compartiendo conjuntos de datos</a> capturados con otras cámaras.</p>
 </section>
 <section id="usage">
-<h2>Uso<a class="headerlink" href="#usage" title="Enlazar permanentemente con este título"></a></h2>
+<h2>Uso<a class="headerlink" href="#usage" title="Enlace permanente a este encabezado"></a></h2>
 <p>Procese todas las imágenes de todas las bandas a la vez (no separe las bandas en varias carpetas) y pase el parámetro <cite>–radiometric-calibración</cite> para permitir la normalización radiométrica. Si las imágenes son parte de una configuración multicámara, la ortofoto resultante tendrá N bandas, una para cada cámara (+ alfa).</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst">esta página</a>!</p>
 </section>
 <section id="sentera-agx710">
-<h2>Sentera AGX710<a class="headerlink" href="#sentera-agx710" title="Enlazar permanentemente con este título"></a></h2>
+<h2>Sentera AGX710<a class="headerlink" href="#sentera-agx710" title="Enlace permanente a este encabezado"></a></h2>
 <p>While this sensor is not officially supported by ODM, the following workflow gives some good results.</p>
 <blockquote>
 <div><ul class="simple">

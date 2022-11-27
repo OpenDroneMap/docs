@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -393,8 +395,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>Somo</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Somo</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/tutorials.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -405,10 +407,10 @@
            <div itemprop="articleBody">
              
   <section id="tutorials">
-<h1>Somo<a class="headerlink" href="#tutorials" title="Permalink to this headline"></a></h1>
+<h1>Somo<a class="headerlink" href="#tutorials" title="Permalink to this heading"></a></h1>
 <p>Hapo chini utapata maelezo kwa baadhi ya mifano muhimu.</p>
 <section id="creating-high-quality-orthophotos">
-<h2>Tengeneza Orthophotos ya kitaalamu<a class="headerlink" href="#creating-high-quality-orthophotos" title="Permalink to this headline"></a></h2>
+<h2>Tengeneza Orthophotos ya kitaalamu<a class="headerlink" href="#creating-high-quality-orthophotos" title="Permalink to this heading"></a></h2>
 <figure class="align-center">
 <img alt="image of OpenDroneMap orthophoto" src="../_images/orthophoto.png" />
 </figure>
@@ -424,7 +426,7 @@
 </div></blockquote>
 </section>
 <section id="calibrating-the-camera">
-<h2>Kurekebisha Camera<a class="headerlink" href="#calibrating-the-camera" title="Permalink to this headline"></a></h2>
+<h2>Kurekebisha Camera<a class="headerlink" href="#calibrating-the-camera" title="Permalink to this heading"></a></h2>
 <p>Kurekebisha Camera ni changamoto maalum pamoja na thamani ya camera. mabadiliko ya hali joto, mtetemeko, muelekeo, na na vitu vyengine vinavyoweza kuathiri data itakayopatikana. Automatic au matengenezo binafsi yanaweza kufanywa na kutakiwa na drone ukiruka, lakini inategemea na njia itakayopita ndege, marekebisho ya automatic haiwezi kuondosha njia zote kutoka mwanzo. James and Robson (2014) katika kitabu chao <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609">Mitigating systematic error in topographic models derived from UAV and ground‐based image networks</a> imeonyesha jinsi kupunguza makosa kweye marekebisho binafsi.</p>
 <figure class="align-center">
 <img alt="image of lens distortion effect on bowling of data" src="../_images/msimbasi_bowling.png" />
@@ -450,7 +452,7 @@
 <p>Kutoka James na Robson (2014),`CC BY 4.0 &lt;<a class="reference external" href="https://creativecommons.org/licenses/by/4.0">https://creativecommons.org/licenses/by/4.0</a>&gt;`_</p>
 </section>
 <section id="creating-digital-elevation-models">
-<h2>Kutengeneza Digital Elevation Model<a class="headerlink" href="#creating-digital-elevation-models" title="Permalink to this headline"></a></h2>
+<h2>Kutengeneza Digital Elevation Model<a class="headerlink" href="#creating-digital-elevation-models" title="Permalink to this heading"></a></h2>
 <p>Chaguo msingi ODM haitengenezi DEMs. Kutengeneza digital terrain model, hakikisha unatumia <code class="docutils literal notranslate"><span class="pre">--dtm</span></code> flag. Kutengeneza digital surface model, hakikisha unatumia <code class="docutils literal notranslate"><span class="pre">--dsm</span></code> flag.</p>
 <figure class="align-center">
 <img alt="image of OpenDroneMap derived digital surface model" src="../_images/digitalsurfacemodel.png" />
@@ -483,15 +485,15 @@
 </div>
 </section>
 <section id="measuring-stockpile-volume">
-<h2>Measuring stockpile volume<a class="headerlink" href="#measuring-stockpile-volume" title="Permalink to this headline"></a></h2>
+<h2>Measuring stockpile volume<a class="headerlink" href="#measuring-stockpile-volume" title="Permalink to this heading"></a></h2>
 <section id="fieldwork-planning">
-<h3>Fieldwork planning<a class="headerlink" href="#fieldwork-planning" title="Permalink to this headline"></a></h3>
+<h3>Fieldwork planning<a class="headerlink" href="#fieldwork-planning" title="Permalink to this heading"></a></h3>
 <p>Weather conditions modify illumination and thus impact the photography results. Best results are obtained with evenly overcast or clear skies. Also look for low wind speeds that allow the camera to remain stable during the data collection process.
 In order to avoid shadows which on one side of the stockpile can obstruct feature detection and lessen the number of resulting points, always prefer the flights during the midday, when the sun is at the nadir so everything is consistently illuminated.
 Also ensure that your naked eye horizontal visibility distance is congruent with the planned flight distances for the specific project, so image quality is not adversely impacted by dust, fog, smoke, volcanic ash or pollution.</p>
 </section>
 <section id="flight-pattern">
-<h3>Flight pattern<a class="headerlink" href="#flight-pattern" title="Permalink to this headline"></a></h3>
+<h3>Flight pattern<a class="headerlink" href="#flight-pattern" title="Permalink to this heading"></a></h3>
 <p>Most stockpile measurement jobs does not require a crosshatch pattern or angled gimbal as the resting angle of stockpile materials allows the camera to capture the entire stockpile sides. Only some special cases where erosion or machinery operations causes steep angles on the faces of the stockpile would benefit of the crosshatch flight pattern and angled camera gimbal but consider that these additional recognized features come at a cost, (in field labor and processing time) and the resulting improvements are sometimes negligible.</p>
 <p>In most of the cases a lawn mower flight pattern is capable of producing highly accurate stockpile models.</p>
 <figure class="align-center">
@@ -500,18 +502,18 @@ Also ensure that your naked eye horizontal visibility distance is congruent with
 <p>Recommended overlap would be between 75% and 80% with a sidelap in the order of 65% to 70%. It is also recommended to slightly increase overlap and sidelap as the flight height is increased.</p>
 </section>
 <section id="flight-height">
-<h3>Flight height<a class="headerlink" href="#flight-height" title="Permalink to this headline"></a></h3>
+<h3>Flight height<a class="headerlink" href="#flight-height" title="Permalink to this heading"></a></h3>
 <p>Flight height can be influenced by different camera models, but in a general way and in order to ensure a balance between image quality and flight optimization, it is recommended to be executed at heights 3 to 4 times the tallest stockpile height. So for a 10 meter stockpile, images can be captured at a height of 40 meters.
 As the flight height is increased, it is also recommended to increase overlap, so for a 40 meter height flight you can set a 65% sidelap and 75% overlap, but for a planned height of 80 meters a 70% sidelap and 80% overlap allowing features to be recognized and properly processed.</p>
 </section>
 <section id="gcps">
-<h3>GCPs<a class="headerlink" href="#gcps" title="Permalink to this headline"></a></h3>
+<h3>GCPs<a class="headerlink" href="#gcps" title="Permalink to this heading"></a></h3>
 <p>To achieve accuracy levels better than 3%, the use of GCP’s is advised. Typically 5 distributed GCP are sufficient to ensure accurate results.
 When placing or measuring GCP, equipment accuracy should be greater than the GSD. Survey grade GNSS and total stations  are intended to provide the required millimetric accuracy.</p>
 <p>For further information on the use of GCPs, please refer to the <a class="reference external" href="https://docs.opendronemap.org/gcp/">Ground Control Points section</a>.</p>
 </section>
 <section id="processing-parameters">
-<h3>Processing parameters<a class="headerlink" href="#processing-parameters" title="Permalink to this headline"></a></h3>
+<h3>Processing parameters<a class="headerlink" href="#processing-parameters" title="Permalink to this heading"></a></h3>
 <p>A highly accurate model can be achieved using WebODM high resolution predefined settings. Then you can further adjust some parameters as necessary.</p>
 <p>If using ODM, these this reference values can help you configure the process settings.</p>
 <p>--dsm: true</p>
@@ -521,7 +523,7 @@ When placing or measuring GCP, equipment accuracy should be greater than the GSD
 <p>--pc-quality high</p>
 </section>
 <section id="measuring">
-<h3>Measuring<a class="headerlink" href="#measuring" title="Permalink to this headline"></a></h3>
+<h3>Measuring<a class="headerlink" href="#measuring" title="Permalink to this heading"></a></h3>
 <p>As almost 50% of the material will be found in the first 20% of the stockpile height, special care should be taken in adequately defining the base plane.</p>
 <figure class="align-center">
 <img alt="almost 50% of the material will be found in the first 20% of the stockpile height" src="../_images/stockpile.png" />
@@ -552,17 +554,17 @@ When placing or measuring GCP, equipment accuracy should be greater than the GSD
 Creation of a triangulated 3D surface to define the base plane is advised for large stockpiles. This is also valid for stockpiles paced on irregular surfaces.</p>
 </section>
 <section id="expected-accuracy">
-<h3>Expected accuracy<a class="headerlink" href="#expected-accuracy" title="Permalink to this headline"></a></h3>
+<h3>Expected accuracy<a class="headerlink" href="#expected-accuracy" title="Permalink to this heading"></a></h3>
 <p>For carefully planned and executed projects, and specially when GSD is less than 1 cm, the expected accuracy should be in the range of 1% to 2%.
 The resulting accuracy is comparable to the commercially available photogrammetry software and the obtained using survey grade GNSS equipment.</p>
 </section>
 </section>
 <section id="using-docker">
-<h2>Kutumia Docker<a class="headerlink" href="#using-docker" title="Permalink to this headline"></a></h2>
+<h2>Kutumia Docker<a class="headerlink" href="#using-docker" title="Permalink to this heading"></a></h2>
 <p>Tangu watumiaji wengi kutumia docker kuingiza OpenDroneMap itakua ni vizuri kufanhamu camandi za msingi kuitathmini mifano ya docker wakati ikitokea makosa, au tukiwa na wasiwasi wa matokeo. Docker ni mkusanyiko wa muonekano uliopangwa, miongoni mwa vitu vyengine kufanya urahisi wa kuingiza software kwa kujitegemea kwenye mazingira ya nyumbani. Kwa njia hii ni sawa na virtual mashine.</p>
 <p>Comand chache rahisi zinaweza kufanya docker yetu kwa nzuri zaidi.</p>
 <section id="listing-docker-machines">
-<h3>Kutumia Docker mashine<a class="headerlink" href="#listing-docker-machines" title="Permalink to this headline"></a></h3>
+<h3>Kutumia Docker mashine<a class="headerlink" href="#listing-docker-machines" title="Permalink to this heading"></a></h3>
 <p>Tunaweza kuanza kwa kusikiliza docker zilizopo katika mashine ulionayo tunaanza kama ifuatavyo:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">ps</span>
 <span class="n">CONTAINER</span> <span class="n">ID</span>        <span class="n">IMAGE</span>                  <span class="n">COMMAND</span>                  <span class="n">CREATED</span>             <span class="n">STATUS</span>              <span class="n">PORTS</span>                    <span class="n">NAMES</span>
@@ -582,7 +584,7 @@ The resulting accuracy is comparable to the commercially available photogrammetr
 </div>
 </section>
 <section id="accessing-logs-on-the-instance">
-<h3>Tumia logs kwenye instance<a class="headerlink" href="#accessing-logs-on-the-instance" title="Permalink to this headline"></a></h3>
+<h3>Tumia logs kwenye instance<a class="headerlink" href="#accessing-logs-on-the-instance" title="Permalink to this heading"></a></h3>
 <p>Au tumia <cite>CONTAINER ID</cite> au jina, tunamia logs pekee inapatika kwenye mashine kama ifuatavyo:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">logs</span> <span class="mi">2518817537</span><span class="n">ce</span>
 </pre></div>
@@ -614,7 +616,7 @@ The resulting accuracy is comparable to the commercially available photogrammetr
 <p>Nambari <cite>-5</cite> inaiambia tail camand kutupa mistari 5 ya mwisho ya log.</p>
 </section>
 <section id="command-line-access-to-instances">
-<h3>Matumizy ya camand line kwa mifano<a class="headerlink" href="#command-line-access-to-instances" title="Permalink to this headline"></a></h3>
+<h3>Matumizy ya camand line kwa mifano<a class="headerlink" href="#command-line-access-to-instances" title="Permalink to this heading"></a></h3>
 <p>Baadhi ya wakati tunataka kuenda ndani kidogo katika mchakato wa utafiti wa OpenDroneMap. Kwa hilitunaweza kupata kutumia mistari ya camand moja kwa moja kwenye mashine. Kwa hili, tunawza kutumia <cite>docker exec</cite> kufikia na camand line <cite>bash</cite> muonekano ndani ya mashine kwa umuhimu ufuatao:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">ti</span> <span class="mi">2518817537</span><span class="n">ce</span> <span class="n">bash</span>
 <span class="n">root</span><span class="o">@</span><span class="mi">2518817537</span><span class="n">ce</span><span class="p">:</span><span class="o">/</span><span class="n">code</span><span class="c1">#</span>
@@ -623,16 +625,16 @@ The resulting accuracy is comparable to the commercially available photogrammetr
 <p>Sasa tumeingia ndani ya kundi docker na mashine itaonesha.</p>
 </section>
 <section id="cleaning-up-after-docker">
-<h3>Safisha juu baada ya Docker<a class="headerlink" href="#cleaning-up-after-docker" title="Permalink to this headline"></a></h3>
+<h3>Safisha juu baada ya Docker<a class="headerlink" href="#cleaning-up-after-docker" title="Permalink to this heading"></a></h3>
 <p>Docker haina msaada kutumia nafasi na kawaida haiondoi kufanya kazi data na mashine mchakato ukimaliza. Hii inaweza kuwa faida ikiwa tunahitaji kutumia mchakato ambao ulikatika, lakini unachukua matatizo ya kuengeza matumizi ya nafasi kwa mda. Maciej Łebkowski ana <a class="reference external" href="https://lebkowski.name/docker-volumes/">mtazamo mzuri ya vipi kuongoza kutumia nafasi iliotumika kutumia ndani ya docker</a>.</p>
 </section>
 </section>
 <section id="using-singularity">
-<h2>Using Singularity<a class="headerlink" href="#using-singularity" title="Permalink to this headline"></a></h2>
+<h2>Using Singularity<a class="headerlink" href="#using-singularity" title="Permalink to this heading"></a></h2>
 <p>'Singularity &lt;<a class="reference external" href="https://sylabs.io/">https://sylabs.io/</a>&gt;'_ is another container platform able to run Docker images. Singularity could be used from laptop to large HPC clusters, local university or company clusters, a single server, in the cloud...
 A container is a single file without anything else to install</p>
 <section id="downloading-image">
-<h3>Downloading image<a class="headerlink" href="#downloading-image" title="Permalink to this headline"></a></h3>
+<h3>Downloading image<a class="headerlink" href="#downloading-image" title="Permalink to this heading"></a></h3>
 <p>Singularity can use ODM Docker container after their download. It creates .sif images</p>
 <p>For latest ODM Docker image</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt; singularity pull --disable-cache  docker://opendronemap/odm:latest
@@ -644,7 +646,7 @@ A container is a single file without anything else to install</p>
 </div>
 </section>
 <section id="using-singularity-sif-image">
-<h3>Using Singularity SIF image<a class="headerlink" href="#using-singularity-sif-image" title="Permalink to this headline"></a></h3>
+<h3>Using Singularity SIF image<a class="headerlink" href="#using-singularity-sif-image" title="Permalink to this heading"></a></h3>
 <p>As Singularity has a different way to map directories than Docker, a bash script file is a good solution to map ODM directories.
 Here is a linux example for ODM</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>images_dir=/path_to_image_dir/
@@ -681,18 +683,18 @@ singularity run
 </section>
 </section>
 <section id="using-odm-from-low-bandwidth-location">
-<h2>Tumia ODM kutoka eneo lenye  low-bandwidth<a class="headerlink" href="#using-odm-from-low-bandwidth-location" title="Permalink to this headline"></a></h2>
+<h2>Tumia ODM kutoka eneo lenye  low-bandwidth<a class="headerlink" href="#using-odm-from-low-bandwidth-location" title="Permalink to this heading"></a></h2>
 <section id="what-is-this-and-who-is-it-for">
-<h3>Nini hiki na kwa nani<a class="headerlink" href="#what-is-this-and-who-is-it-for" title="Permalink to this headline"></a></h3>
+<h3>Nini hiki na kwa nani<a class="headerlink" href="#what-is-this-and-who-is-it-for" title="Permalink to this heading"></a></h3>
 <p>Kutoka kwa <a class="reference external" href="https://github.com/ivangayton/GDAL_scripts/">Ivan Gayton's repo</a>.</p>
 <p><a class="reference external" href="https://www.opendronemap.org/">OpenDroneMap</a> haiwezi kuwa kawada kuingizwa local inataka mashine yenye nguvu kwa mchakato wa data nyingi—kwa hivyo cloud mashine inaweza baadhi ya wakati kujibu kwa watu wanotaka kutumia. Hata hivyo nafasi ni tatizo kwa marekebisho ya kiwango cha chini. Kizuwizi hiki hakiwezi kuondoa tatizo moja kwa moja, bali njia zifuatazo zinaweza kuwa sababu za kupunguza mahitaji ya nafasi kwa kuchakata picha za ndege nyuki katika claud kutoka maeneo ya Afrika.</p>
 <p>Hapa tutawakilisha wepesi lakini mchakato unaofanya kazi wa kutengeneza OpenDroneMap cloud mashine (<em>sio</em> CloudODM, kumbuka, ni cloud-based instance ya ODM ambayo unaweza kutumia kutoka kwa camand line) na tumia kuprocess kundi picha nyingi ukiwa mbali. Inahitaji ujuzi wa matumizi ya Unix camand line, ssh, Digital Ocean account (Amazon AWS inafanya kazi pia, inawezekana ni tofauti ndogo katika mpangilio), njia ya kati na kati ya usomaji Computer kwa ujumla. Ikiwa huna computer nzuri na unataka kutumia njia ya slightly setup, <a class="reference external" href="https://www.opendronemap.org/cloudodm/">CloudODM</a> ni lazima kuiangalia.</p>
 <p>Mchakato wote huo umekusudiwa kwa mtu anerusha ndege nyuki eneo kubwa ndani ya Afrika au eneo linalofanana kutaka kuprocess data haraka wakati yupo eneo la kazi. Kwa hio itasaidia kazi iliopangwa kwa kupunguza nafasi/ kusafirisha data, kuliko njia rahisi ya kutumia ODM.</p>
 </section>
 <section id="steps">
-<h3>Njia<a class="headerlink" href="#steps" title="Permalink to this headline"></a></h3>
+<h3>Njia<a class="headerlink" href="#steps" title="Permalink to this heading"></a></h3>
 <section id="install">
-<h4>Kuingiza<a class="headerlink" href="#install" title="Permalink to this headline"></a></h4>
+<h4>Kuingiza<a class="headerlink" href="#install" title="Permalink to this heading"></a></h4>
 <ul class="simple">
 <li><p>Tengeneza Digital Ocean droplet yenye ukubwa angalau 4GB ya RAM. Ambayo makisio gharama ni $20/mwezi, chini ya 4GB na haitakubali kuingia. Wakati ukiwasha ODM process tutapunguza kuwa ukubwa na cloud mashine ya gharama, Lakini wakati ikitumika unaweza kupunguza kwa droplet ya pili rahisi zaidi ambayo ina gharama ya $10/mwezi (ni droplet rahisi zaidi, at $5/mwezi , utatumia kwa nafasi ndogo ambayo huwezi kuirudisha mwanzo).</p>
 <ul>
@@ -730,7 +732,7 @@ export PATH=$PATH:/home/odm/ODM/
 </ul>
 </section>
 <section id="prep-data-and-project">
-<h4>Kuandaa data na project<a class="headerlink" href="#prep-data-and-project" title="Permalink to this headline"></a></h4>
+<h4>Kuandaa data na project<a class="headerlink" href="#prep-data-and-project" title="Permalink to this heading"></a></h4>
 <ul class="simple">
 <li><p>Sasa peleka picha zako ndani ya server. Unaweza kutumia <a class="reference external" href="https://en.wikipedia.org/wiki/Secure_copy">Secure Copy (scp)</a> Mfano: <code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">-r</span> <span class="pre">/path/to/my/imagefolder</span> <span class="pre">odm&#64;xxx.xxx.xxx.xxx:/mnt/odmdata/</span></code>.</p>
 <ul>
@@ -740,7 +742,7 @@ export PATH=$PATH:/home/odm/ODM/
 </li>
 </ul>
 <section id="directory-structure">
-<h5>Muundo wa Anuani<a class="headerlink" href="#directory-structure" title="Permalink to this headline"></a></h5>
+<h5>Muundo wa Anuani<a class="headerlink" href="#directory-structure" title="Permalink to this heading"></a></h5>
 <p>ODM inahitaji kuandaliwa nafasi ya orodha ndani ya mshine. Nafasi ngumu ni kuingiza folder (Ikiwa utahifadhi kama hapo juu ni &quot;<code class="docutils literal notranslate"><span class="pre">/home/odm/ODM/</span></code>) na folder la project (i.e. <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code>)</p>
 <ul class="simple">
 <li><p>ODM settings.yaml file inaonesha anuani kuu iliokusanya project yote. Hivi ndivyo ilivyo katika msatari wa anuani project settings.yaml file (inachanganya kidogo, hii ni anuani yenyewe <em>parent</em> ya anuani ya kila project, ambayo ataoneshwa na jina la project ukiita ODM). hariri settings.yaml na weka <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>, ambayo katika kesi hii katika nafasi tuliotengeneza. Anuani ya project husika imetengenezwa na hilo.</p></li>
@@ -752,7 +754,7 @@ export PATH=$PATH:/home/odm/ODM/
 </section>
 </section>
 <section id="resize-droplet-pull-pin-run-away">
-<h4>Kubadilisha droplet, kuvuta pini, pekua<a class="headerlink" href="#resize-droplet-pull-pin-run-away" title="Permalink to this headline"></a></h4>
+<h4>Kubadilisha droplet, kuvuta pini, pekua<a class="headerlink" href="#resize-droplet-pull-pin-run-away" title="Permalink to this heading"></a></h4>
 <ul class="simple">
 <li><p>Zima na badilisha mashine yako kwa mpangilio maalum wa CPU na lkiasi cha kumbukumbu. Natumia memory-optimized mashine kiasi 24 vCPUs na 192GB ya RAM (ghara yake ni kiasi $1.60/hr ambayo itaengeza haraka, ni juu $1000/mwezi). Washa upya na fanya kazi kwa haraka ili usipoteze mda big-droplet.</p></li>
 <li><p>Zindua mchakato wa ODM kupitia ssh kutumia nohup (kwa hiyo ikiwa utaikata, mchakato utakatika)</p>
@@ -778,7 +780,7 @@ export PATH=$PATH:/home/odm/ODM/
 </ul>
 </section>
 <section id="after-it-finishes-assuming-you-survive-that-long">
-<h4>Baada kumaliza (kisia utachukua mda mkubwa)<a class="headerlink" href="#after-it-finishes-assuming-you-survive-that-long" title="Permalink to this headline"></a></h4>
+<h4>Baada kumaliza (kisia utachukua mda mkubwa)<a class="headerlink" href="#after-it-finishes-assuming-you-survive-that-long" title="Permalink to this heading"></a></h4>
 <ul class="simple">
 <li><p>Mara tu processing ikimaliza, zima mashine na rudisha chini kwa uwezo mdogo.</p></li>
 <li><p>Washa mashine ya kuhifadhi, na ingia ndani kutumia ssh.</p></li>
@@ -799,9 +801,9 @@ export PATH=$PATH:/home/odm/ODM/
 </section>
 </section>
 <section id="using-potree-3d-viewer-module-on-webodm">
-<h2>Using Potree 3D viewer module on WebODM<a class="headerlink" href="#using-potree-3d-viewer-module-on-webodm" title="Permalink to this headline"></a></h2>
+<h2>Using Potree 3D viewer module on WebODM<a class="headerlink" href="#using-potree-3d-viewer-module-on-webodm" title="Permalink to this heading"></a></h2>
 <section id="cameras">
-<h3>Cameras<a class="headerlink" href="#cameras" title="Permalink to this headline"></a></h3>
+<h3>Cameras<a class="headerlink" href="#cameras" title="Permalink to this heading"></a></h3>
 <p>Activate this function to display camera positions.</p>
 <p>You can also click in the camera icon to display single images in a frame on the upper right corner. A click on the image frame toggles into full screen mode.</p>
 <p>Within the image frame there are links to download the image and the GeoJSON camera file.</p>
@@ -810,29 +812,29 @@ export PATH=$PATH:/home/odm/ODM/
 </figure>
 </section>
 <section id="textured-model">
-<h3>Textured model<a class="headerlink" href="#textured-model" title="Permalink to this headline"></a></h3>
+<h3>Textured model<a class="headerlink" href="#textured-model" title="Permalink to this heading"></a></h3>
 <p>Activate this function to show load the textured model. Depending on the file size and connection speed, it may take several seconds to load.</p>
 <figure class="align-center">
 <img alt="Textured model" src="../_images/texturedmodel.png" />
 </figure>
 </section>
 <section id="appearance">
-<h3>Appearance<a class="headerlink" href="#appearance" title="Permalink to this headline"></a></h3>
+<h3>Appearance<a class="headerlink" href="#appearance" title="Permalink to this heading"></a></h3>
 <section id="point-budget">
-<h4>Point budget<a class="headerlink" href="#point-budget" title="Permalink to this headline"></a></h4>
+<h4>Point budget<a class="headerlink" href="#point-budget" title="Permalink to this heading"></a></h4>
 <p>For both appearance and performance purposes, the point budget on the scene can be managed. Some old and less capable machines would benefit from a 500,000 point budget while most mid-range specs machine are capable of handling 1 to 2 million point budget.</p>
 <p>A 5 to 7 million point budget produces a smooth point cloud 3d model, but may result in a high resource demanding process.</p>
 <p>Default point budget value is set to 1,000,000.</p>
 </section>
 <section id="field-of-view">
-<h4>Field of view<a class="headerlink" href="#field-of-view" title="Permalink to this headline"></a></h4>
+<h4>Field of view<a class="headerlink" href="#field-of-view" title="Permalink to this heading"></a></h4>
 <p>In order to control model elements to be included within the scene the field of view can be adjusted. Default value is set to 60 degrees.</p>
 <figure class="align-center">
 <img alt="Field of view adjustment" src="../_images/FOV_animation.gif" />
 </figure>
 </section>
 <section id="eye-dome-lighting">
-<h4>Eye Dome-lighting<a class="headerlink" href="#eye-dome-lighting" title="Permalink to this headline"></a></h4>
+<h4>Eye Dome-lighting<a class="headerlink" href="#eye-dome-lighting" title="Permalink to this heading"></a></h4>
 <p>The Potree Point Cloud 3d viewer module can implement eye dome-lighting, a lighting model that accentuates the shapes of objects.</p>
 <p>Eye Dome-lighting group objects, shade their outlines and enhances depth perception in scientific visualization images. It is useful for recognition and measurement of structures within a model. It can be modified by adjusting Radius, Strength and Opacity.</p>
 <p>By default, Eye Dome-Lighting is enabled on Potree 3D viewer, but it can be disabled by clicking on the enable option.</p>
@@ -841,14 +843,14 @@ export PATH=$PATH:/home/odm/ODM/
 </figure>
 </section>
 <section id="background">
-<h4>Background<a class="headerlink" href="#background" title="Permalink to this headline"></a></h4>
+<h4>Background<a class="headerlink" href="#background" title="Permalink to this heading"></a></h4>
 <p>Potree 3D viewer background can be modified. Available options are <strong>Skybox</strong> / <strong>Gradient</strong> / <strong>Black</strong> / <strong>White</strong> / <strong>None</strong></p>
 <figure class="align-center">
 <img alt="Background selection" src="../_images/Background_animation.gif" />
 </figure>
 </section>
 <section id="other">
-<h4>Other<a class="headerlink" href="#other" title="Permalink to this headline"></a></h4>
+<h4>Other<a class="headerlink" href="#other" title="Permalink to this heading"></a></h4>
 <p><strong>Splat Quality</strong> = Splat quality can be adjusted to standard or high quality, to improve the appearance of the model.</p>
 <p><strong>Min node size</strong> = Min node size option will impact the point density of the nodes represented.</p>
 <p><strong>Box</strong> = Display the boxes of the nodes.</p>
@@ -856,9 +858,9 @@ export PATH=$PATH:/home/odm/ODM/
 </section>
 </section>
 <section id="tools">
-<h3>Tools<a class="headerlink" href="#tools" title="Permalink to this headline"></a></h3>
+<h3>Tools<a class="headerlink" href="#tools" title="Permalink to this heading"></a></h3>
 <section id="measurement">
-<h4>Measurement<a class="headerlink" href="#measurement" title="Permalink to this headline"></a></h4>
+<h4>Measurement<a class="headerlink" href="#measurement" title="Permalink to this heading"></a></h4>
 <p>Potree 3D viewer module provides several tools for measurement. This tool set consist of 12 elements.
 It also has controls for showing or hiding the resulting measurement labels.</p>
 <p>Measurements are performed by left clicking on the desired points and for some tools right clicking is needed in order to terminate the process.</p>
@@ -920,7 +922,7 @@ To edit the annotation, select this element under the scene section, then edit T
 To remove all measurement, click on the &quot;Remove measurements&quot; icon.</p>
 </section>
 <section id="clipping">
-<h4>Clipping<a class="headerlink" href="#clipping" title="Permalink to this headline"></a></h4>
+<h4>Clipping<a class="headerlink" href="#clipping" title="Permalink to this heading"></a></h4>
 <figure class="align-center">
 <img alt="Tools - Clipping tools" src="../_images/clipping.png" />
 </figure>
@@ -933,7 +935,7 @@ Highlight is set by default as the clipping method. If display only the points c
 </figure>
 </section>
 <section id="navigation">
-<h4>Navigation<a class="headerlink" href="#navigation" title="Permalink to this headline"></a></h4>
+<h4>Navigation<a class="headerlink" href="#navigation" title="Permalink to this heading"></a></h4>
 <figure class="align-center">
 <img alt="Tools - Navigation controls" src="../_images/navigation.png" />
 </figure>
@@ -963,7 +965,7 @@ Highlight is set by default as the clipping method. If display only the points c
 </section>
 </section>
 <section id="scene">
-<h3>Scene<a class="headerlink" href="#scene" title="Permalink to this headline"></a></h3>
+<h3>Scene<a class="headerlink" href="#scene" title="Permalink to this heading"></a></h3>
 <p>The Scene section displays a file tree containing all the scene elements.
 Elements are arranged in six groups, which are <strong>Point clouds</strong> / <strong>Measurements</strong> / <strong>Annotations</strong>
 / <strong>Other</strong> / <strong>Vector</strong> / <strong>Images</strong></p>

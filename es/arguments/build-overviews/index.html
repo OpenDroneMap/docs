@@ -15,7 +15,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
         <script src="../../_static/translations.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../../genindex/" />
@@ -394,9 +396,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../">Opciones e indicadores</a> &raquo;</li>
-      <li>build-overviews</li>
+      <li><a href="../../" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../">Opciones e indicadores</a></li>
+      <li class="breadcrumb-item active">build-overviews</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/arguments/build-overviews.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
@@ -407,7 +409,7 @@
            <div itemprop="articleBody">
              
   <section id="build-overviews">
-<span id="id1"></span><h1>build-overviews<a class="headerlink" href="#build-overviews" title="Enlazar permanentemente con este título"></a></h1>
+<span id="id1"></span><h1>build-overviews<a class="headerlink" href="#build-overviews" title="Enlace permanente a este encabezado"></a></h1>
 <p>Crea vistas generales de la ortofoto para una visualización mas rápida en programas como QGIS. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 <div class="line-block">
 <div class="line">Tipo de parámetro:</div>
@@ -455,13 +457,13 @@
 </table>
 <hr class="docutils" />
 <section id="what-are-overviews">
-<h2>¿Que son las vistas generales?<a class="headerlink" href="#what-are-overviews" title="Enlazar permanentemente con este título"></a></h2>
+<h2>¿Que son las vistas generales?<a class="headerlink" href="#what-are-overviews" title="Enlace permanente a este encabezado"></a></h2>
 <p>Las vistas generales (a veces denominadas pirámides) son una optimización que reduce el tiempo que lleva renderizar archivos GeoTIFF; Un tamaño de archivo más grande es este costo por este major rendimiento de renderizado.</p>
 <p>Las vistas generales son copias de menor resolución de los datos ráster (potencia de dos factores [128x128, 256x256, etc.]) que se almacenan interna o externamente en un sidecar.</p>
 <p>En el caso de OpenDroneMap, las vistas generales siempre serán internas.</p>
 </section>
 <section id="when-are-overviews-appropriate">
-<h2>¿Cuando son apropiadas las vistas generales?<a class="headerlink" href="#when-are-overviews-appropriate" title="Enlazar permanentemente con este título"></a></h2>
+<h2>¿Cuando son apropiadas las vistas generales?<a class="headerlink" href="#when-are-overviews-appropriate" title="Enlace permanente a este encabezado"></a></h2>
 <p>Es probable que uno desee utilizar Vistas generales para casi todos los casos, con algunas excepciones (relativamente raras).</p>
 <blockquote>
 <div><ul class="simple">
@@ -471,14 +473,14 @@
 </div></blockquote>
 </section>
 <section id="why-would-one-use-overviews">
-<h2>¿Por qué se utilizarían las vistas generales?<a class="headerlink" href="#why-would-one-use-overviews" title="Enlazar permanentemente con este título"></a></h2>
+<h2>¿Por qué se utilizarían las vistas generales?<a class="headerlink" href="#why-would-one-use-overviews" title="Enlace permanente a este encabezado"></a></h2>
 <p>Estas ofrecen una vista previa rápida de los datos ráster al permitir que el programa que procesa el ráster elija el tamaño de pirámide más cercano para que coincida con la resolución de la extensión de visualización en la que se está procesando, lo que puede ahorrar una cantidad significativa de tiempo recuperando el ráster de tamaño completo, almacenando en búfer y luego reduciendo su escala para visualización.</p>
 <p>En el caso de WebODM, las vistas generales son usadas para crear mosaicos dinámicos para la visualización rápida y la navegación del mapa web en 2D.</p>
 </section>
 <section id="example-images">
-<h2>Imágenes de ejemplo<a class="headerlink" href="#example-images" title="Enlazar permanentemente con este título"></a></h2>
+<h2>Imágenes de ejemplo<a class="headerlink" href="#example-images" title="Enlace permanente a este encabezado"></a></h2>
 <section id="true-build-overviews">
-<h3>Verdadero: <code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code><a class="headerlink" href="#true-build-overviews" title="Enlazar permanentemente con este título"></a></h3>
+<h3>Verdadero: <code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code><a class="headerlink" href="#true-build-overviews" title="Enlace permanente a este encabezado"></a></h3>
 <figure class="align-default" id="id2">
 <img alt="QGIS mostrando las vistas generales generadas" src="https://user-images.githubusercontent.com/19295950/127073339-6b2a0a4f-6ede-4dc1-8da4-5bc9646de304.png" />
 <figcaption>
@@ -487,7 +489,7 @@
 </figure>
 </section>
 <section id="false-null">
-<h3>Falso: <code class="docutils literal notranslate"><span class="pre">null</span></code><a class="headerlink" href="#false-null" title="Enlazar permanentemente con este título"></a></h3>
+<h3>Falso: <code class="docutils literal notranslate"><span class="pre">null</span></code><a class="headerlink" href="#false-null" title="Enlace permanente a este encabezado"></a></h3>
 <figure class="align-default" id="id3">
 <img alt="QGIS que muestra el archivo carece de vistas generales" src="https://user-images.githubusercontent.com/19295950/127074349-a3f84c4c-d05c-4bf1-bd7c-790781ad0fe3.png" />
 <figcaption>

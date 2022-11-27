@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Indeks" href="../genindex/" />
@@ -394,8 +396,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>Titik Ikat Bumi</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Titik Ikat Bumi</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/gcp.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -406,19 +408,19 @@
            <div itemprop="articleBody">
              
   <section id="ground-control-points">
-<h1>Titik Ikat Bumi<a class="headerlink" href="#ground-control-points" title="Link permanen untuk headline ini"></a></h1>
+<h1>Titik Ikat Bumi<a class="headerlink" href="#ground-control-points" title="Permalink to this heading"></a></h1>
 <p>Titik Ikat Bumi berguna untuk mengoreksi distorsi pada data dan mereferensikan data untuk mengetahui sistem koordinat.</p>
 <p>Titik Ikat Bumi (GCP) adalah pengukuran posisi yang dilakukan di tanah, biasanya menggunakan GPS presisi tinggi. (Toffanin 2019)</p>
 <p>Titik Ikat Bumi dapat diatur dengan struktur yang ada seperti sudut perkerasan, garis di tempat parkir atau ubin lantai warna kontras, jika tidak dapat diatur menggunakan target yang ditempatkan di tanah.</p>
 <p>Target dapat dibeli atau dibangun dengan berbagai macam bahan mulai dari tutup ember hingga ubin lantai.</p>
 <section id="recommended-practices-for-gcp-setting">
-<h2>Praktik yang direkomendasikan untuk setelan GCP<a class="headerlink" href="#recommended-practices-for-gcp-setting" title="Link permanen untuk headline ini"></a></h2>
+<h2>Praktik yang direkomendasikan untuk setelan GCP<a class="headerlink" href="#recommended-practices-for-gcp-setting" title="Permalink to this heading"></a></h2>
 <p>Pastikan titik Ikat bumi terlihat untuk semua lokasi kamera. Pertimbangkan jarak pengambilan sampel tanah/ground yang diharapkan, iluminasi, vegetasi, bangunan dan semua hambatan yang ada.</p>
 <p>Dapatkan GCP yang merata horizontal dalam project, yang mencakup elevasi tinggi dan rendah. Minimal 5 GCP berfungsi untuk sebagian besar pekerjaan, dan untuk proyek yang lebih besar 8 - 10 sudah cukup. Temukan beberapa titik di dekat pojok dan titik lainnya di tengah, mengingat jarak GCP harus lebih besar dari footprint gambar, sehingga Anda tidak dapat melihat lebih dari satu GCP dalam satu gambar.</p>
 <p>Untuk memastikan setiap GCP ditemukan setidaknya di 5 gambar, pisahkan titik 10 hingga 30 meter dari perimeter project. Jarak ini bergantung pada tumpang tindih, sehingga peningkatan tumpang tindih akan mengurangi jarak yang diperlukan dari perimeter.</p>
 </section>
 <section id="gcp-file-format">
-<h2>Format berkas GCP<a class="headerlink" href="#gcp-file-format" title="Link permanen untuk headline ini"></a></h2>
+<h2>Format berkas GCP<a class="headerlink" href="#gcp-file-format" title="Permalink to this heading"></a></h2>
 <p>Format berkas GCP itu sederhana.</p>
 <blockquote>
 <div><ul class="simple">
@@ -448,7 +450,7 @@
 <p>Untuk hasil yang bagus, file Anda harus memiliki minimal 15 baris setelah header (5 poin dengan 3 gambar untuk setiap poin).</p>
 </section>
 <section id="user-interfaces">
-<h2>Antarmuka Pengguna<a class="headerlink" href="#user-interfaces" title="Link permanen untuk headline ini"></a></h2>
+<h2>Antarmuka Pengguna<a class="headerlink" href="#user-interfaces" title="Permalink to this heading"></a></h2>
 <p>Anda dapat menggunakan salah satu dari dua antarmuka pengguna untuk membuat file GCP:</p>
 <blockquote>
 <div><ul class="simple">
@@ -457,7 +459,7 @@
 </ul>
 </div></blockquote>
 <section id="id1">
-<h3>POSM GCPi<a class="headerlink" href="#id1" title="Link permanen untuk headline ini"></a></h3>
+<h3>POSM GCPi<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h3>
 <p>POSM GCPi dimuat secara default di WebODM. Contoh tersedia di <cite>Demo WebODM &lt;http://demo.webodm.org/plugins/posm-gcpi/&gt;</cite> _. Untuk menggunakan ini dengan nilai XYZ ground control yang diketahui, seseorang akan melakukan hal berikut:</p>
 <p>Buat daftar GCP yang hanya menyertakan nama gcp (ini adalah label yang akan terlihat di antarmuka GCP), x, y, dan z, dengan header proj4 dengan string GCP Anda (pastikan mereka dalam koordinat planar sistem, seperti UTM. Seharusnya terlihat seperti ini:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="n">proj</span><span class="o">=</span><span class="n">utm</span> <span class="o">+</span><span class="n">zone</span><span class="o">=</span><span class="mi">37</span> <span class="o">+</span><span class="n">south</span> <span class="o">+</span><span class="n">ellps</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">datum</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">units</span><span class="o">=</span><span class="n">m</span> <span class="o">+</span><span class="n">no_defs</span>
@@ -471,7 +473,7 @@
 <p>Kemudian seseorang dapat memuat daftar GCP ini ke antarmuka, memuat gambar, dan menempatkan setiap GCP dalam gambar.</p>
 </section>
 <section id="id2">
-<h3>GCP Editor Pro<a class="headerlink" href="#id2" title="Link permanen untuk headline ini"></a></h3>
+<h3>GCP Editor Pro<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h3>
 <p>Aplikasi ini perlu dipasang secara terpisah atau dapat dimuat sebagai plugin WebODM dari <a class="reference external" href="https://github.com/uav4geo/GCPEditorPro">https://github.com/uav4geo/GCPEditorPro</a></p>
 <p>Buat berkas CSV yang menyertakan nama gcp, arah utara, arah timur, dan elevasi.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GCP</span> <span class="n">Label</span><span class="p">,</span><span class="n">Northing</span><span class="p">,</span><span class="n">Easting</span><span class="p">,</span><span class="n">Elevation</span>
@@ -485,7 +487,7 @@
 </section>
 </section>
 <section id="references">
-<h2>Referensi<a class="headerlink" href="#references" title="Link permanen untuk headline ini"></a></h2>
+<h2>Referensi<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
 <p>Toffanin, Piero. <a class="reference external" href="https://odmbook.com/">Buka Peta Drone: Panduan yang Hilang.</a> MasseranoLabs LLC, 2019.</p>
 <p><cite>Belajar untuk mengedit &lt;https://github.com/opendronemap/docs#how-to-make-your-first-contribution&gt;</cite> _ dan membantu meningkatkan <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/gcp.rst">halaman ini</a>!</p>
 </section>

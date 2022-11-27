@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../genindex/" />
@@ -394,8 +396,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>Instalación y Guía de Introducción</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Instalación y Guía de Introducción</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/installation.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
@@ -406,16 +408,16 @@
            <div itemprop="articleBody">
              
   <section id="installation-and-getting-started">
-<h1>Instalación y Guía de Introducción<a class="headerlink" href="#installation-and-getting-started" title="Enlazar permanentemente con este título"></a></h1>
+<h1>Instalación y Guía de Introducción<a class="headerlink" href="#installation-and-getting-started" title="Enlace permanente a este encabezado"></a></h1>
 <p>Esta sección es extraída y modificada con el permiso de <a class="reference external" href="https://odmbook.com">OpenDroneMap: The Missing Guide</a>, realizada por Piero Toffanin.</p>
 <section id="quickstart">
-<h2>Quickstart<a class="headerlink" href="#quickstart" title="Enlazar permanentemente con este título"></a></h2>
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Enlace permanente a este encabezado"></a></h2>
 <p>Installers for OpenDroneMap are available for purchase from UAV4Geo, and are the easiest way to get started and come with support.</p>
 <p><a class="reference external" href="https://opendronemap.org/webodm/download/#installer">https://opendronemap.org/webodm/download/#installer</a></p>
 <p>That said, OpenDroneMap is a free and open source ecoystem. Community support is available for those looking to install themselves and directions follow:</p>
 </section>
 <section id="hardware-recommendations">
-<h2>Recomendaciones de Hardware<a class="headerlink" href="#hardware-recommendations" title="Enlazar permanentemente con este título"></a></h2>
+<h2>Recomendaciones de Hardware<a class="headerlink" href="#hardware-recommendations" title="Enlace permanente a este encabezado"></a></h2>
 <p>Los requisitos mínimos para ejecutar el software son:</p>
 <ul class="simple">
 <li><p>CPU de 64bit manufacturada durante o después del 2010</p></li>
@@ -466,13 +468,13 @@
 </table>
 </section>
 <section id="installation">
-<span id="docker-installation"></span><h2>Instalación<a class="headerlink" href="#installation" title="Enlazar permanentemente con este título"></a></h2>
+<span id="docker-installation"></span><h2>Instalación<a class="headerlink" href="#installation" title="Enlace permanente a este encabezado"></a></h2>
 <p>Recomendamos utilizar <a class="reference external" href="https://www.docker.com">docker</a> para ejecutar ODM, ya sea si está utilizando Windows, macOS o Linux.</p>
 <section id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Enlazar permanentemente con este título"></a></h3>
+<h3>Windows<a class="headerlink" href="#windows" title="Enlace permanente a este encabezado"></a></h3>
 <p>Para ejecutar OpenDroneMap necesita al menos Windows 7. Versiones anteriores de Windows no están soportadas.</p>
 <section id="step-1-check-virtualization-support">
-<h4>Paso 1. Verificar el Soporte de Virtualización<a class="headerlink" href="#step-1-check-virtualization-support" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Paso 1. Verificar el Soporte de Virtualización<a class="headerlink" href="#step-1-check-virtualization-support" title="Enlace permanente a este encabezado"></a></h4>
 <p>Docker requiere una función de la CPU llamada virtualización, la que permite ejecutar máquinas virtuales (VMs). Asegúrese de que la tiene activada! Ya que algunas veces está desactivada. En Windows 8 o versiones más actuales, esto se puede verificar abriendo el  <strong>Administrador de Tareas</strong> (presionar CTRL+SHIFT+ESC) y cambiando a la ventana de <strong>Rendimiento</strong>.</p>
 <figure class="align-center">
 <img alt="Image of checking virtualization in Windows 8 or higher" src="../_images/virtualizationcheck.png" />
@@ -486,7 +488,7 @@
 <p><em>Teclas comunes para presionar en el momento de arranque del computador, para acceder al menú de arranque para varios vendedores de PCs</em></p>
 </section>
 <section id="step-2-install-requirements">
-<h4>Paso 2. Requisitos de instalación<a class="headerlink" href="#step-2-install-requirements" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Paso 2. Requisitos de instalación<a class="headerlink" href="#step-2-install-requirements" title="Enlace permanente a este encabezado"></a></h4>
 <p>Primero, deberá instalar:</p>
 <ul class="simple">
 <li><p>Git: <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p></li>
@@ -509,7 +511,7 @@
 <p>Después de instalar Docker, ábrelo desde el ícono en el Escritorio que es creado desde la instalación (<strong>Inicio Rápido de Docker</strong> en el caso de la caja de herramientas Docker, <strong>Docker para Windows</strong> en el caso de Docker para Windows).</p>
 </section>
 <section id="step-3-check-memory-and-cpu-allocation">
-<h4>Paso 3. Revisa la memoria y la asignación del procesador<a class="headerlink" href="#step-3-check-memory-and-cpu-allocation" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Paso 3. Revisa la memoria y la asignación del procesador<a class="headerlink" href="#step-3-check-memory-and-cpu-allocation" title="Enlace permanente a este encabezado"></a></h4>
 <p>Docker en Windows funciona ejecutando una VM en segundo plano (piensa en una VM como un «emulador de computador»). Esta VM tiene una cierta cantidad de memoria asignada y WebODM sólo puede usar tanta memoria como esté asignada.</p>
 <p>Si instalaste la Caja de Herramientas Docker (observa abajo si instalaste Docker para Windows):</p>
 <ol class="arabic simple">
@@ -540,7 +542,7 @@
 <p><em>Paso 3 y 4 Configuración de Docker</em></p>
 </section>
 <section id="step-4-download-webodm">
-<h4>Paso 4. Descarga WebODM<a class="headerlink" href="#step-4-download-webodm" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Paso 4. Descarga WebODM<a class="headerlink" href="#step-4-download-webodm" title="Enlace permanente a este encabezado"></a></h4>
 <p>Abra el programa <strong>Git GUI</strong> que viene instalado con Git. Desde ahí:</p>
 <ul class="simple">
 <li><p>Cuando Git Gui se abra, haga clic en la opción “Clone Existing Repository”</p></li>
@@ -560,7 +562,7 @@
 <p>Vaya al menú <strong>Repository</strong>, luego haga clic en <strong>Create Desktop Icon</strong>. Esto le permitirá volver fácilmente a esta aplicación en el futuro.</p>
 </section>
 <section id="step-4-launch-webodm">
-<h4>Paso 4. Inicie WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Paso 4. Inicie WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Enlace permanente a este encabezado"></a></h4>
 <p>Desde Git Gui, vaya al menú <strong>Repository</strong>, luego haga clic en <strong>Git Bash</strong>. Desde la terminal de línea de comando teclee:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start <span class="p">&amp;</span>
 </pre></div>
@@ -585,10 +587,10 @@
 </section>
 </section>
 <section id="macos">
-<h3>macOS<a class="headerlink" href="#macos" title="Enlazar permanentemente con este título"></a></h3>
+<h3>macOS<a class="headerlink" href="#macos" title="Enlace permanente a este encabezado"></a></h3>
 <p>La mayoría de las computadoras Mac modernas (posteriores a 2010) que ejecutan macOS Sierra 10.12 o superior pueden ejecutar OpenDroneMap mediante la ventana acoplable, siempre que se admita la virtualización de hardware (ver más abajo).</p>
 <section id="id1">
-<h4>Paso 1. Verificar el Soporte de Virtualización<a class="headerlink" href="#id1" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Paso 1. Verificar el Soporte de Virtualización<a class="headerlink" href="#id1" title="Enlace permanente a este encabezado"></a></h4>
 <p>Abre una ventana de Terminal y teclea:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sysctl kern.hv_support
 </pre></div>
@@ -601,7 +603,7 @@
 <p>Si el resultado es <em>kern.hv_support: 0</em>, desafortunadamente significa que tu Mac es demasiado vieja para ejecutar OpenDroneMap. :(</p>
 </section>
 <section id="id2">
-<h4>Paso 2. Requisitos de instalación<a class="headerlink" href="#id2" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Paso 2. Requisitos de instalación<a class="headerlink" href="#id2" title="Enlace permanente a este encabezado"></a></h4>
 <p>Solo hay dos programas para instalar:</p>
 <ol class="arabic simple">
 <li><p>Docker: <a class="reference external" href="https://download.docker.com/mac/stable/Docker.dmg">https://download.docker.com/mac/stable/Docker.dmg</a></p></li>
@@ -631,7 +633,7 @@
 <p>Si obtiene un «bash: git: comando no encontrado», intente reiniciar su aplicación <strong>Terminal</strong> y verifique si hay errores durante el proceso de instalación.</p>
 </section>
 <section id="id3">
-<h4>Paso 3. Revisa la memoria y la asignación del procesador<a class="headerlink" href="#id3" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Paso 3. Revisa la memoria y la asignación del procesador<a class="headerlink" href="#id3" title="Enlace permanente a este encabezado"></a></h4>
 <p>Docker en macOS funciona ejecutando una VM en segundo plano (considérelo como un «emulador de computadora»). Esta VM tiene una cierta cantidad de memoria asignada y WebODM solo puede usar la cantidad de memoria asignada.</p>
 <ol class="arabic simple">
 <li><p>Haga clic derecho en el icono de la ballena de la barra de tareas y haga clic en <strong>Preferencias</strong> …</p></li>
@@ -645,7 +647,7 @@
 <p><em>Configuración avanzada de Docker</em></p>
 </section>
 <section id="step-4-download-and-launch-webodm">
-<h4>Paso 4. Descargue y ejecute WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Paso 4. Descargue y ejecute WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Enlace permanente a este encabezado"></a></h4>
 <p>Desde la <strong>Terminal</strong> teclee:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
 $ <span class="nb">cd</span> WebODM
@@ -656,10 +658,10 @@ $ ./webodm.sh start
 </section>
 </section>
 <section id="linux">
-<h3>Linux<a class="headerlink" href="#linux" title="Enlazar permanentemente con este título"></a></h3>
+<h3>Linux<a class="headerlink" href="#linux" title="Enlace permanente a este encabezado"></a></h3>
 <p>OpenDroneMap puede ejecutarse en cualquier distribución de Linux que admita Docker. Según el sitio web de documentación de <cite>docker &lt;https://docs.docker.com/install/&gt;</cite> _ las distribuciones oficialmente soportadas son CentOS, Debian, Ubuntu y Fedora, con binarios estáticos disponibles para otros. Si tiene que elegir una distribución únicamente para ejecutar OpenDroneMap, Ubuntu es la distribución recomendada.</p>
 <section id="step-1-install-requirements">
-<h4>Paso 1. Requerimientos de instalación<a class="headerlink" href="#step-1-install-requirements" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Paso 1. Requerimientos de instalación<a class="headerlink" href="#step-1-install-requirements" title="Enlace permanente a este encabezado"></a></h4>
 <p>Hay cuatro programas que deben instalarse:</p>
 <ol class="arabic simple">
 <li><p>Docker</p></li>
@@ -669,7 +671,7 @@ $ ./webodm.sh start
 </ol>
 <p>No podemos cubrir el proceso de instalación de todas las distribuciones de Linux que existen, por lo que limitaremos las instrucciones a aquellas que son distribuciones oficialmente compatibles con Docker. En todos los casos, solo es cuestión de abrir un indicador de terminal y escribir algunos comandos.</p>
 <section id="install-on-ubuntu-debian">
-<h5>Instalar en Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Enlazar permanentemente con este título"></a></h5>
+<h5>Instalar en Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Enlace permanente a este encabezado"></a></h5>
 <p>Comandos para escribir:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt update
 $ curl -fsSL https://get.docker.com -o get-docker.sh
@@ -679,7 +681,7 @@ $ sudo apt install -y git python python-pip
 </div>
 </section>
 <section id="install-on-centos-rhel">
-<h5>Instalar en CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Enlazar permanentemente con este título"></a></h5>
+<h5>Instalar en CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Enlace permanente a este encabezado"></a></h5>
 <p>Comandos para escribir:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
 $ sh get-docker.sh
@@ -688,7 +690,7 @@ $ sudo yum -y install git python python-pip
 </div>
 </section>
 <section id="install-on-fedora">
-<h5>Instalar en Fedora<a class="headerlink" href="#install-on-fedora" title="Enlazar permanentemente con este título"></a></h5>
+<h5>Instalar en Fedora<a class="headerlink" href="#install-on-fedora" title="Enlace permanente a este encabezado"></a></h5>
 <p>Comandos para escribir:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
 $ sh get-docker.sh
@@ -697,7 +699,7 @@ $ sudo dnf install git python python-pip
 </div>
 </section>
 <section id="install-on-arch">
-<h5>Instalar en Arch<a class="headerlink" href="#install-on-arch" title="Enlazar permanentemente con este título"></a></h5>
+<h5>Instalar en Arch<a class="headerlink" href="#install-on-arch" title="Enlace permanente a este encabezado"></a></h5>
 <p>Comandos para escribir:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pacman -Sy docker git python python-pip
 </pre></div>
@@ -705,7 +707,7 @@ $ sudo dnf install git python python-pip
 </section>
 </section>
 <section id="step-2-check-additional-requirements">
-<h4>Paso 2. Verifique los requisitos adicionales<a class="headerlink" href="#step-2-check-additional-requirements" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Paso 2. Verifique los requisitos adicionales<a class="headerlink" href="#step-2-check-additional-requirements" title="Enlace permanente a este encabezado"></a></h4>
 <p>Además de los tres programas anteriores, también se necesita el script de Dockercompose. A veces, ya está instalado con Docker, pero a veces no. Para verificar si está instalado, intente escribir:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker-compose --version
 </pre></div>
@@ -724,7 +726,7 @@ $ sudo dnf install git python python-pip
 </div>
 </section>
 <section id="step-3-download-and-launch-webodm">
-<h4>Paso 3. Descargue y ejecute WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Enlazar permanentemente con este título"></a></h4>
+<h4>Paso 3. Descargue y ejecute WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Enlace permanente a este encabezado"></a></h4>
 <p>Desde la Terminal escriba:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
 $ <span class="nb">cd</span> WebODM
@@ -736,7 +738,7 @@ $ ./webodm.sh start
 </section>
 </section>
 <section id="basic-commands-and-troubleshooting">
-<h2>Comandos básicos y resolución de problemas<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Enlazar permanentemente con este título"></a></h2>
+<h2>Comandos básicos y resolución de problemas<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Enlace permanente a este encabezado"></a></h2>
 <p>Lo bueno de usar Docker es que el 99% de las tareas que necesitará realizar mientras usa WebODM se pueden realizar a través del script ./webodm.sh. Ya te has encontrado con uno de ellos:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start
 </pre></div>
@@ -769,7 +771,7 @@ $ ./webodm.sh --help
 <p>El foro de la comunidad <cite>The community forum &lt;https://community.opendronemap.org&gt;</cite> _ es un gran lugar para pedir ayuda si tiene dificultades durante cualquiera de los pasos de instalación y si tiene preguntas generales sobre el uso del script ./webodm.sh.</p>
 </section>
 <section id="hello-webodm">
-<h2>¡Hola WebODM!<a class="headerlink" href="#hello-webodm" title="Enlazar permanentemente con este título"></a></h2>
+<h2>¡Hola WebODM!<a class="headerlink" href="#hello-webodm" title="Enlace permanente a este encabezado"></a></h2>
 <p>Después de ejecutar ./webodm.sh start y abrir WebODM en el navegador, se le dará la bienvenida con un mensaje de bienvenida y se le pedirá que cree el primer usuario. Tómese un tiempo para familiarizarse con la interfaz web y explorar sus diversos menús.</p>
 <figure class="align-center">
 <img alt="Screenshot of WebODM Dashboard" src="../_images/webodmdashboard.png" />
@@ -781,7 +783,7 @@ $ ./webodm.sh --help
 <img alt="Image of celebratory dance" src="../_images/congratulations.png" />
 </figure>
 <section id="running-on-more-than-one-machine">
-<h3>Ejecutando en más de una máquina<a class="headerlink" href="#running-on-more-than-one-machine" title="Enlazar permanentemente con este título"></a></h3>
+<h3>Ejecutando en más de una máquina<a class="headerlink" href="#running-on-more-than-one-machine" title="Enlace permanente a este encabezado"></a></h3>
 <p><strong>Opcionalmente:</strong> Si tiene otra computadora, puede repetir el proceso de instalación (instalar docker, git, python, etc.) y lanzar un nuevo nodo NodeODM escribiendo desde una ventana Terminal / Git Bash:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --rm -it -p <span class="m">3000</span>:3000 opendronemap/nodeodm -q <span class="m">1</span> --token secret
 </pre></div>

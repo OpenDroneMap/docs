@@ -15,7 +15,9 @@
         <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
         <script src="../../_static/jquery.js"></script>
         <script src="../../_static/underscore.js"></script>
+        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../../_static/doctools.js"></script>
+        <script src="../../_static/sphinx_highlight.js"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
@@ -393,9 +395,9 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../" class="icon icon-home"></a> &raquo;</li>
-          <li><a href="../">Chagizi na Bendera</a> &raquo;</li>
-      <li>build-overviews</li>
+      <li><a href="../../" class="icon icon-home"></a></li>
+          <li class="breadcrumb-item"><a href="../">Chagizi na Bendera</a></li>
+      <li class="breadcrumb-item active">build-overviews</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../../_sources/arguments/build-overviews.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -406,7 +408,7 @@
            <div itemprop="articleBody">
              
   <section id="build-overviews">
-<span id="id1"></span><h1>build-overviews<a class="headerlink" href="#build-overviews" title="Permalink to this headline"></a></h1>
+<span id="id1"></span><h1>build-overviews<a class="headerlink" href="#build-overviews" title="Permalink to this heading"></a></h1>
 <p>Build orthophoto overviews for faster display in programs such as QGIS. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 <div class="line-block">
 <div class="line">Parameter Type:</div>
@@ -454,13 +456,13 @@
 </table>
 <hr class="docutils" />
 <section id="what-are-overviews">
-<h2>What Are Overviews?<a class="headerlink" href="#what-are-overviews" title="Permalink to this headline"></a></h2>
+<h2>What Are Overviews?<a class="headerlink" href="#what-are-overviews" title="Permalink to this heading"></a></h2>
 <p>Overviews (sometimes referred to as pyramids) are an optimization that reduce the time it takes to render GeoTIFF files; Larger file-size is the tradeoff for this increased rendering performance.</p>
 <p>Overviews are lower-resolution copies of the raster data (Power of two factor [128x128, 256x256, etc]) that are stored either internally or externally in a sidecar.</p>
 <p>In the case of OpenDroneMap, the Overviews will always be internal.</p>
 </section>
 <section id="when-are-overviews-appropriate">
-<h2>When are Overviews appropriate?<a class="headerlink" href="#when-are-overviews-appropriate" title="Permalink to this headline"></a></h2>
+<h2>When are Overviews appropriate?<a class="headerlink" href="#when-are-overviews-appropriate" title="Permalink to this heading"></a></h2>
 <p>One would likely want to use Overviews for nearly every instance, with some few (relatively rare) exceptions.</p>
 <blockquote>
 <div><ul class="simple">
@@ -470,14 +472,14 @@
 </div></blockquote>
 </section>
 <section id="why-would-one-use-overviews">
-<h2>Why would one use Overviews?<a class="headerlink" href="#why-would-one-use-overviews" title="Permalink to this headline"></a></h2>
+<h2>Why would one use Overviews?<a class="headerlink" href="#why-would-one-use-overviews" title="Permalink to this heading"></a></h2>
 <p>Overviews speed preview of the raster data by allowing the program rendering the raster to choose the closest size pyramid to match the resolution of the display extent that it is being rendered into, potentially saving a significant amount of time retrieving the full-size raster, buffering it, and then downscaling it for display.</p>
 <p>In the case of WebODM, Overviews are used to create dynamic tiles for rapid display and navigation of the 2D web map.</p>
 </section>
 <section id="example-images">
-<h2>Example Images<a class="headerlink" href="#example-images" title="Permalink to this headline"></a></h2>
+<h2>Example Images<a class="headerlink" href="#example-images" title="Permalink to this heading"></a></h2>
 <section id="true-build-overviews">
-<h3>True: <code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code><a class="headerlink" href="#true-build-overviews" title="Permalink to this headline"></a></h3>
+<h3>True: <code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code><a class="headerlink" href="#true-build-overviews" title="Permalink to this heading"></a></h3>
 <figure class="align-default" id="id2">
 <img alt="QGIS displaying the generated Overviews" src="https://user-images.githubusercontent.com/19295950/127073339-6b2a0a4f-6ede-4dc1-8da4-5bc9646de304.png" />
 <figcaption>
@@ -486,7 +488,7 @@
 </figure>
 </section>
 <section id="false-null">
-<h3>False: <code class="docutils literal notranslate"><span class="pre">null</span></code><a class="headerlink" href="#false-null" title="Permalink to this headline"></a></h3>
+<h3>False: <code class="docutils literal notranslate"><span class="pre">null</span></code><a class="headerlink" href="#false-null" title="Permalink to this heading"></a></h3>
 <figure class="align-default" id="id3">
 <img alt="QGIS displaying the file is lacking Overviews" src="https://user-images.githubusercontent.com/19295950/127074349-a3f84c4c-d05c-4bf1-bd7c-790781ad0fe3.png" />
 <figcaption>

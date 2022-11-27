@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -393,8 +395,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>OpenDroneMap Matokeo</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">OpenDroneMap Matokeo</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/outputs.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -405,10 +407,10 @@
            <div itemprop="articleBody">
              
   <section id="opendronemap-outputs">
-<h1>OpenDroneMap Matokeo<a class="headerlink" href="#opendronemap-outputs" title="Permalink to this headline"></a></h1>
+<h1>OpenDroneMap Matokeo<a class="headerlink" href="#opendronemap-outputs" title="Permalink to this heading"></a></h1>
 <p>Vilivyo orodheshwa chini ni matumizi ya matokeo ya ODM.</p>
 <section id="point-cloud">
-<h2>Point Cloud<a class="headerlink" href="#point-cloud" title="Permalink to this headline"></a></h2>
+<h2>Point Cloud<a class="headerlink" href="#point-cloud" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_georeferencing/odm_georeferenced_model.ply/laz/csv</span></code> -- Ni georeferenced point cloud katika format tofauti</p>
 <figure class="align-center">
 <img alt="image of OpenDroneMap derived point cloud" src="../_images/pointcloud.png" />
@@ -416,7 +418,7 @@
 <p><em>Picha za anga katika State University Zanzibar, zilizoandaliwa na</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
 </section>
 <section id="d-textured-model">
-<h2>3D Textured Model<a class="headerlink" href="#d-textured-model" title="Permalink to this headline"></a></h2>
+<h2>3D Textured Model<a class="headerlink" href="#d-textured-model" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_texturing/odm_textured_model.obj</span></code> -- The textured surface mesh <code class="docutils literal notranslate"><span class="pre">odm_texturing/odm_textured_model_geo.obj</span></code> -- The georeferenced na textured surface mesh</p>
 <p>Unaweza kupata pointcloud na textured mesh kutumia MeshLab. Fungua MeshLab, na chagua <a class="reference external" href="file:Ingiza">file:Ingiza</a> Mesh na chagua textured mesh yako kutoka eneo sawa na lifuatalo: <code class="docutils literal notranslate"><span class="pre">odm_texturing\odm_textured_model.obj</span></code></p>
 <figure class="align-center">
@@ -425,7 +427,7 @@
 <p><em>Textured mesh courtesy of</em> <a class="reference external" href="https://twitter.com/opendronemap">OpenDroneMap</a></p>
 </section>
 <section id="orthophoto">
-<h2>Orthophoto<a class="headerlink" href="#orthophoto" title="Permalink to this headline"></a></h2>
+<h2>Orthophoto<a class="headerlink" href="#orthophoto" title="Permalink to this heading"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_orthophoto/odm_orthphoto.tif</span></code> -- GeoTIFF Orthophoto. Unaweza kuitumia kwenye QGIS kama tabaka la rasta.</p>
 <p><code class="docutils literal notranslate"><span class="pre">odm_orthophoto/odm_orthphoto.original.tif</span></code> -- The orthophoto in its original un-cropped state.</p>
 <figure class="align-center">
@@ -434,7 +436,7 @@
 <p>Picha juu ya State University Zanzibar, courtesy of* <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
 </section>
 <section id="dtm-dsm">
-<h2>DTM/DSM<a class="headerlink" href="#dtm-dsm" title="Permalink to this headline"></a></h2>
+<h2>DTM/DSM<a class="headerlink" href="#dtm-dsm" title="Permalink to this heading"></a></h2>
 <p>DTM/DSM itatengenezwa ikiwa <code class="docutils literal notranslate"><span class="pre">--dtm</span></code> au <code class="docutils literal notranslate"><span class="pre">--dsm</span></code> zitatumika. Angalia <a class="reference external" href="https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-models">tutorial on elevation models</a> kwa njia zaidi za kutengeneza.</p>
 <p>Data zitahifadhiwa ndani ya:</p>
 <blockquote>
@@ -449,7 +451,7 @@
 <p><em>Digital surface model over State University Zanzibar, courtesy of</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
 </section>
 <section id="list-of-all-outputs">
-<h2>Mpangilo wa matokeo yote<a class="headerlink" href="#list-of-all-outputs" title="Permalink to this headline"></a></h2>
+<h2>Mpangilo wa matokeo yote<a class="headerlink" href="#list-of-all-outputs" title="Permalink to this heading"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
 ├── images/
 │   ├── img-1234.jpg

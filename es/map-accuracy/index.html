@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Índice" href="../genindex/" />
@@ -394,8 +396,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>Precisión del Mapa</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Precisión del Mapa</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/map-accuracy.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
@@ -406,7 +408,7 @@
            <div itemprop="articleBody">
              
   <section id="map-accuracy">
-<h1>Precisión del Mapa<a class="headerlink" href="#map-accuracy" title="Enlazar permanentemente con este título"></a></h1>
+<h1>Precisión del Mapa<a class="headerlink" href="#map-accuracy" title="Enlace permanente a este encabezado"></a></h1>
 <p>La precisión se puede definir como el grado o la cercanía con la que la información de un mapa coincide con los valores del mundo real. Por tanto, cuando nos referimos a la precisión, nos referimos a la calidad de los datos y al número de errores contenidos en un determinado conjunto de datos (Pascual 2011).</p>
 <p><strong>Precisión Relativa o Local</strong></p>
 <p>La precisión local o relativa se puede definir como el grado en que las distancias entre dos puntos en un mapa corresponden a las distancias reales entre esos puntos en el mundo real.</p>
@@ -424,12 +426,12 @@
 <p>** Un nivel de precisión para cada proyecto**</p>
 <p>Cada proyecto tiene necesidades específicas de precisión que se deben cumplir. Por ejemplo, evaluar el progreso en un sitio de construcción o medir un área afectada por un incendio no requiere el uso de GCP, ya que la precisión absoluta no afectará el proceso de toma de decisiones. Por otro lado, hay tareas en las que la precisión es fundamental, por ejemplo, evaluaciones de cumplimiento de proyectos y levantamiento de títulos de propiedad, que requieren una mayor precisión relativa y absoluta.</p>
 <section id="what-to-expect">
-<h2>Que esperar<a class="headerlink" href="#what-to-expect" title="Enlazar permanentemente con este título"></a></h2>
+<h2>Que esperar<a class="headerlink" href="#what-to-expect" title="Enlace permanente a este encabezado"></a></h2>
 <p>En términos generales, se puede esperar que la precisión relativa sea del orden de 1 a 3 veces el GSD promedio para el conjunto de datos. Y en cuanto a la precisión absoluta, se debe considerar que depende de la unidad GPS montada en el UAV pero la precisión horizontal de un GPS estándar suele estar en el rango de 2 a 6 metros y la precisión vertical entre 3 y 4 veces la precisión horizontal.</p>
 <p>Cuando se utiliza GCP, la precisión absoluta se puede mejorar a 2,5 veces GSD para la precisión horizontal y 4 veces la GSD para la precisión vertical (Madawalagama 2016).</p>
 <p>A un GSD de 1 cm, la precisión es igual a la del RTK GNSS, y está dentro de las escalas de 1:200 según los estándares de precisión de mapeo NSDI y FGDC durante condiciones subóptimas (Barry 2013).</p>
 <section id="aspects-impacting-map-accuracy">
-<h3>Aspectos que impactan la precisión del mapa<a class="headerlink" href="#aspects-impacting-map-accuracy" title="Enlazar permanentemente con este título"></a></h3>
+<h3>Aspectos que impactan la precisión del mapa<a class="headerlink" href="#aspects-impacting-map-accuracy" title="Enlace permanente a este encabezado"></a></h3>
 <p><strong>Clima</strong></p>
 <p>Las condiciones climáticas tienen un impacto directo en los resultados de la fotogrametría, por lo que es importante considerar la cobertura de nubes, la velocidad del viento, la humedad, la altitud del sol y otros factores que influyen en la estabilidad del UAV y la iluminación del terreno.</p>
 <p><strong>Cámaras</strong></p>
@@ -441,7 +443,7 @@
 </section>
 </section>
 <section id="references">
-<h2>Referencias<a class="headerlink" href="#references" title="Enlazar permanentemente con este título"></a></h2>
+<h2>Referencias<a class="headerlink" href="#references" title="Enlace permanente a este encabezado"></a></h2>
 <p>Barry, P., &amp; Coakley, R. «Accuracy of UAV photogrammetry compared with Network RTK GPS.» Baseline Surveys. 2013. <a class="reference external" href="http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf">http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf</a>  (accessed 10 13, 2020).</p>
 <p>Drone Deploy. How Do I Use Ground Control Points?: A guide to using ground control points with drone mapping software. 5 8, 2017. <a class="reference external" href="https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/">https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/</a> (último acceso el 9 del 7, 2020).</p>
 <p>Madawalagama, S.L., Munasinghe, N., Dampegama, S.D.P.J. and Samarakoon, L. «Low-cost aerial mapping with consumer grade.» 37th Asian Conference on Remote Sensing. Colombo, Sri Lanka, 2016.</p>

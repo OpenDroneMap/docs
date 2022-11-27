@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
         <script src="../_static/translations.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
@@ -394,8 +396,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>Sorties OpenDroneMap</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Sorties OpenDroneMap</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/outputs.rst.txt" rel="nofollow"> Afficher la source de la page</a>
       </li>
@@ -406,10 +408,10 @@
            <div itemprop="articleBody">
              
   <section id="opendronemap-outputs">
-<h1>Sorties OpenDroneMap<a class="headerlink" href="#opendronemap-outputs" title="Lien permanent vers ce titre"></a></h1>
+<h1>Sorties OpenDroneMap<a class="headerlink" href="#opendronemap-outputs" title="Lien permanent vers cette rubrique"></a></h1>
 <p>Vous trouverez ci-dessous quelques-uns des résultats utiles produits par ODM.</p>
 <section id="point-cloud">
-<h2>Nuage de points<a class="headerlink" href="#point-cloud" title="Lien permanent vers ce titre"></a></h2>
+<h2>Nuage de points<a class="headerlink" href="#point-cloud" title="Lien permanent vers cette rubrique"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_georeferencing/odm_georeferenced_model.ply/laz/csv</span></code> – Le nuage de points géoréférencé dans différents formats de fichiers</p>
 <figure class="align-center">
 <img alt="image of OpenDroneMap derived point cloud" src="../_images/pointcloud.png" />
@@ -417,7 +419,7 @@
 <p><em>Nuage de points au-dessus de l’Université d’État de Zanzibar, avec l’aimable autorisation de</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
 </section>
 <section id="d-textured-model">
-<h2>Modèle texturé 3D<a class="headerlink" href="#d-textured-model" title="Lien permanent vers ce titre"></a></h2>
+<h2>Modèle texturé 3D<a class="headerlink" href="#d-textured-model" title="Lien permanent vers cette rubrique"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_texturing/odm_textured_model.obj</span></code> – Le maillage de surface texturé <code class="docutils literal notranslate"><span class="pre">odm_texturing/odm_textured_model_geo.obj</span></code> – Le maillage de surface géoréférencé et texturé</p>
 <p>Vous pouvez accéder au nuage de points et aux maillages texturés à l’aide de MeshLab. Ouvrez MeshLab et choisissez Fichier:Importer Maillage et choisissez votre maillage texturé à partir d’un emplacement similaire au suivant : <code class="docutils literal notranslate"><span class="pre">odm_texturing\odm_textured_model.obj</span></code></p>
 <figure class="align-center">
@@ -426,7 +428,7 @@
 <p><em>Maillage texturé avec l’aimable autorisation de</em> <a class="reference external" href="https://twitter.com/opendronemap">OpenDroneMap</a></p>
 </section>
 <section id="orthophoto">
-<h2>Orthophoto<a class="headerlink" href="#orthophoto" title="Lien permanent vers ce titre"></a></h2>
+<h2>Orthophoto<a class="headerlink" href="#orthophoto" title="Lien permanent vers cette rubrique"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_orthophoto/odm_orthphoto.tif</span></code> – Orthophoto GeoTIFF. Vous pouvez l’utiliser dans QGIS en tant que couche raster.</p>
 <p><code class="docutils literal notranslate"><span class="pre">odm_orthophoto/odm_orthphoto.original.tif</span></code> – L’orthophoto dans son état d’origine non rogné.</p>
 <figure class="align-center">
@@ -435,7 +437,7 @@
 <p><em>Orthophoto de l’Université d’État de Zanzibar, avec l’aimable autorisation de</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
 </section>
 <section id="dtm-dsm">
-<h2>DTM/DSM<a class="headerlink" href="#dtm-dsm" title="Lien permanent vers ce titre"></a></h2>
+<h2>DTM/DSM<a class="headerlink" href="#dtm-dsm" title="Lien permanent vers cette rubrique"></a></h2>
 <p>Le DTM/DSM ne sera créé que si les options <code class="docutils literal notranslate"><span class="pre">--dtm</span></code> ou <code class="docutils literal notranslate"><span class="pre">--dsm</span></code> sont utilisées. Voir <a class="reference external" href="https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-models">tutoriel sur les modèles d’élévation</a> pour plus d’options de création.</p>
 <p>Les données seront stockées dans:</p>
 <blockquote>
@@ -450,7 +452,7 @@
 <p><em>Modèle de surface numérique sur l’Université d’État de Zanzibar, avec l’aimable autorisation de</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
 </section>
 <section id="list-of-all-outputs">
-<h2>Liste de toutes les sorties<a class="headerlink" href="#list-of-all-outputs" title="Lien permanent vers ce titre"></a></h2>
+<h2>Liste de toutes les sorties<a class="headerlink" href="#list-of-all-outputs" title="Lien permanent vers cette rubrique"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
 ├── images/
 │   ├── img-1234.jpg

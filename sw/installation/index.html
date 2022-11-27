@@ -15,7 +15,9 @@
         <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
         <script src="../_static/jquery.js"></script>
         <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
         <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -393,8 +395,8 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a> &raquo;</li>
-      <li>Kuingiza na kuanza kutumia</li>
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Kuingiza na kuanza kutumia</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/installation.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -405,16 +407,16 @@
            <div itemprop="articleBody">
              
   <section id="installation-and-getting-started">
-<h1>Kuingiza na kuanza kutumia<a class="headerlink" href="#installation-and-getting-started" title="Permalink to this headline"></a></h1>
+<h1>Kuingiza na kuanza kutumia<a class="headerlink" href="#installation-and-getting-started" title="Permalink to this heading"></a></h1>
 <p>Kipengele hiki kimekubalika na kurahisishwa pamoja na ruhusa kutoka <a class="reference external" href="https://odmbook.com">OpenDroneMap: Maelekezo yaliokosekana</a>, by Piero Toffanin.</p>
 <section id="quickstart">
-<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this headline"></a></h2>
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading"></a></h2>
 <p>Installers for OpenDroneMap are available for purchase from UAV4Geo, and are the easiest way to get started and come with support.</p>
 <p><a class="reference external" href="https://opendronemap.org/webodm/download/#installer">https://opendronemap.org/webodm/download/#installer</a></p>
 <p>That said, OpenDroneMap is a free and open source ecoystem. Community support is available for those looking to install themselves and directions follow:</p>
 </section>
 <section id="hardware-recommendations">
-<h2>Sifa za Hardware<a class="headerlink" href="#hardware-recommendations" title="Permalink to this headline"></a></h2>
+<h2>Sifa za Hardware<a class="headerlink" href="#hardware-recommendations" title="Permalink to this heading"></a></h2>
 <p>Nafasi ndogo inayotakiwa kwa kutumia software ni:</p>
 <ul class="simple">
 <li><p>64bit CPU iliotengenezwa sasa au baada ya 2010</p></li>
@@ -465,13 +467,13 @@
 </table>
 </section>
 <section id="installation">
-<span id="docker-installation"></span><h2>Uingizaji<a class="headerlink" href="#installation" title="Permalink to this headline"></a></h2>
+<span id="docker-installation"></span><h2>Uingizaji<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
 <p>Tunapendekeza watu kutumia <a class="reference external" href="https://www.docker.com">docker</a> kwa kurun ODM, kama unatumia Windows, macOS au Linux.</p>
 <section id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this headline"></a></h3>
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this heading"></a></h3>
 <p>Kutumia OpenDroneMap unahitaji angalau Windows 7. Toleo la nyuma la windows halihimili.</p>
 <section id="step-1-check-virtualization-support">
-<h4>Jia ya 1. Angalia msaada wa uvumbuzi<a class="headerlink" href="#step-1-check-virtualization-support" title="Permalink to this headline"></a></h4>
+<h4>Jia ya 1. Angalia msaada wa uvumbuzi<a class="headerlink" href="#step-1-check-virtualization-support" title="Permalink to this heading"></a></h4>
 <p>Docker inahitaji vipengele kutoka kwenye CPU yako inayoitwa virtualization, ambayo inaruhusu kufanya kazi virtual mashine (VMs). Hakikisha unaweka enabled! baadhi ya muda huwa disabled. Kuangalia, katika windows 8 au ya juu zaidi unaweza kufungua <strong>Task Manager</strong> (Bonyeza CTRL+SHIFT+ESC) na washa <strong>Performance</strong> tab.</p>
 <figure class="align-center">
 <img alt="Image of checking virtualization in Windows 8 or higher" src="../_images/virtualizationcheck.png" />
@@ -485,7 +487,7 @@
 <p><em>Key iliyozoeleka kubonyeza kwa kuwasha computer kutumia boot menu kwa watengezaji wengi wa PC</em></p>
 </section>
 <section id="step-2-install-requirements">
-<h4>Njia ya 2. Ingiza Vinavyohitajika<a class="headerlink" href="#step-2-install-requirements" title="Permalink to this headline"></a></h4>
+<h4>Njia ya 2. Ingiza Vinavyohitajika<a class="headerlink" href="#step-2-install-requirements" title="Permalink to this heading"></a></h4>
 <p>Kwanza, Unahitaji kuingiza:</p>
 <ul class="simple">
 <li><p>Git: <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p></li>
@@ -508,7 +510,7 @@
 <p>Baada ya kuingiza docker, fungua kutoka Desktop icon ambayo imetengenezwa ilipoingizwa (<strong>Docker Quickstart</strong> kwa Docker Toolbox, <strong>Docker for Windows</strong> kwa docker kwa ajili ya Windows). Hii ni muhimu, usikatishe hatua hii. ikiwa kuna makosa fuata haraka katika koo na uyatatue.</p>
 </section>
 <section id="step-3-check-memory-and-cpu-allocation">
-<h4>Njia ya 3. Angalia nafasi na mgao wa CPU<a class="headerlink" href="#step-3-check-memory-and-cpu-allocation" title="Permalink to this headline"></a></h4>
+<h4>Njia ya 3. Angalia nafasi na mgao wa CPU<a class="headerlink" href="#step-3-check-memory-and-cpu-allocation" title="Permalink to this heading"></a></h4>
 <p>Docker katika Windows inafanya kazi kwa kufungua VM katika msingi (Fikiria VM kama “computer emulator”). VM hii ina kiwango fulani cha nafasi kilichogaiwa na WebODM, kinaweza kutumika tu kwa kiasi ambacho kimetengwa.</p>
 <p>Ikiwa utaingiza Docker Toolbox (angalia chini ikiwa utaingiza Docker badala ya windows):</p>
 <ol class="arabic simple">
@@ -539,7 +541,7 @@
 <p><em>Njia ya 3 &amp; 4 Mpangilo wa  Docker</em></p>
 </section>
 <section id="step-4-download-webodm">
-<h4>Njia ya 4. Pakua WebODM<a class="headerlink" href="#step-4-download-webodm" title="Permalink to this headline"></a></h4>
+<h4>Njia ya 4. Pakua WebODM<a class="headerlink" href="#step-4-download-webodm" title="Permalink to this heading"></a></h4>
 <p>Fungua <strong>Git Gui</strong> programu iliyoingizwa pamoja na Git. Kutoka hapo:</p>
 <ul class="simple">
 <li><p>Ikifunguka Git Gui, bonyeza 'Clone Existing Repository' option</p></li>
@@ -559,7 +561,7 @@
 <p>Nenda hadi <strong>Repository</strong> menu, kisha bonyeza <strong>Create Desktop Icon</strong>. Hii itakuruhusu kurudi nyuma kwenda katika application hii kiurahisi zaidi baadae.</p>
 </section>
 <section id="step-4-launch-webodm">
-<h4>Njia ya 4. Zindua WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Permalink to this headline"></a></h4>
+<h4>Njia ya 4. Zindua WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Permalink to this heading"></a></h4>
 <p>Kutoka Git Gui, nenda kwenye <strong>Repository</strong> menu, kisha bonyeza <strong>Git Bash</strong>. Kutoka kwenye mstari wa camand aina ya terminal:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start <span class="p">&amp;</span>
 </pre></div>
@@ -584,10 +586,10 @@
 </section>
 </section>
 <section id="macos">
-<h3>macOS<a class="headerlink" href="#macos" title="Permalink to this headline"></a></h3>
+<h3>macOS<a class="headerlink" href="#macos" title="Permalink to this heading"></a></h3>
 <p>Modem nyingi (post 2010) za Mac computer zinafanya kazi MacOS Sierra 10.12 au kubwa inafanyakazi OpenDroneMap kutumia docker, ikiwa hardware virtualization inakubali (angalia chini).</p>
 <section id="id1">
-<h4>Jia ya 1. Angalia msaada wa uvumbuzi<a class="headerlink" href="#id1" title="Permalink to this headline"></a></h4>
+<h4>Jia ya 1. Angalia msaada wa uvumbuzi<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
 <p>Fungua terminal window na andika:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sysctl kern.hv_support
 </pre></div>
@@ -600,7 +602,7 @@
 <p>Ikiwa majibu ni <em>kern.hv_support: 0</em>, inamaanisha Mac yako ni ya zamani sana kwa kutumia OpenDroneMap. :(</p>
 </section>
 <section id="id2">
-<h4>Njia ya 2. Ingiza Vinavyohitajika<a class="headerlink" href="#id2" title="Permalink to this headline"></a></h4>
+<h4>Njia ya 2. Ingiza Vinavyohitajika<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
 <p>Kuna programu mbili tu za kuingiza:</p>
 <ol class="arabic simple">
 <li><p>Docker: <a class="reference external" href="https://download.docker.com/mac/stable/Docker.dmg">https://download.docker.com/mac/stable/Docker.dmg</a></p></li>
@@ -630,7 +632,7 @@
 <p>Ikiwa umepata “bash: git: command not found”, jaribu kuwasha tena <strong>Terminal</strong> app yako na angalia kwa mara nyengine ikiwa kuna makosa wakati wa mchakato wa kuingiza.</p>
 </section>
 <section id="id3">
-<h4>Njia ya 3. Angalia nafasi na mgao wa CPU<a class="headerlink" href="#id3" title="Permalink to this headline"></a></h4>
+<h4>Njia ya 3. Angalia nafasi na mgao wa CPU<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
 <p>Docker katika macOS inafanya kazi kwa kuwasha VM katika background (fikiria hilo kama computer emulator”). VM hii ina kiwango cha nafasi kilichowekwa na WebODM inaweza kutumia nafasi ya kutosha iliotengwa.</p>
 <ol class="arabic simple">
 <li><p>Right click ikoni ya nyumbani kutoka kwenye task bar na bonyeza <strong>Preferences</strong>...</p></li>
@@ -644,7 +646,7 @@
 <p><em>Docker advanced settings</em></p>
 </section>
 <section id="step-4-download-and-launch-webodm">
-<h4>Njia ya 4. Pakua na fungua WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Permalink to this headline"></a></h4>
+<h4>Njia ya 4. Pakua na fungua WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Permalink to this heading"></a></h4>
 <p>Kutoka <strong>Terminal</strong> andika:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
 $ <span class="nb">cd</span> WebODM
@@ -655,10 +657,10 @@ $ ./webodm.sh start
 </section>
 </section>
 <section id="linux">
-<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this headline"></a></h3>
+<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this heading"></a></h3>
 <p>OpenDroneMap inaweza kufanya kazi kwenye Linux yoyote ambayo inaruhusu docker. Kwa mujibu wa <a class="reference external" href="https://docs.docker.com/install/">nyaraka za website ya docker</a> kwa mujibu wa msaada rasmi uliothibitishwa ni CentOS, Debian, Ubuntu na fedora, pamoja na bainari tuli zinazotumika kwa wengine. Ikiwa unataka kuchakua distribution peke yake kwa kumia OpenDroneMap, Ubuntu ni chaguo la kutumia.</p>
 <section id="step-1-install-requirements">
-<h4>Hatua 1. Mahitaji ya kuingiza<a class="headerlink" href="#step-1-install-requirements" title="Permalink to this headline"></a></h4>
+<h4>Hatua 1. Mahitaji ya kuingiza<a class="headerlink" href="#step-1-install-requirements" title="Permalink to this heading"></a></h4>
 <p>Kuna program nne ambazo zinahitaji kuingizwa:</p>
 <ol class="arabic simple">
 <li><p>Docker</p></li>
@@ -668,7 +670,7 @@ $ ./webodm.sh start
 </ol>
 <p>Hatuweza kuweza kumaliza mchakato wa uwingizaji kwa kila usambazaji wa Linux nje ya hapo, kwa hio tutazuiya maelekezo kwa wote kusambaza wanasaidiwa na docker. Katika kesi zote ni jambo la kufungua terminal prompt na kuandika comand.</p>
 <section id="install-on-ubuntu-debian">
-<h5>Ingiza ndani ya Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Permalink to this headline"></a></h5>
+<h5>Ingiza ndani ya Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Permalink to this heading"></a></h5>
 <p>Camand za kuandika</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt update
 $ curl -fsSL https://get.docker.com -o get-docker.sh
@@ -678,7 +680,7 @@ $ sudo apt install -y git python python-pip
 </div>
 </section>
 <section id="install-on-centos-rhel">
-<h5>Ingiza ndani ya CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Permalink to this headline"></a></h5>
+<h5>Ingiza ndani ya CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Permalink to this heading"></a></h5>
 <p>Camand za kuandika</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
 $ sh get-docker.sh
@@ -687,7 +689,7 @@ $ sudo yum -y install git python python-pip
 </div>
 </section>
 <section id="install-on-fedora">
-<h5>Ingiza ndani ya Fedora<a class="headerlink" href="#install-on-fedora" title="Permalink to this headline"></a></h5>
+<h5>Ingiza ndani ya Fedora<a class="headerlink" href="#install-on-fedora" title="Permalink to this heading"></a></h5>
 <p>Camand za kuandika</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
 $ sh get-docker.sh
@@ -696,7 +698,7 @@ $ sudo dnf install git python python-pip
 </div>
 </section>
 <section id="install-on-arch">
-<h5>Ingiza ndani ya Arch<a class="headerlink" href="#install-on-arch" title="Permalink to this headline"></a></h5>
+<h5>Ingiza ndani ya Arch<a class="headerlink" href="#install-on-arch" title="Permalink to this heading"></a></h5>
 <p>Camand za kuandika</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pacman -Sy docker git python python-pip
 </pre></div>
@@ -704,7 +706,7 @@ $ sudo dnf install git python python-pip
 </section>
 </section>
 <section id="step-2-check-additional-requirements">
-<h4>Njia ya 2. Angalia Mahitaji ya Ziada<a class="headerlink" href="#step-2-check-additional-requirements" title="Permalink to this headline"></a></h4>
+<h4>Njia ya 2. Angalia Mahitaji ya Ziada<a class="headerlink" href="#step-2-check-additional-requirements" title="Permalink to this heading"></a></h4>
 <p>Kwa kuongezea kwa programu tatu juu, dockercompose script pia inahitajika. Baadhi ya muda inakuwa ishahifadhiwa ndani ya docker, lakini kuna muda haijaingizwa. Kuthibitisha kama imeingizwa jaribu kuandika:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker-compose --version
 </pre></div>
@@ -723,7 +725,7 @@ $ sudo dnf install git python python-pip
 </div>
 </section>
 <section id="step-3-download-and-launch-webodm">
-<h4>Njia ya 3. Pakua na zindua WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Permalink to this headline"></a></h4>
+<h4>Njia ya 3. Pakua na zindua WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Permalink to this heading"></a></h4>
 <p>Kutoka aina ya terminal:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
 $ <span class="nb">cd</span> WebODM
@@ -735,7 +737,7 @@ $ ./webodm.sh start
 </section>
 </section>
 <section id="basic-commands-and-troubleshooting">
-<h2>Camand za msingi na utatuzi shida<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Permalink to this headline"></a></h2>
+<h2>Camand za msingi na utatuzi shida<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Permalink to this heading"></a></h2>
 <p>Kitu kizuri kuhusu kutumia docker ni 99% ya kazi unayohitaji kufanya ikiwa unatumia WebODM, inaweza kufanywa kwa kutumia ./webodm.sh script. Unaweza kutimiza moja kati ya hizo:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start
 </pre></div>
@@ -768,7 +770,7 @@ $ ./webodm.sh --help
 <p><a class="reference external" href="https://community.opendronemap.org">Jukwaa la kijamii</a> ni sehemu nzuri kuomba msaada ikiwa umekwama wakati unapingiza kwa mpangilio na kwa maswali ya ujumla kutumia ./webodm.sh script.</p>
 </section>
 <section id="hello-webodm">
-<h2>Habari, WebODM!<a class="headerlink" href="#hello-webodm" title="Permalink to this headline"></a></h2>
+<h2>Habari, WebODM!<a class="headerlink" href="#hello-webodm" title="Permalink to this heading"></a></h2>
 <p>Baada kuwa inatumika ./webodm.sh ikianza na kufungua WebODM ndani ya browser, utasalimia pamoja na ujumbe wa karibu na utaulizwa kutengeneza mtumiaji wa kwanza. Chukua muda kumalizia mwenyewe pamoja na web interface na kuchunguza menu tofauti.</p>
 <figure class="align-center">
 <img alt="Screenshot of WebODM Dashboard" src="../_images/webodmdashboard.png" />
@@ -780,7 +782,7 @@ $ ./webodm.sh --help
 <img alt="Image of celebratory dance" src="../_images/congratulations.png" />
 </figure>
 <section id="running-on-more-than-one-machine">
-<h3>Kuendesha mashine zaidi ya moja<a class="headerlink" href="#running-on-more-than-one-machine" title="Permalink to this headline"></a></h3>
+<h3>Kuendesha mashine zaidi ya moja<a class="headerlink" href="#running-on-more-than-one-machine" title="Permalink to this heading"></a></h3>
 <p><strong>Optionally:</strong> Ikiwa una computer nyengine, unaweza kurejea mchakato wa uwingizaji (install docker, git, python, etc.) na anzisha NodeODM mpya kwa kuandika kutoka dirisha la Terminal/Git Bash:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --rm -it -p <span class="m">3000</span>:3000 opendronemap/nodeodm -q <span class="m">1</span> --token secret
 </pre></div>
