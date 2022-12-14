@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Options and Flags &mdash; OpenDroneMap 3.0.0 documentation</title>
+  <title>Options and Flags &mdash; OpenDroneMap 3.0.2 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -33,7 +33,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                3.0.0
+                3.0.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -141,6 +141,7 @@
 </li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Options and Flags</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="3d-tiles/">3d-tiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="align/">align</a></li>
 <li class="toctree-l2"><a class="reference internal" href="auto-boundary/">auto-boundary</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="auto-boundary/#what-is-auto-boundary">What Is Auto-Boundary?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="auto-boundary/#when-is-auto-boundary-helpful">When Is Auto-Boundary Helpful?</a></li>
@@ -411,6 +412,8 @@
 <dl class="simple">
 <dt><a class="reference internal" href="3d-tiles/#d-tiles"><span class="std std-ref">3d-tiles</span></a></dt><dd><p>Generate OGC 3D Tiles outputs. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
+<dt><a class="reference internal" href="align/#align"><span class="std std-ref">align</span></a> &lt;path string&gt;</dt><dd><p>Path to a GeoTIFF DEM or a LAS/LAZ point cloud that the reconstruction outputs should be automatically aligned to. Experimental. Default: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
 <dt><a class="reference internal" href="auto-boundary/#auto-boundary"><span class="std std-ref">auto-boundary</span></a></dt><dd><p>Automatically set a boundary using camera shot locations to limit the area of the reconstruction. This can help remove far away background artifacts (sky, background landscapes, etc.). See also –boundary. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="auto-boundary-distance/#auto-boundary-distance"><span class="std std-ref">auto-boundary-distance</span></a> &lt;positive float&gt;</dt><dd><p>Specify the distance between camera shot locations and the outer edge of the boundary when computing the boundary with –auto-boundary. Set to 0 to automatically choose a value. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
@@ -584,6 +587,7 @@
 <div class="toctree-wrapper compound">
 <ul>
 <li class="toctree-l1"><a class="reference internal" href="3d-tiles/">3d-tiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="align/">align</a></li>
 <li class="toctree-l1"><a class="reference internal" href="auto-boundary/">auto-boundary</a></li>
 <li class="toctree-l1"><a class="reference internal" href="auto-boundary-distance/">auto-boundary-distance</a></li>
 <li class="toctree-l1"><a class="reference internal" href="bg-removal/">bg-removal</a></li>

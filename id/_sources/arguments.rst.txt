@@ -11,6 +11,9 @@ Options and Flags
 :ref:`3d-tiles<3d-tiles>` 
   Generate OGC 3D Tiles outputs. Default: ``False``
 
+:ref:`align<align>` <path string>
+  Path to a GeoTIFF DEM or a LAS/LAZ point cloud that the reconstruction outputs should be automatically aligned to. Experimental. Default: ``None``
+
 :ref:`auto-boundary<auto-boundary>` 
   Automatically set a boundary using camera shot locations to limit the area of the reconstruction. This can help remove far away background artifacts (sky, background landscapes, etc.). See also --boundary. Default: ``False``
 
