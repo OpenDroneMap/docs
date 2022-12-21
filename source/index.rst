@@ -1,4 +1,7 @@
-.. `<rel="me" https://fosstodon.org/@OpenDroneMap>`_
+.. raw:: html
+
+   <a rel="me" style="visibility:hidden" aria-hidden="true"  href="https://fosstodon.org/@OpenDroneMap">
+
 .. figure:: https://www.opendronemap.org/wp-content/uploads/2018/07/odm-logo.svg
    :alt: OpenDroneMap Logo
    :align: left
@@ -58,4 +61,3 @@ The documentation is available in several languages. Some translations are incom
     requesting-features
     contributing
     faq
-
