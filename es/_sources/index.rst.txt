@@ -1,4 +1,4 @@
-`<rel="me" "https://fosstodon.org/@OpenDroneMap">`
+.. `<rel="me" https://fosstodon.org/@OpenDroneMap>`_
 .. figure:: https://www.opendronemap.org/wp-content/uploads/2018/07/odm-logo.svg
    :alt: OpenDroneMap Logo
    :align: left
