@@ -53,6 +53,7 @@ The documentation is available in several languages. Some translations are incom
     gcp
     map-accuracy
     geo
+    align
     masks
     large
     resources
