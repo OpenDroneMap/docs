@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Splitting Large Datasets &mdash; OpenDroneMap 3.0.2 documentation</title>
+  <title>Splitting Large Datasets &mdash; OpenDroneMap 3.0.3 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -33,7 +33,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                3.0.2
+                3.0.3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -423,7 +423,7 @@
 <section id="local-split-merge">
 <h2>Local Split-Merge<a class="headerlink" href="#local-split-merge" title="Permalink to this heading"></a></h2>
 <p>Ang pagsplit ng dataset sa mas maayos na submodels at sunod-sunod na pagproseso n lahat ng submodels sa iisang machine ay madali lamang! Gamitin lang ang <code class="docutils literal notranslate"><span class="pre">--split</span></code> at <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code> para mapagdesisyunan ang karaniwan na bilang ng mga imahe kada submodel at i-overlap (sa metro) sa pagitan ng submodels ayon sa pagkakabanggit.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split <span class="m">400</span> --split-overlap <span class="m">100</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-ti<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span>/my/project:/datasets/code<span class="w"> </span>opendronemap/odm<span class="w"> </span>--project-path<span class="w"> </span>/datasets<span class="w"> </span>--split<span class="w"> </span><span class="m">400</span><span class="w"> </span>--split-overlap<span class="w"> </span><span class="m">100</span>
 </pre></div>
 </div>
 <p>Kung alam mo na kung papaano mo gusto hatiin ang dataset, maaaring maglaan ng impormasyon at ito ay magagamit sa halip na clustering algorithm.</p>
@@ -446,29 +446,29 @@
 <section id="getting-started-with-distributed-split-merge">
 <h3>Paano simulan ang Distributed Split-Merge<a class="headerlink" href="#getting-started-with-distributed-split-merge" title="Permalink to this heading"></a></h3>
 <p>Ang unang hakbang ay ang simulan ang ClusterODM</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti -p <span class="m">3001</span>:3000 -p <span class="m">8080</span>:8080 opendronemap/clusterodm
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-ti<span class="w"> </span>-p<span class="w"> </span><span class="m">3001</span>:3000<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span>opendronemap/clusterodm
 </pre></div>
 </div>
 <p>Tapos, sa mga machine na gusto mong gamitin, i-launch ang NodeODM instance via</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti -p <span class="m">3000</span>:3000 opendronemap/nodeodm
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-ti<span class="w"> </span>-p<span class="w"> </span><span class="m">3000</span>:3000<span class="w"> </span>opendronemap/nodeodm
 </pre></div>
 </div>
 <p>Kumonekta via telnet to CLusterODM at i-add ang IP adresses/port ng machine na gumagamit ng NodeODM</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ telnet &lt;cluster-odm-ip&gt; <span class="m">8080</span>
-Connected to &lt;cluster-odm-ip&gt;.
-Escape character is <span class="s1">&#39;^]&#39;</span>.
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>telnet<span class="w"> </span>&lt;cluster-odm-ip&gt;<span class="w"> </span><span class="m">8080</span>
+Connected<span class="w"> </span>to<span class="w"> </span>&lt;cluster-odm-ip&gt;.
+Escape<span class="w"> </span>character<span class="w"> </span>is<span class="w"> </span><span class="s1">&#39;^]&#39;</span>.
 <span class="o">[</span>...<span class="o">]</span>
 <span class="c1"># node add &lt;node-odm-ip-1&gt; 3000</span>
 <span class="c1"># node add &lt;node-odm-ip-2&gt; 3000</span>
 <span class="o">[</span>...<span class="o">]</span>
 <span class="c1"># node list</span>
-<span class="m">1</span><span class="o">)</span> &lt;node-odm-ip-1&gt;:3000 <span class="o">[</span>online<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.1&gt;
-<span class="m">2</span><span class="o">)</span> &lt;node-odm-ip-2&gt;:3000 <span class="o">[</span>online<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.1&gt;
+<span class="m">1</span><span class="o">)</span><span class="w"> </span>&lt;node-odm-ip-1&gt;:3000<span class="w"> </span><span class="o">[</span>online<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">0</span>/2<span class="o">]</span><span class="w"> </span>&lt;version<span class="w"> </span><span class="m">1</span>.5.1&gt;
+<span class="m">2</span><span class="o">)</span><span class="w"> </span>&lt;node-odm-ip-2&gt;:3000<span class="w"> </span><span class="o">[</span>online<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">0</span>/2<span class="o">]</span><span class="w"> </span>&lt;version<span class="w"> </span><span class="m">1</span>.5.1&gt;
 </pre></div>
 </div>
 <p>Siguraduhin na ikaw ay gumagamit ng bersiyon <code class="docutils literal notranslate"><span class="pre">1.5.1</span></code> o mas mataas pa na NodeODM API.</p>
 <p>Sa puntong ito, gamitin ang <code class="docutils literal notranslate"><span class="pre">--sm-cluster</span></code> na opsiyon para ma-enable ang distributed split-merge</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run -ti --rm -v /my/project:/datasets/code opendronemap/odm --project-path /datasets --split <span class="m">800</span> --split-overlap <span class="m">120</span> --sm-cluster http://&lt;cluster-odm-ip&gt;:3001
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-ti<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span>/my/project:/datasets/code<span class="w"> </span>opendronemap/odm<span class="w"> </span>--project-path<span class="w"> </span>/datasets<span class="w"> </span>--split<span class="w"> </span><span class="m">800</span><span class="w"> </span>--split-overlap<span class="w"> </span><span class="m">120</span><span class="w"> </span>--sm-cluster<span class="w"> </span>http://&lt;cluster-odm-ip&gt;:3001
 </pre></div>
 </div>
 </section>
@@ -476,35 +476,35 @@ Escape character is <span class="s1">&#39;^]&#39;</span>.
 <h3>Pagkaunawa sa Cluster<a class="headerlink" href="#understanding-the-cluster" title="Permalink to this heading"></a></h3>
 <p>Kapag konektado via telnet, posible na magtanong sa kung ano na ang kalagayan ng cluster. Halimbawa, pwedeng gamitin ang command na HELP para hanapin ang mga available na commands.</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># HELP</span>
-NODE ADD &lt;hostname&gt; &lt;port&gt; <span class="o">[</span>token<span class="o">]</span> - Add new node
-NODE DEL &lt;node number&gt; - Remove a node
-NODE INFO &lt;node number&gt; - View node info
-NODE LIST - List nodes
-NODE LOCK &lt;node number&gt; - Stop forwarding tasks to this node
-NODE UNLOCK &lt;node number&gt; - Resume forwarding tasks to this node
-NODE UPDATE - Update all nodes info
-NODE BEST &lt;number of images&gt; - Show best node <span class="k">for</span> the number of images
-ROUTE INFO &lt;taskId&gt; - Find route information <span class="k">for</span> task
-ROUTE LIST <span class="o">[</span>node number<span class="o">]</span> - List routes
-TASK LIST <span class="o">[</span>node number<span class="o">]</span> - List tasks
-TASK INFO &lt;taskId&gt; - View task info
-TASK OUTPUT &lt;taskId&gt; <span class="o">[</span>lines<span class="o">]</span> - View task output
-TASK CANCEL &lt;taskId&gt; - Cancel task
-TASK REMOVE &lt;taskId&gt; - Remove task
-ASR VIEWCMD &lt;number of images&gt; - View <span class="nb">command</span> used to create a machine
-!! - Repeat last <span class="nb">command</span>
+NODE<span class="w"> </span>ADD<span class="w"> </span>&lt;hostname&gt;<span class="w"> </span>&lt;port&gt;<span class="w"> </span><span class="o">[</span>token<span class="o">]</span><span class="w"> </span>-<span class="w"> </span>Add<span class="w"> </span>new<span class="w"> </span>node
+NODE<span class="w"> </span>DEL<span class="w"> </span>&lt;node<span class="w"> </span>number&gt;<span class="w"> </span>-<span class="w"> </span>Remove<span class="w"> </span>a<span class="w"> </span>node
+NODE<span class="w"> </span>INFO<span class="w"> </span>&lt;node<span class="w"> </span>number&gt;<span class="w"> </span>-<span class="w"> </span>View<span class="w"> </span>node<span class="w"> </span>info
+NODE<span class="w"> </span>LIST<span class="w"> </span>-<span class="w"> </span>List<span class="w"> </span>nodes
+NODE<span class="w"> </span>LOCK<span class="w"> </span>&lt;node<span class="w"> </span>number&gt;<span class="w"> </span>-<span class="w"> </span>Stop<span class="w"> </span>forwarding<span class="w"> </span>tasks<span class="w"> </span>to<span class="w"> </span>this<span class="w"> </span>node
+NODE<span class="w"> </span>UNLOCK<span class="w"> </span>&lt;node<span class="w"> </span>number&gt;<span class="w"> </span>-<span class="w"> </span>Resume<span class="w"> </span>forwarding<span class="w"> </span>tasks<span class="w"> </span>to<span class="w"> </span>this<span class="w"> </span>node
+NODE<span class="w"> </span>UPDATE<span class="w"> </span>-<span class="w"> </span>Update<span class="w"> </span>all<span class="w"> </span>nodes<span class="w"> </span>info
+NODE<span class="w"> </span>BEST<span class="w"> </span>&lt;number<span class="w"> </span>of<span class="w"> </span>images&gt;<span class="w"> </span>-<span class="w"> </span>Show<span class="w"> </span>best<span class="w"> </span>node<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>images
+ROUTE<span class="w"> </span>INFO<span class="w"> </span>&lt;taskId&gt;<span class="w"> </span>-<span class="w"> </span>Find<span class="w"> </span>route<span class="w"> </span>information<span class="w"> </span><span class="k">for</span><span class="w"> </span>task
+ROUTE<span class="w"> </span>LIST<span class="w"> </span><span class="o">[</span>node<span class="w"> </span>number<span class="o">]</span><span class="w"> </span>-<span class="w"> </span>List<span class="w"> </span>routes
+TASK<span class="w"> </span>LIST<span class="w"> </span><span class="o">[</span>node<span class="w"> </span>number<span class="o">]</span><span class="w"> </span>-<span class="w"> </span>List<span class="w"> </span>tasks
+TASK<span class="w"> </span>INFO<span class="w"> </span>&lt;taskId&gt;<span class="w"> </span>-<span class="w"> </span>View<span class="w"> </span>task<span class="w"> </span>info
+TASK<span class="w"> </span>OUTPUT<span class="w"> </span>&lt;taskId&gt;<span class="w"> </span><span class="o">[</span>lines<span class="o">]</span><span class="w"> </span>-<span class="w"> </span>View<span class="w"> </span>task<span class="w"> </span>output
+TASK<span class="w"> </span>CANCEL<span class="w"> </span>&lt;taskId&gt;<span class="w"> </span>-<span class="w"> </span>Cancel<span class="w"> </span>task
+TASK<span class="w"> </span>REMOVE<span class="w"> </span>&lt;taskId&gt;<span class="w"> </span>-<span class="w"> </span>Remove<span class="w"> </span>task
+ASR<span class="w"> </span>VIEWCMD<span class="w"> </span>&lt;number<span class="w"> </span>of<span class="w"> </span>images&gt;<span class="w"> </span>-<span class="w"> </span>View<span class="w"> </span><span class="nb">command</span><span class="w"> </span>used<span class="w"> </span>to<span class="w"> </span>create<span class="w"> </span>a<span class="w"> </span>machine
+!!<span class="w"> </span>-<span class="w"> </span>Repeat<span class="w"> </span>last<span class="w"> </span><span class="nb">command</span>
 </pre></div>
 </div>
 <p>Kung halimbawa naman ay ang Node ODM instance ay hindi aktibo kapag sinimulan ang ClusterODM, maglilista kami ng nodesat makikita ang mga sumusunod:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># NODE LIST</span>
-<span class="m">1</span><span class="o">)</span> localhost:3000 <span class="o">[</span>offline<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.3&gt; <span class="o">[</span>L<span class="o">]</span>
+<span class="m">1</span><span class="o">)</span><span class="w"> </span>localhost:3000<span class="w"> </span><span class="o">[</span>offline<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">0</span>/2<span class="o">]</span><span class="w"> </span>&lt;version<span class="w"> </span><span class="m">1</span>.5.3&gt;<span class="w"> </span><span class="o">[</span>L<span class="o">]</span>
 </pre></div>
 </div>
 <p>Para maresolusyonan ito, maaaring magsimula ang lokal na node (kung hindi pa nasisimulan) at magperform ng <code class="docutils literal notranslate"><span class="pre">NODE</span> <span class="pre">UPDATE</span></code></p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># NODE UPDATE</span>
 OK
 <span class="c1"># NODE LIST</span>
-<span class="m">1</span><span class="o">)</span> localhost:3000 <span class="o">[</span>online<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.3&gt; <span class="o">[</span>L<span class="o">]</span>
+<span class="m">1</span><span class="o">)</span><span class="w"> </span>localhost:3000<span class="w"> </span><span class="o">[</span>online<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">0</span>/2<span class="o">]</span><span class="w"> </span>&lt;version<span class="w"> </span><span class="m">1</span>.5.3&gt;<span class="w"> </span><span class="o">[</span>L<span class="o">]</span>
 </pre></div>
 </div>
 </section>
@@ -523,9 +523,9 @@ OK
 <ul class="simple">
 <li><p>Mag-install ng gumaganang bersiyon ng NodeJS tsaka maginstall ng ClusterODM</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git clone https://github.com/OpenDroneMap/ClusterODM
-<span class="nb">cd</span> ClusterODM
-npm install
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/OpenDroneMap/ClusterODM
+<span class="nb">cd</span><span class="w"> </span>ClusterODM
+npm<span class="w"> </span>install
 </pre></div>
 </div>
 <ul class="simple">
@@ -534,21 +534,21 @@ npm install
 <li><p>Gumawa ng file para sa <a class="reference external" href="https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/digitalocean.md">DigitalOcean</a> o <a class="reference external" href="https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/aws.md">Amazon Web Services</a>.</p></li>
 </ul>
 <p>Maaari ng simulan ang ClusterODM</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>node index.js --asr configuration.json
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>node<span class="w"> </span>index.js<span class="w"> </span>--asr<span class="w"> </span>configuration.json
 </pre></div>
 </div>
 <p>Dapat makita ang similar na mensahe sa console</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>info: ASR: DigitalOceanAsrProvider
-info: Can write to S3
-info: Found docker-machine executable
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>info:<span class="w"> </span>ASR:<span class="w"> </span>DigitalOceanAsrProvider
+info:<span class="w"> </span>Can<span class="w"> </span>write<span class="w"> </span>to<span class="w"> </span>S3
+info:<span class="w"> </span>Found<span class="w"> </span>docker-machine<span class="w"> </span>executable
 </pre></div>
 </div>
 <p>Dapat ay mayroon kang kahit man lamang isang static NodeODM node na nakakabit sa ClusterODM, kahit na plano mo na gamitin ang autoscaler sa lahat ng proseso. Kapag naset-up ang autoscaling, hindi na pwedeng magka-zero nodes at umasa sa autoscaler ng 100%. Kailangan kabitan ng NodeODM node para kumilos bilang &quot;reference node&quot; kung hindi ma'y ang ClusterODM ay hindi malalaman kung paano pangasiwaan ng mga ilang hiling (sa pagforward ng UI, sa validating options bago sa spinning up ng instance, etc.). Sa kadahilanan na ito, kailangan idagdag ang &quot;dummy&quot; NodeODM node at i-lock ito.</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>telnet localhost <span class="m">8080</span>
-&gt; NODE ADD localhost <span class="m">3001</span>
-&gt; NODE LOCK <span class="m">1</span>
-&gt; NODE LIST
-<span class="m">1</span><span class="o">)</span> localhost:3001 <span class="o">[</span>online<span class="o">]</span> <span class="o">[</span><span class="m">0</span>/2<span class="o">]</span> &lt;version <span class="m">1</span>.5.1&gt; <span class="o">[</span>L<span class="o">]</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>telnet<span class="w"> </span>localhost<span class="w"> </span><span class="m">8080</span>
+&gt;<span class="w"> </span>NODE<span class="w"> </span>ADD<span class="w"> </span>localhost<span class="w"> </span><span class="m">3001</span>
+&gt;<span class="w"> </span>NODE<span class="w"> </span>LOCK<span class="w"> </span><span class="m">1</span>
+&gt;<span class="w"> </span>NODE<span class="w"> </span>LIST
+<span class="m">1</span><span class="o">)</span><span class="w"> </span>localhost:3001<span class="w"> </span><span class="o">[</span>online<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">0</span>/2<span class="o">]</span><span class="w"> </span>&lt;version<span class="w"> </span><span class="m">1</span>.5.1&gt;<span class="w"> </span><span class="o">[</span>L<span class="o">]</span>
 </pre></div>
 </div>
 <p>Sa paraan na ito, ang lahat ng tasks ay awtomatikong napapadala sa autoscaler.</p>

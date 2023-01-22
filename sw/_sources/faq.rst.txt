@@ -14,7 +14,7 @@ No. ODM is a photogrammetric pipeline and orthophotos do not have the necessary 
 The software is not using all of my CPU cores / memory / GPU all of the times. Is it normal?
 --------------------------------------------------------------------------------------------
 
-Yes. The software tries to use all available resources, when possible, but not always. It's normal to see 10-15% resource utilization at several moments during processing.
+Yes. The software tries to use all available resources, when possible, but not always. It's normal to see 10-15% CPU utilization at several moments during processing and 0% GPU utilization for lots of times.
 
 If I use the native version of the software, how can I allocate more resources for processing?
 ----------------------------------------------------------------------------------------------

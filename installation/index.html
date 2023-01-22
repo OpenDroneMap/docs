@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation and Getting Started &mdash; OpenDroneMap 3.0.2 documentation</title>
+  <title>Installation and Getting Started &mdash; OpenDroneMap 3.0.3 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -33,7 +33,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                3.0.2
+                3.0.3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -566,7 +566,7 @@ versions of Windows are not supported.</p>
 <section id="step-4-launch-webodm">
 <h4>Step 4. Launch WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Permalink to this heading"></a></h4>
 <p>From Git Gui, go to the <strong>Repository</strong> menu, then click <strong>Git Bash</strong>. From the command line terminal type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start <span class="p">&amp;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>start<span class="w"> </span><span class="p">&amp;</span>
 </pre></div>
 </div>
 <p>Several components will download to your machine at this point, including WebODM, NodeODM and ODM. After the download you should be greeted by the following screen:</p>
@@ -578,7 +578,7 @@ versions of Windows are not supported.</p>
 <li><p>If you are using Docker for Windows, open a web browser to <a class="reference external" href="http://localhost:8000">http://localhost:8000</a></p></li>
 <li><p>If you are using Docker Toolbox, find the IP address to connect to by typing:</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker-machine ip
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker-machine<span class="w"> </span>ip
 </pre></div>
 </div>
 <p>You should get a result like the following:</p>
@@ -594,11 +594,11 @@ versions of Windows are not supported.</p>
 <section id="id1">
 <h4>Step 1. Check Virtualization Support<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
 <p>Open a Terminal window and type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sysctl kern.hv_support
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sysctl<span class="w"> </span>kern.hv_support
 </pre></div>
 </div>
 <p>You will get a response similar to the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kern.hv_support: <span class="m">1</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kern.hv_support:<span class="w"> </span><span class="m">1</span>
 </pre></div>
 </div>
 <p>If the result is <em>kern.hv_support: 1</em>, then your Mac is supported! Continue with Step 2.</p>
@@ -617,19 +617,19 @@ versions of Windows are not supported.</p>
 </figure>
 <p><em>Docker app running</em></p>
 <p>You can verify that docker is running properly by opening the <strong>Terminal</strong> app and typing:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker run hello-world
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>hello-world
 </pre></div>
 </div>
 <p>Which should return</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Hello from Docker!
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Hello<span class="w"> </span>from<span class="w"> </span>Docker!
 </pre></div>
 </div>
 <p>To verify that git is installed, simply type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git --version
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>--version
 </pre></div>
 </div>
 <p>Which should return something similar to the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git version <span class="m">2</span>.20.1 <span class="o">(</span>Apple Git-117<span class="o">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>version<span class="w"> </span><span class="m">2</span>.20.1<span class="w"> </span><span class="o">(</span>Apple<span class="w"> </span>Git-117<span class="o">)</span>
 </pre></div>
 </div>
 <p>If you get a “bash: git: command not found”, try to restart your <strong>Terminal</strong> app and double-check for any errors during the install process.</p>
@@ -651,9 +651,9 @@ versions of Windows are not supported.</p>
 <section id="step-4-download-and-launch-webodm">
 <h4>Step 4. Download and Launch WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Permalink to this heading"></a></h4>
 <p>From a <strong>Terminal</strong> type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
-$ <span class="nb">cd</span> WebODM
-$ ./webodm.sh start
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/OpenDroneMap/WebODM
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>WebODM
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>start
 </pre></div>
 </div>
 <p>Then open a web browser to <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
@@ -675,35 +675,35 @@ $ ./webodm.sh start
 <section id="install-on-ubuntu-debian">
 <h5>Install on Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Permalink to this heading"></a></h5>
 <p>Commands to type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt update
-$ curl -fsSL https://get.docker.com -o get-docker.sh
-$ sh get-docker.sh
-$ sudo apt install -y git python python-pip
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sh<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>python-pip
 </pre></div>
 </div>
 </section>
 <section id="install-on-centos-rhel">
 <h5>Install on CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Permalink to this heading"></a></h5>
 <p>Commands to type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
-$ sh get-docker.sh
-$ sudo yum -y install git python python-pip
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sh<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sudo<span class="w"> </span>yum<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>python-pip
 </pre></div>
 </div>
 </section>
 <section id="install-on-fedora">
 <h5>Install on Fedora<a class="headerlink" href="#install-on-fedora" title="Permalink to this heading"></a></h5>
 <p>Commands to type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
-$ sh get-docker.sh
-$ sudo dnf install git python python-pip
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sh<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>python-pip
 </pre></div>
 </div>
 </section>
 <section id="install-on-arch">
 <h5>Install on Arch<a class="headerlink" href="#install-on-arch" title="Permalink to this heading"></a></h5>
 <p>Commands to type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pacman -Sy docker git python python-pip
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>pacman<span class="w"> </span>-Sy<span class="w"> </span>docker<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>python-pip
 </pre></div>
 </div>
 </section>
@@ -711,28 +711,28 @@ $ sudo dnf install git python python-pip
 <section id="step-2-check-additional-requirements">
 <h4>Step 2. Check Additional Requirements<a class="headerlink" href="#step-2-check-additional-requirements" title="Permalink to this heading"></a></h4>
 <p>In addition to the three programs above, the dockercompose script is also needed. Sometimes it’s already installed with docker, but sometimes it isn’t. To verify if it’s installed try to type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker-compose --version
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker-compose<span class="w"> </span>--version
 </pre></div>
 </div>
 <p>You should see somethings similar to the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose version <span class="m">1</span>.22.0, build f46880f
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.22.0,<span class="w"> </span>build<span class="w"> </span>f46880f
 </pre></div>
 </div>
 <p>If instead you get something similar to the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose: <span class="nb">command</span> not found
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose:<span class="w"> </span><span class="nb">command</span><span class="w"> </span>not<span class="w"> </span>found
 </pre></div>
 </div>
 <p>you can install it by using pip:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pip install docker-compose
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>docker-compose
 </pre></div>
 </div>
 </section>
 <section id="step-3-download-and-launch-webodm">
 <h4>Step 3. Download and Launch WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Permalink to this heading"></a></h4>
 <p>From a terminal type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
-$ <span class="nb">cd</span> WebODM
-$ ./webodm.sh start
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/OpenDroneMap/WebODM
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>WebODM
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>start
 </pre></div>
 </div>
 <p>Then open a web browser to <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
@@ -742,32 +742,32 @@ $ ./webodm.sh start
 <section id="basic-commands-and-troubleshooting">
 <h2>Basic Commands and Troubleshooting<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Permalink to this heading"></a></h2>
 <p>The cool thing about using docker is that 99% of the tasks you’ll ever need to perform while using WebODM can be done via the ./webodm.sh script. You have already encountered one of them:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>start
 </pre></div>
 </div>
 <p>which takes care of starting WebODM and setting up a default processing node (node-odm-1). If you want to stop WebODM, you can already guess what the command is:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh stop
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>stop
 </pre></div>
 </div>
 <p>There are several other commands you can use, along with different flags. Flags are parameters passed to the ./webodm.sh command and are typically prefixed with “–”. The <strong>port</strong> flag for example instructs WebODM to use a different network port:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start --port <span class="m">80</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>start<span class="w"> </span>--port<span class="w"> </span><span class="m">80</span>
 </pre></div>
 </div>
 <p>Other useful commands are listed below:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Restart WebODM (useful if things get stuck)</span>
-$ ./webodm.sh restart
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>restart
 
 <span class="c1"># Reset the admin user&#39;s password if you forget it</span>
-$ ./webodm.sh resetadminpassword newpass
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>resetadminpassword<span class="w"> </span>newpass
 
 <span class="c1"># Update everything to the latest version</span>
-$ ./webodm.sh update
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>update
 
 <span class="c1"># Store processing results in the specified folder instead of the default location (inside docker)</span>
-$ ./webodm.sh restart --media-dir /path/to/webodm_results
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>restart<span class="w"> </span>--media-dir<span class="w"> </span>/path/to/webodm_results
 
 <span class="c1"># See all options</span>
-$ ./webodm.sh --help
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>--help
 </pre></div>
 </div>
 <p><a class="reference external" href="https://community.opendronemap.org">The community forum</a> is a great place to ask for help if you     get stuck during any of the installation steps and for general questions on using the ./webodm.sh script.</p>
@@ -787,7 +787,7 @@ $ ./webodm.sh --help
 <section id="running-on-more-than-one-machine">
 <h3>Running on more than one machine<a class="headerlink" href="#running-on-more-than-one-machine" title="Permalink to this heading"></a></h3>
 <p><strong>Optionally:</strong> If you have another computer, you can repeat the installation process (install docker, git, python, etc.) and launch a new NodeODM node by typing from a Terminal/Git Bash window:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --rm -it -p <span class="m">3000</span>:3000 opendronemap/nodeodm -q <span class="m">1</span> --token secret
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>-p<span class="w"> </span><span class="m">3000</span>:3000<span class="w"> </span>opendronemap/nodeodm<span class="w"> </span>-q<span class="w"> </span><span class="m">1</span><span class="w"> </span>--token<span class="w"> </span>secret
 </pre></div>
 </div>
 <p>The above command asks docker to launch a new container using the opendronemap/nodeodm image from Docker Hub (the latest version of NodeODM), using port 3000, setting a maximum number of concurrent tasks to 1 and to protect the node from unauthorized access using the password “secret”.</p>

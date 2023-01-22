@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Cara memulai dan instalasi &mdash; Dokumentasi OpenDroneMap 3.0.2</title>
+  <title>Cara memulai dan instalasi &mdash; Dokumentasi OpenDroneMap 3.0.3</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -34,7 +34,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                3.0.2
+                3.0.3
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -565,7 +565,7 @@
 <section id="step-4-launch-webodm">
 <h4>Langkah 4. Luncurkan WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Permalink to this heading"></a></h4>
 <p>From Git Gui, go to the <strong>Repository</strong> menu, then click <strong>Git Bash</strong>. From the command line terminal type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start <span class="p">&amp;</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>start<span class="w"> </span><span class="p">&amp;</span>
 </pre></div>
 </div>
 <p>Beberapa komponen akan diunduh ke mesin anda pada saat ini, termasuk WebODM, NodeODM, dan ODM. Setelah mengunduh, anda akan disambut oleh layar berikut:</p>
@@ -577,7 +577,7 @@
 <li><p>Jika anda menggunakan Docker untuk Windows, buka browser web ke <a class="reference external" href="http://localhost:8000">http://localhost:8000</a></p></li>
 <li><p>If you are using Docker Toolbox, find the IP address to connect to by typing:</p></li>
 </ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker-machine ip
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker-machine<span class="w"> </span>ip
 </pre></div>
 </div>
 <p>Anda harus mendapatkan hasil seperti berikut:</p>
@@ -593,11 +593,11 @@
 <section id="id1">
 <h4>Langkah 1. Periksa Dukungan Virtualisasi<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
 <p>Open a Terminal window and type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sysctl kern.hv_support
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sysctl<span class="w"> </span>kern.hv_support
 </pre></div>
 </div>
 <p>Anda akan mendapatkan tanggapan yang mirip dengan berikut ini:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kern.hv_support: <span class="m">1</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kern.hv_support:<span class="w"> </span><span class="m">1</span>
 </pre></div>
 </div>
 <p>Jika hasilnya <em>kern.hv_support: 1</em>, maka Mac Anda didukung! Lanjutkan dengan Langkah 2.</p>
@@ -616,19 +616,19 @@
 </figure>
 <p><em>Aplikasi Docker berjalan</em></p>
 <p>You can verify that docker is running properly by opening the <strong>Terminal</strong> app and typing:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker run hello-world
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>hello-world
 </pre></div>
 </div>
 <p>Yang harus dikembalikan</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Hello from Docker!
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Hello<span class="w"> </span>from<span class="w"> </span>Docker!
 </pre></div>
 </div>
 <p>Untuk memverifikasi bahwa git telah diinstal, cukup ketik:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git --version
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>--version
 </pre></div>
 </div>
 <p>Yang seharusnya mengembalikan sesuatu yang mirip dengan berikut ini:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git version <span class="m">2</span>.20.1 <span class="o">(</span>Apple Git-117<span class="o">)</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>version<span class="w"> </span><span class="m">2</span>.20.1<span class="w"> </span><span class="o">(</span>Apple<span class="w"> </span>Git-117<span class="o">)</span>
 </pre></div>
 </div>
 <p>If you get a “bash: git: command not found”, try to restart your <strong>Terminal</strong> app and double-check for any errors during the install process.</p>
@@ -650,9 +650,9 @@
 <section id="step-4-download-and-launch-webodm">
 <h4>Langkah 4. Unduh dan Jalankan WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Permalink to this heading"></a></h4>
 <p>From a <strong>Terminal</strong> type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
-$ <span class="nb">cd</span> WebODM
-$ ./webodm.sh start
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/OpenDroneMap/WebODM
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>WebODM
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>start
 </pre></div>
 </div>
 <p>Kemudian buka browser web ke <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
@@ -674,35 +674,35 @@ $ ./webodm.sh start
 <section id="install-on-ubuntu-debian">
 <h5>Instal di Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Permalink to this heading"></a></h5>
 <p>Perintah untuk mengetik:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo apt update
-$ curl -fsSL https://get.docker.com -o get-docker.sh
-$ sh get-docker.sh
-$ sudo apt install -y git python python-pip
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sh<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>python-pip
 </pre></div>
 </div>
 </section>
 <section id="install-on-centos-rhel">
 <h5>Instal di CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Permalink to this heading"></a></h5>
 <p>Perintah untuk mengetik:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
-$ sh get-docker.sh
-$ sudo yum -y install git python python-pip
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sh<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sudo<span class="w"> </span>yum<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>python-pip
 </pre></div>
 </div>
 </section>
 <section id="install-on-fedora">
 <h5>Instal di Fedora<a class="headerlink" href="#install-on-fedora" title="Permalink to this heading"></a></h5>
 <p>Perintah untuk mengetik:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ curl -fsSL https://get.docker.com -o get-docker.sh
-$ sh get-docker.sh
-$ sudo dnf install git python python-pip
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sh<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>python-pip
 </pre></div>
 </div>
 </section>
 <section id="install-on-arch">
 <h5>Instal di Arch<a class="headerlink" href="#install-on-arch" title="Permalink to this heading"></a></h5>
 <p>Perintah untuk mengetik:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pacman -Sy docker git python python-pip
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>pacman<span class="w"> </span>-Sy<span class="w"> </span>docker<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>python-pip
 </pre></div>
 </div>
 </section>
@@ -710,28 +710,28 @@ $ sudo dnf install git python python-pip
 <section id="step-2-check-additional-requirements">
 <h4>Langkah 2. Periksa Persyaratan Tambahan<a class="headerlink" href="#step-2-check-additional-requirements" title="Permalink to this heading"></a></h4>
 <p>Selain ketiga program di atas, menulis skrip docker juga diperlukan. Terkadang sudah terpasang dengan docker, tapi terkadang tidak. Untuk memverifikasi apakah sudah terpasang coba ketik:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ docker-compose --version
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker-compose<span class="w"> </span>--version
 </pre></div>
 </div>
 <p>Anda akan melihat sesuatu yang mirip dengan berikut ini:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose version <span class="m">1</span>.22.0, build f46880f
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.22.0,<span class="w"> </span>build<span class="w"> </span>f46880f
 </pre></div>
 </div>
 <p>Jika sebaliknya anda mendapatkan sesuatu yang mirip dengan berikut ini:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose: <span class="nb">command</span> not found
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose:<span class="w"> </span><span class="nb">command</span><span class="w"> </span>not<span class="w"> </span>found
 </pre></div>
 </div>
 <p>Anda dapat menginstalnya dengan menggunakan pip:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ sudo pip install docker-compose
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>docker-compose
 </pre></div>
 </div>
 </section>
 <section id="step-3-download-and-launch-webodm">
 <h4>Langkah 3. Unduh dan Jalankan WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Permalink to this heading"></a></h4>
 <p>Dari tipe terminal:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ git clone https://github.com/OpenDroneMap/WebODM
-$ <span class="nb">cd</span> WebODM
-$ ./webodm.sh start
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/OpenDroneMap/WebODM
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>WebODM
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>start
 </pre></div>
 </div>
 <p>Kemudian buka browser web ke <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
@@ -741,32 +741,32 @@ $ ./webodm.sh start
 <section id="basic-commands-and-troubleshooting">
 <h2>Perintah Dasar dan Pemecahan Masalah<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Permalink to this heading"></a></h2>
 <p>Hal yang keren tentang penggunaan docker adalah 99% tugas yang anda perlukan saat menggunakan WebODM dapat dilakukan melalui skrip ./webodm.sh. Anda telah menjumpai salah satunya:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>start
 </pre></div>
 </div>
 <p>which takes care of starting WebODM and setting up a default processing node (node-odm-1). If you want to stop WebODM, you can already guess what the command is:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh stop
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>stop
 </pre></div>
 </div>
 <p>There are several other commands you can use, along with different flags. Flags are parameters passed to the ./webodm.sh command and are typically prefixed with “–”. The <strong>port</strong> flag for example instructs WebODM to use a different network port:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$ ./webodm.sh start --port <span class="m">80</span>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>start<span class="w"> </span>--port<span class="w"> </span><span class="m">80</span>
 </pre></div>
 </div>
 <p>Perintah berguna lainnya tercantum di bawah ini:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Restart WebODM (useful if things get stuck)</span>
-$ ./webodm.sh restart
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>restart
 
 <span class="c1"># Reset the admin user&#39;s password if you forget it</span>
-$ ./webodm.sh resetadminpassword newpass
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>resetadminpassword<span class="w"> </span>newpass
 
 <span class="c1"># Update everything to the latest version</span>
-$ ./webodm.sh update
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>update
 
 <span class="c1"># Store processing results in the specified folder instead of the default location (inside docker)</span>
-$ ./webodm.sh restart --media-dir /path/to/webodm_results
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>restart<span class="w"> </span>--media-dir<span class="w"> </span>/path/to/webodm_results
 
 <span class="c1"># See all options</span>
-$ ./webodm.sh --help
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>--help
 </pre></div>
 </div>
 <p><a class="reference external" href="https://community.opendronemap.org">Forum komunitas</a>  adalah tempat yang tepat untuk meminta bantuan jika anda mengalami kebuntuan selama salah satu langkah penginstalan dan untuk pertanyaan umum tentang penggunaan skrip ./webodm.sh.</p>
@@ -786,7 +786,7 @@ $ ./webodm.sh --help
 <section id="running-on-more-than-one-machine">
 <h3>Berjalan di lebih dari satu mesin<a class="headerlink" href="#running-on-more-than-one-machine" title="Permalink to this heading"></a></h3>
 <p><strong>Opsional:</strong> Jika anda memiliki komputer lain, anda dapat mengulangi proses instalasi (menginstal docker, git, python, dll.) dan meluncurkan node NodeODM baru dengan mengetik dari jendela Terminal / Git Bash:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker run --rm -it -p <span class="m">3000</span>:3000 opendronemap/nodeodm -q <span class="m">1</span> --token secret
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>-p<span class="w"> </span><span class="m">3000</span>:3000<span class="w"> </span>opendronemap/nodeodm<span class="w"> </span>-q<span class="w"> </span><span class="m">1</span><span class="w"> </span>--token<span class="w"> </span>secret
 </pre></div>
 </div>
 <p>The above command asks docker to launch a new container using the opendronemap/nodeodm image from Docker Hub (the latest version of NodeODM), using port 3000, setting a maximum number of concurrent tasks to 1 and to protect the node from unauthorized access using the password &quot;secret&quot;.</p>
