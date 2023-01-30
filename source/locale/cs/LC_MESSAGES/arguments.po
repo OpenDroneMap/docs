@@ -1,26 +1,29 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2020, OpenDroneMap
-# This file is distributed under the same license as the OpenDroneMap
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
-#
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# trendspotter <jirka.p@volny.cz>, 2023
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.7.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-28 10:32-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2020-07-21 21:10+0000\n"
+"Last-Translator: trendspotter <jirka.p@volny.cz>, 2023\n"
+"Language-Team: Czech (https://www.transifex.com/americanredcross/teams/111882/cs/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: ../../arguments.rst:9
 msgid "Options and Flags"
-msgstr ""
+msgstr "Možnosti a značky"
 
 #: ../../arguments.rst:12
 msgid ":ref:`auto-boundary<auto-boundary>`"
@@ -28,11 +31,14 @@ msgstr ""
 
 #: ../../arguments.rst:12
 msgid ""
-"Automatically set a boundary using camera shot locations to limit the "
-"area of the reconstruction. This can help remove far away background "
-"artifacts (sky, background landscapes, etc.). See also --boundary. "
-"Default: ``False``"
+"Automatically set a boundary using camera shot locations to limit the area "
+"of the reconstruction. This can help remove far away background artifacts "
+"(sky, background landscapes, etc.). See also --boundary. Default: ``False``"
 msgstr ""
+"Automatické nastavení hranice pomocí míst záběrů kamery pro omezení oblasti "
+"rekonstrukce. To může pomoci odstranit vzdálené artefakty pozadí (obloha, "
+"krajina v pozadí atd.). Viz také příkaz --boundary. Výchozí hodnota: "
+"``False``"
 
 #: ../../arguments.rst:15
 msgid ":ref:`boundary<boundary>` <json>"
@@ -40,10 +46,13 @@ msgstr ""
 
 #: ../../arguments.rst:15
 msgid ""
-"GeoJSON polygon limiting the area of the reconstruction. Can be specified"
-" either as path to a GeoJSON file or as a JSON string representing the "
+"GeoJSON polygon limiting the area of the reconstruction. Can be specified "
+"either as path to a GeoJSON file or as a JSON string representing the "
 "contents of a GeoJSON file. Default: ``"
 msgstr ""
+"GeoJSON polygon omezující oblast rekonstrukce. Lze zadat buď jako cestu k "
+"souboru GeoJSON, nebo jako řetězec JSON reprezentující obsah souboru "
+"GeoJSON. Výchozí hodnota: ``"
 
 #: ../../arguments.rst:18
 msgid ":ref:`build-overviews<build-overviews>`"
@@ -54,19 +63,24 @@ msgid ""
 "Build orthophoto overviews for faster display in programs such as QGIS. "
 "Default: ``False``"
 msgstr ""
+"Vytvářejte přehledy ortofotosnímků pro rychlejší zobrazení v programech, "
+"jako je QGIS. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:21
 msgid ""
-":ref:`camera-lens<camera-lens>` auto |  perspective |  brown |  fisheye |"
-"  spherical"
+":ref:`camera-lens<camera-lens>` auto |  perspective |  brown |  fisheye |  "
+"spherical"
 msgstr ""
 
 #: ../../arguments.rst:21
 msgid ""
 "Set a camera projection type. Manually setting a value can help improve "
-"geometric undistortion. By default the application tries to determine a "
-"lens type from the images metadata. . Default: ``auto``"
+"geometric undistortion. By default the application tries to determine a lens"
+" type from the images metadata. . Default: ``auto``"
 msgstr ""
+"Nastavení typu projekce kamery. Ruční nastavení hodnoty může pomoci zlepšit "
+"geometrické nezkreslení. Ve výchozím nastavení se aplikace pokusí určit typ "
+"objektivu z metadat snímků. . Výchozí hodnota: ``auto``"
 
 #: ../../arguments.rst:24
 msgid ":ref:`cameras<cameras>` <json>"
@@ -75,10 +89,13 @@ msgstr ""
 #: ../../arguments.rst:24
 msgid ""
 "Use the camera parameters computed from another dataset instead of "
-"calculating them. Can be specified either as path to a cameras.json file "
-"or as a JSON string representing the contents of a cameras.json file. "
-"Default: ``"
+"calculating them. Can be specified either as path to a cameras.json file or "
+"as a JSON string representing the contents of a cameras.json file. Default: "
+"``"
 msgstr ""
+"Místo výpočtu parametrů fotoaparátu použijte parametry vypočtené z jiné sady"
+" dat. Lze zadat buď jako cestu k souboru cameras.json, nebo jako řetězec "
+"JSON reprezentující obsah souboru cameras.json. Výchozí hodnota: ``"
 
 #: ../../arguments.rst:27
 msgid ":ref:`cog<cog>`"
@@ -89,6 +106,8 @@ msgid ""
 "Create Cloud-Optimized GeoTIFFs instead of normal GeoTIFFs. Default: "
 "``False``"
 msgstr ""
+"Vytváření GeoTIFFů optimalizovaných pro cloud místo běžných GeoTIFFů. "
+"Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:30
 msgid ":ref:`copy-to<copy-to>` <path>"
@@ -96,7 +115,7 @@ msgstr ""
 
 #: ../../arguments.rst:30
 msgid "Copy output results to this folder after processing."
-msgstr ""
+msgstr "Po zpracování zkopírujte výstupní výsledky do této složky."
 
 #: ../../arguments.rst:33
 msgid ":ref:`crop<crop>` <positive float>"
@@ -115,19 +134,21 @@ msgstr ""
 
 #: ../../arguments.rst:36
 msgid "Print debug messages. Default: ``False``"
-msgstr ""
+msgstr "Tisk chybových zpráv. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:39
 msgid ":ref:`dem-decimation<dem-decimation>` <positive integer>"
 msgstr ""
 
 #: ../../arguments.rst:39
-#, python-format
 msgid ""
 "Decimate the points before generating the DEM. 1 is no decimation (full "
 "quality). 100 decimates ~99%% of the points. Useful for speeding up "
 "generation of DEM results in very large datasets. Default: ``1``"
 msgstr ""
+"Před vygenerováním DEM proveďte decimaci bodů. 1 znamená bez decimace (plná "
+"kvalita). 100 decimuje ~ 99 % bodů. Užitečné pro urychlení generování "
+"výsledků DEM ve velmi rozsáhlých souborech dat. Výchozí hodnota: ``1``"
 
 #: ../../arguments.rst:42
 msgid ":ref:`dem-euclidean-map<dem-euclidean-map>`"
@@ -135,11 +156,15 @@ msgstr ""
 
 #: ../../arguments.rst:42
 msgid ""
-"Computes an euclidean raster map for each DEM. The map reports the "
-"distance from each cell to the nearest NODATA value (before any hole "
-"filling takes place). This can be useful to isolate the areas that have "
-"been filled. Default: ``False``"
+"Computes an euclidean raster map for each DEM. The map reports the distance "
+"from each cell to the nearest NODATA value (before any hole filling takes "
+"place). This can be useful to isolate the areas that have been filled. "
+"Default: ``False``"
 msgstr ""
+"Vypočítá euklidovskou rastrovou mapu pro každý DEM. Mapa uvádí vzdálenost od"
+" každé buňky k nejbližší hodnotě NODATA (před vyplněním otvorů). To může být"
+" užitečné pro izolaci oblastí, které byly vyplněny. Výchozí hodnota: "
+"``False``"
 
 #: ../../arguments.rst:45
 msgid ":ref:`dem-gapfill-steps<dem-gapfill-steps>` <positive integer>"
@@ -148,11 +173,16 @@ msgstr ""
 #: ../../arguments.rst:45
 msgid ""
 "Number of steps used to fill areas with gaps. Set to 0 to disable gap "
-"filling. Starting with a radius equal to the output resolution, N "
-"different DEMs are generated with progressively bigger radius using the "
-"inverse distance weighted (IDW) algorithm and merged together. Remaining "
-"gaps are then merged using nearest neighbor interpolation. Default: ``3``"
+"filling. Starting with a radius equal to the output resolution, N different "
+"DEMs are generated with progressively bigger radius using the inverse "
+"distance weighted (IDW) algorithm and merged together. Remaining gaps are "
+"then merged using nearest neighbor interpolation. Default: ``3``"
 msgstr ""
+"Počet kroků použitých k vyplnění oblastí s mezerami. Nastavením na 0 se "
+"vyplňování mezer zakáže. Počínaje poloměrem rovným výstupnímu rozlišení se "
+"pomocí algoritmu IDW (inverse distance weighted) vytvoří N různých DEM s "
+"postupně se zvětšujícím poloměrem a sloučí se dohromady. Zbývající mezery se"
+" pak sloučí pomocí interpolace nejbližšího souseda. Výchozí hodnota: ``3``"
 
 #: ../../arguments.rst:48
 msgid ":ref:`dem-resolution<dem-resolution>` <float>"
@@ -160,9 +190,9 @@ msgstr ""
 
 #: ../../arguments.rst:48
 msgid ""
-"DSM/DTM resolution in cm / pixel. Note that this value is capped by a "
-"ground sampling distance (GSD) estimate. To remove the cap, check "
-"--ignore-gsd also. Default: ``5``"
+"DSM/DTM resolution in cm / pixel. Note that this value is capped by a ground"
+" sampling distance (GSD) estimate. To remove the cap, check --ignore-gsd "
+"also. Default: ``5``"
 msgstr ""
 
 #: ../../arguments.rst:51
@@ -171,10 +201,9 @@ msgstr ""
 
 #: ../../arguments.rst:51
 msgid ""
-"Legacy option (use --pc-quality instead). Controls the density of the "
-"point cloud by setting the resolution of the depthmap images. Higher "
-"values take longer to compute but produce denser point clouds. Default: "
-"``640``"
+"Legacy option (use --pc-quality instead). Controls the density of the point "
+"cloud by setting the resolution of the depthmap images. Higher values take "
+"longer to compute but produce denser point clouds. Default: ``640``"
 msgstr ""
 
 #: ../../arguments.rst:54
@@ -183,10 +212,13 @@ msgstr ""
 
 #: ../../arguments.rst:54
 msgid ""
-"Use this tag to build a DSM (Digital Surface Model, ground + objects) "
-"using a progressive morphological filter. Check the --dem\\* parameters "
-"for finer tuning. Default: ``False``"
+"Use this tag to build a DSM (Digital Surface Model, ground + objects) using "
+"a progressive morphological filter. Check the --dem\\* parameters for finer "
+"tuning. Default: ``False``"
 msgstr ""
+"Tato značka slouží k vytvoření DSM (digitálního modelu povrchu, země + "
+"objekty) pomocí progresivního morfologického filtru. Pro jemnější nastavení "
+"zkontrolujte parametry --dem\\*. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:57
 msgid ":ref:`dtm<dtm>`"
@@ -195,21 +227,23 @@ msgstr ""
 #: ../../arguments.rst:57
 msgid ""
 "Use this tag to build a DTM (Digital Terrain Model, ground only) using a "
-"simple morphological filter. Check the --dem\\* and --smrf\\* parameters "
-"for finer tuning. Default: ``False``"
+"simple morphological filter. Check the --dem\\* and --smrf\\* parameters for"
+" finer tuning. Default: ``False``"
 msgstr ""
+"Pomocí této značky lze vytvořit DTM (digitální model terénu, pouze pozemní) "
+"pomocí jednoduchého morfologického filtru. Pro jemnější nastavení "
+"zkontrolujte parametry --dem\\* a --smrf\\*. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:60
 msgid ""
-":ref:`end-with<end-with>` dataset |  split |  merge |  opensfm |  openmvs"
-" |  odm_filterpoints |  odm_meshing |  mvs_texturing |  "
-"odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report |  "
-"odm_postprocess"
+":ref:`end-with<end-with>` dataset |  split |  merge |  opensfm |  openmvs |"
+"  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  "
+"odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess"
 msgstr ""
 
 #: ../../arguments.rst:60
 msgid "End processing at this stage. . Default: ``odm_postprocess``"
-msgstr ""
+msgstr "V této fázi zpracování ukončete. . Výchozí: ``odm_postprocess``"
 
 #: ../../arguments.rst:63
 msgid ":ref:`fast-orthophoto<fast-orthophoto>`"
@@ -219,21 +253,26 @@ msgstr ""
 msgid ""
 "Skips dense reconstruction and 3D model generation. It generates an "
 "orthophoto directly from the sparse reconstruction. If you just need an "
-"orthophoto and do not need a full 3D model, turn on this option. Default:"
-" ``False``"
+"orthophoto and do not need a full 3D model, turn on this option. Default: "
+"``False``"
+msgstr ""
+"Přeskočí hustou rekonstrukci a generování 3D modelu. Generuje ortofoto přímo"
+" z řídké rekonstrukce. Pokud potřebujete pouze ortofoto a nepotřebujete "
+"kompletní 3D model, zapněte tuto možnost. Výchozí hodnota: ``False``"
+
+#: ../../arguments.rst:66
+msgid ""
+":ref:`feature-quality<feature-quality>` ultra |  high |  medium |  low |  "
+"lowest"
 msgstr ""
 
 #: ../../arguments.rst:66
 msgid ""
-":ref:`feature-quality<feature-quality>` ultra |  high |  medium |  low |"
-"  lowest"
+"Set feature extraction quality. Higher quality generates better features, "
+"but requires more memory and takes longer. . Default: ``high``"
 msgstr ""
-
-#: ../../arguments.rst:66
-msgid ""
-"Set feature extraction quality. Higher quality generates better features,"
-" but requires more memory and takes longer. . Default: ``high``"
-msgstr ""
+"Nastavte kvalitu extrakce prvků. Vyšší kvalita generuje lepší rysy, ale "
+"vyžaduje více paměti a trvá déle. . Výchozí hodnota: ``high``"
 
 #: ../../arguments.rst:69
 msgid ":ref:`feature-type<feature-type>` akaze |  hahog |  orb |  sift"
@@ -241,9 +280,11 @@ msgstr ""
 
 #: ../../arguments.rst:69
 msgid ""
-"Choose the algorithm for extracting keypoints and computing descriptors. "
-". Default: ``sift``"
+"Choose the algorithm for extracting keypoints and computing descriptors. . "
+"Default: ``sift``"
 msgstr ""
+"Zvolte algoritmus pro extrakci klíčových bodů a výpočet deskriptorů. . "
+"Výchozí: ``sift``"
 
 #: ../../arguments.rst:72
 msgid ":ref:`force-gps<force-gps>`"
@@ -252,9 +293,13 @@ msgstr ""
 #: ../../arguments.rst:72
 msgid ""
 "Use images' GPS exif data for reconstruction, even if there are GCPs "
-"present.This flag is useful if you have high precision GPS measurements. "
-"If there are no GCPs, this flag does nothing. Default: ``False``"
+"present.This flag is useful if you have high precision GPS measurements. If "
+"there are no GCPs, this flag does nothing. Default: ``False``"
 msgstr ""
+"Použijte data GPS exif snímků pro rekonstrukci, i když jsou přítomny GCP. "
+"Tento příznak je užitečný, pokud máte vysoce přesná měření GPS. Pokud nejsou"
+" k dispozici žádné GCP, tento příznak nic neudělá. Výchozí hodnota: "
+"``False``"
 
 #: ../../arguments.rst:75
 msgid ":ref:`gcp<gcp>` <path string>"
@@ -263,10 +308,14 @@ msgstr ""
 #: ../../arguments.rst:75
 msgid ""
 "Path to the file containing the ground control points used for "
-"georeferencing. The file needs to use the following format: EPSG:<code> "
-"or <+proj definition>geo_x geo_y geo_z im_x im_y image_name [gcp_name] "
-"[extra1] [extra2]Default: ``None``"
+"georeferencing. The file needs to use the following format: EPSG:<code> or "
+"<+proj definition>geo_x geo_y geo_z im_x im_y image_name [gcp_name] [extra1]"
+" [extra2]Default: ``None``"
 msgstr ""
+"Cesta k souboru obsahujícímu body pozemní kontroly používané pro "
+"georeferencování. Soubor musí používat následující formát: EPSG: <code>nebo "
+"<+proj definition>geo_x geo_y geo_z im_x im_y image_name [gcp_name] [extra1]"
+" [extra2]Výchozí: ``None``"
 
 #: ../../arguments.rst:78
 msgid ":ref:`geo<geo>` <path string>"
@@ -274,13 +323,19 @@ msgstr ""
 
 #: ../../arguments.rst:78
 msgid ""
-"Path to the image geolocation file containing the camera center "
-"coordinates used for georeferencing. Note that omega/phi/kappa are "
-"currently not supported (you can set them to 0). The file needs to use "
-"the following format: EPSG:<code> or <+proj definition>image_name geo_x "
-"geo_y geo_z [omega (degrees)] [phi (degrees)] [kappa (degrees)] [horz "
-"accuracy (meters)] [vert accuracy (meters)]Default: ``None``"
+"Path to the image geolocation file containing the camera center coordinates "
+"used for georeferencing. Note that omega/phi/kappa are currently not "
+"supported (you can set them to 0). The file needs to use the following "
+"format: EPSG:<code> or <+proj definition>image_name geo_x geo_y geo_z [omega"
+" (degrees)] [phi (degrees)] [kappa (degrees)] [horz accuracy (meters)] [vert"
+" accuracy (meters)]Default: ``None``"
 msgstr ""
+"Cesta k souboru geolokace snímku obsahujícího souřadnice středu kamery "
+"použité pro georeferencování. Všimněte si, že omega/phi/kappa aktuálně "
+"nejsou podporovány (můžete je nastavit na 0). Soubor musí používat "
+"následující formát: EPSG: <code>nebo <+proj definition>image_name geo_x "
+"geo_y geo_z [omega (stupně)] [phi (stupně)] [kappa (stupně)] [horz přesnost "
+"(metry)] [vert přesnost ( metry)] Výchozí: ``None``"
 
 #: ../../arguments.rst:81
 msgid ":ref:`gps-accuracy<gps-accuracy>` <positive float>"
@@ -288,13 +343,19 @@ msgstr ""
 
 #: ../../arguments.rst:81
 msgid ""
-"Set a value in meters for the GPS Dilution of Precision (DOP) information"
-" for all images. If your images are tagged with high precision GPS "
-"information (RTK), this value will be automatically set accordingly. You "
-"can use this option to manually set it in case the reconstruction fails. "
-"Lowering this option can sometimes help control bowling-effects over "
-"large areas. Default: ``10``"
+"Set a value in meters for the GPS Dilution of Precision (DOP) information "
+"for all images. If your images are tagged with high precision GPS "
+"information (RTK), this value will be automatically set accordingly. You can"
+" use this option to manually set it in case the reconstruction fails. "
+"Lowering this option can sometimes help control bowling-effects over large "
+"areas. Default: ``10``"
 msgstr ""
+"Nastavte hodnotu v metrech pro informaci GPS Dilution of Precision (DOP) pro"
+" všechny snímky. Pokud jsou snímky označeny informacemi GPS s vysokou "
+"přesností (RTK), bude tato hodnota nastavena automaticky. Pomocí této "
+"možnosti ji můžete nastavit ručně v případě, že rekonstrukce selže. Snížení "
+"této možnosti může někdy pomoci kontrolovat bowling-efekty na velkých "
+"plochách. Výchozí hodnota: ``10``"
 
 #: ../../arguments.rst:84
 msgid ":ref:`help<help>`"
@@ -302,7 +363,7 @@ msgstr ""
 
 #: ../../arguments.rst:84
 msgid "show this help message and exit"
-msgstr ""
+msgstr "zobrazí tuto nápovědu a ukončí se"
 
 #: ../../arguments.rst:87
 msgid ":ref:`ignore-gsd<ignore-gsd>`"
@@ -310,12 +371,17 @@ msgstr ""
 
 #: ../../arguments.rst:87
 msgid ""
-"Ignore Ground Sampling Distance (GSD). GSD caps the maximum resolution of"
-" image outputs and resizes images when necessary, resulting in faster "
+"Ignore Ground Sampling Distance (GSD). GSD caps the maximum resolution of "
+"image outputs and resizes images when necessary, resulting in faster "
 "processing and lower memory usage. Since GSD is an estimate, sometimes "
 "ignoring it can result in slightly better image output quality. Default: "
 "``False``"
 msgstr ""
+"Ignorovat vzdálenost odběru vzorků od země (GSD). GSD omezuje maximální "
+"rozlišení obrazových výstupů a v případě potřeby mění velikost obrázků, což "
+"vede k rychlejšímu zpracování a nižší spotřebě paměti. Vzhledem k tomu, že "
+"GSD je odhad, může její ignorování někdy vést k mírně lepší kvalitě "
+"obrazových výstupů. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:90
 msgid ":ref:`matcher-neighbors<matcher-neighbors>` <integer>"
@@ -323,8 +389,8 @@ msgstr ""
 
 #: ../../arguments.rst:90
 msgid ""
-"Number of nearest images to pre-match based on GPS exif data. Set to 0 to"
-" skip pre-matching. Default: ``8``"
+"Number of nearest images to pre-match based on GPS exif data. Set to 0 to "
+"skip pre-matching. Default: ``8``"
 msgstr ""
 
 #: ../../arguments.rst:93
@@ -333,11 +399,14 @@ msgstr ""
 
 #: ../../arguments.rst:93
 msgid ""
-"Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag "
-"of Words. FLANN is slower, but more stable. BOW is faster, but can "
-"sometimes miss valid matches. BRUTEFORCE is very slow but robust.. "
-"Default: ``flann``"
+"Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of "
+"Words. FLANN is slower, but more stable. BOW is faster, but can sometimes "
+"miss valid matches. BRUTEFORCE is very slow but robust.. Default: ``flann``"
 msgstr ""
+"Algoritmus Matcher, Rychlá knihovna pro přibližné nejbližší sousedy nebo Bag"
+" of Words. FLANN je pomalejší, ale stabilnější. BOW je rychlejší, ale někdy "
+"může přehlédnout platné shody. BRUTEFORCE je velmi pomalý, ale robustní.. "
+"Výchozí: ``flann``"
 
 #: ../../arguments.rst:96
 msgid ":ref:`max-concurrency<max-concurrency>` <positive integer>"
@@ -346,9 +415,12 @@ msgstr ""
 #: ../../arguments.rst:96
 msgid ""
 "The maximum number of processes to use in various processes. Peak memory "
-"requirement is ~1GB per thread and 2 megapixel image resolution. Default:"
-" ``4``"
+"requirement is ~1GB per thread and 2 megapixel image resolution. Default: "
+"``4``"
 msgstr ""
+"Maximální počet procesů, které se mají použít v různých procesech. Maximální"
+" paměťová náročnost je ~1 GB na vlákno a rozlišení obrazu 2 megapixely. "
+"Výchozí hodnota: ``4``"
 
 #: ../../arguments.rst:99
 msgid ":ref:`merge<merge>` all |  pointcloud |  orthophoto |  dem"
@@ -356,10 +428,13 @@ msgstr ""
 
 #: ../../arguments.rst:99
 msgid ""
-"Choose what to merge in the merge step in a split dataset. By default all"
-" available outputs are merged. Options: ['all', 'pointcloud', "
-"'orthophoto', 'dem']. Default: ``all``"
+"Choose what to merge in the merge step in a split dataset. By default all "
+"available outputs are merged. Options: ['all', 'pointcloud', 'orthophoto', "
+"'dem']. Default: ``all``"
 msgstr ""
+"Výběr toho, co se má sloučit v kroku sloučení v rozdělené datové sadě. Ve "
+"výchozím nastavení se sloučí všechny dostupné výstupy. Možnosti: [\"all\", "
+"\"pointcloud\", \"orthophoto\", \"dem\"]. Výchozí: ``all``"
 
 #: ../../arguments.rst:102
 msgid ":ref:`mesh-octree-depth<mesh-octree-depth>` <integer: 1 <= x <= 14>"
@@ -367,9 +442,11 @@ msgstr ""
 
 #: ../../arguments.rst:102
 msgid ""
-"Octree depth used in the mesh reconstruction, increase to get more "
-"vertices, recommended values are 8-12. Default: ``11``"
+"Octree depth used in the mesh reconstruction, increase to get more vertices,"
+" recommended values are 8-12. Default: ``11``"
 msgstr ""
+"Hloubka osmistěnu použitá při rekonstrukci sítě, zvyšte ji, abyste získali "
+"více vrcholů, doporučené hodnoty jsou 8-12. Výchozí hodnota: ``11``"
 
 #: ../../arguments.rst:105
 msgid ":ref:`mesh-size<mesh-size>` <positive integer>"
@@ -377,7 +454,7 @@ msgstr ""
 
 #: ../../arguments.rst:105
 msgid "The maximum vertex count of the output mesh. Default: ``200000``"
-msgstr ""
+msgstr "Maximální počet vrcholů výstupní sítě. Výchozí: ``200000``"
 
 #: ../../arguments.rst:108
 msgid ":ref:`min-num-features<min-num-features>` <integer>"
@@ -385,10 +462,10 @@ msgstr ""
 
 #: ../../arguments.rst:108
 msgid ""
-"Minimum number of features to extract per image. More features can be "
-"useful for finding more matches between images, potentially allowing the "
-"reconstruction of areas with little overlap or insufficient features. "
-"More features also slow down processing. Default: ``8000``"
+"Minimum number of features to extract per image. More features can be useful"
+" for finding more matches between images, potentially allowing the "
+"reconstruction of areas with little overlap or insufficient features. More "
+"features also slow down processing. Default: ``8000``"
 msgstr ""
 
 #: ../../arguments.rst:111
@@ -400,6 +477,8 @@ msgid ""
 "Name of dataset (i.e subfolder name within project folder). Default: "
 "``code``"
 msgstr ""
+"Název datové sady (tj. název podsložky ve složce projektu). Výchozí: "
+"``code``"
 
 #: ../../arguments.rst:114
 msgid ":ref:`optimize-disk-space<optimize-disk-space>`"
@@ -407,11 +486,15 @@ msgstr ""
 
 #: ../../arguments.rst:114
 msgid ""
-"Delete heavy intermediate files to optimize disk space usage. This "
-"affects the ability to restart the pipeline from an intermediate stage, "
-"but allows datasets to be processed on machines that don't have "
-"sufficient disk space available. Default: ``False``"
+"Delete heavy intermediate files to optimize disk space usage. This affects "
+"the ability to restart the pipeline from an intermediate stage, but allows "
+"datasets to be processed on machines that don't have sufficient disk space "
+"available. Default: ``False``"
 msgstr ""
+"Odstraněním objemných mezisouborů optimalizujete využití místa na disku. To "
+"ovlivňuje možnost opětovného spuštění pipeline z mezistupně, ale umožňuje to"
+" zpracovávat datové soubory na počítačích, které nemají k dispozici dostatek"
+" místa na disku. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:117
 msgid ""
@@ -422,6 +505,8 @@ msgstr ""
 #: ../../arguments.rst:117
 msgid "Set the compression to use for orthophotos. . Default: ``DEFLATE``"
 msgstr ""
+"Nastavení komprese, která se má použít pro ortofotomapy. . Výchozí: "
+"``DEFLATE``"
 
 #: ../../arguments.rst:120
 msgid ":ref:`orthophoto-cutline<orthophoto-cutline>`"
@@ -429,11 +514,13 @@ msgstr ""
 
 #: ../../arguments.rst:120
 msgid ""
-"Generates a polygon around the cropping area that cuts the orthophoto "
-"around the edges of features. This polygon can be useful for stitching "
-"seamless mosaics with multiple overlapping orthophotos. Default: "
-"``False``"
+"Generates a polygon around the cropping area that cuts the orthophoto around"
+" the edges of features. This polygon can be useful for stitching seamless "
+"mosaics with multiple overlapping orthophotos. Default: ``False``"
 msgstr ""
+"Generuje polygon kolem oblasti ořezu, který ořízne ortofoto kolem okrajů "
+"prvků. Tento polygon může být užitečný pro sešívání bezešvých mozaik s více "
+"překrývajícími se ortofotomapami. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:123
 msgid ":ref:`orthophoto-kmz<orthophoto-kmz>`"
@@ -441,9 +528,11 @@ msgstr ""
 
 #: ../../arguments.rst:123
 msgid ""
-"Set this parameter if you want to generate a Google Earth (KMZ) rendering"
-" of the orthophoto. Default: ``False``"
+"Set this parameter if you want to generate a Google Earth (KMZ) rendering of"
+" the orthophoto. Default: ``False``"
 msgstr ""
+"Tento parametr nastavte, pokud chcete vygenerovat vykreslení ortofotomapy v "
+"aplikaci Google Earth (KMZ). Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:126
 msgid ":ref:`orthophoto-no-tiled<orthophoto-no-tiled>`"
@@ -452,6 +541,8 @@ msgstr ""
 #: ../../arguments.rst:126
 msgid "Set this parameter if you want a striped GeoTIFF. Default: ``False``"
 msgstr ""
+"Tento parametr nastavte, pokud chcete mít GeoTIFF s pruhy. Výchozí hodnota: "
+"``False``"
 
 #: ../../arguments.rst:129
 msgid ":ref:`orthophoto-png<orthophoto-png>`"
@@ -462,6 +553,8 @@ msgid ""
 "Set this parameter if you want to generate a PNG rendering of the "
 "orthophoto. Default: ``False``"
 msgstr ""
+"Tento parametr nastavte, pokud chcete vygenerovat vykreslení ortofota ve "
+"formátu PNG. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:132
 msgid ":ref:`orthophoto-resolution<orthophoto-resolution>` <float > 0.0>"
@@ -470,9 +563,12 @@ msgstr ""
 #: ../../arguments.rst:132
 msgid ""
 "Orthophoto resolution in cm / pixel. Note that this value is capped by a "
-"ground sampling distance (GSD) estimate. To remove the cap, check "
-"--ignore-gsd also. Default: ``5``"
+"ground sampling distance (GSD) estimate. To remove the cap, check --ignore-"
+"gsd also. Default: ``5``"
 msgstr ""
+"Rozlišení ortofota v cm / pixel. Všimněte si, že tato hodnota je omezena "
+"odhadem vzdálenosti vzorkování od země (GSD). Chcete-li tento limit "
+"odstranit, zaškrtněte také --ignore-gsd. Výchozí hodnota: ``5``"
 
 #: ../../arguments.rst:135
 msgid ":ref:`pc-classify<pc-classify>`"
@@ -480,10 +576,13 @@ msgstr ""
 
 #: ../../arguments.rst:135
 msgid ""
-"Classify the point cloud outputs using a Simple Morphological Filter. You"
-" can control the behavior of this option by tweaking the --dem-\\* "
+"Classify the point cloud outputs using a Simple Morphological Filter. You "
+"can control the behavior of this option by tweaking the --dem-\\* "
 "parameters. Default: ``False``"
 msgstr ""
+"Klasifikace výstupů mračna bodů pomocí jednoduchého morfologického filtru. "
+"Chování této možnosti můžete ovlivnit úpravou parametrů --dem-\\*. Výchozí "
+"hodnota: ``False``."
 
 #: ../../arguments.rst:138
 msgid ":ref:`pc-csv<pc-csv>`"
@@ -492,6 +591,8 @@ msgstr ""
 #: ../../arguments.rst:138
 msgid "Export the georeferenced point cloud in CSV format. Default: ``False``"
 msgstr ""
+"Export georeferencovaného mračna bodů ve formátu CSV. Výchozí hodnota: "
+"``False``"
 
 #: ../../arguments.rst:141
 msgid ":ref:`pc-ept<pc-ept>`"
@@ -502,6 +603,8 @@ msgid ""
 "Export the georeferenced point cloud in Entwine Point Tile (EPT) format. "
 "Default: ``False``"
 msgstr ""
+"Export georeferencovaného mračna bodů ve formátu Entwine Point Tile (EPT). "
+"Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:144
 msgid ":ref:`pc-filter<pc-filter>` <positive float>"
@@ -509,10 +612,13 @@ msgstr ""
 
 #: ../../arguments.rst:144
 msgid ""
-"Filters the point cloud by removing points that deviate more than N "
-"standard deviations from the local mean. Set to 0 to disable filtering. "
-"Default: ``2.5``"
+"Filters the point cloud by removing points that deviate more than N standard"
+" deviations from the local mean. Set to 0 to disable filtering. Default: "
+"``2.5``"
 msgstr ""
+"Filtruje mračno bodů odstraněním bodů, které se odchylují od místního "
+"průměru o více než N standardních odchylek. Nastavením na 0 filtrování "
+"vypnete. Výchozí hodnota: ``2,5``"
 
 #: ../../arguments.rst:147
 msgid ":ref:`pc-geometric<pc-geometric>`"
@@ -524,6 +630,9 @@ msgid ""
 "consistent depthmaps. This increases processing time, but can improve "
 "results in urban scenes. Default: ``False``"
 msgstr ""
+"Zlepšete přesnost mračna bodů výpočtem geometricky konzistentních "
+"hloubkových map. To prodlužuje dobu zpracování, ale může zlepšit výsledky v "
+"městských scénách. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:150
 msgid ":ref:`pc-las<pc-las>`"
@@ -532,6 +641,8 @@ msgstr ""
 #: ../../arguments.rst:150
 msgid "Export the georeferenced point cloud in LAS format. Default: ``False``"
 msgstr ""
+"Export georeferencovaného mračna bodů ve formátu LAS. Výchozí hodnota: "
+"``False``"
 
 #: ../../arguments.rst:153
 msgid ":ref:`pc-quality<pc-quality>` ultra |  high |  medium |  low |  lowest"
@@ -540,10 +651,12 @@ msgstr ""
 #: ../../arguments.rst:153
 msgid ""
 "Set point cloud quality. Higher quality generates better, denser point "
-"clouds, but requires more memory and takes longer. Each step up in "
-"quality increases processing time roughly by a factor of 4x.. Default: "
-"``medium``"
+"clouds, but requires more memory and takes longer. Each step up in quality "
+"increases processing time roughly by a factor of 4x.. Default: ``medium``"
 msgstr ""
+"Kvalita mraku nastavených bodů. Vyšší kvalita generuje lepší a hustší mračna"
+" bodů, ale vyžaduje více paměti a trvá déle. Každé zvýšení kvality zvyšuje "
+"dobu zpracování zhruba 4x. Výchozí hodnota: ``medium``"
 
 #: ../../arguments.rst:156
 msgid ":ref:`pc-rectify<pc-rectify>`"
@@ -555,6 +668,9 @@ msgid ""
 "classified ground points will be re-classified and gaps will be filled. "
 "Useful for generating DTMs. Default: ``False``"
 msgstr ""
+"Proveďte rektifikaci země na mračnu bodů. To znamená, že chybně "
+"klasifikované pozemní body budou překlasifikovány a mezery budou vyplněny. "
+"Užitečné pro generování DTM. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:159
 msgid ":ref:`pc-sample<pc-sample>` <positive float>"
@@ -562,11 +678,15 @@ msgstr ""
 
 #: ../../arguments.rst:159
 msgid ""
-"Filters the point cloud by keeping only a single point around a radius N "
-"(in meters). This can be useful to limit the output resolution of the "
-"point cloud and remove duplicate points. Set to 0 to disable sampling. "
-"Default: ``0``"
+"Filters the point cloud by keeping only a single point around a radius N (in"
+" meters). This can be useful to limit the output resolution of the point "
+"cloud and remove duplicate points. Set to 0 to disable sampling. Default: "
+"``0``"
 msgstr ""
+"Filtruje mračno bodů tak, že ponechá pouze jeden bod v okolí poloměru N (v "
+"metrech). To může být užitečné pro omezení výstupního rozlišení mračna bodů "
+"a odstranění duplicitních bodů. Nastavením na hodnotu 0 vzorkování zakážete."
+" Výchozí hodnota: ``0```"
 
 #: ../../arguments.rst:162
 msgid ":ref:`pc-tile<pc-tile>`"
@@ -574,11 +694,14 @@ msgstr ""
 
 #: ../../arguments.rst:162
 msgid ""
-"Reduce the memory usage needed for depthmap fusion by splitting large "
-"scenes into tiles. Turn this on if your machine doesn't have much RAM "
-"and/or you've set --pc-quality to high or ultra. Experimental. Default: "
-"``False``"
+"Reduce the memory usage needed for depthmap fusion by splitting large scenes"
+" into tiles. Turn this on if your machine doesn't have much RAM and/or "
+"you've set --pc-quality to high or ultra. Experimental. Default: ``False``"
 msgstr ""
+"Snížení spotřeby paměti potřebné pro fúzi hloubkových map rozdělením velkých"
+" scén na dlaždice. Tuto funkci zapněte, pokud váš počítač nemá mnoho paměti "
+"RAM a/nebo jste nastavili --pc-quality na high nebo ultra. Experimentální. "
+"Výchozí: ``False``"
 
 #: ../../arguments.rst:165
 msgid ":ref:`primary-band<primary-band>` <string>"
@@ -590,6 +713,9 @@ msgid ""
 "primary band that will be used for reconstruction. It's recommended to "
 "choose a band which has sharp details and is in focus. Default: ``auto``"
 msgstr ""
+"Při zpracování multispektrálních datových sad můžete zadat název primárního "
+"pásma, které bude použito pro rekonstrukci. Doporučujeme vybrat pásmo, které"
+" má ostré detaily a je zaostřené. Výchozí nastavení: ``auto``"
 
 #: ../../arguments.rst:168
 msgid ":ref:`project-path<project-path>` <path>"
@@ -597,14 +723,16 @@ msgstr ""
 
 #: ../../arguments.rst:168
 msgid ""
-"Path to the project folder. Your project folder should contain subfolders"
-" for each dataset. Each dataset should have an \"images\" folder."
+"Path to the project folder. Your project folder should contain subfolders "
+"for each dataset. Each dataset should have an \"images\" folder."
 msgstr ""
+"Cesta ke složce projektu. Složka projektu by měla obsahovat podsložky pro "
+"jednotlivé datové sady. Každá datová sada by měla mít složku \"images\"."
 
 #: ../../arguments.rst:171
 msgid ""
-":ref:`radiometric-calibration<radiometric-calibration>` none |  camera |"
-"  camera+sun"
+":ref:`radiometric-calibration<radiometric-calibration>` none |  camera |  "
+"camera+sun"
 msgstr ""
 
 #: ../../arguments.rst:171
@@ -613,31 +741,43 @@ msgid ""
 "multispectral and thermal images you should set this option to obtain "
 "reflectance/temperature values (otherwise you will get digital number "
 "values). [camera] applies black level, vignetting, row gradient "
-"gain/exposure compensation (if appropriate EXIF tags are found) and "
-"computes absolute temperature values. [camera+sun] is experimental, "
-"applies all the corrections of [camera], plus compensates for spectral "
-"radiance registered via a downwelling light sensor (DLS) taking in "
-"consideration the angle of the sun. . Default: ``none``"
+"gain/exposure compensation (if appropriate EXIF tags are found) and computes"
+" absolute temperature values. [camera+sun] is experimental, applies all the "
+"corrections of [camera], plus compensates for spectral radiance registered "
+"via a downwelling light sensor (DLS) taking in consideration the angle of "
+"the sun. . Default: ``none``"
 msgstr ""
+"Nastavení radiometrické kalibrace, která se má provést na snímcích. Při "
+"zpracování multispektrálních a termálních snímků byste měli tuto možnost "
+"nastavit tak, abyste získali hodnoty odrazivosti/teploty (jinak dostanete "
+"hodnoty digitálních čísel). [Fotoaparát] aplikuje úroveň černé, vinětaci, "
+"kompenzaci řádkového gradientu zisku/expozice (pokud jsou nalezeny příslušné"
+" značky EXIF) a vypočítá absolutní hodnoty teploty. [fotoaparát+slunce] je "
+"experimentální, aplikuje všechny korekce [fotoaparátu] a navíc kompenzuje "
+"spektrální zářivost zaznamenanou prostřednictvím snímače dopadajícího světla"
+" (DLS) s ohledem na úhel dopadu slunce. . Výchozí hodnota: ``none``"
 
 #: ../../arguments.rst:174
 msgid ""
 ":ref:`rerun<rerun>` dataset |  split |  merge |  opensfm |  openmvs |  "
-"odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |"
-"  odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess"
+"odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  "
+"odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess"
 msgstr ""
 
 #: ../../arguments.rst:174
 msgid "Rerun this stage only and stop. . Default: ``"
-msgstr ""
+msgstr "Znovu spusťte pouze tuto fázi a zastavte. Výchozí: ``"
 
 #: ../../arguments.rst:177
 msgid ":ref:`rerun-all<rerun-all>`"
 msgstr ""
 
 #: ../../arguments.rst:177
-msgid "Permanently delete all previous results and rerun the processing pipeline."
+msgid ""
+"Permanently delete all previous results and rerun the processing pipeline."
 msgstr ""
+"trvale odstraní všechny předchozí výsledky a znovu spustí zpracovatelský "
+"řetězec."
 
 #: ../../arguments.rst:180
 msgid ""
@@ -649,7 +789,7 @@ msgstr ""
 
 #: ../../arguments.rst:180
 msgid "Rerun processing from this stage. . Default: ``"
-msgstr ""
+msgstr "Znovu spusťte zpracování od této fáze. . Výchozí: ``"
 
 #: ../../arguments.rst:183
 msgid ":ref:`resize-to<resize-to>` <integer>"
@@ -657,11 +797,15 @@ msgstr ""
 
 #: ../../arguments.rst:183
 msgid ""
-"Legacy option (use --feature-quality instead). Resizes images by the "
-"largest side for feature extraction purposes only. Set to -1 to disable. "
-"This does not affect the final orthophoto resolution quality and will not"
-" resize the original images. Default: ``2048``"
+"Legacy option (use --feature-quality instead). Resizes images by the largest"
+" side for feature extraction purposes only. Set to -1 to disable. This does "
+"not affect the final orthophoto resolution quality and will not resize the "
+"original images. Default: ``2048``"
 msgstr ""
+"Starší možnost (místo ní použijte --feature-quality). Změní velikost obrázků"
+" podle největší strany pouze pro účely extrakce prvků. Pro vypnutí nastavte "
+"hodnotu -1. Nemá vliv na kvalitu konečného rozlišení ortofot a nezmění "
+"velikost původních snímků. Výchozí hodnota: ``2048``"
 
 #: ../../arguments.rst:186
 msgid ":ref:`sfm-algorithm<sfm-algorithm>` incremental |  triangulation"
@@ -669,9 +813,9 @@ msgstr ""
 
 #: ../../arguments.rst:186
 msgid ""
-"Choose the structure from motion algorithm. For aerial datasets, if "
-"camera GPS positions and angles are available, triangulation can generate"
-" better results. . Default: ``incremental``"
+"Choose the structure from motion algorithm. For aerial datasets, if camera "
+"GPS positions and angles are available, triangulation can generate better "
+"results. . Default: ``incremental``"
 msgstr ""
 
 #: ../../arguments.rst:189
@@ -680,9 +824,12 @@ msgstr ""
 
 #: ../../arguments.rst:189
 msgid ""
-"Skip generation of a full 3D model. This can save time if you only need "
-"2D results such as orthophotos and DEMs. Default: ``False``"
+"Skip generation of a full 3D model. This can save time if you only need 2D "
+"results such as orthophotos and DEMs. Default: ``False``"
 msgstr ""
+"Přeskočení generování úplného 3D modelu. To může ušetřit čas, pokud "
+"potřebujete pouze 2D výsledky, jako jsou ortofotomapy a DEM. Výchozí "
+"hodnota: ``False``"
 
 #: ../../arguments.rst:192
 msgid ":ref:`skip-band-alignment<skip-band-alignment>`"
@@ -691,9 +838,12 @@ msgstr ""
 #: ../../arguments.rst:192
 msgid ""
 "When processing multispectral datasets, ODM will automatically align the "
-"images for each band. If the images have been postprocessed and are "
-"already aligned, use this option. Default: ``False``"
+"images for each band. If the images have been postprocessed and are already "
+"aligned, use this option. Default: ``False``"
 msgstr ""
+"Při zpracování multispektrálních datových sad ODM automaticky zarovná snímky"
+" pro každé pásmo. Pokud byly snímky dodatečně zpracovány a jsou již "
+"vyrovnány, použijte tuto možnost. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:195
 msgid ":ref:`skip-orthophoto<skip-orthophoto>`"
@@ -701,9 +851,11 @@ msgstr ""
 
 #: ../../arguments.rst:195
 msgid ""
-"Skip generation of the orthophoto. This can save time if you only need 3D"
-" results or DEMs. Default: ``False``"
+"Skip generation of the orthophoto. This can save time if you only need 3D "
+"results or DEMs. Default: ``False``"
 msgstr ""
+"Přeskočit generování ortofota. To může ušetřit čas, pokud potřebujete pouze "
+"3D výsledky nebo DEM. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:198
 msgid ":ref:`skip-report<skip-report>`"
@@ -714,6 +866,8 @@ msgid ""
 "Skip generation of PDF report. This can save time if you don't need a "
 "report. Default: ``False``"
 msgstr ""
+"Přeskočení generování zprávy PDF. To může ušetřit čas, pokud zprávu "
+"nepotřebujete. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:201
 msgid ":ref:`sm-cluster<sm-cluster>` <string>"
@@ -724,14 +878,19 @@ msgid ""
 "URL to a ClusterODM instance for distributing a split-merge workflow on "
 "multiple nodes in parallel. Default: ``None``"
 msgstr ""
+"URL na instanci ClusterODM pro distribuci pracovního postupu split-merge na "
+"více uzlů paralelně. Výchozí hodnota: ``None``"
 
 #: ../../arguments.rst:204
 msgid ":ref:`smrf-scalar<smrf-scalar>` <positive float>"
 msgstr ""
 
 #: ../../arguments.rst:204
-msgid "Simple Morphological Filter elevation scalar parameter. Default: ``1.25``"
+msgid ""
+"Simple Morphological Filter elevation scalar parameter. Default: ``1.25``"
 msgstr ""
+"Jednoduchý morfologický filtr skalární parametr výšky. Výchozí hodnota: "
+"``1,25``"
 
 #: ../../arguments.rst:207
 msgid ":ref:`smrf-slope<smrf-slope>` <positive float>"
@@ -742,6 +901,8 @@ msgid ""
 "Simple Morphological Filter slope parameter (rise over run). Default: "
 "``0.15``"
 msgstr ""
+"Parametr sklonu jednoduchého morfologického filtru (nárůst nad průběhem). "
+"Výchozí hodnota: ``0,15``"
 
 #: ../../arguments.rst:210
 msgid ":ref:`smrf-threshold<smrf-threshold>` <positive float>"
@@ -749,9 +910,11 @@ msgstr ""
 
 #: ../../arguments.rst:210
 msgid ""
-"Simple Morphological Filter elevation threshold parameter (meters). "
-"Default: ``0.5``"
+"Simple Morphological Filter elevation threshold parameter (meters). Default:"
+" ``0.5``"
 msgstr ""
+"Parametr prahové výšky jednoduchého morfologického filtru (v metrech). "
+"Výchozí hodnota: ``0,5``"
 
 #: ../../arguments.rst:213
 msgid ":ref:`smrf-window<smrf-window>` <positive float>"
@@ -762,6 +925,8 @@ msgid ""
 "Simple Morphological Filter window radius parameter (meters). Default: "
 "``18.0``"
 msgstr ""
+"Parametr poloměru okna jednoduchého morfologického filtru (v metrech). "
+"Výchozí hodnota: ``18.0```"
 
 #: ../../arguments.rst:216
 msgid ":ref:`split<split>` <positive integer>"
@@ -769,11 +934,15 @@ msgstr ""
 
 #: ../../arguments.rst:216
 msgid ""
-"Average number of images per submodel. When splitting a large dataset "
-"into smaller submodels, images are grouped into clusters. This value "
-"regulates the number of images that each cluster should have on average. "
-"Default: ``999999``"
+"Average number of images per submodel. When splitting a large dataset into "
+"smaller submodels, images are grouped into clusters. This value regulates "
+"the number of images that each cluster should have on average. Default: "
+"``999999``"
 msgstr ""
+"Průměrný počet snímků na dílčí model. Při rozdělování velkého souboru dat na"
+" menší dílčí modely se snímky seskupují do shluků. Tato hodnota upravuje "
+"počet snímků, které by měl každý shluk v průměru obsahovat. Výchozí hodnota:"
+" ``999999``"
 
 #: ../../arguments.rst:219
 msgid ":ref:`split-image-groups<split-image-groups>` <path string>"
@@ -781,10 +950,13 @@ msgstr ""
 
 #: ../../arguments.rst:219
 msgid ""
-"Path to the image groups file that controls how images should be split "
-"into groups. The file needs to use the following format: image_name "
+"Path to the image groups file that controls how images should be split into "
+"groups. The file needs to use the following format: image_name "
 "group_nameDefault: ``None``"
 msgstr ""
+"Cesta k souboru skupin obrázků, který určuje, jak mají být obrázky rozděleny"
+" do skupin. Soubor musí mít následující formát: image_name "
+"group_nameDefault: ``None``"
 
 #: ../../arguments.rst:222
 msgid ":ref:`split-overlap<split-overlap>` <positive integer>"
@@ -793,10 +965,13 @@ msgstr ""
 #: ../../arguments.rst:222
 msgid ""
 "Radius of the overlap between submodels. After grouping images into "
-"clusters, images that are closer than this radius to a cluster are added "
-"to the cluster. This is done to ensure that neighboring submodels "
-"overlap. Default: ``150``"
+"clusters, images that are closer than this radius to a cluster are added to "
+"the cluster. This is done to ensure that neighboring submodels overlap. "
+"Default: ``150``"
 msgstr ""
+"Poloměr překrytí dílčích modelů. Po seskupení snímků do shluků se do shluku "
+"přidají snímky, které jsou blíže než tento poloměr. To se provádí proto, aby"
+" se sousední submodely překrývaly. Výchozí hodnota: ``150``"
 
 #: ../../arguments.rst:225
 msgid ":ref:`texturing-data-term<texturing-data-term>` gmi |  area"
@@ -804,10 +979,13 @@ msgstr ""
 
 #: ../../arguments.rst:225
 msgid ""
-"When texturing the 3D mesh, for each triangle, choose to prioritize "
-"images with sharp features (gmi) or those that cover the largest area "
-"(area). Default: ``gmi``"
+"When texturing the 3D mesh, for each triangle, choose to prioritize images "
+"with sharp features (gmi) or those that cover the largest area (area). "
+"Default: ``gmi``"
 msgstr ""
+"Při texturování 3D sítě můžete pro každý trojúhelník upřednostnit snímky s "
+"ostrými rysy (gmi) nebo ty, které pokrývají největší plochu (area). Výchozí:"
+" ``gmi``"
 
 #: ../../arguments.rst:228
 msgid ":ref:`texturing-keep-unseen-faces<texturing-keep-unseen-faces>`"
@@ -815,19 +993,22 @@ msgstr ""
 
 #: ../../arguments.rst:228
 msgid ""
-"Keep faces in the mesh that are not seen in any camera. Default:  "
+"Keep faces in the mesh that are not seen in any camera. Default:  ``False``"
+msgstr ""
+"Zachovat v síti plochy, které nejsou vidět v žádné kameře. Výchozí hodnota: "
 "``False``"
+
+#: ../../arguments.rst:231
+msgid ""
+":ref:`texturing-outlier-removal-type<texturing-outlier-removal-type>` none |"
+"  gauss_clamping |  gauss_damping"
 msgstr ""
 
 #: ../../arguments.rst:231
 msgid ""
-":ref:`texturing-outlier-removal-type<texturing-outlier-removal-type>` "
-"none |  gauss_clamping |  gauss_damping"
+"Type of photometric outlier removal method. . Default: ``gauss_clamping``"
 msgstr ""
-
-#: ../../arguments.rst:231
-msgid "Type of photometric outlier removal method. . Default: ``gauss_clamping``"
-msgstr ""
+"Typ metody odstranění fotometrických odchylek. . Výchozí: ``gauss_clamping``"
 
 #: ../../arguments.rst:234
 msgid ""
@@ -840,6 +1021,8 @@ msgid ""
 "Skip normalization of colors across all images. Useful when processing "
 "radiometric data. Default: ``False``"
 msgstr ""
+"Přeskočení normalizace barev ve všech snímcích. Užitečné při zpracování "
+"radiometrických dat. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:237
 msgid ""
@@ -850,6 +1033,7 @@ msgstr ""
 #: ../../arguments.rst:237
 msgid "Skip the blending of colors near seams. Default: ``False``"
 msgstr ""
+"Vynechejte prolínání barev v blízkosti švů. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:240
 msgid ":ref:`texturing-tone-mapping<texturing-tone-mapping>` none |  gamma"
@@ -860,6 +1044,8 @@ msgid ""
 "Turn on gamma tone mapping or none for no tone mapping. Can be one of "
 "['none', 'gamma']. Default: ``none``"
 msgstr ""
+"Zapnutí mapování tónů gama nebo žádné pro žádné mapování tónů. Může být "
+"jedna z možností [\"none\", \"gamma\"]. Výchozí: ``žádný``"
 
 #: ../../arguments.rst:243
 msgid ":ref:`tiles<tiles>`"
@@ -867,9 +1053,11 @@ msgstr ""
 
 #: ../../arguments.rst:243
 msgid ""
-"Generate static tiles for orthophotos and DEMs that are suitable for "
-"viewers like Leaflet or OpenLayers. Default: ``False``"
+"Generate static tiles for orthophotos and DEMs that are suitable for viewers"
+" like Leaflet or OpenLayers. Default: ``False``"
 msgstr ""
+"Generování statických dlaždic pro ortofotomapy a DEM, které jsou vhodné pro "
+"prohlížeče jako Leaflet nebo OpenLayers. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:246
 msgid ":ref:`time<time>`"
@@ -878,6 +1066,8 @@ msgstr ""
 #: ../../arguments.rst:246
 msgid "Generates a benchmark file with runtime info. Default: ``False``"
 msgstr ""
+"Vygeneruje referenční soubor s informacemi o běhu. Výchozí hodnota: "
+"``False``"
 
 #: ../../arguments.rst:249
 msgid ":ref:`use-3dmesh<use-3dmesh>`"
@@ -885,10 +1075,13 @@ msgstr ""
 
 #: ../../arguments.rst:249
 msgid ""
-"Use a full 3D mesh to compute the orthophoto instead of a 2.5D mesh. This"
-" option is a bit faster and provides similar results in planar areas. "
+"Use a full 3D mesh to compute the orthophoto instead of a 2.5D mesh. This "
+"option is a bit faster and provides similar results in planar areas. "
 "Default: ``False``"
 msgstr ""
+"K výpočtu ortofota použijte místo 2,5D sítě úplnou 3D síť. Tato možnost je o"
+" něco rychlejší a poskytuje podobné výsledky v rovinných oblastech. Výchozí "
+"hodnota: ``False``"
 
 #: ../../arguments.rst:252
 msgid ":ref:`use-exif<use-exif>`"
@@ -896,9 +1089,11 @@ msgstr ""
 
 #: ../../arguments.rst:252
 msgid ""
-"Use this tag if you have a GCP File but want to use the EXIF information "
-"for georeferencing instead. Default: ``False``"
+"Use this tag if you have a GCP File but want to use the EXIF information for"
+" georeferencing instead. Default: ``False``"
 msgstr ""
+"Tuto značku použijte, pokud máte soubor GCP, ale chcete místo něj použít "
+"informace EXIF pro georeferencování. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:255
 msgid ":ref:`use-fixed-camera-params<use-fixed-camera-params>`"
@@ -906,10 +1101,14 @@ msgstr ""
 
 #: ../../arguments.rst:255
 msgid ""
-"Turn off camera parameter optimization during bundle adjustment. This can"
-" be sometimes useful for improving results that exhibit doming/bowling or"
-" when images are taken with a rolling shutter camera. Default: ``False``"
+"Turn off camera parameter optimization during bundle adjustment. This can be"
+" sometimes useful for improving results that exhibit doming/bowling or when "
+"images are taken with a rolling shutter camera. Default: ``False``"
 msgstr ""
+"Vypněte optimalizaci parametrů fotoaparátu během nastavení svazku. To může "
+"být někdy užitečné pro zlepšení výsledků, které vykazují dominaci/bowling, "
+"nebo když jsou snímky pořízeny fotoaparátem s rolovací závěrkou. Výchozí "
+"hodnota: ``False``"
 
 #: ../../arguments.rst:258
 msgid ":ref:`use-hybrid-bundle-adjustment<use-hybrid-bundle-adjustment>`"
@@ -917,10 +1116,13 @@ msgstr ""
 
 #: ../../arguments.rst:258
 msgid ""
-"Run local bundle adjustment for every image added to the reconstruction "
-"and a global adjustment every 100 images. Speeds up reconstruction for "
-"very large datasets. Default: ``False``"
+"Run local bundle adjustment for every image added to the reconstruction and "
+"a global adjustment every 100 images. Speeds up reconstruction for very "
+"large datasets. Default: ``False``"
 msgstr ""
+"Proveďte místní úpravu svazku pro každý snímek přidaný do rekonstrukce a "
+"globální úpravu každých 100 snímků. Zrychluje rekonstrukci u velmi "
+"rozsáhlých souborů dat. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:261
 msgid ":ref:`verbose<verbose>`"
@@ -928,7 +1130,7 @@ msgstr ""
 
 #: ../../arguments.rst:261
 msgid "Print additional messages to the console. Default: ``False``"
-msgstr ""
+msgstr "Tisk dalších zpráv do konzoly. Výchozí hodnota: ``False``"
 
 #: ../../arguments.rst:267
 msgid ":ref:`version<version>`"
@@ -936,14 +1138,18 @@ msgstr ""
 
 #: ../../arguments.rst:264
 msgid "Displays version number and exits."
-msgstr ""
+msgstr "Zobrazí číslo verze a ukončí se."
 
 #: ../../arguments.rst:269
 msgid ""
 "If you want to add more details to a command, `learn to edit "
-"<https://github.com/opendronemap/docs#how-to-make-your-first-"
-"contribution>`_ and help improve the matching file in the "
-"``arguments_edit`` `project folder  "
+"<https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_"
+" and help improve the matching file in the ``arguments_edit`` `project "
+"folder  "
 "<https://github.com/OpenDroneMap/docs/tree/publish/source/arguments_edit>`_!"
 msgstr ""
-
+"Pokud chcete k příkazu přidat další podrobnosti, `naučte se upravovat "
+"<https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_"
+" a pomozte vylepšit odpovídající soubor ve složce ``arguments_edit`` "
+"`project "
+"<https://github.com/OpenDroneMap/docs/tree/publish/source/arguments_edit>`_!"

@@ -1,22 +1,25 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2020, OpenDroneMap
-# This file is distributed under the same license as the OpenDroneMap
-# package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
-#
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# trendspotter <jirka.p@volny.cz>, 2023
+# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.7.0\n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2021-12-28 10:32-0500\n"
-"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
-"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
-"Language-Team: LANGUAGE <LL@li.org>\n"
+"PO-Revision-Date: 2021-11-12 20:52+0000\n"
+"Last-Translator: trendspotter <jirka.p@volny.cz>, 2023\n"
+"Language-Team: Czech (https://www.transifex.com/americanredcross/teams/111882/cs/)\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=utf-8\n"
+"Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
 
 #: ../../arguments/camera-lens.rst:9
 msgid "camera-lens"
@@ -29,9 +32,12 @@ msgstr ""
 #: ../../arguments/camera-lens.rst:13
 msgid ""
 "Set a camera projection type. Manually setting a value can help improve "
-"geometric undistortion. By default the application tries to determine a "
-"lens type from the images metadata. . Default: ``auto``"
+"geometric undistortion. By default the application tries to determine a lens"
+" type from the images metadata. . Default: ``auto``"
 msgstr ""
+"Nastavení typu projekce kamery. Ruční nastavení hodnoty může pomoci zlepšit "
+"geometrické nezkreslení. Ve výchozím nastavení se aplikace pokusí určit typ "
+"objektivu z metadat snímků. . Výchozí hodnota: ``auto``"
 
 #: ../../arguments/camera-lens.rst:15
 msgid "Parameter Type:"
@@ -43,23 +49,26 @@ msgstr ""
 
 #: ../../arguments/camera-lens.rst:17
 msgid "Parameter Domain:"
-msgstr ""
+msgstr "Doména parametru:"
 
 #: ../../arguments/camera-lens.rst:18
 msgid "``auto`` : Automatic selection of best camera projection model."
-msgstr ""
+msgstr "``auto`` : Automatický výběr nejlepšího modelu projekce kamery."
 
 #: ../../arguments/camera-lens.rst:19
-msgid "``brown`` : Robust rectilinear projection model. Preferred by ``auto``."
+msgid ""
+"``brown`` : Robust rectilinear projection model. Preferred by ``auto``."
 msgstr ""
+"``brown`` : Robustní model rektilineární projekce. Přednostně se používá "
+"``auto``."
 
 #: ../../arguments/camera-lens.rst:20
 msgid "``fisheye`` : Wide-angle / non-rectilinear projection model."
-msgstr ""
+msgstr "``fisheye`` : Širokoúhlý / nerektilineární projekční model."
 
 #: ../../arguments/camera-lens.rst:21
 msgid "``perspective`` : Legacy rectilinear projection model."
-msgstr ""
+msgstr "``perspective`` : Starší rektilineární projekční model."
 
 #: ../../arguments/camera-lens.rst:22
 msgid "``spherical`` : 360° camera projection model."
@@ -67,11 +76,11 @@ msgstr ""
 
 #: ../../arguments/camera-lens.rst:23
 msgid "Parameter Default:"
-msgstr ""
+msgstr "Parametr Výchozí:"
 
 #: ../../arguments/camera-lens.rst:24
 msgid "``auto``"
-msgstr ""
+msgstr "``auto``"
 
 #: ../../arguments/camera-lens.rst:29
 msgid "Resource"
@@ -83,7 +92,7 @@ msgstr ""
 
 #: ../../arguments/camera-lens.rst:31
 msgid "CPU"
-msgstr ""
+msgstr "CPU"
 
 #: ../../arguments/camera-lens.rst:31 ../../arguments/camera-lens.rst:33
 #: ../../arguments/camera-lens.rst:34 ../../arguments/camera-lens.rst:35
@@ -92,7 +101,7 @@ msgstr ""
 
 #: ../../arguments/camera-lens.rst:32
 msgid "GPU"
-msgstr ""
+msgstr "GPU"
 
 #: ../../arguments/camera-lens.rst:32
 msgid "○○○ | None"
@@ -100,62 +109,77 @@ msgstr ""
 
 #: ../../arguments/camera-lens.rst:33
 msgid "HDD"
-msgstr ""
+msgstr "HDD"
 
 #: ../../arguments/camera-lens.rst:34
 msgid "RAM"
-msgstr ""
+msgstr "RAM"
 
 #: ../../arguments/camera-lens.rst:35
 msgid "Time"
-msgstr ""
+msgstr "Čas"
 
 #: ../../arguments/camera-lens.rst:41
 msgid "What Are Camera Lens Models?"
-msgstr ""
+msgstr "Co jsou modely objektivů fotoaparátů?"
 
 #: ../../arguments/camera-lens.rst:42
 msgid ""
 "Camera Lens Models are projection/distortion models that OpenSFM uses to "
-"correct for the optics of the camera platforms that record our images. "
-"These corrections are essential for proper camera/scene modeling, and "
-"therefore, proper reconstruction of the data."
+"correct for the optics of the camera platforms that record our images. These"
+" corrections are essential for proper camera/scene modeling, and therefore, "
+"proper reconstruction of the data."
 msgstr ""
+"Modely objektivů kamer jsou modely projekce/zkreslení, které OpenSFM používá"
+" ke korekci optiky kamerových platforem, které zaznamenávají naše snímky. "
+"Tyto korekce jsou nezbytné pro správné modelování kamery/scény, a tedy i pro"
+" správnou rekonstrukci dat."
 
 #: ../../arguments/camera-lens.rst:45
 msgid "When are manual selections appropriate?"
-msgstr ""
+msgstr "Kdy je vhodný ruční výběr?"
 
 #: ../../arguments/camera-lens.rst:46
 msgid ""
-"Manually choosing a Camera Lens Model is currently only recommended in "
-"the case of Spherical Cameras (GoPro Fusion, GoPro Max, Insta360, Kodak "
-"PixPro, etc.) as these are currently not detected automatically by "
-"OpenSFM."
+"Manually choosing a Camera Lens Model is currently only recommended in the "
+"case of Spherical Cameras (GoPro Fusion, GoPro Max, Insta360, Kodak PixPro, "
+"etc.) as these are currently not detected automatically by OpenSFM."
 msgstr ""
+"Ruční výběr modelu objektivu kamery se v současné době doporučuje pouze v "
+"případě sférických kamer (GoPro Fusion, GoPro Max, Insta360, Kodak PixPro "
+"atd.), protože tyto kamery nejsou v současné době automaticky detekovány "
+"systémem OpenSFM."
 
 #: ../../arguments/camera-lens.rst:49
 msgid "Why would one use a particular Camera Lens Model?"
-msgstr ""
+msgstr "Proč používat určitý model objektivu fotoaparátu?"
 
 #: ../../arguments/camera-lens.rst:50
 msgid ""
 "In rare cases, OpenSFM may not be able to detect (or retrieve from its "
-"Camera database) the correct Camera Lens Model for your particular "
-"sensor, in which case you should select the closest appropriate model. "
-"When in doubt, try specifying ``brown`` first."
+"Camera database) the correct Camera Lens Model for your particular sensor, "
+"in which case you should select the closest appropriate model. When in "
+"doubt, try specifying ``brown`` first."
 msgstr ""
+"Ve vzácných případech nemusí být program OpenSFM schopen zjistit (nebo "
+"načíst z databáze fotoaparátů) správný model objektivu fotoaparátu pro váš "
+"konkrétní snímač, v takovém případě byste měli vybrat nejbližší vhodný "
+"model. V případě pochybností zkuste nejprve zadat ``brown``."
 
 #: ../../arguments/camera-lens.rst:53
 msgid "Example Images"
-msgstr ""
+msgstr "Ukázkové obrázky"
 
 #: ../../arguments/camera-lens.rst:55
 msgid ""
-"The following examples are all data taken with a standard Rectilinear "
-"Lens. Manual selection of the various Camera Lens Models is demonstrated "
-"to show some differences in how this will affect reconstruction."
+"The following examples are all data taken with a standard Rectilinear Lens. "
+"Manual selection of the various Camera Lens Models is demonstrated to show "
+"some differences in how this will affect reconstruction."
 msgstr ""
+"Následující příklady jsou všechny údaje pořízené standardním objektivem "
+"Rectilinear Lens. Ruční výběr různých modelů objektivů fotoaparátu je "
+"demonstrován s cílem ukázat některé rozdíly v tom, jak to ovlivní "
+"rekonstrukci."
 
 #: ../../arguments/camera-lens.rst:58
 msgid "``auto`` : Rectilinear Data"
@@ -164,12 +188,15 @@ msgstr ""
 #: ../../arguments/camera-lens.rst:62
 msgid "Rectilinear data rendered by ``auto`` Camera Lens Model"
 msgstr ""
+"Pravoúhlá data vykreslená pomocí ``automatického`` modelu objektivu kamery"
 
 #: ../../arguments/camera-lens.rst:62
 msgid ""
-"This Point Cloud shows a proper reconstruction via the ``auto`` "
-"(``brown``) Camera Lens Model, which is appropriate for this sensor."
+"This Point Cloud shows a proper reconstruction via the ``auto`` (``brown``) "
+"Camera Lens Model, which is appropriate for this sensor."
 msgstr ""
+"Toto mračno bodů ukazuje správnou rekonstrukci pomocí ``automatického`` "
+"(``brown``) modelu objektivu kamery, který je pro tento snímač vhodný."
 
 #: ../../arguments/camera-lens.rst:65
 msgid "``brown`` : Rectilinear Data"
@@ -177,27 +204,32 @@ msgstr ""
 
 #: ../../arguments/camera-lens.rst:69
 msgid "Rectilinear data rendered by ``brown`` Camera Lens Model"
-msgstr ""
+msgstr "Rektilineární data vykreslená pomocí ``brown`` Camera Lens Model"
 
 #: ../../arguments/camera-lens.rst:69
 msgid ""
-"As in the prior example, this Point Cloud is reconstructed via the "
-"``brown`` Camera Lens Model."
+"As in the prior example, this Point Cloud is reconstructed via the ``brown``"
+" Camera Lens Model."
 msgstr ""
+"Stejně jako v předchozím příkladu je toto mračno bodů rekonstruováno pomocí "
+"``brown`` modelu objektivu kamery."
 
 #: ../../arguments/camera-lens.rst:72
 msgid "``fisheye`` : Rectilinear Data"
-msgstr ""
+msgstr "``fisheye`` : Rektilineární data"
 
 #: ../../arguments/camera-lens.rst:76
 msgid "Rectilinear data rendered by ``fisheye`` Camera Lens Model"
 msgstr ""
+"Rektilineární data vykreslená pomocí modelu objektivu kamery ``fisheye``"
 
 #: ../../arguments/camera-lens.rst:76
 msgid ""
-"In this Point Cloud reconstruction, severe bowling and other artifacts "
-"have been introduced via the use of the wrong Camera Lens Model."
+"In this Point Cloud reconstruction, severe bowling and other artifacts have "
+"been introduced via the use of the wrong Camera Lens Model."
 msgstr ""
+"Při této rekonstrukci mračna bodů došlo k výraznému vyklenutí a dalším "
+"artefaktům v důsledku použití nesprávného modelu objektivu kamery."
 
 #: ../../arguments/camera-lens.rst:79
 msgid "``perspective`` : Rectilinear Data"
@@ -206,14 +238,21 @@ msgstr ""
 #: ../../arguments/camera-lens.rst:84
 msgid "Rectilinear data rendered by ``perspective`` Camera Lens Model"
 msgstr ""
+"Rektilineární data vykreslená pomocí ``perspektivního`` modelu objektivu "
+"kamery"
 
 #: ../../arguments/camera-lens.rst:84
 msgid ""
-"This Point Cloud rendered well, very similar to the ``auto`` and "
-"``brown`` examples. One may see artifacts in the ``perspective`` Camera "
-"Lens Model in very large collections, or over very flat/homogenus terrain"
-" (agricultural fields). In such cases, forcing ``brown`` may help."
+"This Point Cloud rendered well, very similar to the ``auto`` and ``brown`` "
+"examples. One may see artifacts in the ``perspective`` Camera Lens Model in "
+"very large collections, or over very flat/homogenus terrain (agricultural "
+"fields). In such cases, forcing ``brown`` may help."
 msgstr ""
+"Toto mračno bodů se vykresluje dobře, velmi podobně jako příklady ``auto`` a"
+" ``brown``. Ve velmi rozsáhlých souborech nebo nad velmi plochým/homogenním "
+"terénem (zemědělská pole) lze pozorovat artefakty v ``perspektivním`` modelu"
+" objektivu kamery. V takových případech může pomoci vynucení ``hnědé`` "
+"barvy."
 
 #: ../../arguments/camera-lens.rst:87
 msgid "``spherical`` : Rectilinear Data"
@@ -222,21 +261,30 @@ msgstr ""
 #: ../../arguments/camera-lens.rst:92
 msgid "Rectilinear data rendered by ``spherical`` Camera Lens Model"
 msgstr ""
+"Rektilineární data vykreslená pomocí ``sférického`` modelu objektivu kamery"
 
 #: ../../arguments/camera-lens.rst:92
 msgid ""
-"This Point Cloud failed to reconstruct properly due to the manual "
-"selection of the ``fisheye`` Camera Lens Model. Similar failures to "
-"reconstruct can often indicate the wrong manual selection, or in edge "
-"cases, wrong ``auto`` selection of the Camera Lens Model, and you are "
-"advised to try another Model that is more appropriate."
+"This Point Cloud failed to reconstruct properly due to the manual selection "
+"of the ``fisheye`` Camera Lens Model. Similar failures to reconstruct can "
+"often indicate the wrong manual selection, or in edge cases, wrong ``auto`` "
+"selection of the Camera Lens Model, and you are advised to try another Model"
+" that is more appropriate."
 msgstr ""
+"Toto mračno bodů se nepodařilo správně rekonstruovat kvůli ručnímu výběru "
+"modelu objektivu kamery ``fisheye``. Podobná selhání při rekonstrukci mohou "
+"často znamenat nesprávný ruční výběr nebo v okrajových případech nesprávný "
+"``automatický`` výběr Modelu objektivu kamery a doporučujeme vám vyzkoušet "
+"jiný vhodnější Model."
 
 #: ../../arguments/camera-lens.rst:95
 msgid ""
-"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-"
-"first-contribution>`_ and help improve `this page "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
-"/camera-lens.rst>`_!"
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
+"contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/camera-"
+"lens.rst>`_!"
 msgstr ""
-
+"`Naučte se upravovat <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ a pomozte zlepšit `tuto stránku "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/camera-"
+"lens.rst>`_!"
