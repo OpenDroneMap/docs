@@ -1,0 +1,72 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-28 10:32-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../masks.rst:3
+msgid "Using Image Masks"
+msgstr ""
+
+#: ../../masks.rst:5
+msgid ""
+"Starting from ODM ``2.0`` people can supply image masks to inform the "
+"software to skip reconstruction over certain areas. This is useful for "
+"cases where the sky was accidentally included in the input photos from "
+"oblique shots, or simply to limit the reconstruction of a single subject."
+msgstr ""
+
+#: ../../masks.rst:7
+msgid ""
+"To add a mask, simply create a new black and white image of the same "
+"dimension as the target image you want to mask (you can use a program "
+"such as GIMP to do this). Color in black the areas to exclude from the "
+"reconstruction."
+msgstr ""
+
+msgid "Target image"
+msgstr ""
+
+msgid "Image mask"
+msgstr ""
+
+msgid "3D result (building is masked)"
+msgstr ""
+
+#: ../../masks.rst:22
+msgid "Name your file:"
+msgstr ""
+
+#: ../../masks.rst:24
+msgid "``<filename>_mask.JPG``"
+msgstr ""
+
+#: ../../masks.rst:26
+msgid ""
+"For example, ``DJI_0018.JPG`` can have a mask by creating a "
+"``DJI_0018_mask.JPG`` file and include that in the list of images. You "
+"can use ``.JPG``, ``.PNG``, ``.BMP`` and ``.TIF`` formats for image "
+"masks."
+msgstr ""
+
+#: ../../masks.rst:29
+msgid ""
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/masks.rst>`_!"
+msgstr ""
+

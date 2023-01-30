@@ -1,0 +1,90 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# trendspotter <jirka.p@volny.cz>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-28 10:32-0500\n"
+"PO-Revision-Date: 2021-11-11 14:12+0000\n"
+"Last-Translator: trendspotter <jirka.p@volny.cz>, 2023\n"
+"Language-Team: Czech (https://www.transifex.com/americanredcross/teams/111882/cs/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+
+#: ../../faq.rst:3
+msgid "Frequently Asked Questions"
+msgstr "Často kladené otázky"
+
+#: ../../faq.rst:7
+msgid "Data Processing"
+msgstr "Zpracování dat"
+
+#: ../../faq.rst:10
+msgid "Can I process two or more orthophoto GeoTIFFs to stitch them together?"
+msgstr ""
+"Mohu zpracovat dva nebo více ortofotografických souborů GeoTIFF a spojit je "
+"dohromady?"
+
+#: ../../faq.rst:12
+msgid ""
+"No. ODM is a photogrammetric pipeline and orthophotos do not have the "
+"necessary camera information since the images have already been "
+"orthorectified. You can use another program such as `Hugin "
+"<http://hugin.sourceforge.net/>`_ to do that."
+msgstr ""
+"Ne. ODM je fotogrammetrický postup a ortofotomapy neobsahují potřebné "
+"informace o fotoaparátu, protože snímky již byly ortorektifikovány. K tomu "
+"můžete použít jiný program, například `Hugin "
+"<http://hugin.sourceforge.net/>`_."
+
+#: ../../faq.rst:16
+msgid "Licensing"
+msgstr "Licencování"
+
+#: ../../faq.rst:19
+msgid ""
+"I want to build a commercial application that includes ODM. Do I need a "
+"commercial license?"
+msgstr ""
+"Chci vytvořit komerční aplikaci, která zahrnuje ODM. Potřebuji komerční "
+"licenci?"
+
+#: ../../faq.rst:21
+msgid ""
+"ODM is free and open source software, released under the `AGPLv3 "
+"<https://github.com/OpenDroneMap/ODM/blob/master/LICENSE>`_. You are free to"
+" build and sell applications with it, just make sure to comply with the "
+"requirements of the license, in particular the disclose source requirement."
+msgstr ""
+"ODM je svobodný software s otevřeným zdrojovým kódem vydaný pod licencí "
+"`AGPLv3 <https://github.com/OpenDroneMap/ODM/blob/master/LICENSE>`_. Můžete "
+"s ním svobodně vytvářet a prodávat aplikace, jen se ujistěte, že splňujete "
+"požadavky licence, zejména požadavek na zveřejnění zdrojového kódu."
+
+#: ../../faq.rst:24
+msgid "Are there other licensing options aside from the AGPLv3?"
+msgstr "Existují kromě licence AGPLv3 i jiné možnosti licencování?"
+
+#: ../../faq.rst:26
+msgid "Nope, sorry!"
+msgstr "Ne, litujeme!"
+
+#: ../../faq.rst:29
+msgid ""
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
+"contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/faq.rst>`_!"
+msgstr ""
+"`Naučte se upravovat <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ a pomozte zlepšit `tuto stránku "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/faq.rst>`_!"

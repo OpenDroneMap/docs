@@ -1,0 +1,210 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
+# 
+# Translators:
+# trendspotter <jirka.p@volny.cz>, 2023
+# 
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-28 10:32-0500\n"
+"PO-Revision-Date: 2021-11-12 20:52+0000\n"
+"Last-Translator: trendspotter <jirka.p@volny.cz>, 2023\n"
+"Language-Team: Czech (https://www.transifex.com/americanredcross/teams/111882/cs/)\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Language: cs\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+
+#: ../../arguments/auto-boundary.rst:9
+msgid "auto-boundary"
+msgstr "automatické ohraničení"
+
+#: ../../arguments/auto-boundary.rst:13
+msgid ""
+"Automatically set a boundary using camera shot locations to limit the area "
+"of the reconstruction. This can help remove far away background artifacts "
+"(sky, background landscapes, etc.). See also --boundary. Default: ``False``"
+msgstr ""
+"Automatické nastavení hranice pomocí míst záběrů kamery pro omezení oblasti "
+"rekonstrukce. To může pomoci odstranit vzdálené artefakty pozadí (obloha, "
+"krajina v pozadí atd.). Viz také příkaz --boundary. Výchozí hodnota: "
+"``False``"
+
+#: ../../arguments/auto-boundary.rst:15
+msgid "Parameter Type:"
+msgstr "Typ parametru:"
+
+#: ../../arguments/auto-boundary.rst:16
+msgid "**Boolean**"
+msgstr "**Boolean**"
+
+#: ../../arguments/auto-boundary.rst:17
+msgid "Parameter Domain:"
+msgstr "Doména parametru:"
+
+#: ../../arguments/auto-boundary.rst:18 ../../arguments/auto-boundary.rst:59
+msgid "True: ``--auto-boundary``"
+msgstr "True: ``--auto-boundary``"
+
+#: ../../arguments/auto-boundary.rst:19 ../../arguments/auto-boundary.rst:21
+#: ../../arguments/auto-boundary.rst:66
+msgid "False: ``null``"
+msgstr "False: ``null``"
+
+#: ../../arguments/auto-boundary.rst:20
+msgid "Parameter Default:"
+msgstr "Parametr Výchozí:"
+
+#: ../../arguments/auto-boundary.rst:26
+msgid "Resource"
+msgstr "Zdroje"
+
+#: ../../arguments/auto-boundary.rst:26
+msgid "Impact"
+msgstr "Dopad"
+
+#: ../../arguments/auto-boundary.rst:28
+msgid "CPU"
+msgstr "CPU"
+
+#: ../../arguments/auto-boundary.rst:28 ../../arguments/auto-boundary.rst:31
+#: ../../arguments/auto-boundary.rst:32
+msgid "●○○ | Low"
+msgstr "●○○ | Nízký"
+
+#: ../../arguments/auto-boundary.rst:29
+msgid "GPU"
+msgstr "GPU"
+
+#: ../../arguments/auto-boundary.rst:29 ../../arguments/auto-boundary.rst:30
+msgid "○○○ | None"
+msgstr "○○○ | Žádný"
+
+#: ../../arguments/auto-boundary.rst:30
+msgid "HDD"
+msgstr "HDD"
+
+#: ../../arguments/auto-boundary.rst:31
+msgid "RAM"
+msgstr "RAM"
+
+#: ../../arguments/auto-boundary.rst:32
+msgid "Time"
+msgstr "Čas"
+
+#: ../../arguments/auto-boundary.rst:38
+msgid "What Is Auto-Boundary?"
+msgstr "Co je automatická hranice?"
+
+#: ../../arguments/auto-boundary.rst:39
+msgid ""
+"``--auto-boundary`` is a process that seeks to limit the boundaries of the "
+"reconstruction based upon a K-Means filtered Convex Hull buffered by 20x the"
+" mean GSD of the dataset."
+msgstr ""
+"``--auto-boundary`` je proces, který se snaží omezit hranice rekonstrukce na"
+" základě K-Means filtrovaného konvexního trupu s bufferem 20x střední GSD "
+"datové sady."
+
+#: ../../arguments/auto-boundary.rst:42
+msgid "When Is Auto-Boundary Helpful?"
+msgstr "Kdy je automatická hranice užitečná?"
+
+#: ../../arguments/auto-boundary.rst:43
+msgid ""
+"``--auto-boundary`` is appropriate to use on any dataset where one might "
+"possibly consider limiting the area of reconstruction due to the presence of"
+" sky or far-away background that they would not normally consider part of "
+"the desired reconstruction."
+msgstr ""
+"``--auto-boundary`` je vhodné použít pro jakoukoli datovou sadu, kde by bylo"
+" možné uvažovat o omezení oblasti rekonstrukce z důvodu přítomnosti oblohy "
+"nebo vzdáleného pozadí, které by normálně nebylo považováno za součást "
+"požadované rekonstrukce."
+
+#: ../../arguments/auto-boundary.rst:45
+msgid ""
+"``--auto-boundary`` does not have a meaningful impact on nadir (or near-"
+"nadir) imagery without sky/background, making it superflous, but safe, to "
+"include."
+msgstr ""
+
+#: ../../arguments/auto-boundary.rst:47
+msgid ""
+"In other words, if you would consider masking the image, ``--auto-boundary``"
+" is likely a good choice."
+msgstr ""
+"Jinými slovy, pokud uvažujete o maskování obrázku, ``--auto-boundary`` je "
+"pravděpodobně dobrou volbou."
+
+#: ../../arguments/auto-boundary.rst:50
+msgid "Why would one use auto-boundary?"
+msgstr "Proč by měl někdo používat automatické ohraničení?"
+
+#: ../../arguments/auto-boundary.rst:51
+msgid ""
+"Auto-Boundary is most helpful in preventing the reconstruction area from "
+"growing needlessly large when things like sky, clouds, or far-away features "
+"like treelines get included in the reconstruction."
+msgstr ""
+"Funkce automatického ohraničení je nejužitečnější při prevenci zbytečného "
+"zvětšování oblasti rekonstrukce, když se do rekonstrukce zahrnou věci jako "
+"obloha, mraky nebo vzdálené prvky, například stromořadí."
+
+#: ../../arguments/auto-boundary.rst:53
+msgid ""
+"By preventing the boundaries of the reconstruction from growing needlessly "
+"large, Out-Of-Memory errors become far less likely, and one will likely see "
+"a decrease in processing time due to the smaller area being reconstructed."
+msgstr ""
+"Tím, že se zabrání zbytečnému zvětšování hranic rekonstrukce, se sníží "
+"pravděpodobnost chyb Out-Of-Memory a pravděpodobně dojde ke zkrácení doby "
+"zpracování díky menší rekonstruované oblasti."
+
+#: ../../arguments/auto-boundary.rst:56
+msgid "Example Images"
+msgstr "Příklady snímků"
+
+#: ../../arguments/auto-boundary.rst:63 ../../arguments/auto-boundary.rst:70
+msgid ""
+"WebODM displaying the reconstruction extent of a terrestrial orbit survey of"
+" a Northern Catalpa tree."
+msgstr ""
+"WebODM zobrazující rozsah rekonstrukce pozemního orbitálního průzkumu stromu"
+" katalpy severní."
+
+#: ../../arguments/auto-boundary.rst:63
+msgid ""
+"The WebODM 3D View shows the full extent of the reconstruction, bounded by "
+"the ``--auto-boundary`` option."
+msgstr ""
+"Zobrazení WebODM 3D zobrazuje celý rozsah rekonstrukce ohraničený volbou "
+"``--auto-boundary``."
+
+#: ../../arguments/auto-boundary.rst:70
+msgid ""
+"The WebODM 3D View shows the full extent of the recosntruction. Compared to "
+"the ``--auto-boundary`` reconstruction above, one can see that the full "
+"reconstruction area is much larger (and therefore more visually sparse)."
+msgstr ""
+"3D zobrazení WebODM zobrazuje celý rozsah rekonstrukce. V porovnání s výše "
+"uvedenou rekonstrukcí ``--auto-boundary`` je vidět, že celá oblast "
+"rekonstrukce je mnohem větší (a tedy vizuálně řidší)."
+
+#: ../../arguments/auto-boundary.rst:74
+msgid ""
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
+"contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/auto-"
+"boundary.rst>`_!"
+msgstr ""
+"`Naučte se upravovat <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ a pomozte zlepšit `tuto stránku "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/auto-"
+"boundary.rst>`_!"

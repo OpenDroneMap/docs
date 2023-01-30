@@ -1,0 +1,42 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-28 10:32-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../arguments/merge.rst:9
+msgid "merge"
+msgstr ""
+
+#: ../../arguments/merge.rst:11
+msgid "**Options:** *all |  pointcloud |  orthophoto |  dem*"
+msgstr ""
+
+#: ../../arguments/merge.rst:13
+msgid ""
+"Choose what to merge in the merge step in a split dataset. By default all"
+" available outputs are merged. Options: ['all', 'pointcloud', "
+"'orthophoto', 'dem']. Default: ``all``"
+msgstr ""
+
+#: ../../arguments/merge.rst:18
+msgid ""
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/merge.rst>`_!"
+msgstr ""
+
