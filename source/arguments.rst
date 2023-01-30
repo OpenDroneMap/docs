@@ -83,6 +83,9 @@ Options and Flags
 :ref:`geo<geo>` <path string>
   Path to the image geolocation file containing the camera center coordinates used for georeferencing. If you dont have values for omega/phi/kappa you can set them to 0. The file needs to use the following format: EPSG:<code> or <+proj definition>image_name geo_x geo_y geo_z [omega (degrees)] [phi (degrees)] [kappa (degrees)] [horz accuracy (meters)] [vert accuracy (meters)]Default: ``None``
 
+:ref:`gltf<gltf>` 
+  Generate single file Binary glTF (GLB) textured models. Default:  ``False``
+
 :ref:`gps-accuracy<gps-accuracy>` <positive float>
   Set a value in meters for the GPS Dilution of Precision (DOP) information for all images. If your images are tagged with high precision GPS information (RTK), this value will be automatically set accordingly. You can use this option to manually set it in case the reconstruction fails. Lowering this option can sometimes help control bowling-effects over large areas. Default: ``10``
 
@@ -167,6 +170,9 @@ Options and Flags
 :ref:`pc-sample<pc-sample>` <positive float>
   Filters the point cloud by keeping only a single point around a radius N (in meters). This can be useful to limit the output resolution of the point cloud and remove duplicate points. Set to 0 to disable sampling. Default: ``0``
 
+:ref:`pc-skip-geometric<pc-skip-geometric>` 
+  Geometric estimates improve the accuracy of the point cloud by computing geometrically consistent depthmaps but may not be usable in larger datasets. This flag disables geometric estimates. Default: ``False``
+
 :ref:`pc-tile<pc-tile>` 
   Reduce the memory usage needed for depthmap fusion by splitting large scenes into tiles. Turn this on if your machine doesn't have much RAM and/or you've set --pc-quality to high or ultra. Experimental. Default: ``False``
 
@@ -242,6 +248,9 @@ Options and Flags
 :ref:`texturing-keep-unseen-faces<texturing-keep-unseen-faces>` 
   Keep faces in the mesh that are not seen in any camera. Default:  ``False``
 
+:ref:`texturing-single-material<texturing-single-material>` 
+  Generate OBJs that have a single material and a single texture file instead of multiple ones. Default:  ``False``
+
 :ref:`texturing-skip-global-seam-leveling<texturing-skip-global-seam-leveling>` 
   Skip normalization of colors across all images. Useful when processing radiometric data. Default: ``False``
 
@@ -265,6 +274,12 @@ Options and Flags
 
 :ref:`version<version>` 
   Displays version number and exits. 
+
+:ref:`video-limit<video-limit>` <positive integer>
+  Maximum number of frames to extract from video files for processing. Set to 0 for no limit. Default: ``500``
+
+:ref:`video-resolution<video-resolution>` <positive integer>
+  The maximum output resolution of extracted video frames in pixels. Default: ``4000``
 
 
 
