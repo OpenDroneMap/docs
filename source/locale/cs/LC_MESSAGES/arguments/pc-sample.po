@@ -1,0 +1,44 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-28 10:32-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../arguments/pc-sample.rst:9
+msgid "pc-sample"
+msgstr ""
+
+#: ../../arguments/pc-sample.rst:11
+msgid "**Options:** *<positive float>*"
+msgstr ""
+
+#: ../../arguments/pc-sample.rst:13
+msgid ""
+"Filters the point cloud by keeping only a single point around a radius N "
+"(in meters). This can be useful to limit the output resolution of the "
+"point cloud and remove duplicate points. Set to 0 to disable sampling. "
+"Default: ``0``"
+msgstr ""
+
+#: ../../arguments/pc-sample.rst:18
+msgid ""
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
+"/pc-sample.rst>`_!"
+msgstr ""
+

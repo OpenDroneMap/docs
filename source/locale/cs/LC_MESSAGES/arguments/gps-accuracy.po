@@ -1,0 +1,46 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-28 10:32-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../arguments/gps-accuracy.rst:9
+msgid "gps-accuracy"
+msgstr ""
+
+#: ../../arguments/gps-accuracy.rst:11
+msgid "**Options:** *<positive float>*"
+msgstr ""
+
+#: ../../arguments/gps-accuracy.rst:13
+msgid ""
+"Set a value in meters for the GPS Dilution of Precision (DOP) information"
+" for all images. If your images are tagged with high precision GPS "
+"information (RTK), this value will be automatically set accordingly. You "
+"can use this option to manually set it in case the reconstruction fails. "
+"Lowering this option can sometimes help control bowling-effects over "
+"large areas. Default: ``10``"
+msgstr ""
+
+#: ../../arguments/gps-accuracy.rst:18
+msgid ""
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
+"/gps-accuracy.rst>`_!"
+msgstr ""
+

@@ -1,0 +1,96 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2023.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 2.7.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2021-12-28 10:32-0500\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.9.1\n"
+
+#: ../../resources.rst:2
+msgid "Additional References"
+msgstr ""
+
+#: ../../resources.rst:5
+msgid "For Users"
+msgstr ""
+
+#: ../../resources.rst:7
+msgid "The following resources are a good place to start:"
+msgstr ""
+
+#: ../../resources.rst:9
+msgid "`README page for ODM <https://github.com/OpenDroneMap/OpenDroneMap>`_"
+msgstr ""
+
+#: ../../resources.rst:10
+msgid "`README page for WebODM <https://github.com/OpenDroneMap/WebODM>`_"
+msgstr ""
+
+#: ../../resources.rst:11
+msgid ""
+"`README page for NodeODM <https://github.com/OpenDroneMap/node-"
+"OpenDroneMap>`_"
+msgstr ""
+
+#: ../../resources.rst:12
+msgid ""
+"`Ground Control Points Format Specification "
+"<https://github.com/mapillary/OpenSfM/blob/master/doc/source/gcp.rst>`_"
+msgstr ""
+
+#: ../../resources.rst:13
+msgid "`OpenDroneMap: The Missing Guide <https://odmbook.com/>`_"
+msgstr ""
+
+#: ../../resources.rst:16
+msgid "For Developers"
+msgstr ""
+
+#: ../../resources.rst:18
+msgid "In addition to user resources, we recommend to also read the following:"
+msgstr ""
+
+#: ../../resources.rst:20
+msgid "WebODM documentation: https://docs.webodm.org"
+msgstr ""
+
+#: ../../resources.rst:21
+msgid ""
+"NodeODM API specification: "
+"https://github.com/OpenDroneMap/NodeODM/blob/master/docs/index.adoc"
+msgstr ""
+
+#: ../../resources.rst:22
+msgid ""
+"Overview of the ODM pipeline: http://community.opendronemap.org/t/where-"
+"can-i-find-background-information-on-the-concepts-of-odm/665/2"
+msgstr ""
+
+#: ../../resources.rst:23
+msgid ""
+"We keep a `section in our forum dedicated to research papers "
+"<http://community.opendronemap.org/c/ideas-proposals/research-papers>`_. "
+"This is a valuable place where to read more about state of the art "
+"research related to structure from motion, multi-view stereo, meshing, "
+"texturing, etc. which can be used to improve the software."
+msgstr ""
+
+#: ../../resources.rst:26
+msgid ""
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-"
+"first-contribution>`_ and help improve `this page "
+"<https://github.com/OpenDroneMap/docs/blob/publish/source/resources.rst>`_!"
+msgstr ""
+
