@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Somo &mdash; OpenDroneMap 3.0.3 documentation</title>
+  <title>Somo &mdash; OpenDroneMap 3.0.4 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -33,7 +33,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                3.0.3
+                3.0.4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -228,6 +228,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../arguments/force-gps/">force-gps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/gcp/">gcp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/geo/">geo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/gltf/">gltf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/gps-accuracy/">gps-accuracy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/help/">help</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/ignore-gsd/">ignore-gsd</a></li>
@@ -257,6 +258,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-quality/">pc-quality</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-rectify/">pc-rectify</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-sample/">pc-sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-skip-geometric/">pc-skip-geometric</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-tile/">pc-tile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/primary-band/">primary-band</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/project-path/">project-path</a></li>
@@ -285,6 +287,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-data-term/">texturing-data-term</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-keep-unseen-faces/">texturing-keep-unseen-faces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-outlier-removal-type/">texturing-outlier-removal-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-single-material/">texturing-single-material</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-global-seam-leveling/">texturing-skip-global-seam-leveling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-local-seam-leveling/">texturing-skip-local-seam-leveling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-tone-mapping/">texturing-tone-mapping</a></li>
@@ -296,6 +299,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../arguments/use-hybrid-bundle-adjustment/">use-hybrid-bundle-adjustment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/verbose/">verbose</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/version/">version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/video-limit/">video-limit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/video-resolution/">video-resolution</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../outputs/">OpenDroneMap Matokeo</a><ul>
@@ -747,7 +752,9 @@ export PATH=$PATH:/home/odm/ODM/
 <p>ODM inahitaji kuandaliwa nafasi ya orodha ndani ya mshine. Nafasi ngumu ni kuingiza folder (Ikiwa utahifadhi kama hapo juu ni &quot;<code class="docutils literal notranslate"><span class="pre">/home/odm/ODM/</span></code>) na folder la project (i.e. <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code>)</p>
 <ul class="simple">
 <li><p>ODM settings.yaml file inaonesha anuani kuu iliokusanya project yote. Hivi ndivyo ilivyo katika msatari wa anuani project settings.yaml file (inachanganya kidogo, hii ni anuani yenyewe <em>parent</em> ya anuani ya kila project, ambayo ataoneshwa na jina la project ukiita ODM). hariri settings.yaml na weka <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>, ambayo katika kesi hii katika nafasi tuliotengeneza. Anuani ya project husika imetengenezwa na hilo.</p></li>
-<li><p>Anuani ya project husika, i.e <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code> imekusanya gcp_list.txt file, image_groups.txt file, na na folder la picha kwa kila project```</p></li>
+<li><p>Individual project directories, i.e. <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code>
+contain the gcp_list.txt file, the image_groups.txt file, and the
+images folder for each project.</p></li>
 <li><p>Folder la picha, i.e <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images/</span></code> linakuwa na picha zote. Ikiwa utarekebisha kama hivi, picha hazitakopiwa tena kwa sababu tayari zipo kwenye anuani ambayo ODM inaitaka.</p></li>
 <li><p>Badilisha settings.yaml kurahisisha anuani kuu ya file project (katika kesi kama hii nafasi tuliotengeneza, <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>). Hakikisha picha zipo katika sehemu husika, i.e <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images</span></code> na mafile mengine ya ziada (gcp_list.txt and image_groups.txt) imo katika semu ya folder <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code></p></li>
 <li><p>Ikiwa una picha katika mafolder tofauti kwa kila mabloki AOI au flight (ikiwa mpangilio wa flight zako utapangika) unaweza kutengeneza picha kwenye file image_groups.txt pamoja na <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">*;</span> <span class="pre">do</span> <span class="pre">cd</span> <span class="pre">$i;</span> <span class="pre">for</span> <span class="pre">j</span> <span class="pre">in</span> <span class="pre">*;</span> <span class="pre">do</span> <span class="pre">echo</span> <span class="pre">\&quot;$j</span> <span class="pre">$i\&quot;</span> <span class="pre">&gt;&gt;</span> <span class="pre">../$i.txt;</span> <span class="pre">done;</span> <span class="pre">cd</span> <span class="pre">../;</span> <span class="pre">done;</span></code> and <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">../</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">myproject/*.txt;</span> <span class="pre">do</span> <span class="pre">cat</span> <span class="pre">$i</span> <span class="pre">&gt;&gt;</span> <span class="pre">image_groups.txt;</span> <span class="pre">done;</span></code>. Hio itatengenea file na &quot;group name&quot; baada kila moja (kwa kesi hii itakuwa rahisi kuandika jina la folder llkotoka). Kisha ondosha file zote za picha katika anuani moja inayoitwa images ndani ya anuani ya project dir (kwa <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images/</span></code>). file la image_groups.txt litaruhusu ODM kujua kila picha itokapo kutoka kundi moa,hata ikiwa zimetoka katika anuani moja.</p></li>

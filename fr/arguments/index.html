@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Options et indicateurs &mdash; Documentation OpenDroneMap 3.0.3</title>
+  <title>Options et indicateurs &mdash; Documentation OpenDroneMap 3.0.4</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -34,7 +34,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                3.0.3
+                3.0.4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -229,6 +229,7 @@
 <li class="toctree-l2"><a class="reference internal" href="force-gps/">force-gps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gcp/">gcp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="geo/">geo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gltf/">gltf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gps-accuracy/">gps-accuracy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="help/">help</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ignore-gsd/">ignore-gsd</a></li>
@@ -258,6 +259,7 @@
 <li class="toctree-l2"><a class="reference internal" href="pc-quality/">pc-quality</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pc-rectify/">pc-rectify</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pc-sample/">pc-sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pc-skip-geometric/">pc-skip-geometric</a></li>
 <li class="toctree-l2"><a class="reference internal" href="pc-tile/">pc-tile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="primary-band/">primary-band</a></li>
 <li class="toctree-l2"><a class="reference internal" href="project-path/">project-path</a></li>
@@ -286,6 +288,7 @@
 <li class="toctree-l2"><a class="reference internal" href="texturing-data-term/">texturing-data-term</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texturing-keep-unseen-faces/">texturing-keep-unseen-faces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texturing-outlier-removal-type/">texturing-outlier-removal-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texturing-single-material/">texturing-single-material</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texturing-skip-global-seam-leveling/">texturing-skip-global-seam-leveling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texturing-skip-local-seam-leveling/">texturing-skip-local-seam-leveling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="texturing-tone-mapping/">texturing-tone-mapping</a></li>
@@ -297,6 +300,8 @@
 <li class="toctree-l2"><a class="reference internal" href="use-hybrid-bundle-adjustment/">use-hybrid-bundle-adjustment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="verbose/">verbose</a></li>
 <li class="toctree-l2"><a class="reference internal" href="version/">version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="video-limit/">video-limit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="video-resolution/">video-resolution</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../outputs/">Sorties OpenDroneMap</a><ul>
@@ -461,6 +466,8 @@
 </dd>
 <dt><a class="reference internal" href="geo/#geo"><span class="std std-ref">geo</span></a> &lt;path string&gt;</dt><dd><p>Path to the image geolocation file containing the camera center coordinates used for georeferencing. If you dont have values for omega/phi/kappa you can set them to 0. The file needs to use the following format: EPSG:&lt;code&gt; or &lt;+proj definition&gt;image_name geo_x geo_y geo_z [omega (degrees)] [phi (degrees)] [kappa (degrees)] [horz accuracy (meters)] [vert accuracy (meters)]Default: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>
+<dt><a class="reference internal" href="gltf/#gltf"><span class="std std-ref">gltf</span></a></dt><dd><p>Generate single file Binary glTF (GLB) textured models. Default:  <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
 <dt><a class="reference internal" href="gps-accuracy/#gps-accuracy"><span class="std std-ref">gps-accuracy</span></a> &lt;positive float&gt;</dt><dd><p>Définissez une valeur en mètres pour les informations GPS Dilution of Precision (DOP) pour toutes les images. Si vos images sont balisées avec des informations GPS de haute précision (RTK), cette valeur sera automatiquement définie en conséquence. Vous pouvez utiliser cette option pour le définir manuellement au cas où la reconstruction échouerait. Abaisser cette option peut parfois aider à contrôler les effets de bowling sur de grandes surfaces. Par défaut : <code class="docutils literal notranslate"><span class="pre">10</span></code></p>
 </dd>
 <dt><a class="reference internal" href="help/#help"><span class="std std-ref">help</span></a></dt><dd><p>Montrer le message d’aide et sortir</p>
@@ -517,6 +524,8 @@
 </dd>
 <dt><a class="reference internal" href="pc-sample/#pc-sample"><span class="std std-ref">pc-sample</span></a> &lt;positive float&gt;</dt><dd><p>Filtre le nuage de points en ne conservant qu’un seul point autour d’un rayon N (en mètres). Cela peut être utile pour limiter la résolution de sortie du nuage de points et supprimer les points en double. Réglez sur 0 pour désactiver l’échantillonnage. Par défaut : <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd>
+<dt><a class="reference internal" href="pc-skip-geometric/#pc-skip-geometric"><span class="std std-ref">pc-skip-geometric</span></a></dt><dd><p>Geometric estimates improve the accuracy of the point cloud by computing geometrically consistent depthmaps but may not be usable in larger datasets. This flag disables geometric estimates. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
 <dt><a class="reference internal" href="pc-tile/#pc-tile"><span class="std std-ref">pc-tile</span></a></dt><dd><p>Réduisez l’utilisation de la mémoire nécessaire pour la fusion de la carte de profondeur en divisant les grandes scènes en tuiles. Activez cette option si votre machine n’a pas beaucoup de RAM et/ou si vous avez défini –pc-quality sur high ou ultra. Expérimental. Par défaut : <code class="docutils literal notranslate"><span class="pre">Faux</span></code></p>
 </dd>
 <dt><a class="reference internal" href="primary-band/#primary-band"><span class="std std-ref">primary-band</span></a> &lt;string&gt;</dt><dd><p>Lors du traitement de jeux de données multispectrales, vous pouvez spécifier le nom de la bande principale qui sera utilisée pour la reconstruction. Il est recommandé de choisir un groupe qui a des détails nets et qui est net. Par défaut : <code class="docutils literal notranslate"><span class="pre">auto</span></code></p>
@@ -567,6 +576,8 @@
 </dd>
 <dt><a class="reference internal" href="texturing-keep-unseen-faces/#texturing-keep-unseen-faces"><span class="std std-ref">texturing-keep-unseen-faces</span></a></dt><dd><p>Keep faces in the mesh that are not seen in any camera. Default:  <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
+<dt><a class="reference internal" href="texturing-single-material/#texturing-single-material"><span class="std std-ref">texturing-single-material</span></a></dt><dd><p>Generate OBJs that have a single material and a single texture file instead of multiple ones. Default:  <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
 <dt><a class="reference internal" href="texturing-skip-global-seam-leveling/#texturing-skip-global-seam-leveling"><span class="std std-ref">texturing-skip-global-seam-leveling</span></a></dt><dd><p>Ignorez la normalisation des couleurs sur toutes les images. Utile lors du traitement de données radiométriques. Par défaut : <code class="docutils literal notranslate"><span class="pre">Faux</span></code></p>
 </dd>
 <dt><a class="reference internal" href="texturing-skip-local-seam-leveling/#texturing-skip-local-seam-leveling"><span class="std std-ref">texturing-skip-local-seam-leveling</span></a></dt><dd><p>Ignorez le mélange de couleurs près des coutures. Par défaut : <code class="docutils literal notranslate"><span class="pre">Faux</span></code></p>
@@ -582,6 +593,10 @@
 <dt><a class="reference internal" href="use-hybrid-bundle-adjustment/#use-hybrid-bundle-adjustment"><span class="std std-ref">use-hybrid-bundle-adjustment</span></a></dt><dd><p>Exécutez un ajustement de groupe local pour chaque image ajoutée à la reconstruction et un ajustement global toutes les 100 images. Accélère la reconstruction pour les très grands ensembles de données. Par défaut : <code class="docutils literal notranslate"><span class="pre">Faux</span></code></p>
 </dd>
 <dt><a class="reference internal" href="version/#version"><span class="std std-ref">version</span></a></dt><dd><p>Affiche le numéro de version et quitte.</p>
+</dd>
+<dt><a class="reference internal" href="video-limit/#video-limit"><span class="std std-ref">video-limit</span></a> &lt;positive integer&gt;</dt><dd><p>Maximum number of frames to extract from video files for processing. Set to 0 for no limit. Default: <code class="docutils literal notranslate"><span class="pre">500</span></code></p>
+</dd>
+<dt><a class="reference internal" href="video-resolution/#video-resolution"><span class="std std-ref">video-resolution</span></a> &lt;positive integer&gt;</dt><dd><p>The maximum output resolution of extracted video frames in pixels. Default: <code class="docutils literal notranslate"><span class="pre">4000</span></code></p>
 </dd>
 </dl>
 <p>If you want to add more details to a command, <a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">learn to edit</a> and help improve the matching file in the <code class="docutils literal notranslate"><span class="pre">arguments_edit</span></code> <a class="reference external" href="https://github.com/OpenDroneMap/docs/tree/publish/source/arguments_edit">project folder</a>!</p>
@@ -614,6 +629,7 @@
 <li class="toctree-l1"><a class="reference internal" href="force-gps/">force-gps</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gcp/">gcp</a></li>
 <li class="toctree-l1"><a class="reference internal" href="geo/">geo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gltf/">gltf</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gps-accuracy/">gps-accuracy</a></li>
 <li class="toctree-l1"><a class="reference internal" href="help/">help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ignore-gsd/">ignore-gsd</a></li>
@@ -643,6 +659,7 @@
 <li class="toctree-l1"><a class="reference internal" href="pc-quality/">pc-quality</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pc-rectify/">pc-rectify</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pc-sample/">pc-sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pc-skip-geometric/">pc-skip-geometric</a></li>
 <li class="toctree-l1"><a class="reference internal" href="pc-tile/">pc-tile</a></li>
 <li class="toctree-l1"><a class="reference internal" href="primary-band/">primary-band</a></li>
 <li class="toctree-l1"><a class="reference internal" href="project-path/">project-path</a></li>
@@ -671,6 +688,7 @@
 <li class="toctree-l1"><a class="reference internal" href="texturing-data-term/">texturing-data-term</a></li>
 <li class="toctree-l1"><a class="reference internal" href="texturing-keep-unseen-faces/">texturing-keep-unseen-faces</a></li>
 <li class="toctree-l1"><a class="reference internal" href="texturing-outlier-removal-type/">texturing-outlier-removal-type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texturing-single-material/">texturing-single-material</a></li>
 <li class="toctree-l1"><a class="reference internal" href="texturing-skip-global-seam-leveling/">texturing-skip-global-seam-leveling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="texturing-skip-local-seam-leveling/">texturing-skip-local-seam-leveling</a></li>
 <li class="toctree-l1"><a class="reference internal" href="texturing-tone-mapping/">texturing-tone-mapping</a></li>
@@ -682,6 +700,8 @@
 <li class="toctree-l1"><a class="reference internal" href="use-hybrid-bundle-adjustment/">use-hybrid-bundle-adjustment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="verbose/">verbose</a></li>
 <li class="toctree-l1"><a class="reference internal" href="version/">version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="video-limit/">video-limit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="video-resolution/">video-resolution</a></li>
 </ul>
 </div>
 </section>

@@ -506,7 +506,7 @@ critical bits are the install folder (if you installed as above, it’s
    that.
 -  Individual project directories, i.e. ``/mnt/odmdata/myproject/``
    contain the gcp_list.txt file, the image_groups.txt file, and the
-   images folder for each project``\`
+   images folder for each project.
 -  The images folder, i.e. ``/mnt/odmdata/myproject/images/`` contains
    all of the images. If you set it up like this, the images don’t get
    re-copied because they’re already in the directory that ODM wants

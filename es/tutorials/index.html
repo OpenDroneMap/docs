@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tutoriales &mdash; documentación de OpenDroneMap - 3.0.3</title>
+  <title>Tutoriales &mdash; documentación de OpenDroneMap - 3.0.4</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -34,7 +34,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                3.0.3
+                3.0.4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -229,6 +229,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../arguments/force-gps/">force-gps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/gcp/">gcp</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/geo/">geo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/gltf/">gltf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/gps-accuracy/">gps-accuracy</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/help/">help</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/ignore-gsd/">ignore-gsd</a></li>
@@ -258,6 +259,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-quality/">pc-quality</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-rectify/">pc-rectify</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-sample/">pc-sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-skip-geometric/">pc-skip-geometric</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-tile/">pc-tile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/primary-band/">primary-band</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/project-path/">project-path</a></li>
@@ -286,6 +288,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-data-term/">texturing-data-term</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-keep-unseen-faces/">texturing-keep-unseen-faces</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-outlier-removal-type/">texturing-outlier-removal-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-single-material/">texturing-single-material</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-global-seam-leveling/">texturing-skip-global-seam-leveling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-local-seam-leveling/">texturing-skip-local-seam-leveling</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-tone-mapping/">texturing-tone-mapping</a></li>
@@ -297,6 +300,8 @@
 <li class="toctree-l2"><a class="reference internal" href="../arguments/use-hybrid-bundle-adjustment/">use-hybrid-bundle-adjustment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/verbose/">Verboso</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/version/">Versión</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/video-limit/">video-limit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/video-resolution/">video-resolution</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../outputs/">Salidas de OpenDroneMap</a><ul>
@@ -742,7 +747,9 @@ export PATH=$PATH:/home/odm/ODM/
 <p>ODM requiere que los directorios de la máquina se configuren exactamente así. Los bits críticos son la carpeta de instalación (si instaló como antes, es <code class="docutils literal notranslate"><span class="pre">/home/odm/ODM/</span></code>) y la carpeta del proyecto (es decir, <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code>)</p>
 <ul class="simple">
 <li><p>El archivo settings.yaml de ODM especifica un único directorio principal que contiene todos los proyectos. Esto es lo que va en la línea de ruta del proyecto del archivo settings.yaml (un poco confuso, este es en realidad el directorio <em>principal</em> de los directorios del proyecto individual, que se especifican mediante el parámetro de nombre del proyecto al llamar a ODM). Edite settings.yaml y establezca el parámetro project_path en (según nuestra configuración de ejemplo) <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>, que en este caso apunta al Volumen que creamos. Dentro de eso se crean directorios de proyectos individuales.</p></li>
-<li><p>Los directorios de proyectos individuales, es decir, <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code> contienen el archivo gcp_list.txt, el archivo image_groups.txt y la carpeta de imágenes para cada proyecto <code class="docutils literal notranslate"><span class="pre">\</span></code></p></li>
+<li><p>Individual project directories, i.e. <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code>
+contain the gcp_list.txt file, the image_groups.txt file, and the
+images folder for each project.</p></li>
 <li><p>La carpeta de imágenes, es decir, <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images/</span></code> contiene todas las imágenes. Si lo configura así, las imágenes no se vuelven a copiar porque ya están en el directorio en el que ODM las quiere.</p></li>
 <li><p>Modifique settings.yaml para especificar el directorio principal de la carpeta del proyecto (en este caso, el Volumen que creamos, <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>). Asegúrese de que las imágenes estén en el lugar correcto, es decir, <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images</span></code> y los otros archivos auxiliares (gcp_list.txt e image_groups.txt) están en la carpeta raíz <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code></p></li>
 <li><p>Si tiene las imágenes en carpetas separadas para bloques AOI o vuelos  individuales (lo que hará si su gestión de vuelos fue organizada), puede crear un archivo image_groups.txt con los encantamientos <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">*;</span> <span class="pre">do</span> <span class="pre">cd</span> <span class="pre">$i;</span> <span class="pre">for</span> <span class="pre">j</span> <span class="pre">in</span> <span class="pre">*;</span> <span class="pre">do</span> <span class="pre">echo</span> <span class="pre">&quot;$j</span> <span class="pre">$i&quot;</span> <span class="pre">&gt;&gt;</span> <span class="pre">../$i.txt;</span> <span class="pre">done;</span> <span class="pre">cd</span> <span class="pre">../;</span> <span class="pre">done;</span></code> y <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">../</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">myproject/*.txt;</span> <span class="pre">do</span> <span class="pre">cat</span> <span class="pre">$i</span> <span class="pre">&gt;&gt;</span> <span class="pre">image_groups.txt;</span> <span class="pre">done;</span></code>.  Eso debería crear un archivo con la estructura correcta: una lista de todos los archivos de imagen y un «nombre de grupo» después de cada uno (que en este caso será simplemente el nombre de la carpeta de la que proviene). Luego mueva todos los archivos de imagen a un solo directorio llamado imágenes en el directorio raíz del proyecto (por lo tanto, <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images/</span></code>). El archivo image_groups.txt permitirá que ODM realice un seguimiento de las imágenes que pertenecen al mismo lote, aunque estén todas en un solo directorio.</p></li>

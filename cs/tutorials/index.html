@@ -1,0 +1,989 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="cs" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Výukové materiály &mdash; Dokumentace pro OpenDroneMap 3.0.4</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Rejstřík" href="../genindex/" />
+    <link rel="search" title="Vyhledávání" href="../search/" />
+    <link rel="next" title="Možnosti a značky" href="../arguments/" />
+    <link rel="prev" title="Instalace a spuštění" href="../installation/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../" class="icon icon-home"> OpenDroneMap
+          </a>
+              <div class="version">
+                3.0.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/">Instalace a spuštění</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#quickstart">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hardware-recommendations">Doporučení k hardwaru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#installation">Instalace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-check-virtualization-support">Krok 1. Zkontrolujte podporu virtualizace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-install-requirements">Krok 2. Požadavky na instalaci</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-check-memory-and-cpu-allocation">Krok 3. Zkontrolujte přidělení paměti a procesoru</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-webodm">Krok 4. Stáhněte si WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-launch-webodm">Krok 4. Spusťte WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id1">Krok 1. Zkontrolujte podporu virtualizace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id2">Krok 2. Požadavky na instalaci</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id3">Krok 3. Zkontrolujte přidělení paměti a procesoru</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-and-launch-webodm">Krok 4. Stažení a spuštění WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-install-requirements">Krok 1. Instalace požadavků</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-check-additional-requirements">Krok 2. Zkontrolujte další požadavky</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-download-and-launch-webodm">Krok 3. Stažení a spuštění WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#basic-commands-and-troubleshooting">Základní příkazy a řešení potíží</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hello-webodm">Dobrý den, WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#running-on-more-than-one-machine">Spuštění na více než jednom počítači</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Výukové materiály</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#creating-high-quality-orthophotos">Vytváření vysoce kvalitních ortofotomap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#calibrating-the-camera">Kalibrace kamery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-digital-elevation-models">Vytváření digitálních výškových modelů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#fieldwork-planning">Plánování terénních prací</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flight-pattern">Letový model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#flight-height">Výška letu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#processing-parameters">Parametry zpracování</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#measuring">Měření</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#expected-accuracy">Očekávaná přesnost</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-docker">Použití aplikace Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#listing-docker-machines">Výpis strojů Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-logs-on-the-instance">Přístup k protokolům instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#command-line-access-to-instances">Přístup k instancím z příkazového řádku</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#cleaning-up-after-docker">Úklid po Dockeru</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-singularity">Using Singularity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#downloading-image">Downloading image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-singularity-sif-image">Using Singularity SIF image</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-odm-from-low-bandwidth-location">Použití ODM z místa s nízkou šířkou pásma</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-is-this-and-who-is-it-for">Co to je a pro koho je to určeno?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#steps">Kroky</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#install">Instalace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#prep-data-and-project">Příprava dat a projektu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#resize-droplet-pull-pin-run-away">Resize droplet, pull pin, run away</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#after-it-finishes-assuming-you-survive-that-long">Po jeho skončení (za předpokladu, že přežijete tak dlouho)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#using-potree-3d-viewer-module-on-webodm">Použití modulu Potree 3D viewer na WebODM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cameras">Kamery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#textured-model">Texturovaný model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#appearance">Vzhled</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#point-budget">Point budget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#field-of-view">Zorné pole</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eye-dome-lighting">Osvětlení očního obzoru</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#background">Pozadí</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other">Ostatní</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tools">Nástroje</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#measurement">Měření</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clipping">Ořez</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#navigation">Navigace</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#scene">Scéna</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arguments/">Možnosti a značky</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/3d-tiles/">3d-tiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/align/">align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary/">automatické ohraničení</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/auto-boundary/#what-is-auto-boundary">Co je automatická hranice?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/auto-boundary/#when-is-auto-boundary-helpful">Kdy je automatická hranice užitečná?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/auto-boundary/#why-would-one-use-auto-boundary">Proč by měl někdo používat automatické ohraničení?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/auto-boundary/#example-images">Příklady snímků</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/auto-boundary/#true-auto-boundary">True: <code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/auto-boundary/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary-distance/">auto-boundary-distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/bg-removal/">bg-removal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">hranice</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#what-is-boundary-geojson">Co je to Hranice [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#when-is-boundary-geojson-appropriate">Kdy je vhodné použít Hranice [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#why-would-one-use-boundary-geojson">Proč by měl někdo použít Hranice [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#how-would-one-create-boundary-geojson">Jak se vytváří Hranice [GeoJSON]?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#geojson-io">GeoJSON.io</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#qgis">QGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#example-images">Ukázkové obrázky</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-point-cloud">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Point Cloud</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-orthophoto">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Orthophoto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-digital-elevation-model">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Digitální model reliéfu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-3d-model-textured-mesh">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - 3D Model/Textured Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/build-overviews/">build-overviews</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#what-are-overviews">What Are Overviews?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#why-would-one-use-overviews">Why would one use Overviews?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/build-overviews/#true-build-overviews">True: <code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/build-overviews/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/camera-lens/">camera-lens</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#what-are-camera-lens-models">Co jsou modely objektivů fotoaparátů?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#when-are-manual-selections-appropriate">Kdy je vhodný ruční výběr?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#why-would-one-use-a-particular-camera-lens-model">Proč používat určitý model objektivu fotoaparátu?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#example-images">Ukázkové obrázky</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#auto-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">auto</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#brown-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">brown</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#fisheye-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">fisheye</span></code> : Rektilineární data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#perspective-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">perspective</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#spherical-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">spherical</span></code> : Rectilinear Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/cameras/">cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#what-are-cloud-optimized-geotiffs-cogs">What Are Cloud Optimized GeoTIFFs (COGs)?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#when-are-cogs-appropriate">When are COGs appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#why-would-one-use-cogs">Why would one use COGs?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#true-cog">True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/copy-to/">copy-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/crop/">crop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/debug/">debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-decimation/">dem-decimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-euclidean-map/">dem-euclidean-map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-gapfill-steps/">dem-gapfill-steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-resolution/">dem-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/depthmap-resolution/">depthmap-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dsm/">dsm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dtm/">dtm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/end-with/">end-with</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/fast-orthophoto/">fast-orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/feature-quality/">feature-quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/feature-type/">feature-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/force-gps/">force-gps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/gcp/">gcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/geo/">geo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/gltf/">gltf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/gps-accuracy/">gps-accuracy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/help/">help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/ignore-gsd/">ignore-gsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/matcher-neighbors/">matcher-neighbors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/matcher-type/">matcher-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/max-concurrency/">max-concurrency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/merge/">merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/mesh-octree-depth/">mesh-octree-depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/mesh-size/">mesh-size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/min-num-features/">min-num-features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/name/">name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/no-gpu/">no-gpu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/optimize-disk-space/">optimize-disk-space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-compression/">orthophoto-compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-cutline/">orthophoto-cutline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-kmz/">orthophoto-kmz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-no-tiled/">orthophoto-no-tiled</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-png/">orthophoto-png</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-resolution/">orthophoto-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-classify/">pc-classify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-copc/">pc-copc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-csv/">pc-csv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-ept/">pc-ept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-filter/">pc-filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-geometric/">pc-geometric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-las/">pc-las</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-quality/">pc-quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-rectify/">pc-rectify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-sample/">pc-sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-skip-geometric/">pc-skip-geometric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-tile/">pc-tile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/primary-band/">primary-band</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/project-path/">project-path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/radiometric-calibration/">radiometric-calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rerun/">rerun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rerun-all/">rerun-all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rerun-from/">rerun-from</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/resize-to/">resize-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rolling-shutter/">rolling-shutter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rolling-shutter-readout/">rolling-shutter-readout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/sfm-algorithm/">sfm-algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-3dmodel/">skip-3dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-band-alignment/">skip-band-alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-orthophoto/">skip-orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-report/">skip-report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/sky-removal/">sky-removal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/sm-cluster/">sm-cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/sm-no-align/">sm-no-align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-scalar/">smrf-scalar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-slope/">smrf-slope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-threshold/">smrf-threshold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-window/">smrf-window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/split/">split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/split-image-groups/">split-image-groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/split-overlap/">split-overlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-data-term/">texturing-data-term</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-keep-unseen-faces/">texturing-keep-unseen-faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-outlier-removal-type/">texturing-outlier-removal-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-single-material/">texturing-single-material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-global-seam-leveling/">texturing-skip-global-seam-leveling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-local-seam-leveling/">texturing-skip-local-seam-leveling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-tone-mapping/">texturing-tone-mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/tiles/">tiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/time/">time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-3dmesh/">use-3dmesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-exif/">use-exif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-fixed-camera-params/">use-fixed-camera-params</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-hybrid-bundle-adjustment/">use-hybrid-bundle-adjustment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/verbose/">verbose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/version/">version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/video-limit/">video-limit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/video-resolution/">video-resolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../outputs/">OpenDroneMap Outputs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#point-cloud">Point Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#d-textured-model">3D Textured Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#orthophoto">Orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#list-of-all-outputs">List of all outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gcp/">Ground Control Points</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#recommended-practices-for-gcp-setting">Recommended practices for GCP setting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#gcp-file-format">GCP file format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#user-interfaces">User Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gcp/#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gcp/#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">Map accuracy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#what-to-expect">What to expect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aspects-impacting-map-accuracy">Aspects impacting map accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../geo/">Image Geolocation Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../masks/">Using Image Masks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large/">Splitting Large Datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">Calibrate images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#local-split-merge">Local Split-Merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#distributed-split-merge">Distributed Split-Merge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../large/#getting-started-with-distributed-split-merge">Getting Started with Distributed Split-Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#understanding-the-cluster">Understanding the Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#accessing-the-logs">Accessing the Logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#autoscaling-clusterodm">Autoscaling ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#acknowledgments">Acknowledgments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/">Additional References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-users">For Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-developers">For Developers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../flying/">Flying Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multispectral/">Multispektrální podpora</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#hardware">Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#usage">Použití</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#sentera-agx710">Sentera AGX710</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../requesting-features/">Jak požádat o funkce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/">How To Contribute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#community-forum">Community Forum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#reporting-bugs">Reporting Bugs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/#template-for-submitting-bug-reports">Template For Submitting Bug Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#pull-requests">Pull Requests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/">Často kladené otázky</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faq/#data-processing">Zpracování dat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#can-i-process-two-or-more-orthophoto-geotiffs-to-stitch-them-together">Mohu zpracovat dva nebo více ortofotografických souborů GeoTIFF a spojit je dohromady?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#the-software-is-not-using-all-of-my-cpu-cores-memory-gpu-all-of-the-times-is-it-normal">The software is not using all of my CPU cores / memory / GPU all of the times. Is it normal?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#if-i-use-the-native-version-of-the-software-how-can-i-allocate-more-resources-for-processing">If I use the native version of the software, how can I allocate more resources for processing?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/#licensing">Licencování</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#i-want-to-build-a-commercial-application-that-includes-odm-do-i-need-a-commercial-license">Chci vytvořit komerční aplikaci, která zahrnuje ODM. Potřebuji komerční licenci?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#are-there-other-licensing-options-aside-from-the-agplv3">Existují kromě licence AGPLv3 i jiné možnosti licencování?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/#memory-issues">Memory issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#your-computer-is-running-out-of-memory-what-can-you-do">Your computer is running out of memory, what can you do?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">OpenDroneMap</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Výukové materiály</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/tutorials.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="tutorials">
+<h1>Výukové materiály<a class="headerlink" href="#tutorials" title="Permalink to this heading"></a></h1>
+<p>Níže najdete pokyny pro některé běžné případy použití.</p>
+<section id="creating-high-quality-orthophotos">
+<h2>Vytváření vysoce kvalitních ortofotomap<a class="headerlink" href="#creating-high-quality-orthophotos" title="Permalink to this heading"></a></h2>
+<figure class="align-center">
+<img alt="snímek ortofota OpenDroneMap" src="../_images/orthophoto.png" />
+</figure>
+<p>Bez jakýchkoli úprav parametrů volí ODM dobrý kompromis mezi kvalitou, rychlostí a spotřebou paměti. Pokud chcete získat kvalitnější výsledky, musíte některé parametry upravit:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--orthophoto-resolution</span></code> je rozlišení ortofota v cm/pixel. Snižte tuto hodnotu pro výsledek s vyšším rozlišením.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--ignore-gsd</span></code> je příznak, který dává ODM pokyn k vynechání určitých optimalizací paměti a rychlosti, které přímo ovlivňují ortofoto. Použití tohoto příznaku zvýší dobu běhu a spotřebu paměti, ale může přinést ostřejší výsledky.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--texturing-nadir-weight</span></code> by měla být v městských oblastech zvýšena na <code class="docutils literal notranslate"><span class="pre">29-32</span></code>, aby se lépe rekonstruovaly okraje střech. V travnatých/plochých oblastech by měla být snížena na <code class="docutils literal notranslate"><span class="pre">0-6</span></code>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--texturing-data-term</span></code> by měl být v lesních oblastech nastaven na <cite>area</cite>.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--mesh-size</span></code> by měla být zvýšena na <code class="docutils literal notranslate"><span class="pre">300000-600000</span></code> a <code class="docutils literal notranslate"><span class="pre">--mesh-octree-depth</span></code> by měla být zvýšena na <code class="docutils literal notranslate"><span class="pre">10-11</span></code> v městských oblastech, aby bylo možné vytvořit lepší budovy/střechy.</p></li>
+</ul>
+</div></blockquote>
+</section>
+<section id="calibrating-the-camera">
+<h2>Kalibrace kamery<a class="headerlink" href="#calibrating-the-camera" title="Permalink to this heading"></a></h2>
+<p>Kalibrace fotoaparátů je u komoditních fotoaparátů zvláštní výzvou. Změny teploty, vibrace, zaostření a další faktory mohou ovlivnit odvozené parametry, což má zásadní vliv na výsledná data. Automatická nebo vlastní kalibrace je u letů dronů možná a žádoucí, ale v závislosti na průběhu letu nemusí automatická kalibrace odstranit z výsledných produktů všechna zkreslení. James a Robson (2014) se ve svém článku <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609">Mitigating systematic error in topographic models derived from UAV and ground-based image networks</a> zabývají tím, jak minimalizovat zkreslení způsobené autokalibrací.</p>
+<figure class="align-center">
+<img alt="obraz vlivu zkreslení objektivu na bowling dat" src="../_images/msimbasi_bowling.png" />
+</figure>
+<p><em>Efekt bowlingu na mračnu bodů nad sadou více než 13 000 snímků shromážděných Světovou bankou v Tanzanii nad povodím Msimbasi v Dar es Salaamu v Tanzanii, které je náchylné k povodním.</em></p>
+<p>Pro zmírnění tohoto efektu existuje několik možností, ale nejjednodušší jsou následující: letět se dvěma obrazci oddělenými od sebe o 20° a namísto nadiru (přímého směru dolů) použít kameru, která se naklání dopředu o 5°.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/flightplanning.gif"><img alt="animace zobrazující optimum" src="../_images/flightplanning.gif" style="width: 640px; height: 480px;" /></a>
+</figure>
+<p>Vzhledem k tomu, že tento přístup k létání může trvat déle než typické lety, může pilot nebo tým proletět malou oblast pomocí výše uvedeného přístupu. OpenDroneMap vygeneruje kalibrační soubor s názvem cameras.json, který pak lze importovat a použít ke kalibraci dalšího letu, který je efektivnější.</p>
+<p>Alternativně lze použít následující experimentální metodu: letět s mnohem menším překrytím, ale se dvěma lety <em>crossgrid</em> (někdy nazývanými crosshatch) oddělenými od sebe 20° s kamerou směřující 5° dopředu.</p>
+<ul class="simple">
+<li><p>Procento překrytí napříč sítí může být nižší než u paralelních letů. Pro dosažení dobrých výsledků ve 3D budete potřebovat 68% překrytí a sidelap pro ekvivalentní 83% překrytí a sidelap.</p></li>
+<li><p>Chcete-li získat dobré výsledky 2D a 2,5D (digitální model reliéfu), budete potřebovat 42% překrytí a boční překrytí pro ekvivalentní 70% překrytí a boční překrytí.</p></li>
+</ul>
+<figure class="align-center">
+<img alt="animace zobrazující experimentální optimum" src="../_images/rotation.gif" />
+</figure>
+<p>Vertikálně oddělené letové linie také zlepšují přesnost, ale méně než kamera, která je natočena dopředu o 5°.</p>
+<figure class="align-center">
+<img alt="obrázek znázorňující vliv vertikálně oddělených letových linií a dopředu namířených kamer na zlepšení vlastní kalibrace." src="../_images/forward_facing.png" />
+</figure>
+<p>Z James a Robson (2014), <a class="reference external" href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></p>
+</section>
+<section id="creating-digital-elevation-models">
+<h2>Vytváření digitálních výškových modelů<a class="headerlink" href="#creating-digital-elevation-models" title="Permalink to this heading"></a></h2>
+<p>Ve výchozím nastavení ODM nevytváří DEM. Chcete-li vytvořit digitální model terénu, nezapomeňte zadat příznak <code class="docutils literal notranslate"><span class="pre">--dtm</span></code>. Chcete-li vytvořit digitální model povrchu, nezapomeňte předat příznak <code class="docutils literal notranslate"><span class="pre">--dsm</span></code>.</p>
+<figure class="align-center">
+<img alt="obrázek digitálního modelu povrchu odvozeného z OpenDroneMap" src="../_images/digitalsurfacemodel.png" />
+</figure>
+<p>Pro generování DTM se používá jednoduchý morfologický filtr (smrf), který klasifikuje body na pozemní a nepozemní a používají se pouze pozemní body. Filtr <code class="docutils literal notranslate"><span class="pre">smrf</span></code> lze ovládat pomocí několika parametrů:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--smrf-scalar</span></code> škálovací hodnota. Tento parametr zvyšte u terénů s velkými výškovými rozdíly.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--smrf-slope</span></code> parametr sklonu, který je mírou „tolerance sklonu“. Tento parametr zvyšte u terénů s velkými výškovými rozdíly. Měl by být nastaven na hodnotu vyšší než 0,1 a ne vyšší než 1,2.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--smrf-threshold</span></code> výškový práh. Nastavte tento parametr na minimální výšku (v metrech), kterou očekáváte u objektů, které nejsou na zemi.</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--smrf-window</span></code> parametr poloměru okna (v metrech), který odpovídá velikosti největšího prvku (budovy, stromů atd.), který má být odstraněn. Měl by být nastaven na hodnotu vyšší než 10.</p></li>
+</ul>
+</div></blockquote>
+<p>Změna těchto možností může výrazně ovlivnit výsledek DTM. Nejlepším zdrojem pro pochopení vlivu parametrů na výstup je přečíst si původní článek <a class="reference external" href="https://www.researchgate.net/publication/258333806_An_Improved_Simple_Morphological_Filter_for_the_Terrain_Classification_of_Airborne_LIDAR_Data">An improved simple morphological filter for the terrain classification of airborne LIDAR data</a> (PDF volně k dispozici).</p>
+<p>Celkově má na výsledky největší vliv možnost <code class="docutils literal notranslate"><span class="pre">--smrf-threshold</span></code>.</p>
+<p>SMRF se dobře vyhýbá chybám typu I (malý počet zemních bodů chybně klasifikovaných jako nezemní), ale jen „přijatelně“ se vyhýbá chybám typu II (velký počet nezemních bodů chybně klasifikovaných jako zemní). To je třeba vzít v úvahu při generování DTM, které mají být použity vizuálně, protože objekty mylně považované za zem vypadají ve výsledném DTM jako artefakty.</p>
+<figure class="align-center">
+<img alt="obraz vlivu zkreslení objektivu na bowling dat" src="../_images/smrf.png" />
+</figure>
+<p>Generování DEM ovlivňují dva další důležité parametry:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><code class="docutils literal notranslate"><span class="pre">--dem-resolution</span></code>, který nastavuje výstupní rozlišení rastru DEM (cm/pixel).</p></li>
+<li><p><code class="docutils literal notranslate"><span class="pre">--dem-gapfill-steps</span></code>, který určuje počet postupných vrstev DEM, které se mají použít. U městských scén může zvýšení této hodnoty na <cite>4-5</cite> pomoci dosáhnout lepších výsledků interpolace v oblastech, které filtr SMRF ponechává prázdné.</p></li>
+</ul>
+</div></blockquote>
+<p>Příklad generování DTM:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">ti</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">my</span><span class="o">/</span><span class="n">project</span><span class="p">:</span><span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span> <span class="o">&lt;</span><span class="n">my_odm_image</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">project</span><span class="o">-</span><span class="n">path</span> <span class="o">/</span><span class="n">datasets</span> <span class="o">--</span><span class="n">dtm</span> <span class="o">--</span><span class="n">dem</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">2</span> <span class="o">--</span><span class="n">smrf</span><span class="o">-</span><span class="n">threshold</span> <span class="mf">0.4</span> <span class="o">--</span><span class="n">smrf</span><span class="o">-</span><span class="n">window</span> <span class="mi">24</span>
+</pre></div>
+</div>
+</section>
+<section id="measuring-stockpile-volume">
+<h2>Measuring stockpile volume<a class="headerlink" href="#measuring-stockpile-volume" title="Permalink to this heading"></a></h2>
+<section id="fieldwork-planning">
+<h3>Plánování terénních prací<a class="headerlink" href="#fieldwork-planning" title="Permalink to this heading"></a></h3>
+<p>Povětrnostní podmínky mění osvětlení, a tím ovlivňují výsledky fotografování. Nejlepších výsledků dosáhnete při rovnoměrně zatažené nebo jasné obloze. Dbejte také na nízkou rychlost větru, která umožňuje, aby fotoaparát zůstal během sběru dat stabilní. Abyste se vyhnuli stínům, které na jedné straně zásoby mohou bránit detekci prvků a snižovat počet výsledných bodů, preferujte vždy lety v poledne, kdy je slunce v nadhlavníku, aby bylo vše důsledně osvětleno. Dbejte také na to, aby vzdálenost horizontální viditelnosti pouhým okem odpovídala plánovaným letovým vzdálenostem pro konkrétní projekt, aby kvalitu snímků negativně neovlivňoval prach, mlha, kouř, sopečný popel nebo znečištění.</p>
+</section>
+<section id="flight-pattern">
+<h3>Letový model<a class="headerlink" href="#flight-pattern" title="Permalink to this heading"></a></h3>
+<p>Most stockpile measurement jobs does not require a crosshatch pattern or angled gimbal as the resting angle of stockpile materials allows the camera to capture the entire stockpile sides. Only some special cases where erosion or machinery operations causes steep angles on the faces of the stockpile would benefit of the crosshatch flight pattern and angled camera gimbal but consider that these additional recognized features come at a cost, (in field labor and processing time) and the resulting improvements are sometimes negligible.</p>
+<p>Ve většině případů je letový model sekačky na trávu schopen vytvořit velmi přesné modely shromážěných snímků.</p>
+<figure class="align-center">
+<img alt="jednoduchý vzor letu sekačky na trávu může poskytnout přesné výsledky." src="../_images/lawnmower_pattern.png" />
+</figure>
+<p>Doporučené překrytí by se mělo pohybovat mezi 75 a 80 % s bočním překrytím v rozmezí 65 až 70 %. S rostoucí výškou letu se rovněž doporučuje mírně zvyšovat překrytí a boční odstup.</p>
+</section>
+<section id="flight-height">
+<h3>Výška letu<a class="headerlink" href="#flight-height" title="Permalink to this heading"></a></h3>
+<p>Výška letu může být ovlivněna různými modely kamer, ale obecně a pro zajištění rovnováhy mezi kvalitou obrazu a optimalizací letu se doporučuje, aby byl proveden ve výšce 3 až 4násobku nejvyšší výšky shromážděných snímků. Takže pro shromážděné snímky o výšce 10 metrů lze snímky pořizovat ve výšce 40 metrů. S rostoucí výškou letu se doporučuje také zvyšovat překrytí, takže pro let ve výšce 40 metrů lze nastavit 65% boční překrytí a 75% překrytí, ale pro plánovanou výšku 80 metrů 70% boční překrytí a 80% překrytí umožňující rozpoznání a správné zpracování prvků.</p>
+</section>
+<section id="gcps">
+<h3>GCPs<a class="headerlink" href="#gcps" title="Permalink to this heading"></a></h3>
+<p>Pro dosažení přesnosti vyšší než 3 % se doporučuje používat GCP. K zajištění přesných výsledků obvykle stačí 5 distribuovaných GCP. Při umisťování nebo měření GCP by měla být přesnost zařízení větší než GSD. GNSS a totální stanice geodetické třídy jsou určeny k zajištění požadované milimetrové přesnosti.</p>
+<p>For further information on the use of GCPs, please refer to the <a class="reference external" href="https://docs.opendronemap.org/gcp/">Ground Control Points section</a>.</p>
+</section>
+<section id="processing-parameters">
+<h3>Parametry zpracování<a class="headerlink" href="#processing-parameters" title="Permalink to this heading"></a></h3>
+<p>Vysoce přesného modelu lze dosáhnout pomocí předdefinovaných nastavení WebODM s vysokým rozlišením. Některé parametry pak můžete dále upravit podle potřeby.</p>
+<p>Pokud používáte ODM, mohou vám tyto referenční hodnoty pomoci při konfiguraci nastavení procesu.</p>
+<p>–dsm: true</p>
+<p>–dem-resolution 2.0</p>
+<p>–orthophoto-resolution 1.0</p>
+<p>–feature-quality high</p>
+<p>–pc-quality high</p>
+</section>
+<section id="measuring">
+<h3>Měření<a class="headerlink" href="#measuring" title="Permalink to this heading"></a></h3>
+<p>Vzhledem k tomu, že téměř 50 % materiálu se nachází v prvních 20 % výšky zásoby, je třeba věnovat zvláštní pozornost vhodnému vymezení základní roviny.</p>
+<figure class="align-center">
+<img alt="téměř 50 % materiálu se nachází v prvních 20 % výšky zásoby." src="../_images/stockpile.png" />
+</figure>
+<p>V ovládacím panelu WebODM Dashboard klikněte na „zobrazit mapu“ a spusťte 2D zobrazení projektu.</p>
+<p>V zobrazení 2D mapy klikněte na tlačítko „Změřit objem, plochu a délku“.</p>
+<figure class="align-center">
+<img alt="klikněte na tlačítko &quot;Změřit objem, plochu a délku&quot;." src="../_images/measurement1.png" />
+</figure>
+<p>pak klikněte na „Vytvořit nové měření“.</p>
+<figure class="align-center">
+<img alt="klikněte na &quot;Vytvořit nové měření&quot;" src="../_images/measurement2.png" />
+</figure>
+<p>Začněte umísťovat body, abyste definovali základní rovinu zásoby.</p>
+<figure class="align-center">
+<img alt="Definice základní roviny zásob" src="../_images/measurement3.png" />
+</figure>
+<p>Kliknutím na „Dokončit měření“ proces dokončíte.</p>
+<figure class="align-center">
+<img alt="Proces dokončíte kliknutím na &quot;Dokončit měření&quot;." src="../_images/measurement4.png" />
+</figure>
+<p>V dialogovém okně se na několik sekund zobrazí zpráva “ Výpočet …“ a po dokončení výpočtu se zobrazí naměřená hodnota objemu.</p>
+<figure class="align-center">
+<img alt="Proces dokončíte kliknutím na &quot;Dokončit měření&quot;." src="../_images/measurement7.png" />
+</figure>
+<p>Pokud používáte příkazový řádek OpenDroneMap, můžete soubory dsm použít k měření objemů zásob pomocí jiných programů.</p>
+<p>Uvažte také, že jakmile jsou limity shromážděných snímků nastaveny v softwaru, jako je <a class="reference external" href="https://www.qgis.org">QGis</a>, zjistíte, že existují některé způsoby, jak určit základní rovinu. Takže pro izolované shromážděné snímky, jejichž hranice jsou většinou viditelné, lze použít lineární přístup. Zatímco u shromážděných snímcích nastavených ve svazích nebo v zásobnících je lepší určit základní rovinu pomocí nejnižšího bodu. Pro velké množstcví shromážděných snímků se doporučuje vytvořit trojúhelníkovou 3D plochu pro určení základní roviny. To platí i pro shromážděné snímky vytvořené na nepravidelných plochách.</p>
+</section>
+<section id="expected-accuracy">
+<h3>Očekávaná přesnost<a class="headerlink" href="#expected-accuracy" title="Permalink to this heading"></a></h3>
+<p>U pečlivě naplánovaných a provedených projektů, zejména pokud je GSD menší než 1 cm, by se očekávaná přesnost měla pohybovat v rozmezí 1 % až 2 %. Výsledná přesnost je srovnatelná s komerčně dostupným fotogrammetrickým softwarem a s přesností získanou pomocí zařízení GNSS geodetické třídy.</p>
+</section>
+</section>
+<section id="using-docker">
+<h2>Použití aplikace Docker<a class="headerlink" href="#using-docker" title="Permalink to this heading"></a></h2>
+<p>Vzhledem k tomu, že mnoho uživatelů používá k nasazení OpenDroneMap docker, může být užitečné porozumět některým základním příkazům, abychom mohli instance dockeru prozkoumat, když se něco pokazí nebo nás zajímá, co se děje. Docker je kontejnerové prostředí, jehož účelem je mimo jiné usnadnit nasazení softwaru nezávisle na místním prostředí. V tomto směru se podobá virtuálním strojům.</p>
+<p>Několik jednoduchých příkazů nám může výrazně zlepšit práci s dockerem.</p>
+<section id="listing-docker-machines">
+<h3>Výpis strojů Docker<a class="headerlink" href="#listing-docker-machines" title="Permalink to this heading"></a></h3>
+<p>Můžeme začít výpisem dostupných strojů docker na aktuálním počítači, který používáme, následujícím způsobem:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">ps</span>
+<span class="n">CONTAINER</span> <span class="n">ID</span>        <span class="n">IMAGE</span>                  <span class="n">COMMAND</span>                  <span class="n">CREATED</span>             <span class="n">STATUS</span>              <span class="n">PORTS</span>                    <span class="n">NAMES</span>
+<span class="mi">2518817537</span><span class="n">ce</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">36</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">36</span> <span class="n">hours</span>                                  <span class="n">zen_wright</span>
+<span class="mi">1</span><span class="n">cdc7fadf688</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">37</span> <span class="n">hours</span>         <span class="mf">0.0.0.0</span><span class="p">:</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">flamboyant_dhawan</span>
+</pre></div>
+</div>
+<p>Pokud chceme zobrazit stroje, které sice neběží, ale stále existují, můžeme přidat příznak <cite>-a</cite>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">ps</span> <span class="o">-</span><span class="n">a</span>
+<span class="n">CONTAINER</span> <span class="n">ID</span>        <span class="n">IMAGE</span>                  <span class="n">COMMAND</span>                  <span class="n">CREATED</span>             <span class="n">STATUS</span>                    <span class="n">PORTS</span>                    <span class="n">NAMES</span>
+<span class="mi">2518817537</span><span class="n">ce</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">36</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">36</span> <span class="n">hours</span>                                        <span class="n">zen_wright</span>
+<span class="mi">1</span><span class="n">cdc7fadf688</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>        <span class="n">Up</span> <span class="mi">37</span> <span class="n">hours</span>               <span class="mf">0.0.0.0</span><span class="p">:</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">flamboyant_dhawan</span>
+<span class="n">cd7b9585b8f6</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;bash&quot;</span>                   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">1</span><span class="p">)</span> <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>                            <span class="n">nostalgic_lederberg</span>
+<span class="n">e31010c00b9a</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">odm</span>       <span class="s2">&quot;python /code/run.py…&quot;</span>   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">2</span><span class="p">)</span> <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>                              <span class="n">suspicious_kepler</span>
+<span class="n">c44e0d0b8448</span>        <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>   <span class="s2">&quot;/usr/bin/nodejs /va…&quot;</span>   <span class="mi">3</span> <span class="n">days</span> <span class="n">ago</span>          <span class="n">Exited</span> <span class="p">(</span><span class="mi">0</span><span class="p">)</span> <span class="mi">37</span> <span class="n">hours</span> <span class="n">ago</span>                            <span class="n">wonderful_burnell</span>
+</pre></div>
+</div>
+</section>
+<section id="accessing-logs-on-the-instance">
+<h3>Přístup k protokolům instance<a class="headerlink" href="#accessing-logs-on-the-instance" title="Permalink to this heading"></a></h3>
+<p>Pomocí ID <cite>CONTAINER</cite> nebo názvu můžeme přistupovat ke všem protokolům dostupným v počítači následujícím způsobem:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">logs</span> <span class="mi">2518817537</span><span class="n">ce</span>
+</pre></div>
+</div>
+<p>Je pravděpodobné, že bude nepřehledně velký, ale můžeme použít znak pipe <cite>|</cite> a další nástroje, abychom z protokolů získali jen to, co potřebujeme. Například můžeme pomalu procházet protokoly pomocí příkazu <cite>more</cite>:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">logs</span> <span class="mi">2518817537</span><span class="n">ce</span> <span class="o">|</span> <span class="n">more</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">DTM</span> <span class="ow">is</span> <span class="n">turned</span> <span class="n">on</span><span class="p">,</span> <span class="n">automatically</span> <span class="n">turning</span> <span class="n">on</span> <span class="n">point</span> <span class="n">cloud</span> <span class="n">classification</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">Initializing</span> <span class="n">OpenDroneMap</span> <span class="n">app</span> <span class="o">-</span> <span class="n">Mon</span> <span class="n">Sep</span> <span class="mi">23</span> <span class="mi">01</span><span class="p">:</span><span class="mi">30</span><span class="p">:</span><span class="mi">33</span>  <span class="mi">2019</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="o">==============</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">build_overviews</span><span class="p">:</span> <span class="kc">False</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">camera_lens</span><span class="p">:</span> <span class="n">auto</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">crop</span><span class="p">:</span> <span class="mi">3</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">debug</span><span class="p">:</span> <span class="kc">False</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">dem_decimation</span><span class="p">:</span> <span class="mi">1</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">dem_euclidean_map</span><span class="p">:</span> <span class="kc">False</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Stisknutím klávesy <cite>Enter</cite> nebo <cite>Mezerník</cite>, kláves se šipkami nebo kláves <cite>Stránka nahoru</cite> či <cite>Stránka dolů</cite> se nyní můžeme pohybovat v protokolech. Malé písmeno <cite>Q</cite> nám umožní uniknout zpět do příkazového řádku.</p>
+<p>We can also extract just the end of the logs using the <cite>tail</cite> command as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">logs</span> <span class="mi">2518817537</span><span class="n">ce</span> <span class="o">|</span> <span class="n">tail</span> <span class="o">-</span><span class="mi">5</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">Cropping</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">tif</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">running</span> <span class="n">gdalwarp</span> <span class="o">-</span><span class="n">cutline</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_georeferencing</span><span class="o">/</span><span class="n">odm_georeferenced_model</span><span class="o">.</span><span class="n">bounds</span><span class="o">.</span><span class="n">gpkg</span> <span class="o">-</span><span class="n">crop_to_cutline</span> <span class="o">-</span><span class="n">co</span> <span class="n">NUM_THREADS</span><span class="o">=</span><span class="mi">8</span> <span class="o">-</span><span class="n">co</span> <span class="n">BIGTIFF</span><span class="o">=</span><span class="n">IF_SAFER</span> <span class="o">-</span><span class="n">co</span> <span class="n">BLOCKYSIZE</span><span class="o">=</span><span class="mi">512</span> <span class="o">-</span><span class="n">co</span> <span class="n">COMPRESS</span><span class="o">=</span><span class="n">DEFLATE</span> <span class="o">-</span><span class="n">co</span> <span class="n">BLOCKXSIZE</span><span class="o">=</span><span class="mi">512</span> <span class="o">-</span><span class="n">co</span> <span class="n">TILED</span><span class="o">=</span><span class="n">YES</span> <span class="o">-</span><span class="n">co</span> <span class="n">PREDICTOR</span><span class="o">=</span><span class="mi">2</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">original</span><span class="o">.</span><span class="n">tif</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">tif</span> <span class="o">--</span><span class="n">config</span> <span class="n">GDAL_CACHEMAX</span> <span class="mf">48.95</span><span class="o">%</span>
+<span class="n">Using</span> <span class="n">band</span> <span class="mi">4</span> <span class="n">of</span> <span class="n">source</span> <span class="n">image</span> <span class="k">as</span> <span class="n">alpha</span><span class="o">.</span>
+<span class="n">Creating</span> <span class="n">output</span> <span class="n">file</span> <span class="n">that</span> <span class="ow">is</span> <span class="mi">111567</span><span class="n">P</span> <span class="n">x</span> <span class="mi">137473</span><span class="n">L</span><span class="o">.</span>
+<span class="n">Processing</span> <span class="nb">input</span> <span class="n">file</span> <span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">/</span><span class="n">odm_orthophoto</span><span class="o">.</span><span class="n">original</span><span class="o">.</span><span class="n">tif</span><span class="o">.</span>
+</pre></div>
+</div>
+<p>Hodnota <cite>-5</cite> říká příkazu tail, aby nám poskytl pouze posledních 5 řádků protokolů.</p>
+</section>
+<section id="command-line-access-to-instances">
+<h3>Přístup k instancím z příkazového řádku<a class="headerlink" href="#command-line-access-to-instances" title="Permalink to this heading"></a></h3>
+<p>Někdy musíme jít při zkoumání procesu pro OpenDroneMap trochu hlouběji. Za tímto účelem můžeme získat přímý přístup do strojů z příkazového řádku. Za tímto účelem můžeme použít <cite>docker exec</cite> ke spuštění příkazového řádku <cite>bash</cite> v počítači, který nás zajímá, následujícím způsobem:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&gt;</span> <span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">ti</span> <span class="mi">2518817537</span><span class="n">ce</span> <span class="n">bash</span>
+<span class="n">root</span><span class="o">@</span><span class="mi">2518817537</span><span class="n">ce</span><span class="p">:</span><span class="o">/</span><span class="n">code</span><span class="c1">#</span>
+</pre></div>
+</div>
+<p>Nyní jsme přihlášeni do naší instance dockeru a můžeme prozkoumat počítač.</p>
+</section>
+<section id="cleaning-up-after-docker">
+<h3>Úklid po Dockeru<a class="headerlink" href="#cleaning-up-after-docker" title="Permalink to this heading"></a></h3>
+<p>Docker má žalostnou spotřebu místa a ve výchozím nastavení neuklízí přebytečná data a stroje po dokončení procesů. To může být výhodné, pokud potřebujeme přistupovat k procesu, který byl mezitím ukončen, ale nese to s sebou břemeno, že v průběhu času využívá stále větší množství úložiště. Maciej Łebkowski má <a class="reference external" href="https://lebkowski.name/docker-volumes/">výborný přehled o tom, jak spravovat nadbytečné využití disku v nástroji docker</a>.</p>
+</section>
+</section>
+<section id="using-singularity">
+<h2>Using Singularity<a class="headerlink" href="#using-singularity" title="Permalink to this heading"></a></h2>
+<p>‚Singularity &lt;<a class="reference external" href="https://sylabs.io/">https://sylabs.io/</a>&gt;‘_ is another container platform able to run Docker images. Singularity could be used from laptop to large HPC clusters, local university or company clusters, a single server, in the cloud…
+A container is a single file without anything else to install</p>
+<section id="downloading-image">
+<h3>Downloading image<a class="headerlink" href="#downloading-image" title="Permalink to this heading"></a></h3>
+<p>Singularity can use ODM Docker container after their download. It creates .sif images</p>
+<p>For latest ODM Docker image</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span>singularity<span class="w"> </span>pull<span class="w"> </span>--disable-cache<span class="w">  </span>docker://opendronemap/odm:latest
+</pre></div>
+</div>
+<p>For latest ODM GPU Docker image</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span>singularity<span class="w"> </span>pull<span class="w"> </span>--disable-cache<span class="w">  </span>docker://opendronemap/odm:gpu
+</pre></div>
+</div>
+</section>
+<section id="using-singularity-sif-image">
+<h3>Using Singularity SIF image<a class="headerlink" href="#using-singularity-sif-image" title="Permalink to this heading"></a></h3>
+<p>As Singularity has a different way to map directories than Docker, a bash script file is a good solution to map ODM directories.
+Here is a linux example for ODM</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>images_dir=/path_to_image_dir/
+name=`basename $images_dir`
+output_dir=/path_to_output_directories/$name
+mkdir -p $output_dir
+
+singularity run
+--bind $images_dir:/$output_dir/code/images,\
+--writable-tmpfs odm_latest.sif  \
+--orthophoto-png --mesh-octree-depth 12 --ignore-gsd --dtm \
+--smrf-threshold 0.4 --smrf-window 24 --dsm --pc-csv --pc-las --orthophoto-kmz \
+--ignore-gsd  --matcher-type flann --feature-quality ultra --max-concurrency 16 \
+--use-hybrid-bundle-adjustment --build-overviews --time --min-num-features 10000 \
+--project-path $output_dir
+</pre></div>
+</div>
+<p>Here is a linux example for the ODM with GPU</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>images_dir=/path_to_image_dir/
+name=`basename $images_dir`
+output_dir=/path_to_output_directories/$name
+mkdir -p $output_dir
+
+singularity run
+--bind $images_dir:/$output_dir/code/images,\
+--writable-tmpfs odm_latest.sif  \
+--orthophoto-png --mesh-octree-depth 12 --ignore-gsd --dtm \
+--smrf-threshold 0.4 --smrf-window 24 --dsm --pc-csv --pc-las --orthophoto-kmz \
+--ignore-gsd  --matcher-type flann --feature-quality ultra --max-concurrency 16 \
+--use-hybrid-bundle-adjustment --build-overviews --time --min-num-features 10000 \
+--project-path $output_dir
+</pre></div>
+</div>
+</section>
+</section>
+<section id="using-odm-from-low-bandwidth-location">
+<h2>Použití ODM z místa s nízkou šířkou pásma<a class="headerlink" href="#using-odm-from-low-bandwidth-location" title="Permalink to this heading"></a></h2>
+<section id="what-is-this-and-who-is-it-for">
+<h3>Co to je a pro koho je to určeno?<a class="headerlink" href="#what-is-this-and-who-is-it-for" title="Permalink to this heading"></a></h3>
+<p>Prostřednictvím <a class="reference external" href="https://github.com/ivangayton/GDAL_scripts/">Ivan Gayton’s repo</a>.</p>
+<p><a class="reference external" href="https://www.opendronemap.org/">OpenDroneMap</a> nelze vždy efektivně nastavit lokálně - ke zpracování velkých datových souborů je zapotřebí poměrně výkonný stroj, takže pro lidi v terénu může být někdy řešením cloudový stroj. V mnoha nízkopříjmových prostředích je však problémem šířka pásma. Toto omezení nelze zcela vyřešit, ale následující metoda rozumně snižuje šířku pásma potřebnou ke zpracování datových sad snímků z dronů v cloudu z afrických lokalit.</p>
+<p>Představíme vám složitý, ale proveditelný postup pro vytvoření cloudového počítače OpenDroneMap (<em>ne</em> CloudODM, jen cloudové instance ODM, kterou spustíte z příkazového řádku) a jeho použití ke vzdálenému zpracování velkých sad fotografií. Vyžaduje to znalost používání příkazového řádku Unix, ssh, účet Digital Ocean (Amazon AWS by fungoval také, možná s mírnými rozdíly v nastavení) a mírnou úroveň obecné počítačové gramotnosti. Pokud nejste dostatečně počítačově zdatní a jste ochotni se potýkat s poněkud složitějším nastavením, měli byste se zaměřit na <a class="reference external" href="https://www.opendronemap.org/cloudodm/">CloudODM</a>.</p>
+<p>Celý proces je většinou zaměřen na někoho, kdo létá na rozsáhlé mise v Africe nebo podobné lokalitě a chce zpracovat data co nejdříve ještě v terénu. Proto klade důraz na pracovní postup, jehož cílem je snížit šířku pásma/přenos dat, spíše než jen na nejjednodušší způsob spuštění ODM.</p>
+</section>
+<section id="steps">
+<h3>Kroky<a class="headerlink" href="#steps" title="Permalink to this heading"></a></h3>
+<section id="install">
+<h4>Instalace<a class="headerlink" href="#install" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Vytvořte si droplet Digital Ocean s alespoň 4 GB paměti RAM. To bude stát asi 20 dolarů měsíčně. Pokud máte méně než 4 GB RAM, instalace se pravděpodobně nezdaří. Při skutečném spuštění procesu ODM změníme velikost na mnohem větší - a dražší - cloudový stroj, ale mezi jednotlivými spuštěními jej můžete zmenšit na druhý nejlevnější droplet, který stojí jen 10 USD/měsíc (nejlevnější droplet za 5 USD/měsíc je vybaven tak malým diskem, že na něj nelze zmenšit velikost zpět).</p>
+<ul>
+<li><p>Mělo by se jednat o instanci Ubuntu 18.04, aby byla zajištěna kompatibilita závislostí.</p></li>
+<li><p>Vytvořte uživatele s právy sudo. <a class="reference external" href="https://www.digitalocean.com/community/tutorials/initial-server-setup-with-ubuntu-18-04">S tím vám pomůže neuvěřitelně dobrá dokumentace společnosti Digital Ocean</a>. V našem případě jsme nastavili uživatele s názvem <code class="docutils literal notranslate"><span class="pre">odm</span></code>, takže se k němu připojíte příkazem <code class="docutils literal notranslate"><span class="pre">ssh</span> <span class="pre">odm&#64;xxx.xxx.xxx.xxx</span></code> (kde x znamená adresu IPv4 vašeho serveru). Pokud se chcete přesně držet tohoto příkladu, používejte uživatelské jméno <code class="docutils literal notranslate"><span class="pre">odm</span></code>; pak bude vaše instalační cesta <code class="docutils literal notranslate"><span class="pre">/home/odm/ODM/`</span></code> a bude odpovídat všem příkladům v tomto dokumentu.</p></li>
+<li><p>Proveďte <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code> a <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">upgrade</span></code>, abyste se ujistili, že váš server není nebezpečně bez aktualizací. Ujistěte se, že jste zůstali u Ubuntu 18.04.</p></li>
+</ul>
+</li>
+<li><p>Stáhněte a nainstalujte na něj ODM ze stránky <a class="reference external" href="https://github.com/OpenDroneMap/ODM">ODM Github</a> (běžný, ne WebODM) pomocí následujících příkazů:</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">OpenDroneMap</span><span class="o">/</span><span class="n">ODM</span><span class="o">.</span><span class="n">git</span>
+<span class="n">cd</span> <span class="n">ODM</span>
+<span class="n">bash</span> <span class="n">configure</span><span class="o">.</span><span class="n">sh</span> <span class="n">install</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Pokud tak učiníte z výchozí domovské složky svého uživatele (tj. <code class="docutils literal notranslate"><span class="pre">odm</span></code>), bude cesta k instalaci <code class="docutils literal notranslate"><span class="pre">/home/odm/ODM</span></code> (zkráceně <code class="docutils literal notranslate"><span class="pre">~/ODM/</span></code>).</p></li>
+<li><p>Je třeba nastavit některé proměnné prostředí. Otevřete soubor ~/.bashrc na svém počítači a přidejte na konec následující 3 řádky (Z <a class="reference external" href="https://github.com/OpenDroneMap/ODM">ODM github</a>). Soubor můžete otevřít pomocí <code class="docutils literal notranslate"><span class="pre">nano</span> <span class="pre">~/.bashrc</span></code> (nebo jakéhokoli textového editoru, který používáte místo nano). Nezapomeňte nahradit <code class="docutils literal notranslate"><span class="pre">/home/odm/`</span></code> správnou cestou k umístění, kam jste rozbalili OpenDroneMap, pokud jste neprovedli vše přesně jako v našem příkladu (například pokud jste v nastavení serveru použili jiné uživatelské jméno):</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PYTHONPATH=$PYTHONPATH:/home/odm/ODM/SuperBuild/install/lib/python2.7/dist-packages
+export PYTHONPATH=$PYTHONPATH:/home/odm/ODM/SuperBuild/src/opensfm
+export LD_LIBRARY_PATH=$LD_LIBRARY_PATH:/home/odm/ODM/SuperBuild/install/lib
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Všimněte si, že readme ODM na githubu obsahuje drobnou chybu, název instalačního adresáře bude ODM, nikoli OpenDroneMap (uvidíte to, když porovnáte výše uvedené pokyny s pokyny na ODM GitHubu).</p></li>
+<li><p>Abychom zabránili pádu, kdy proces split-merge nenajde svůj vlastní spustitelný soubor, přidáme do <code class="docutils literal notranslate"><span class="pre">~/.bashrc</span></code> následující řádky (pokud jste nastavili věci jinak než v našem příkladu, upravte cesty):</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export PYTHONPATH=$PYTHONPATH:/home/odm/ODM/
+export PATH=$PATH:/home/odm/ODM/
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Nyní budete potřebovat druhý cloudový pevný disk (v žargonu Digital Ocean „svazek“), který bude dostatečně velký pro správu vašeho projektu. Zdá se, že pravidlem je desetinásobek velikosti vaší surové sady bitových kopií; my máme 100GB sadu bitových kopií a nastavili jsme 1000GB svazek (po dokončení běhu byste se měli moci zbavit většiny této drahé kapacity disku, ale je potřeba k dokončení procesu). Nastavte svazek, připojte jej ke svému dropletu a <a class="reference external" href="https://www.digitalocean.com/docs/volumes/how-to/mount/">konfigurujte jeho přípojný bod</a> (v tomto příkladu jej nastavíme na <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>).</p></li>
+</ul>
+</section>
+<section id="prep-data-and-project">
+<h4>Příprava dat a projektu<a class="headerlink" href="#prep-data-and-project" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Obrázky nyní odešlete na server. Můžete použít <a class="reference external" href="https://en.wikipedia.org/wiki/Secure_copy">Zabezpečené kopírování (scp)</a> takto: <code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">-r</span> <span class="pre">/cesta/do/moje/složkasobrázky</span> <span class="pre">odm&#64;xxx.xxx.xxx.xxx:/mnt/odmdata/</span></code>.</p>
+<ul>
+<li><p>Tím se celá složka plná obrazů přesune (to je to, co dělá volba <code class="docutils literal notranslate"><span class="pre">-r</span></code>, „rekurzivní“) do vzdáleného umístění (v našem příkladu do svazku, který jsme připojili ke cloudovému počítači na <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/`</span></code>.</p></li>
+<li><p>To zabere určitou šířku pásma. Velikost souborů nelze obejít.<a class="reference external" href="#footnote1">1</a>, <a class="reference external" href="#footnote2">2</a></p></li>
+</ul>
+</li>
+</ul>
+<section id="directory-structure">
+<h5>Struktura adresáře<a class="headerlink" href="#directory-structure" title="Permalink to this heading"></a></h5>
+<p>ODM vyžaduje, aby byly adresáře v počítači nastaveny přesně tak, jak mají být. Rozhodující je instalační složka (pokud jste instalovali výše uvedeným způsobem, je to <code class="docutils literal notranslate"><span class="pre">/home/odm/ODM/</span></code>) a složka projektu (tj. <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code>).</p>
+<ul class="simple">
+<li><p>Soubor settings.yaml ODM určuje jediný nadřazený adresář obsahující všechny projekty. To je to, co je uvedeno v řádku cesty k projektu v souboru settings.yaml (poněkud matoucí je, že se ve skutečnosti jedná o <em>rodičovský</em> adresář jednotlivých adresářů projektů, které jsou při volání ODM určeny parametrem názvu projektu). Upravte soubor settings.yaml a nastavte parametr project_path na (podle našeho příkladu nastavení) <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>, což v tomto případě ukazuje na námi vytvořený svazek. V jeho rámci se vytvoří jednotlivé adresáře projektu.</p></li>
+<li><p>Individual project directories, i.e. <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code>
+contain the gcp_list.txt file, the image_groups.txt file, and the
+images folder for each project.</p></li>
+<li><p>Složka images, tj. <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images/</span></code>, obsahuje všechny obrázky. Pokud to takto nastavíte, obrázky se nebudou znovu kopírovat, protože už jsou v adresáři, ve kterém je ODM chce mít.</p></li>
+<li><p>Upravte soubor settings.yaml tak, aby určoval nadřazený adresář složky projektu (v tomto případě námi vytvořený svazek, <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>). Ujistěte se, že obrázky jsou na správném místě, tj. <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images</span></code>, a ostatní pomocné soubory (gcp_list.txt a image_groups.txt) jsou v kořenové složce <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code>.</p></li>
+<li><p>pokud máte obrázky v samostatných složkách pro jednotlivé bloky AOI nebo lety (což budete mít, pokud byla správa letů organizována), můžete vytvořit image_groups. txt se zaklínadly <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">*;</span> <span class="pre">do</span> <span class="pre">cd</span> <span class="pre">$i;</span> <span class="pre">for</span> <span class="pre">j</span> <span class="pre">in</span> <span class="pre">*;</span> <span class="pre">do</span> <span class="pre">echo</span> <span class="pre">&quot;$j</span> <span class="pre">$i&quot;</span> <span class="pre">&gt;&gt;</span> <span class="pre">../$i.txt;</span> <span class="pre">done;</span> <span class="pre">cd</span> <span class="pre">../;</span> <span class="pre">done;</span></code> a <code class="docutils literal notranslate"><span class="pre">cd</span> <span class="pre">../</span></code>, <code class="docutils literal notranslate"><span class="pre">for</span> <span class="pre">i</span> <span class="pre">in</span> <span class="pre">myproject/*.txt;</span> <span class="pre">do</span> <span class="pre">cat</span> <span class="pre">$i</span> <span class="pre">&gt;&gt;</span> <span class="pre">image_groups.txt;</span> <span class="pre">done;</span></code>. To by mělo vytvořit soubor se správnou strukturou: seznam všech souborů obrázků a „název skupiny“ za každým z nich (což v tomto případě bude jednoduše název složky, ze které pochází). Poté přesuňte všechny soubory obrázků do jediného adresáře s názvem images v kořenovém adresáři projektu (tedy <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images/</span></code>). Soubor image_groups.txt umožní ODM sledovat, které obrázky patří do stejné dávky, i když jsou všechny v jednom adresáři.</p></li>
+</ul>
+</section>
+</section>
+<section id="resize-droplet-pull-pin-run-away">
+<h4>Resize droplet, pull pin, run away<a class="headerlink" href="#resize-droplet-pull-pin-run-away" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Vypněte a změňte velikost počítače na přiměřeně monstrózní počet procesorů a množství paměti. Používám paměťově optimalizovaný stroj s 24 dedikovanými vCPU a 192 GB RAM (což stojí asi 1,60 USD/hod - což se rychle sčítá, je to přes 1000 USD/měsíc). Restartujte a rychle se pusťte do práce, abyste neztráceli drahý čas na velké kapky.</p></li>
+<li><p>Spusťte proces ODM přes ssh pomocí nohup (takže v případě přerušení bude zpracování pokračovat).</p>
+<ul>
+<li><p>Alternativně můžete použít GNU screen pro spuštění procesu z relace obrazovky, která se nezastaví, pokud je vaše připojení přerušeno; spusťte <code class="docutils literal notranslate"><span class="pre">screen</span></code> a použijte <code class="docutils literal notranslate"><span class="pre">a</span> <span class="pre">d</span></code> pro odpojení, <code class="docutils literal notranslate"><span class="pre">screen</span> <span class="pre">-r</span></code> pro opětovné připojení. Použitím screen však nezískáte logovací soubor se všemi konzolovými výstupy, pokud neuděláte něco specifického pro jejich zachycení, zatímco nohup vám poskytne soubor se všemi konzolovými výstupy, včetně chybových hlášení, zdarma.</p></li>
+<li><p>Poznámka: od roku 2020-03 se zdá, že normální zaklínadlo <code class="docutils literal notranslate"><span class="pre">python</span> <span class="pre">run.py</span> <span class="pre">-i</span> <span class="pre">/path/to/image/folder</span> <span class="pre">project_name</span></code> nefunguje; parametr <code class="docutils literal notranslate"><span class="pre">-i</span></code> nebo <code class="docutils literal notranslate"><span class="pre">--image</span></code> způsobuje podivnou chybu. Proto parametr -i vypustíme a budeme se spoléhat na řádek adresáře projektu v souboru settings.yaml, který nasměruje ODM na správné místo. Nyní používáme (včetně split-merge):</p></li>
+</ul>
+</li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nohup</span> <span class="n">python</span> <span class="n">run</span><span class="o">.</span><span class="n">py</span> <span class="n">myproject</span> <span class="o">--</span><span class="n">split</span> <span class="mi">1</span> <span class="o">--</span><span class="n">split</span><span class="o">-</span><span class="n">overlap</span> <span class="mi">0</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">gsd</span> <span class="o">--</span><span class="n">depthmap</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">1000</span> <span class="o">--</span><span class="n">orthophoto</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">5</span> <span class="o">--</span><span class="n">dem</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">15</span> <span class="o">--</span><span class="n">pc</span><span class="o">-</span><span class="n">las</span> <span class="o">--</span><span class="n">dsm</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Tím se ODM přesměruje na složku (v tomto příkladu) <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/</span></code>. Pokud jsou soubory image_groups.txt a gcp_list.txt v této složce, obrázky jsou ve složce <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/myproject/images/</span></code> a cesta k projektu v souboru settings.yaml je <code class="docutils literal notranslate"><span class="pre">/mnt/odmdata/</span></code>, nebude se plýtvat časem a místem při kopírování obrázků.</p></li>
+<li><p>Všimněte si, že to předpokládá, že máte soubor image_groups.txt. Pokud ne, pak <code class="docutils literal notranslate"><span class="pre">-split-overlap</span> <span class="pre">0</span></code> pravděpodobně všechno pokazí a <code class="docutils literal notranslate"><span class="pre">--split</span> <span class="pre">1</span></code> je doslova náhodné číslo, které bude po načtení souboru image_groups.txt ignorováno (myslím, že normálně kontroluje, do kolika skupin rozdělí sadu obrázků, ale v našem případě předpokládáme, že obrázky jsou již rozumně seskupeny). Pokud nemáte velkou sadu dat (&gt;1000 obrázků), vynechejte volby <code class="docutils literal notranslate"><span class="pre">--split</span></code> a <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code>.</p></li>
+<li><p>Sledujte postup pomocí Tail (abyste věděli, kdy je hotovo).</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tail</span> <span class="o">-</span><span class="n">f</span> <span class="n">nohup</span><span class="o">.</span><span class="n">out</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Možná budete chtít sledovat htop (abyste měli přehled o využití prostředků a v budoucnu mohli roztočit jen tak velký stroj, jak je potřeba).</p></li>
+</ul>
+</section>
+<section id="after-it-finishes-assuming-you-survive-that-long">
+<h4>Po jeho skončení (za předpokladu, že přežijete tak dlouho)<a class="headerlink" href="#after-it-finishes-assuming-you-survive-that-long" title="Permalink to this heading"></a></h4>
+<ul class="simple">
+<li><p>Jakmile zpracování skončí, vypněte stroj a změňte jeho velikost zpět na levnou minimální kapacitu.</p></li>
+<li><p>Spusťte zálohování počítače a přihlaste se pomocí ssh.</p></li>
+<li><p>Pokud chcete ušetřit šířku pásma pro stahování, můžete ortofoto komprimovat pomocí GDAL. Nepřidávejte přehledy, to udělejte na svém lokálním počítači, abyste soubor před stažením nezvětšovali.</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">gdal_translate</span> <span class="o">-</span><span class="n">co</span> <span class="n">COMPRESS</span><span class="o">=</span><span class="n">JPEG</span> <span class="o">-</span><span class="n">co</span> <span class="n">PHOTOMETRIC</span><span class="o">=</span><span class="n">YCBCR</span> <span class="o">-</span><span class="n">co</span> <span class="n">TILED</span><span class="o">=</span><span class="n">YES</span> <span class="o">-</span><span class="n">b</span> <span class="mi">1</span> <span class="o">-</span><span class="n">b</span> <span class="mi">2</span> <span class="o">-</span><span class="n">b</span> <span class="mi">3</span> <span class="o">-</span><span class="n">mask</span> <span class="mi">4</span> <span class="o">--</span><span class="n">config</span> <span class="n">GDAL_TIFF_INTERNAL_MASK</span> <span class="n">YES</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">original</span><span class="o">/</span><span class="n">filename</span><span class="o">.</span><span class="n">extension</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">output</span><span class="o">.</span><span class="n">tif</span>
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Stáhněte pomocí scp: <code class="docutils literal notranslate"><span class="pre">scp</span> <span class="pre">odm&#64;xxx.xxx.xxx.xxx:/mnt/odmdata/myproject/odm_orthophoto/odm_orthophoto.tif</span></code> (nebo si stáhněte komprimovanou verzi, kterou jste vytvořili v posledním kroku).</p></li>
+<li><p>Jakmile soubor získáte v místním počítači, můžete pomocí QGIS přidat přehledy („pyramidy“) nebo použít příkaz GDAL <code class="docutils literal notranslate"><span class="pre">gdaladdo</span> <span class="pre">-r</span> <span class="pre">average</span> <span class="pre">/path/to/image.tif</span> <span class="pre">2</span> <span class="pre">4</span> <span class="pre">8</span> <span class="pre">16</span> <span class="pre">32</span> <span class="pre">64</span> <span class="pre">128</span> <span class="pre">256</span> <span class="pre">512</span> <span class="pre">1024</span></code>.</p></li>
+<li><p>Složky odm_texturing, odm_georeferencing a odm-dem můžete archivovat pomocí tar, abyste je mohli stáhnout vcelku (a možná i menší).</p></li>
+</ul>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">tar</span> <span class="o">-</span><span class="n">zcvf</span> <span class="n">archivename</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">folder</span>
+</pre></div>
+</div>
+</section>
+</section>
+</section>
+<section id="using-potree-3d-viewer-module-on-webodm">
+<h2>Použití modulu Potree 3D viewer na WebODM<a class="headerlink" href="#using-potree-3d-viewer-module-on-webodm" title="Permalink to this heading"></a></h2>
+<section id="cameras">
+<h3>Kamery<a class="headerlink" href="#cameras" title="Permalink to this heading"></a></h3>
+<p>Aktivací této funkce zobrazíte polohu kamery.</p>
+<p>Kliknutím na ikonu fotoaparátu můžete také zobrazit jednotlivé snímky v rámečku v pravém horním rohu. Kliknutím na rámeček snímku se přepnete do režimu celé obrazovky.</p>
+<p>V rámci snímku jsou odkazy na stažení snímku a souboru kamery GeoJSON.</p>
+<figure class="align-center">
+<img alt="Umístění kamery" src="../_images/cameras.png" />
+</figure>
+</section>
+<section id="textured-model">
+<h3>Texturovaný model<a class="headerlink" href="#textured-model" title="Permalink to this heading"></a></h3>
+<p>Aktivací této funkce zobrazíte načtení texturovaného modelu. V závislosti na velikosti souboru a rychlosti připojení může načtení trvat několik sekund.</p>
+<figure class="align-center">
+<img alt="Texturovaný model" src="../_images/texturedmodel.png" />
+</figure>
+</section>
+<section id="appearance">
+<h3>Vzhled<a class="headerlink" href="#appearance" title="Permalink to this heading"></a></h3>
+<section id="point-budget">
+<h4>Point budget<a class="headerlink" href="#point-budget" title="Permalink to this heading"></a></h4>
+<p>Pro účely vzhledu i výkonu lze spravovat rozpočet bodů na scéně. Některým starým a méně výkonným strojům by prospěl rozpočet 500 000 bodů, zatímco většina strojů střední třídy je schopna zvládnout rozpočet 1 až 2 miliony bodů.</p>
+<p>Rozpočet 5 až 7 milionů bodů vytváří hladký 3d model mračna bodů, ale může být náročný na zdroje.</p>
+<p>Výchozí hodnota bodového rozpočtu je nastavena na 1 000 000.</p>
+</section>
+<section id="field-of-view">
+<h4>Zorné pole<a class="headerlink" href="#field-of-view" title="Permalink to this heading"></a></h4>
+<p>Za účelem kontroly prvků modelu, které mají být zahrnuty do scény, lze upravit zorné pole. Výchozí hodnota je nastavena na 60 stupňů.</p>
+<figure class="align-center">
+<img alt="Nastavení zorného pole" src="../_images/FOV_animation.gif" />
+</figure>
+</section>
+<section id="eye-dome-lighting">
+<h4>Osvětlení očního obzoru<a class="headerlink" href="#eye-dome-lighting" title="Permalink to this heading"></a></h4>
+<p>Modul prohlížeče Potree Point Cloud 3d dokáže implementovat eye dome-lighting, model osvětlení, který zvýrazňuje tvary objektů.</p>
+<p>Eye Dome-lighting seskupuje objekty, stínuje jejich obrysy a zlepšuje vnímání hloubky ve vědeckých vizualizacích. Je užitečné pro rozpoznávání a měření struktur v modelu. Lze jej upravit nastavením poloměru, síly a krytí.</p>
+<p>Ve výchozím nastavení je funkce Eye Dome-Lighting v prohlížeči Potree 3D povolena, ale lze ji vypnout kliknutím na možnost povolit.</p>
+<figure class="align-center">
+<img alt="Nastavení osvětlení oční kopule" src="../_images/EDL_animation.gif" />
+</figure>
+</section>
+<section id="background">
+<h4>Pozadí<a class="headerlink" href="#background" title="Permalink to this heading"></a></h4>
+<p>Pozadí prohlížeče Potree 3D lze upravit. Dostupné možnosti jsou <strong>Skybox</strong> / <strong>Gradient</strong> / <strong>Černá</strong> / <strong>Bílá</strong> / <strong>Žádná</strong>.</p>
+<figure class="align-center">
+<img alt="Volba pozadí" src="../_images/Background_animation.gif" />
+</figure>
+</section>
+<section id="other">
+<h4>Ostatní<a class="headerlink" href="#other" title="Permalink to this heading"></a></h4>
+<p><strong>Kvalita rozstřiku</strong> = Kvalitu rozstřiku lze nastavit na standardní nebo vysokou kvalitu a zlepšit tak vzhled modelu.</p>
+<p><strong>Minimální velikost uzlu</strong> = volba Minimální velikost uzlu ovlivní hustotu bodů reprezentovaných uzlů.</p>
+<p><strong>Box</strong> = Zobrazení boxů uzlů.</p>
+<p><strong>Zamknout zobrazení</strong> = uzamkne zobrazení mračna bodů a zabrání načtení nebo vyjmutí bodů do modelu.</p>
+</section>
+</section>
+<section id="tools">
+<h3>Nástroje<a class="headerlink" href="#tools" title="Permalink to this heading"></a></h3>
+<section id="measurement">
+<h4>Měření<a class="headerlink" href="#measurement" title="Permalink to this heading"></a></h4>
+<p>Modul Potree 3D viewer poskytuje několik nástrojů pro měření. Tato sada nástrojů se skládá z 12 prvků. Obsahuje také ovládací prvky pro zobrazení nebo skrytí výsledných popisek měření.</p>
+<p>Měření se provádí kliknutím levým tlačítkem myši na požadované body a u některých nástrojů je pro ukončení procesu nutné kliknutí pravým tlačítkem myši.</p>
+<figure class="align-center">
+<img alt="Nástroje - Měřící nástroje" src="../_images/measurement.png" />
+</figure>
+<p><strong>Úhel</strong></p>
+<p>Tento nástroj měří trojrozměrný úhel tvořený přímkami spojujícími 3 body. Chcete-li zahájit měření, klikněte na ikonu úhlu, poté klikněte levým tlačítkem myši na 3 body a proces se automaticky ukončí. Další informace získáte také výběrem tohoto prvku v sekci scéna.</p>
+<p><strong>Bod</strong></p>
+<p>Tento nástroj zvýrazní vybraný bod a zobrazí jeho souřadnici XYZ. Chcete-li zahájit měření, klikněte na ikonu bodu, poté klikněte na požadovaný bod a proces se automaticky ukončí. Další informace lze získat také výběrem tohoto prvku v sekci scény.</p>
+<p><strong>Vzdálenost</strong></p>
+<p>Tento nástroj měří trojrozměrnou vzdálenost přímek spojujících řadu bodů. Chcete-li zahájit měření, klikněte na ikonu vzdálenosti a začněte klikat na požadované body (dva nebo více). Měření ukončíte kliknutím pravým tlačítkem myši. Další informace, jako je například Celková délka, lze získat také výběrem tohoto prvku v sekci Scéna.</p>
+<p><strong>Výška</strong></p>
+<p>Tento nástroj měří výšku nebo svislou vzdálenost mezi dvěma body. Chcete-li zahájit měření, klikněte na ikonu výšky a poté klikněte na požadované dva body. Proces se automaticky ukončí. Další informace získáte také výběrem tohoto prvku v sekci Scéna.</p>
+<figure class="align-center">
+<img alt="Height measurement" src="../_images/height_animation.gif" />
+</figure>
+<p><strong>Kruh</strong></p>
+<p>Tento nástroj měří poloměr kružnice tvořené třemi body. Chcete-li zahájit měření, klikněte na ikonu kružnice a poté klikněte na požadované dva body. Proces se automaticky ukončí. Další informace, jako je Obvod, lze získat také výběrem tohoto prvku v sekci Scéna.</p>
+<p><strong>Azimut</strong></p>
+<p>Tento nástroj měří azimutální úhel přímky. Tato přímka je tvořena dvěma body vybranými uživatelem, úhel se měří ve stupních ve směru hodinových ručiček od 0 do 360 a začíná od zeměpisného severu. Chcete-li zahájit měření, klikněte na ikonu azimutu a poté klikněte na požadované dva body. Proces se automaticky ukončí. Další informace lze získat také výběrem tohoto prvku v sekci scény.</p>
+<p><strong>Oblast</strong></p>
+<p>Tento nástroj měří vodorovnou plochu tvořenou polygonem. Chcete-li zahájit měření, klikněte na ikonu plochy a začněte klikat na body tvořící požadovaný polygon (tři nebo více). Měření ukončíte kliknutím pravým tlačítkem myši. Další informace získáte také výběrem tohoto prvku v sekci scéna.</p>
+<p><strong>Objem (krychle)</strong></p>
+<p>Tento nástroj měří objem tvořený krychlí. Chcete-li zahájit měření, klikněte na ikonu objemu (krychle) a kliknutím na model umístěte krychli. Pomocí zobrazených obslužných programů je možné krychli přemístit, změnit její rozměr a otočit ji. Měření ukončíte kliknutím pravým tlačítkem myši. Další informace lze získat také výběrem tohoto prvku v sekci scény.</p>
+<p><strong>Objem (koule)</strong></p>
+<p>Tento nástroj měří objem tvořený koulí. Chcete-li zahájit měření, klikněte na ikonu objemu (koule) a kliknutím na model umístěte kouli. Pomocí zobrazených obslužných programů je možné kouli přemístit, změnit její rozměr a otočit ji. Měření ukončíte kliknutím pravým tlačítkem myši. Další informace lze získat také výběrem tohoto prvku v sekci scény.</p>
+<p><strong>Výškový profil</strong></p>
+<p>Tento nástroj vytvoří na modelu výškový profil tvořený čarou. Chcete-li zahájit měření, klikněte na ikonu Výškový profil a poté vytvořte na modelu čáru kliknutím na požadované body (dva nebo více). Měření ukončíte kliknutím pravým tlačítkem myši. Další informace a možnosti, například „Zobrazit 2d profil“, lze získat také výběrem tohoto prvku v sekci scény.</p>
+<figure class="align-center">
+<img alt="Height profile" src="../_images/height_profile.png" />
+</figure>
+<p><strong>Poznámka</strong></p>
+<p>Tento nástroj vytvoří na zvýrazněném bodě modelu anotační štítek. Chcete-li zahájit měření, klikněte na ikonu anotace a poté klikněte na požadovaný bod. Proces se automaticky ukončí. Chcete-li anotaci upravit, vyberte tento prvek v sekci scény a poté upravte Nadpis a Popis.</p>
+<p><strong>Odstranit měření</strong></p>
+<p>Tento nástroj odstraní všechna měření na modelu. Chcete-li odstranit všechna měření, klikněte na ikonu „Odstranit měření“.</p>
+</section>
+<section id="clipping">
+<h4>Ořez<a class="headerlink" href="#clipping" title="Permalink to this heading"></a></h4>
+<figure class="align-center">
+<img alt="Tools - Clipping tools" src="../_images/clipping.png" />
+</figure>
+<p>Mračno bodů lze oříznout výběrem oblasti. Mezi možnosti oříznutí patří <strong>žádné</strong> / <strong>zvýraznění</strong> / <strong>vnitřní</strong> / <strong>vnější</strong>.</p>
+<p>Chcete-li mračno bodů oříznout, klikněte na ikonu oříznutí svazku, umístěte krychli na model a přemístěte ji, změňte její rozměry a otočte ji tak, aby obsahovala požadovanou oblast. Jako metoda oříznutí je ve výchozím nastavení nastaveno zvýraznění. Pokud chcete zobrazit pouze body obsažené v krychli, klikněte na „Inside“ (Uvnitř), v opačném případě klikněte na „Outside“ (Vně).</p>
+<p>Chcete-li odstranit ořezový objem nebo polygony, klikněte na ikonu „Odstranit všechna měření“.</p>
+<figure class="align-center">
+<img alt="Nástroje - Ořezávání" src="../_images/clipping_animation.gif" />
+</figure>
+</section>
+<section id="navigation">
+<h4>Navigace<a class="headerlink" href="#navigation" title="Permalink to this heading"></a></h4>
+<figure class="align-center">
+<img alt="Nástroje - Ovládací prvky navigace" src="../_images/navigation.png" />
+</figure>
+<p>Prohlížeč Potree 3D má 4 navigační ovládací prvky, které určují jeho chování.</p>
+<p><strong>Ovládání ze země</strong></p>
+<p>Pozemní řízení navigované jako ukotvené k zemi. Levé tlačítko myši pohybuje modelem horizontálně, kolečko myši ovládá zoom a pravé tlačítko model obíhá.</p>
+<p><strong>Ovládání letu</strong></p>
+<p>Ovládání Fly Control pohybuje kamerou jako v ptačím pohledu pomocí klávesnice. Klávesy „W“ a „S“ se pohybují vpřed a vzad, respektive ve směru kamery, zatímco „A“ a „D“ se pohybují vlevo a vpravo. Také klávesy „R“ a „F“ pohybují kamerou nahoru a dolů. Levé tlačítko myši mění směr kamery, kolečko myši ovládá zoom a pravé tlačítko pohybuje kamerou v ose XYZ.</p>
+<p>Rychlost těchto pohybů lze ovládat pomocí posuvného ovladače.</p>
+<p><strong>Ovládání helikoptéry</strong></p>
+<p>Při ovládání vrtulníku se kamera pohybuje jako v letadle pomocí klávesnice. Klávesy „W“ a „S“ se pohybují dopředu a dozadu, resp. jsou omezeny v horizontální rovině, zatímco klávesy „A“ a „D“ se pohybují doleva a doprava. Také klávesy „R“ a „F“ pohybují kamerou nahoru a dolů. Levé tlačítko myši mění směr kamery, kolečko myši ovládá zoom a pravé tlačítko posouvá model v ose XY.</p>
+<p>Rychlost těchto pohybů lze ovládat pomocí posuvného ovladače.</p>
+<p><strong>Ovládací prvky otáčení</strong></p>
+<p>Řízení oběžné dráhy je výchozí navigační chování. Levé tlačítko myši obíhá model, kolečko ovládá zoom a pravé tlačítko pohybuje modelem v ose XYZ.</p>
+<p><strong>Plný rozsah</strong></p>
+<p>Tlačítko Plný rozsah obnoví zobrazení modelu.</p>
+<p><strong>Navigační krychle</strong></p>
+<p>Navigační kostka zobrazí drátěnou kostku obsahující model.</p>
+<p><strong>Kompas</strong></p>
+<p>Tlačítko Kompas zobrazí kompas v pravém horním rohu.</p>
+<p><strong>Animace kamery</strong></p>
+<p>Tlačítko animace kamery vytvoří cestu animace kamery. Poloha kamery je definována body na zelené čáře, zatímco body na modré čáře představují místo, kam má kamera směřovat.</p>
+<p>Chcete-li vytvořit animaci, upravte body pro umístění kamery a směr kamery a poté vyberte prvek kamery v části Scéna a vytvořte další bod, změňte rychlost animace nebo animaci přehrajte.</p>
+<figure class="align-center">
+<img alt="Nástroje - Ovládací prvky navigace" src="../_images/camera_animation.gif" />
+</figure>
+</section>
+</section>
+<section id="scene">
+<h3>Scéna<a class="headerlink" href="#scene" title="Permalink to this heading"></a></h3>
+<p>V části Scéna se zobrazí strom souborů obsahující všechny prvky scény. Prvky jsou uspořádány do šesti skupin, kterými jsou <strong>Mračna bodů</strong> / <strong>Měření</strong> / <strong>Anotace</strong> / <strong>Ostatní</strong> / <strong>Vektor</strong> / <strong>Obrázky</strong>.</p>
+<p>Každý prvek v těchto skupinách lze vybrat a získat další informace nebo ovládat jeho vlastnosti.</p>
+<p>Například vlastnosti mračen bodů lze upravit tak, aby zobrazovaly nadmořskou výšku, a také lze přizpůsobit barevnou rampu.</p>
+<figure class="align-center">
+<img alt="Nástroje - Ovládací prvky navigace" src="../_images/pointcloud_elevation.png" />
+</figure>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Naučte se upravovat</a> a pomozte zlepšit <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst">tuto stránku</a>!</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../installation/" class="btn btn-neutral float-left" title="Instalace a spuštění" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../arguments/" class="btn btn-neutral float-right" title="Možnosti a značky" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, OpenDroneMap.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

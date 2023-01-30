@@ -1,0 +1,836 @@
+<!DOCTYPE html>
+<html class="writer-html5" lang="cs" >
+<head>
+  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Instalace a spuštění &mdash; Dokumentace pro OpenDroneMap 3.0.4</title>
+      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
+      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+  <!--[if lt IE 9]>
+    <script src="../_static/js/html5shiv.min.js"></script>
+  <![endif]-->
+  
+        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
+        <script src="../_static/jquery.js"></script>
+        <script src="../_static/underscore.js"></script>
+        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
+        <script src="../_static/doctools.js"></script>
+        <script src="../_static/sphinx_highlight.js"></script>
+        <script src="../_static/translations.js"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="Rejstřík" href="../genindex/" />
+    <link rel="search" title="Vyhledávání" href="../search/" />
+    <link rel="next" title="Výukové materiály" href="../tutorials/" />
+    <link rel="prev" title="Welcome to OpenDroneMap’s documentation" href="../" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+            <a href="../" class="icon icon-home"> OpenDroneMap
+          </a>
+              <div class="version">
+                3.0.4
+              </div>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="Search docs" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="Navigation menu">
+              <ul class="current">
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Instalace a spuštění</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#quickstart">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hardware-recommendations">Doporučení k hardwaru</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#installation">Instalace</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-check-virtualization-support">Krok 1. Zkontrolujte podporu virtualizace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-install-requirements">Krok 2. Požadavky na instalaci</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-check-memory-and-cpu-allocation">Krok 3. Zkontrolujte přidělení paměti a procesoru</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-download-webodm">Krok 4. Stáhněte si WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-launch-webodm">Krok 4. Spusťte WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">Krok 1. Zkontrolujte podporu virtualizace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">Krok 2. Požadavky na instalaci</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id3">Krok 3. Zkontrolujte přidělení paměti a procesoru</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-4-download-and-launch-webodm">Krok 4. Stažení a spuštění WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#step-1-install-requirements">Krok 1. Instalace požadavků</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-2-check-additional-requirements">Krok 2. Zkontrolujte další požadavky</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3-download-and-launch-webodm">Krok 3. Stažení a spuštění WebODM</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#basic-commands-and-troubleshooting">Základní příkazy a řešení potíží</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#hello-webodm">Dobrý den, WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#running-on-more-than-one-machine">Spuštění na více než jednom počítači</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/">Výukové materiály</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-high-quality-orthophotos">Vytváření vysoce kvalitních ortofotomap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#calibrating-the-camera">Kalibrace kamery</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-digital-elevation-models">Vytváření digitálních výškových modelů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#fieldwork-planning">Plánování terénních prací</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-pattern">Letový model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-height">Výška letu</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#processing-parameters">Parametry zpracování</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#measuring">Měření</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#expected-accuracy">Očekávaná přesnost</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-docker">Použití aplikace Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#listing-docker-machines">Výpis strojů Docker</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#accessing-logs-on-the-instance">Přístup k protokolům instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#command-line-access-to-instances">Přístup k instancím z příkazového řádku</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#cleaning-up-after-docker">Úklid po Dockeru</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-singularity">Using Singularity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#downloading-image">Downloading image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#using-singularity-sif-image">Using Singularity SIF image</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-odm-from-low-bandwidth-location">Použití ODM z místa s nízkou šířkou pásma</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#what-is-this-and-who-is-it-for">Co to je a pro koho je to určeno?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#steps">Kroky</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#install">Instalace</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#prep-data-and-project">Příprava dat a projektu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#resize-droplet-pull-pin-run-away">Resize droplet, pull pin, run away</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#after-it-finishes-assuming-you-survive-that-long">Po jeho skončení (za předpokladu, že přežijete tak dlouho)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-potree-3d-viewer-module-on-webodm">Použití modulu Potree 3D viewer na WebODM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#cameras">Kamery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#textured-model">Texturovaný model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#appearance">Vzhled</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#point-budget">Point budget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#field-of-view">Zorné pole</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#eye-dome-lighting">Osvětlení očního obzoru</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#background">Pozadí</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#other">Ostatní</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#tools">Nástroje</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#measurement">Měření</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#clipping">Ořez</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#navigation">Navigace</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#scene">Scéna</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arguments/">Možnosti a značky</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/3d-tiles/">3d-tiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/align/">align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary/">automatické ohraničení</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/auto-boundary/#what-is-auto-boundary">Co je automatická hranice?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/auto-boundary/#when-is-auto-boundary-helpful">Kdy je automatická hranice užitečná?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/auto-boundary/#why-would-one-use-auto-boundary">Proč by měl někdo používat automatické ohraničení?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/auto-boundary/#example-images">Příklady snímků</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/auto-boundary/#true-auto-boundary">True: <code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/auto-boundary/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary-distance/">auto-boundary-distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/bg-removal/">bg-removal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">hranice</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#what-is-boundary-geojson">Co je to Hranice [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#when-is-boundary-geojson-appropriate">Kdy je vhodné použít Hranice [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#why-would-one-use-boundary-geojson">Proč by měl někdo použít Hranice [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#how-would-one-create-boundary-geojson">Jak se vytváří Hranice [GeoJSON]?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#geojson-io">GeoJSON.io</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#qgis">QGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#example-images">Ukázkové obrázky</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-point-cloud">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Point Cloud</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-orthophoto">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Orthophoto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-digital-elevation-model">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Digitální model reliéfu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-3d-model-textured-mesh">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - 3D Model/Textured Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/build-overviews/">build-overviews</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#what-are-overviews">What Are Overviews?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#why-would-one-use-overviews">Why would one use Overviews?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/build-overviews/#true-build-overviews">True: <code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/build-overviews/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/camera-lens/">camera-lens</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#what-are-camera-lens-models">Co jsou modely objektivů fotoaparátů?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#when-are-manual-selections-appropriate">Kdy je vhodný ruční výběr?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#why-would-one-use-a-particular-camera-lens-model">Proč používat určitý model objektivu fotoaparátu?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#example-images">Ukázkové obrázky</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#auto-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">auto</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#brown-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">brown</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#fisheye-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">fisheye</span></code> : Rektilineární data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#perspective-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">perspective</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#spherical-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">spherical</span></code> : Rectilinear Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/cameras/">cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#what-are-cloud-optimized-geotiffs-cogs">What Are Cloud Optimized GeoTIFFs (COGs)?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#when-are-cogs-appropriate">When are COGs appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#why-would-one-use-cogs">Why would one use COGs?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#true-cog">True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/copy-to/">copy-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/crop/">crop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/debug/">debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-decimation/">dem-decimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-euclidean-map/">dem-euclidean-map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-gapfill-steps/">dem-gapfill-steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-resolution/">dem-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/depthmap-resolution/">depthmap-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dsm/">dsm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dtm/">dtm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/end-with/">end-with</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/fast-orthophoto/">fast-orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/feature-quality/">feature-quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/feature-type/">feature-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/force-gps/">force-gps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/gcp/">gcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/geo/">geo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/gltf/">gltf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/gps-accuracy/">gps-accuracy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/help/">help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/ignore-gsd/">ignore-gsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/matcher-neighbors/">matcher-neighbors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/matcher-type/">matcher-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/max-concurrency/">max-concurrency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/merge/">merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/mesh-octree-depth/">mesh-octree-depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/mesh-size/">mesh-size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/min-num-features/">min-num-features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/name/">name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/no-gpu/">no-gpu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/optimize-disk-space/">optimize-disk-space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-compression/">orthophoto-compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-cutline/">orthophoto-cutline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-kmz/">orthophoto-kmz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-no-tiled/">orthophoto-no-tiled</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-png/">orthophoto-png</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-resolution/">orthophoto-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-classify/">pc-classify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-copc/">pc-copc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-csv/">pc-csv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-ept/">pc-ept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-filter/">pc-filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-geometric/">pc-geometric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-las/">pc-las</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-quality/">pc-quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-rectify/">pc-rectify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-sample/">pc-sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-skip-geometric/">pc-skip-geometric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-tile/">pc-tile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/primary-band/">primary-band</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/project-path/">project-path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/radiometric-calibration/">radiometric-calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rerun/">rerun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rerun-all/">rerun-all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rerun-from/">rerun-from</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/resize-to/">resize-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rolling-shutter/">rolling-shutter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rolling-shutter-readout/">rolling-shutter-readout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/sfm-algorithm/">sfm-algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-3dmodel/">skip-3dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-band-alignment/">skip-band-alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-orthophoto/">skip-orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-report/">skip-report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/sky-removal/">sky-removal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/sm-cluster/">sm-cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/sm-no-align/">sm-no-align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-scalar/">smrf-scalar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-slope/">smrf-slope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-threshold/">smrf-threshold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-window/">smrf-window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/split/">split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/split-image-groups/">split-image-groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/split-overlap/">split-overlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-data-term/">texturing-data-term</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-keep-unseen-faces/">texturing-keep-unseen-faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-outlier-removal-type/">texturing-outlier-removal-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-single-material/">texturing-single-material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-global-seam-leveling/">texturing-skip-global-seam-leveling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-local-seam-leveling/">texturing-skip-local-seam-leveling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-tone-mapping/">texturing-tone-mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/tiles/">tiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/time/">time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-3dmesh/">use-3dmesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-exif/">use-exif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-fixed-camera-params/">use-fixed-camera-params</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-hybrid-bundle-adjustment/">use-hybrid-bundle-adjustment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/verbose/">verbose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/version/">version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/video-limit/">video-limit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/video-resolution/">video-resolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../outputs/">OpenDroneMap Outputs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#point-cloud">Point Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#d-textured-model">3D Textured Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#orthophoto">Orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#list-of-all-outputs">List of all outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../gcp/">Ground Control Points</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#recommended-practices-for-gcp-setting">Recommended practices for GCP setting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#gcp-file-format">GCP file format</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#user-interfaces">User Interfaces</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../gcp/#id1">POSM GCPi</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../gcp/#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../gcp/#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">Map accuracy</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#what-to-expect">What to expect</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aspects-impacting-map-accuracy">Aspects impacting map accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../geo/">Image Geolocation Files</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../masks/">Using Image Masks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../large/">Splitting Large Datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">Calibrate images</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#local-split-merge">Local Split-Merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#distributed-split-merge">Distributed Split-Merge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../large/#getting-started-with-distributed-split-merge">Getting Started with Distributed Split-Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#understanding-the-cluster">Understanding the Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#accessing-the-logs">Accessing the Logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#autoscaling-clusterodm">Autoscaling ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#acknowledgments">Acknowledgments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../resources/">Additional References</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-users">For Users</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../resources/#for-developers">For Developers</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../flying/">Flying Tips</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multispectral/">Multispektrální podpora</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#hardware">Hardware</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#usage">Použití</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#sentera-agx710">Sentera AGX710</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../requesting-features/">Jak požádat o funkce</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/">How To Contribute</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#community-forum">Community Forum</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#reporting-bugs">Reporting Bugs</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/#template-for-submitting-bug-reports">Template For Submitting Bug Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#pull-requests">Pull Requests</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/">Často kladené otázky</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faq/#data-processing">Zpracování dat</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#can-i-process-two-or-more-orthophoto-geotiffs-to-stitch-them-together">Mohu zpracovat dva nebo více ortofotografických souborů GeoTIFF a spojit je dohromady?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#the-software-is-not-using-all-of-my-cpu-cores-memory-gpu-all-of-the-times-is-it-normal">The software is not using all of my CPU cores / memory / GPU all of the times. Is it normal?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#if-i-use-the-native-version-of-the-software-how-can-i-allocate-more-resources-for-processing">If I use the native version of the software, how can I allocate more resources for processing?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/#licensing">Licencování</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#i-want-to-build-a-commercial-application-that-includes-odm-do-i-need-a-commercial-license">Chci vytvořit komerční aplikaci, která zahrnuje ODM. Potřebuji komerční licenci?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#are-there-other-licensing-options-aside-from-the-agplv3">Existují kromě licence AGPLv3 i jiné možnosti licencování?</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/#memory-issues">Memory issues</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#your-computer-is-running-out-of-memory-what-can-you-do">Your computer is running out of memory, what can you do?</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="Mobile navigation menu" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">OpenDroneMap</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="Page navigation">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home"></a></li>
+      <li class="breadcrumb-item active">Instalace a spuštění</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/installation.rst.txt" rel="nofollow"> View page source</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="installation-and-getting-started">
+<h1>Instalace a spuštění<a class="headerlink" href="#installation-and-getting-started" title="Permalink to this heading"></a></h1>
+<p>Tato část je převzata a upravena se svolením z <a class="reference external" href="https://odmbook.com">OpenDroneMap: The Missing Guide</a>, autor Piero Toffanin.</p>
+<section id="quickstart">
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading"></a></h2>
+<p>Installers for OpenDroneMap are available for purchase from UAV4Geo, and are the easiest way to get started and come with support.</p>
+<p><a class="reference external" href="https://opendronemap.org/webodm/download/#installer">https://opendronemap.org/webodm/download/#installer</a></p>
+<p>That said, OpenDroneMap is a free and open source ecoystem. Community support is available for those looking to install themselves and directions follow:</p>
+</section>
+<section id="hardware-recommendations">
+<h2>Doporučení k hardwaru<a class="headerlink" href="#hardware-recommendations" title="Permalink to this heading"></a></h2>
+<p>Minimální požadavky pro spuštění softwaru jsou:</p>
+<ul class="simple">
+<li><p>64bitový procesor vyrobený v roce 2010 nebo později</p></li>
+<li><p>20 GB místa na disku</p></li>
+<li><p>4 GB RAM</p></li>
+</ul>
+<p>S výše uvedenými specifikacemi lze zpracovat maximálně 100-200 snímků (software vyčerpá paměť). Doporučené požadavky jsou:</p>
+<ul class="simple">
+<li><p>Nejnovější generace CPU</p></li>
+<li><p>100 GB místa na disku</p></li>
+<li><p>16 GB RAM</p></li>
+</ul>
+<p>Výše uvedený postup umožní zpracovat několik stovek snímků bez větších problémů. Procesor s více jádry umožní rychlejší zpracování, zatímco grafická karta (GPU) nemá v současné době na výkon žádný vliv. Pro zpracování většího počtu snímků přidejte více místa na disku a paměti RAM lineárně podle počtu snímků, které potřebujete zpracovat.</p>
+<table class="docutils align-default" id="id4">
+<caption><span class="caption-text">Minimum RAM needed for N images</span><a class="headerlink" href="#id4" title="Permalink k této tabulce"></a></caption>
+<colgroup>
+<col style="width: 50%" />
+<col style="width: 50%" />
+</colgroup>
+<thead>
+<tr class="row-odd"><th class="head"><p>Number of images</p></th>
+<th class="head"><p>RAM or RAM + Swap</p></th>
+</tr>
+</thead>
+<tbody>
+<tr class="row-even"><td><p>40</p></td>
+<td><p>4</p></td>
+</tr>
+<tr class="row-odd"><td><p>250</p></td>
+<td><p>16</p></td>
+</tr>
+<tr class="row-even"><td><p>500</p></td>
+<td><p>32</p></td>
+</tr>
+<tr class="row-odd"><td><p>1500</p></td>
+<td><p>64</p></td>
+</tr>
+<tr class="row-even"><td><p>2500</p></td>
+<td><p>128</p></td>
+</tr>
+<tr class="row-odd"><td><p>3500</p></td>
+<td><p>192</p></td>
+</tr>
+<tr class="row-even"><td><p>5000</p></td>
+<td><p>256</p></td>
+</tr>
+</tbody>
+</table>
+</section>
+<section id="installation">
+<span id="docker-installation"></span><h2>Instalace<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<p>Pro spuštění ODM doporučujeme používat <a class="reference external" href="https://www.docker.com">docker</a>, ať už používáte Windows, MacOS nebo Linux.</p>
+<section id="windows">
+<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this heading"></a></h3>
+<p>Pro spuštění OpenDroneMap potřebujete alespoň Windows 7. Předchozí verze systému Windows nejsou podporovány.</p>
+<section id="step-1-check-virtualization-support">
+<h4>Krok 1. Zkontrolujte podporu virtualizace<a class="headerlink" href="#step-1-check-virtualization-support" title="Permalink to this heading"></a></h4>
+<p>Docker vyžaduje od procesoru funkci zvanou virtualizace, která mu umožňuje spouštět virtuální počítače (VM). Ujistěte se, že ji máte povolenou! Někdy je tato funkce vypnutá. Chcete-li to zkontrolovat, můžete v systému Windows 8 nebo vyšším otevřít <strong>Správce úloh</strong> (stiskněte klávesy CTRL+SHIFT+ESC) a přepnout na kartu <strong>Výkon</strong>.</p>
+<figure class="align-center">
+<img alt="Obrázek kontroly virtualizace v systému Windows 8 nebo vyšším" src="../_images/virtualizationcheck.png" />
+</figure>
+<p><em>Virtualizace by měla být povolena</em></p>
+<p>V systému Windows 7 můžete pro zjištění, zda máte povolenou virtualizaci, použít místo toho nástroj <a class="reference external" href="http://www.microsoft.com/en-us/download/details.aspx?id=592">Microsoft® Hardware-Assisted Virtualization Detection Tool</a>.</p>
+<p>Pokud je virtualizace zakázána, je třeba ji povolit. Postup se bohužel u každého modelu počítače trochu liší, takže nejlépe uděláte, když si ve vyhledávači vyhledáte „jak povolit vtx pro &lt;type your computer model here&gt;“. Často se jedná o restartování počítače, okamžité stisknutí klávesy F2 nebo F12 během spouštění, procházení spouštěcí nabídky a změnu nastavení pro povolení virtualizace (často nazývané „VT-X“).</p>
+<figure class="align-center">
+<img alt="Tabulka různých klíčů biosu" src="../_images/bioskeys.png" />
+</figure>
+<p><em>Obvyklé klávesy, které je třeba stisknout při spuštění počítače pro přístup ke spouštěcí nabídce různých výrobců počítačů</em></p>
+</section>
+<section id="step-2-install-requirements">
+<h4>Krok 2. Požadavky na instalaci<a class="headerlink" href="#step-2-install-requirements" title="Permalink to this heading"></a></h4>
+<p>Nejprve je třeba nainstalovat:</p>
+<ul class="simple">
+<li><p>Git: <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p></li>
+<li><p>Python (nejnovější verze 3): <a class="reference external" href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a></p></li>
+</ul>
+<p>V případě Pythonu 3 se ujistěte, že jste během instalace zaškrtli políčko <strong>Přidat Python 3.x do PATH</strong>.</p>
+<figure class="align-center">
+<img alt="Snímek obrazovky procesu instalace Pythonu3" src="../_images/installpython3.png" />
+</figure>
+<p><em>Nezapomeňte přidat spustitelný soubor Pythonu do cesty PATH (abyste s ním mohli spouštět příkazy)</em>.</p>
+<p>Pouze pokud používáte systém Windows 10 Home, Windows 8 (jakoukoli verzi) nebo Windows 7 (jakoukoli verzi), nainstalujte jej:</p>
+<ul class="simple">
+<li><p>Docker Toolbox: <a class="reference external" href="https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe">https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe</a></p></li>
+</ul>
+<p>Pokud používáte systém Windows 10 Professional nebo novější verzi, měli byste místo toho nainstalovat:</p>
+<ul class="simple">
+<li><p>Docker pro Windows: <a class="reference external" href="https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe">https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe</a></p></li>
+</ul>
+<p>Prosím, <strong>NE</strong> instalujte oba programy docker. Jsou odlišné a pokud budou nainstalovány oba, vznikne nepořádek.</p>
+<p>Po instalaci nástroje Docker jej spusťte z ikony na ploše, která byla vytvořena při instalaci (<strong>Docker Quickstart</strong> v případě Docker Toolbox, <strong>Docker for Windows</strong> pro Docker for Windows). Je to důležité, tento krok nevynechávejte. Pokud se objeví chyby, postupujte podle pokynů na obrazovce a opravte je.</p>
+</section>
+<section id="step-3-check-memory-and-cpu-allocation">
+<h4>Krok 3. Zkontrolujte přidělení paměti a procesoru<a class="headerlink" href="#step-3-check-memory-and-cpu-allocation" title="Permalink to this heading"></a></h4>
+<p>Docker v systému Windows funguje tak, že na pozadí běží virtuální počítač (virtuální počítač si představte jako „emulátor počítače“). Tento virtuální počítač má přiděleno určité množství paměti a WebODM může využívat pouze tolik paměti, kolik mu bylo přiděleno.</p>
+<p>Pokud jste nainstalovali Docker Toolbox (pokud jste místo toho nainstalovali Docker pro Windows, viz níže):</p>
+<ol class="arabic simple">
+<li><p>Otevřete aplikaci <strong>VirtualBox Manager</strong>.</p></li>
+<li><p>Klikněte pravým tlačítkem myši na <strong>defaultní</strong> virtuální počítač a stiskněte <strong>Close (ACPI Shutdown)</strong> pro zastavení počítače.</p></li>
+<li><p>Klikněte pravým tlačítkem myši na <strong>výchozí</strong> virtuální počítač a stiskněte <strong>Nastavení…</strong></p></li>
+<li><p>Přesuňte posuvník <strong>Základní paměť</strong> z panelu <strong>Systém</strong> a přidělte 60-70 % veškeré dostupné paměti, případně přidejte také 50 % dostupných procesorů z karty <strong>Procesor</strong>.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="Snímek obrazovky nastavení VirtualBoxu" src="../_images/virtualboxsettings.png" />
+</figure>
+<p><em>Výchozí nastavení virtuálního počítače VirtualBox</em></p>
+<p>Poté stiskněte tlačítko <strong>OK</strong>, klikněte pravým tlačítkem myši na <strong>výchozí</strong> virtuální počítač a stiskněte tlačítko <strong>Spustit</strong>.</p>
+<p>Pokud jste místo toho nainstalovali Docker pro Windows:</p>
+<ol class="arabic simple">
+<li><p>Podívejte se do systémové lišty a klikněte pravým tlačítkem myši na ikonu „bílé velryby“.</p></li>
+<li><p>V nabídce stiskněte <strong>Nastavení…</strong>.</p></li>
+<li><p>Na panelu klikněte na tlačítko <strong>Pokročilé</strong> a pomocí posuvníků přidělte 60-70 % dostupné paměti a využijte polovinu všech dostupných procesorů.</p></li>
+<li><p>Stiskněte <strong>Použít</strong>.</p></li>
+</ol>
+<figure class="align-center">
+<img alt="Snímek obrazovky ikony Dockeru" src="../_images/dockericon.png" />
+</figure>
+<p><em>Krok 1 Ikona Docker</em></p>
+<figure class="align-center">
+<img alt="Snímek obrazovky nastavení aplikace Docker" src="../_images/dockersettings.png" />
+</figure>
+<p><em>Krok 3 a 4 nastavení Dockeru</em></p>
+</section>
+<section id="step-4-download-webodm">
+<h4>Krok 4. Stáhněte si WebODM<a class="headerlink" href="#step-4-download-webodm" title="Permalink to this heading"></a></h4>
+<p>Otevřete program <strong>Git Gui</strong>, který je nainstalován se systémem Git. Odtud:</p>
+<ul class="simple">
+<li><p>Po otevření nástroje Git Gui klikněte na možnost „Klonovat existující úložiště“.</p></li>
+<li><p>Do pole <strong>Zdrojové umístění</strong> zadejte: <a class="reference external" href="https://github.com/OpenDroneMap/WebODM">https://github.com/OpenDroneMap/WebODM</a></p></li>
+<li><p>V okně <strong>Cílový adresář</strong> klikněte na tlačítko procházet a přejděte do vybrané složky (v případě potřeby ji vytvořte).</p></li>
+<li><p>Stiskněte tlačítko <strong>Klonovat</strong></p></li>
+</ul>
+<figure class="align-center">
+<img alt="Snímek obrazovky Git Gui" src="../_images/gitgui.png" />
+</figure>
+<p><em>Git Gui</em></p>
+<p>Pokud se stahování podařilo, mělo by se zobrazit toto okno:</p>
+<figure class="align-center">
+<img alt="Snímek obrazovky Git Gui po úspěšném stažení" src="../_images/gitguisuccess.png" />
+</figure>
+<p><em>Git Gui po úspěšném stažení (klonování)</em></p>
+<p>Přejděte do nabídky <strong>Úložiště</strong> a klikněte na tlačítko <strong>Vytvořit ikonu na ploše</strong>. To vám umožní se v budoucnu k této aplikaci snadno vracet.</p>
+</section>
+<section id="step-4-launch-webodm">
+<h4>Krok 4. Spusťte WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Permalink to this heading"></a></h4>
+<p>V prostředí Git Gui přejděte do nabídky <strong>Úložiště</strong> a klikněte na položku <strong>Git Bash</strong>. V terminálu příkazového řádku zadejte:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>start<span class="w"> </span><span class="p">&amp;</span>
+</pre></div>
+</div>
+<p>V tomto okamžiku se do počítače stáhne několik komponent, včetně WebODM, NodeODM a ODM. Po stažení by vás měla přivítat následující obrazovka:</p>
+<figure class="align-center">
+<img alt="Snímek obrazovky po úspěšném stažení WebODM" src="../_images/webodmsuccess.png" />
+</figure>
+<p><em>Výstup konzoly po prvním spuštění WebODM</em></p>
+<ul class="simple">
+<li><p>Pokud používáte Docker pro Windows, otevřete webový prohlížeč na adrese <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p></li>
+<li><p>Pokud používáte Docker Toolbox, vyhledejte IP adresu, ke které se chcete připojit, zadáním:</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker-machine<span class="w"> </span>ip
+</pre></div>
+</div>
+<p>Měli byste získat následující výsledek:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">192</span>.168.1.100
+</pre></div>
+</div>
+<p>Poté se připojte k webu <a class="reference external" href="http://192.168.1.100:8000">http://192.168.1.100:8000</a> (IP adresu nahraďte správnou).</p>
+</section>
+</section>
+<section id="macos">
+<h3>macOS<a class="headerlink" href="#macos" title="Permalink to this heading"></a></h3>
+<p>Na většině moderních počítačů Mac (po roce 2010) se systémem macOS Sierra 10.12 nebo vyšším lze OpenDroneMap spustit pomocí dockeru, pokud je podporována hardwarová virtualizace (viz níže).</p>
+<section id="id1">
+<h4>Krok 1. Zkontrolujte podporu virtualizace<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<p>Otevřete okno Terminálu a napište:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sysctl<span class="w"> </span>kern.hv_support
+</pre></div>
+</div>
+<p>Dostanete podobnou odpověď, jako je tato:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kern.hv_support:<span class="w"> </span><span class="m">1</span>
+</pre></div>
+</div>
+<p>Pokud je výsledkem <em>kern.hv_support: 1</em>, pak je váš Mac podporován! Pokračujte krokem 2.</p>
+<p>Pokud je výsledkem  <em>kern.hv_support: 0</em>, To bohužel znamená, že váš Mac je příliš starý na spuštění OpenDroneMap :(.</p>
+</section>
+<section id="id2">
+<h4>Krok 2. Požadavky na instalaci<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
+<p>Je třeba nainstalovat pouze dva programy:</p>
+<ol class="arabic simple">
+<li><p>Docker: <a class="reference external" href="https://download.docker.com/mac/stable/Docker.dmg">https://download.docker.com/mac/stable/Docker.dmg</a></p></li>
+<li><p>Git: <a class="reference external" href="https://sourceforge.net/projects/git-osx-installer/files/">https://sourceforge.net/projects/git-osx-installer/files/</a></p></li>
+</ol>
+<p>Po instalaci dockeru byste měli na hlavním panelu najít ikonu, která vypadá jako velryba.</p>
+<figure class="align-center">
+<img alt="Snímek obrazovky Docker whale" src="../_images/macwhale.png" />
+</figure>
+<p><em>Spuštěná aplikace Docker</em></p>
+<p>Správné spuštění dockeru můžete ověřit tak, že otevřete aplikaci <strong>Terminál</strong> a zadáte:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>hello-world
+</pre></div>
+</div>
+<p>Který by měl vrátit</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Hello<span class="w"> </span>from<span class="w"> </span>Docker!
+</pre></div>
+</div>
+<p>Chcete-li ověřit, zda je git nainstalován, jednoduše zadejte:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>--version
+</pre></div>
+</div>
+<p>Který by měl vrátit něco podobného:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>version<span class="w"> </span><span class="m">2</span>.20.1<span class="w"> </span><span class="o">(</span>Apple<span class="w"> </span>Git-117<span class="o">)</span>
+</pre></div>
+</div>
+<p>Pokud se zobrazí hlášení „bash: git: command not found“, zkuste restartovat aplikaci <strong>Terminal</strong> a překontrolujte, zda během instalace nedošlo k chybě.</p>
+</section>
+<section id="id3">
+<h4>Krok 3. Zkontrolujte přidělení paměti a procesoru<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
+<p>Docker v systému macOS funguje tak, že na pozadí běží virtuální počítač (představte si ho jako „emulátor počítače“). Tento virtuální počítač má přiděleno určité množství paměti a WebODM může využívat pouze tolik paměti, kolik mu bylo přiděleno.</p>
+<ol class="arabic simple">
+<li><p>Klikněte pravým tlačítkem myši na ikonu velryby na hlavním panelu a klikněte na položku <strong>Předvolby</strong>…</p></li>
+<li><p>Vyberte kartu <strong>Pokročilé</strong></p></li>
+<li><p>Nastavte posuvník CPU tak, aby využíval polovinu všech dostupných CPU, a paměť tak, aby využívala 60-70 % veškeré dostupné paměti.</p></li>
+<li><p>Stiskněte tlačítko <strong>Použít a restartovat</strong></p></li>
+</ol>
+<figure class="align-center">
+<img alt="Snímek obrazovky pokročilého nastavení Docker" src="../_images/dockeradvanced.png" />
+</figure>
+<p><em>Pokročilé nastavení Dockeru</em></p>
+</section>
+<section id="step-4-download-and-launch-webodm">
+<h4>Krok 4. Stažení a spuštění WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Permalink to this heading"></a></h4>
+<p>V <strong>Terminálu</strong> napište:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/OpenDroneMap/WebODM
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>WebODM
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>start
+</pre></div>
+</div>
+<p>Poté otevřete webový prohlížeč na adrese <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
+</section>
+</section>
+<section id="linux">
+<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this heading"></a></h3>
+<p>OpenDroneMap lze spustit na libovolné distribuci Linuxu, která podporuje docker. Podle webových stránek s dokumentací <a class="reference external" href="https://docs.docker.com/install/">dockeru</a> jsou oficiálně podporovanými distribucemi CentOS, Debian, Ubuntu a Fedora, pro ostatní jsou k dispozici statické binární soubory. Pokud si musíte vybrat distribuci výhradně pro spuštění OpenDroneMap, doporučuje se Ubuntu.</p>
+<section id="step-1-install-requirements">
+<h4>Krok 1. Instalace požadavků<a class="headerlink" href="#step-1-install-requirements" title="Permalink to this heading"></a></h4>
+<p>Je třeba nainstalovat čtyři programy:</p>
+<ol class="arabic simple">
+<li><p>Docker</p></li>
+<li><p>Git</p></li>
+<li><p>Python (2 nebo 3)</p></li>
+<li><p>Pip</p></li>
+</ol>
+<p>Nemůžeme popsat instalační proces pro všechny distribuce Linuxu, takže se omezíme na ty, které jsou oficiálně podporovány dockerem. Ve všech případech jde jen o otevření terminálového příkazu a zadání několika příkazů.</p>
+<section id="install-on-ubuntu-debian">
+<h5>Instalace na Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Permalink to this heading"></a></h5>
+<p>Příkazy k zadání:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
+$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sh<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>python-pip
+</pre></div>
+</div>
+</section>
+<section id="install-on-centos-rhel">
+<h5>Instalace na CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Permalink to this heading"></a></h5>
+<p>Příkazy k zadání:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sh<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sudo<span class="w"> </span>yum<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>python-pip
+</pre></div>
+</div>
+</section>
+<section id="install-on-fedora">
+<h5>Instalace v systému Fedora<a class="headerlink" href="#install-on-fedora" title="Permalink to this heading"></a></h5>
+<p>Příkazy k zadání:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sh<span class="w"> </span>get-docker.sh
+$<span class="w"> </span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>python-pip
+</pre></div>
+</div>
+</section>
+<section id="install-on-arch">
+<h5>Instalace na Arch<a class="headerlink" href="#install-on-arch" title="Permalink to this heading"></a></h5>
+<p>Příkazy k zadání:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>pacman<span class="w"> </span>-Sy<span class="w"> </span>docker<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>python-pip
+</pre></div>
+</div>
+</section>
+</section>
+<section id="step-2-check-additional-requirements">
+<h4>Krok 2. Zkontrolujte další požadavky<a class="headerlink" href="#step-2-check-additional-requirements" title="Permalink to this heading"></a></h4>
+<p>Kromě tří výše uvedených programů je zapotřebí také skript dockercompose. Někdy je již nainstalován spolu s dockerem, ale někdy ne. Chcete-li ověřit, zda je nainstalován, zkuste zadat následující příkaz:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker-compose<span class="w"> </span>--version
+</pre></div>
+</div>
+<p>Měli byste vidět něco podobného:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.22.0,<span class="w"> </span>build<span class="w"> </span>f46880f
+</pre></div>
+</div>
+<p>Pokud se místo toho zobrazí něco podobného:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose:<span class="w"> </span><span class="nb">command</span><span class="w"> </span>not<span class="w"> </span>found
+</pre></div>
+</div>
+<p>můžete nainstalovat pomocí pip:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>docker-compose
+</pre></div>
+</div>
+</section>
+<section id="step-3-download-and-launch-webodm">
+<h4>Krok 3. Stažení a spuštění WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Permalink to this heading"></a></h4>
+<p>Z terminálu typu:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/OpenDroneMap/WebODM
+$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>WebODM
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>start
+</pre></div>
+</div>
+<p>Poté otevřete webový prohlížeč na adrese <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
+</section>
+</section>
+</section>
+<section id="basic-commands-and-troubleshooting">
+<h2>Základní příkazy a řešení potíží<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Permalink to this heading"></a></h2>
+<p>Skvělé na používání dockeru je, že 99 % úloh, které kdy budete potřebovat provést při používání WebODM, lze provést pomocí skriptu ./webodm.sh. S jednou z nich jste se již setkali:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>start
+</pre></div>
+</div>
+<p>který se postará o spuštění WebODM a nastavení výchozího uzlu pro zpracování (node-odm-1). Pokud chcete službu WebODM zastavit, můžete již tušit, jaký je její příkaz:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>stop
+</pre></div>
+</div>
+<p>Existuje několik dalších příkazů, které můžete použít spolu s různými příznaky. Příznaky jsou parametry předávané příkazu ./webodm.sh a obvykle mají předponu „-“. Například příznak <strong>port</strong> dává WebODM pokyn k použití jiného síťového portu:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>start<span class="w"> </span>--port<span class="w"> </span><span class="m">80</span>
+</pre></div>
+</div>
+<p>Další užitečné příkazy jsou uvedeny níže:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Restart WebODM (useful if things get stuck)</span>
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>restart
+
+<span class="c1"># Reset the admin user&#39;s password if you forget it</span>
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>resetadminpassword<span class="w"> </span>newpass
+
+<span class="c1"># Update everything to the latest version</span>
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>update
+
+<span class="c1"># Store processing results in the specified folder instead of the default location (inside docker)</span>
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>restart<span class="w"> </span>--media-dir<span class="w"> </span>/path/to/webodm_results
+
+<span class="c1"># See all options</span>
+$<span class="w"> </span>./webodm.sh<span class="w"> </span>--help
+</pre></div>
+</div>
+<p><a class="reference external" href="https://community.opendronemap.org">Komunitní fórum</a> je skvělým místem, kde můžete požádat o pomoc, pokud se zaseknete při některém z kroků instalace, a pro obecné otázky týkající se používání skriptu ./webodm.sh.</p>
+</section>
+<section id="hello-webodm">
+<h2>Dobrý den, WebODM!<a class="headerlink" href="#hello-webodm" title="Permalink to this heading"></a></h2>
+<p>Po spuštění souboru ./webodm.sh start a otevření WebODM v prohlížeči se zobrazí uvítací zpráva a budete vyzváni k vytvoření prvního uživatele. Věnujte nějaký čas seznámení s webovým rozhraním a prozkoumejte jeho různé nabídky.</p>
+<figure class="align-center">
+<img alt="Snímek obrazovky ovládacího panelu WebODM" src="../_images/webodmdashboard.png" />
+</figure>
+<p><em>WebODM Dashboard</em></p>
+<p>Všimněte si, že v nabídce <strong>Processing Nodes</strong> je již nakonfigurován uzel „node-odm-1“, který můžete použít. Jedná se o uzel NodeODM a byl vytvořen automaticky pomocí WebODM. Tento uzel běží na stejném počítači jako WebODM.</p>
+<p>Pokud jste se dostali až sem, gratulujeme vám! Nyní je čas začít zpracovávat data.</p>
+<figure class="align-center">
+<img alt="Obrázek oslavného tance" src="../_images/congratulations.png" />
+</figure>
+<section id="running-on-more-than-one-machine">
+<h3>Spuštění na více než jednom počítači<a class="headerlink" href="#running-on-more-than-one-machine" title="Permalink to this heading"></a></h3>
+<p><strong>Případně:</strong> Pokud máte jiný počítač, můžete proces instalace zopakovat (nainstalovat docker, git, python atd.) a spustit nový uzel NodeODM zadáním v okně Terminal/Git Bash:</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>-p<span class="w"> </span><span class="m">3000</span>:3000<span class="w"> </span>opendronemap/nodeodm<span class="w"> </span>-q<span class="w"> </span><span class="m">1</span><span class="w"> </span>--token<span class="w"> </span>secret
+</pre></div>
+</div>
+<p>Výše uvedený příkaz požádá docker o spuštění nového kontejneru pomocí obrazu opendronemap/nodeodm z Docker Hub (nejnovější verze NodeODM), použití portu 3000, nastavení maximálního počtu souběžných úloh na 1 a ochranu uzlu před neoprávněným přístupem pomocí hesla „secret“.</p>
+<p>Ve WebODM pak můžete stisknout tlačítko <strong>Přidat nový</strong> v části <strong>Zpracovatelské uzly</strong>. Do pole <strong>název hostitele/IP</strong> zadejte IP adresu druhého počítače. Do pole <strong>port</strong> zadejte „3000“. Do pole <strong>token</strong> zadejte „secret“. Můžete také přidat nepovinný <strong>název</strong> uzlu, například „druhý počítač“. Poté stiskněte tlačítko <strong>Uložit</strong>.</p>
+<p>Pokud vše proběhlo v pořádku, měli byste nyní mít dva zpracovatelské uzly! Budete moci paralelně zpracovávat více úloh na dvou různých strojích.</p>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Naučte se upravovat</a> a pomozte zlepšit <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst">tuto stránku</a>!</p>
+</section>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
+        <a href="../" class="btn btn-neutral float-left" title="Welcome to OpenDroneMap’s documentation" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../tutorials/" class="btn btn-neutral float-right" title="Výukové materiály" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; Copyright 2020, OpenDroneMap.</p>
+  </div>
+
+  Built with <a href="https://www.sphinx-doc.org/">Sphinx</a> using a
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">theme</a>
+    provided by <a href="https://readthedocs.org">Read the Docs</a>.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
