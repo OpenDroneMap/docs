@@ -10,7 +10,7 @@ pc-classify
 
 
 
-Classify the point cloud outputs using a Simple Morphological Filter. You can control the behavior of this option by tweaking the --dem-\* parameters. Default: ``False``
+Classify the point cloud outputs. You can control the behavior of this option by tweaking the --dem-\* parameters. Default: ``False``
 
 
 

@@ -29,7 +29,7 @@ Options and Flags
 :ref:`build-overviews<build-overviews>` 
   Build orthophoto overviews for faster display in programs such as QGIS. Default: ``False``
 
-:ref:`camera-lens<camera-lens>` auto |  perspective |  brown |  fisheye |  spherical |  equirectangular |  dual
+:ref:`camera-lens<camera-lens>` auto |  perspective |  brown |  fisheye |  fisheye_opencv |  spherical |  equirectangular |  dual
   Set a camera projection type. Manually setting a value can help improve geometric undistortion. By default the application tries to determine a lens type from the images metadata. . Default: ``auto``
 
 :ref:`cameras<cameras>` <json>
@@ -81,7 +81,7 @@ Options and Flags
   Path to the file containing the ground control points used for georeferencing. The file needs to use the following format: EPSG:<code> or <+proj definition>geo_x geo_y geo_z im_x im_y image_name [gcp_name] [extra1] [extra2]Default: ``None``
 
 :ref:`geo<geo>` <path string>
-  Path to the image geolocation file containing the camera center coordinates used for georeferencing. If you dont have values for omega/phi/kappa you can set them to 0. The file needs to use the following format: EPSG:<code> or <+proj definition>image_name geo_x geo_y geo_z [omega (degrees)] [phi (degrees)] [kappa (degrees)] [horz accuracy (meters)] [vert accuracy (meters)]Default: ``None``
+  Path to the image geolocation file containing the camera center coordinates used for georeferencing. If you don't have values for yaw/pitch/roll you can set them to 0. The file needs to use the following format: EPSG:<code> or <+proj definition>image_name geo_x geo_y geo_z [yaw (degrees)] [pitch (degrees)] [roll (degrees)] [horz accuracy (meters)] [vert accuracy (meters)]Default: ``None``
 
 :ref:`gltf<gltf>` 
   Generate single file Binary glTF (GLB) textured models. Default:  ``False``
@@ -144,7 +144,7 @@ Options and Flags
   Orthophoto resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate. To remove the cap, check --ignore-gsd also. Default: ``5``
 
 :ref:`pc-classify<pc-classify>` 
-  Classify the point cloud outputs using a Simple Morphological Filter. You can control the behavior of this option by tweaking the --dem-\* parameters. Default: ``False``
+  Classify the point cloud outputs. You can control the behavior of this option by tweaking the --dem-\* parameters. Default: ``False``
 
 :ref:`pc-copc<pc-copc>` 
   Save the georeferenced point cloud in Cloud Optimized Point Cloud (COPC) format. Default: ``False``

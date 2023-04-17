@@ -8,7 +8,7 @@
 camera-lens
 ```````````
 
-**Options:** *auto |  perspective |  brown |  fisheye |  spherical |  equirectangular |  dual*
+**Options:** *auto |  perspective |  brown |  fisheye |  fisheye_opencv |  spherical |  equirectangular |  dual*
 
 Set a camera projection type. Manually setting a value can help improve geometric undistortion. By default the application tries to determine a lens type from the images metadata. . Default: ``auto``
 

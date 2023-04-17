@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Opsi dan Bendera &mdash; Dokumentasi OpenDroneMap 3.0.5</title>
+  <title>Opsi dan Bendera &mdash; Dokumentasi OpenDroneMap 3.1.2</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -34,7 +34,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                3.0.5
+                3.1.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -431,7 +431,7 @@
 </dd>
 <dt><a class="reference internal" href="build-overviews/#build-overviews"><span class="std std-ref">build-overviews</span></a></dt><dd><p>Build orthophoto overviews for faster display in programs such as QGIS. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
-<dt><a class="reference internal" href="camera-lens/#camera-lens"><span class="std std-ref">camera-lens</span></a> auto |  perspective |  brown |  fisheye |  spherical |  equirectangular |  dual</dt><dd><p>Set a camera projection type. Manually setting a value can help improve geometric undistortion. By default the application tries to determine a lens type from the images metadata. . Default: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p>
+<dt><a class="reference internal" href="camera-lens/#camera-lens"><span class="std std-ref">camera-lens</span></a> auto |  perspective |  brown |  fisheye |  fisheye_opencv |  spherical |  equirectangular |  dual</dt><dd><p>Set a camera projection type. Manually setting a value can help improve geometric undistortion. By default the application tries to determine a lens type from the images metadata. . Default: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p>
 </dd>
 <dt><a class="reference internal" href="cameras/#cameras"><span class="std std-ref">cameras</span></a> &lt;json&gt;</dt><dd><p>Use the camera parameters computed from another dataset instead of calculating them. Can be specified either as path to a cameras.json file or as a JSON string representing the contents of a cameras.json file. Default: ``</p>
 </dd>
@@ -465,7 +465,7 @@
 </dd>
 <dt><a class="reference internal" href="gcp/#gcp"><span class="std std-ref">gcp</span></a> &lt;path string&gt;</dt><dd><p>Path to the file containing the ground control points used for georeferencing. The file needs to use the following format: EPSG:&lt;code&gt; or &lt;+proj definition&gt;geo_x geo_y geo_z im_x im_y image_name [gcp_name] [extra1] [extra2]Default: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>
-<dt><a class="reference internal" href="geo/#geo"><span class="std std-ref">geo</span></a> &lt;path string&gt;</dt><dd><p>Path to the image geolocation file containing the camera center coordinates used for georeferencing. If you dont have values for omega/phi/kappa you can set them to 0. The file needs to use the following format: EPSG:&lt;code&gt; or &lt;+proj definition&gt;image_name geo_x geo_y geo_z [omega (degrees)] [phi (degrees)] [kappa (degrees)] [horz accuracy (meters)] [vert accuracy (meters)]Default: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+<dt><a class="reference internal" href="geo/#geo"><span class="std std-ref">geo</span></a> &lt;path string&gt;</dt><dd><p>Path to the image geolocation file containing the camera center coordinates used for georeferencing. If you don't have values for yaw/pitch/roll you can set them to 0. The file needs to use the following format: EPSG:&lt;code&gt; or &lt;+proj definition&gt;image_name geo_x geo_y geo_z [yaw (degrees)] [pitch (degrees)] [roll (degrees)] [horz accuracy (meters)] [vert accuracy (meters)]Default: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>
 <dt><a class="reference internal" href="gltf/#gltf"><span class="std std-ref">gltf</span></a></dt><dd><p>Generate single file Binary glTF (GLB) textured models. Default:  <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -507,7 +507,7 @@
 </dd>
 <dt><a class="reference internal" href="orthophoto-resolution/#orthophoto-resolution"><span class="std std-ref">orthophoto-resolution</span></a> &lt;float &gt; 0.0&gt;</dt><dd><p>Orthophoto resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate. To remove the cap, check --ignore-gsd also. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
 </dd>
-<dt><a class="reference internal" href="pc-classify/#pc-classify"><span class="std std-ref">pc-classify</span></a></dt><dd><p>Classify the point cloud outputs using a Simple Morphological Filter. You can control the behavior of this option by tweaking the --dem-* parameters. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<dt><a class="reference internal" href="pc-classify/#pc-classify"><span class="std std-ref">pc-classify</span></a></dt><dd><p>Classify the point cloud outputs. You can control the behavior of this option by tweaking the --dem-* parameters. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="pc-copc/#pc-copc"><span class="std std-ref">pc-copc</span></a></dt><dd><p>Save the georeferenced point cloud in Cloud Optimized Point Cloud (COPC) format. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>

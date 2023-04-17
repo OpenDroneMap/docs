@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Opciones e indicadores &mdash; documentación de OpenDroneMap - 3.0.5</title>
+  <title>Opciones e indicadores &mdash; documentación de OpenDroneMap - 3.1.2</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -34,7 +34,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                3.0.5
+                3.1.2
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -431,7 +431,7 @@
 </dd>
 <dt><a class="reference internal" href="build-overviews/#build-overviews"><span class="std std-ref">build-overviews</span></a></dt><dd><p>Crea vistas generales de la ortofoto para una visualización mas rápida en programas como QGIS. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
-<dt><a class="reference internal" href="camera-lens/#camera-lens"><span class="std std-ref">camera-lens</span></a> auto |  perspective |  brown |  fisheye |  spherical |  equirectangular |  dual</dt><dd><p>Establezca el tipo de proyección de cámara.  Establecer un valor manualmente puede ayudar a mejorar la distorsión geométrica. De forma predeterminada, la aplicación intenta determinar un tipo de lente a partir de los metadatos de las imágenes. Predeterminado: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p>
+<dt><a class="reference internal" href="camera-lens/#camera-lens"><span class="std std-ref">camera-lens</span></a> auto |  perspective |  brown |  fisheye |  fisheye_opencv |  spherical |  equirectangular |  dual</dt><dd><p>Establezca el tipo de proyección de cámara.  Establecer un valor manualmente puede ayudar a mejorar la distorsión geométrica. De forma predeterminada, la aplicación intenta determinar un tipo de lente a partir de los metadatos de las imágenes. Predeterminado: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p>
 </dd>
 <dt><a class="reference internal" href="cameras/#cameras"><span class="std std-ref">cameras</span></a> &lt;json&gt;</dt><dd><p>Utilice los parámetros de cámara calculados a partir de otro conjunto de datos en lugar de calcularlos. Se puede especificar como una ruta a un archivo camera.json o como una cadena JSON que representa el contenido de un archivo camera.json. Default: ``</p>
 </dd>
@@ -465,7 +465,7 @@
 </dd>
 <dt><a class="reference internal" href="gcp/#gcp"><span class="std std-ref">gcp</span></a> &lt;path string&gt;</dt><dd><p>Ruta al archivo que contiene los puntos de control terrestre usados para georreferenciar. El archivo debe tener el siguiente formato: EPSG:&lt;code&gt; or &lt;+proj definition&gt;geo_x geo_y geo_z im_x im_y image_name [gcp_name] [extra1] [extra2] Predeterminado: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>
-<dt><a class="reference internal" href="geo/#geo"><span class="std std-ref">geo</span></a> &lt;path string&gt;</dt><dd><p>Path to the image geolocation file containing the camera center coordinates used for georeferencing. If you dont have values for omega/phi/kappa you can set them to 0. The file needs to use the following format: EPSG:&lt;code&gt; or &lt;+proj definition&gt;image_name geo_x geo_y geo_z [omega (degrees)] [phi (degrees)] [kappa (degrees)] [horz accuracy (meters)] [vert accuracy (meters)]Default: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+<dt><a class="reference internal" href="geo/#geo"><span class="std std-ref">geo</span></a> &lt;path string&gt;</dt><dd><p>Path to the image geolocation file containing the camera center coordinates used for georeferencing. If you don’t have values for yaw/pitch/roll you can set them to 0. The file needs to use the following format: EPSG:&lt;code&gt; or &lt;+proj definition&gt;image_name geo_x geo_y geo_z [yaw (degrees)] [pitch (degrees)] [roll (degrees)] [horz accuracy (meters)] [vert accuracy (meters)]Default: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
 </dd>
 <dt><a class="reference internal" href="gltf/#gltf"><span class="std std-ref">gltf</span></a></dt><dd><p>Generate single file Binary glTF (GLB) textured models. Default:  <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -507,7 +507,7 @@
 </dd>
 <dt><a class="reference internal" href="orthophoto-resolution/#orthophoto-resolution"><span class="std std-ref">orthophoto-resolution</span></a> &lt;float &gt; 0.0&gt;</dt><dd><p>Resolución de ortofoto en cm/pixel. Tenga en cuenta que este valor está limitado por una estimación de la distancia de muestreo del suelo (GSD). Para quitar este límite, marque –ignore-gsd también. Predeterminado: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
 </dd>
-<dt><a class="reference internal" href="pc-classify/#pc-classify"><span class="std std-ref">pc-classify</span></a></dt><dd><p>Clasifique los resultados de la nube de puntos usando un filtro morfológico simple. Puede controlar el comportamiento de esta opción ajustando los parámetros –dem-*. Predeterminado: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<dt><a class="reference internal" href="pc-classify/#pc-classify"><span class="std std-ref">pc-classify</span></a></dt><dd><p>Classify the point cloud outputs. You can control the behavior of this option by tweaking the –dem-* parameters. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="pc-copc/#pc-copc"><span class="std std-ref">pc-copc</span></a></dt><dd><p>Save the georeferenced point cloud in Cloud Optimized Point Cloud (COPC) format. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
