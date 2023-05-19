@@ -60,6 +60,7 @@ The documentation is available in several languages. Some translations are incom
     resources
     flying
     multispectral
+    thermal
     requesting-features
     contributing
     faq
