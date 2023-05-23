@@ -3,6 +3,10 @@ Thermal Support
 
 ODM has support for radiometric calibration of thermal data, which is able to generate temperature orthophotos from long-wave infrared (LWIR) cameras. LWIR images can be processed alone or as part of a multispectral dataset.
 
+.. figure:: images/thermal.jpeg
+   :alt: Screen shot of thermal imagery as displayed in WebODM
+   :align: center
+
 Hardware
 --------
 
