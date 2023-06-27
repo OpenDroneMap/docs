@@ -58,6 +58,11 @@ Data will be stored in:
    
 *Digital surface model over State University Zanzibar, courtesy of* `Khadija Abdullah Ali <https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/>`_
 
+Logs
+^^^^
+Logs are output to stdout. On Linux `ANSI escape color code <https://en.wikipedia.org/wiki/ANSI_escape_code>`_ (eg ^[[39m)  is used and could be disabled by setting no_ansiesc environment variable to any value like ``env no_ansiesc=1``
+
+
 List of all outputs
 ^^^^^^^^^^^^^^^^^^^
 
