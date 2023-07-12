@@ -483,6 +483,8 @@
 </dd>
 <dt><a class="reference internal" href="matcher-neighbors/#matcher-neighbors"><span class="std std-ref">matcher-neighbors</span></a> &lt;positive integer&gt;</dt><dd><p>Perform image matching with the nearest images based on GPS exif data. Set to 0 to match by triangulation. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd>
+<dt><span class="xref std std-ref">matcher-order</span> &lt;positive integer&gt;</dt><dd><p>Perform image matching with the nearest N images based on image filename order. Can speed up processing of sequential images, such as those extracted from video. It is applied only on non-georeferenced datasets. Set to 0 to disable. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
 <dt><a class="reference internal" href="matcher-type/#matcher-type"><span class="std std-ref">matcher-type</span></a> bow |  bruteforce |  flann</dt><dd><p>Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of Words. FLANN is slower, but more stable. BOW is faster, but can sometimes miss valid matches. BRUTEFORCE is very slow but robust.. Default: <code class="docutils literal notranslate"><span class="pre">flann</span></code></p>
 </dd>
 <dt><a class="reference internal" href="max-concurrency/#max-concurrency"><span class="std std-ref">max-concurrency</span></a> &lt;positive integer&gt;</dt><dd><p>Le nombre maximal de processus à utiliser dans divers processus. L’exigence de mémoire maximale est d’environ 1 Go par thread et une résolution d’image de 2 mégapixels. Par défaut : <code class="docutils literal notranslate"><span class="pre">4</span></code></p>
@@ -533,8 +535,6 @@
 </dd>
 <dt><a class="reference internal" href="pc-skip-geometric/#pc-skip-geometric"><span class="std std-ref">pc-skip-geometric</span></a></dt><dd><p>Geometric estimates improve the accuracy of the point cloud by computing geometrically consistent depthmaps but may not be usable in larger datasets. This flag disables geometric estimates. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
-<dt><a class="reference internal" href="pc-tile/#pc-tile"><span class="std std-ref">pc-tile</span></a></dt><dd><p>Réduisez l’utilisation de la mémoire nécessaire pour la fusion de la carte de profondeur en divisant les grandes scènes en tuiles. Activez cette option si votre machine n’a pas beaucoup de RAM et/ou si vous avez défini –pc-quality sur high ou ultra. Expérimental. Par défaut : <code class="docutils literal notranslate"><span class="pre">Faux</span></code></p>
-</dd>
 <dt><a class="reference internal" href="primary-band/#primary-band"><span class="std std-ref">primary-band</span></a> &lt;string&gt;</dt><dd><p>Lors du traitement de jeux de données multispectrales, vous pouvez spécifier le nom de la bande principale qui sera utilisée pour la reconstruction. Il est recommandé de choisir un groupe qui a des détails nets et qui est net. Par défaut : <code class="docutils literal notranslate"><span class="pre">auto</span></code></p>
 </dd>
 <dt><a class="reference internal" href="project-path/#project-path"><span class="std std-ref">project-path</span></a> &lt;path&gt;</dt><dd><p>Chemin d’accès au dossier du projet. Votre dossier de projet doit contenir des sous-dossiers pour chaque jeu de données. Chaque ensemble de données doit avoir un dossier « images ».</p>
@@ -552,6 +552,8 @@
 <dt><a class="reference internal" href="rolling-shutter-readout/#rolling-shutter-readout"><span class="std std-ref">rolling-shutter-readout</span></a> &lt;positive integer&gt;</dt><dd><p>Override the rolling shutter readout time for your camera sensor (in milliseconds), instead of using the rolling shutter readout database. Note that not all cameras are present in the database. Set to 0 to use the database value. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd>
 <dt><a class="reference internal" href="sfm-algorithm/#sfm-algorithm"><span class="std std-ref">sfm-algorithm</span></a> incremental |  triangulation |  planar</dt><dd><p>Choose the structure from motion algorithm. For aerial datasets, if camera GPS positions and angles are available, triangulation can generate better results. For planar scenes captured at fixed altitude with nadir-only images, planar can be much faster. . Default: <code class="docutils literal notranslate"><span class="pre">incremental</span></code></p>
+</dd>
+<dt><span class="xref std std-ref">sfm-no-partial</span></dt><dd><p>Do not attempt to merge partial reconstructions. This can happen when images do not have sufficient overlap or are isolated. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="skip-3dmodel/#skip-3dmodel"><span class="std std-ref">skip-3dmodel</span></a></dt><dd><p>Ignorer la génération d’un modèle 3D complet. Cela peut vous faire gagner du temps si vous n’avez besoin que de résultats 2D tels que des orthophotos et des DEM. Par défaut : <code class="docutils literal notranslate"><span class="pre">Faux</span></code></p>
 </dd>

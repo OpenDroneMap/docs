@@ -98,6 +98,9 @@ Options and Flags
 :ref:`matcher-neighbors<matcher-neighbors>` <positive integer>
   Perform image matching with the nearest images based on GPS exif data. Set to 0 to match by triangulation. Default: ``0``
 
+:ref:`matcher-order<matcher-order>` <positive integer>
+  Perform image matching with the nearest N images based on image filename order. Can speed up processing of sequential images, such as those extracted from video. It is applied only on non-georeferenced datasets. Set to 0 to disable. Default: ``0``
+
 :ref:`matcher-type<matcher-type>` bow |  bruteforce |  flann
   Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of Words. FLANN is slower, but more stable. BOW is faster, but can sometimes miss valid matches. BRUTEFORCE is very slow but robust.. Default: ``flann``
 
@@ -173,9 +176,6 @@ Options and Flags
 :ref:`pc-skip-geometric<pc-skip-geometric>` 
   Geometric estimates improve the accuracy of the point cloud by computing geometrically consistent depthmaps but may not be usable in larger datasets. This flag disables geometric estimates. Default: ``False``
 
-:ref:`pc-tile<pc-tile>` 
-  Reduce the memory usage needed for depthmap fusion by splitting large scenes into tiles. Turn this on if your machine doesn't have much RAM and/or you've set --pc-quality to high or ultra. Experimental. Default: ``False``
-
 :ref:`primary-band<primary-band>` <string>
   When processing multispectral datasets, you can specify the name of the primary band that will be used for reconstruction. It's recommended to choose a band which has sharp details and is in focus. Default: ``auto``
 
@@ -202,6 +202,9 @@ Options and Flags
 
 :ref:`sfm-algorithm<sfm-algorithm>` incremental |  triangulation |  planar
   Choose the structure from motion algorithm. For aerial datasets, if camera GPS positions and angles are available, triangulation can generate better results. For planar scenes captured at fixed altitude with nadir-only images, planar can be much faster. . Default: ``incremental``
+
+:ref:`sfm-no-partial<sfm-no-partial>` 
+  Do not attempt to merge partial reconstructions. This can happen when images do not have sufficient overlap or are isolated. Default: ``False``
 
 :ref:`skip-3dmodel<skip-3dmodel>` 
   Skip generation of a full 3D model. This can save time if you only need 2D results such as orthophotos and DEMs. Default: ``False``
