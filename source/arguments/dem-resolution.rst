@@ -10,7 +10,7 @@ dem-resolution
 
 **Options:** *<float>*
 
-DSM/DTM resolution in cm / pixel. Note that this value is capped to 2x the ground sampling distance (GSD) estimate. To remove the cap, check --ignore-gsd also. Default: ``5``
+DSM/DTM resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate. Default: ``5``
 
 
 

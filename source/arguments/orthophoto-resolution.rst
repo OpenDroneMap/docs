@@ -10,7 +10,7 @@ orthophoto-resolution
 
 **Options:** *<float > 0.0>*
 
-Orthophoto resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate. To remove the cap, check --ignore-gsd also. Default: ``5``
+Orthophoto resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate.Default: ``5``
 
 
 
