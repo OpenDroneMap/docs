@@ -234,6 +234,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../help/">help</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">ignore-gsd</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../matcher-neighbors/">matcher-neighbors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../matcher-order/">matcher-order</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../matcher-type/">matcher-type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../max-concurrency/">max-concurrency</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../merge/">merge</a></li>
@@ -271,6 +272,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../rolling-shutter/">rolling-shutter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../rolling-shutter-readout/">rolling-shutter-readout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sfm-algorithm/">sfm-algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../sfm-no-partial/">sfm-no-partial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../skip-3dmodel/">skip-3dmodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../skip-band-alignment/">skip-band-alignment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../skip-orthophoto/">skip-orthophoto</a></li>
@@ -423,7 +425,7 @@
              
   <section id="ignore-gsd">
 <span id="id1"></span><h1>ignore-gsd<a class="headerlink" href="#ignore-gsd" title="Permalink to this heading"></a></h1>
-<p>Ignore Ground Sampling Distance (GSD). GSD caps the maximum resolution of image outputs and resizes images when necessary, resulting in faster processing and lower memory usage. Since GSD is an estimate, sometimes ignoring it can result in slightly better image output quality. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<p>Ignore Ground Sampling Distance (GSD).A memory and processor hungry change relative to the default behavior if set to true. Ordinarily, GSD estimates are used to cap the maximum resolution of image outputs and resizes images when necessary, resulting in faster processing and lower memory usage. Since GSD is an estimate, sometimes ignoring it can result in slightly better image output quality. Never set –ignore-gsd to true unless you are positive you need it, and even then: do not use it. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/ignore-gsd.rst">this page</a>!</p>
 </section>
 

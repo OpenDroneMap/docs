@@ -234,6 +234,7 @@
 <li class="toctree-l2"><a class="reference internal" href="help/">help</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ignore-gsd/">ignore-gsd</a></li>
 <li class="toctree-l2"><a class="reference internal" href="matcher-neighbors/">matcher-neighbors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matcher-order/">matcher-order</a></li>
 <li class="toctree-l2"><a class="reference internal" href="matcher-type/">matcher-type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="max-concurrency/">max-concurrency</a></li>
 <li class="toctree-l2"><a class="reference internal" href="merge/">merge</a></li>
@@ -271,6 +272,7 @@
 <li class="toctree-l2"><a class="reference internal" href="rolling-shutter/">rolling-shutter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="rolling-shutter-readout/">rolling-shutter-readout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="sfm-algorithm/">sfm-algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sfm-no-partial/">sfm-no-partial</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skip-3dmodel/">skip-3dmodel</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skip-band-alignment/">skip-band-alignment</a></li>
 <li class="toctree-l2"><a class="reference internal" href="skip-orthophoto/">skip-orthophoto</a></li>
@@ -453,7 +455,7 @@
 </dd>
 <dt><a class="reference internal" href="dem-gapfill-steps/#dem-gapfill-steps"><span class="std std-ref">dem-gapfill-steps</span></a> &lt;positive integer&gt;</dt><dd><p>Nombre d’étapes utilisées pour remplir les zones avec des vides. Réglez sur 0 pour désactiver le remplissage des espaces. En commençant par un rayon égal à la résolution de sortie, N différents DEM sont générés avec un rayon progressivement plus grand en utilisant l’algorithme de pondération de la distance inverse (IDW) et fusionnés ensemble. Les espaces restants sont ensuite fusionnés à l’aide de l’interpolation du plus proche voisin. Par défaut: <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
 </dd>
-<dt><a class="reference internal" href="dem-resolution/#dem-resolution"><span class="std std-ref">dem-resolution</span></a> &lt;float&gt;</dt><dd><p>DSM/DTM resolution in cm / pixel. Note that this value is capped to 2x the ground sampling distance (GSD) estimate. To remove the cap, check –ignore-gsd also. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
+<dt><a class="reference internal" href="dem-resolution/#dem-resolution"><span class="std std-ref">dem-resolution</span></a> &lt;float&gt;</dt><dd><p>DSM/DTM resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
 </dd>
 <dt><a class="reference internal" href="dsm/#dsm"><span class="std std-ref">dsm</span></a></dt><dd><p>Use this tag to build a DSM (Digital Surface Model, ground + objects) using a progressive morphological filter. Check the –dem* parameters for finer tuning. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -479,11 +481,11 @@
 </dd>
 <dt><a class="reference internal" href="help/#help"><span class="std std-ref">help</span></a></dt><dd><p>Montrer le message d’aide et sortir</p>
 </dd>
-<dt><a class="reference internal" href="ignore-gsd/#ignore-gsd"><span class="std std-ref">ignore-gsd</span></a></dt><dd><p>Ignorer la distance d’échantillonnage au sol (GSD). GSD limite la résolution maximale des sorties d’image et redimensionne les images si nécessaire, ce qui accélère le traitement et réduit l’utilisation de la mémoire. Étant donné que le GSD est une estimation, l’ignorer peut parfois entraîner une qualité de sortie d’image légèrement meilleure. Par défaut : <code class="docutils literal notranslate"><span class="pre">Faux</span></code></p>
+<dt><a class="reference internal" href="ignore-gsd/#ignore-gsd"><span class="std std-ref">ignore-gsd</span></a></dt><dd><p>Ignore Ground Sampling Distance (GSD).A memory and processor hungry change relative to the default behavior if set to true. Ordinarily, GSD estimates are used to cap the maximum resolution of image outputs and resizes images when necessary, resulting in faster processing and lower memory usage. Since GSD is an estimate, sometimes ignoring it can result in slightly better image output quality. Never set –ignore-gsd to true unless you are positive you need it, and even then: do not use it. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="matcher-neighbors/#matcher-neighbors"><span class="std std-ref">matcher-neighbors</span></a> &lt;positive integer&gt;</dt><dd><p>Perform image matching with the nearest images based on GPS exif data. Set to 0 to match by triangulation. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd>
-<dt><span class="xref std std-ref">matcher-order</span> &lt;positive integer&gt;</dt><dd><p>Perform image matching with the nearest N images based on image filename order. Can speed up processing of sequential images, such as those extracted from video. It is applied only on non-georeferenced datasets. Set to 0 to disable. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+<dt><a class="reference internal" href="matcher-order/#matcher-order"><span class="std std-ref">matcher-order</span></a> &lt;positive integer&gt;</dt><dd><p>Perform image matching with the nearest N images based on image filename order. Can speed up processing of sequential images, such as those extracted from video. It is applied only on non-georeferenced datasets. Set to 0 to disable. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
 </dd>
 <dt><a class="reference internal" href="matcher-type/#matcher-type"><span class="std std-ref">matcher-type</span></a> bow |  bruteforce |  flann</dt><dd><p>Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of Words. FLANN is slower, but more stable. BOW is faster, but can sometimes miss valid matches. BRUTEFORCE is very slow but robust.. Default: <code class="docutils literal notranslate"><span class="pre">flann</span></code></p>
 </dd>
@@ -513,7 +515,7 @@
 </dd>
 <dt><a class="reference internal" href="orthophoto-png/#orthophoto-png"><span class="std std-ref">orthophoto-png</span></a></dt><dd><p>Définissez ce paramètre si vous souhaitez générer un rendu PNG de l’orthophoto. Par défaut : <code class="docutils literal notranslate"><span class="pre">Faux</span></code></p>
 </dd>
-<dt><a class="reference internal" href="orthophoto-resolution/#orthophoto-resolution"><span class="std std-ref">orthophoto-resolution</span></a> &lt;float &gt; 0.0&gt;</dt><dd><p>Résolution de l’orthophoto en cm/pixel. Notez que cette valeur est plafonnée par une estimation de la distance d’échantillonnage au sol (GSD). Pour retirer le capuchon, cochez également –ignore-gsd. Par défaut : <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
+<dt><a class="reference internal" href="orthophoto-resolution/#orthophoto-resolution"><span class="std std-ref">orthophoto-resolution</span></a> &lt;float &gt; 0.0&gt;</dt><dd><p>Orthophoto resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate.Default: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
 </dd>
 <dt><a class="reference internal" href="pc-classify/#pc-classify"><span class="std std-ref">pc-classify</span></a></dt><dd><p>Classify the point cloud outputs. You can control the behavior of this option by tweaking the –dem-* parameters. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -553,7 +555,7 @@
 </dd>
 <dt><a class="reference internal" href="sfm-algorithm/#sfm-algorithm"><span class="std std-ref">sfm-algorithm</span></a> incremental |  triangulation |  planar</dt><dd><p>Choose the structure from motion algorithm. For aerial datasets, if camera GPS positions and angles are available, triangulation can generate better results. For planar scenes captured at fixed altitude with nadir-only images, planar can be much faster. . Default: <code class="docutils literal notranslate"><span class="pre">incremental</span></code></p>
 </dd>
-<dt><span class="xref std std-ref">sfm-no-partial</span></dt><dd><p>Do not attempt to merge partial reconstructions. This can happen when images do not have sufficient overlap or are isolated. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+<dt><a class="reference internal" href="sfm-no-partial/#sfm-no-partial"><span class="std std-ref">sfm-no-partial</span></a></dt><dd><p>Do not attempt to merge partial reconstructions. This can happen when images do not have sufficient overlap or are isolated. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="skip-3dmodel/#skip-3dmodel"><span class="std std-ref">skip-3dmodel</span></a></dt><dd><p>Ignorer la génération d’un modèle 3D complet. Cela peut vous faire gagner du temps si vous n’avez besoin que de résultats 2D tels que des orthophotos et des DEM. Par défaut : <code class="docutils literal notranslate"><span class="pre">Faux</span></code></p>
 </dd>
@@ -643,6 +645,7 @@
 <li class="toctree-l1"><a class="reference internal" href="help/">help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ignore-gsd/">ignore-gsd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matcher-neighbors/">matcher-neighbors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matcher-order/">matcher-order</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matcher-type/">matcher-type</a></li>
 <li class="toctree-l1"><a class="reference internal" href="max-concurrency/">max-concurrency</a></li>
 <li class="toctree-l1"><a class="reference internal" href="merge/">merge</a></li>
@@ -680,6 +683,7 @@
 <li class="toctree-l1"><a class="reference internal" href="rolling-shutter/">rolling-shutter</a></li>
 <li class="toctree-l1"><a class="reference internal" href="rolling-shutter-readout/">rolling-shutter-readout</a></li>
 <li class="toctree-l1"><a class="reference internal" href="sfm-algorithm/">sfm-algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sfm-no-partial/">sfm-no-partial</a></li>
 <li class="toctree-l1"><a class="reference internal" href="skip-3dmodel/">skip-3dmodel</a></li>
 <li class="toctree-l1"><a class="reference internal" href="skip-band-alignment/">skip-band-alignment</a></li>
 <li class="toctree-l1"><a class="reference internal" href="skip-orthophoto/">skip-orthophoto</a></li>

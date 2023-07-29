@@ -54,7 +54,7 @@ Options and Flags
   Number of steps used to fill areas with gaps. Set to 0 to disable gap filling. Starting with a radius equal to the output resolution, N different DEMs are generated with progressively bigger radius using the inverse distance weighted (IDW) algorithm and merged together. Remaining gaps are then merged using nearest neighbor interpolation. Default: ``3``
 
 :ref:`dem-resolution<dem-resolution>` <float>
-  DSM/DTM resolution in cm / pixel. Note that this value is capped to 2x the ground sampling distance (GSD) estimate. To remove the cap, check --ignore-gsd also. Default: ``5``
+  DSM/DTM resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate. Default: ``5``
 
 :ref:`dsm<dsm>` 
   Use this tag to build a DSM (Digital Surface Model, ground + objects) using a progressive morphological filter. Check the --dem\* parameters for finer tuning. Default: ``False``
@@ -93,7 +93,7 @@ Options and Flags
   show this help message and exit
 
 :ref:`ignore-gsd<ignore-gsd>` 
-  Ignore Ground Sampling Distance (GSD). GSD caps the maximum resolution of image outputs and resizes images when necessary, resulting in faster processing and lower memory usage. Since GSD is an estimate, sometimes ignoring it can result in slightly better image output quality. Default: ``False``
+  Ignore Ground Sampling Distance (GSD).A memory and processor hungry change relative to the default behavior if set to true. Ordinarily, GSD estimates are used to cap the maximum resolution of image outputs and resizes images when necessary, resulting in faster processing and lower memory usage. Since GSD is an estimate, sometimes ignoring it can result in slightly better image output quality. Never set --ignore-gsd to true unless you are positive you need it, and even then: do not use it. Default: ``False``
 
 :ref:`matcher-neighbors<matcher-neighbors>` <positive integer>
   Perform image matching with the nearest images based on GPS exif data. Set to 0 to match by triangulation. Default: ``0``
@@ -144,7 +144,7 @@ Options and Flags
   Set this parameter if you want to generate a PNG rendering of the orthophoto. Default: ``False``
 
 :ref:`orthophoto-resolution<orthophoto-resolution>` <float > 0.0>
-  Orthophoto resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate. To remove the cap, check --ignore-gsd also. Default: ``5``
+  Orthophoto resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate.Default: ``5``
 
 :ref:`pc-classify<pc-classify>` 
   Classify the point cloud outputs. You can control the behavior of this option by tweaking the --dem-\* parameters. Default: ``False``
