@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instalace a spuštění &mdash; Dokumentace pro OpenDroneMap 3.1.9</title>
+  <title>Instalace a spuštění &mdash; Dokumentace pro OpenDroneMap 3.3.4</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -34,7 +34,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                3.1.9
+                3.3.4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -724,19 +724,11 @@ $<span class="w"> </span>sudo<span class="w"> </span>dnf<span class="w"> </span>
 <section id="step-2-check-additional-requirements">
 <h4>Krok 2. Zkontrolujte další požadavky<a class="headerlink" href="#step-2-check-additional-requirements" title="Permalink to this heading"></a></h4>
 <p>Kromě tří výše uvedených programů je zapotřebí také skript dockercompose. Někdy je již nainstalován spolu s dockerem, ale někdy ne. Chcete-li ověřit, zda je nainstalován, zkuste zadat následující příkaz:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker-compose<span class="w"> </span>--version
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>--version
 </pre></div>
 </div>
 <p>Měli byste vidět něco podobného:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.22.0,<span class="w"> </span>build<span class="w"> </span>f46880f
-</pre></div>
-</div>
-<p>Pokud se místo toho zobrazí něco podobného:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose:<span class="w"> </span><span class="nb">command</span><span class="w"> </span>not<span class="w"> </span>found
-</pre></div>
-</div>
-<p>můžete nainstalovat pomocí pip:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>docker-compose
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>version<span class="w"> </span><span class="m">24</span>.0.5,<span class="w"> </span>build<span class="w"> </span>ced0996600
 </pre></div>
 </div>
 </section>

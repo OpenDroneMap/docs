@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Installation and Getting Started &mdash; OpenDroneMap 3.1.9 documentation</title>
+  <title>Installation and Getting Started &mdash; OpenDroneMap 3.3.4 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -34,7 +34,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                3.1.9
+                3.3.4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -726,19 +726,11 @@ $<span class="w"> </span>sudo<span class="w"> </span>dnf<span class="w"> </span>
 <section id="step-2-check-additional-requirements">
 <h4>Step 2. Check Additional Requirements<a class="headerlink" href="#step-2-check-additional-requirements" title="Permalink to this heading"></a></h4>
 <p>In addition to the three programs above, the dockercompose script is also needed. Sometimes it’s already installed with docker, but sometimes it isn’t. To verify if it’s installed try to type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker-compose<span class="w"> </span>--version
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>--version
 </pre></div>
 </div>
 <p>You should see somethings similar to the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose<span class="w"> </span>version<span class="w"> </span><span class="m">1</span>.22.0,<span class="w"> </span>build<span class="w"> </span>f46880f
-</pre></div>
-</div>
-<p>If instead you get something similar to the following:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker-compose:<span class="w"> </span><span class="nb">command</span><span class="w"> </span>not<span class="w"> </span>found
-</pre></div>
-</div>
-<p>you can install it by using pip:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>pip<span class="w"> </span>install<span class="w"> </span>docker-compose
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>version<span class="w"> </span><span class="m">24</span>.0.5,<span class="w"> </span>build<span class="w"> </span>ced0996600
 </pre></div>
 </div>
 </section>

@@ -366,26 +366,14 @@ In addition to the three programs above, the dockercompose script is also needed
 
 .. code:: bash
 
-	$ docker-compose --version
+	$ docker compose --version
 	
 You should see somethings similar to the following:
 
 .. code:: bash
 
-	docker-compose version 1.22.0, build f46880f
+	docker compose version 24.0.5, build ced0996600
 	
-If instead you get something similar to the following:
-
-.. code:: bash
-
-	docker-compose: command not found
-	
-you can install it by using pip:
-
-.. code:: bash
-
-	$ sudo pip install docker-compose
-
 
 Step 3. Download and Launch WebODM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
