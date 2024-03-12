@@ -71,7 +71,7 @@ Options and Flags
 :ref:`feature-quality<feature-quality>` ultra |  high |  medium |  low |  lowest
   Set feature extraction quality. Higher quality generates better features, but requires more memory and takes longer. . Default: ``high``
 
-:ref:`feature-type<feature-type>` akaze |  hahog |  orb |  sift
+:ref:`feature-type<feature-type>` akaze |  dspsift |  hahog |  orb |  sift
   Choose the algorithm for extracting keypoints and computing descriptors. . Default: ``sift``
 
 :ref:`force-gps<force-gps>` 
@@ -87,7 +87,7 @@ Options and Flags
   Generate single file Binary glTF (GLB) textured models. Default:  ``False``
 
 :ref:`gps-accuracy<gps-accuracy>` <positive float>
-  Set a value in meters for the GPS Dilution of Precision (DOP) information for all images. If your images are tagged with high precision GPS information (RTK), this value will be automatically set accordingly. You can use this option to manually set it in case the reconstruction fails. Lowering this option can sometimes help control bowling-effects over large areas. Default: ``10``
+  Set a value in meters for the GPS Dilution of Precision (DOP) information for all images. If your images are tagged with high precision GPS information (RTK), this value will be automatically set accordingly. You can use this option to manually set it in case the reconstruction fails. Lowering this option can sometimes help control bowling-effects over large areas. Default: ``3``
 
 :ref:`help<help>` 
   show this help message and exit
@@ -256,9 +256,6 @@ Options and Flags
 
 :ref:`texturing-skip-global-seam-leveling<texturing-skip-global-seam-leveling>` 
   Skip normalization of colors across all images. Useful when processing radiometric data. Default: ``False``
-
-:ref:`texturing-skip-local-seam-leveling<texturing-skip-local-seam-leveling>` 
-  Skip the blending of colors near seams. Default: ``False``
 
 :ref:`tiles<tiles>` 
   Generate static tiles for orthophotos and DEMs that are suitable for viewers like Leaflet or OpenLayers. Default: ``False``

@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Možnosti a značky &mdash; Dokumentace pro OpenDroneMap 3.3.4</title>
+  <title>Možnosti a značky &mdash; Dokumentace pro OpenDroneMap 3.4.0</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -34,7 +34,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                3.3.4
+                3.4.0
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -467,7 +467,7 @@
 </dd>
 <dt><a class="reference internal" href="feature-quality/#feature-quality"><span class="std std-ref">feature-quality</span></a> ultra |  high |  medium |  low |  lowest</dt><dd><p>Nastavte kvalitu extrakce prvků. Vyšší kvalita generuje lepší rysy, ale vyžaduje více paměti a trvá déle. . Výchozí hodnota: <code class="docutils literal notranslate"><span class="pre">high</span></code></p>
 </dd>
-<dt><a class="reference internal" href="feature-type/#feature-type"><span class="std std-ref">feature-type</span></a> akaze |  hahog |  orb |  sift</dt><dd><p>Zvolte algoritmus pro extrakci klíčových bodů a výpočet deskriptorů. . Výchozí: <code class="docutils literal notranslate"><span class="pre">sift</span></code></p>
+<dt><a class="reference internal" href="feature-type/#feature-type"><span class="std std-ref">feature-type</span></a> akaze |  dspsift |  hahog |  orb |  sift</dt><dd><p>Zvolte algoritmus pro extrakci klíčových bodů a výpočet deskriptorů. . Výchozí: <code class="docutils literal notranslate"><span class="pre">sift</span></code></p>
 </dd>
 <dt><a class="reference internal" href="force-gps/#force-gps"><span class="std std-ref">force-gps</span></a></dt><dd><p>Použijte data GPS exif snímků pro rekonstrukci, i když jsou přítomny GCP. Tento příznak je užitečný, pokud máte vysoce přesná měření GPS. Pokud nejsou k dispozici žádné GCP, tento příznak nic neudělá. Výchozí hodnota: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -477,7 +477,7 @@
 </dd>
 <dt><a class="reference internal" href="gltf/#gltf"><span class="std std-ref">gltf</span></a></dt><dd><p>Generate single file Binary glTF (GLB) textured models. Default:  <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
-<dt><a class="reference internal" href="gps-accuracy/#gps-accuracy"><span class="std std-ref">gps-accuracy</span></a> &lt;positive float&gt;</dt><dd><p>Nastavte hodnotu v metrech pro informaci GPS Dilution of Precision (DOP) pro všechny snímky. Pokud jsou snímky označeny informacemi GPS s vysokou přesností (RTK), bude tato hodnota nastavena automaticky. Pomocí této možnosti ji můžete nastavit ručně v případě, že rekonstrukce selže. Snížení této možnosti může někdy pomoci kontrolovat bowling-efekty na velkých plochách. Výchozí hodnota: <code class="docutils literal notranslate"><span class="pre">10</span></code></p>
+<dt><a class="reference internal" href="gps-accuracy/#gps-accuracy"><span class="std std-ref">gps-accuracy</span></a> &lt;positive float&gt;</dt><dd><p>Set a value in meters for the GPS Dilution of Precision (DOP) information for all images. If your images are tagged with high precision GPS information (RTK), this value will be automatically set accordingly. You can use this option to manually set it in case the reconstruction fails. Lowering this option can sometimes help control bowling-effects over large areas. Default: <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
 </dd>
 <dt><a class="reference internal" href="help/#help"><span class="std std-ref">help</span></a></dt><dd><p>zobrazí tuto nápovědu a ukončí se</p>
 </dd>
@@ -590,8 +590,6 @@
 <dt><a class="reference internal" href="texturing-single-material/#texturing-single-material"><span class="std std-ref">texturing-single-material</span></a></dt><dd><p>Generate OBJs that have a single material and a single texture file instead of multiple ones. Default:  <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="texturing-skip-global-seam-leveling/#texturing-skip-global-seam-leveling"><span class="std std-ref">texturing-skip-global-seam-leveling</span></a></dt><dd><p>Přeskočení normalizace barev ve všech snímcích. Užitečné při zpracování radiometrických dat. Výchozí hodnota: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
-</dd>
-<dt><a class="reference internal" href="texturing-skip-local-seam-leveling/#texturing-skip-local-seam-leveling"><span class="std std-ref">texturing-skip-local-seam-leveling</span></a></dt><dd><p>Vynechejte prolínání barev v blízkosti švů. Výchozí hodnota: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
 <dt><a class="reference internal" href="tiles/#tiles"><span class="std std-ref">tiles</span></a></dt><dd><p>Generování statických dlaždic pro ortofotomapy a DEM, které jsou vhodné pro prohlížeče jako Leaflet nebo OpenLayers. Výchozí hodnota: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
