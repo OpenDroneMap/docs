@@ -193,6 +193,29 @@ The 3D textured meshes are currently not being merged as part of the workflow (o
 
 GCPs are fully supported, however, there needs to be at least 3 GCP points on each submodel for the georeferencing to take place. If a submodel has fewer than 3 GCPs, a combination of the remaining GCPs + EXIF data will be used instead (which is going to be less accurate). We recommend using the ``image_groups.txt`` file to accurately control the submodel split when using GCPs.
 
+Estimating data collection effort
+---------------------------------
+
+Larger datasets can be collected with specialized fix wing UAVs, vertical takeoff and landing (VTOL) UAVs, and collected quite efficiently under certain conditions. In many instances, however, we are constrained to doing data collection efforts with commodity quadcopters. In these cases, a common question is the data collection time under ideal conditions with commodity equipment.
+
+Data collection effort, full 3D
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For best in class results with full 3D reconstruction and 5cm resolution, it is feasible to collect 1-2km\ :sup:`2`. This requires the following set of flights:
+* 60% overlap nadir flight
+* 70-80% overlap 45-degree gimbal angle cross grid
+
+Data collection effort, 2D and 2.5D products
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+For best in class results 2D and 2.5D products and 5cm resolution, it is feasible to collect 2-4km\ :sup:`2`. This requires the following set of flights:
+* 70-80% overlap slightly off-nadir (5-10 degree off nadid)
+
+For more complex buildings and vegetation, aim for closer to 80% overlap. If buildings, vegetation, and terrain changes are not complex, it's quite feasible to use closer to 70% overlap.
+
+(credit: derived from ongoing conversations with Ivan Gayton, Humanitarian OpenStreetMap Team)
+
+
 Acknowledgments
 ---------------
 Huge props to Pau and the folks at Mapillary for their amazing contributions to OpenDroneMap through their OpenSfM code, which is a key component of the split-merge pipeline. We look forward to further pushing the limits of OpenDroneMap and seeing how big a dataset we can process.
