@@ -201,7 +201,7 @@ Larger datasets can be collected with specialized fix wing UAVs, vertical takeof
 Data collection effort, full 3D
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For best in class results with full 3D reconstruction and 5cm resolution, it is feasible to collect 1-2km\ :sup:`2`. This requires the following set of flights:
+For best in class results with full 3D reconstruction and 5cm resolution, it is feasible to collect 1-2km\ :sup:`2` per person, per day. This requires the following set of flights:
 
 * 60% overlap nadir flight
 * 70-80% overlap 45-degree gimbal angle cross grid
@@ -209,7 +209,7 @@ For best in class results with full 3D reconstruction and 5cm resolution, it is 
 Data collection effort, 2D and 2.5D products
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-For best in class results 2D and 2.5D products and 5cm resolution, it is feasible to collect 2-4km\ :sup:`2`. This requires the following set of flights:
+For best in class results 2D and 2.5D products and 5cm resolution, it is feasible to collect 2-4km\ :sup:`2` per person, per day. This requires the following set of flights:
 
 * 70-80% overlap slightly off-nadir (5-10 degree off nadid)
 
