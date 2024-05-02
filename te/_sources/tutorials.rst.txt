@@ -64,7 +64,7 @@ From James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/licenses/b
 Creating Digital Elevation Models
 *********************************
 
-By default ODM does not create DEMs. To create a digital terrain model, make sure to pass the ``--dtm`` flag. To create a digital surface model, be sure to pass the ``--dsm`` flag.
+By default ODM does not create digital elevation models (DEMs). To create a digital terrain model, make sure to pass the ``--dtm`` flag. To create a digital surface model, be sure to pass the ``--dsm`` flag.
 
 .. figure:: images/digitalsurfacemodel.png
    :alt: image of OpenDroneMap derived digital surface model
