@@ -49,6 +49,7 @@ The documentation is available in several languages. Some translations are incom
 
 .. toctree::
     tutorials
+    flowchart
     arguments
     outputs
     gcp

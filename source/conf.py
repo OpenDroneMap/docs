@@ -33,7 +33,9 @@ release = version
 extensions = [
     'sphinx.ext.todo',
     'sphinx_rtd_theme',
-    'sphinx.ext.githubpages'
+    'sphinx.ext.githubpages',
+    'sphinxcontrib.mermaid'
+
 ]
 #For internationalization:
 locale_dirs = ['locale/']
