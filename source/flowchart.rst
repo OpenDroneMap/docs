@@ -4,6 +4,7 @@ Flowchart with options
 =======================
 
 .. mermaid::
+   :zoom:
 
     flowchart  TB
 
@@ -11,155 +12,243 @@ Flowchart with options
         %% Subgraph Stages
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
-        subgraph dataset_stage["`**dataset_stage**`"]
-            bg_removal:::options
+        subgraph dataset-stage["`**dataset-stage**`"]
+            bg-removal:::options
             camera-lens:::options
             cameras:::options
             gcp:::options
             geo:::options
-            gps_accuracy:::options
-            primary_band:::options
-            sky_removal:::options
-            use_exif:::options
-            video_limit:::options
-            video_resolution:::options
+            gps-accuracy:::options
+            primary-band:::options
+            sky-removal:::options
+            use-exif:::options
+            video-limit:::options
+            video-resolution:::options
         end
-        bg_removal ~~~ camera-lens ~~~ cameras  ~~~ gcp ~~~  geo
-        gps_accuracy ~~~ primary_band ~~~ sky_removal ~~~   use_exif  ~~~ video_limit
+        bg-removal ~~~ camera-lens ~~~ cameras  ~~~ gcp ~~~  geo
+        gps-accuracy ~~~ primary-band ~~~ sky-removal ~~~   use-exif  ~~~ video-limit
 
+    click bg-removal "../arguments/bg-removal/"
+    click camera-lens "../arguments/camera-lens/"
+    click cameras "../arguments/cameras/"
+    click gcp "../arguments/gcp/"
+    click geo "../arguments/geo/"
+    click gps-accuracy "../arguments/gps-accuracy/"
+    click primary-band "../arguments/primary-band/"
+    click sky-removal "../arguments/sky-removal/"
+    click use-exif "../arguments/use-exif/"
+    click video-limit "../arguments/video-limit/"
+    click video-resolution "../arguments/video-resolution/"
 
 
         subgraph Split["`**Split**`"]
             direction TB
-            sm_cluster:::options
-            sm_no_align:::options
+            sm-cluster:::options
+            sm-no-align:::options
             split:::options
-            split_image_groups:::options
-            split_overlap:::options
+            split-image-groups:::options
+            split-overlap:::options
         end
+    click sm-cluster "../arguments/sm-cluster/"
+    click sm-no-align "../arguments/sm-no-align/"
+    click split "../arguments/split/"
+    click split-image-groups "../arguments/split-image-groups/"
+    click split-overlap "../arguments/split-overlap/"
 
         Spliting
 
         subgraph OpenSFM["`**OpenSFM**`"]
-            feature_quality:::options
-            feature_type:::options
-            force_gps:::options
-            ignore_gsd:::options
-            matcher_neighbors:::options
-            matcher_order:::options
-            matcher_type:::options
-            min_num_features:::options
-            pc_quality:::options
-            radiometric_calibration:::options
-            rolling_shutter:::options
-            rolling_shutter_readout:::options
+            feature-quality:::options
+            feature-type:::options
+            force-gps:::options
+            ignore-gsd:::options
+            matcher-neighbors:::options
+            matcher-order:::options
+            matcher-type:::options
+            min-num-features:::options
+            pc-quality:::options
+            radiometric-calibration:::options
+            rolling-shutter:::options
+            rolling-shutter-readout:::options
             sfm-algorithm:::options
-            sfm_no_partial:::options
-            skip_band_alignment:::options
-            use_fixed_camera_params:::options
-            use_hybrid_bundle_adjustment:::options
+            sfm-no-partial:::options
+            skip-band-alignment:::options
+            use-fixed-camera-params:::options
+            use-hybrid-bundle-adjustment:::options
         end
-        feature_quality ~~~  feature_type ~~~ force_gps ~~~ ignore_gsd ~~~ matcher_neighbors
-        matcher_order ~~~ matcher_type ~~~  min_num_features ~~~ pc_quality ~~~ radiometric_calibration
-        rolling_shutter  ~~~ rolling_shutter_readout ~~~ sfm-algorithm ~~~ sfm_no_partial ~~~  skip_band_alignment
-        use_fixed_camera_params ~~~    use_hybrid_bundle_adjustment
+        feature-quality ~~~  feature-type ~~~ force-gps ~~~ ignore-gsd ~~~ matcher-neighbors
+        matcher-order ~~~ matcher-type ~~~  min-num-features ~~~ pc-quality ~~~ radiometric-calibration
+        rolling-shutter  ~~~ rolling-shutter-readout ~~~ sfm-algorithm ~~~ sfm-no-partial ~~~  skip-band-alignment
+        use-fixed-camera-params ~~~    use-hybrid-bundle-adjustment
+
+    click feature-quality "../arguments/feature-quality/"
+    click feature-type "../arguments/feature-type/"
+    click force-gps "../arguments/force-gps/"
+    click ignore-gsd "../arguments/ignore-gsd/"
+    click matcher-neighbors "../arguments/matcher-neighbors/"
+    click matcher-order "../arguments/matcher-order/"
+    click matcher-type "../arguments/matcher-type/"
+    click min-num-features "../arguments/min-num-features/"
+    click pc-quality "../arguments/pc-quality/"
+    click radiometric-calibration "../arguments/radiometric-calibration/"
+    click rolling-shutter "../arguments/rolling-shutter/"
+    click rolling-shutter-readout "../arguments/rolling-shutter-readout/"
+    click sfm-algorithm "../arguments/sfm-algorithm/"
+    click sfm-no-partial "../arguments/sfm-no-partial/"
+    click skip-band-alignment "../arguments/skip-band-alignment/"
+    click use-fixed-camera-params "../arguments/use-fixed-camera-params/"
+    click use-hybrid-bundle-adjustment "../arguments/use-hybrid-bundle-adjustment/"
 
 
         subgraph openmvs["`**openmvs**`"]
-            pc_filter:::options
-            pc_skip_geometric:::options
+            pc-filter:::options
+            pc-skip-geometric:::options
         end
-        pc_filter ~~~ pc_skip_geometric
+        pc-filter ~~~ pc-skip-geometric
 
-        subgraph odm_filterpoints["`**odm_filterpoints**`"]
-            auto_boundary:::options
-            auto_boundary_distance:::options
+    click pc-filter "../arguments/pc-filter/"
+    click pc-skip-geometric "../arguments/pc-skip-geometric/"
+
+        subgraph odm-filterpoints["`**odm-filterpoints**`"]
+            auto-boundary:::options
+            auto-boundary-distance:::options
             boundary:::options
-            fast_orthophoto:::options
-            pc_sample:::options
+            fast-orthophoto:::options
+            pc-sample:::options
         end
-        auto_boundary ~~~ auto_boundary_distance  ~~~ boundary  ~~~  fast_orthophoto ~~~  pc_sample
+        auto-boundary ~~~ auto-boundary-distance  ~~~ boundary  ~~~  fast-orthophoto ~~~  pc-sample
 
-        subgraph odm_meshing["`**odm_meshing**`"]
-            mesh_octree_depth:::options
-            mesh_size:::options
-            skip_3dmodel:::options
+    click auto-boundary "../arguments/auto-boundary/"
+    click auto-boundary-distance "../arguments/auto-boundary-distance/"
+    click boundary "../arguments/boundary/"
+    click fast-orthophoto "../arguments/fast-orthophoto/"
+    click pc-sample "../arguments/pc-sample/"
+
+        subgraph odm-meshing["`**odm-meshing**`"]
+            mesh-octree-depth:::options
+            mesh-size:::options
+            skip-3dmodel:::options
         end
-        mesh_octree_depth ~~~ mesh_size ~~~ skip_3dmodel
+        mesh-octree-depth ~~~ mesh-size ~~~ skip-3dmodel
 
-        subgraph mvs_texturing["`**mvs_texturing**`"]
+    click mesh-octree-depth "../arguments/mesh-octree-depth/"
+    click mesh-size "../arguments/mesh-size/"
+    click skip-3dmodel "../arguments/skip-3dmodel/"
+
+        subgraph mvs-texturing["`**mvs-texturing**`"]
             gltf:::options
-            texturing_keep_unseen_faces:::options
-            texturing_single_material:::options
-            texturing_skip_global_seam_leveling:::options
-            use_3dmesh:::options
+            texturing-keep-unseen-faces:::options
+            texturing-single-material:::options
+            texturing-skip-global-seam-leveling:::options
+            use-3dmesh:::options
         end
-        gltf ~~~ texturing_keep_unseen_faces ~~~ texturing_single_material  ~~~ texturing_skip_global_seam_leveling ~~~  use_3dmesh
+        gltf ~~~ texturing-keep-unseen-faces ~~~ texturing-single-material  ~~~ texturing-skip-global-seam-leveling ~~~  use-3dmesh
 
-        subgraph odm_georeferencing["`**odm_georeferencing**`"]
+    click gltf "../arguments/gltf/"
+    click texturing-keep-unseen-faces "../arguments/texturing-keep-unseen-faces/"
+    click texturing-single-material "../arguments/texturing-single-material/"
+    click texturing-skip-global-seam-leveling "../arguments/texturing-skip-global-seam-leveling/"
+    click use-3dmesh "../arguments/use-3dmesh/"
+
+        subgraph odm-georeferencing["`**odm-georeferencing**`"]
             align:::options
             crop:::options
-            pc_classify:::options
-            pc_copc:::options
-            pc_csv:::options
-            pc_ept:::options
-            pc_las:::options
-            pc_rectify:::options
+            pc-classify:::options
+            pc-copc:::options
+            pc-csv:::options
+            pc-ept:::options
+            pc-las:::options
+            pc-rectify:::options
         end
-        align ~~~ crop ~~~ pc_classify ~~~ pc_copc ~~~ pc_csv
-        pc_ept ~~~ pc_las ~~~ pc_rectify
+        align ~~~ crop ~~~ pc-classify ~~~ pc-copc ~~~ pc-csv
+        pc-ept ~~~ pc-las ~~~ pc-rectify
 
-        subgraph odm_dem["`**odm_dem**`"]
+    click align "../arguments/align/"
+    click crop "../arguments/crop/"
+    click pc-classify "../arguments/pc-classify/"
+    click pc-copc "../arguments/pc-copc/"
+    click pc-csv "../arguments/pc-csv/"
+    click pc-ept "../arguments/pc-ept/"
+    click pc-las "../arguments/pc-las/"
+    click pc-rectify "../arguments/pc-rectify/"
+
+        subgraph odm-dem["`**odm-dem**`"]
             cog:::options
-            dem_decimation:::options
-            dem_euclidean_map:::options
-            dem_gapfill_steps:::options
-            dem_resolution:::options
+            dem-decimation:::options
+            dem-euclidean-map:::options
+            dem-gapfill-steps:::options
+            dem-resolution:::options
             dsm:::options
             dtm:::options
-            smrf_scalar:::options
-            smrf_slope:::options
-            smrf_threshold:::options
-            smrf_window:::options
+            smrf-scalar:::options
+            smrf-slope:::options
+            smrf-threshold:::options
+            smrf-window:::options
             tiles:::options
         end
-        cog ~~~ dem_decimation  ~~~ dem_euclidean_map  ~~~ dem_gapfill_steps  ~~~  dem_resolution
-        dsm  ~~~ dtm  ~~~    smrf_scalar ~~~ smrf_slope   ~~~ smrf_threshold   ~~~ smrf_window
+        cog ~~~ dem-decimation  ~~~ dem-euclidean-map  ~~~ dem-gapfill-steps  ~~~  dem-resolution
+        dsm  ~~~ dtm  ~~~    smrf-scalar ~~~ smrf-slope   ~~~ smrf-threshold   ~~~ smrf-window
 
-        subgraph odm_orthophoto["`**odm_orthophoto**`"]
-            build_overviews:::options
-            orthophoto_compression:::options
-            orthophoto_cutline:::options
-            orthophoto_kmz:::options
-            orthophoto_no_tiled:::options
-            orthophoto_png:::options
-            orthophoto_resolution:::options
-            skip_orthophoto:::options
+    click cog "../arguments/cog/"
+    click dem-decimation "../arguments/dem-decimation/"
+    click dem-euclidean-map "../arguments/dem-euclidean-map/"
+    click dem-gapfill-steps "../arguments/dem-gapfill-steps/"
+    click dem-resolution "../arguments/dem-resolution/"
+    click dsm "../arguments/dsm/"
+    click dtm "../arguments/dtm/"
+    click smrf-scalar "../arguments/smrf-scalar/"
+    click smrf-slope "../arguments/smrf-slope/"
+    click smrf-threshold "../arguments/smrf-threshold/"
+    click smrf-window "../arguments/smrf-window/"
+
+        subgraph odm-orthophoto["`**odm-orthophoto**`"]
+            build-overviews:::options
+            orthophoto-compression:::options
+            orthophoto-cutline:::options
+            orthophoto-kmz:::options
+            orthophoto-no-tiled:::options
+            orthophoto-png:::options
+            orthophoto-resolution:::options
+            skip-orthophoto:::options
         end
-        build_overviews ~~~ orthophoto_compression  ~~~ orthophoto_cutline  ~~~ orthophoto_kmz
-        orthophoto_no_tiled ~~~ orthophoto_png  ~~~ orthophoto_resolution ~~~ skip_orthophoto
+        build-overviews ~~~ orthophoto-compression  ~~~ orthophoto-cutline  ~~~ orthophoto-kmz
+        orthophoto-no-tiled ~~~ orthophoto-png  ~~~ orthophoto-resolution ~~~ skip-orthophoto
 
-        subgraph odm_report["`**odm_report**`"]
+    click build-overviews "../arguments/build-overviews/"
+    click orthophoto-compression "../arguments/orthophoto-compression/"
+    click orthophoto-cutline "../arguments/orthophoto-cutline/"
+    click orthophoto-kmz "../arguments/orthophoto-kmz/"
+    click orthophoto-no-tiled "../arguments/orthophoto-no-tiled/"
+    click orthophoto-png "../arguments/orthophoto-png/"
+    click orthophoto-resolution "../arguments/orthophoto-resolution/"
+    click skip-orthophoto "../arguments/skip-orthophoto/"
+
+        subgraph odm-report["`**odm-report**`"]
             skip-report:::options
         end
 
-        subgraph odm_postprocess["`**odm_postprocess**`"]
+    click skip-report "../arguments/skip-report/"
+
+        subgraph odm-postprocess["`**odm-postprocess**`"]
             3d-tiles:::options
-            copy_to:::options
+            copy-to:::options
         end
-        3d-tiles ~~~ copy_to
+        3d-tiles ~~~ copy-to
+
+    click 3d-tiles "../arguments/3d-tiles/"
+    click copy-to "../arguments/copy-to/"
 
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
         %% Links
         %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
 
 
-        images--> dataset_stage --> Split -- No --> OpenSFM --> openmvs
-        openmvs --> odm_filterpoints --> odm_meshing --> mvs_texturing --> odm_georeferencing
-        odm_georeferencing --> odm_dem --> odm_orthophoto --> odm_report --> odm_postprocess
+        images--> dataset-stage --> Split -- No --> OpenSFM --> openmvs
+        openmvs --> odm-filterpoints --> odm-meshing --> mvs-texturing --> odm-georeferencing
+        odm-georeferencing --> odm-dem --> odm-orthophoto --> odm-report --> odm-postprocess
 
         %% Split yes
-        %%Split -- Yes ----> Spliting -- Merge ----> OpenSFM_detect_features
+        %%Split -- Yes ----> Spliting -- Merge ----> OpenSFM-detect-features
         Split -- Yes --> Spliting --> OpenSFM
 
         %% Styles
@@ -168,13 +257,10 @@ Flowchart with options
         classDef options stroke-width:4px,stroke-dasharray: 5,fill:#ecc4a5
 
         %% Style for stages
-        classDef stages fill:#5dbae8,rx:10,ry:10
-        class dataset_stage,Split,OpenSFM,openmvs,odm_filterpoints stages
-        class odm_meshing,mvs_texturing,odm_georeferencing,odm_dem stages
-        class odm_orthophoto,odm_report,odm_postprocess stages
-
-        classDef splitingstyle fill:#5dbae8,rx:10,ry:10
-        class Spliting splitingstyle
+        classDef stages fill:#11b7aa,rx:10,ry:10
+        class dataset-stage,Split,OpenSFM,openmvs,odm-filterpoints stages
+        class odm-meshing,mvs-texturing,odm-georeferencing,odm-dem stages
+        class odm-orthophoto,odm-report,odm-postprocess,Spliting stages
 
         classDef imagesstyle fill:#b0e760,rx:10,ry:10
         class images imagesstyle
