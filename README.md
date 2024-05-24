@@ -99,7 +99,7 @@ source .venv/bin/activate
 pip install -r requirements.txt
 ```
 
-After running `source venv/bin/activate` there should be some indication that the Python virtual environment is active (see the `(venv)` that appears at the start of terminal prompt in the screengrab below). **Note:** The next time you can `cd` into the docs folder and just run `source venv/bin/activate`. There should be no need to rerun the `pip install` and `virtualenv` commands.
+After running `source .venv/bin/activate` there should be some indication that the Python virtual environment is active (see the `(.venv)` that appears at the start of terminal prompt in the screengrab below). **Note:** The next time you can `cd` into the docs folder and just run `source .venv/bin/activate`. There should be no need to rerun the `pip install` and `python3 -m venv .venv` commands.
 
 Note: If you've installed `sphinx` on your system, you may run into issues with commands using that version instead of the version inside your virtualenv.
 
