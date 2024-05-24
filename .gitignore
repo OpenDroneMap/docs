@@ -2,6 +2,7 @@ _build
 venv
 venv_prod
 .vscode
+.venv
 
 # Base ignores:
 # =============

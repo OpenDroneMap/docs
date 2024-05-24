@@ -254,10 +254,10 @@ Flowchart with options
         %% Styles
 
         %% Style for options
-        classDef options stroke-width:4px,stroke-dasharray: 5,fill:#ecc4a5
+        classDef options fill:#ffdfef,stroke-width:4px,stroke-dasharray: 5
 
         %% Style for stages
-        classDef stages fill:#11b7aa,rx:10,ry:10
+        classDef stages fill:#ffe771,rx:10,ry:10
         class dataset-stage,Split,OpenSFM,openmvs,odm-filterpoints stages
         class odm-meshing,mvs-texturing,odm-georeferencing,odm-dem stages
         class odm-orthophoto,odm-report,odm-postprocess,Spliting stages
