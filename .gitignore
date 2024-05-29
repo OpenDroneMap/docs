@@ -3,6 +3,7 @@ venv
 venv_prod
 .vscode
 .venv
+.venv_prod
 
 # Base ignores:
 # =============
