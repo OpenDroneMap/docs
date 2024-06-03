@@ -1,6 +1,6 @@
 # OpenDroneMap Docs
 
-Contribute to [OpenDroneMap](https://docs.opendronemap.org)'s documentation! Anyone is welcome to share their knowledge and improve our documentation. 🎉 And it's pretty simple too!
+Contribute to [OpenDroneMap](https://docs.opendronemap.org)'s documentation!!!!S Anyone is welcome to share their knowledge and improve our documentation. 🎉 And it's pretty simple too!
 
 # "But I don't know if I can contribute"
 
