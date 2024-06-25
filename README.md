@@ -1,6 +1,6 @@
 # OpenDroneMap Docs
 
-Contribute to [OpenDroneMap](https://docs.opendronemap.org)'s documentation! Anyone is welcome to share their knowledge and improve our documentation. 🎉 And it's pretty simple too!
+Contribute to [OpenDroneMap](https://docs.opendronemap.org)'s documentation!!! Anyone is welcome to share their knowledge and improve our documentation. 🎉 And it's pretty simple too!
 
 # "But I don't know if I can contribute"
 
@@ -10,7 +10,7 @@ Tips, tricks, hacks, datasets, lessons learned, best practices, every bit helps.
 
 # How To Make Your First Contribution
 
-If you don't have a GitHub account, [register](https://github.com/join?source=header-home) first. It's free and GitHub is awesome.
+If you don't have a GitHub account, [register](https://github.com/join?source=header-home) first. It's free and GitHub is awesome !!!
 
 Once you have an account there are two ways to contribute. One is quick for small changes, the second takes a bit longer to setup but makes writing long parts of documentation much quicker.
 
