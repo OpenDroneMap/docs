@@ -49,8 +49,8 @@ The documentation is available in several languages. Some translations are incom
 
 .. toctree::
     tutorials
-    flowchart
     arguments
+    flowchart
     outputs
     gcp
     map-accuracy
