@@ -50,6 +50,7 @@ The documentation is available in several languages. Some translations are incom
 .. toctree::
     tutorials
     arguments
+    flowchart
     outputs
     gcp
     map-accuracy
