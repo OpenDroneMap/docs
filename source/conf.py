@@ -33,8 +33,15 @@ release = version
 extensions = [
     'sphinx.ext.todo',
     'sphinx_rtd_theme',
-    'sphinx.ext.githubpages'
+    'sphinx.ext.githubpages',
+    'sphinxcontrib.mermaid'
+
 ]
+
+# mermaid version
+mermaid_version = "10.9.1"
+
+
 #For internationalization:
 locale_dirs = ['locale/']
 gettext_compact = False
