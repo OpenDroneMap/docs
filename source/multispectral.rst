@@ -21,6 +21,7 @@ Creating Orthophotos from Multispectral Data
 
 For supported sensors listed above (and likley other sensors), users can process multipsectral data in the same manner as visible light images. Images from all sensor bands should be processed at once (do not separate the bands into multiple folders). Users have the option to pass the ``--radiometric-calibration`` parameter with options ``camera`` or ``camera+sun`` to enable radiometric normalization. If the images are part of a multi-camera setup, the resulting orthophoto will have N bands, one for each camera (+ alpha).
 
+NDVI and other vegetation indices can be calculated from these stitched orthophotos using software such as `qGIS <https://www.qgis.org/>`_
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst>`_!
 
