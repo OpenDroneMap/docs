@@ -358,9 +358,9 @@
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../flying/">Flying Tips</a></li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Multispectral Support</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#hardware">Hardware</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#usage">Usage</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#sentera-agx710">Sentera AGX710</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#supported-sensors">Supported Sensors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#creating-orthophotos-from-multispectral-data">Creating Orthophotos from Multispectral Data</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#workflows-for-non-supported-sensors">Workflows for Non-supported Sensors</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../thermal/">Thermal Support</a><ul>
@@ -425,26 +425,29 @@
   <section id="multispectral-support">
 <h1>Multispectral Support<a class="headerlink" href="#multispectral-support" title="Permalink to this heading"></a></h1>
 <p>Since version 0.9.9 ODM has basic support for radiometric normalization, which is able to generate reflectance orthophotos from multispectral cameras. Multispectral cameras capture multiple shots of the scene using different band sensors.</p>
-<section id="hardware">
-<h2>Hardware<a class="headerlink" href="#hardware" title="Permalink to this heading"></a></h2>
+<section id="supported-sensors">
+<h2>Supported Sensors<a class="headerlink" href="#supported-sensors" title="Permalink to this heading"></a></h2>
 <p>While we aim to support as many cameras as possible, multispectral support has been developed using the following cameras, so they will work better:</p>
 <blockquote>
 <div><ul class="simple">
 <li><p><a class="reference external" href="https://www.micasense.com/">MicaSense RedEdge-MX and Altum</a></p></li>
-<li><p><a class="reference external" href="https://sentera.com/products/fieldcapture/sensors/6x/">Sentera 6X</a></p></li>
-<li><p><a class="reference external" href="https://www.dji.com/p4-multispectral">DJI Phantom 4 Multispectral</a></p></li>
+<li><p><a class="reference external" href="https://sentera.com/products/fieldcapture/sensors/6x/">Sentera 6X</a> (as of ODM version 1.0.1)</p></li>
+<li><p><a class="reference external" href="https://www.dji.com/p4-multispectral">DJI Phantom 4 Multispectral</a> (as of ODM version 2.8.8)</p></li>
+<li><p><a class="reference external" href="https://ag.dji.com/mavic-3-m">DJI Mavic 3 Multispectral</a> (as of ODM version 3.5.3)</p></li>
 </ul>
 </div></blockquote>
 <p>Other cameras might also work. You can help us expand this list by <a class="reference external" href="https://community.opendronemap.org/c/datasets/10">sharing datasets</a> captured with other cameras.</p>
 </section>
-<section id="usage">
-<h2>Usage<a class="headerlink" href="#usage" title="Permalink to this heading"></a></h2>
-<p>Process all the images from all bands at once (do not separate the bands into multiple folders) and pass the <cite>–radiometric-calibration</cite> parameter to enable radiometric normalization. If the images are part of a multi-camera setup, the resulting orthophoto will have N bands, one for each camera (+ alpha).</p>
+<section id="creating-orthophotos-from-multispectral-data">
+<h2>Creating Orthophotos from Multispectral Data<a class="headerlink" href="#creating-orthophotos-from-multispectral-data" title="Permalink to this heading"></a></h2>
+<p>For supported sensors listed above (and likley other sensors), users can process multipsectral data in the same manner as visible light images. Images from all sensor bands should be processed at once (do not separate the bands into multiple folders). Users have the option to pass the <code class="docutils literal notranslate"><span class="pre">--radiometric-calibration</span></code> parameter with options <code class="docutils literal notranslate"><span class="pre">camera</span></code> or <code class="docutils literal notranslate"><span class="pre">camera+sun</span></code> to enable radiometric normalization. If the images are part of a multi-camera setup, the resulting orthophoto will have N bands, one for each camera (+ alpha).</p>
+<p>NDVI and other vegetation indices can be calculated from these stitched orthophotos using software such as <a class="reference external" href="https://www.qgis.org/">qGIS</a></p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst">this page</a>!</p>
 </section>
-<section id="sentera-agx710">
-<h2>Sentera AGX710<a class="headerlink" href="#sentera-agx710" title="Permalink to this heading"></a></h2>
-<p>While this sensor is not officially supported by ODM, the following workflow gives some good results.</p>
+<section id="workflows-for-non-supported-sensors">
+<h2>Workflows for Non-supported Sensors<a class="headerlink" href="#workflows-for-non-supported-sensors" title="Permalink to this heading"></a></h2>
+<p><strong>Sentera AGX710:</strong></p>
+<p>While the Sentera AGX710 is not officially supported by ODM, the following workflow gives some good results.</p>
 <blockquote>
 <div><ul class="simple">
 <li><p>all JPGs from the NDRE directory should be renamed with the exact following pattern 0000X_NIR.jpg. No extra ‘_’ should be present in the file names ie 10_51_14_IMG_00008.jpg =&gt; 00008_NIR.jpg</p></li>
