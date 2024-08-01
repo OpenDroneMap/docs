@@ -72,7 +72,7 @@ Options and Flags
   Set feature extraction quality. Higher quality generates better features, but requires more memory and takes longer. . Default: ``high``
 
 :ref:`feature-type<feature-type>` akaze |  dspsift |  hahog |  orb |  sift
-  Choose the algorithm for extracting keypoints and computing descriptors. . Default: ``sift``
+  Choose the algorithm for extracting keypoints and computing descriptors. . Default: ``dspsift``
 
 :ref:`force-gps<force-gps>` 
   Use images' GPS exif data for reconstruction, even if there are GCPs present.This flag is useful if you have high precision GPS measurements. If there are no GCPs, this flag does nothing. Default: ``False``
@@ -159,7 +159,7 @@ Options and Flags
   Export the georeferenced point cloud in Entwine Point Tile (EPT) format. Default: ``False``
 
 :ref:`pc-filter<pc-filter>` <positive float>
-  Filters the point cloud by removing points that deviate more than N standard deviations from the local mean. Set to 0 to disable filtering. Default: ``2.5``
+  Filters the point cloud by removing points that deviate more than N standard deviations from the local mean. Set to 0 to disable filtering. Default: ``5``
 
 :ref:`pc-las<pc-las>` 
   Export the georeferenced point cloud in LAS format. Default: ``False``

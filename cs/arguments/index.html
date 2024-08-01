@@ -468,7 +468,7 @@
 </dd>
 <dt><a class="reference internal" href="feature-quality/#feature-quality"><span class="std std-ref">feature-quality</span></a> ultra |  high |  medium |  low |  lowest</dt><dd><p>Nastavte kvalitu extrakce prvků. Vyšší kvalita generuje lepší rysy, ale vyžaduje více paměti a trvá déle. . Výchozí hodnota: <code class="docutils literal notranslate"><span class="pre">high</span></code></p>
 </dd>
-<dt><a class="reference internal" href="feature-type/#feature-type"><span class="std std-ref">feature-type</span></a> akaze |  dspsift |  hahog |  orb |  sift</dt><dd><p>Zvolte algoritmus pro extrakci klíčových bodů a výpočet deskriptorů. . Výchozí: <code class="docutils literal notranslate"><span class="pre">sift</span></code></p>
+<dt><a class="reference internal" href="feature-type/#feature-type"><span class="std std-ref">feature-type</span></a> akaze |  dspsift |  hahog |  orb |  sift</dt><dd><p>Choose the algorithm for extracting keypoints and computing descriptors. . Default: <code class="docutils literal notranslate"><span class="pre">dspsift</span></code></p>
 </dd>
 <dt><a class="reference internal" href="force-gps/#force-gps"><span class="std std-ref">force-gps</span></a></dt><dd><p>Použijte data GPS exif snímků pro rekonstrukci, i když jsou přítomny GCP. Tento příznak je užitečný, pokud máte vysoce přesná měření GPS. Pokud nejsou k dispozici žádné GCP, tento příznak nic neudělá. Výchozí hodnota: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -526,7 +526,7 @@
 </dd>
 <dt><a class="reference internal" href="pc-ept/#pc-ept"><span class="std std-ref">pc-ept</span></a></dt><dd><p>Export georeferencovaného mračna bodů ve formátu Entwine Point Tile (EPT). Výchozí hodnota: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
-<dt><a class="reference internal" href="pc-filter/#pc-filter"><span class="std std-ref">pc-filter</span></a> &lt;positive float&gt;</dt><dd><p>Filtruje mračno bodů odstraněním bodů, které se odchylují od místního průměru o více než N standardních odchylek. Nastavením na 0 filtrování vypnete. Výchozí hodnota: <code class="docutils literal notranslate"><span class="pre">2,5</span></code></p>
+<dt><a class="reference internal" href="pc-filter/#pc-filter"><span class="std std-ref">pc-filter</span></a> &lt;positive float&gt;</dt><dd><p>Filters the point cloud by removing points that deviate more than N standard deviations from the local mean. Set to 0 to disable filtering. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
 </dd>
 <dt><a class="reference internal" href="pc-las/#pc-las"><span class="std std-ref">pc-las</span></a></dt><dd><p>Export georeferencovaného mračna bodů ve formátu LAS. Výchozí hodnota: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>

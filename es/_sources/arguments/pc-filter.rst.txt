@@ -10,7 +10,7 @@ pc-filter
 
 **Options:** *<positive float>*
 
-Filters the point cloud by removing points that deviate more than N standard deviations from the local mean. Set to 0 to disable filtering. Default: ``2.5``
+Filters the point cloud by removing points that deviate more than N standard deviations from the local mean. Set to 0 to disable filtering. Default: ``5``
 
 
 
