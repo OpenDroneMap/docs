@@ -441,7 +441,8 @@
 <div><ul class="simple">
 <li><p>The first line should contain the name of the projection used for the geo coordinates. This can be specified either as a PROJ string (e.g. <code class="docutils literal notranslate"><span class="pre">+proj=utm</span> <span class="pre">+zone=10</span> <span class="pre">+ellps=WGS84</span> <span class="pre">+datum=WGS84</span> <span class="pre">+units=m</span> <span class="pre">+no_defs</span></code>), EPSG code (e.g. <code class="docutils literal notranslate"><span class="pre">EPSG:4326</span></code>) or as a <code class="docutils literal notranslate"><span class="pre">WGS84</span> <span class="pre">UTM</span> <span class="pre">&lt;zone&gt;[N|S]</span></code> value (eg. <code class="docutils literal notranslate"><span class="pre">WGS84</span> <span class="pre">UTM</span> <span class="pre">16N</span></code>)</p></li>
 <li><p>Mstari wa mbele ni muungano wa X, Y &amp; Z, muungano elementi picha wa jina la file na njia za taarifa za ziada, zilizotenganishwa na kichupo au nafasi:</p></li>
-<li><p>Thamani ya muinuko inaweza kuwekwa &quot;NaN&quot; kuonesha hapana kitu</p></li>
+<li><p>Avoid setting elevation values to &quot;NaN&quot; to indicate no value. This can cause processing failures. Instead use 0.0</p></li>
+<li><p>Similarly decreasing the no. of digits after the decimal place for <cite>geo_x</cite> and <cite>geo_y</cite> can also reduce processing failures.</p></li>
 <li><p>safu ya 7  (chaguo) kawaida inachukua lebo ya GCP.</p></li>
 </ul>
 </div></blockquote>

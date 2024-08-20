@@ -442,7 +442,8 @@
 <div><ul class="simple">
 <li><p>Baris pertama harus berisi nama proyeksi yang digunakan untuk koordinat geografis. Ini bisa ditentukan baik sebagai string PROJ (misalnya. <code class="docutils literal notranslate"><span class="pre">+proj=utm</span> <span class="pre">+zone=10</span> <span class="pre">+ellps=WGS84</span> <span class="pre">+datum=WGS84</span> <span class="pre">+units=m</span> <span class="pre">+no_defs</span></code>), kode EPSG (misalnya. <code class="docutils literal notranslate"><span class="pre">EPSG:4326</span></code>) atau seperti <code class="docutils literal notranslate"><span class="pre">WGS84</span> <span class="pre">UTM</span> <span class="pre">&lt;zone&gt;[N|S]</span></code> nilai (misalnya. <code class="docutils literal notranslate"><span class="pre">WGS84</span> <span class="pre">UTM</span> <span class="pre">16N</span></code>)</p></li>
 <li><p>Baris berikutnya adalah koordinat X, Y &amp; Z, piksel terkait, nama file gambar, dan fields tambahan opsional, dipisahkan oleh tab atau spasi:</p></li>
-<li><p>Nilai elevasi dapat diatur ke &quot;NaN&quot; untuk menunjukkan tidak ada nilai</p></li>
+<li><p>Avoid setting elevation values to &quot;NaN&quot; to indicate no value. This can cause processing failures. Instead use 0.0</p></li>
+<li><p>Similarly decreasing the no. of digits after the decimal place for <cite>geo_x</cite> and <cite>geo_y</cite> can also reduce processing failures.</p></li>
 <li><p>Kolom ke-7 (opsional) biasanya berisi label GCP.</p></li>
 </ul>
 </div></blockquote>

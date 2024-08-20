@@ -442,7 +442,8 @@
 <div><ul class="simple">
 <li><p>మొదటి పంక్తిలో జియో కోఆర్డినేట్‌లకు ఉపయోగించే ప్రొజెక్షన్ పేరు ఉండాలి. దీనిని PROJ స్ట్రింగ్‌గా పేర్కొనవచ్చు (ఉదా.``+proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), ఇపిఎస్‌జి కోడ్ (ఉదా. <code class="docutils literal notranslate"><span class="pre">EPSG:</span> <span class="pre">4326</span></code>) లేదా <code class="docutils literal notranslate"><span class="pre">WGS84</span> <span class="pre">UTM</span> <span class="pre">1</span> <span class="pre">[N</span> <span class="pre">|</span> <span class="pre">S]</span></code> విలువ (ఉదా. <code class="docutils literal notranslate"><span class="pre">WGS84</span> <span class="pre">UTM</span> <span class="pre">16N</span></code>)</p></li>
 <li><p>తదుపరి పంక్తులు X, Y. మీ అనుబంధ పిక్సెల్‌లు, ఇమేజ్ ఫైల్ పేరు మరియు ఐచ్ఛిక అదనపు ఫీల్డ్‌లు, ట్యాబ్‌లు లేదా ఖాళీలతో వేరు చేయబడతాయి:</p></li>
-<li><p>విలువ లేదని సూచించడానికి ఎలివేషన్ విలువలను &quot;NaN&quot; కు సెట్ చేయవచ్చు</p></li>
+<li><p>Avoid setting elevation values to &quot;NaN&quot; to indicate no value. This can cause processing failures. Instead use 0.0</p></li>
+<li><p>Similarly decreasing the no. of digits after the decimal place for <cite>geo_x</cite> and <cite>geo_y</cite> can also reduce processing failures.</p></li>
 <li><p>7 వ కాలమ్ (ఐచ్ఛికం) సాధారణంగా GCP యొక్క లేబుల్‌ను కలిగి ఉంటుంది.</p></li>
 </ul>
 </div></blockquote>
