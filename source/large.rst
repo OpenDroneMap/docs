@@ -204,7 +204,9 @@ Data collection effort, full 3D
 For best in class results with full 3D reconstruction and 5cm resolution, it is feasible to collect 1-2km\ :sup:`2` per person, per day. This requires the following set of flights:
 
 * 60% overlap nadir flight
-* 70-80% overlap 45-degree gimbal angle cross grid
+* 70-80% overlap 45-degree gimbal angle cross-grid
+
+The 45-degree cross-grid flight provides the basis for a fully tied together model, while the nadir flights provide the necessary texture for orthophoto texturing. The lower overlap  meets the minimum requirement for orthophoto products as facilitated by by feature matching from the much higher overlap cross-grid.
 
 Data collection effort, 2D and 2.5D products
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
