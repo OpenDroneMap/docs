@@ -646,55 +646,23 @@ The resulting accuracy is comparable to the commercially available photogrammetr
 </section>
 <section id="using-singularity">
 <h2>Using Singularity<a class="headerlink" href="#using-singularity" title="Permalink to this heading"></a></h2>
-<p>‘Singularity &lt;<a class="reference external" href="https://sylabs.io/">https://sylabs.io/</a>&gt;’_ is another container platform able to run Docker images. Singularity could be used from laptop to large HPC clusters, local university or company clusters, a single server, in the cloud…
-A container is a single file without anything else to install</p>
+<p>[Singularity](<a class="reference external" href="https://sylabs.io/">https://sylabs.io/</a>) is another container platform able to run Docker images. Singularity can be run both on local machins and in instances where the user does not have root access. Instances where a user may not have root privlidges include HPC clusters and cloud cluster resources.
+A container is a single file without anything else to install.</p>
 <section id="downloading-image">
 <h3>Downloading image<a class="headerlink" href="#downloading-image" title="Permalink to this heading"></a></h3>
 <p>Singularity can use ODM Docker container after their download. It creates .sif images</p>
-<p>For latest ODM Docker image</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span>singularity<span class="w"> </span>pull<span class="w"> </span>--disable-cache<span class="w">  </span>docker://opendronemap/odm:latest
-</pre></div>
-</div>
+<p>For latest ODM Docker image (Recommended)</p>
 <p>For latest ODM GPU Docker image</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>&gt;<span class="w"> </span>singularity<span class="w"> </span>pull<span class="w"> </span>--disable-cache<span class="w">  </span>docker://opendronemap/odm:gpu
-</pre></div>
-</div>
 </section>
 <section id="using-singularity-sif-image">
 <h3>Using Singularity SIF image<a class="headerlink" href="#using-singularity-sif-image" title="Permalink to this heading"></a></h3>
-<p>As Singularity has a different way to map directories than Docker, a bash script file is a good solution to map ODM directories.
-Here is a linux example for ODM</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>images_dir=/path_to_image_dir/
-name=`basename $images_dir`
-output_dir=/path_to_output_directories/$name
-mkdir -p $output_dir
-
-singularity run
---bind $images_dir:/$output_dir/code/images,\
---writable-tmpfs odm_latest.sif  \
---orthophoto-png --mesh-octree-depth 12 --ignore-gsd --dtm \
---smrf-threshold 0.4 --smrf-window 24 --dsm --pc-csv --pc-las --orthophoto-kmz \
---ignore-gsd  --matcher-type flann --feature-quality ultra --max-concurrency 16 \
---use-hybrid-bundle-adjustment --build-overviews --time --min-num-features 10000 \
---project-path $output_dir
-</pre></div>
-</div>
-<p>Here is a linux example for the ODM with GPU</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>images_dir=/path_to_image_dir/
-name=`basename $images_dir`
-output_dir=/path_to_output_directories/$name
-mkdir -p $output_dir
-
-singularity run
---bind $images_dir:/$output_dir/code/images,\
---writable-tmpfs odm_latest.sif  \
---orthophoto-png --mesh-octree-depth 12 --ignore-gsd --dtm \
---smrf-threshold 0.4 --smrf-window 24 --dsm --pc-csv --pc-las --orthophoto-kmz \
---ignore-gsd  --matcher-type flann --feature-quality ultra --max-concurrency 16 \
---use-hybrid-bundle-adjustment --build-overviews --time --min-num-features 10000 \
---project-path $output_dir
-</pre></div>
-</div>
+<p>Once you have used one of the above commands to download and create the <cite>odm_latest.sif</cite> image, it can be ran using singularity.
+Place your images in a directory named “images” (for example /my/project/images) , then simply run</p>
+<p>..code:: bash</p>
+<blockquote>
+<div><p>singularity run –bind /my/project:datasets/code odm_latest.sif –project-path /datasets</p>
+</div></blockquote>
+<p>Like with docker, additional Options and Flags can be added to the command.</p>
 </section>
 </section>
 <section id="using-odm-from-low-bandwidth-location">

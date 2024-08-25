@@ -299,63 +299,34 @@ Docker has a lamentable use of space and by default does not clean up excess dat
 Using Singularity
 *****************
 
-'Singularity <https://sylabs.io/>'_ is another container platform able to run Docker images. Singularity could be used from laptop to large HPC clusters, local university or company clusters, a single server, in the cloud...
-A container is a single file without anything else to install
+[Singularity](https://sylabs.io/) is another container platform able to run Docker images. Singularity can be run both on local machins and in instances where the user does not have root access. Instances where a user may not have root privlidges include HPC clusters and cloud cluster resources.
+A container is a single file without anything else to install.
 
 Downloading image
 =================
 Singularity can use ODM Docker container after their download. It creates .sif images
 
-For latest ODM Docker image
+For latest ODM Docker image (Recommended)
 
 .. code:: bash
-  
-  > singularity pull --disable-cache  docker://opendronemap/odm:latest
+   singularity pull --disable-cache  docker://opendronemap/odm:latest
 
 For latest ODM GPU Docker image
 
 .. code:: bash
-  
-  > singularity pull --disable-cache  docker://opendronemap/odm:gpu
+   singularity pull --disable-cache  docker://opendronemap/odm:gpu
 
 Using Singularity SIF image
 ===========================
 
-As Singularity has a different way to map directories than Docker, a bash script file is a good solution to map ODM directories. 
-Here is a linux example for ODM ::
+Once you have used one of the above commands to download and create the `odm_latest.sif` image, it can be ran using singularity. 
+Place your images in a directory named “images” (for example /my/project/images) , then simply run
 
-   images_dir=/path_to_image_dir/
-   name=`basename $images_dir`
-   output_dir=/path_to_output_directories/$name
-   mkdir -p $output_dir 
+..code:: bash
 
-   singularity run
-   --bind $images_dir:/$output_dir/code/images,\
-   --writable-tmpfs odm_latest.sif  \
-   --orthophoto-png --mesh-octree-depth 12 --ignore-gsd --dtm \
-   --smrf-threshold 0.4 --smrf-window 24 --dsm --pc-csv --pc-las --orthophoto-kmz \
-   --ignore-gsd  --matcher-type flann --feature-quality ultra --max-concurrency 16 \
-   --use-hybrid-bundle-adjustment --build-overviews --time --min-num-features 10000 \
-   --project-path $output_dir
+   singularity run --bind /my/project:datasets/code odm_latest.sif --project-path /datasets
 
-
-Here is a linux example for the ODM with GPU ::
-
-   images_dir=/path_to_image_dir/
-   name=`basename $images_dir`
-   output_dir=/path_to_output_directories/$name
-   mkdir -p $output_dir 
-
-   singularity run
-   --bind $images_dir:/$output_dir/code/images,\
-   --writable-tmpfs odm_latest.sif  \
-   --orthophoto-png --mesh-octree-depth 12 --ignore-gsd --dtm \
-   --smrf-threshold 0.4 --smrf-window 24 --dsm --pc-csv --pc-las --orthophoto-kmz \
-   --ignore-gsd  --matcher-type flann --feature-quality ultra --max-concurrency 16 \
-   --use-hybrid-bundle-adjustment --build-overviews --time --min-num-features 10000 \
-   --project-path $output_dir
-
-
+Like with docker, additional Options and Flags can be added to the command.
 
 *************************************
 Using ODM from low-bandwidth location
