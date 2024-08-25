@@ -348,6 +348,11 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#limitations">Mipaka</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#estimating-data-collection-effort">Estimating data collection effort</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#data-collection-effort-full-3d">Data collection effort, full 3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-collection-effort-2d-and-2-5d-products">Data collection effort, 2D and 2.5D products</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#acknowledgments">Tunakiri</a></li>
 </ul>
 </li>
@@ -573,6 +578,28 @@ info:<span class="w"> </span>Found<span class="w"> </span>docker-machine<span cl
 <h2>Mipaka<a class="headerlink" href="#limitations" title="Permalink to this heading"></a></h2>
 <p>Mfumo wa 3D meshes kwa sasa haijaunganishwa kama sehemu ya mpangilio kazi (Ni point cloud pekee, DEM na orthophoto).</p>
 <p>GCPs inasaidiwa kikamilifu, lakini kuna mahitaji angalau point 3 za GCP kwa kila submodel kwa georeferencing kuchukua nafasi. Ikiwa submodel ina unafuu kuliko GCP 3, muungano wa GCP zilobakia + EXIF data zitatumika badala yake (ambayo itakua na usahihi mdogo). Tunapendekeza kutumia <code class="docutils literal notranslate"><span class="pre">image_groups.txt</span></code> faili kupelekea udhibiti sahihi wa mgawanyo wa submodel ukitumia GCP.</p>
+</section>
+<section id="estimating-data-collection-effort">
+<h2>Estimating data collection effort<a class="headerlink" href="#estimating-data-collection-effort" title="Permalink to this heading"></a></h2>
+<p>Larger datasets can be collected with specialized fix wing UAVs, vertical takeoff and landing (VTOL) UAVs, and collected quite efficiently under certain conditions. In many instances, however, we are constrained to doing data collection efforts with commodity quadcopters. In these cases, a common question is the data collection time under ideal conditions with commodity equipment.</p>
+<section id="data-collection-effort-full-3d">
+<h3>Data collection effort, full 3D<a class="headerlink" href="#data-collection-effort-full-3d" title="Permalink to this heading"></a></h3>
+<p>For best in class results with full 3D reconstruction and 5cm resolution, it is feasible to collect 1-2km<sup>2</sup> per person, per day. This requires the following set of flights:</p>
+<ul class="simple">
+<li><p>60% overlap nadir flight</p></li>
+<li><p>70-80% overlap 45-degree gimbal angle cross-grid</p></li>
+</ul>
+<p>The 45-degree cross-grid flight provides the basis for a fully tied together model, while the nadir flights provide the necessary texture for orthophoto texturing. The lower overlap  meets the minimum requirement for orthophoto products as facilitated by by feature matching from the much higher overlap cross-grid.</p>
+</section>
+<section id="data-collection-effort-2d-and-2-5d-products">
+<h3>Data collection effort, 2D and 2.5D products<a class="headerlink" href="#data-collection-effort-2d-and-2-5d-products" title="Permalink to this heading"></a></h3>
+<p>For best in class results 2D and 2.5D products and 5cm resolution, it is feasible to collect 2-4km<sup>2</sup> per person, per day. This requires the following set of flights:</p>
+<ul class="simple">
+<li><p>70-80% overlap slightly off-nadir (5-10 degree off nadir)</p></li>
+</ul>
+<p>For more complex buildings and vegetation, aim for closer to 80% overlap. If buildings, vegetation, and terrain changes are not complex, it's quite feasible to use closer to 70% overlap.</p>
+<p>(credit: derived from ongoing conversations with Ivan Gayton, Humanitarian OpenStreetMap Team)</p>
+</section>
 </section>
 <section id="acknowledgments">
 <h2>Tunakiri<a class="headerlink" href="#acknowledgments" title="Permalink to this heading"></a></h2>
