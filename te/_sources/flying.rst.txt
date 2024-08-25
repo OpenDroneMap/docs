@@ -22,8 +22,8 @@ For more complex buildings and vegetation, aim for closer to 80-83% overlap. If 
 
 (credit: derived from ongoing conversations with Ivan Gayton, Humanitarian OpenStreetMap Team)
 
-Other resources on flying:
-^^^^^^^^^^^^^^^^^^^^^^^^^^
+Other resources on flying
+^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The `Humanitarian OpenStreetMap team <https://www.hotosm.org/>`_ has guidelines on `flying for UAV mapping <https://uav-guidelines.openaerialmap.org/>`_:
 
