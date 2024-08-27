@@ -299,34 +299,48 @@ Docker has a lamentable use of space and by default does not clean up excess dat
 Using Singularity
 *****************
 
-[Singularity](https://sylabs.io/) is another container platform able to run Docker images. Singularity can be run both on local machins and in instances where the user does not have root access. Instances where a user may not have root privlidges include HPC clusters and cloud cluster resources.
+`Singularity <https://sylabs.io/>`__ is another container platform able to run Docker images. 
+Singularity can be run both on local machins and in instances where the user does not have root access. 
+Instances where a user may not have root privlidges include HPC clusters and cloud cluster resources.
 A container is a single file without anything else to install.
 
-Downloading image
-=================
-Singularity can use ODM Docker container after their download. It creates .sif images
+Build Singularity image from Docker image
+=========================================
+Singularity can use Docker image to build SIF image.
 
-For latest ODM Docker image (Recommended)
-
-.. code:: bash
-   singularity pull --disable-cache  docker://opendronemap/odm:latest
-
-For latest ODM GPU Docker image
+For latest ODM Docker image (Recommended) :
 
 .. code:: bash
-   singularity pull --disable-cache  docker://opendronemap/odm:gpu
+
+   singularity build --disable-cache -f odm_latest.sif docker://opendronemap/odm:latest
+
+For latest ODM GPU Docker image :
+
+.. code:: bash
+   
+   singularity build --disable-cache -f odm_gpu.sif docker://opendronemap/odm:gpu
 
 Using Singularity SIF image
 ===========================
 
 Once you have used one of the above commands to download and create the `odm_latest.sif` image, it can be ran using singularity. 
-Place your images in a directory named “images” (for example /my/project/images) , then simply run
+Place your images in a directory named “images” (for example /my/project/images) , then simply run :
 
-..code:: bash
+.. code:: bash
 
-   singularity run --bind /my/project:datasets/code odm_latest.sif --project-path /datasets
+   singularity run --bind /my/project:/datasets/code odm_latest.sif --project-path /datasets
 
-Like with docker, additional Options and Flags can be added to the command.
+Like with docker, additional `Options and Flags <https://docs.opendronemap.org/arguments/>`_ can be added to the command :
+
+.. code:: bash
+
+   singularity run --bind /my/project:/datasets/code \
+   --writable-tmpfs odm_latest.sif \
+   --orthophoto-png --mesh-octree-depth 12 --ignore-gsd --dtm \
+   --smrf-threshold 0.4 --smrf-window 24 --dsm --pc-csv --pc-las --orthophoto-kmz \
+   --ignore-gsd --matcher-type flann --feature-quality ultra --max-concurrency 16 \
+   --use-hybrid-bundle-adjustment --build-overviews --time --min-num-features 10000 \
+   --project-path /datasets
 
 *************************************
 Using ODM from low-bandwidth location
