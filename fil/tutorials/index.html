@@ -102,7 +102,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#using-singularity">Using Singularity</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#downloading-image">Downloading image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#build-singularity-image-from-docker-image">Build Singularity image from Docker image</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#using-singularity-sif-image">Using Singularity SIF image</a></li>
 </ul>
 </li>
@@ -675,23 +675,39 @@ The resulting accuracy is comparable to the commercially available photogrammetr
 </section>
 <section id="using-singularity">
 <h2>Using Singularity<a class="headerlink" href="#using-singularity" title="Permalink to this heading"></a></h2>
-<p>[Singularity](<a class="reference external" href="https://sylabs.io/">https://sylabs.io/</a>) is another container platform able to run Docker images. Singularity can be run both on local machins and in instances where the user does not have root access. Instances where a user may not have root privlidges include HPC clusters and cloud cluster resources.
+<p><a class="reference external" href="https://sylabs.io/">Singularity</a> is another container platform able to run Docker images.
+Singularity can be run both on local machins and in instances where the user does not have root access.
+Instances where a user may not have root privlidges include HPC clusters and cloud cluster resources.
 A container is a single file without anything else to install.</p>
-<section id="downloading-image">
-<h3>Downloading image<a class="headerlink" href="#downloading-image" title="Permalink to this heading"></a></h3>
-<p>Singularity can use ODM Docker container after their download. It creates .sif images</p>
-<p>For latest ODM Docker image (Recommended)</p>
-<p>For latest ODM GPU Docker image</p>
+<section id="build-singularity-image-from-docker-image">
+<h3>Build Singularity image from Docker image<a class="headerlink" href="#build-singularity-image-from-docker-image" title="Permalink to this heading"></a></h3>
+<p>Singularity can use Docker image to build SIF image.</p>
+<p>For latest ODM Docker image (Recommended) :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>singularity<span class="w"> </span>build<span class="w"> </span>--disable-cache<span class="w"> </span>-f<span class="w"> </span>odm_latest.sif<span class="w"> </span>docker://opendronemap/odm:latest
+</pre></div>
+</div>
+<p>For latest ODM GPU Docker image :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>singularity<span class="w"> </span>build<span class="w"> </span>--disable-cache<span class="w"> </span>-f<span class="w"> </span>odm_gpu.sif<span class="w"> </span>docker://opendronemap/odm:gpu
+</pre></div>
+</div>
 </section>
 <section id="using-singularity-sif-image">
 <h3>Using Singularity SIF image<a class="headerlink" href="#using-singularity-sif-image" title="Permalink to this heading"></a></h3>
 <p>Once you have used one of the above commands to download and create the <cite>odm_latest.sif</cite> image, it can be ran using singularity.
-Place your images in a directory named “images” (for example /my/project/images) , then simply run</p>
-<p>..code:: bash</p>
-<blockquote>
-<div><p>singularity run --bind /my/project:datasets/code odm_latest.sif --project-path /datasets</p>
-</div></blockquote>
-<p>Like with docker, additional Options and Flags can be added to the command.</p>
+Place your images in a directory named “images” (for example /my/project/images) , then simply run :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>singularity<span class="w"> </span>run<span class="w"> </span>--bind<span class="w"> </span>/my/project:/datasets/code<span class="w"> </span>odm_latest.sif<span class="w"> </span>--project-path<span class="w"> </span>/datasets
+</pre></div>
+</div>
+<p>Like with docker, additional <a class="reference external" href="https://docs.opendronemap.org/arguments/">Options and Flags</a> can be added to the command :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>singularity<span class="w"> </span>run<span class="w"> </span>--bind<span class="w"> </span>/my/project:/datasets/code<span class="w"> </span><span class="se">\</span>
+--writable-tmpfs<span class="w"> </span>odm_latest.sif<span class="w"> </span><span class="se">\</span>
+--orthophoto-png<span class="w"> </span>--mesh-octree-depth<span class="w"> </span><span class="m">12</span><span class="w"> </span>--ignore-gsd<span class="w"> </span>--dtm<span class="w"> </span><span class="se">\</span>
+--smrf-threshold<span class="w"> </span><span class="m">0</span>.4<span class="w"> </span>--smrf-window<span class="w"> </span><span class="m">24</span><span class="w"> </span>--dsm<span class="w"> </span>--pc-csv<span class="w"> </span>--pc-las<span class="w"> </span>--orthophoto-kmz<span class="w"> </span><span class="se">\</span>
+--ignore-gsd<span class="w"> </span>--matcher-type<span class="w"> </span>flann<span class="w"> </span>--feature-quality<span class="w"> </span>ultra<span class="w"> </span>--max-concurrency<span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="se">\</span>
+--use-hybrid-bundle-adjustment<span class="w"> </span>--build-overviews<span class="w"> </span>--time<span class="w"> </span>--min-num-features<span class="w"> </span><span class="m">10000</span><span class="w"> </span><span class="se">\</span>
+--project-path<span class="w"> </span>/datasets
+</pre></div>
+</div>
 </section>
 </section>
 <section id="using-odm-from-low-bandwidth-location">
