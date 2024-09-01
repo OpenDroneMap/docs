@@ -117,7 +117,7 @@ In most of the cases a lawn mower flight pattern is capable of producing highly 
 .. figure:: images/lawnmower_pattern.png
    :alt: a simple lawnmower flight pattern can produce accurate results
    :align: center
-   
+
 Recommended overlap would be between 75% and 80% with a sidelap in the order of 65% to 70%. It is also recommended to slightly increase overlap and sidelap as the flight height is increased.
 
 Flight height
@@ -158,17 +158,17 @@ Measuring
 As almost 50% of the material will be found in the first 20% of the stockpile height, special care should be taken in adequately defining the base plane.
 
 .. figure:: images/stockpile.png
-   :alt: almost 50% of the material will be found in the first 20% of the stockpile height 
+   :alt: almost 50% of the material will be found in the first 20% of the stockpile height
    :align: center
 
-In WebODM Dashboard, clic on "view map" to start a 2D view of your project. 
+In WebODM Dashboard, clic on "view map" to start a 2D view of your project.
 
 Once in the 2D map view, clic on the "Measure volume, area and length" button.
 
 .. figure:: images/measurement1.png
    :alt: clic on the "Measure volume, area and length" button
    :align: center
-   
+
 then clic on "Create a new measurement"
 
 .. figure:: images/measurement2.png
@@ -180,13 +180,13 @@ Start placing the points to define the stockpile base plane
 .. figure:: images/measurement3.png
    :alt: Define the stockpile base plane
    :align: center
- 
+
 Clic on "Finish measurement" to finish the process.
 
 .. figure:: images/measurement4.png
    :alt: Clic on "Finish measurement" to finish the process
    :align: center
-   
+
 Dialog box will show the  message "Computing ..." for a few seconds, and after the computing is finished the volume measurement value will be displayed.
 
 .. figure:: images/measurement7.png
@@ -319,7 +319,7 @@ For latest ODM GPU Docker image
 Using Singularity SIF image
 ===========================
 
-Once you have used one of the above commands to download and create the `odm_latest.sif` image, it can be ran using singularity. 
+Once you have used one of the above commands to download and create the `odm_latest.sif` image, it can be ran using singularity.
 Place your images in a directory named “images” (for example /my/project/images) , then simply run
 
 ..code:: bash
@@ -386,7 +386,7 @@ Install
       address of your server). If you want to follow this example
       closely, *do* use the username ``odm``; then your install path
       will be ``/home/odm/ODM/`` and will match all of the examples in
-      this document. 
+      this document.
    -  Go ahead and execute ``sudo apt update`` and ``sudo apt upgrade`` to ensure
       your server isn’t dangerously without updates. Make sure to stay with
       Ubuntu 18.04.
@@ -455,7 +455,7 @@ Prep data and project
       example, into the volume we attached to the cloud machine at
       ``/mnt/odmdata/``.
    -  This will take some bandwidth. No way around the size of the
-      files.\ `1 <#footnote1>`__, \ `2 <#footnote2>`__\ 
+      files.\ `1 <#footnote1>`__, \ `2 <#footnote2>`__\
 
 Directory structure
 ^^^^^^^^^^^^^^^^^^^
@@ -653,7 +653,7 @@ By default, Eye Dome-Lighting is enabled on Potree 3D viewer, but it can be disa
 Background
 ----------
 
-Potree 3D viewer background can be modified. Available options are **Skybox** / **Gradient** / **Black** / **White** / **None** 
+Potree 3D viewer background can be modified. Available options are **Skybox** / **Gradient** / **Black** / **White** / **None**
 
 .. figure:: images/Background_animation.gif
    :alt: Background selection
@@ -687,7 +687,7 @@ Measurements are performed by left clicking on the desired points and for some t
 
 **Angle**
 
-This tool measures the tridimensional angle formed by the lines connecting 3 points. 
+This tool measures the tridimensional angle formed by the lines connecting 3 points.
 To start a measurement, click on the angle icon, then left click on 3 point and the process will be automatically ended.
 Further information can also be obtained from selecting this element under the scene section.
 
@@ -839,7 +839,7 @@ To create an animation, adjust the points for the camera locations and camera di
 Scene
 =====
 
-The Scene section displays a file tree containing all the scene elements. 
+The Scene section displays a file tree containing all the scene elements.
 Elements are arranged in six groups, which are **Point clouds** / **Measurements** / **Annotations**
 / **Other** / **Vector** / **Images**
 
@@ -853,3 +853,177 @@ For instance, point clouds properties can be modified to show elevation and also
 
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_!
+
+
+***************************************************
+ClusterODM, NodeODM, SLURM, with Singularity on HPC
+***************************************************
+
+Let's say that we will get ClusterODM and NodeODM images in the same folder
+
+Downloading and installing the images
+=====================================
+
+In this example ClusterODM and NodeODM will be installed in $HOME/git
+
+ClusterODM
+----------
+
+::
+
+   cd $HOME/git
+   git clone https://github.com/OpenDroneMap/ClusterODM
+   cd ClusterODM
+   singularity pull --force --disable-cache docker://opendronemap/clusterodm:latest
+
+ClusterODM image needs to be "installed"
+::
+
+   singularity shell --bind $PWD:/var/www clusterodm_latest.sif`
+
+And then in the Singularity shell
+::
+
+   cd /var/www
+   npm install --production
+   exit
+
+NodeODM
+-------
+
+::
+
+   cd $HOME/git
+   git clone https://github.com/OpenDroneMap/NodeODM
+   cd NodeODMDM
+   singularity pull --force --disable-cache docker://opendronemap/nodeodm:latest
+
+NodeODM image needs to be "installed"
+::
+
+   singularity shell --bind $PWD:/var/www nodeodm_latest.sif
+
+And then in the Singularity shell
+::
+
+   cd /var/www
+   npm install --production
+   exit
+
+
+
+
+Launching
+=========
+On two different terminals connected to the HPC , or with tmux (or screen...) a slurm script will start NodeODM instances.
+Then ClusterODM could be started
+
+NodeODM
+-------
+Create a nodeodm.slurm script in $HOME/git/NodeODM with
+::
+
+   #!/usr/bin/bash
+   #source .bashrc
+
+
+   #SBATCH -J NodeODM
+   #SBATCH --partition=ncpulong,ncpu
+   #SBATCH --nodes=2
+   #SBATCH --mem=10G
+   #SBATCH --output logs_nodeodm-%j.out
+
+   cd $HOME/git/NodeODM
+
+   #Launched on first node
+   srun --nodes=1 singularity run --bind $PWD:/var/www  nodeodm_latest.sif $
+
+   #Launch on second node
+
+   srun --nodes=1 singularity run --bind $PWD:/var/www  nodeodm_latest.sif $
+
+   wait
+
+start this script with
+::
+
+   sbatch $HOME/git/NodeODM/nodeodm.slurm
+
+logs of this script are written in $HOME/git/NodeODM/logs_nodeodm-XXX.out XXX is the slurm job number
+
+
+
+ClusterODM
+----------
+Then you can start ClusterODM on the head node with
+
+::
+
+   cd $HOME/git/ClusterODM
+   singularity run --bind $PWD:/var/www  clusterodm_latest.sif
+
+Connecting Nodes to ClusterODM
+==============================
+Use the following command to get the nodes names where NodeODM is running
+::
+
+   squeue -u $USER
+
+   ex : squeue -u $USER
+                JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+               1829323      ncpu  NodeODM  bonaime  R      24:19      2 ncpu[015-016]
+
+   In this case, NodeODM run on ncpu015 and ncpu016
+
+Web interface
+-------------
+ClusterODM administrative web interface could be used to wire NodeODMs to the ClusterODM.
+Open another shell window in your local machine and tunnel them to the HPC using the following command:
+::
+
+   ssh -L localhost:10000:localhost:10000 yourusername@hpc-address
+Replace yourusername and hpc-address with your appropriate username and the hpc address.
+
+Basically, this command will tunnel the port of the hpc to your local port.
+After this, open a browser in your local machine and connect to http://localhost:10000.
+Port 10000 is where ClusterODM's administrative web interface is hosted at.
+Then NodeODMs could be add/deleted to ClusterODM
+This is what it looks like :
+
+.. figure:: images/clusterodm-admin-interface.png
+   :alt: Clusterodm admin interface
+   :align: center
+
+
+
+telnet
+------
+You can connect to the ClusterODM CLI and wire the NodeODMs. For the previous example :
+
+telnet localhost 8080
+> NODE ADD ncpu015 3000
+> NODE ADD ncpu016 3000
+> NODE LIST
+
+
+
+
+Using ClusterODM and its NodeODMs
+=================================
+
+Open another shell window in your local machine and tunnel them to the HPC using the following command:
+::
+
+   ssh -L localhost:10000:localhost:10000 yourusername@hpc-address
+Replace yourusername and hpc-address with your appropriate username and the hpc address.
+
+After this, open a browser in your local machine and connect to  http://localhost:3000 with your browser
+Here, you can Assign Tasks and observe the tasks' processes.
+
+.. figure:: images/clusterodm-user-interface.png
+   :alt: Clusterodm user interface
+   :align: center
+
+
+
+After adding images in this browser, you can press Start Task and see ClusterODM assigning tasks to the nodes you have wired to. Go for a walk and check the progress.
