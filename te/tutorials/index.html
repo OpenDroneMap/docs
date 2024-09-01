@@ -138,6 +138,25 @@
 <li class="toctree-l3"><a class="reference internal" href="#scene">Scene</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#clusterodm-nodeodm-slurm-with-singularity-on-hpc">ClusterODM, NodeODM, SLURM, with Singularity on HPC</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#downloading-and-installing-the-images">Downloading and installing the images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#clusterodm">ClusterODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#nodeodm">NodeODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#launching">Launching</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">NodeODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#connecting-nodes-to-clusterodm">Connecting Nodes to ClusterODM</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#web-interface">Web interface</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#telnet">telnet</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#using-clusterodm-and-its-nodeodms">Using ClusterODM and its NodeODMs</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../arguments/">ఎంపికలు మరియు ఫ్లాగ్స్</a><ul>
@@ -1108,6 +1127,148 @@ Elements are arranged in six groups, which are <strong>Point clouds</strong> / <
 <img alt="Tools - Navigation controls" src="../_images/pointcloud_elevation.png" />
 </figure>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst">this page</a>!</p>
+</section>
+</section>
+<section id="clusterodm-nodeodm-slurm-with-singularity-on-hpc">
+<h2>ClusterODM, NodeODM, SLURM, with Singularity on HPC<a class="headerlink" href="#clusterodm-nodeodm-slurm-with-singularity-on-hpc" title="Permalink to this heading"></a></h2>
+<p>Let's say that we will get ClusterODM and NodeODM images in the same folder</p>
+<section id="downloading-and-installing-the-images">
+<h3>Downloading and installing the images<a class="headerlink" href="#downloading-and-installing-the-images" title="Permalink to this heading"></a></h3>
+<p>In this example ClusterODM and NodeODM will be installed in $HOME/git</p>
+<section id="clusterodm">
+<h4>ClusterODM<a class="headerlink" href="#clusterodm" title="Permalink to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $HOME/git
+git clone https://github.com/OpenDroneMap/ClusterODM
+cd ClusterODM
+singularity pull --force --disable-cache docker://opendronemap/clusterodm:latest
+</pre></div>
+</div>
+<p>ClusterODM image needs to be &quot;installed&quot;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>singularity shell --bind $PWD:/var/www clusterodm_latest.sif`
+</pre></div>
+</div>
+<p>And then in the Singularity shell</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span>
+<span class="n">npm</span> <span class="n">install</span> <span class="o">--</span><span class="n">production</span>
+<span class="n">exit</span>
+</pre></div>
+</div>
+</section>
+<section id="nodeodm">
+<h4>NodeODM<a class="headerlink" href="#nodeodm" title="Permalink to this heading"></a></h4>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $HOME/git
+git clone https://github.com/OpenDroneMap/NodeODM
+cd NodeODMDM
+singularity pull --force --disable-cache docker://opendronemap/nodeodm:latest
+</pre></div>
+</div>
+<p>NodeODM image needs to be &quot;installed&quot;</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>singularity shell --bind $PWD:/var/www nodeodm_latest.sif
+</pre></div>
+</div>
+<p>And then in the Singularity shell</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span>
+<span class="n">npm</span> <span class="n">install</span> <span class="o">--</span><span class="n">production</span>
+<span class="n">exit</span>
+</pre></div>
+</div>
+</section>
+</section>
+<section id="launching">
+<h3>Launching<a class="headerlink" href="#launching" title="Permalink to this heading"></a></h3>
+<p>On two different terminals connected to the HPC , or with tmux (or screen...) a slurm script will start NodeODM instances.
+Then ClusterODM could be started</p>
+<section id="id1">
+<h4>NodeODM<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<p>Create a nodeodm.slurm script in $HOME/git/NodeODM with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/usr/bin/bash
+#source .bashrc
+
+
+#SBATCH -J NodeODM
+#SBATCH --partition=ncpulong,ncpu
+#SBATCH --nodes=2
+#SBATCH --mem=10G
+#SBATCH --output logs_nodeodm-%j.out
+
+cd $HOME/git/NodeODM
+
+#Launched on first node
+srun --nodes=1 singularity run --bind $PWD:/var/www  nodeodm_latest.sif $
+
+#Launch on second node
+
+srun --nodes=1 singularity run --bind $PWD:/var/www  nodeodm_latest.sif $
+
+wait
+</pre></div>
+</div>
+<p>start this script with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sbatch $HOME/git/NodeODM/nodeodm.slurm
+</pre></div>
+</div>
+<p>logs of this script are written in $HOME/git/NodeODM/logs_nodeodm-XXX.out XXX is the slurm job number</p>
+</section>
+<section id="id2">
+<h4>ClusterODM<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
+<p>Then you can start ClusterODM on the head node with</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $HOME/git/ClusterODM
+singularity run --bind $PWD:/var/www  clusterodm_latest.sif
+</pre></div>
+</div>
+</section>
+</section>
+<section id="connecting-nodes-to-clusterodm">
+<h3>Connecting Nodes to ClusterODM<a class="headerlink" href="#connecting-nodes-to-clusterodm" title="Permalink to this heading"></a></h3>
+<p>Use the following command to get the nodes names where NodeODM is running</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>squeue -u $USER
+
+ex : squeue -u $USER
+             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
+            1829323      ncpu  NodeODM  bonaime  R      24:19      2 ncpu[015-016]
+
+In this case, NodeODM run on ncpu015 and ncpu016
+</pre></div>
+</div>
+<section id="web-interface">
+<h4>Web interface<a class="headerlink" href="#web-interface" title="Permalink to this heading"></a></h4>
+<p>ClusterODM administrative web interface could be used to wire NodeODMs to the ClusterODM.
+Open another shell window in your local machine and tunnel them to the HPC using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">L</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">10000</span><span class="p">:</span><span class="n">localhost</span><span class="p">:</span><span class="mi">10000</span> <span class="n">yourusername</span><span class="nd">@hpc</span><span class="o">-</span><span class="n">address</span>
+</pre></div>
+</div>
+<p>Replace yourusername and hpc-address with your appropriate username and the hpc address.</p>
+<p>Basically, this command will tunnel the port of the hpc to your local port.
+After this, open a browser in your local machine and connect to <a class="reference external" href="http://localhost:10000">http://localhost:10000</a>.
+Port 10000 is where ClusterODM's administrative web interface is hosted at.
+Then NodeODMs could be add/deleted to ClusterODM
+This is what it looks like :</p>
+<figure class="align-center">
+<img alt="Clusterodm admin interface" src="../_images/clusterodm-admin-interface.png" />
+</figure>
+</section>
+<section id="telnet">
+<h4>telnet<a class="headerlink" href="#telnet" title="Permalink to this heading"></a></h4>
+<p>You can connect to the ClusterODM CLI and wire the NodeODMs. For the previous example :</p>
+<p>telnet localhost 8080
+&gt; NODE ADD ncpu015 3000
+&gt; NODE ADD ncpu016 3000
+&gt; NODE LIST</p>
+</section>
+</section>
+<section id="using-clusterodm-and-its-nodeodms">
+<h3>Using ClusterODM and its NodeODMs<a class="headerlink" href="#using-clusterodm-and-its-nodeodms" title="Permalink to this heading"></a></h3>
+<p>Open another shell window in your local machine and tunnel them to the HPC using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">L</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">10000</span><span class="p">:</span><span class="n">localhost</span><span class="p">:</span><span class="mi">10000</span> <span class="n">yourusername</span><span class="nd">@hpc</span><span class="o">-</span><span class="n">address</span>
+</pre></div>
+</div>
+<p>Replace yourusername and hpc-address with your appropriate username and the hpc address.</p>
+<p>After this, open a browser in your local machine and connect to  <a class="reference external" href="http://localhost:3000">http://localhost:3000</a> with your browser
+Here, you can Assign Tasks and observe the tasks' processes.</p>
+<figure class="align-center">
+<img alt="Clusterodm user interface" src="../_images/clusterodm-user-interface.png" />
+</figure>
+<p>After adding images in this browser, you can press Start Task and see ClusterODM assigning tasks to the nodes you have wired to. Go for a walk and check the progress.</p>
 </section>
 </section>
 </section>
