@@ -12,7 +12,9 @@ align
 
 Path to a GeoTIFF DEM or a LAS/LAZ point cloud that the reconstruction outputs should be automatically aligned to. Experimental. Default: ``None``
 
-Uses [CODEM](https://github.com/NCALM-UH/CODEM, credits to Craig Glennie and the group at CRREL). The details of the method are available at https://github.com/NCALM-UH/CODEM/blob/main/docs/details.md.
+Uses `CODEM <https://github.com/NCALM-UH/CODEM>`_, credits to Craig Glennie and the group at CRREL.
+
+The details of the method are available at https://github.com/NCALM-UH/CODEM/blob/main/docs/details.md.
 
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/align.rst>`_!
