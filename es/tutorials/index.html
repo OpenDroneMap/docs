@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Tutoriales &mdash; documentación de OpenDroneMap - 3.5.3</title>
+  <title>Tutoriales &mdash; documentación de OpenDroneMap - 3.5.4</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -34,7 +34,7 @@
             <a href="../" class="icon icon-home"> OpenDroneMap
           </a>
               <div class="version">
-                3.5.3
+                3.5.4
               </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
@@ -102,11 +102,6 @@
 <li class="toctree-l3"><a class="reference internal" href="#cleaning-up-after-docker">Limpieza de Docker</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#using-singularity">Using Singularity</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#build-singularity-image-from-docker-image">Build Singularity image from Docker image</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#using-singularity-sif-image">Using Singularity SIF image</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="#using-odm-from-low-bandwidth-location">Usando ODM desde una ubicación de ancho de banda bajo</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#what-is-this-and-who-is-it-for">¿Qué es esto y para quién es?</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#steps">Pasos</a><ul>
@@ -138,25 +133,12 @@
 <li class="toctree-l3"><a class="reference internal" href="#scene">Escena</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#clusterodm-nodeodm-slurm-with-singularity-on-hpc">ClusterODM, NodeODM, SLURM, with Singularity on HPC</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#downloading-and-installing-the-images">Downloading and installing the images</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#clusterodm">ClusterODM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#nodeodm">NodeODM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-singularity">Using Singularity</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#build-singularity-image-from-docker-image">Build Singularity image from Docker image</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#using-singularity-sif-image">Using Singularity SIF image</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="#launching">Launching</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">NodeODM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">ClusterODM</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#connecting-nodes-to-clusterodm">Connecting Nodes to ClusterODM</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#web-interface">Web interface</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#telnet">telnet</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#using-clusterodm-and-its-nodeodms">Using ClusterODM and its NodeODMs</a></li>
-</ul>
-</li>
+<li class="toctree-l2"><a class="reference internal" href="#clusterodm-nodeodm-slurm-with-singularity-on-hpc">ClusterODM, NodeODM, SLURM, with Singularity on HPC</a></li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../arguments/">Opciones e indicadores</a><ul>
@@ -668,43 +650,6 @@
 <p>Docker tiene un uso lamentable del espacio y, de forma predeterminada, no limpia el exceso de datos y máquinas cuando los procesos están completos. Esto puede ser ventajoso si necesitamos acceder a un proceso que ya ha terminado, pero que lleva la carga de usar cantidades crecientes de almacenamiento a lo largo del tiempo. Maciej Łebkowski tiene una ʻexcelente descripción general de cómo administrar el uso excesivo del disco en la ventana acoplable &lt;<a class="reference external" href="https://lebkowski.name/docker-volumes/">https://lebkowski.name/docker-volumes/</a>&gt;`_.</p>
 </section>
 </section>
-<section id="using-singularity">
-<h2>Using Singularity<a class="headerlink" href="#using-singularity" title="Enlace permanente a este encabezado"></a></h2>
-<p><a class="reference external" href="https://sylabs.io/">Singularity</a> is another container platform able to run Docker images.
-Singularity can be run both on local machins and in instances where the user does not have root access.
-Instances where a user may not have root privlidges include HPC clusters and cloud cluster resources.
-A container is a single file without anything else to install.</p>
-<section id="build-singularity-image-from-docker-image">
-<h3>Build Singularity image from Docker image<a class="headerlink" href="#build-singularity-image-from-docker-image" title="Enlace permanente a este encabezado"></a></h3>
-<p>Singularity can use Docker image to build SIF image.</p>
-<p>For latest ODM Docker image (Recommended) :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>singularity<span class="w"> </span>build<span class="w"> </span>--disable-cache<span class="w"> </span>-f<span class="w"> </span>odm_latest.sif<span class="w"> </span>docker://opendronemap/odm:latest
-</pre></div>
-</div>
-<p>For latest ODM GPU Docker image :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>singularity<span class="w"> </span>build<span class="w"> </span>--disable-cache<span class="w"> </span>-f<span class="w"> </span>odm_gpu.sif<span class="w"> </span>docker://opendronemap/odm:gpu
-</pre></div>
-</div>
-</section>
-<section id="using-singularity-sif-image">
-<h3>Using Singularity SIF image<a class="headerlink" href="#using-singularity-sif-image" title="Enlace permanente a este encabezado"></a></h3>
-<p>Once you have used one of the above commands to download and create the <cite>odm_latest.sif</cite> image, it can be ran using singularity.
-Place your images in a directory named “images” (for example /my/project/images) , then simply run :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>singularity<span class="w"> </span>run<span class="w"> </span>--bind<span class="w"> </span>/my/project:/datasets/code<span class="w"> </span>odm_latest.sif<span class="w"> </span>--project-path<span class="w"> </span>/datasets
-</pre></div>
-</div>
-<p>Like with docker, additional <a class="reference external" href="https://docs.opendronemap.org/arguments/">Options and Flags</a> can be added to the command :</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>singularity<span class="w"> </span>run<span class="w"> </span>--bind<span class="w"> </span>/my/project:/datasets/code<span class="w"> </span><span class="se">\</span>
---writable-tmpfs<span class="w"> </span>odm_latest.sif<span class="w"> </span><span class="se">\</span>
---orthophoto-png<span class="w"> </span>--mesh-octree-depth<span class="w"> </span><span class="m">12</span><span class="w"> </span>--ignore-gsd<span class="w"> </span>--dtm<span class="w"> </span><span class="se">\</span>
---smrf-threshold<span class="w"> </span><span class="m">0</span>.4<span class="w"> </span>--smrf-window<span class="w"> </span><span class="m">24</span><span class="w"> </span>--dsm<span class="w"> </span>--pc-csv<span class="w"> </span>--pc-las<span class="w"> </span>--orthophoto-kmz<span class="w"> </span><span class="se">\</span>
---ignore-gsd<span class="w"> </span>--matcher-type<span class="w"> </span>flann<span class="w"> </span>--feature-quality<span class="w"> </span>ultra<span class="w"> </span>--max-concurrency<span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="se">\</span>
---use-hybrid-bundle-adjustment<span class="w"> </span>--build-overviews<span class="w"> </span>--time<span class="w"> </span>--min-num-features<span class="w"> </span><span class="m">10000</span><span class="w"> </span><span class="se">\</span>
---project-path<span class="w"> </span>/datasets
-</pre></div>
-</div>
-</section>
-</section>
 <section id="using-odm-from-low-bandwidth-location">
 <h2>Usando ODM desde una ubicación de ancho de banda bajo<a class="headerlink" href="#using-odm-from-low-bandwidth-location" title="Enlace permanente a este encabezado"></a></h2>
 <section id="what-is-this-and-who-is-it-for">
@@ -975,147 +920,114 @@ images folder for each project.</p></li>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst">esta página</a>!</p>
 </section>
 </section>
+<section id="using-singularity">
+<h2>Using Singularity<a class="headerlink" href="#using-singularity" title="Enlace permanente a este encabezado"></a></h2>
+<p><a class="reference external" href="https://sylabs.io/">Singularity</a> is another container platform able to run Docker images.
+Singularity can be run both on local machins and in instances where the user does not have root access.
+Instances where a user may not have root privlidges include HPC clusters and cloud cluster resources.
+A container is a single file without anything else to install.</p>
+<section id="build-singularity-image-from-docker-image">
+<h3>Build Singularity image from Docker image<a class="headerlink" href="#build-singularity-image-from-docker-image" title="Enlace permanente a este encabezado"></a></h3>
+<p>Singularity can use Docker image to build SIF image.</p>
+<p>For latest ODM Docker image (Recommended) :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>singularity<span class="w"> </span>build<span class="w"> </span>--disable-cache<span class="w"> </span>-f<span class="w"> </span>odm_latest.sif<span class="w"> </span>docker://opendronemap/odm:latest
+</pre></div>
+</div>
+<p>For latest ODM GPU Docker image :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>singularity<span class="w"> </span>build<span class="w"> </span>--disable-cache<span class="w"> </span>-f<span class="w"> </span>odm_gpu.sif<span class="w"> </span>docker://opendronemap/odm:gpu
+</pre></div>
+</div>
+</section>
+<section id="using-singularity-sif-image">
+<h3>Using Singularity SIF image<a class="headerlink" href="#using-singularity-sif-image" title="Enlace permanente a este encabezado"></a></h3>
+<p>Once you have used one of the above commands to download and create the <cite>odm_latest.sif</cite> image, it can be ran using singularity.
+Place your images in a directory named “images” (for example /my/project/images) , then simply run :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>singularity<span class="w"> </span>run<span class="w"> </span>--bind<span class="w"> </span>/my/project:/datasets/code<span class="w"> </span>odm_latest.sif<span class="w"> </span>--project-path<span class="w"> </span>/datasets
+</pre></div>
+</div>
+<p>Like with docker, additional <a class="reference external" href="https://docs.opendronemap.org/arguments/">Options and Flags</a> can be added to the command :</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>singularity<span class="w"> </span>run<span class="w"> </span>--bind<span class="w"> </span>/my/project:/datasets/code<span class="w"> </span><span class="se">\</span>
+--writable-tmpfs<span class="w"> </span>odm_latest.sif<span class="w"> </span><span class="se">\</span>
+--orthophoto-png<span class="w"> </span>--mesh-octree-depth<span class="w"> </span><span class="m">12</span><span class="w"> </span>--ignore-gsd<span class="w"> </span>--dtm<span class="w"> </span><span class="se">\</span>
+--smrf-threshold<span class="w"> </span><span class="m">0</span>.4<span class="w"> </span>--smrf-window<span class="w"> </span><span class="m">24</span><span class="w"> </span>--dsm<span class="w"> </span>--pc-csv<span class="w"> </span>--pc-las<span class="w"> </span>--orthophoto-kmz<span class="w"> </span><span class="se">\</span>
+--ignore-gsd<span class="w"> </span>--matcher-type<span class="w"> </span>flann<span class="w"> </span>--feature-quality<span class="w"> </span>ultra<span class="w"> </span>--max-concurrency<span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="se">\</span>
+--use-hybrid-bundle-adjustment<span class="w"> </span>--build-overviews<span class="w"> </span>--time<span class="w"> </span>--min-num-features<span class="w"> </span><span class="m">10000</span><span class="w"> </span><span class="se">\</span>
+--project-path<span class="w"> </span>/datasets
+</pre></div>
+</div>
+</section>
+</section>
 <section id="clusterodm-nodeodm-slurm-with-singularity-on-hpc">
 <h2>ClusterODM, NodeODM, SLURM, with Singularity on HPC<a class="headerlink" href="#clusterodm-nodeodm-slurm-with-singularity-on-hpc" title="Enlace permanente a este encabezado"></a></h2>
-<p>Let’s say that we will get ClusterODM and NodeODM images in the same folder</p>
-<section id="downloading-and-installing-the-images">
-<h3>Downloading and installing the images<a class="headerlink" href="#downloading-and-installing-the-images" title="Enlace permanente a este encabezado"></a></h3>
-<p>In this example ClusterODM and NodeODM will be installed in $HOME/git</p>
-<section id="clusterodm">
-<h4>ClusterODM<a class="headerlink" href="#clusterodm" title="Enlace permanente a este encabezado"></a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $HOME/git
-git clone https://github.com/OpenDroneMap/ClusterODM
-cd ClusterODM
-singularity pull --force --disable-cache docker://opendronemap/clusterodm:latest
-</pre></div>
-</div>
-<p>ClusterODM image needs to be «installed»</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>singularity shell --bind $PWD:/var/www clusterodm_latest.sif`
-</pre></div>
-</div>
-<p>And then in the Singularity shell</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span>
-<span class="n">npm</span> <span class="n">install</span> <span class="o">--</span><span class="n">production</span>
-<span class="n">exit</span>
-</pre></div>
-</div>
-</section>
-<section id="nodeodm">
-<h4>NodeODM<a class="headerlink" href="#nodeodm" title="Enlace permanente a este encabezado"></a></h4>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $HOME/git
-git clone https://github.com/OpenDroneMap/NodeODM
-cd NodeODMDM
-singularity pull --force --disable-cache docker://opendronemap/nodeodm:latest
-</pre></div>
-</div>
-<p>NodeODM image needs to be «installed»</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>singularity shell --bind $PWD:/var/www nodeodm_latest.sif
-</pre></div>
-</div>
-<p>And then in the Singularity shell</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">cd</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span>
-<span class="n">npm</span> <span class="n">install</span> <span class="o">--</span><span class="n">production</span>
-<span class="n">exit</span>
-</pre></div>
-</div>
-</section>
-</section>
-<section id="launching">
-<h3>Launching<a class="headerlink" href="#launching" title="Enlace permanente a este encabezado"></a></h3>
-<p>On two different terminals connected to the HPC , or with tmux (or screen…) a slurm script will start NodeODM instances.
-Then ClusterODM could be started</p>
-<section id="id1">
-<h4>NodeODM<a class="headerlink" href="#id1" title="Enlace permanente a este encabezado"></a></h4>
-<p>Create a nodeodm.slurm script in $HOME/git/NodeODM with</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>#!/usr/bin/bash
-#source .bashrc
+<p>You can write a SLURM script to schedule and set up available nodes with NodeODM for the ClusterODM to be wired to if you are on the HPC. Using SLURM will decrease the amount of time and processes needed to set up nodes for ClusterODM each time. This provides an easier way for user to use ODM on the HPC.</p>
+<p>To setup HPC with SLURM, you must make sure SLURM is installed.</p>
+<p>SLURM script will be different from cluster to cluster, depending on which nodes in the cluster that you have. However, the main idea is we want to run NodeODM on each node once, and by default, each NodeODM will be running on port 3000. Apptainer will be taking available ports starting from port 3000, so if your node’s port 3000 is open, by default NodeODM will be run on that node. After that, we want to run ClusterODM on the head node and connect the running NodeODMs to the ClusterODM. With that, we will have a functional ClusterODM running on HPC.</p>
+<p>Here is an example of SLURM script assigning nodes 48, 50, 51 to run NodeODM. You can freely change and use it depending on your system:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="ch">#!/usr/bin/bash</span>
+<span class="c1">#source. bashrc</span>
+<span class="c1">#SBATCH --partition=8core</span>
+<span class="c1">#SBATCH --nodelist-node [48,50, 51]</span>
+<span class="c1">#SBATCH --time 20:00:00</span>
 
+<span class="n">cd</span> <span class="n">SHOME</span>
+<span class="n">cd</span> <span class="n">ODM</span><span class="o">/</span><span class="n">NodeODM</span><span class="o">/</span>
 
-#SBATCH -J NodeODM
-#SBATCH --partition=ncpulong,ncpu
-#SBATCH --nodes=2
-#SBATCH --mem=10G
-#SBATCH --output logs_nodeodm-%j.out
+<span class="c1">#Launch on Node 48</span>
+<span class="n">srun</span> <span class="o">--</span><span class="n">nodes</span><span class="o">-</span><span class="mi">1</span> <span class="n">apptainer</span> <span class="n">run</span> <span class="o">--</span><span class="n">writable</span> <span class="n">node</span><span class="o">/</span> <span class="o">&amp;</span>
 
-cd $HOME/git/NodeODM
+<span class="c1">#Launch on node 50</span>
+<span class="n">srun</span> <span class="o">--</span><span class="n">nodes</span><span class="o">-</span><span class="mi">1</span> <span class="n">apptainer</span> <span class="n">run</span> <span class="o">--</span><span class="n">writable</span> <span class="n">node</span><span class="o">/</span> <span class="o">&amp;</span>
 
-#Launched on first node
-srun --nodes=1 singularity run --bind $PWD:/var/www  nodeodm_latest.sif $
-
-#Launch on second node
-
-srun --nodes=1 singularity run --bind $PWD:/var/www  nodeodm_latest.sif $
-
-wait
+<span class="c1">#Launch on node 51</span>
+<span class="n">srun</span> <span class="o">--</span><span class="n">nodes</span><span class="o">=</span><span class="mi">1</span> <span class="n">apptainer</span> <span class="n">run</span> <span class="o">--</span><span class="n">writable</span> <span class="n">node</span><span class="o">/</span> <span class="o">&amp;</span>
+<span class="n">wait</span>
 </pre></div>
 </div>
-<p>start this script with</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sbatch $HOME/git/NodeODM/nodeodm.slurm
+<p>You can check for available nodes using sinfo:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sinfo</span>
 </pre></div>
 </div>
-<p>logs of this script are written in $HOME/git/NodeODM/logs_nodeodm-XXX.out XXX is the slurm job number</p>
-</section>
-<section id="id2">
-<h4>ClusterODM<a class="headerlink" href="#id2" title="Enlace permanente a este encabezado"></a></h4>
-<p>Then you can start ClusterODM on the head node with</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cd $HOME/git/ClusterODM
-singularity run --bind $PWD:/var/www  clusterodm_latest.sif
+<p>Run the following command to schedule using the SLURM script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">sbatch</span> <span class="n">sample</span><span class="o">.</span><span class="n">slurm</span>
 </pre></div>
 </div>
-</section>
-</section>
-<section id="connecting-nodes-to-clusterodm">
-<h3>Connecting Nodes to ClusterODM<a class="headerlink" href="#connecting-nodes-to-clusterodm" title="Enlace permanente a este encabezado"></a></h3>
-<p>Use the following command to get the nodes names where NodeODM is running</p>
+<p>You can also check for currently running jobs using squeue:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>squeue -u $USER
-
-ex : squeue -u $USER
-             JOBID PARTITION     NAME     USER ST       TIME  NODES NODELIST(REASON)
-            1829323      ncpu  NodeODM  bonaime  R      24:19      2 ncpu[015-016]
-
-In this case, NodeODM run on ncpu015 and ncpu016
 </pre></div>
 </div>
-<section id="web-interface">
-<h4>Web interface<a class="headerlink" href="#web-interface" title="Enlace permanente a este encabezado"></a></h4>
-<p>ClusterODM administrative web interface could be used to wire NodeODMs to the ClusterODM.
-Open another shell window in your local machine and tunnel them to the HPC using the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">L</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">10000</span><span class="p">:</span><span class="n">localhost</span><span class="p">:</span><span class="mi">10000</span> <span class="n">yourusername</span><span class="nd">@hpc</span><span class="o">-</span><span class="n">address</span>
+<p>Unfortunately, SLURM does not handle assigning jobs to the head node. Hence, if we want to run ClusterODM on the head node, we have to run it locally. After that, you can connect to the CLI and wire the NodeODMs to the ClusterODMs. Here is an example following the sample SLURM script:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">telnet</span> <span class="n">localhost</span> <span class="mi">8080</span>
+<span class="o">&gt;</span> <span class="n">NODE</span> <span class="n">ADD</span> <span class="n">node48</span> <span class="mi">3000</span>
+<span class="o">&gt;</span> <span class="n">NODE</span> <span class="n">ADD</span> <span class="n">node50</span> <span class="mi">3000</span>
+<span class="o">&gt;</span> <span class="n">NODE</span> <span class="n">ADD</span> <span class="n">node51</span> <span class="mi">3000</span>
+<span class="o">&gt;</span> <span class="n">NODE</span> <span class="n">LIST</span>
 </pre></div>
 </div>
-<p>Replace yourusername and hpc-address with your appropriate username and the hpc address.</p>
-<p>Basically, this command will tunnel the port of the hpc to your local port.
-After this, open a browser in your local machine and connect to <a class="reference external" href="http://localhost:10000">http://localhost:10000</a>.
-Port 10000 is where ClusterODM’s administrative web interface is hosted at.
-Then NodeODMs could be add/deleted to ClusterODM
-This is what it looks like :</p>
+<p>You should always check to make sure which ports are being used to run NodeODM if ClusterODM is not wired correctly.</p>
+<p>It is also possible to pre-populate nodes using JSON. If starting ClusterODM from apptainer or docker, the relevant JSON is available at <cite>docker/data/nodes.json</cite>. Contents might look similar to the following:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span>
+        <span class="p">{</span><span class="s2">&quot;hostname&quot;</span><span class="p">:</span><span class="s2">&quot;node48&quot;</span><span class="p">,</span><span class="s2">&quot;port&quot;</span><span class="p">:</span><span class="s2">&quot;3000&quot;</span><span class="p">,</span><span class="s2">&quot;token&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;hostname&quot;</span><span class="p">:</span><span class="s2">&quot;node50&quot;</span><span class="p">,</span><span class="s2">&quot;port&quot;</span><span class="p">:</span><span class="s2">&quot;3000&quot;</span><span class="p">,</span><span class="s2">&quot;token&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">},</span>
+        <span class="p">{</span><span class="s2">&quot;hostname&quot;</span><span class="p">:</span><span class="s2">&quot;node51&quot;</span><span class="p">,</span><span class="s2">&quot;port&quot;</span><span class="p">:</span><span class="s2">&quot;3000&quot;</span><span class="p">,</span><span class="s2">&quot;token&quot;</span><span class="p">:</span><span class="s2">&quot;&quot;</span><span class="p">}</span>
+<span class="p">]</span>
+</pre></div>
+</div>
+<p>After finish hosting ClusterODM on the head node and finish wiring it to the NodeODM, you can try tunneling to see if ClusterODM works as expected. Open another shell window in your local machine and tunnel them to the HPC using the following command:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">L</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">10000</span><span class="p">:</span><span class="n">localhost</span><span class="p">:</span><span class="mi">10000</span> <span class="n">user</span><span class="nd">@hostname</span>
+</pre></div>
+</div>
+<p>Replace user and hostname with your appropriate username and the hpc address. Basically, this command will tunnel the port of the hpc to your local port. After this, open a browser in your local machine and connect to <cite>http://localhost:10000</cite>. Port 10000 is where ClusterODM’s administrative web interface is hosted at. This is what it looks like:</p>
 <figure class="align-center">
-<img alt="Clusterodm admin interface" src="../_images/clusterodm-admin-interface.png" />
+<img alt="Screenshot of ClusterODM's administrative web interface" src="https://user-images.githubusercontent.com/70782465/214938402-707bee90-ea17-4573-82f8-74096d9caf03.png" />
 </figure>
-</section>
-<section id="telnet">
-<h4>telnet<a class="headerlink" href="#telnet" title="Enlace permanente a este encabezado"></a></h4>
-<p>You can connect to the ClusterODM CLI and wire the NodeODMs. For the previous example :</p>
-<p>telnet localhost 8080
-&gt; NODE ADD ncpu015 3000
-&gt; NODE ADD ncpu016 3000
-&gt; NODE LIST</p>
-</section>
-</section>
-<section id="using-clusterodm-and-its-nodeodms">
-<h3>Using ClusterODM and its NodeODMs<a class="headerlink" href="#using-clusterodm-and-its-nodeodms" title="Enlace permanente a este encabezado"></a></h3>
-<p>Open another shell window in your local machine and tunnel them to the HPC using the following command:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">L</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">10000</span><span class="p">:</span><span class="n">localhost</span><span class="p">:</span><span class="mi">10000</span> <span class="n">yourusername</span><span class="nd">@hpc</span><span class="o">-</span><span class="n">address</span>
-</pre></div>
-</div>
-<p>Replace yourusername and hpc-address with your appropriate username and the hpc address.</p>
-<p>After this, open a browser in your local machine and connect to  <a class="reference external" href="http://localhost:3000">http://localhost:3000</a> with your browser
-Here, you can Assign Tasks and observe the tasks” processes.</p>
+<p>Here you can check the NodeODMs status and even add or delete working nodes.</p>
+<p>After that, do tunneling for port 3000 of the HPC to your local machine:</p>
+<p>ssh -L localhost:3000:localhost:3000 user&#64;hostname</p>
+<p>Port 3000 is ClusterODM’s proxy. This is the place we assign tasks to ClusterODM. Once again, connect to <cite>http://localhost:3000</cite> with your browser after tunneling. Here, you can Assign Tasks and observe the tasks” processes.</p>
 <figure class="align-center">
-<img alt="Clusterodm user interface" src="../_images/clusterodm-user-interface.png" />
+<img alt="Screenshot of ClusterODM's jobs interface" src="https://user-images.githubusercontent.com/70782465/214938234-113f99dc-f69e-4e78-a782-deaf94e986b0.png" />
 </figure>
 <p>After adding images in this browser, you can press Start Task and see ClusterODM assigning tasks to the nodes you have wired to. Go for a walk and check the progress.</p>
-</section>
 </section>
 </section>
 
