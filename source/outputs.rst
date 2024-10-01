@@ -108,7 +108,7 @@ List of all outputs
     │   └── gdal_translate_log.txt          # Log for georeferencing the png file
     └── odm_dem/
         ├── dsm.tif                     # Digital Surface Model Geotiff - the tops of everything
-        └── dtm.tif                     # Digital Terrain Model Geotoff - the ground.
+        └── dtm.tif                     # Digital Terrain Model Geotiff - the ground.
 
 
 
