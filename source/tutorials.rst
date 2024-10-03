@@ -1000,7 +1000,7 @@ Fork and clone repository
 
 First, let's fork the ODM repo, and checkout a new branch locally that will function as our development branch.
 
-:: bash
+::
 
 	git checkout -b my_clever_new_change
 	# Switched to a new branch 'my_clever_new_change'
@@ -1010,7 +1010,7 @@ Set up local NodeODM docker instance
 
 Next, we will set up a NodeODM instance with a locally mounted volume that points to our development branch of ODM
 
-:: bash
+::
 
 	docker run -d --restart unless-stopped -p 3000:3000 -v /path/to/cloned/ODM/repository/data:/code opendronemap/nodeodm
 
@@ -1018,8 +1018,6 @@ Modify code
 -----------
 
 For our test today, we will attempt to upgrade Ceres Solver to version 2.2.0. Most external libraries like Ceres can be found in the Superbuild directory. In this case we edit SuperBuild/cmake/External-Ceres.cmake, and set it to use version 2.2.0
-
-*** Vimdiff image
 
 Now that we've made that small, but substantive change, we need to rebuild Ceres on the docker image for testing.
 
@@ -1029,7 +1027,7 @@ Connect to NodeODM instance
 
 Let us find out our container name, in case we forgot:
 
-:: bash
+::
 
 	docker ps
 	CONTAINER ID   IMAGE                        COMMAND                  CREATED         STATUS         PORTS                                       NAMES
@@ -1037,7 +1035,7 @@ Let us find out our container name, in case we forgot:
 
 Now that we know the container name, we will connect to that instance using docker exec as follows:
 
-:: bash
+::
 
 	docker exec -it affectionate_yalow bash
 
@@ -1046,7 +1044,7 @@ Install and use changes
 
 Let us get the environment prepared for our testing:
 
-:: bash
+::
 
 	root@c997a4c5611b:/var/www# cd /code
 	./configure.sh installruntimedepsonly
@@ -1056,7 +1054,7 @@ Let us get the environment prepared for our testing:
 
 Next we can rebuild Ceres.
 
-:: bash
+::
 
 	cmake ../.
 	make -j$(nproc) ceres
