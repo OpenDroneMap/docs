@@ -821,9 +821,12 @@ For instance, point clouds properties can be modified to show elevation and also
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_!
 
-*****************
+********
+Advanced
+********
+
 Using Singularity
-*****************
+=================
 
 `Singularity <https://sylabs.io/>`__ is another container platform able to run Docker images. 
 Singularity can be run both on local machins and in instances where the user does not have root access. 
@@ -831,7 +834,8 @@ Instances where a user may not have root privlidges include HPC clusters and clo
 A container is a single file without anything else to install.
 
 Build Singularity image from Docker image
-=========================================
+-----------------------------------------
+
 Singularity can use Docker image to build SIF image.
 
 For latest ODM Docker image (Recommended) :
@@ -847,7 +851,7 @@ For latest ODM GPU Docker image :
    singularity build --disable-cache -f odm_gpu.sif docker://opendronemap/odm:gpu
 
 Using Singularity SIF image
-===========================
+---------------------------
 
 
 Once you have used one of the above commands to download and create the `odm_latest.sif` image, it can be ran using singularity. 
@@ -870,9 +874,8 @@ Like with docker, additional `Options and Flags <https://docs.opendronemap.org/a
    --project-path /datasets
 
 
-***************************************************
 ClusterODM, NodeODM, SLURM, with Singularity on HPC
-***************************************************
+===================================================
 
 
 You can write a SLURM script to schedule and set up available nodes with NodeODM for the ClusterODM to be wired to if you are on the HPC. Using SLURM will decrease the amount of time and processes needed to set up nodes for ClusterODM each time. This provides an easier way for user to use ODM on the HPC.
