@@ -1000,7 +1000,7 @@ Fork and clone repository
 
 First, let's fork the ODM repo, and checkout a new branch locally that will function as our development branch.
 
-.. code-block:: bash
+:: bash
 	git checkout -b my_clever_new_change
 	# Switched to a new branch 'my_clever_new_change'
 
@@ -1009,7 +1009,7 @@ Set up local NodeODM docker instance
 
 Next, we will set up a NodeODM instance with a locally mounted volume that points to our development branch of ODM
 
-.. code-block:: bash
+:: bash
 	docker run -d --restart unless-stopped -p 3000:3000 -v /path/to/cloned/ODM/repository/data:/code opendronemap/nodeodm
 
 Modify code
@@ -1027,14 +1027,14 @@ Connect to NodeODM instance
 
 Let us find out our container name, in case we forgot:
 
-.. code-block:: bash
+:: bash
 	docker ps
 	CONTAINER ID   IMAGE                        COMMAND                  CREATED         STATUS         PORTS                                       NAMES
 	c997a4c5611b   opendronemap/nodeodm         "/usr/bin/node /var/…"   2 minutes ago   Up 2 minutes   0.0.0.0:3000->3000/tcp, :::3000->3000/tcp   affectionate_yalow
 
 Now that we know the container name, we will connect to that instance using docker exec as follows:
 
-.. code-block:: bash
+:: bash
 	docker exec -it affectionate_yalow bash
 
 Install and use changes
@@ -1042,7 +1042,7 @@ Install and use changes
 
 Let us get the environment prepared for our testing:
 
-.. code-block:: bash
+:: bash
 	root@c997a4c5611b:/var/www# cd /code
 	./configure.sh installruntimedepsonly
 	mkdir /code/SuperBuild/build
@@ -1051,7 +1051,7 @@ Let us get the environment prepared for our testing:
 
 Next we can rebuild Ceres.
 
-.. code-block:: bash
+:: code-block:: bash
 	cmake ../.
 	make -j$(nproc) ceres
 		...
