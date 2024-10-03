@@ -1019,6 +1019,8 @@ Modify code
 
 For our test today, we will attempt to upgrade Ceres Solver to version 2.2.0. Most external libraries like Ceres can be found in the Superbuild directory. In this case we edit SuperBuild/cmake/External-Ceres.cmake, and set it to use version 2.2.0
 
+.. figure:: images/vimdiff_ceres_change.png
+
 Now that we've made that small, but substantive change, we need to rebuild Ceres on the docker image for testing.
 
 
