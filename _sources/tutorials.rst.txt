@@ -981,3 +981,96 @@ Port 3000 is ClusterODM's proxy. This is the place we assign tasks to ClusterODM
    :align: center
 
 After adding images in this browser, you can press Start Task and see ClusterODM assigning tasks to the nodes you have wired to. Go for a walk and check the progress.
+
+Development and testing of ODM
+==============================
+
+Development and testing of code changes can be difficult. The simplest way to do so is modify the code and rebuild docker images from source, much as documented in the `README for the ODM repository <https://github.com/OpenDroneMap/ODM?tab=readme-ov-file#build-docker-images-from-source>`_.
+
+However, having to do a full docker rebuild for each change is time consuming and wasteful. What might be better is to have a dedicated, long running node that allows us to test out changes in near real time.
+
+#. Fork and clone repository
+#. Set up local NodeODM docker instance
+#. Modify code
+#. Connect to NodeODM instance
+#. Install and use changes
+
+Fork and clone repository
+-------------------------
+
+First, let's fork the ODM repo, and checkout a new branch locally that will function as our development branch.
+
+::
+
+	git checkout -b my_clever_new_change
+	# Switched to a new branch 'my_clever_new_change'
+
+Set up local NodeODM docker instance
+------------------------------------
+
+Next, we will set up a NodeODM instance with a locally mounted volume that points to our development branch of ODM
+
+::
+
+	docker run -d --restart unless-stopped -p 3000:3000 -v /path/to/cloned/ODM/repository/data:/code opendronemap/nodeodm
+
+Modify code
+-----------
+
+For our test today, we will attempt to upgrade Ceres Solver to version 2.2.0. Most external libraries like Ceres can be found in the Superbuild directory. In this case we edit SuperBuild/cmake/External-Ceres.cmake, and set it to use version 2.2.0
+
+.. figure:: images/vimdiff_ceres_change.png
+
+Now that we've made that small, but substantive change, we need to rebuild Ceres on the docker image for testing.
+
+
+Connect to NodeODM instance
+---------------------------
+
+Let us find out our container name, in case we forgot:
+
+::
+
+	docker ps
+	CONTAINER ID   IMAGE                        COMMAND                  CREATED         STATUS         PORTS                                       NAMES
+	c997a4c5611b   opendronemap/nodeodm         "/usr/bin/node /var/…"   2 minutes ago   Up 2 minutes   0.0.0.0:3000->3000/tcp, :::3000->3000/tcp   affectionate_yalow
+
+Now that we know the container name, we will connect to that instance using docker exec as follows:
+
+::
+
+	docker exec -it affectionate_yalow bash
+
+Install and use changes
+-----------------------
+
+Let us get the environment prepared for our testing:
+
+::
+
+	root@c997a4c5611b:/var/www# cd /code
+	./configure.sh installruntimedepsonly
+	mkdir /code/SuperBuild/build
+	cd /code/SuperBuild/build
+
+
+Next we can rebuild Ceres.
+
+::
+
+	cmake ../.
+	make -j$(nproc) ceres
+		...
+	-- Up-to-date: /code/SuperBuild/install/include/ceres
+	-- Up-to-date: /code/SuperBuild/install/include/ceres/internal
+	-- Installing: /code/SuperBuild/install/include/ceres/internal/config.h
+	-- Installing: /code/SuperBuild/install/include/ceres/internal/export.h
+	-- Installing: /code/SuperBuild/install/include/ceres/internal/miniglog/glog/logging.h
+	-- Installing: /code/SuperBuild/install/lib/cmake/Ceres/CeresTargets.cmake
+	-- Installing: /code/SuperBuild/install/lib/cmake/Ceres/CeresTargets-release.cmake
+	-- Installing: /code/SuperBuild/install/lib/cmake/Ceres/CeresConfig.cmake
+	-- Installing: /code/SuperBuild/install/lib/cmake/Ceres/CeresConfigVersion.cmake
+	[100%] Completed 'ceres'
+	[100%] Built target ceres
+
+Success! Now we can either run ODM directly inside this container, use the NodeODM interface to process data, or connect in with WebODM for additional testing.

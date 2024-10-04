@@ -139,6 +139,14 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="#clusterodm-nodeodm-slurm-with-singularity-on-hpc">ClusterODM, NodeODM, SLURM, with Singularity on HPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#development-and-testing-of-odm">Development and testing of ODM</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#fork-and-clone-repository">Fork and clone repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#set-up-local-nodeodm-docker-instance">Set up local NodeODM docker instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#modify-code">Modify code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#connect-to-nodeodm-instance">Connect to NodeODM instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#install-and-use-changes">Install and use changes</a></li>
+</ul>
+</li>
 </ul>
 </li>
 </ul>
@@ -1065,6 +1073,82 @@ Place your images in a directory named “images” (for example /my/project/ima
 <img alt="Screenshot of ClusterODM's jobs interface" src="https://user-images.githubusercontent.com/70782465/214938234-113f99dc-f69e-4e78-a782-deaf94e986b0.png" />
 </figure>
 <p>After adding images in this browser, you can press Start Task and see ClusterODM assigning tasks to the nodes you have wired to. Go for a walk and check the progress.</p>
+</section>
+<section id="development-and-testing-of-odm">
+<h3>Development and testing of ODM<a class="headerlink" href="#development-and-testing-of-odm" title="Permalink to this heading"></a></h3>
+<p>Development and testing of code changes can be difficult. The simplest way to do so is modify the code and rebuild docker images from source, much as documented in the <a class="reference external" href="https://github.com/OpenDroneMap/ODM?tab=readme-ov-file#build-docker-images-from-source">README for the ODM repository</a>.</p>
+<p>However, having to do a full docker rebuild for each change is time consuming and wasteful. What might be better is to have a dedicated, long running node that allows us to test out changes in near real time.</p>
+<ol class="arabic simple">
+<li><p>Fork and clone repository</p></li>
+<li><p>Set up local NodeODM docker instance</p></li>
+<li><p>Modify code</p></li>
+<li><p>Connect to NodeODM instance</p></li>
+<li><p>Install and use changes</p></li>
+</ol>
+<section id="fork-and-clone-repository">
+<h4>Fork and clone repository<a class="headerlink" href="#fork-and-clone-repository" title="Permalink to this heading"></a></h4>
+<p>First, let's fork the ODM repo, and checkout a new branch locally that will function as our development branch.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">checkout</span> <span class="o">-</span><span class="n">b</span> <span class="n">my_clever_new_change</span>
+<span class="c1"># Switched to a new branch &#39;my_clever_new_change&#39;</span>
+</pre></div>
+</div>
+</section>
+<section id="set-up-local-nodeodm-docker-instance">
+<h4>Set up local NodeODM docker instance<a class="headerlink" href="#set-up-local-nodeodm-docker-instance" title="Permalink to this heading"></a></h4>
+<p>Next, we will set up a NodeODM instance with a locally mounted volume that points to our development branch of ODM</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">d</span> <span class="o">--</span><span class="n">restart</span> <span class="n">unless</span><span class="o">-</span><span class="n">stopped</span> <span class="o">-</span><span class="n">p</span> <span class="mi">3000</span><span class="p">:</span><span class="mi">3000</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">cloned</span><span class="o">/</span><span class="n">ODM</span><span class="o">/</span><span class="n">repository</span><span class="o">/</span><span class="n">data</span><span class="p">:</span><span class="o">/</span><span class="n">code</span> <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>
+</pre></div>
+</div>
+</section>
+<section id="modify-code">
+<h4>Modify code<a class="headerlink" href="#modify-code" title="Permalink to this heading"></a></h4>
+<p>For our test today, we will attempt to upgrade Ceres Solver to version 2.2.0. Most external libraries like Ceres can be found in the Superbuild directory. In this case we edit SuperBuild/cmake/External-Ceres.cmake, and set it to use version 2.2.0</p>
+<figure class="align-default">
+<img alt="../_images/vimdiff_ceres_change.png" src="../_images/vimdiff_ceres_change.png" />
+</figure>
+<p>Now that we've made that small, but substantive change, we need to rebuild Ceres on the docker image for testing.</p>
+</section>
+<section id="connect-to-nodeodm-instance">
+<h4>Connect to NodeODM instance<a class="headerlink" href="#connect-to-nodeodm-instance" title="Permalink to this heading"></a></h4>
+<p>Let us find out our container name, in case we forgot:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">ps</span>
+<span class="n">CONTAINER</span> <span class="n">ID</span>   <span class="n">IMAGE</span>                        <span class="n">COMMAND</span>                  <span class="n">CREATED</span>         <span class="n">STATUS</span>         <span class="n">PORTS</span>                                       <span class="n">NAMES</span>
+<span class="n">c997a4c5611b</span>   <span class="n">opendronemap</span><span class="o">/</span><span class="n">nodeodm</span>         <span class="s2">&quot;/usr/bin/node /var/…&quot;</span>   <span class="mi">2</span> <span class="n">minutes</span> <span class="n">ago</span>   <span class="n">Up</span> <span class="mi">2</span> <span class="n">minutes</span>   <span class="mf">0.0.0.0</span><span class="p">:</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span><span class="p">,</span> <span class="p">:::</span><span class="mi">3000</span><span class="o">-&gt;</span><span class="mi">3000</span><span class="o">/</span><span class="n">tcp</span>   <span class="n">affectionate_yalow</span>
+</pre></div>
+</div>
+<p>Now that we know the container name, we will connect to that instance using docker exec as follows:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">exec</span> <span class="o">-</span><span class="n">it</span> <span class="n">affectionate_yalow</span> <span class="n">bash</span>
+</pre></div>
+</div>
+</section>
+<section id="install-and-use-changes">
+<h4>Install and use changes<a class="headerlink" href="#install-and-use-changes" title="Permalink to this heading"></a></h4>
+<p>Let us get the environment prepared for our testing:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@c997a4c5611b</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="c1"># cd /code</span>
+<span class="o">./</span><span class="n">configure</span><span class="o">.</span><span class="n">sh</span> <span class="n">installruntimedepsonly</span>
+<span class="n">mkdir</span> <span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">SuperBuild</span><span class="o">/</span><span class="n">build</span>
+<span class="n">cd</span> <span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">SuperBuild</span><span class="o">/</span><span class="n">build</span>
+</pre></div>
+</div>
+<p>Next we can rebuild Ceres.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>cmake ../.
+make -j$(nproc) ceres
+        ...
+-- Up-to-date: /code/SuperBuild/install/include/ceres
+-- Up-to-date: /code/SuperBuild/install/include/ceres/internal
+-- Installing: /code/SuperBuild/install/include/ceres/internal/config.h
+-- Installing: /code/SuperBuild/install/include/ceres/internal/export.h
+-- Installing: /code/SuperBuild/install/include/ceres/internal/miniglog/glog/logging.h
+-- Installing: /code/SuperBuild/install/lib/cmake/Ceres/CeresTargets.cmake
+-- Installing: /code/SuperBuild/install/lib/cmake/Ceres/CeresTargets-release.cmake
+-- Installing: /code/SuperBuild/install/lib/cmake/Ceres/CeresConfig.cmake
+-- Installing: /code/SuperBuild/install/lib/cmake/Ceres/CeresConfigVersion.cmake
+[100%] Completed &#39;ceres&#39;
+[100%] Built target ceres
+</pre></div>
+</div>
+<p>Success! Now we can either run ODM directly inside this container, use the NodeODM interface to process data, or connect in with WebODM for additional testing.</p>
+</section>
 </section>
 </section>
 </section>
