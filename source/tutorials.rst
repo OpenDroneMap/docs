@@ -830,10 +830,21 @@ Multi-temporal Datasets
 
 When previously mapped sites need revisited, OpenDroneMap can align multiple versions of a dataset through time by using a prior point cloud or digital elevation model. As the prior point cloud `seems to provide better results <https://community.opendronemap.org/t/tips-to-increase-same-site-temporal-consistency/22161/7>`_, that is the approach we will review here.
 
-Steps
------
+Workflow for multi-temporal datasets:
+-------------------------------------
 
-blaa blaa blaa
+
+.. [#] Process your original data. This step doesn't require a ground control point file, but use one if absolute accuracy is a project requirement
+.. [#] Download the Point Cloud from your first processed dataset as an LAZ file type (default). Rename the point cloud to align.laz
+.. [#] Include that LAZ file with each of your subsequent processing. If you are using command line ODM, include it in the images directory. If uploading, simply upload with your raw images for processing
+.. [#] Check your log. It should include a line near the top that indicates it has set align to a path value, something like this:
+
+    [INFO]    Initializing ODM 3.5.3 - Tue Oct 15 05:01:43  2024
+    [INFO]    ==============
+    [INFO]    3d_tiles: False
+    [INFO]    align: /var/www/data/bc14fa2c-ba5c-4b85-99b0-0b7ff715b210/gcp/align.laz
+    [INFO]    auto_boundary: True
+
 
 
 Using Singularity
