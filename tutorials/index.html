@@ -132,6 +132,10 @@
 <li class="toctree-l3"><a class="reference internal" href="#scene">Scene</a></li>
 </ul>
 </li>
+<li class="toctree-l2"><a class="reference internal" href="#multi-temporal-datasets">Multi-temporal Datasets</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#workflow-for-multi-temporal-datasets">Workflow for multi-temporal datasets:</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#advanced">Advanced</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#using-singularity">Using Singularity</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#build-singularity-image-from-docker-image">Build Singularity image from Docker image</a></li>
@@ -1098,6 +1102,31 @@ Elements are arranged in six groups, which are <strong>Point clouds</strong> / <
 <img alt="Tools - Navigation controls" src="../_images/pointcloud_elevation.png" />
 </figure>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst">this page</a>!</p>
+</section>
+</section>
+<section id="multi-temporal-datasets">
+<h2>Multi-temporal Datasets<a class="headerlink" href="#multi-temporal-datasets" title="Permalink to this heading"></a></h2>
+<p>When previously mapped sites need revisited, OpenDroneMap can align multiple versions of a dataset through time by using a prior point cloud or digital elevation model. As the prior point cloud <a class="reference external" href="https://community.opendronemap.org/t/tips-to-increase-same-site-temporal-consistency/22161/7">seems to provide better results</a>, that is the approach we will review here.</p>
+<section id="workflow-for-multi-temporal-datasets">
+<h3>Workflow for multi-temporal datasets:<a class="headerlink" href="#workflow-for-multi-temporal-datasets" title="Permalink to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Process your original data. This step doesn’t require a ground control point file, but use one if absolute accuracy is a project requirement</p></li>
+<li><p>Download the Point Cloud from your first processed dataset as an LAZ file type (default). Rename the point cloud to align.laz</p></li>
+<li><p>Include that LAZ file with each of your subsequent processing. If you are using command line ODM, include it in the images directory. If uploading, simply upload with your raw images for processing</p></li>
+<li><p>Check your log. It should include a line near the top that indicates it has set align to a path value, something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">Initializing</span> <span class="n">ODM</span> <span class="mf">3.5.3</span> <span class="o">-</span> <span class="n">Tue</span> <span class="n">Oct</span> <span class="mi">15</span> <span class="mi">05</span><span class="p">:</span><span class="mi">01</span><span class="p">:</span><span class="mi">43</span>  <span class="mi">2024</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="o">==============</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="mi">3</span><span class="n">d_tiles</span><span class="p">:</span> <span class="kc">False</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">align</span><span class="p">:</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">bc14fa2c</span><span class="o">-</span><span class="n">ba5c</span><span class="o">-</span><span class="mi">4</span><span class="n">b85</span><span class="o">-</span><span class="mi">99</span><span class="n">b0</span><span class="o">-</span><span class="mi">0</span><span class="n">b7ff715b210</span><span class="o">/</span><span class="n">gcp</span><span class="o">/</span><span class="n">align</span><span class="o">.</span><span class="n">laz</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">auto_boundary</span><span class="p">:</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<figure class="align-center">
+<img alt="Animated gif comparing two separately processed, but aligned digital surface models." src="../_images/align_pc.gif" />
+</figure>
+<p>Animated gif comparing two separately processed, but aligned digital surface models.</p>
 </section>
 </section>
 <section id="advanced">
