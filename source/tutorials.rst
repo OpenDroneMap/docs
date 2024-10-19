@@ -495,7 +495,7 @@ Resize droplet, pull pin, run away
 
 ::
 
-   nohup python run.py myproject --split 1 --split-overlap 0 --ignore-gsd --depthmap-resolution 1000 --orthophoto-resolution 5 --dem-resolution 15 --pc-las --dsm
+   nohup python run.py myproject --split 1 --split-overlap 0 --depthmap-resolution 1000 --orthophoto-resolution 5 --dem-resolution 15 --pc-las --dsm
 
 -  This points ODM at the folder (in this example)
    ``/mnt/odmdata/myproject/``. Provided the image_groups.txt and
@@ -893,9 +893,9 @@ Like with docker, additional `Options and Flags <https://docs.opendronemap.org/a
 
    singularity run --bind /my/project:/datasets/code \
    --writable-tmpfs odm_latest.sif \
-   --orthophoto-png --mesh-octree-depth 12 --ignore-gsd --dtm \
+   --orthophoto-png --mesh-octree-depth 12 --dtm \
    --smrf-threshold 0.4 --smrf-window 24 --dsm --pc-csv --pc-las --orthophoto-kmz \
-   --ignore-gsd --matcher-type flann --feature-quality ultra --max-concurrency 16 \
+   --matcher-type flann --feature-quality ultra --max-concurrency 16 \
    --use-hybrid-bundle-adjustment --build-overviews --time --min-num-features 10000 \
    --project-path /datasets
 
