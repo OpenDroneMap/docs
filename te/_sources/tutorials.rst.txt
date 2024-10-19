@@ -17,7 +17,6 @@ Creating High Quality Orthophotos
 Without any parameter tweaks, ODM chooses a good compromise between quality, speed and memory usage. If you want to get higher quality results, you need to tweak some parameters:
 
  * ``--orthophoto-resolution`` is the resolution of the orthophoto in cm/pixel. Decrease this value for a higher resolution result.
- * ``--ignore-gsd`` is a flag that instructs ODM to skip certain memory and speed optimizations that directly affect the orthophoto. Using this flag will increase runtime and memory usage, but may produce sharper results.
  * ``--texturing-data-term`` should be set to `area` in forest areas.
  * ``--mesh-size`` should be increased to ``300000-600000`` and ``--mesh-octree-depth`` should be increased to ``10-11`` in urban areas to recreate better buildings / roofs.
 
@@ -496,7 +495,7 @@ Resize droplet, pull pin, run away
 
 ::
 
-   nohup python run.py myproject --split 1 --split-overlap 0 --ignore-gsd --depthmap-resolution 1000 --orthophoto-resolution 5 --dem-resolution 15 --pc-las --dsm
+   nohup python run.py myproject --split 1 --split-overlap 0 --depthmap-resolution 1000 --orthophoto-resolution 5 --dem-resolution 15 --pc-las --dsm
 
 -  This points ODM at the folder (in this example)
    ``/mnt/odmdata/myproject/``. Provided the image_groups.txt and
@@ -894,9 +893,9 @@ Like with docker, additional `Options and Flags <https://docs.opendronemap.org/a
 
    singularity run --bind /my/project:/datasets/code \
    --writable-tmpfs odm_latest.sif \
-   --orthophoto-png --mesh-octree-depth 12 --ignore-gsd --dtm \
+   --orthophoto-png --mesh-octree-depth 12 --dtm \
    --smrf-threshold 0.4 --smrf-window 24 --dsm --pc-csv --pc-las --orthophoto-kmz \
-   --ignore-gsd --matcher-type flann --feature-quality ultra --max-concurrency 16 \
+   --matcher-type flann --feature-quality ultra --max-concurrency 16 \
    --use-hybrid-bundle-adjustment --build-overviews --time --min-num-features 10000 \
    --project-path /datasets
 

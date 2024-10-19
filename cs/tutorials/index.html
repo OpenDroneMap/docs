@@ -461,7 +461,6 @@
 <blockquote>
 <div><ul class="simple">
 <li><p><code class="docutils literal notranslate"><span class="pre">--orthophoto-resolution</span></code> je rozlišení ortofota v cm/pixel. Snižte tuto hodnotu pro výsledek s vyšším rozlišením.</p></li>
-<li><p><code class="docutils literal notranslate"><span class="pre">--ignore-gsd</span></code> je příznak, který dává ODM pokyn k vynechání určitých optimalizací paměti a rychlosti, které přímo ovlivňují ortofoto. Použití tohoto příznaku zvýší dobu běhu a spotřebu paměti, ale může přinést ostřejší výsledky.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">--texturing-data-term</span></code> by měl být v lesních oblastech nastaven na <cite>area</cite>.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">--mesh-size</span></code> by měla být zvýšena na <code class="docutils literal notranslate"><span class="pre">300000-600000</span></code> a <code class="docutils literal notranslate"><span class="pre">--mesh-octree-depth</span></code> by měla být zvýšena na <code class="docutils literal notranslate"><span class="pre">10-11</span></code> v městských oblastech, aby bylo možné vytvořit lepší budovy/střechy.</p></li>
 </ul>
@@ -749,7 +748,7 @@ images folder for each project.</p></li>
 </ul>
 </li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nohup</span> <span class="n">python</span> <span class="n">run</span><span class="o">.</span><span class="n">py</span> <span class="n">myproject</span> <span class="o">--</span><span class="n">split</span> <span class="mi">1</span> <span class="o">--</span><span class="n">split</span><span class="o">-</span><span class="n">overlap</span> <span class="mi">0</span> <span class="o">--</span><span class="n">ignore</span><span class="o">-</span><span class="n">gsd</span> <span class="o">--</span><span class="n">depthmap</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">1000</span> <span class="o">--</span><span class="n">orthophoto</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">5</span> <span class="o">--</span><span class="n">dem</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">15</span> <span class="o">--</span><span class="n">pc</span><span class="o">-</span><span class="n">las</span> <span class="o">--</span><span class="n">dsm</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nohup</span> <span class="n">python</span> <span class="n">run</span><span class="o">.</span><span class="n">py</span> <span class="n">myproject</span> <span class="o">--</span><span class="n">split</span> <span class="mi">1</span> <span class="o">--</span><span class="n">split</span><span class="o">-</span><span class="n">overlap</span> <span class="mi">0</span> <span class="o">--</span><span class="n">depthmap</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">1000</span> <span class="o">--</span><span class="n">orthophoto</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">5</span> <span class="o">--</span><span class="n">dem</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">15</span> <span class="o">--</span><span class="n">pc</span><span class="o">-</span><span class="n">las</span> <span class="o">--</span><span class="n">dsm</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -990,9 +989,9 @@ Place your images in a directory named “images” (for example /my/project/ima
 <p>Like with docker, additional <a class="reference external" href="https://docs.opendronemap.org/arguments/">Options and Flags</a> can be added to the command :</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>singularity<span class="w"> </span>run<span class="w"> </span>--bind<span class="w"> </span>/my/project:/datasets/code<span class="w"> </span><span class="se">\</span>
 --writable-tmpfs<span class="w"> </span>odm_latest.sif<span class="w"> </span><span class="se">\</span>
---orthophoto-png<span class="w"> </span>--mesh-octree-depth<span class="w"> </span><span class="m">12</span><span class="w"> </span>--ignore-gsd<span class="w"> </span>--dtm<span class="w"> </span><span class="se">\</span>
+--orthophoto-png<span class="w"> </span>--mesh-octree-depth<span class="w"> </span><span class="m">12</span><span class="w"> </span>--dtm<span class="w"> </span><span class="se">\</span>
 --smrf-threshold<span class="w"> </span><span class="m">0</span>.4<span class="w"> </span>--smrf-window<span class="w"> </span><span class="m">24</span><span class="w"> </span>--dsm<span class="w"> </span>--pc-csv<span class="w"> </span>--pc-las<span class="w"> </span>--orthophoto-kmz<span class="w"> </span><span class="se">\</span>
---ignore-gsd<span class="w"> </span>--matcher-type<span class="w"> </span>flann<span class="w"> </span>--feature-quality<span class="w"> </span>ultra<span class="w"> </span>--max-concurrency<span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="se">\</span>
+--matcher-type<span class="w"> </span>flann<span class="w"> </span>--feature-quality<span class="w"> </span>ultra<span class="w"> </span>--max-concurrency<span class="w"> </span><span class="m">16</span><span class="w"> </span><span class="se">\</span>
 --use-hybrid-bundle-adjustment<span class="w"> </span>--build-overviews<span class="w"> </span>--time<span class="w"> </span>--min-num-features<span class="w"> </span><span class="m">10000</span><span class="w"> </span><span class="se">\</span>
 --project-path<span class="w"> </span>/datasets
 </pre></div>
