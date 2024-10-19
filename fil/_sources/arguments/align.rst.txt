@@ -13,7 +13,7 @@ align
 Path to a GeoTIFF DEM or a LAS/LAZ point cloud that the reconstruction outputs should be automatically aligned to. Experimental. Default: ``None``
 
 
-See `Multi-temporal datasets for further usage information. </tutorials/#multi-temporal-datasets>`_
+See `Multi-temporal datasets for further usage information. </tutorials/#alignment-files>`_
 
 .. figure:: ../images/align_pc.gif
    :alt: Animated gif comparing two separately processed, but aligned digital surface models.
