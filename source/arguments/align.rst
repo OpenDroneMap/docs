@@ -15,7 +15,7 @@ Path to a GeoTIFF DEM or a LAS/LAZ point cloud that the reconstruction outputs s
 
 See `Multi-temporal datasets for further usage information. </tutorials/#multi-temporal-datasets>`_
 
-.. figure:: images/align_pc.gif
+.. figure:: ../images/align_pc.gif
    :alt: Animated gif comparing two separately processed, but aligned digital surface models.
    :align: center
 
