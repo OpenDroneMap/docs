@@ -821,9 +821,9 @@ For instance, point clouds properties can be modified to show elevation and also
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_!
 
 
-###############
+***************
 Alignment Files
-###############
+***************
 
 Georeferencing by default is done using GPS or GCPs (if provided).
 
@@ -834,14 +834,12 @@ If you supply a file called ``align.laz``, ``align.las`` or ``align.tif`` (singl
 The alignment file must be created in the base of your project folder. The base folder is usually where you have stored your images. If you are using WebODM or NodeODM, then upload the align file with your images. If resizing your images in WebODM, use an ``align.laz`` or ``align.las`` file instead of a tif.
 
 
-********
 Multi-temporal Datasets
-********
+=======================
 
 When previously mapped sites need revisited, OpenDroneMap can align multiple versions of a dataset through time by using a prior point cloud or digital elevation model. As the prior point cloud `seems to provide better results <https://community.opendronemap.org/t/tips-to-increase-same-site-temporal-consistency/22161/7>`_, that is the approach we will review here.
 
-Workflow for multi-temporal datasets:
-=====================================
+**Workflow for multi-temporal datasets:**
 
 #. Process your original data. This step doesn't require a ground control point file, but use one if absolute accuracy is a project requirement
 #. Download the Point Cloud from your first processed dataset as an LAZ file type (default). Rename the point cloud to align.laz
