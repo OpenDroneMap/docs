@@ -133,6 +133,9 @@
 <li class="toctree-l3"><a class="reference internal" href="#scene">Escena</a></li>
 </ul>
 </li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="#alignment-files">Alignment Files</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#multi-temporal-datasets">Multi-temporal Datasets</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#workflow-for-multi-temporal-datasets">Workflow for multi-temporal datasets:</a></li>
 </ul>
@@ -352,7 +355,6 @@
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../geo/">Archivos de geolocalización de imagen</a></li>
-<li class="toctree-l1"><a class="reference internal" href="../align/">Alignment Files</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../masks/">Usar máscaras de imagen</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../large/">Splitting Large Datasets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">Calibrar imágenes</a></li>
@@ -934,6 +936,13 @@ images folder for each project.</p></li>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst">esta página</a>!</p>
 </section>
 </section>
+</section>
+<section id="alignment-files">
+<h1>Alignment Files<a class="headerlink" href="#alignment-files" title="Enlace permanente a este encabezado"></a></h1>
+<p>Georeferencing by default is done using GPS or GCPs (if provided).</p>
+<p>Starting from ODM <code class="docutils literal notranslate"><span class="pre">3.0.2</span></code> people can supply a reference alignment file to georeference the program outputs. The reconstruction will be initially performed using GPS/GCPs and will subsequently be aligned to the reference model via a linear scaling/rotation/shift operation.</p>
+<p>If you supply a file called <code class="docutils literal notranslate"><span class="pre">align.laz</span></code>, <code class="docutils literal notranslate"><span class="pre">align.las</span></code> or <code class="docutils literal notranslate"><span class="pre">align.tif</span></code> (single band GeoTIFF DEM) then ODM will automatically detect it and attempt to align outputs to this reference model. If it has another name you can specify using <code class="docutils literal notranslate"><span class="pre">--align</span> <span class="pre">&lt;path&gt;</span></code>.</p>
+<p>The alignment file must be created in the base of your project folder. The base folder is usually where you have stored your images. If you are using WebODM or NodeODM, then upload the align file with your images. If resizing your images in WebODM, use an <code class="docutils literal notranslate"><span class="pre">align.laz</span></code> or <code class="docutils literal notranslate"><span class="pre">align.las</span></code> file instead of a tif.</p>
 <section id="multi-temporal-datasets">
 <h2>Multi-temporal Datasets<a class="headerlink" href="#multi-temporal-datasets" title="Enlace permanente a este encabezado"></a></h2>
 <p>When previously mapped sites need revisited, OpenDroneMap can align multiple versions of a dataset through time by using a prior point cloud or digital elevation model. As the prior point cloud <a class="reference external" href="https://community.opendronemap.org/t/tips-to-increase-same-site-temporal-consistency/22161/7">seems to provide better results</a>, that is the approach we will review here.</p>
