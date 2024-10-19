@@ -9,4 +9,3 @@ The details of the method are available at https://github.com/NCALM-UH/CODEM/blo
    :align: center
 
 Animated gif comparing two separately processed, but aligned digital surface models.
-
