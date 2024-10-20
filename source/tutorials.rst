@@ -20,46 +20,7 @@ Without any parameter tweaks, ODM chooses a good compromise between quality, spe
  * ``--texturing-data-term`` should be set to `area` in forest areas.
  * ``--mesh-size`` should be increased to ``300000-600000`` and ``--mesh-octree-depth`` should be increased to ``10-11`` in urban areas to recreate better buildings / roofs.
 
-**********************
-Calibrating the Camera
-**********************
-
-Camera calibration is a special challenge with commodity cameras. Temperature changes, vibrations, focus, and other factors can affect the derived parameters with substantial effects on resulting data. Automatic or self calibration is possible and desirable with drone flights, but depending on the flight pattern, automatic calibration may not remove all distortion from the resulting products. James and Robson (2014) in their paper `Mitigating systematic error in topographic models derived from UAV and ground‐based image networks <https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609>`_ address how to minimize the distortion from self-calibration.
-
-.. figure:: images/msimbasi_bowling.png
-   :alt: image of lens distortion effect on bowling of data
-   :align: center
-
-*Bowling effect on point cloud over 13,000+ image dataset collected by World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania.*
-
-To mitigate this effect, there are a few options but the simplest are as follows: fly two patterns separated by 20°, and rather than having a nadir (straight down pointing) camera, use one that tilts forward by 5°.
-
-.. figure:: images/flightplanning.gif
-  :alt: animation showing optimum
-  :align: center
-  :height: 480
-  :width: 640
-
-As this approach takes longer than traditional imaging, pilots and teams may apply this technique to a smaller area and use the collected data to optimize future flights. OpenDroneMap can generate a calibration file called cameras.json from a small sample flight. The calibration file can be used for future flights, mitigating the bowling effect without sacrificing efficiency.
-
-Alternatively, the following experimental method can be applied: fly with much lower overlap, but two *crossgrid* flights (sometimes called crosshatch) separated by 20° with a 5° forward facing camera.
-
-* Crossgrid overlap percentages can be lower than parallel flights. To get good 3D results, you will require 68% overlap and sidelap for an equivalent 83% overlap and sidelap.
-* To get good 2D and 2.5D (digital elevation model) results, you will require 42% overlap and sidelap for an equivalent 70% overlap and sidelap.
-
-.. figure:: images/rotation.gif
-  :alt: animation showing experimental optimum
-  :align: center
-
-Vertically separated flight lines also improve accuracy, but less so than a camera that is forward facing by 5°.
-
-.. figure:: images/forward_facing.png
-   :alt: figure showing effect of vertically separated flight lines and forward facing cameras on improving self calibration
-   :align: center
-
-From James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0>`_
-
-*********************************
+********************************* 
 Creating Digital Elevation Models
 *********************************
 
@@ -94,6 +55,271 @@ Two other important parameters affect DEM generation:
 Example of how to generate a DTM::
 
     docker run -ti --rm -v /my/project:/datasets/code <my_odm_image> --project-path /datasets --dtm --dem-resolution 2 --smrf-threshold 0.4 --smrf-window 24
+
+***************************************
+Using Potree 3D viewer module on WebODM
+***************************************
+
+Cameras
+=======
+Activate this function to display camera positions.
+
+You can also click in the camera icon to display single images in a frame on the upper right corner. A click on the image frame toggles into full screen mode.
+
+Within the image frame there are links to download the image and the GeoJSON camera file.
+
+.. figure:: images/cameras.png
+   :alt: Camera locations
+   :align: center
+
+Textured model
+==============
+
+Activate this function to show load the textured model. Depending on the file size and connection speed, it may take several seconds to load.
+
+.. figure:: images/texturedmodel.png
+   :alt: Textured model
+   :align: center
+
+Appearance
+==========
+
+
+
+Point budget
+------------
+For both appearance and performance purposes, the point budget on the scene can be managed. Some old and less capable machines would benefit from a 500,000 point budget while most mid-range specs machine are capable of handling 1 to 2 million point budget.
+
+A 5 to 7 million point budget produces a smooth point cloud 3d model, but may result in a high resource demanding process.
+
+Default point budget value is set to 1,000,000.
+
+Field of view
+-------------
+
+In order to control model elements to be included within the scene the field of view can be adjusted. Default value is set to 60 degrees.
+
+.. figure:: images/FOV_animation.gif
+   :alt: Field of view adjustment
+   :align: center
+
+
+Eye Dome-lighting
+-----------------
+
+The Potree Point Cloud 3d viewer module can implement eye dome-lighting, a lighting model that accentuates the shapes of objects.
+
+Eye Dome-lighting group objects, shade their outlines and enhances depth perception in scientific visualization images. It is useful for recognition and measurement of structures within a model. It can be modified by adjusting Radius, Strength and Opacity.
+
+By default, Eye Dome-Lighting is enabled on Potree 3D viewer, but it can be disabled by clicking on the enable option.
+
+.. figure:: images/EDL_animation.gif
+   :alt: Eye dome lighting adjustment
+   :align: center
+
+
+Background
+----------
+
+Potree 3D viewer background can be modified. Available options are **Skybox** / **Gradient** / **Black** / **White** / **None**
+
+.. figure:: images/Background_animation.gif
+   :alt: Background selection
+   :align: center
+
+Other
+-----
+
+**Splat Quality** = Splat quality can be adjusted to standard or high quality, to improve the appearance of the model.
+
+**Min node size** = Min node size option will impact the point density of the nodes represented.
+
+**Box** = Display the boxes of the nodes.
+
+**Lock view** = Lock the point cloud view, preventing to load or unload points to the model.
+
+Tools
+=====
+
+Measurement
+-----------
+
+Potree 3D viewer module provides several tools for measurement. This tool set consist of 12 elements.
+It also has controls for showing or hiding the resulting measurement labels.
+
+Measurements are performed by left clicking on the desired points and for some tools right clicking is needed in order to terminate the process.
+
+.. figure:: images/measurement.png
+   :alt: Tools - Measurement tools
+   :align: center
+
+**Angle**
+
+This tool measures the tridimensional angle formed by the lines connecting 3 points.
+To start a measurement, click on the angle icon, then left click on 3 point and the process will be automatically ended.
+Further information can also be obtained from selecting this element under the scene section.
+
+**Point**
+
+This tool highlights a selected point and display its XYZ coordinate.
+To start a measurement, click on the point icon, then click on the desired point and the process will be automatically ended.
+Further information can also be obtained from selecting this element under the scene section.
+
+**Distance**
+
+This tool measures the tridimensional distance of the lines connecting a series of points.
+To start a measurement, click on the distance icon and start clicking on the desired points (two or more). Right click to finish measurement.
+Further information such as Total length can also be obtained from selecting this element under the scene section.
+
+**Height**
+
+This tool measures the height or vertical distance between two points.
+To start a measurement, click on the height icon and then click on the desired two points. The process will be automatically ended.
+Further information can also be obtained from selecting this element under the scene section.
+
+.. figure:: images/height_animation.gif
+   :alt: Height measurement
+   :align: center
+
+**Circle**
+
+This tool measures the radius of a circle formed by three points.
+To start a measurement, click on the circle icon and then click on the desired two points. The process will be automatically ended.
+Further information such as Circumference can also be obtained from selecting this element under the scene section.
+
+**Azimuth**
+
+This tool measures the azimuthal angle of a line. This line is formed by two points selected by the user, the angle is measured in degrees, clockwise from 0 to 360 and starting from the geographical north.
+To start a measurement, click on the azimuth icon and then click on the desired two points. The process will be automatically ended.
+Further information can also be obtained from selecting this element under the scene section.
+
+**Area**
+
+This tool measures the horizontal area formed by a polygon.
+To start a measurement, click on the area icon and start clicking on the points forming the desired polygon (three or more). Right click to finish measurement.
+Further information can also be obtained from selecting this element under the scene section.
+
+**Volume (cube)**
+
+This tool measures the volume formed by a cube.
+To start a measurement, click on the volume (cube) icon and click on the model to place the cube. It is possible relocate, redimension and rotate the cube using the displayed handlers. Right click to finish measurement.
+Further information can also be obtained from selecting this element under the scene section.
+
+**Volume (sphere)**
+
+This tool measures the volume formed by a sphere.
+To start a measurement, click on the volume (sphere) icon and click on the model to place the sphere. It is possible relocate, redimension and rotate the sphere using the displayed handlers. Right click to finish measurement.
+Further information can also be obtained from selecting this element under the scene section.
+
+**Height profile**
+
+This tool creates a height profile formed by a line on the model.
+To start a measurement, click on the Height profile icon and then form a line on the model by clicking on the desired points (two or more). Right click to finish measurement.
+Further information and options, such as "Show 2d Profile", can also been obtained from selecting this element under the scene section.
+
+.. figure:: images/height_profile.png
+   :alt: Height profile
+   :align: center
+
+**Annotation**
+
+This tool creates an annotation label on a highlighted point on the model.
+To start a measurement, click on the annotation icon and then click on the desired point. The process will be automatically ended.
+To edit the annotation, select this element under the scene section, then edit Title and Description.
+
+**Remove measurements**
+
+This tool removes all measurements on the model.
+To remove all measurement, click on the "Remove measurements" icon.
+
+
+Clipping
+---------
+
+
+.. figure:: images/clipping.png
+   :alt: Tools - Clipping tools
+   :align: center
+
+Point cloud can be clipped by selecting an area. Clipping options include **None** / **Highlight** / **Inside** / **Outside**
+
+To clip a point cloud, click on the volume clip icon, place the cube on the model and relocate, redimension and rotate to contain the desired area.
+Highlight is set by default as the clipping method. If display only the points contained within the cube click on "Inside", otherwise click on "Outside".
+
+To remove the clipping volume or polygons click on the "Remove all measurements" icon.
+
+.. figure:: images/clipping_animation.gif
+   :alt: Tools - Clipping
+   :align: center
+
+Navigation
+-----------
+
+.. figure:: images/navigation.png
+   :alt: Tools - Navigation controls
+   :align: center
+
+Potree 3D viewer have 4 Navigation controls which define its behavior.
+
+**Earth Control**
+
+Earth control navigated as anchored to the ground. Mouse left button moves the model horizontally, mouse wheel controls zoom and right button orbits the model.
+
+**Fly control**
+
+Fly control moves the camera as in birds eye using the keyboard. Keys "W" and "S" moves forward and backwards, respectively and in the direction of the camera, while "A" and "D" moves left and right respectively. Also, the "R" and "F" keys moves the camera up and down. The mouse left button changes the direction of the camera, mouse wheel controls zoom, and right button moves the camera in the XYZ axis.
+
+The speed for these movements can be controlled using the sliding control.
+
+**Helicopter control**
+
+Helicopter control moves the camera as in an aircraft using the keyboard. Keys "W" and "S" moves forward and backwards, respectively restricted in a horizontal plane, while "A" and "D" moves left and right respectively. Also, the "R" and "F" keys moves the camera up and down. The mouse left button changes the direction of the camera, mouse wheel controls zoom, and right button moves the model in the XY axis.
+
+The speed for these movements can be controlled using the sliding control.
+
+**Orbit Control**
+
+Orbit Control is the default navigation behavior. The mouse left button orbits the model, the wheel controls zoom and the right button moves the model in the XYZ axis.
+
+**Full extent**
+
+Full extent button restores the model view.
+
+**Navigation cube**
+
+Navigation cube displays a wireframe cube containing the model.
+
+**Compass**
+
+Compass button displays a compass on the upper right corner.
+
+**Camera animation**
+
+The camera animation button creates a camera animation path. Position of the camera is defined by the points on the green line while the points in the blue line are the location towards the camera is intended to be facing.
+
+To create an animation, adjust the points for the camera locations and camera direction, then select the camera element under the Scene section to create more point, change animation speed or play the animation.
+
+.. figure:: images/camera_animation.gif
+   :alt: Tools - Navigation controls
+   :align: center
+
+
+Scene
+=====
+
+The Scene section displays a file tree containing all the scene elements.
+Elements are arranged in six groups, which are **Point clouds** / **Measurements** / **Annotations**
+/ **Other** / **Vector** / **Images**
+
+Each element under these groups can be selected to get further information or to control its properties.
+
+For instance, point clouds properties can be modified to show elevation and also the color ramp cam be customized.
+
+.. figure:: images/pointcloud_elevation.png
+   :alt: Tools - Navigation controls
+   :align: center
+
+
 
 ***************************
 Measuring stockpile volume
@@ -554,273 +780,49 @@ After it finishes (assuming you survive that long)
    tar -zcvf archivename /path/to/folder
 
 
-***************************************
-Using Potree 3D viewer module on WebODM
-***************************************
-
-Cameras
-=======
-Activate this function to display camera positions.
-
-You can also click in the camera icon to display single images in a frame on the upper right corner. A click on the image frame toggles into full screen mode.
-
-Within the image frame there are links to download the image and the GeoJSON camera file.
-
-.. figure:: images/cameras.png
-   :alt: Camera locations
-   :align: center
-
-Textured model
-==============
-
-Activate this function to show load the textured model. Depending on the file size and connection speed, it may take several seconds to load.
-
-.. figure:: images/texturedmodel.png
-   :alt: Textured model
-   :align: center
-
-Appearance
-==========
-
-
-
-Point budget
-------------
-For both appearance and performance purposes, the point budget on the scene can be managed. Some old and less capable machines would benefit from a 500,000 point budget while most mid-range specs machine are capable of handling 1 to 2 million point budget.
-
-A 5 to 7 million point budget produces a smooth point cloud 3d model, but may result in a high resource demanding process.
-
-Default point budget value is set to 1,000,000.
-
-Field of view
--------------
-
-In order to control model elements to be included within the scene the field of view can be adjusted. Default value is set to 60 degrees.
-
-.. figure:: images/FOV_animation.gif
-   :alt: Field of view adjustment
-   :align: center
-
-
-Eye Dome-lighting
------------------
-
-The Potree Point Cloud 3d viewer module can implement eye dome-lighting, a lighting model that accentuates the shapes of objects.
-
-Eye Dome-lighting group objects, shade their outlines and enhances depth perception in scientific visualization images. It is useful for recognition and measurement of structures within a model. It can be modified by adjusting Radius, Strength and Opacity.
-
-By default, Eye Dome-Lighting is enabled on Potree 3D viewer, but it can be disabled by clicking on the enable option.
-
-.. figure:: images/EDL_animation.gif
-   :alt: Eye dome lighting adjustment
-   :align: center
-
-
-Background
-----------
-
-Potree 3D viewer background can be modified. Available options are **Skybox** / **Gradient** / **Black** / **White** / **None**
-
-.. figure:: images/Background_animation.gif
-   :alt: Background selection
-   :align: center
-
-Other
------
-
-**Splat Quality** = Splat quality can be adjusted to standard or high quality, to improve the appearance of the model.
-
-**Min node size** = Min node size option will impact the point density of the nodes represented.
-
-**Box** = Display the boxes of the nodes.
-
-**Lock view** = Lock the point cloud view, preventing to load or unload points to the model.
-
-Tools
-=====
-
-Measurement
------------
-
-Potree 3D viewer module provides several tools for measurement. This tool set consist of 12 elements.
-It also has controls for showing or hiding the resulting measurement labels.
-
-Measurements are performed by left clicking on the desired points and for some tools right clicking is needed in order to terminate the process.
-
-.. figure:: images/measurement.png
-   :alt: Tools - Measurement tools
-   :align: center
-
-**Angle**
-
-This tool measures the tridimensional angle formed by the lines connecting 3 points.
-To start a measurement, click on the angle icon, then left click on 3 point and the process will be automatically ended.
-Further information can also be obtained from selecting this element under the scene section.
-
-**Point**
-
-This tool highlights a selected point and display its XYZ coordinate.
-To start a measurement, click on the point icon, then click on the desired point and the process will be automatically ended.
-Further information can also be obtained from selecting this element under the scene section.
-
-**Distance**
-
-This tool measures the tridimensional distance of the lines connecting a series of points.
-To start a measurement, click on the distance icon and start clicking on the desired points (two or more). Right click to finish measurement.
-Further information such as Total length can also be obtained from selecting this element under the scene section.
-
-**Height**
-
-This tool measures the height or vertical distance between two points.
-To start a measurement, click on the height icon and then click on the desired two points. The process will be automatically ended.
-Further information can also be obtained from selecting this element under the scene section.
-
-.. figure:: images/height_animation.gif
-   :alt: Height measurement
-   :align: center
-
-**Circle**
-
-This tool measures the radius of a circle formed by three points.
-To start a measurement, click on the circle icon and then click on the desired two points. The process will be automatically ended.
-Further information such as Circumference can also be obtained from selecting this element under the scene section.
-
-**Azimuth**
-
-This tool measures the azimuthal angle of a line. This line is formed by two points selected by the user, the angle is measured in degrees, clockwise from 0 to 360 and starting from the geographical north.
-To start a measurement, click on the azimuth icon and then click on the desired two points. The process will be automatically ended.
-Further information can also be obtained from selecting this element under the scene section.
-
-**Area**
-
-This tool measures the horizontal area formed by a polygon.
-To start a measurement, click on the area icon and start clicking on the points forming the desired polygon (three or more). Right click to finish measurement.
-Further information can also be obtained from selecting this element under the scene section.
-
-**Volume (cube)**
-
-This tool measures the volume formed by a cube.
-To start a measurement, click on the volume (cube) icon and click on the model to place the cube. It is possible relocate, redimension and rotate the cube using the displayed handlers. Right click to finish measurement.
-Further information can also be obtained from selecting this element under the scene section.
-
-**Volume (sphere)**
-
-This tool measures the volume formed by a sphere.
-To start a measurement, click on the volume (sphere) icon and click on the model to place the sphere. It is possible relocate, redimension and rotate the sphere using the displayed handlers. Right click to finish measurement.
-Further information can also be obtained from selecting this element under the scene section.
-
-**Height profile**
-
-This tool creates a height profile formed by a line on the model.
-To start a measurement, click on the Height profile icon and then form a line on the model by clicking on the desired points (two or more). Right click to finish measurement.
-Further information and options, such as "Show 2d Profile", can also been obtained from selecting this element under the scene section.
-
-.. figure:: images/height_profile.png
-   :alt: Height profile
-   :align: center
-
-**Annotation**
-
-This tool creates an annotation label on a highlighted point on the model.
-To start a measurement, click on the annotation icon and then click on the desired point. The process will be automatically ended.
-To edit the annotation, select this element under the scene section, then edit Title and Description.
-
-**Remove measurements**
-
-This tool removes all measurements on the model.
-To remove all measurement, click on the "Remove measurements" icon.
-
-
-Clipping
----------
-
-
-.. figure:: images/clipping.png
-   :alt: Tools - Clipping tools
-   :align: center
-
-Point cloud can be clipped by selecting an area. Clipping options include **None** / **Highlight** / **Inside** / **Outside**
-
-To clip a point cloud, click on the volume clip icon, place the cube on the model and relocate, redimension and rotate to contain the desired area.
-Highlight is set by default as the clipping method. If display only the points contained within the cube click on "Inside", otherwise click on "Outside".
-
-To remove the clipping volume or polygons click on the "Remove all measurements" icon.
-
-.. figure:: images/clipping_animation.gif
-   :alt: Tools - Clipping
-   :align: center
-
-Navigation
------------
-
-.. figure:: images/navigation.png
-   :alt: Tools - Navigation controls
-   :align: center
-
-Potree 3D viewer have 4 Navigation controls which define its behavior.
-
-**Earth Control**
-
-Earth control navigated as anchored to the ground. Mouse left button moves the model horizontally, mouse wheel controls zoom and right button orbits the model.
-
-**Fly control**
-
-Fly control moves the camera as in birds eye using the keyboard. Keys "W" and "S" moves forward and backwards, respectively and in the direction of the camera, while "A" and "D" moves left and right respectively. Also, the "R" and "F" keys moves the camera up and down. The mouse left button changes the direction of the camera, mouse wheel controls zoom, and right button moves the camera in the XYZ axis.
-
-The speed for these movements can be controlled using the sliding control.
-
-**Helicopter control**
-
-Helicopter control moves the camera as in an aircraft using the keyboard. Keys "W" and "S" moves forward and backwards, respectively restricted in a horizontal plane, while "A" and "D" moves left and right respectively. Also, the "R" and "F" keys moves the camera up and down. The mouse left button changes the direction of the camera, mouse wheel controls zoom, and right button moves the model in the XY axis.
-
-The speed for these movements can be controlled using the sliding control.
-
-**Orbit Control**
-
-Orbit Control is the default navigation behavior. The mouse left button orbits the model, the wheel controls zoom and the right button moves the model in the XYZ axis.
-
-**Full extent**
-
-Full extent button restores the model view.
-
-**Navigation cube**
-
-Navigation cube displays a wireframe cube containing the model.
-
-**Compass**
-
-Compass button displays a compass on the upper right corner.
-
-**Camera animation**
-
-The camera animation button creates a camera animation path. Position of the camera is defined by the points on the green line while the points in the blue line are the location towards the camera is intended to be facing.
-
-To create an animation, adjust the points for the camera locations and camera direction, then select the camera element under the Scene section to create more point, change animation speed or play the animation.
-
-.. figure:: images/camera_animation.gif
-   :alt: Tools - Navigation controls
-   :align: center
-
-
-Scene
-=====
-
-The Scene section displays a file tree containing all the scene elements.
-Elements are arranged in six groups, which are **Point clouds** / **Measurements** / **Annotations**
-/ **Other** / **Vector** / **Images**
-
-Each element under these groups can be selected to get further information or to control its properties.
-
-For instance, point clouds properties can be modified to show elevation and also the color ramp cam be customized.
-
-.. figure:: images/pointcloud_elevation.png
-   :alt: Tools - Navigation controls
-   :align: center
-
-
 ********
 Advanced
 ********
+
+
+Calibrating the Camera
+======================
+
+Camera calibration is a special challenge with commodity cameras. Temperature changes, vibrations, focus, and other factors can affect the derived parameters with substantial effects on resulting data. Automatic or self calibration is possible and desirable with drone flights, but depending on the flight pattern, automatic calibration may not remove all distortion from the resulting products. James and Robson (2014) in their paper `Mitigating systematic error in topographic models derived from UAV and ground‐based image networks <https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609>`_ address how to minimize the distortion from self-calibration.
+
+.. figure:: images/msimbasi_bowling.png
+   :alt: image of lens distortion effect on bowling of data
+   :align: center
+
+*Bowling effect on point cloud over 13,000+ image dataset collected by World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania.*
+
+To mitigate this effect, there are a few options but the simplest are as follows: fly two patterns separated by 20°, and rather than having a nadir (straight down pointing) camera, use one that tilts forward by 5°.
+
+.. figure:: images/flightplanning.gif
+  :alt: animation showing optimum
+  :align: center
+  :height: 480
+  :width: 640
+
+As this approach takes longer than traditional imaging, pilots and teams may apply this technique to a smaller area and use the collected data to optimize future flights. OpenDroneMap can generate a calibration file called cameras.json from a small sample flight. The calibration file can be used for future flights, mitigating the bowling effect without sacrificing efficiency.
+
+Alternatively, the following experimental method can be applied: fly with much lower overlap, but two *crossgrid* flights (sometimes called crosshatch) separated by 20° with a 5° forward facing camera.
+
+* Crossgrid overlap percentages can be lower than parallel flights. To get good 3D results, you will require 68% overlap and sidelap for an equivalent 83% overlap and sidelap.
+* To get good 2D and 2.5D (digital elevation model) results, you will require 42% overlap and sidelap for an equivalent 70% overlap and sidelap.
+
+.. figure:: images/rotation.gif
+  :alt: animation showing experimental optimum
+  :align: center
+
+Vertically separated flight lines also improve accuracy, but less so than a camera that is forward facing by 5°.
+
+.. figure:: images/forward_facing.png
+   :alt: figure showing effect of vertically separated flight lines and forward facing cameras on improving self calibration
+   :align: center
+
+From James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/licenses/by/4.0>`_
+
 
 Using Image Masks
 =================
