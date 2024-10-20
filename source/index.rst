@@ -53,7 +53,6 @@ The documentation is available in several languages. Some translations are incom
     flowchart
     outputs
     map-accuracy
-    masks
     large
     flying
     multispectral
