@@ -55,7 +55,6 @@ The documentation is available in several languages. Some translations are incom
     map-accuracy
     masks
     large
-    resources
     flying
     multispectral
     requesting-features
