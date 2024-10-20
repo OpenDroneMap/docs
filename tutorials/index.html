@@ -133,6 +133,7 @@
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#advanced">Advanced</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#using-image-masks">Using Image Masks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#using-singularity">Using Singularity</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#build-singularity-image-from-docker-image">Build Singularity image from Docker image</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#using-singularity-sif-image">Using Singularity SIF image</a></li>
@@ -355,7 +356,20 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../masks/">Using Image Masks</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../multispectral/">Multispectral and Thermal Support</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#multispectral-support">Multispectral Support</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multispectral/#supported-sensors">Supported Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multispectral/#creating-orthophotos-from-multispectral-data">Creating Orthophotos from Multispectral Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multispectral/#workflows-for-non-supported-sensors">Workflows for Non-supported Sensors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#thermal-support">Thermal Support</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multispectral/#hardware">Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multispectral/#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../large/">Splitting Large Datasets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">Calibrate images</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../large/#local-split-merge">Local Split-Merge</a></li>
@@ -379,20 +393,6 @@
 <li class="toctree-l2"><a class="reference internal" href="../flying/#data-collection-effort-full-3d">Data collection effort, full 3D</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../flying/#data-collection-effort-2d-and-2-5d-products">Data collection effort, 2D and 2.5D products</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../flying/#other-resources-on-flying">Other resources on flying</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../multispectral/">Multispectral and Thermal Support</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../multispectral/#multispectral-support">Multispectral Support</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multispectral/#supported-sensors">Supported Sensors</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multispectral/#creating-orthophotos-from-multispectral-data">Creating Orthophotos from Multispectral Data</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multispectral/#workflows-for-non-supported-sensors">Workflows for Non-supported Sensors</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../multispectral/#thermal-support">Thermal Support</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../multispectral/#hardware">Hardware</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../multispectral/#usage">Usage</a></li>
-</ul>
-</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../requesting-features/">How To Request Features</a></li>
@@ -1101,6 +1101,23 @@ Elements are arranged in six groups, which are <strong>Point clouds</strong> / <
 </section>
 <section id="advanced">
 <h2>Advanced<a class="headerlink" href="#advanced" title="Permalink to this heading"></a></h2>
+<section id="using-image-masks">
+<h3>Using Image Masks<a class="headerlink" href="#using-image-masks" title="Permalink to this heading"></a></h3>
+<p>Starting from ODM <code class="docutils literal notranslate"><span class="pre">2.0</span></code> people can supply image masks to inform the software to skip reconstruction over certain areas. This is useful for cases where the sky was accidentally included in the input photos from oblique shots, or simply to limit the reconstruction of a single subject.</p>
+<p>To add a mask, simply create a new black and white image of the same dimension as the target image you want to mask (you can use a program such as GIMP to do this). Color in black the areas to exclude from the reconstruction.</p>
+<figure class="align-center">
+<img alt="Target image" src="https://user-images.githubusercontent.com/1951843/93247037-ade87a00-f75b-11ea-8b42-25bc1d89279d.png" />
+</figure>
+<figure class="align-center">
+<img alt="Image mask" src="https://user-images.githubusercontent.com/1951843/93247007-a2954e80-f75b-11ea-87b3-4f04bd1737b9.png" />
+</figure>
+<figure class="align-center">
+<img alt="3D result (building is masked)" src="https://user-images.githubusercontent.com/1951843/93246970-8f827e80-f75b-11ea-8179-5a8fdd9f5193.png" />
+</figure>
+<p>Name your file:</p>
+<p><code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;_mask.JPG</span></code></p>
+<p>For example, <code class="docutils literal notranslate"><span class="pre">DJI_0018.JPG</span></code> can have a mask by creating a <code class="docutils literal notranslate"><span class="pre">DJI_0018_mask.JPG</span></code> file and include that in the list of images. You can use <code class="docutils literal notranslate"><span class="pre">.JPG</span></code>, <code class="docutils literal notranslate"><span class="pre">.PNG</span></code>, <code class="docutils literal notranslate"><span class="pre">.BMP</span></code> and <code class="docutils literal notranslate"><span class="pre">.TIF</span></code> formats for image masks.</p>
+</section>
 <section id="using-singularity">
 <h3>Using Singularity<a class="headerlink" href="#using-singularity" title="Permalink to this heading"></a></h3>
 <p><a class="reference external" href="https://sylabs.io/">Singularity</a> is another container platform able to run Docker images.
@@ -1261,7 +1278,7 @@ Place your images in a directory named “images” (for example /my/project/ima
 <h4>Install and use changes<a class="headerlink" href="#install-and-use-changes" title="Permalink to this heading"></a></h4>
 <p>Let us get the environment prepared for our testing:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">root</span><span class="nd">@c997a4c5611b</span><span class="p">:</span><span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="c1"># cd /code</span>
-<span class="o">./</span><span class="n">configure</span><span class="o">.</span><span class="n">sh</span> <span class="n">installruntimedepsonly</span>
+<span class="o">./</span><span class="n">configure</span><span class="o">.</span><span class="n">sh</span> <span class="n">install</span>
 <span class="n">mkdir</span> <span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">SuperBuild</span><span class="o">/</span><span class="n">build</span>
 <span class="n">cd</span> <span class="o">/</span><span class="n">code</span><span class="o">/</span><span class="n">SuperBuild</span><span class="o">/</span><span class="n">build</span>
 </pre></div>
