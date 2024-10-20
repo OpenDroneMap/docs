@@ -22,7 +22,7 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
-    <link rel="next" title="గ్రౌండ్ కంట్రోల్ పాయింట్లు" href="../gcp/" />
+    <link rel="next" title="Accuracy, Ground Control, and Alignment" href="../map-accuracy/" />
     <link rel="prev" title="Flowchart with options" href="../flowchart/" /> 
 </head>
 
@@ -131,10 +131,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/#scene">Scene</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/#alignment-files">Alignment Files</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/#multi-temporal-datasets">Multi-temporal Datasets</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/#advanced">Advanced</a><ul>
@@ -332,26 +328,34 @@
 <li class="toctree-l2"><a class="reference internal" href="#list-of-all-outputs">అన్ని ఉత్పాదనల జాబితా</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../gcp/">గ్రౌండ్ కంట్రోల్ పాయింట్లు</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../gcp/#recommended-practices-for-gcp-setting">జిసిపి సెట్టింగ్ కోసం సిఫార్సు చేసిన పద్ధతులు</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gcp/#gcp-file-format">GCP ఫైల్ ఫార్మాట్</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gcp/#user-interfaces">వినియోగదారు ఇంటర్‌ఫేస్‌లు</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../gcp/#id1">POSM GCPi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../gcp/#id2">జిసిపి ఎడిటర్ ప్రో</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../gcp/#references">ప్రస్తావనలు</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">మ్యాప్ ఖచ్చితత్వం</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#what-to-expect">ఏమి ఆశించను</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">Accuracy, Ground Control, and Alignment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#map-accuracy">మ్యాప్ ఖచ్చితత్వం</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#what-to-expect">ఏమి ఆశించను</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aspects-impacting-map-accuracy">మ్యాప్ ఖచ్చితత్వాన్ని ప్రభావితం చేసే అంశాలు</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#references">ప్రస్తావనలు</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#references">ప్రస్తావనలు</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#ground-control-points">Ground Control Points</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#recommended-practices-for-gcp-setting">Recommended practices for GCP setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#gcp-file-format">GCP file format</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../geo/">చిత్రం జియోలొకేషన్ ఫైల్స్</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#user-interfaces">User Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#id1">POSM GCPi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#id3">ప్రస్తావనలు</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#image-geolocation-files">Image Geolocation Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#improving-relative-accuracy">Improving relative accuracy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#workflow-for-multi-temporal-datasets">Workflow for multi-temporal datasets:</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../masks/">ఇమేజ్ మాస్క్‌లను ఉపయోగించడం</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../large/">Splitting Large Datasets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">Calibrate images</a></li>
@@ -550,7 +554,7 @@
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
         <a href="../flowchart/" class="btn btn-neutral float-left" title="Flowchart with options" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../gcp/" class="btn btn-neutral float-right" title="గ్రౌండ్ కంట్రోల్ పాయింట్లు" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../map-accuracy/" class="btn btn-neutral float-right" title="Accuracy, Ground Control, and Alignment" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

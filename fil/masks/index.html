@@ -22,7 +22,7 @@
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
     <link rel="next" title="Splitting Large Datasets" href="../large/" />
-    <link rel="prev" title="Image Geolocation Files" href="../geo/" /> 
+    <link rel="prev" title="Accuracy, Ground Control, and Alignment" href="../map-accuracy/" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -130,10 +130,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/#scene">Scene</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/#alignment-files">Alignment Files</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/#multi-temporal-datasets">Multi-temporal Datasets</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/#advanced">Advanced</a><ul>
@@ -331,26 +327,34 @@
 <li class="toctree-l2"><a class="reference internal" href="../outputs/#list-of-all-outputs">Listahan ng mga output</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../gcp/">Ground Control Points</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../gcp/#recommended-practices-for-gcp-setting">Mga nirerekumendang gawi para sa paglagay ng GCP</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gcp/#gcp-file-format">GCP file format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gcp/#user-interfaces">User Interfaces</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../gcp/#id1">POSM GCPi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../gcp/#id2">GCP Editor Pro</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../gcp/#references">References</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">Kawastuan ng Mapa</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#what-to-expect">Mga Dapat I-expect</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">Accuracy, Ground Control, and Alignment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#map-accuracy">Kawastuan ng Mapa</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#what-to-expect">Mga Dapat I-expect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aspects-impacting-map-accuracy">Mga aspeto na may impact sa map accuracy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#references">Mga Sanggunian</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#references">Mga Sanggunian</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#ground-control-points">Ground Control Points</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#recommended-practices-for-gcp-setting">Recommended practices for GCP setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#gcp-file-format">GCP file format</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../geo/">Image Geolocation Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#user-interfaces">User Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#id1">POSM GCPi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#id3">Mga Sanggunian</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#image-geolocation-files">Image Geolocation Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#improving-relative-accuracy">Improving relative accuracy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#workflow-for-multi-temporal-datasets">Workflow for multi-temporal datasets:</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Gamit ang Image Masks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../large/">Splitting Large Datasets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">Calibrate images</a></li>
@@ -470,7 +474,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../geo/" class="btn btn-neutral float-left" title="Image Geolocation Files" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../map-accuracy/" class="btn btn-neutral float-left" title="Accuracy, Ground Control, and Alignment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../large/" class="btn btn-neutral float-right" title="Splitting Large Datasets" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

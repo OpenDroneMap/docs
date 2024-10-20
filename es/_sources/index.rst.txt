@@ -52,9 +52,7 @@ The documentation is available in several languages. Some translations are incom
     arguments
     flowchart
     outputs
-    gcp
     map-accuracy
-    geo
     masks
     large
     resources

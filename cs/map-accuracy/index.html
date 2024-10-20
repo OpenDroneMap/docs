@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Map accuracy &mdash; Dokumentace pro OpenDroneMap 3.5.4</title>
+  <title>Accuracy, Ground Control, and Alignment &mdash; Dokumentace pro OpenDroneMap 3.5.4</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -22,8 +22,8 @@
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Rejstřík" href="../genindex/" />
     <link rel="search" title="Vyhledávání" href="../search/" />
-    <link rel="next" title="Image Geolocation Files" href="../geo/" />
-    <link rel="prev" title="Ground Control Points" href="../gcp/" /> 
+    <link rel="next" title="Using Image Masks" href="../masks/" />
+    <link rel="prev" title="OpenDroneMap Outputs" href="../outputs/" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -131,10 +131,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/#scene">Scéna</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/#alignment-files">Alignment Files</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/#multi-temporal-datasets">Multi-temporal Datasets</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/#advanced">Advanced</a><ul>
@@ -332,26 +328,34 @@
 <li class="toctree-l2"><a class="reference internal" href="../outputs/#list-of-all-outputs">List of all outputs</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../gcp/">Ground Control Points</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../gcp/#recommended-practices-for-gcp-setting">Recommended practices for GCP setting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gcp/#gcp-file-format">GCP file format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gcp/#user-interfaces">User Interfaces</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../gcp/#id1">POSM GCPi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../gcp/#id2">GCP Editor Pro</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../gcp/#references">References</a></li>
-</ul>
-</li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Map accuracy</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#what-to-expect">What to expect</a><ul>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Accuracy, Ground Control, and Alignment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#map-accuracy">Map accuracy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#what-to-expect">What to expect</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#aspects-impacting-map-accuracy">Aspects impacting map accuracy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#references">References</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#references">References</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#ground-control-points">Ground Control Points</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#recommended-practices-for-gcp-setting">Recommended practices for GCP setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#gcp-file-format">GCP file format</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../geo/">Image Geolocation Files</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#user-interfaces">User Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#id1">POSM GCPi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#id3">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#image-geolocation-files">Image Geolocation Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#improving-relative-accuracy">Improving relative accuracy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#workflow-for-multi-temporal-datasets">Workflow for multi-temporal datasets:</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../masks/">Using Image Masks</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../large/">Splitting Large Datasets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">Calibrate images</a></li>
@@ -438,7 +442,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Map accuracy</li>
+      <li class="breadcrumb-item active">Accuracy, Ground Control, and Alignment</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/map-accuracy.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -448,8 +452,10 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="map-accuracy">
-<h1>Map accuracy<a class="headerlink" href="#map-accuracy" title="Permalink to this heading"></a></h1>
+  <section id="accuracy-ground-control-and-alignment">
+<h1>Accuracy, Ground Control, and Alignment<a class="headerlink" href="#accuracy-ground-control-and-alignment" title="Permalink to this heading"></a></h1>
+<section id="map-accuracy">
+<h2>Map accuracy<a class="headerlink" href="#map-accuracy" title="Permalink to this heading"></a></h2>
 <p>Accuracy can be defined as the degree or closeness to which the information on a map matches the values in the real world. Therefore, when we refer to accuracy, we are talking about quality of data and about number of errors contained in a certain dataset (Pascual 2011).</p>
 <p><strong>Relative or Local accuracy</strong></p>
 <p>Local or relative accuracy can be defined as the degree to which de distances between two points on a map correspond to the actually distances between those points in the real world.</p>
@@ -467,10 +473,11 @@
 <p><strong>An Accuracy level for each project</strong></p>
 <p>Each project has specific accuracy needs to be met. For instance assessing the progress in a construction site or measuring an area affected by a fire does not require the use of GCP, since absolute accuracy will not impact the decision making process. In the other hand, there are tasks on which accuracy is critical, for example project compliance evaluations and land title surveying, which require a higher relative and absolute accuracy.</p>
 <section id="what-to-expect">
-<h2>What to expect<a class="headerlink" href="#what-to-expect" title="Permalink to this heading"></a></h2>
+<h3>What to expect<a class="headerlink" href="#what-to-expect" title="Permalink to this heading"></a></h3>
 <p>In general terms, one can expect the relative accuracy to be in the order of 1 to 3 times the average GSD for the dataset. And as for the absolute accuracy, one must consider that it is dependent of the GPS unit mounted in the UAV but the horizontal accuracy of a standard GPS is usually in the range of 2 to 6 meters and the vertical accuracy between 3 to 4 times the horizontal accuracy.</p>
 <p>When using GCP, absolute accuracy can be improved to 2.5 times GSD for the horizontal accuracy and 4 times the GSD for the vertical accuracy (Madawalagama 2016).</p>
 <p>At a GSD of 1cm, the accuracy is to that of the RTK GNSS, and is within 1:200 scales according to NSDI &amp; FGDC mapping accuracy standards during sub-optimal conditions (Barry 2013).</p>
+</section>
 <section id="aspects-impacting-map-accuracy">
 <h3>Aspects impacting map accuracy<a class="headerlink" href="#aspects-impacting-map-accuracy" title="Permalink to this heading"></a></h3>
 <p><strong>Weather</strong></p>
@@ -482,16 +489,161 @@
 <p><strong>Flight speed</strong></p>
 <p>Flight speed have special effect in cameras equipped with rolling shutter, while those equipped with global or mechanical shutter tends to reduce this effect. UAV equipped with RTK positioning systems are also affected with the speed, but with hover at each photo taken, you can get very good accuracy. If instead you are moving during each photo take, the accuracy is going to be limited by two factors: the speed at which you are moving multiplied by the 1 second increments of RTK (Mather 2020).</p>
 </section>
-</section>
 <section id="references">
-<h2>References<a class="headerlink" href="#references" title="Permalink to this heading"></a></h2>
+<h3>References<a class="headerlink" href="#references" title="Permalink to this heading"></a></h3>
 <p>Barry, P., &amp; Coakley, R. «Accuracy of UAV photogrammetry compared with Network RTK GPS.» Baseline Surveys. 2013. <a class="reference external" href="http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf">http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf</a>  (accessed 10 13, 2020).</p>
 <p>Drone Deploy. How Do I Use Ground Control Points?: A guide to using ground control points with drone mapping software. 5 8, 2017. <a class="reference external" href="https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/">https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/</a> (accessed 7 9, 2020).</p>
 <p>Madawalagama, S.L., Munasinghe, N., Dampegama, S.D.P.J. and Samarakoon, L. «Low-cost aerial mapping with consumer grade.» 37th Asian Conference on Remote Sensing. Colombo, Sri Lanka, 2016.</p>
 <p>Mather, Stephen. OpenDroneMap. 30 de Marzo de 2020. <a class="reference external" href="https://community.opendronemap.org/t/the-accuracy-of-webodm-using-rtk-uavs/3937">https://community.opendronemap.org/t/the-accuracy-of-webodm-using-rtk-uavs/3937</a> (accessed 10 12, 2020).</p>
 <p>Pascual, Manuel S. GIS Lounge: GIS Data: A Look at Accuracy, Precision, and Types of Errors. 11 6, 2011. <a class="reference external" href="https://www.gislounge.com/gis-data-a-look-at-accuracy-precision-and-types-of-errors/">https://www.gislounge.com/gis-data-a-look-at-accuracy-precision-and-types-of-errors/</a> (accessed 07 09, 2020).</p>
 <p>Pix4D. «What is accuracy in an aerial mapping project?» Pix4D. 25 de 05 de 2019. <a class="reference external" href="https://www.pix4d.com/blog/accuracy-aerial-mapping">https://www.pix4d.com/blog/accuracy-aerial-mapping</a> (accessed 10 13, 2020).</p>
+</section>
+</section>
+<section id="ground-control-points">
+<h2>Ground Control Points<a class="headerlink" href="#ground-control-points" title="Permalink to this heading"></a></h2>
+<section id="overview">
+<h3>Overview<a class="headerlink" href="#overview" title="Permalink to this heading"></a></h3>
+<p>Ground control points are useful for correcting distortions in the data and referencing the data to know coordinate systems.</p>
+<p>A Ground Control Point (GCP) is a position measurement made on the ground, typically using a high precision GPS. (Toffanin 2019)</p>
+<p>Ground control points can be set existing structures like pavement corners, lines on a parking lot or contrasting color floor tiles, otherwise can be set using targets placed on the ground.</p>
+<p>Targets can be purchased or build with an ample variety of materials ranging from bucket lids to floor tiles.</p>
+<section id="recommended-practices-for-gcp-setting">
+<h4>Recommended practices for GCP setting<a class="headerlink" href="#recommended-practices-for-gcp-setting" title="Permalink to this heading"></a></h4>
+<p>Keep ground control points visible for all camera locations. Consider the expected ground sampling distance, illumination, vegetation, buildings and all the existing obstacles.</p>
+<p>Procure an evenly horizontal distribution of the GCPs within the project, covering high and low elevations. A minimum of 5 GCP works for most of the jobs, and for larger projects 8 â€“ 10 are sufficient. Locate some points near the corners and others in the center, considering that GCP spacing should be larger than the image footprint so that you canâ€™t see more than one GCP in a single image.</p>
+<p>In order to ensure each GCP are found in at least 5 images, separate the points 10 to 30 meters from the perimeter of the project. This distance is dependent of the overlapping, so increasing overlapping should reduce the required distance from the perimeter.</p>
+</section>
+<section id="gcp-file-format">
+<h4>GCP file format<a class="headerlink" href="#gcp-file-format" title="Permalink to this heading"></a></h4>
+<p>The format of the GCP file is simple.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The first line should contain the name of the projection used for the geo coordinates. This can be specified either as a PROJ string (e.g. <code class="docutils literal notranslate"><span class="pre">+proj=utm</span> <span class="pre">+zone=10</span> <span class="pre">+ellps=WGS84</span> <span class="pre">+datum=WGS84</span> <span class="pre">+units=m</span> <span class="pre">+no_defs</span></code>), EPSG code (e.g. <code class="docutils literal notranslate"><span class="pre">EPSG:4326</span></code>) or as a <code class="docutils literal notranslate"><span class="pre">WGS84</span> <span class="pre">UTM</span> <span class="pre">&lt;zone&gt;[N|S]</span></code> value (eg. <code class="docutils literal notranslate"><span class="pre">WGS84</span> <span class="pre">UTM</span> <span class="pre">16N</span></code>)</p></li>
+<li><p>Subsequent lines are the X, Y &amp; Z coordinates, your associated pixels, the image filename and optional extra fields, separated by tabs or spaces:</p></li>
+<li><p>Avoid setting elevation values to „NaN“ to indicate no value. This can cause processing failures. Instead use 0.0</p></li>
+<li><p>Similarly decreasing the no. of digits after the decimal place for <cite>geo_x</cite> and <cite>geo_y</cite> can also reduce processing failures.</p></li>
+<li><p>The 7th column (optional) typically contains the label of the GCP.</p></li>
+</ul>
+</div></blockquote>
+<p>GCP file format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">projection</span><span class="o">&gt;</span>
+<span class="n">geo_x</span> <span class="n">geo_y</span> <span class="n">geo_z</span> <span class="n">im_x</span> <span class="n">im_y</span> <span class="n">image_name</span> <span class="p">[</span><span class="n">gcp_name</span><span class="p">]</span> <span class="p">[</span><span class="n">extra1</span><span class="p">]</span> <span class="p">[</span><span class="n">extra2</span><span class="p">]</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="n">proj</span><span class="o">=</span><span class="n">utm</span> <span class="o">+</span><span class="n">zone</span><span class="o">=</span><span class="mi">10</span> <span class="o">+</span><span class="n">ellps</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">datum</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">units</span><span class="o">=</span><span class="n">m</span> <span class="o">+</span><span class="n">no_defs</span>
+<span class="mf">544256.7</span> <span class="mf">5320919.9</span> <span class="mi">5</span> <span class="mi">3044</span> <span class="mi">2622</span> <span class="n">IMG_0525</span><span class="o">.</span><span class="n">jpg</span>
+<span class="mf">544157.7</span> <span class="mf">5320899.2</span> <span class="mi">5</span> <span class="mi">4193</span> <span class="mi">1552</span> <span class="n">IMG_0585</span><span class="o">.</span><span class="n">jpg</span>
+<span class="mf">544033.4</span> <span class="mf">5320876.0</span> <span class="mi">5</span> <span class="mi">1606</span> <span class="mi">2763</span> <span class="n">IMG_0690</span><span class="o">.</span><span class="n">jpg</span>
+</pre></div>
+</div>
+<p>If you supply a GCP file called <code class="docutils literal notranslate"><span class="pre">gcp_list.txt</span></code> then ODM will automatically detect it. If it has another name you can specify using <code class="docutils literal notranslate"><span class="pre">--gcp</span> <span class="pre">&lt;path&gt;</span></code>. If you have a gcp file and want to do georeferencing with exif instead, then you can specify <code class="docutils literal notranslate"><span class="pre">--use-exif</span></code>. If you have high precision GPS measurements in your images (RTK) and want to use that information along with a gcp file, you can specify <code class="docutils literal notranslate"><span class="pre">--force-gps</span></code>.</p>
+<p><a class="reference external" href="http://diydrones.com/profiles/blogs/ground-control-points-gcps-for-aerial-photography">This post has some information about placing Ground Control Targets before a flight</a>, but if you already have images, you can find your own points in the images post facto. It’s important that you find high-contrast objects that are found in <strong>at least</strong> 3 photos, and that you find a minimum of 5 objects.</p>
+<p>Sharp corners are good picks for GCPs. You should also place/find the GCPs evenly around your survey area.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">gcp_list.txt</span></code> file must be created in the base of your project folder.</p>
+<p>For good results your file should have a minimum of 15 lines after the header (5 points with 3 images to each point).</p>
+</section>
+</section>
+<section id="user-interfaces">
+<h3>User Interfaces<a class="headerlink" href="#user-interfaces" title="Permalink to this heading"></a></h3>
+<p>You can use one of two user interfaces for creating GCP files:</p>
+<blockquote>
+<div><ul class="simple">
+<li><p><a class="reference external" href="https://github.com/posm/posm-gcpi">POSM GCPi</a></p></li>
+<li><p><a class="reference external" href="https://github.com/uav4geo/GCPEditorPro">GCP Editor Pro</a></p></li>
+</ul>
+</div></blockquote>
+<section id="id1">
+<h4>POSM GCPi<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<p>The POSM GCPi is loaded by default on WebODM. An example is available at <a class="reference external" href="http://demo.webodm.org/plugins/posm-gcpi/">the WebODM Demo</a>. To use this with known ground control XYZ values, one would do the following:</p>
+<p>Create a GCP list that only includes gcp name (this is the label that will be seen in the GCP interface), x, y, and z, with a header with a proj4 string of your GCPs (make sure they are in a planar coordinate system, such as UTM. It should look something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="n">proj</span><span class="o">=</span><span class="n">utm</span> <span class="o">+</span><span class="n">zone</span><span class="o">=</span><span class="mi">37</span> <span class="o">+</span><span class="n">south</span> <span class="o">+</span><span class="n">ellps</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">datum</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">units</span><span class="o">=</span><span class="n">m</span> <span class="o">+</span><span class="n">no_defs</span>
+<span class="n">gcp01</span> <span class="mf">529356.250827686</span> <span class="mf">9251137.5643209</span> <span class="mf">8.465</span>
+<span class="n">gcp02</span> <span class="mf">530203.125367657</span> <span class="mf">9250140.80991621</span> <span class="mf">15.781</span>
+<span class="n">gcp03</span> <span class="mf">530292.136003818</span> <span class="mf">9250745.02372435</span> <span class="mf">11.977</span>
+<span class="n">gcp04</span> <span class="mf">530203.125367657</span> <span class="mf">9250140.80991621</span> <span class="mf">15.781</span>
+<span class="n">gcp05</span> <span class="mf">530292.136003818</span> <span class="mf">9250745.02372435</span> <span class="mf">11.977</span>
+</pre></div>
+</div>
+<p>Then one can load this GCP list into the interface, load the images, and place each of the GCPs in the image.</p>
+</section>
+<section id="id2">
+<h4>GCP Editor Pro<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
+<p>This app needs to be installed separately or can be loaded as a WebODM plugin from <a class="reference external" href="https://github.com/uav4geo/GCPEditorPro">https://github.com/uav4geo/GCPEditorPro</a></p>
+<p>Create a CSV file that includes the gcp name, northing, easting and elevation.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GCP</span> <span class="n">Label</span><span class="p">,</span><span class="n">Northing</span><span class="p">,</span><span class="n">Easting</span><span class="p">,</span><span class="n">Elevation</span>
+<span class="n">gcp01</span><span class="p">,</span><span class="mf">529356.250827686</span><span class="p">,</span><span class="mf">9251137.5643209</span><span class="p">,</span><span class="mf">8.465</span>
+<span class="n">gcp02</span><span class="p">,</span><span class="mf">530203.125367657</span><span class="p">,</span><span class="mf">9250140.80991621</span><span class="p">,</span><span class="mf">15.781</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Then import the CSV from the main screen and type <code class="docutils literal notranslate"><span class="pre">+proj=utm</span> <span class="pre">+zone=37</span> <span class="pre">+south</span> <span class="pre">+ellps=WGS84</span> <span class="pre">+datum=WGS84</span> <span class="pre">+units=m</span> <span class="pre">+no_defs</span></code> in the <code class="docutils literal notranslate"><span class="pre">EPSG/PROJ</span></code> box.</p>
+<p>The following screen will display a map from where to select the GCPs to tag and import the respective images.</p>
+</section>
+</section>
+<section id="id3">
+<h3>References<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h3>
+<p>Toffanin, Piero. <a class="reference external" href="https://odmbook.com/">Open Drone Map: The Missing Guide.</a> MasseranoLabs LLC, 2019.</p>
+</section>
+</section>
+<section id="image-geolocation-files">
+<h2>Image Geolocation Files<a class="headerlink" href="#image-geolocation-files" title="Permalink to this heading"></a></h2>
+<p>By default ODM will use the GPS information embedded in the images, if it is available. Sometimes images do not contain GPS information, or a user wishes to override the information with more accurate data (such as RTK).</p>
+<p>Starting from ODM <code class="docutils literal notranslate"><span class="pre">2.0</span></code> people can supply an image geolocation file (geo) for this purpose.</p>
+<p>The format of the image geolocation file is simple.</p>
+<blockquote>
+<div><ul class="simple">
+<li><p>The first line should contain the name of the projection used for the geo coordinates. This can be specified either as a PROJ string (e.g. <code class="docutils literal notranslate"><span class="pre">+proj=utm</span> <span class="pre">+zone=10</span> <span class="pre">+ellps=WGS84</span> <span class="pre">+datum=WGS84</span> <span class="pre">+units=m</span> <span class="pre">+no_defs</span></code>), EPSG code (e.g. <code class="docutils literal notranslate"><span class="pre">EPSG:4326</span></code>) or as a <code class="docutils literal notranslate"><span class="pre">WGS84</span> <span class="pre">UTM</span> <span class="pre">&lt;zone&gt;[N|S]</span></code> value (eg. <code class="docutils literal notranslate"><span class="pre">WGS84</span> <span class="pre">UTM</span> <span class="pre">16N</span></code>)</p></li>
+<li><p>Subsequent lines are the image filename, X, Y &amp; Z (optional) coordinates, the camera angles (optional, currently used only for radiometric calibration) and the horizontal/vertical accuracy (optional):</p></li>
+<li><p>Camera angles can be set to <code class="docutils literal notranslate"><span class="pre">0</span></code> if they are not available.</p></li>
+<li><p>The 10th column (optional) can contain extra fields, such as a label.</p></li>
+</ul>
+</div></blockquote>
+<p>File format:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">&lt;</span><span class="n">projection</span><span class="o">&gt;</span>
+<span class="n">image_name</span> <span class="n">geo_x</span> <span class="n">geo_y</span> <span class="p">[</span><span class="n">geo_z</span><span class="p">]</span> <span class="p">[</span><span class="n">yaw</span> <span class="p">(</span><span class="n">degrees</span><span class="p">)]</span> <span class="p">[</span><span class="n">pitch</span> <span class="p">(</span><span class="n">degrees</span><span class="p">)]</span> <span class="p">[</span><span class="n">roll</span> <span class="p">(</span><span class="n">degrees</span><span class="p">)]</span> <span class="p">[</span><span class="n">horz</span> <span class="n">accuracy</span> <span class="p">(</span><span class="n">meters</span><span class="p">)]</span> <span class="p">[</span><span class="n">vert</span> <span class="n">accuracy</span> <span class="p">(</span><span class="n">meters</span><span class="p">)]</span> <span class="p">[</span><span class="n">extras</span><span class="o">...</span><span class="p">]</span>
+<span class="o">...</span>
+</pre></div>
+</div>
+<p>Example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">EPSG</span><span class="p">:</span><span class="mi">4326</span>
+<span class="n">DJI_0028</span><span class="o">.</span><span class="n">JPG</span>    <span class="o">-</span><span class="mf">91.9942096111111</span>   <span class="mf">46.84252125</span> <span class="mf">198.609</span>
+<span class="n">DJI_0032</span><span class="o">.</span><span class="n">JPG</span>    <span class="o">-</span><span class="mf">91.9938293055556</span>   <span class="mf">46.8424584444444</span>    <span class="mf">198.609</span>
+</pre></div>
+</div>
+<p>If you supply a file called <code class="docutils literal notranslate"><span class="pre">geo.txt</span></code> then ODM will automatically detect it. If it has another name you can specify using <code class="docutils literal notranslate"><span class="pre">--geo</span> <span class="pre">&lt;path&gt;</span></code>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">geo.txt</span></code> file must be created in the base of your project folder or when using WebODM, uploaded with the raw jpg or tif input files.</p>
+</section>
+<section id="improving-relative-accuracy">
+<h2>Improving relative accuracy<a class="headerlink" href="#improving-relative-accuracy" title="Permalink to this heading"></a></h2>
+<p>Georeferencing by default is done using GPS (GNSS) or GCPs (if provided).</p>
+<p>Starting from ODM <code class="docutils literal notranslate"><span class="pre">3.0.2</span></code> people can supply a reference alignment file to georeference the program outputs. The reconstruction will be initially performed using GPS/GCPs and will subsequently be aligned to the reference model via a linear scaling/rotation/shift operation.</p>
+<p>If you supply a file called <code class="docutils literal notranslate"><span class="pre">align.laz</span></code>, <code class="docutils literal notranslate"><span class="pre">align.las</span></code> or <code class="docutils literal notranslate"><span class="pre">align.tif</span></code> (single band GeoTIFF DEM) then ODM will automatically detect it and attempt to align outputs to this reference model. If it has another name you can specify using <code class="docutils literal notranslate"><span class="pre">--align</span> <span class="pre">&lt;path&gt;</span></code>.</p>
+<p>The alignment file must be created in the base of your project folder. The base folder is usually where you have stored your images. If you are using WebODM or NodeODM, then upload the align file with your images. If resizing your images in WebODM, use an <code class="docutils literal notranslate"><span class="pre">align.laz</span></code> or <code class="docutils literal notranslate"><span class="pre">align.las</span></code> file instead of a tif.</p>
+<p>When previously mapped sites need revisited, OpenDroneMap can align multiple versions of a dataset through time by using a prior point cloud or digital elevation model. As the prior point cloud <a class="reference external" href="https://community.opendronemap.org/t/tips-to-increase-same-site-temporal-consistency/22161/7">seems to provide better results</a>, that is the approach we will review here.</p>
+<section id="workflow-for-multi-temporal-datasets">
+<h3>Workflow for multi-temporal datasets:<a class="headerlink" href="#workflow-for-multi-temporal-datasets" title="Permalink to this heading"></a></h3>
+<ol class="arabic">
+<li><p>Process your original data. This step doesn’t require a ground control point file, but use one if absolute accuracy is a project requirement</p></li>
+<li><p>Download the Point Cloud from your first processed dataset as an LAZ file type (default). Rename the point cloud to align.laz</p></li>
+<li><p>Include that LAZ file with each of your subsequent processing. If you are using command line ODM, include it in the images directory. If uploading, simply upload with your raw images for processing</p></li>
+<li><p>Check your log. It should include a line near the top that indicates it has set align to a path value, something like this:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">Initializing</span> <span class="n">ODM</span> <span class="mf">3.5.3</span> <span class="o">-</span> <span class="n">Tue</span> <span class="n">Oct</span> <span class="mi">15</span> <span class="mi">05</span><span class="p">:</span><span class="mi">01</span><span class="p">:</span><span class="mi">43</span>  <span class="mi">2024</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="o">==============</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="mi">3</span><span class="n">d_tiles</span><span class="p">:</span> <span class="kc">False</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">align</span><span class="p">:</span> <span class="o">/</span><span class="n">var</span><span class="o">/</span><span class="n">www</span><span class="o">/</span><span class="n">data</span><span class="o">/</span><span class="n">bc14fa2c</span><span class="o">-</span><span class="n">ba5c</span><span class="o">-</span><span class="mi">4</span><span class="n">b85</span><span class="o">-</span><span class="mi">99</span><span class="n">b0</span><span class="o">-</span><span class="mi">0</span><span class="n">b7ff715b210</span><span class="o">/</span><span class="n">gcp</span><span class="o">/</span><span class="n">align</span><span class="o">.</span><span class="n">laz</span>
+<span class="p">[</span><span class="n">INFO</span><span class="p">]</span>    <span class="n">auto_boundary</span><span class="p">:</span> <span class="kc">True</span>
+</pre></div>
+</div>
+</li>
+</ol>
+<figure class="align-center">
+<img alt="Animated gif comparing two separately processed, but aligned digital surface models." src="../_images/align_pc.gif" />
+</figure>
+<p>Animated gif comparing two separately processed, but aligned digital surface models.</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/map-accuracy.rst">this page</a>!</p>
+</section>
 </section>
 </section>
 
@@ -499,8 +651,8 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../gcp/" class="btn btn-neutral float-left" title="Ground Control Points" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
-        <a href="../geo/" class="btn btn-neutral float-right" title="Image Geolocation Files" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+        <a href="../outputs/" class="btn btn-neutral float-left" title="OpenDroneMap Outputs" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../masks/" class="btn btn-neutral float-right" title="Using Image Masks" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 
   <hr/>

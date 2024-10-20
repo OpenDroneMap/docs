@@ -24,7 +24,7 @@
         <script src="https://unpkg.com/d3/dist/d3.min.js"></script>
         <script>
                 window.addEventListener("load", function () {
-                  var svgs = d3.selectAll(".mermaid#id-38a4663e-e3c3-4c22-96e9-465d7c3edc22 svg");
+                  var svgs = d3.selectAll(".mermaid#id-41be0564-56b6-4168-b1d3-b51c3fbd3b59 svg");
                   svgs.each(function() {
                     var svg = d3.select(this);
                     svg.html("<g>" + svg.html() + "</g>");
@@ -148,10 +148,6 @@
 </ul>
 </li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/#scene">Scene</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/#alignment-files">Alignment Files</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/#multi-temporal-datasets">Multi-temporal Datasets</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/#advanced">Advanced</a><ul>
@@ -349,26 +345,34 @@
 <li class="toctree-l2"><a class="reference internal" href="../outputs/#list-of-all-outputs">Liste de toutes les sorties</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../gcp/">Ground Control Points</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../gcp/#recommended-practices-for-gcp-setting">Recommended practices for GCP setting</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gcp/#gcp-file-format">GCP file format</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../gcp/#user-interfaces">User Interfaces</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../gcp/#id1">POSM GCPi</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../gcp/#id2">GCP Editor Pro</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../gcp/#references">References</a></li>
-</ul>
-</li>
-<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">Précision de la carte</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#what-to-expect">A quoi s’attendre</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">Accuracy, Ground Control, and Alignment</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#map-accuracy">Précision de la carte</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#what-to-expect">A quoi s’attendre</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aspects-impacting-map-accuracy">Aspects affectant la précision de la carte</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#references">Références</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#references">Références</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#ground-control-points">Ground Control Points</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#recommended-practices-for-gcp-setting">Recommended practices for GCP setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#gcp-file-format">GCP file format</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../geo/">Fichiers de géolocalisation d’images</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#user-interfaces">User Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#id1">POSM GCPi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#id3">Références</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#image-geolocation-files">Image Geolocation Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#improving-relative-accuracy">Improving relative accuracy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#workflow-for-multi-temporal-datasets">Workflow for multi-temporal datasets:</a></li>
+</ul>
+</li>
+</ul>
+</li>
 <li class="toctree-l1"><a class="reference internal" href="../masks/">Utiliser les images masque</a></li>
 <li class="toctree-l1"><a class="reference internal" href="../large/">Splitting Large Datasets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../large/#calibrate-images">Calibrate images</a></li>
@@ -467,7 +471,7 @@
              
   <section id="flowchart-with-options">
 <h1>Flowchart with options<a class="headerlink" href="#flowchart-with-options" title="Lien permanent vers cette rubrique"></a></h1>
-<div id="id-38a4663e-e3c3-4c22-96e9-465d7c3edc22" class="mermaid">
+<div id="id-41be0564-56b6-4168-b1d3-b51c3fbd3b59" class="mermaid">
              flowchart  TB
 
 
