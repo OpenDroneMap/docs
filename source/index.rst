@@ -53,9 +53,9 @@ The documentation is available in several languages. Some translations are incom
     flowchart
     outputs
     map-accuracy
+    multispectral
     large
     flying
-    multispectral
     requesting-features
     contributing
     faq
