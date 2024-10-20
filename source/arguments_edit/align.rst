@@ -1,5 +1,5 @@
 
-See `Multi-temporal datasets for further usage information. </tutorials/#alignment-files>`_
+See `Multi-temporal datasets for further usage information. <../../map-accuracy/#improving-relative-accuracy>`_
 
 .. figure:: ../images/align_pc.gif
    :alt: Animated gif comparing two separately processed, but aligned digital surface models.
