@@ -83,8 +83,27 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tutoriales</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#creating-high-quality-orthophotos">Creación de Ortofotos de Alta Calidad</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#calibrating-the-camera">Calibrar la cámara</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-digital-elevation-models">Creación de modelos de elevación digitales</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-potree-3d-viewer-module-on-webodm">Usar el módulo Potree de visualización 3D en WebODM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cameras">Cámaras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#textured-model">Modelo texturizado</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#appearance">Apariencia</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#point-budget">Presupuesto de puntos</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#field-of-view">Campo de visión</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eye-dome-lighting">Iluminación de domo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#background">Fondo</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other">Otro</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tools">Herramientas</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#measurement">Medición</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clipping">Recorte</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#navigation">Navegación</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#scene">Escena</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#measuring-stockpile-volume">Medir el volumen de pilas de materiales a granel</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#fieldwork-planning">Planificación del trabajo de campo</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#flight-pattern">Patrón de vuelo</a></li>
@@ -113,27 +132,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#using-potree-3d-viewer-module-on-webodm">Usar el módulo Potree de visualización 3D en WebODM</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#cameras">Cámaras</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#textured-model">Modelo texturizado</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#appearance">Apariencia</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#point-budget">Presupuesto de puntos</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#field-of-view">Campo de visión</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#eye-dome-lighting">Iluminación de domo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#background">Fondo</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#other">Otro</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#tools">Herramientas</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#measurement">Medición</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#clipping">Recorte</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#navigation">Navegación</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#scene">Escena</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="#advanced">Advanced</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#calibrating-the-camera">Calibrar la cámara</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#using-image-masks">Using Image Masks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#using-singularity">Using Singularity</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#build-singularity-image-from-docker-image">Build Singularity image from Docker image</a></li>
@@ -352,7 +352,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#image-geolocation-files">Image Geolocation Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#improving-relative-accuracy">Improving relative accuracy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#workflow-for-multi-temporal-datasets">Workflow for multi-temporal datasets:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#multi-temporal-datasets">Multi-temporal Datasets</a></li>
 </ul>
 </li>
 </ul>
@@ -463,32 +463,6 @@
 </ul>
 </div></blockquote>
 </section>
-<section id="calibrating-the-camera">
-<h2>Calibrar la cámara<a class="headerlink" href="#calibrating-the-camera" title="Enlace permanente a este encabezado"></a></h2>
-<p>La calibración de la cámara es un desafío especial con las cámaras básicas. Los cambios de temperatura, las vibraciones, el enfoque y otros factores pueden afectar los parámetros derivados con efectos sustanciales en los datos resultantes. La calibración automática o la autocalibración es posible y deseable para los vuelos de drones, pero dependiendo del patrón de vuelo, la calibración automática puede no eliminar toda la distorsión de los productos resultantes. James y Robson (2014) en su artículo <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609">Mitigating systematic error in topographic models derived from UAV and ground‐based image networks</a>  abordan cómo para minimizar la distorsión de la autocalibración.</p>
-<figure class="align-center">
-<img alt="Imagen del efecto de distorsión de la lente en el combamiento de datos" src="../_images/msimbasi_bowling.png" />
-</figure>
-<p><em>Efecto de tazón en la nube de puntos de un juego de datos de mas de 13,000 imágenes colectadas por el Banco mundial de Tanzania sobre la cuenca propensa a inundaciones de Msimbasi, Dar es Salaam, Tanzania.</em></p>
-<p>Para mitigar este efecto, hay algunas opciones, pero las más simples son las siguientes: vuele dos patrones separados por 20 °, y en lugar de tener una cámara nadir (apuntando hacia abajo), use una que se incline hacia adelante en 5 °.</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/flightplanning.gif"><img alt="animación que muestra el óptimo" src="../_images/flightplanning.gif" style="width: 640px; height: 480px;" /></a>
-</figure>
-<p>As this approach takes longer than traditional imaging, pilots and teams may apply this technique to a smaller area and use the collected data to optimize future flights. OpenDroneMap can generate a calibration file called cameras.json from a small sample flight. The calibration file can be used for future flights, mitigating the bowling effect without sacrificing efficiency.</p>
-<p>Alternativamente, se puede aplicar el siguiente método experimental: volar con una superposición mucho menor, pero dos vuelos de <em>rejilla cruzada</em> (a veces llamados rayados cruzados) separados por 20 ° con una cámara de 5 ° orientada hacia adelante.</p>
-<ul class="simple">
-<li><p>Los porcentajes de superposición de rejillas cruzadas pueden ser más bajos que los vuelos paralelos. Para obtener buenos resultados en 3D, necesitará un 68% de superposición y superposición lateral para una superposición y superposición lateral equivalente del 83%.</p></li>
-<li><p>Para obtener buenos resultados en 2D y 2.5D (modelo de elevación digital), necesitará un 42% de superposición y superposición lateral para una superposición y superposición lateral equivalente del 70%.</p></li>
-</ul>
-<figure class="align-center">
-<img alt="animación que muestra el óptimo experimental" src="../_images/rotation.gif" />
-</figure>
-<p>Las líneas de vuelo separadas verticalmente también mejoran la precisión, pero menos que una cámara que mira hacia adelante en 5 °.</p>
-<figure class="align-center">
-<img alt="Figura que muestra el efecto de las líneas de vuelo separadas verticalmente y las cámaras orientadas hacia adelante para mejorar la autocalibración." src="../_images/forward_facing.png" />
-</figure>
-<p>De James and Robson (2014), <a class="reference external" href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></p>
-</section>
 <section id="creating-digital-elevation-models">
 <h2>Creación de modelos de elevación digitales<a class="headerlink" href="#creating-digital-elevation-models" title="Enlace permanente a este encabezado"></a></h2>
 <p>By default ODM does not create digital elevation models (DEMs). To create a digital terrain model, make sure to pass the <code class="docutils literal notranslate"><span class="pre">--dtm</span></code> flag. To create a digital surface model, be sure to pass the <code class="docutils literal notranslate"><span class="pre">--dsm</span></code> flag.</p>
@@ -521,6 +495,155 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">ti</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">my</span><span class="o">/</span><span class="n">project</span><span class="p">:</span><span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span> <span class="o">&lt;</span><span class="n">my_odm_image</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">project</span><span class="o">-</span><span class="n">path</span> <span class="o">/</span><span class="n">datasets</span> <span class="o">--</span><span class="n">dtm</span> <span class="o">--</span><span class="n">dem</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">2</span> <span class="o">--</span><span class="n">smrf</span><span class="o">-</span><span class="n">threshold</span> <span class="mf">0.4</span> <span class="o">--</span><span class="n">smrf</span><span class="o">-</span><span class="n">window</span> <span class="mi">24</span>
 </pre></div>
 </div>
+</section>
+<section id="using-potree-3d-viewer-module-on-webodm">
+<h2>Usar el módulo Potree de visualización 3D en WebODM<a class="headerlink" href="#using-potree-3d-viewer-module-on-webodm" title="Enlace permanente a este encabezado"></a></h2>
+<section id="cameras">
+<h3>Cámaras<a class="headerlink" href="#cameras" title="Enlace permanente a este encabezado"></a></h3>
+<p>Active esta función para mostrar la posición de las cámaras</p>
+<p>También puede hacer clic en el icono de la cámara para mostrar imágenes individuales en un marco en la esquina superior derecha. Un clic en el marco de la imagen cambia al modo de pantalla completa.</p>
+<p>Dentro del marco de la imagen hay enlaces para descargar la imagen y el archivo de la cámara GeoJSON.</p>
+<figure class="align-center">
+<img alt="Localización de las cámaras" src="../_images/cameras.png" />
+</figure>
+</section>
+<section id="textured-model">
+<h3>Modelo texturizado<a class="headerlink" href="#textured-model" title="Enlace permanente a este encabezado"></a></h3>
+<p>Active esta función para mostrar cargar el modelo texturizado. Dependiendo del tamaño del archivo y la velocidad de la conexión, la carga puede tardar varios segundos.</p>
+<figure class="align-center">
+<img alt="Modelo texturizado" src="../_images/texturedmodel.png" />
+</figure>
+</section>
+<section id="appearance">
+<h3>Apariencia<a class="headerlink" href="#appearance" title="Enlace permanente a este encabezado"></a></h3>
+<section id="point-budget">
+<h4>Presupuesto de puntos<a class="headerlink" href="#point-budget" title="Enlace permanente a este encabezado"></a></h4>
+<p>Tanto para fines de apariencia como de rendimiento, se puede administrar el presupuesto de puntos en la escena. Algunas máquinas antiguas y menos capaces se beneficiarían de un presupuesto de 500.000 puntos, mientras que la mayoría de las máquinas con especificaciones de rango medio son capaces de manejar un presupuesto de 1 a 2 millones de puntos.</p>
+<p>Un presupuesto de 5 a 7 millones de puntos produce un modelo 3D de nube de puntos sin problemas, pero puede resultar en un proceso que demanda muchos recursos.</p>
+<p>El valor de presupuesto de puntos predeterminado se establece en 1,000,000.</p>
+</section>
+<section id="field-of-view">
+<h4>Campo de visión<a class="headerlink" href="#field-of-view" title="Enlace permanente a este encabezado"></a></h4>
+<p>Para controlar los elementos del modelo que se incluirán en la escena, se puede ajustar el campo de visión. El valor predeterminado se establece en 60 grados.</p>
+<figure class="align-center">
+<img alt="Ajuste del campo de visión" src="../_images/FOV_animation.gif" />
+</figure>
+</section>
+<section id="eye-dome-lighting">
+<h4>Iluminación de domo<a class="headerlink" href="#eye-dome-lighting" title="Enlace permanente a este encabezado"></a></h4>
+<p>El módulo de visor 3D Potree Point Cloud puede implementar la iluminación del domo, un modelo de iluminación que acentúa las formas de los objetos.</p>
+<p>Los objetos de grupo de iluminación de domo, sombrean sus contornos y mejoran la percepción de profundidad en imágenes de visualización científica. Es útil para el reconocimiento y la medición de estructuras dentro de un modelo. Se puede modificar ajustando Radio, Fuerza y Opacidad.</p>
+<p>De forma predeterminada, Eye Dome-Lighting está habilitado en el visor Potree 3D, pero se puede deshabilitar haciendo clic en la opción habilitar.</p>
+<figure class="align-center">
+<img alt="Ajuste de la Iluminación de domo" src="../_images/EDL_animation.gif" />
+</figure>
+</section>
+<section id="background">
+<h4>Fondo<a class="headerlink" href="#background" title="Enlace permanente a este encabezado"></a></h4>
+<p>El fondo del visualizador en 3D Potree se puede modificar. Las opciones disponibles son <strong>Skybox</strong> / <strong>Gradiente</strong> / <strong>Negro</strong> / <strong>Blanco</strong> / <strong>Ninguno</strong></p>
+<figure class="align-center">
+<img alt="Selección del fondo" src="../_images/Background_animation.gif" />
+</figure>
+</section>
+<section id="other">
+<h4>Otro<a class="headerlink" href="#other" title="Enlace permanente a este encabezado"></a></h4>
+<p><strong>Calidad de splat</strong> = La calidad Splat se puede ajustar a calidad estándar o alta, para mejorar la apariencia del modelo.</p>
+<p><strong>Tamaño mínimo de nodo</strong> = La opción de tamaño mínimo de nodo impactará en la densidad de punto de los nodos representados.</p>
+<p><strong>Caja</strong> = Despliega las cajas de los nodos.</p>
+<p><strong>Bloqueo de vista</strong> = Bloquea la vista de la nube de puntos, para prevenir la carga o descarga de puntos en el modelo.</p>
+</section>
+</section>
+<section id="tools">
+<h3>Herramientas<a class="headerlink" href="#tools" title="Enlace permanente a este encabezado"></a></h3>
+<section id="measurement">
+<h4>Medición<a class="headerlink" href="#measurement" title="Enlace permanente a este encabezado"></a></h4>
+<p>El módulo de visor 3D Potree proporciona varias herramientas para la medición. Este conjunto de herramientas consta de 12 elementos. También tiene controles para mostrar u ocultar las etiquetas de medición resultantes.</p>
+<p>Las mediciones se realizan haciendo clic izquierdo en los puntos deseados y para algunas herramientas es necesario hacer clic derecho para finalizar el proceso.</p>
+<figure class="align-center">
+<img alt="Herramientas - Herramientas de medición" src="../_images/measurement.png" />
+</figure>
+<p><strong>Ángulo</strong></p>
+<p>Esta herramienta mide el ángulo tridimensional formado por las líneas que conectan 3 puntos. Para iniciar una medición, haga clic en el icono de ángulo, luego haga clic con el botón izquierdo en 3 puntos y el proceso finalizará automáticamente. También se puede obtener más información seleccionando este elemento en la sección de escena.</p>
+<p><strong>Punto</strong></p>
+<p>Esta herramienta resalta un punto seleccionado y muestra su coordenada XYZ. Para iniciar una medición, haga clic en el icono del punto, luego haga clic en el punto deseado y el proceso finalizará automáticamente. También se puede obtener más información seleccionando este elemento en la sección de escena.</p>
+<p><strong>Distancia</strong></p>
+<p>Esta herramienta mide la distancia tridimensional de las líneas que conectan una serie de puntos. Para iniciar una medición, haga clic en el icono de distancia y comience a hacer clic en los puntos deseados (dos o más). Haga clic derecho para finalizar la medición. También se puede obtener más información, como la longitud total, seleccionando este elemento en la sección de escena.</p>
+<p><strong>Altura</strong></p>
+<p>Esta herramienta mide la altura o la distancia vertical entre dos puntos. Para iniciar una medición, haga clic en el icono de altura y luego haga clic en los dos puntos deseados. El proceso finalizará automáticamente. También se puede obtener más información seleccionando este elemento en la sección de escena.</p>
+<figure class="align-center">
+<img alt="Height measurement" src="../_images/height_animation.gif" />
+</figure>
+<p><strong>Círculo</strong></p>
+<p>Esta herramienta mide el radio de un círculo formado por tres puntos. Para iniciar una medición, haga clic en el icono del círculo y luego haga clic en los dos puntos deseados. El proceso finalizará automáticamente. También se puede obtener más información, como Circunferencia, seleccionando este elemento en la sección de escena.</p>
+<p><strong>Azimut</strong></p>
+<p>Esta herramienta mide el ángulo azimutal de una línea. Esta línea está formada por dos puntos seleccionados por el usuario, el ángulo se mide en grados, en sentido horario de 0 a 360 y partiendo del norte geográfico. Para iniciar una medición, haga clic en el icono de azimut y luego haga clic en los dos puntos deseados. El proceso finalizará automáticamente. También se puede obtener más información seleccionando este elemento en la sección de escena.</p>
+<p><strong>Área</strong></p>
+<p>Esta herramienta mide el área horizontal formada por un polígono. Para iniciar una medición, haga clic en el icono del área y comience a hacer clic en los puntos que forman el polígono deseado (tres o más). Haga clic derecho para finalizar la medición. También se puede obtener más información seleccionando este elemento en la sección de escena.</p>
+<p><strong>Volumen (cubo)</strong></p>
+<p>Esta herramienta mide el volumen formado por un cubo. Para iniciar una medición, haga clic en el icono de volumen (cubo) y haga clic en el modelo para colocar el cubo. Es posible reubicar, redimensionar y rotar el cubo usando los manejadores mostrados. Haga clic derecho para finalizar la medición. También se puede obtener más información seleccionando este elemento en la sección de escena.</p>
+<p><strong>Volumen (esfera)</strong></p>
+<p>Esta herramienta mide el volumen formado por una esfera. Para iniciar una medición, haga clic en el icono de volumen (esfera) y haga clic en el modelo para colocar la esfera. Es posible reubicar, redimensionar y rotar la esfera usando los manejadores mostrados. Haga clic derecho para finalizar la medición. También se puede obtener más información seleccionando este elemento en la sección de escena.</p>
+<p><strong>Perfil de altura</strong></p>
+<p>Esta herramienta crea un perfil de altura formado por una línea en el modelo. Para iniciar una medición, haga clic en el icono de perfil de altura y luego forme una línea en el modelo haciendo clic en los puntos deseados (dos o más). Haga clic derecho para finalizar la medición. También se puede obtener más información y opciones, como «Mostrar perfil 2d», seleccionando este elemento en la sección de escena.</p>
+<figure class="align-center">
+<img alt="Height profile" src="../_images/height_profile.png" />
+</figure>
+<p><strong>Anotación</strong></p>
+<p>Esta herramienta crea una etiqueta de anotación en un punto resaltado del modelo. Para iniciar una medición, haga clic en el icono de anotación y luego haga clic en el punto deseado. El proceso finalizará automáticamente. Para editar la anotación, seleccione este elemento en la sección de la escena, luego edite el Título y la Descripción.</p>
+<p><strong>Remover mediciones</strong></p>
+<p>Esta herramienta elimina todas las medidas del modelo. Para eliminar todas las medidas, haga clic en el icono «Eliminar mediciones».</p>
+</section>
+<section id="clipping">
+<h4>Recorte<a class="headerlink" href="#clipping" title="Enlace permanente a este encabezado"></a></h4>
+<figure class="align-center">
+<img alt="Herramientas - Herramientas de recorte" src="../_images/clipping.png" />
+</figure>
+<p>La nube de puntos se puede recortar seleccionando un área. Las opciones de recorte incluyen ** Ninguno ** / ** Resaltado ** / ** Interior ** / ** Exterior **</p>
+<p>Para recortar una nube de puntos, haga clic en el icono de recorte de volumen, coloque el cubo en el modelo y reubique, redimensione y gire para contener el área deseada. Resaltar está configurado de forma predeterminada como el método de recorte. Si se muestran solo los puntos contenidos dentro del cubo, haga clic en «Dentro», de lo contrario, haga clic en «Fuera».</p>
+<p>Para eliminar el volumen de recorte o los polígonos, haga clic en el icono «Eliminar todas las mediciones».</p>
+<figure class="align-center">
+<img alt="Herramientas - Recorte" src="../_images/clipping_animation.gif" />
+</figure>
+</section>
+<section id="navigation">
+<h4>Navegación<a class="headerlink" href="#navigation" title="Enlace permanente a este encabezado"></a></h4>
+<figure class="align-center">
+<img alt="Herramientas - Controles de navegación" src="../_images/navigation.png" />
+</figure>
+<p>El visor Potree 3D tiene 4 controles de navegación que definen su comportamiento.</p>
+<p>Control de tierra</p>
+<p>El control de la tierra navegó como anclado al suelo. El botón izquierdo del mouse mueve el modelo horizontalmente, la rueda del mouse controla el zoom y el botón derecho orbita el modelo.</p>
+<p><strong>Control de vuelo</strong></p>
+<p>Fly control mueve la cámara como en ojo de pájaro usando el teclado. Las teclas «W» y «S» se mueven hacia adelante y hacia atrás, respectivamente y en la dirección de la cámara, mientras que «A» y «D» se mueven hacia la izquierda y hacia la derecha respectivamente. Además, las teclas «R» y «F» mueven la cámara hacia arriba y hacia abajo. El botón izquierdo del mouse cambia la dirección de la cámara, la rueda del mouse controla el zoom y el botón derecho mueve la cámara en el eje XYZ.</p>
+<p>La velocidad de estos movimientos se puede controlar mediante el control deslizante.</p>
+<p><strong>Control de helicóptero</strong></p>
+<p>El control de helicóptero mueve la cámara como en un avión usando el teclado. Las teclas «W» y «S» se mueven hacia adelante y hacia atrás, respectivamente restringidas en un plano horizontal, mientras que «A» y «D» se mueven hacia la izquierda y hacia la derecha respectivamente. Además, las teclas «R» y «F» mueven la cámara hacia arriba y hacia abajo. El botón izquierdo del mouse cambia la dirección de la cámara, la rueda del mouse controla el zoom y el botón derecho mueve el modelo en el eje XY.</p>
+<p>La velocidad de estos movimientos se puede controlar mediante el control deslizante.</p>
+<p><strong>Control de órbita</strong></p>
+<p>Orbit Control es el comportamiento de navegación predeterminado. El botón izquierdo del mouse orbita el modelo, la rueda controla el zoom y el botón derecho mueve el modelo en el eje XYZ.</p>
+<p><strong>Toda la extensión</strong></p>
+<p>El botón de extensión completa restaura la vista del modelo.</p>
+<p><strong>Cubo de navegación</strong></p>
+<p>El cubo de navegación muestra un cubo de estructura alámbrica que contiene el modelo.</p>
+<p><strong>Brújula</strong></p>
+<p>El botón de brújula muestra una brújula en la esquina superior derecha.</p>
+<p><strong>Animación de cámara</strong></p>
+<p>El botón de animación de la cámara crea una ruta de animación de la cámara. La posición de la cámara se define mediante los puntos en la línea verde, mientras que los puntos en la línea azul son la ubicación hacia la que se pretende que esté orientada la cámara.</p>
+<p>Para crear una animación, ajuste los puntos para las ubicaciones de la cámara y la dirección de la cámara, luego seleccione el elemento de la cámara en la sección Escena para crear más puntos, cambiar la velocidad de la animación o reproducir la animación.</p>
+<figure class="align-center">
+<img alt="Herramientas - Controles de navegación" src="../_images/camera_animation.gif" />
+</figure>
+</section>
+</section>
+<section id="scene">
+<h3>Escena<a class="headerlink" href="#scene" title="Enlace permanente a este encabezado"></a></h3>
+<p>La sección Escena muestra un árbol de archivos que contiene todos los elementos de la escena. Los elementos están organizados en seis grupos, que son ** Nubes de puntos ** / ** Medidas ** / ** Anotaciones ** / ** Otro ** / ** Vector ** / ** Imágenes **</p>
+<p>Cada elemento de estos grupos se puede seleccionar para obtener más información o para controlar sus propiedades.</p>
+<p>Por ejemplo, las propiedades de las nubes de puntos se pueden modificar para mostrar la elevación y también se puede personalizar la rampa de color.</p>
+<figure class="align-center">
+<img alt="Herramientas - Controles de navegación" src="../_images/pointcloud_elevation.png" />
+</figure>
+</section>
 </section>
 <section id="measuring-stockpile-volume">
 <h2>Medir el volumen de pilas de materiales a granel<a class="headerlink" href="#measuring-stockpile-volume" title="Enlace permanente a este encabezado"></a></h2>
@@ -781,157 +904,34 @@ images folder for each project.</p></li>
 </section>
 </section>
 </section>
-<section id="using-potree-3d-viewer-module-on-webodm">
-<h2>Usar el módulo Potree de visualización 3D en WebODM<a class="headerlink" href="#using-potree-3d-viewer-module-on-webodm" title="Enlace permanente a este encabezado"></a></h2>
-<section id="cameras">
-<h3>Cámaras<a class="headerlink" href="#cameras" title="Enlace permanente a este encabezado"></a></h3>
-<p>Active esta función para mostrar la posición de las cámaras</p>
-<p>También puede hacer clic en el icono de la cámara para mostrar imágenes individuales en un marco en la esquina superior derecha. Un clic en el marco de la imagen cambia al modo de pantalla completa.</p>
-<p>Dentro del marco de la imagen hay enlaces para descargar la imagen y el archivo de la cámara GeoJSON.</p>
-<figure class="align-center">
-<img alt="Localización de las cámaras" src="../_images/cameras.png" />
-</figure>
-</section>
-<section id="textured-model">
-<h3>Modelo texturizado<a class="headerlink" href="#textured-model" title="Enlace permanente a este encabezado"></a></h3>
-<p>Active esta función para mostrar cargar el modelo texturizado. Dependiendo del tamaño del archivo y la velocidad de la conexión, la carga puede tardar varios segundos.</p>
-<figure class="align-center">
-<img alt="Modelo texturizado" src="../_images/texturedmodel.png" />
-</figure>
-</section>
-<section id="appearance">
-<h3>Apariencia<a class="headerlink" href="#appearance" title="Enlace permanente a este encabezado"></a></h3>
-<section id="point-budget">
-<h4>Presupuesto de puntos<a class="headerlink" href="#point-budget" title="Enlace permanente a este encabezado"></a></h4>
-<p>Tanto para fines de apariencia como de rendimiento, se puede administrar el presupuesto de puntos en la escena. Algunas máquinas antiguas y menos capaces se beneficiarían de un presupuesto de 500.000 puntos, mientras que la mayoría de las máquinas con especificaciones de rango medio son capaces de manejar un presupuesto de 1 a 2 millones de puntos.</p>
-<p>Un presupuesto de 5 a 7 millones de puntos produce un modelo 3D de nube de puntos sin problemas, pero puede resultar en un proceso que demanda muchos recursos.</p>
-<p>El valor de presupuesto de puntos predeterminado se establece en 1,000,000.</p>
-</section>
-<section id="field-of-view">
-<h4>Campo de visión<a class="headerlink" href="#field-of-view" title="Enlace permanente a este encabezado"></a></h4>
-<p>Para controlar los elementos del modelo que se incluirán en la escena, se puede ajustar el campo de visión. El valor predeterminado se establece en 60 grados.</p>
-<figure class="align-center">
-<img alt="Ajuste del campo de visión" src="../_images/FOV_animation.gif" />
-</figure>
-</section>
-<section id="eye-dome-lighting">
-<h4>Iluminación de domo<a class="headerlink" href="#eye-dome-lighting" title="Enlace permanente a este encabezado"></a></h4>
-<p>El módulo de visor 3D Potree Point Cloud puede implementar la iluminación del domo, un modelo de iluminación que acentúa las formas de los objetos.</p>
-<p>Los objetos de grupo de iluminación de domo, sombrean sus contornos y mejoran la percepción de profundidad en imágenes de visualización científica. Es útil para el reconocimiento y la medición de estructuras dentro de un modelo. Se puede modificar ajustando Radio, Fuerza y Opacidad.</p>
-<p>De forma predeterminada, Eye Dome-Lighting está habilitado en el visor Potree 3D, pero se puede deshabilitar haciendo clic en la opción habilitar.</p>
-<figure class="align-center">
-<img alt="Ajuste de la Iluminación de domo" src="../_images/EDL_animation.gif" />
-</figure>
-</section>
-<section id="background">
-<h4>Fondo<a class="headerlink" href="#background" title="Enlace permanente a este encabezado"></a></h4>
-<p>El fondo del visualizador en 3D Potree se puede modificar. Las opciones disponibles son <strong>Skybox</strong> / <strong>Gradiente</strong> / <strong>Negro</strong> / <strong>Blanco</strong> / <strong>Ninguno</strong></p>
-<figure class="align-center">
-<img alt="Selección del fondo" src="../_images/Background_animation.gif" />
-</figure>
-</section>
-<section id="other">
-<h4>Otro<a class="headerlink" href="#other" title="Enlace permanente a este encabezado"></a></h4>
-<p><strong>Calidad de splat</strong> = La calidad Splat se puede ajustar a calidad estándar o alta, para mejorar la apariencia del modelo.</p>
-<p><strong>Tamaño mínimo de nodo</strong> = La opción de tamaño mínimo de nodo impactará en la densidad de punto de los nodos representados.</p>
-<p><strong>Caja</strong> = Despliega las cajas de los nodos.</p>
-<p><strong>Bloqueo de vista</strong> = Bloquea la vista de la nube de puntos, para prevenir la carga o descarga de puntos en el modelo.</p>
-</section>
-</section>
-<section id="tools">
-<h3>Herramientas<a class="headerlink" href="#tools" title="Enlace permanente a este encabezado"></a></h3>
-<section id="measurement">
-<h4>Medición<a class="headerlink" href="#measurement" title="Enlace permanente a este encabezado"></a></h4>
-<p>El módulo de visor 3D Potree proporciona varias herramientas para la medición. Este conjunto de herramientas consta de 12 elementos. También tiene controles para mostrar u ocultar las etiquetas de medición resultantes.</p>
-<p>Las mediciones se realizan haciendo clic izquierdo en los puntos deseados y para algunas herramientas es necesario hacer clic derecho para finalizar el proceso.</p>
-<figure class="align-center">
-<img alt="Herramientas - Herramientas de medición" src="../_images/measurement.png" />
-</figure>
-<p><strong>Ángulo</strong></p>
-<p>Esta herramienta mide el ángulo tridimensional formado por las líneas que conectan 3 puntos. Para iniciar una medición, haga clic en el icono de ángulo, luego haga clic con el botón izquierdo en 3 puntos y el proceso finalizará automáticamente. También se puede obtener más información seleccionando este elemento en la sección de escena.</p>
-<p><strong>Punto</strong></p>
-<p>Esta herramienta resalta un punto seleccionado y muestra su coordenada XYZ. Para iniciar una medición, haga clic en el icono del punto, luego haga clic en el punto deseado y el proceso finalizará automáticamente. También se puede obtener más información seleccionando este elemento en la sección de escena.</p>
-<p><strong>Distancia</strong></p>
-<p>Esta herramienta mide la distancia tridimensional de las líneas que conectan una serie de puntos. Para iniciar una medición, haga clic en el icono de distancia y comience a hacer clic en los puntos deseados (dos o más). Haga clic derecho para finalizar la medición. También se puede obtener más información, como la longitud total, seleccionando este elemento en la sección de escena.</p>
-<p><strong>Altura</strong></p>
-<p>Esta herramienta mide la altura o la distancia vertical entre dos puntos. Para iniciar una medición, haga clic en el icono de altura y luego haga clic en los dos puntos deseados. El proceso finalizará automáticamente. También se puede obtener más información seleccionando este elemento en la sección de escena.</p>
-<figure class="align-center">
-<img alt="Height measurement" src="../_images/height_animation.gif" />
-</figure>
-<p><strong>Círculo</strong></p>
-<p>Esta herramienta mide el radio de un círculo formado por tres puntos. Para iniciar una medición, haga clic en el icono del círculo y luego haga clic en los dos puntos deseados. El proceso finalizará automáticamente. También se puede obtener más información, como Circunferencia, seleccionando este elemento en la sección de escena.</p>
-<p><strong>Azimut</strong></p>
-<p>Esta herramienta mide el ángulo azimutal de una línea. Esta línea está formada por dos puntos seleccionados por el usuario, el ángulo se mide en grados, en sentido horario de 0 a 360 y partiendo del norte geográfico. Para iniciar una medición, haga clic en el icono de azimut y luego haga clic en los dos puntos deseados. El proceso finalizará automáticamente. También se puede obtener más información seleccionando este elemento en la sección de escena.</p>
-<p><strong>Área</strong></p>
-<p>Esta herramienta mide el área horizontal formada por un polígono. Para iniciar una medición, haga clic en el icono del área y comience a hacer clic en los puntos que forman el polígono deseado (tres o más). Haga clic derecho para finalizar la medición. También se puede obtener más información seleccionando este elemento en la sección de escena.</p>
-<p><strong>Volumen (cubo)</strong></p>
-<p>Esta herramienta mide el volumen formado por un cubo. Para iniciar una medición, haga clic en el icono de volumen (cubo) y haga clic en el modelo para colocar el cubo. Es posible reubicar, redimensionar y rotar el cubo usando los manejadores mostrados. Haga clic derecho para finalizar la medición. También se puede obtener más información seleccionando este elemento en la sección de escena.</p>
-<p><strong>Volumen (esfera)</strong></p>
-<p>Esta herramienta mide el volumen formado por una esfera. Para iniciar una medición, haga clic en el icono de volumen (esfera) y haga clic en el modelo para colocar la esfera. Es posible reubicar, redimensionar y rotar la esfera usando los manejadores mostrados. Haga clic derecho para finalizar la medición. También se puede obtener más información seleccionando este elemento en la sección de escena.</p>
-<p><strong>Perfil de altura</strong></p>
-<p>Esta herramienta crea un perfil de altura formado por una línea en el modelo. Para iniciar una medición, haga clic en el icono de perfil de altura y luego forme una línea en el modelo haciendo clic en los puntos deseados (dos o más). Haga clic derecho para finalizar la medición. También se puede obtener más información y opciones, como «Mostrar perfil 2d», seleccionando este elemento en la sección de escena.</p>
-<figure class="align-center">
-<img alt="Height profile" src="../_images/height_profile.png" />
-</figure>
-<p><strong>Anotación</strong></p>
-<p>Esta herramienta crea una etiqueta de anotación en un punto resaltado del modelo. Para iniciar una medición, haga clic en el icono de anotación y luego haga clic en el punto deseado. El proceso finalizará automáticamente. Para editar la anotación, seleccione este elemento en la sección de la escena, luego edite el Título y la Descripción.</p>
-<p><strong>Remover mediciones</strong></p>
-<p>Esta herramienta elimina todas las medidas del modelo. Para eliminar todas las medidas, haga clic en el icono «Eliminar mediciones».</p>
-</section>
-<section id="clipping">
-<h4>Recorte<a class="headerlink" href="#clipping" title="Enlace permanente a este encabezado"></a></h4>
-<figure class="align-center">
-<img alt="Herramientas - Herramientas de recorte" src="../_images/clipping.png" />
-</figure>
-<p>La nube de puntos se puede recortar seleccionando un área. Las opciones de recorte incluyen ** Ninguno ** / ** Resaltado ** / ** Interior ** / ** Exterior **</p>
-<p>Para recortar una nube de puntos, haga clic en el icono de recorte de volumen, coloque el cubo en el modelo y reubique, redimensione y gire para contener el área deseada. Resaltar está configurado de forma predeterminada como el método de recorte. Si se muestran solo los puntos contenidos dentro del cubo, haga clic en «Dentro», de lo contrario, haga clic en «Fuera».</p>
-<p>Para eliminar el volumen de recorte o los polígonos, haga clic en el icono «Eliminar todas las mediciones».</p>
-<figure class="align-center">
-<img alt="Herramientas - Recorte" src="../_images/clipping_animation.gif" />
-</figure>
-</section>
-<section id="navigation">
-<h4>Navegación<a class="headerlink" href="#navigation" title="Enlace permanente a este encabezado"></a></h4>
-<figure class="align-center">
-<img alt="Herramientas - Controles de navegación" src="../_images/navigation.png" />
-</figure>
-<p>El visor Potree 3D tiene 4 controles de navegación que definen su comportamiento.</p>
-<p>Control de tierra</p>
-<p>El control de la tierra navegó como anclado al suelo. El botón izquierdo del mouse mueve el modelo horizontalmente, la rueda del mouse controla el zoom y el botón derecho orbita el modelo.</p>
-<p><strong>Control de vuelo</strong></p>
-<p>Fly control mueve la cámara como en ojo de pájaro usando el teclado. Las teclas «W» y «S» se mueven hacia adelante y hacia atrás, respectivamente y en la dirección de la cámara, mientras que «A» y «D» se mueven hacia la izquierda y hacia la derecha respectivamente. Además, las teclas «R» y «F» mueven la cámara hacia arriba y hacia abajo. El botón izquierdo del mouse cambia la dirección de la cámara, la rueda del mouse controla el zoom y el botón derecho mueve la cámara en el eje XYZ.</p>
-<p>La velocidad de estos movimientos se puede controlar mediante el control deslizante.</p>
-<p><strong>Control de helicóptero</strong></p>
-<p>El control de helicóptero mueve la cámara como en un avión usando el teclado. Las teclas «W» y «S» se mueven hacia adelante y hacia atrás, respectivamente restringidas en un plano horizontal, mientras que «A» y «D» se mueven hacia la izquierda y hacia la derecha respectivamente. Además, las teclas «R» y «F» mueven la cámara hacia arriba y hacia abajo. El botón izquierdo del mouse cambia la dirección de la cámara, la rueda del mouse controla el zoom y el botón derecho mueve el modelo en el eje XY.</p>
-<p>La velocidad de estos movimientos se puede controlar mediante el control deslizante.</p>
-<p><strong>Control de órbita</strong></p>
-<p>Orbit Control es el comportamiento de navegación predeterminado. El botón izquierdo del mouse orbita el modelo, la rueda controla el zoom y el botón derecho mueve el modelo en el eje XYZ.</p>
-<p><strong>Toda la extensión</strong></p>
-<p>El botón de extensión completa restaura la vista del modelo.</p>
-<p><strong>Cubo de navegación</strong></p>
-<p>El cubo de navegación muestra un cubo de estructura alámbrica que contiene el modelo.</p>
-<p><strong>Brújula</strong></p>
-<p>El botón de brújula muestra una brújula en la esquina superior derecha.</p>
-<p><strong>Animación de cámara</strong></p>
-<p>El botón de animación de la cámara crea una ruta de animación de la cámara. La posición de la cámara se define mediante los puntos en la línea verde, mientras que los puntos en la línea azul son la ubicación hacia la que se pretende que esté orientada la cámara.</p>
-<p>Para crear una animación, ajuste los puntos para las ubicaciones de la cámara y la dirección de la cámara, luego seleccione el elemento de la cámara en la sección Escena para crear más puntos, cambiar la velocidad de la animación o reproducir la animación.</p>
-<figure class="align-center">
-<img alt="Herramientas - Controles de navegación" src="../_images/camera_animation.gif" />
-</figure>
-</section>
-</section>
-<section id="scene">
-<h3>Escena<a class="headerlink" href="#scene" title="Enlace permanente a este encabezado"></a></h3>
-<p>La sección Escena muestra un árbol de archivos que contiene todos los elementos de la escena. Los elementos están organizados en seis grupos, que son ** Nubes de puntos ** / ** Medidas ** / ** Anotaciones ** / ** Otro ** / ** Vector ** / ** Imágenes **</p>
-<p>Cada elemento de estos grupos se puede seleccionar para obtener más información o para controlar sus propiedades.</p>
-<p>Por ejemplo, las propiedades de las nubes de puntos se pueden modificar para mostrar la elevación y también se puede personalizar la rampa de color.</p>
-<figure class="align-center">
-<img alt="Herramientas - Controles de navegación" src="../_images/pointcloud_elevation.png" />
-</figure>
-</section>
-</section>
 <section id="advanced">
 <h2>Advanced<a class="headerlink" href="#advanced" title="Enlace permanente a este encabezado"></a></h2>
+<section id="calibrating-the-camera">
+<h3>Calibrar la cámara<a class="headerlink" href="#calibrating-the-camera" title="Enlace permanente a este encabezado"></a></h3>
+<p>La calibración de la cámara es un desafío especial con las cámaras básicas. Los cambios de temperatura, las vibraciones, el enfoque y otros factores pueden afectar los parámetros derivados con efectos sustanciales en los datos resultantes. La calibración automática o la autocalibración es posible y deseable para los vuelos de drones, pero dependiendo del patrón de vuelo, la calibración automática puede no eliminar toda la distorsión de los productos resultantes. James y Robson (2014) en su artículo <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609">Mitigating systematic error in topographic models derived from UAV and ground‐based image networks</a>  abordan cómo para minimizar la distorsión de la autocalibración.</p>
+<figure class="align-center">
+<img alt="Imagen del efecto de distorsión de la lente en el combamiento de datos" src="../_images/msimbasi_bowling.png" />
+</figure>
+<p><em>Efecto de tazón en la nube de puntos de un juego de datos de mas de 13,000 imágenes colectadas por el Banco mundial de Tanzania sobre la cuenca propensa a inundaciones de Msimbasi, Dar es Salaam, Tanzania.</em></p>
+<p>Para mitigar este efecto, hay algunas opciones, pero las más simples son las siguientes: vuele dos patrones separados por 20 °, y en lugar de tener una cámara nadir (apuntando hacia abajo), use una que se incline hacia adelante en 5 °.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/flightplanning.gif"><img alt="animación que muestra el óptimo" src="../_images/flightplanning.gif" style="width: 640px; height: 480px;" /></a>
+</figure>
+<p>As this approach takes longer than traditional imaging, pilots and teams may apply this technique to a smaller area and use the collected data to optimize future flights. OpenDroneMap can generate a calibration file called cameras.json from a small sample flight. The calibration file can be used for future flights, mitigating the bowling effect without sacrificing efficiency.</p>
+<p>Alternativamente, se puede aplicar el siguiente método experimental: volar con una superposición mucho menor, pero dos vuelos de <em>rejilla cruzada</em> (a veces llamados rayados cruzados) separados por 20 ° con una cámara de 5 ° orientada hacia adelante.</p>
+<ul class="simple">
+<li><p>Los porcentajes de superposición de rejillas cruzadas pueden ser más bajos que los vuelos paralelos. Para obtener buenos resultados en 3D, necesitará un 68% de superposición y superposición lateral para una superposición y superposición lateral equivalente del 83%.</p></li>
+<li><p>Para obtener buenos resultados en 2D y 2.5D (modelo de elevación digital), necesitará un 42% de superposición y superposición lateral para una superposición y superposición lateral equivalente del 70%.</p></li>
+</ul>
+<figure class="align-center">
+<img alt="animación que muestra el óptimo experimental" src="../_images/rotation.gif" />
+</figure>
+<p>Las líneas de vuelo separadas verticalmente también mejoran la precisión, pero menos que una cámara que mira hacia adelante en 5 °.</p>
+<figure class="align-center">
+<img alt="Figura que muestra el efecto de las líneas de vuelo separadas verticalmente y las cámaras orientadas hacia adelante para mejorar la autocalibración." src="../_images/forward_facing.png" />
+</figure>
+<p>De James and Robson (2014), <a class="reference external" href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></p>
+</section>
 <section id="using-image-masks">
 <h3>Using Image Masks<a class="headerlink" href="#using-image-masks" title="Enlace permanente a este encabezado"></a></h3>
 <p>Starting from ODM <code class="docutils literal notranslate"><span class="pre">2.0</span></code> people can supply image masks to inform the software to skip reconstruction over certain areas. This is useful for cases where the sky was accidentally included in the input photos from oblique shots, or simply to limit the reconstruction of a single subject.</p>

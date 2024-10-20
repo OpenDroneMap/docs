@@ -83,8 +83,27 @@
 <ul class="current">
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Výukové materiály</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#creating-high-quality-orthophotos">Vytváření vysoce kvalitních ortofotomap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#calibrating-the-camera">Kalibrace kamery</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-digital-elevation-models">Vytváření digitálních výškových modelů</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#using-potree-3d-viewer-module-on-webodm">Použití modulu Potree 3D viewer na WebODM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#cameras">Kamery</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#textured-model">Texturovaný model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#appearance">Vzhled</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#point-budget">Point budget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#field-of-view">Zorné pole</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#eye-dome-lighting">Osvětlení očního obzoru</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#background">Pozadí</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#other">Ostatní</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#tools">Nástroje</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#measurement">Měření</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#clipping">Ořez</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#navigation">Navigace</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="#scene">Scéna</a></li>
+</ul>
+</li>
 <li class="toctree-l2"><a class="reference internal" href="#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#fieldwork-planning">Plánování terénních prací</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#flight-pattern">Letový model</a></li>
@@ -113,27 +132,8 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#using-potree-3d-viewer-module-on-webodm">Použití modulu Potree 3D viewer na WebODM</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#cameras">Kamery</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#textured-model">Texturovaný model</a></li>
-<li class="toctree-l3"><a class="reference internal" href="#appearance">Vzhled</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#point-budget">Point budget</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#field-of-view">Zorné pole</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#eye-dome-lighting">Osvětlení očního obzoru</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#background">Pozadí</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#other">Ostatní</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#tools">Nástroje</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#measurement">Měření</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#clipping">Ořez</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#navigation">Navigace</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#scene">Scéna</a></li>
-</ul>
-</li>
 <li class="toctree-l2"><a class="reference internal" href="#advanced">Advanced</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#calibrating-the-camera">Kalibrace kamery</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#using-image-masks">Using Image Masks</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#using-singularity">Using Singularity</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#build-singularity-image-from-docker-image">Build Singularity image from Docker image</a></li>
@@ -352,7 +352,7 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#image-geolocation-files">Image Geolocation Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#improving-relative-accuracy">Improving relative accuracy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#workflow-for-multi-temporal-datasets">Workflow for multi-temporal datasets:</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#multi-temporal-datasets">Multi-temporal Datasets</a></li>
 </ul>
 </li>
 </ul>
@@ -463,32 +463,6 @@
 </ul>
 </div></blockquote>
 </section>
-<section id="calibrating-the-camera">
-<h2>Kalibrace kamery<a class="headerlink" href="#calibrating-the-camera" title="Permalink to this heading"></a></h2>
-<p>Kalibrace fotoaparátů je u komoditních fotoaparátů zvláštní výzvou. Změny teploty, vibrace, zaostření a další faktory mohou ovlivnit odvozené parametry, což má zásadní vliv na výsledná data. Automatická nebo vlastní kalibrace je u letů dronů možná a žádoucí, ale v závislosti na průběhu letu nemusí automatická kalibrace odstranit z výsledných produktů všechna zkreslení. James a Robson (2014) se ve svém článku <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609">Mitigating systematic error in topographic models derived from UAV and ground-based image networks</a> zabývají tím, jak minimalizovat zkreslení způsobené autokalibrací.</p>
-<figure class="align-center">
-<img alt="obraz vlivu zkreslení objektivu na bowling dat" src="../_images/msimbasi_bowling.png" />
-</figure>
-<p><em>Efekt bowlingu na mračnu bodů nad sadou více než 13 000 snímků shromážděných Světovou bankou v Tanzanii nad povodím Msimbasi v Dar es Salaamu v Tanzanii, které je náchylné k povodním.</em></p>
-<p>Pro zmírnění tohoto efektu existuje několik možností, ale nejjednodušší jsou následující: letět se dvěma obrazci oddělenými od sebe o 20° a namísto nadiru (přímého směru dolů) použít kameru, která se naklání dopředu o 5°.</p>
-<figure class="align-center">
-<a class="reference internal image-reference" href="../_images/flightplanning.gif"><img alt="animace zobrazující optimum" src="../_images/flightplanning.gif" style="width: 640px; height: 480px;" /></a>
-</figure>
-<p>As this approach takes longer than traditional imaging, pilots and teams may apply this technique to a smaller area and use the collected data to optimize future flights. OpenDroneMap can generate a calibration file called cameras.json from a small sample flight. The calibration file can be used for future flights, mitigating the bowling effect without sacrificing efficiency.</p>
-<p>Alternativně lze použít následující experimentální metodu: letět s mnohem menším překrytím, ale se dvěma lety <em>crossgrid</em> (někdy nazývanými crosshatch) oddělenými od sebe 20° s kamerou směřující 5° dopředu.</p>
-<ul class="simple">
-<li><p>Procento překrytí napříč sítí může být nižší než u paralelních letů. Pro dosažení dobrých výsledků ve 3D budete potřebovat 68% překrytí a sidelap pro ekvivalentní 83% překrytí a sidelap.</p></li>
-<li><p>Chcete-li získat dobré výsledky 2D a 2,5D (digitální model reliéfu), budete potřebovat 42% překrytí a boční překrytí pro ekvivalentní 70% překrytí a boční překrytí.</p></li>
-</ul>
-<figure class="align-center">
-<img alt="animace zobrazující experimentální optimum" src="../_images/rotation.gif" />
-</figure>
-<p>Vertikálně oddělené letové linie také zlepšují přesnost, ale méně než kamera, která je natočena dopředu o 5°.</p>
-<figure class="align-center">
-<img alt="obrázek znázorňující vliv vertikálně oddělených letových linií a dopředu namířených kamer na zlepšení vlastní kalibrace." src="../_images/forward_facing.png" />
-</figure>
-<p>Z James a Robson (2014), <a class="reference external" href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></p>
-</section>
 <section id="creating-digital-elevation-models">
 <h2>Vytváření digitálních výškových modelů<a class="headerlink" href="#creating-digital-elevation-models" title="Permalink to this heading"></a></h2>
 <p>By default ODM does not create digital elevation models (DEMs). To create a digital terrain model, make sure to pass the <code class="docutils literal notranslate"><span class="pre">--dtm</span></code> flag. To create a digital surface model, be sure to pass the <code class="docutils literal notranslate"><span class="pre">--dsm</span></code> flag.</p>
@@ -521,6 +495,155 @@
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">run</span> <span class="o">-</span><span class="n">ti</span> <span class="o">--</span><span class="n">rm</span> <span class="o">-</span><span class="n">v</span> <span class="o">/</span><span class="n">my</span><span class="o">/</span><span class="n">project</span><span class="p">:</span><span class="o">/</span><span class="n">datasets</span><span class="o">/</span><span class="n">code</span> <span class="o">&lt;</span><span class="n">my_odm_image</span><span class="o">&gt;</span> <span class="o">--</span><span class="n">project</span><span class="o">-</span><span class="n">path</span> <span class="o">/</span><span class="n">datasets</span> <span class="o">--</span><span class="n">dtm</span> <span class="o">--</span><span class="n">dem</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">2</span> <span class="o">--</span><span class="n">smrf</span><span class="o">-</span><span class="n">threshold</span> <span class="mf">0.4</span> <span class="o">--</span><span class="n">smrf</span><span class="o">-</span><span class="n">window</span> <span class="mi">24</span>
 </pre></div>
 </div>
+</section>
+<section id="using-potree-3d-viewer-module-on-webodm">
+<h2>Použití modulu Potree 3D viewer na WebODM<a class="headerlink" href="#using-potree-3d-viewer-module-on-webodm" title="Permalink to this heading"></a></h2>
+<section id="cameras">
+<h3>Kamery<a class="headerlink" href="#cameras" title="Permalink to this heading"></a></h3>
+<p>Aktivací této funkce zobrazíte polohu kamery.</p>
+<p>Kliknutím na ikonu fotoaparátu můžete také zobrazit jednotlivé snímky v rámečku v pravém horním rohu. Kliknutím na rámeček snímku se přepnete do režimu celé obrazovky.</p>
+<p>V rámci snímku jsou odkazy na stažení snímku a souboru kamery GeoJSON.</p>
+<figure class="align-center">
+<img alt="Umístění kamery" src="../_images/cameras.png" />
+</figure>
+</section>
+<section id="textured-model">
+<h3>Texturovaný model<a class="headerlink" href="#textured-model" title="Permalink to this heading"></a></h3>
+<p>Aktivací této funkce zobrazíte načtení texturovaného modelu. V závislosti na velikosti souboru a rychlosti připojení může načtení trvat několik sekund.</p>
+<figure class="align-center">
+<img alt="Texturovaný model" src="../_images/texturedmodel.png" />
+</figure>
+</section>
+<section id="appearance">
+<h3>Vzhled<a class="headerlink" href="#appearance" title="Permalink to this heading"></a></h3>
+<section id="point-budget">
+<h4>Point budget<a class="headerlink" href="#point-budget" title="Permalink to this heading"></a></h4>
+<p>Pro účely vzhledu i výkonu lze spravovat rozpočet bodů na scéně. Některým starým a méně výkonným strojům by prospěl rozpočet 500 000 bodů, zatímco většina strojů střední třídy je schopna zvládnout rozpočet 1 až 2 miliony bodů.</p>
+<p>Rozpočet 5 až 7 milionů bodů vytváří hladký 3d model mračna bodů, ale může být náročný na zdroje.</p>
+<p>Výchozí hodnota bodového rozpočtu je nastavena na 1 000 000.</p>
+</section>
+<section id="field-of-view">
+<h4>Zorné pole<a class="headerlink" href="#field-of-view" title="Permalink to this heading"></a></h4>
+<p>Za účelem kontroly prvků modelu, které mají být zahrnuty do scény, lze upravit zorné pole. Výchozí hodnota je nastavena na 60 stupňů.</p>
+<figure class="align-center">
+<img alt="Nastavení zorného pole" src="../_images/FOV_animation.gif" />
+</figure>
+</section>
+<section id="eye-dome-lighting">
+<h4>Osvětlení očního obzoru<a class="headerlink" href="#eye-dome-lighting" title="Permalink to this heading"></a></h4>
+<p>Modul prohlížeče Potree Point Cloud 3d dokáže implementovat eye dome-lighting, model osvětlení, který zvýrazňuje tvary objektů.</p>
+<p>Eye Dome-lighting seskupuje objekty, stínuje jejich obrysy a zlepšuje vnímání hloubky ve vědeckých vizualizacích. Je užitečné pro rozpoznávání a měření struktur v modelu. Lze jej upravit nastavením poloměru, síly a krytí.</p>
+<p>Ve výchozím nastavení je funkce Eye Dome-Lighting v prohlížeči Potree 3D povolena, ale lze ji vypnout kliknutím na možnost povolit.</p>
+<figure class="align-center">
+<img alt="Nastavení osvětlení oční kopule" src="../_images/EDL_animation.gif" />
+</figure>
+</section>
+<section id="background">
+<h4>Pozadí<a class="headerlink" href="#background" title="Permalink to this heading"></a></h4>
+<p>Pozadí prohlížeče Potree 3D lze upravit. Dostupné možnosti jsou <strong>Skybox</strong> / <strong>Gradient</strong> / <strong>Černá</strong> / <strong>Bílá</strong> / <strong>Žádná</strong>.</p>
+<figure class="align-center">
+<img alt="Volba pozadí" src="../_images/Background_animation.gif" />
+</figure>
+</section>
+<section id="other">
+<h4>Ostatní<a class="headerlink" href="#other" title="Permalink to this heading"></a></h4>
+<p><strong>Kvalita rozstřiku</strong> = Kvalitu rozstřiku lze nastavit na standardní nebo vysokou kvalitu a zlepšit tak vzhled modelu.</p>
+<p><strong>Minimální velikost uzlu</strong> = volba Minimální velikost uzlu ovlivní hustotu bodů reprezentovaných uzlů.</p>
+<p><strong>Box</strong> = Zobrazení boxů uzlů.</p>
+<p><strong>Zamknout zobrazení</strong> = uzamkne zobrazení mračna bodů a zabrání načtení nebo vyjmutí bodů do modelu.</p>
+</section>
+</section>
+<section id="tools">
+<h3>Nástroje<a class="headerlink" href="#tools" title="Permalink to this heading"></a></h3>
+<section id="measurement">
+<h4>Měření<a class="headerlink" href="#measurement" title="Permalink to this heading"></a></h4>
+<p>Modul Potree 3D viewer poskytuje několik nástrojů pro měření. Tato sada nástrojů se skládá z 12 prvků. Obsahuje také ovládací prvky pro zobrazení nebo skrytí výsledných popisek měření.</p>
+<p>Měření se provádí kliknutím levým tlačítkem myši na požadované body a u některých nástrojů je pro ukončení procesu nutné kliknutí pravým tlačítkem myši.</p>
+<figure class="align-center">
+<img alt="Nástroje - Měřící nástroje" src="../_images/measurement.png" />
+</figure>
+<p><strong>Úhel</strong></p>
+<p>Tento nástroj měří trojrozměrný úhel tvořený přímkami spojujícími 3 body. Chcete-li zahájit měření, klikněte na ikonu úhlu, poté klikněte levým tlačítkem myši na 3 body a proces se automaticky ukončí. Další informace získáte také výběrem tohoto prvku v sekci scéna.</p>
+<p><strong>Bod</strong></p>
+<p>Tento nástroj zvýrazní vybraný bod a zobrazí jeho souřadnici XYZ. Chcete-li zahájit měření, klikněte na ikonu bodu, poté klikněte na požadovaný bod a proces se automaticky ukončí. Další informace lze získat také výběrem tohoto prvku v sekci scény.</p>
+<p><strong>Vzdálenost</strong></p>
+<p>Tento nástroj měří trojrozměrnou vzdálenost přímek spojujících řadu bodů. Chcete-li zahájit měření, klikněte na ikonu vzdálenosti a začněte klikat na požadované body (dva nebo více). Měření ukončíte kliknutím pravým tlačítkem myši. Další informace, jako je například Celková délka, lze získat také výběrem tohoto prvku v sekci Scéna.</p>
+<p><strong>Výška</strong></p>
+<p>Tento nástroj měří výšku nebo svislou vzdálenost mezi dvěma body. Chcete-li zahájit měření, klikněte na ikonu výšky a poté klikněte na požadované dva body. Proces se automaticky ukončí. Další informace získáte také výběrem tohoto prvku v sekci Scéna.</p>
+<figure class="align-center">
+<img alt="Height measurement" src="../_images/height_animation.gif" />
+</figure>
+<p><strong>Kruh</strong></p>
+<p>Tento nástroj měří poloměr kružnice tvořené třemi body. Chcete-li zahájit měření, klikněte na ikonu kružnice a poté klikněte na požadované dva body. Proces se automaticky ukončí. Další informace, jako je Obvod, lze získat také výběrem tohoto prvku v sekci Scéna.</p>
+<p><strong>Azimut</strong></p>
+<p>Tento nástroj měří azimutální úhel přímky. Tato přímka je tvořena dvěma body vybranými uživatelem, úhel se měří ve stupních ve směru hodinových ručiček od 0 do 360 a začíná od zeměpisného severu. Chcete-li zahájit měření, klikněte na ikonu azimutu a poté klikněte na požadované dva body. Proces se automaticky ukončí. Další informace lze získat také výběrem tohoto prvku v sekci scény.</p>
+<p><strong>Oblast</strong></p>
+<p>Tento nástroj měří vodorovnou plochu tvořenou polygonem. Chcete-li zahájit měření, klikněte na ikonu plochy a začněte klikat na body tvořící požadovaný polygon (tři nebo více). Měření ukončíte kliknutím pravým tlačítkem myši. Další informace získáte také výběrem tohoto prvku v sekci scéna.</p>
+<p><strong>Objem (krychle)</strong></p>
+<p>Tento nástroj měří objem tvořený krychlí. Chcete-li zahájit měření, klikněte na ikonu objemu (krychle) a kliknutím na model umístěte krychli. Pomocí zobrazených obslužných programů je možné krychli přemístit, změnit její rozměr a otočit ji. Měření ukončíte kliknutím pravým tlačítkem myši. Další informace lze získat také výběrem tohoto prvku v sekci scény.</p>
+<p><strong>Objem (koule)</strong></p>
+<p>Tento nástroj měří objem tvořený koulí. Chcete-li zahájit měření, klikněte na ikonu objemu (koule) a kliknutím na model umístěte kouli. Pomocí zobrazených obslužných programů je možné kouli přemístit, změnit její rozměr a otočit ji. Měření ukončíte kliknutím pravým tlačítkem myši. Další informace lze získat také výběrem tohoto prvku v sekci scény.</p>
+<p><strong>Výškový profil</strong></p>
+<p>Tento nástroj vytvoří na modelu výškový profil tvořený čarou. Chcete-li zahájit měření, klikněte na ikonu Výškový profil a poté vytvořte na modelu čáru kliknutím na požadované body (dva nebo více). Měření ukončíte kliknutím pravým tlačítkem myši. Další informace a možnosti, například „Zobrazit 2d profil“, lze získat také výběrem tohoto prvku v sekci scény.</p>
+<figure class="align-center">
+<img alt="Height profile" src="../_images/height_profile.png" />
+</figure>
+<p><strong>Poznámka</strong></p>
+<p>Tento nástroj vytvoří na zvýrazněném bodě modelu anotační štítek. Chcete-li zahájit měření, klikněte na ikonu anotace a poté klikněte na požadovaný bod. Proces se automaticky ukončí. Chcete-li anotaci upravit, vyberte tento prvek v sekci scény a poté upravte Nadpis a Popis.</p>
+<p><strong>Odstranit měření</strong></p>
+<p>Tento nástroj odstraní všechna měření na modelu. Chcete-li odstranit všechna měření, klikněte na ikonu „Odstranit měření“.</p>
+</section>
+<section id="clipping">
+<h4>Ořez<a class="headerlink" href="#clipping" title="Permalink to this heading"></a></h4>
+<figure class="align-center">
+<img alt="Tools - Clipping tools" src="../_images/clipping.png" />
+</figure>
+<p>Mračno bodů lze oříznout výběrem oblasti. Mezi možnosti oříznutí patří <strong>žádné</strong> / <strong>zvýraznění</strong> / <strong>vnitřní</strong> / <strong>vnější</strong>.</p>
+<p>Chcete-li mračno bodů oříznout, klikněte na ikonu oříznutí svazku, umístěte krychli na model a přemístěte ji, změňte její rozměry a otočte ji tak, aby obsahovala požadovanou oblast. Jako metoda oříznutí je ve výchozím nastavení nastaveno zvýraznění. Pokud chcete zobrazit pouze body obsažené v krychli, klikněte na „Inside“ (Uvnitř), v opačném případě klikněte na „Outside“ (Vně).</p>
+<p>Chcete-li odstranit ořezový objem nebo polygony, klikněte na ikonu „Odstranit všechna měření“.</p>
+<figure class="align-center">
+<img alt="Nástroje - Ořezávání" src="../_images/clipping_animation.gif" />
+</figure>
+</section>
+<section id="navigation">
+<h4>Navigace<a class="headerlink" href="#navigation" title="Permalink to this heading"></a></h4>
+<figure class="align-center">
+<img alt="Nástroje - Ovládací prvky navigace" src="../_images/navigation.png" />
+</figure>
+<p>Prohlížeč Potree 3D má 4 navigační ovládací prvky, které určují jeho chování.</p>
+<p><strong>Ovládání ze země</strong></p>
+<p>Pozemní řízení navigované jako ukotvené k zemi. Levé tlačítko myši pohybuje modelem horizontálně, kolečko myši ovládá zoom a pravé tlačítko model obíhá.</p>
+<p><strong>Ovládání letu</strong></p>
+<p>Ovládání Fly Control pohybuje kamerou jako v ptačím pohledu pomocí klávesnice. Klávesy „W“ a „S“ se pohybují vpřed a vzad, respektive ve směru kamery, zatímco „A“ a „D“ se pohybují vlevo a vpravo. Také klávesy „R“ a „F“ pohybují kamerou nahoru a dolů. Levé tlačítko myši mění směr kamery, kolečko myši ovládá zoom a pravé tlačítko pohybuje kamerou v ose XYZ.</p>
+<p>Rychlost těchto pohybů lze ovládat pomocí posuvného ovladače.</p>
+<p><strong>Ovládání helikoptéry</strong></p>
+<p>Při ovládání vrtulníku se kamera pohybuje jako v letadle pomocí klávesnice. Klávesy „W“ a „S“ se pohybují dopředu a dozadu, resp. jsou omezeny v horizontální rovině, zatímco klávesy „A“ a „D“ se pohybují doleva a doprava. Také klávesy „R“ a „F“ pohybují kamerou nahoru a dolů. Levé tlačítko myši mění směr kamery, kolečko myši ovládá zoom a pravé tlačítko posouvá model v ose XY.</p>
+<p>Rychlost těchto pohybů lze ovládat pomocí posuvného ovladače.</p>
+<p><strong>Ovládací prvky otáčení</strong></p>
+<p>Řízení oběžné dráhy je výchozí navigační chování. Levé tlačítko myši obíhá model, kolečko ovládá zoom a pravé tlačítko pohybuje modelem v ose XYZ.</p>
+<p><strong>Plný rozsah</strong></p>
+<p>Tlačítko Plný rozsah obnoví zobrazení modelu.</p>
+<p><strong>Navigační krychle</strong></p>
+<p>Navigační kostka zobrazí drátěnou kostku obsahující model.</p>
+<p><strong>Kompas</strong></p>
+<p>Tlačítko Kompas zobrazí kompas v pravém horním rohu.</p>
+<p><strong>Animace kamery</strong></p>
+<p>Tlačítko animace kamery vytvoří cestu animace kamery. Poloha kamery je definována body na zelené čáře, zatímco body na modré čáře představují místo, kam má kamera směřovat.</p>
+<p>Chcete-li vytvořit animaci, upravte body pro umístění kamery a směr kamery a poté vyberte prvek kamery v části Scéna a vytvořte další bod, změňte rychlost animace nebo animaci přehrajte.</p>
+<figure class="align-center">
+<img alt="Nástroje - Ovládací prvky navigace" src="../_images/camera_animation.gif" />
+</figure>
+</section>
+</section>
+<section id="scene">
+<h3>Scéna<a class="headerlink" href="#scene" title="Permalink to this heading"></a></h3>
+<p>V části Scéna se zobrazí strom souborů obsahující všechny prvky scény. Prvky jsou uspořádány do šesti skupin, kterými jsou <strong>Mračna bodů</strong> / <strong>Měření</strong> / <strong>Anotace</strong> / <strong>Ostatní</strong> / <strong>Vektor</strong> / <strong>Obrázky</strong>.</p>
+<p>Každý prvek v těchto skupinách lze vybrat a získat další informace nebo ovládat jeho vlastnosti.</p>
+<p>Například vlastnosti mračen bodů lze upravit tak, aby zobrazovaly nadmořskou výšku, a také lze přizpůsobit barevnou rampu.</p>
+<figure class="align-center">
+<img alt="Nástroje - Ovládací prvky navigace" src="../_images/pointcloud_elevation.png" />
+</figure>
+</section>
 </section>
 <section id="measuring-stockpile-volume">
 <h2>Measuring stockpile volume<a class="headerlink" href="#measuring-stockpile-volume" title="Permalink to this heading"></a></h2>
@@ -781,157 +904,34 @@ images folder for each project.</p></li>
 </section>
 </section>
 </section>
-<section id="using-potree-3d-viewer-module-on-webodm">
-<h2>Použití modulu Potree 3D viewer na WebODM<a class="headerlink" href="#using-potree-3d-viewer-module-on-webodm" title="Permalink to this heading"></a></h2>
-<section id="cameras">
-<h3>Kamery<a class="headerlink" href="#cameras" title="Permalink to this heading"></a></h3>
-<p>Aktivací této funkce zobrazíte polohu kamery.</p>
-<p>Kliknutím na ikonu fotoaparátu můžete také zobrazit jednotlivé snímky v rámečku v pravém horním rohu. Kliknutím na rámeček snímku se přepnete do režimu celé obrazovky.</p>
-<p>V rámci snímku jsou odkazy na stažení snímku a souboru kamery GeoJSON.</p>
-<figure class="align-center">
-<img alt="Umístění kamery" src="../_images/cameras.png" />
-</figure>
-</section>
-<section id="textured-model">
-<h3>Texturovaný model<a class="headerlink" href="#textured-model" title="Permalink to this heading"></a></h3>
-<p>Aktivací této funkce zobrazíte načtení texturovaného modelu. V závislosti na velikosti souboru a rychlosti připojení může načtení trvat několik sekund.</p>
-<figure class="align-center">
-<img alt="Texturovaný model" src="../_images/texturedmodel.png" />
-</figure>
-</section>
-<section id="appearance">
-<h3>Vzhled<a class="headerlink" href="#appearance" title="Permalink to this heading"></a></h3>
-<section id="point-budget">
-<h4>Point budget<a class="headerlink" href="#point-budget" title="Permalink to this heading"></a></h4>
-<p>Pro účely vzhledu i výkonu lze spravovat rozpočet bodů na scéně. Některým starým a méně výkonným strojům by prospěl rozpočet 500 000 bodů, zatímco většina strojů střední třídy je schopna zvládnout rozpočet 1 až 2 miliony bodů.</p>
-<p>Rozpočet 5 až 7 milionů bodů vytváří hladký 3d model mračna bodů, ale může být náročný na zdroje.</p>
-<p>Výchozí hodnota bodového rozpočtu je nastavena na 1 000 000.</p>
-</section>
-<section id="field-of-view">
-<h4>Zorné pole<a class="headerlink" href="#field-of-view" title="Permalink to this heading"></a></h4>
-<p>Za účelem kontroly prvků modelu, které mají být zahrnuty do scény, lze upravit zorné pole. Výchozí hodnota je nastavena na 60 stupňů.</p>
-<figure class="align-center">
-<img alt="Nastavení zorného pole" src="../_images/FOV_animation.gif" />
-</figure>
-</section>
-<section id="eye-dome-lighting">
-<h4>Osvětlení očního obzoru<a class="headerlink" href="#eye-dome-lighting" title="Permalink to this heading"></a></h4>
-<p>Modul prohlížeče Potree Point Cloud 3d dokáže implementovat eye dome-lighting, model osvětlení, který zvýrazňuje tvary objektů.</p>
-<p>Eye Dome-lighting seskupuje objekty, stínuje jejich obrysy a zlepšuje vnímání hloubky ve vědeckých vizualizacích. Je užitečné pro rozpoznávání a měření struktur v modelu. Lze jej upravit nastavením poloměru, síly a krytí.</p>
-<p>Ve výchozím nastavení je funkce Eye Dome-Lighting v prohlížeči Potree 3D povolena, ale lze ji vypnout kliknutím na možnost povolit.</p>
-<figure class="align-center">
-<img alt="Nastavení osvětlení oční kopule" src="../_images/EDL_animation.gif" />
-</figure>
-</section>
-<section id="background">
-<h4>Pozadí<a class="headerlink" href="#background" title="Permalink to this heading"></a></h4>
-<p>Pozadí prohlížeče Potree 3D lze upravit. Dostupné možnosti jsou <strong>Skybox</strong> / <strong>Gradient</strong> / <strong>Černá</strong> / <strong>Bílá</strong> / <strong>Žádná</strong>.</p>
-<figure class="align-center">
-<img alt="Volba pozadí" src="../_images/Background_animation.gif" />
-</figure>
-</section>
-<section id="other">
-<h4>Ostatní<a class="headerlink" href="#other" title="Permalink to this heading"></a></h4>
-<p><strong>Kvalita rozstřiku</strong> = Kvalitu rozstřiku lze nastavit na standardní nebo vysokou kvalitu a zlepšit tak vzhled modelu.</p>
-<p><strong>Minimální velikost uzlu</strong> = volba Minimální velikost uzlu ovlivní hustotu bodů reprezentovaných uzlů.</p>
-<p><strong>Box</strong> = Zobrazení boxů uzlů.</p>
-<p><strong>Zamknout zobrazení</strong> = uzamkne zobrazení mračna bodů a zabrání načtení nebo vyjmutí bodů do modelu.</p>
-</section>
-</section>
-<section id="tools">
-<h3>Nástroje<a class="headerlink" href="#tools" title="Permalink to this heading"></a></h3>
-<section id="measurement">
-<h4>Měření<a class="headerlink" href="#measurement" title="Permalink to this heading"></a></h4>
-<p>Modul Potree 3D viewer poskytuje několik nástrojů pro měření. Tato sada nástrojů se skládá z 12 prvků. Obsahuje také ovládací prvky pro zobrazení nebo skrytí výsledných popisek měření.</p>
-<p>Měření se provádí kliknutím levým tlačítkem myši na požadované body a u některých nástrojů je pro ukončení procesu nutné kliknutí pravým tlačítkem myši.</p>
-<figure class="align-center">
-<img alt="Nástroje - Měřící nástroje" src="../_images/measurement.png" />
-</figure>
-<p><strong>Úhel</strong></p>
-<p>Tento nástroj měří trojrozměrný úhel tvořený přímkami spojujícími 3 body. Chcete-li zahájit měření, klikněte na ikonu úhlu, poté klikněte levým tlačítkem myši na 3 body a proces se automaticky ukončí. Další informace získáte také výběrem tohoto prvku v sekci scéna.</p>
-<p><strong>Bod</strong></p>
-<p>Tento nástroj zvýrazní vybraný bod a zobrazí jeho souřadnici XYZ. Chcete-li zahájit měření, klikněte na ikonu bodu, poté klikněte na požadovaný bod a proces se automaticky ukončí. Další informace lze získat také výběrem tohoto prvku v sekci scény.</p>
-<p><strong>Vzdálenost</strong></p>
-<p>Tento nástroj měří trojrozměrnou vzdálenost přímek spojujících řadu bodů. Chcete-li zahájit měření, klikněte na ikonu vzdálenosti a začněte klikat na požadované body (dva nebo více). Měření ukončíte kliknutím pravým tlačítkem myši. Další informace, jako je například Celková délka, lze získat také výběrem tohoto prvku v sekci Scéna.</p>
-<p><strong>Výška</strong></p>
-<p>Tento nástroj měří výšku nebo svislou vzdálenost mezi dvěma body. Chcete-li zahájit měření, klikněte na ikonu výšky a poté klikněte na požadované dva body. Proces se automaticky ukončí. Další informace získáte také výběrem tohoto prvku v sekci Scéna.</p>
-<figure class="align-center">
-<img alt="Height measurement" src="../_images/height_animation.gif" />
-</figure>
-<p><strong>Kruh</strong></p>
-<p>Tento nástroj měří poloměr kružnice tvořené třemi body. Chcete-li zahájit měření, klikněte na ikonu kružnice a poté klikněte na požadované dva body. Proces se automaticky ukončí. Další informace, jako je Obvod, lze získat také výběrem tohoto prvku v sekci Scéna.</p>
-<p><strong>Azimut</strong></p>
-<p>Tento nástroj měří azimutální úhel přímky. Tato přímka je tvořena dvěma body vybranými uživatelem, úhel se měří ve stupních ve směru hodinových ručiček od 0 do 360 a začíná od zeměpisného severu. Chcete-li zahájit měření, klikněte na ikonu azimutu a poté klikněte na požadované dva body. Proces se automaticky ukončí. Další informace lze získat také výběrem tohoto prvku v sekci scény.</p>
-<p><strong>Oblast</strong></p>
-<p>Tento nástroj měří vodorovnou plochu tvořenou polygonem. Chcete-li zahájit měření, klikněte na ikonu plochy a začněte klikat na body tvořící požadovaný polygon (tři nebo více). Měření ukončíte kliknutím pravým tlačítkem myši. Další informace získáte také výběrem tohoto prvku v sekci scéna.</p>
-<p><strong>Objem (krychle)</strong></p>
-<p>Tento nástroj měří objem tvořený krychlí. Chcete-li zahájit měření, klikněte na ikonu objemu (krychle) a kliknutím na model umístěte krychli. Pomocí zobrazených obslužných programů je možné krychli přemístit, změnit její rozměr a otočit ji. Měření ukončíte kliknutím pravým tlačítkem myši. Další informace lze získat také výběrem tohoto prvku v sekci scény.</p>
-<p><strong>Objem (koule)</strong></p>
-<p>Tento nástroj měří objem tvořený koulí. Chcete-li zahájit měření, klikněte na ikonu objemu (koule) a kliknutím na model umístěte kouli. Pomocí zobrazených obslužných programů je možné kouli přemístit, změnit její rozměr a otočit ji. Měření ukončíte kliknutím pravým tlačítkem myši. Další informace lze získat také výběrem tohoto prvku v sekci scény.</p>
-<p><strong>Výškový profil</strong></p>
-<p>Tento nástroj vytvoří na modelu výškový profil tvořený čarou. Chcete-li zahájit měření, klikněte na ikonu Výškový profil a poté vytvořte na modelu čáru kliknutím na požadované body (dva nebo více). Měření ukončíte kliknutím pravým tlačítkem myši. Další informace a možnosti, například „Zobrazit 2d profil“, lze získat také výběrem tohoto prvku v sekci scény.</p>
-<figure class="align-center">
-<img alt="Height profile" src="../_images/height_profile.png" />
-</figure>
-<p><strong>Poznámka</strong></p>
-<p>Tento nástroj vytvoří na zvýrazněném bodě modelu anotační štítek. Chcete-li zahájit měření, klikněte na ikonu anotace a poté klikněte na požadovaný bod. Proces se automaticky ukončí. Chcete-li anotaci upravit, vyberte tento prvek v sekci scény a poté upravte Nadpis a Popis.</p>
-<p><strong>Odstranit měření</strong></p>
-<p>Tento nástroj odstraní všechna měření na modelu. Chcete-li odstranit všechna měření, klikněte na ikonu „Odstranit měření“.</p>
-</section>
-<section id="clipping">
-<h4>Ořez<a class="headerlink" href="#clipping" title="Permalink to this heading"></a></h4>
-<figure class="align-center">
-<img alt="Tools - Clipping tools" src="../_images/clipping.png" />
-</figure>
-<p>Mračno bodů lze oříznout výběrem oblasti. Mezi možnosti oříznutí patří <strong>žádné</strong> / <strong>zvýraznění</strong> / <strong>vnitřní</strong> / <strong>vnější</strong>.</p>
-<p>Chcete-li mračno bodů oříznout, klikněte na ikonu oříznutí svazku, umístěte krychli na model a přemístěte ji, změňte její rozměry a otočte ji tak, aby obsahovala požadovanou oblast. Jako metoda oříznutí je ve výchozím nastavení nastaveno zvýraznění. Pokud chcete zobrazit pouze body obsažené v krychli, klikněte na „Inside“ (Uvnitř), v opačném případě klikněte na „Outside“ (Vně).</p>
-<p>Chcete-li odstranit ořezový objem nebo polygony, klikněte na ikonu „Odstranit všechna měření“.</p>
-<figure class="align-center">
-<img alt="Nástroje - Ořezávání" src="../_images/clipping_animation.gif" />
-</figure>
-</section>
-<section id="navigation">
-<h4>Navigace<a class="headerlink" href="#navigation" title="Permalink to this heading"></a></h4>
-<figure class="align-center">
-<img alt="Nástroje - Ovládací prvky navigace" src="../_images/navigation.png" />
-</figure>
-<p>Prohlížeč Potree 3D má 4 navigační ovládací prvky, které určují jeho chování.</p>
-<p><strong>Ovládání ze země</strong></p>
-<p>Pozemní řízení navigované jako ukotvené k zemi. Levé tlačítko myši pohybuje modelem horizontálně, kolečko myši ovládá zoom a pravé tlačítko model obíhá.</p>
-<p><strong>Ovládání letu</strong></p>
-<p>Ovládání Fly Control pohybuje kamerou jako v ptačím pohledu pomocí klávesnice. Klávesy „W“ a „S“ se pohybují vpřed a vzad, respektive ve směru kamery, zatímco „A“ a „D“ se pohybují vlevo a vpravo. Také klávesy „R“ a „F“ pohybují kamerou nahoru a dolů. Levé tlačítko myši mění směr kamery, kolečko myši ovládá zoom a pravé tlačítko pohybuje kamerou v ose XYZ.</p>
-<p>Rychlost těchto pohybů lze ovládat pomocí posuvného ovladače.</p>
-<p><strong>Ovládání helikoptéry</strong></p>
-<p>Při ovládání vrtulníku se kamera pohybuje jako v letadle pomocí klávesnice. Klávesy „W“ a „S“ se pohybují dopředu a dozadu, resp. jsou omezeny v horizontální rovině, zatímco klávesy „A“ a „D“ se pohybují doleva a doprava. Také klávesy „R“ a „F“ pohybují kamerou nahoru a dolů. Levé tlačítko myši mění směr kamery, kolečko myši ovládá zoom a pravé tlačítko posouvá model v ose XY.</p>
-<p>Rychlost těchto pohybů lze ovládat pomocí posuvného ovladače.</p>
-<p><strong>Ovládací prvky otáčení</strong></p>
-<p>Řízení oběžné dráhy je výchozí navigační chování. Levé tlačítko myši obíhá model, kolečko ovládá zoom a pravé tlačítko pohybuje modelem v ose XYZ.</p>
-<p><strong>Plný rozsah</strong></p>
-<p>Tlačítko Plný rozsah obnoví zobrazení modelu.</p>
-<p><strong>Navigační krychle</strong></p>
-<p>Navigační kostka zobrazí drátěnou kostku obsahující model.</p>
-<p><strong>Kompas</strong></p>
-<p>Tlačítko Kompas zobrazí kompas v pravém horním rohu.</p>
-<p><strong>Animace kamery</strong></p>
-<p>Tlačítko animace kamery vytvoří cestu animace kamery. Poloha kamery je definována body na zelené čáře, zatímco body na modré čáře představují místo, kam má kamera směřovat.</p>
-<p>Chcete-li vytvořit animaci, upravte body pro umístění kamery a směr kamery a poté vyberte prvek kamery v části Scéna a vytvořte další bod, změňte rychlost animace nebo animaci přehrajte.</p>
-<figure class="align-center">
-<img alt="Nástroje - Ovládací prvky navigace" src="../_images/camera_animation.gif" />
-</figure>
-</section>
-</section>
-<section id="scene">
-<h3>Scéna<a class="headerlink" href="#scene" title="Permalink to this heading"></a></h3>
-<p>V části Scéna se zobrazí strom souborů obsahující všechny prvky scény. Prvky jsou uspořádány do šesti skupin, kterými jsou <strong>Mračna bodů</strong> / <strong>Měření</strong> / <strong>Anotace</strong> / <strong>Ostatní</strong> / <strong>Vektor</strong> / <strong>Obrázky</strong>.</p>
-<p>Každý prvek v těchto skupinách lze vybrat a získat další informace nebo ovládat jeho vlastnosti.</p>
-<p>Například vlastnosti mračen bodů lze upravit tak, aby zobrazovaly nadmořskou výšku, a také lze přizpůsobit barevnou rampu.</p>
-<figure class="align-center">
-<img alt="Nástroje - Ovládací prvky navigace" src="../_images/pointcloud_elevation.png" />
-</figure>
-</section>
-</section>
 <section id="advanced">
 <h2>Advanced<a class="headerlink" href="#advanced" title="Permalink to this heading"></a></h2>
+<section id="calibrating-the-camera">
+<h3>Kalibrace kamery<a class="headerlink" href="#calibrating-the-camera" title="Permalink to this heading"></a></h3>
+<p>Kalibrace fotoaparátů je u komoditních fotoaparátů zvláštní výzvou. Změny teploty, vibrace, zaostření a další faktory mohou ovlivnit odvozené parametry, což má zásadní vliv na výsledná data. Automatická nebo vlastní kalibrace je u letů dronů možná a žádoucí, ale v závislosti na průběhu letu nemusí automatická kalibrace odstranit z výsledných produktů všechna zkreslení. James a Robson (2014) se ve svém článku <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609">Mitigating systematic error in topographic models derived from UAV and ground-based image networks</a> zabývají tím, jak minimalizovat zkreslení způsobené autokalibrací.</p>
+<figure class="align-center">
+<img alt="obraz vlivu zkreslení objektivu na bowling dat" src="../_images/msimbasi_bowling.png" />
+</figure>
+<p><em>Efekt bowlingu na mračnu bodů nad sadou více než 13 000 snímků shromážděných Světovou bankou v Tanzanii nad povodím Msimbasi v Dar es Salaamu v Tanzanii, které je náchylné k povodním.</em></p>
+<p>Pro zmírnění tohoto efektu existuje několik možností, ale nejjednodušší jsou následující: letět se dvěma obrazci oddělenými od sebe o 20° a namísto nadiru (přímého směru dolů) použít kameru, která se naklání dopředu o 5°.</p>
+<figure class="align-center">
+<a class="reference internal image-reference" href="../_images/flightplanning.gif"><img alt="animace zobrazující optimum" src="../_images/flightplanning.gif" style="width: 640px; height: 480px;" /></a>
+</figure>
+<p>As this approach takes longer than traditional imaging, pilots and teams may apply this technique to a smaller area and use the collected data to optimize future flights. OpenDroneMap can generate a calibration file called cameras.json from a small sample flight. The calibration file can be used for future flights, mitigating the bowling effect without sacrificing efficiency.</p>
+<p>Alternativně lze použít následující experimentální metodu: letět s mnohem menším překrytím, ale se dvěma lety <em>crossgrid</em> (někdy nazývanými crosshatch) oddělenými od sebe 20° s kamerou směřující 5° dopředu.</p>
+<ul class="simple">
+<li><p>Procento překrytí napříč sítí může být nižší než u paralelních letů. Pro dosažení dobrých výsledků ve 3D budete potřebovat 68% překrytí a sidelap pro ekvivalentní 83% překrytí a sidelap.</p></li>
+<li><p>Chcete-li získat dobré výsledky 2D a 2,5D (digitální model reliéfu), budete potřebovat 42% překrytí a boční překrytí pro ekvivalentní 70% překrytí a boční překrytí.</p></li>
+</ul>
+<figure class="align-center">
+<img alt="animace zobrazující experimentální optimum" src="../_images/rotation.gif" />
+</figure>
+<p>Vertikálně oddělené letové linie také zlepšují přesnost, ale méně než kamera, která je natočena dopředu o 5°.</p>
+<figure class="align-center">
+<img alt="obrázek znázorňující vliv vertikálně oddělených letových linií a dopředu namířených kamer na zlepšení vlastní kalibrace." src="../_images/forward_facing.png" />
+</figure>
+<p>Z James a Robson (2014), <a class="reference external" href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></p>
+</section>
 <section id="using-image-masks">
 <h3>Using Image Masks<a class="headerlink" href="#using-image-masks" title="Permalink to this heading"></a></h3>
 <p>Starting from ODM <code class="docutils literal notranslate"><span class="pre">2.0</span></code> people can supply image masks to inform the software to skip reconstruction over certain areas. This is useful for cases where the sky was accidentally included in the input photos from oblique shots, or simply to limit the reconstruction of a single subject.</p>
