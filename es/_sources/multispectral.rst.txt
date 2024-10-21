@@ -1,6 +1,6 @@
-#################################
-Multispectral and Thermal Support
-#################################
+#########################
+Multispectral and Thermal
+#########################
 
 Multispectral Support
 =====================
