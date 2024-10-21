@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Como contribuir &mdash; documentación de OpenDroneMap - 3.5.4</title>
+  <title>How to Contribute and Request Features &mdash; documentación de OpenDroneMap - 3.5.4</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -23,7 +23,7 @@
     <link rel="index" title="Índice" href="../genindex/" />
     <link rel="search" title="Búsqueda" href="../search/" />
     <link rel="next" title="Frequently Asked Questions and Additional Resources" href="../faq/" />
-    <link rel="prev" title="Cómo solicitar funciones" href="../requesting-features/" /> 
+    <link rel="prev" title="Consejos de vuelo" href="../flying/" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -329,7 +329,7 @@
 <li class="toctree-l2"><a class="reference internal" href="../outputs/#list-of-all-outputs">Lista de todas las salidas</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">Accuracy, Ground Control, and Alignment</a><ul>
+<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">High Precision Workflows</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#map-accuracy">Precisión del Mapa</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#what-to-expect">Que esperar</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aspects-impacting-map-accuracy">Aspectos que impactan la precisión del mapa</a></li>
@@ -396,14 +396,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../flying/#other-resources-on-flying">Other resources on flying</a></li>
 </ul>
 </li>
-<li class="toctree-l1"><a class="reference internal" href="../requesting-features/">Cómo solicitar funciones</a></li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Como contribuir</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#community-forum">Foro comunitario</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#reporting-bugs">Reportando Errores</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#template-for-submitting-bug-reports">Plantilla Para Enviar Informes de Errores</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">How to Contribute and Request Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-request-features">How To Request Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#how-to-contribute">Como contribuir</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#community-forum">Foro comunitario</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#reporting-bugs">Reportando Errores</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#template-for-submitting-bug-reports">Plantilla Para Enviar Informes de Errores</a></li>
 </ul>
 </li>
-<li class="toctree-l2"><a class="reference internal" href="#pull-requests">Solicitudes de Extraxion</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#pull-requests">Solicitudes de Extraxion</a></li>
+</ul>
+</li>
 </ul>
 </li>
 <li class="toctree-l1"><a class="reference internal" href="../faq/">Frequently Asked Questions and Additional Resources</a><ul>
@@ -436,7 +439,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Como contribuir</li>
+      <li class="breadcrumb-item active">How to Contribute and Request Features</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/contributing.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
@@ -446,15 +449,50 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="how-to-contribute">
-<h1>Como contribuir<a class="headerlink" href="#how-to-contribute" title="Enlace permanente a este encabezado"></a></h1>
+  <section id="how-to-contribute-and-request-features">
+<h1>How to Contribute and Request Features<a class="headerlink" href="#how-to-contribute-and-request-features" title="Enlace permanente a este encabezado"></a></h1>
+<section id="how-to-request-features">
+<h2>How To Request Features<a class="headerlink" href="#how-to-request-features" title="Enlace permanente a este encabezado"></a></h2>
+<p>All software needs user feedback and feature requests, to grow and maintain
+alignment with the needs of its users.</p>
+<p>OpenDroneMap is FOSS software.  Free and open source (FOSS) projects are interesting
+from the inside and outside: from the outside, successful ones feel like they should be able
+to do anything, and itâ€™s hard to know what a reasonable request is. From the inside of a
+project, they can feel very resource constrained: largely by time, money, and opportunity
+overload.</p>
+<p><strong>Demanding that a feature be implemented is probably not going to convince the development team to do so</strong>. Imagine
+if somebody knocked on your door and asked you to «stop reading this page right now and come to my house to cook me dinner!». Your first response might very reasonably be «who on earth is this person and why should I spend my time and energy fulfilling his agenda instead of my own?».</p>
+<p><strong>Suggesting</strong> that a feature be implemented is a more effective (and cordial) way to ask for new features, especially if you’re prepared to offer some of your own resources (time, funds or both) to help get the feature implemented. Explaining why
+<em>your</em> suggestion can benefit others can also help. If the feature benefits you exclusively, it might be harder to convince others to do the work for you.</p>
+<p>A feature request can be submitted as issues on the applicable Github repository (e.g.,
+<a class="reference external" href="https://github.com/OpenDroneMap/WebODM/issues">WebODM</a> or <a class="reference external" href="https://github.com/OpenDroneMap/ODM/issues">ODM</a>
+or similar) or more simply as a discussion topic on <a class="reference external" href="https://community.opendronemap.org/">the community forum</a>.
+Try to start by searching these sources to see if someone else has already brought it up.  Sometimes a feature is already in
+the works, or has at least been discussed.</p>
+<p>To request the addition of support for new drone cameras: please share a set of test images on the <a class="reference external" href="https://community.opendronemap.org/c/datasets/10">datasets channel on the forum</a>. Without test images there’s not much the developers can do.</p>
+<p>And importantly, the trick is to listen: if someone within the project says: «This is a big lift,
+we need MONEY or TIME or SOMEONE TO HELP CODE IT» (or possibly a combination of the three)
+then there are two answers that work really well in response:</p>
+<blockquote>
+<div><p><em>Ok. I didnâ€™t know it was a big feature request! I hope someone comes along with the necessary resources. As a community member, I would be happy to be an early user and tester!</em></p>
+</div></blockquote>
+<p>or</p>
+<blockquote>
+<div><p><em>Letâ€™s figure out if we can put together the resources to get this done! Hereâ€™s what I can contribute toward it: â€¦</em></p>
+</div></blockquote>
+<p>We are glad you are excited to see new features added to the project.  Some new features need support,
+and some are easier to implement.  We’ll do our best to help you understand where your request falls, and
+we appreciate any support you can provide.</p>
+</section>
+<section id="how-to-contribute">
+<h2>Como contribuir<a class="headerlink" href="#how-to-contribute" title="Enlace permanente a este encabezado"></a></h2>
 <p>OpenDroneMap depende de las contribuciones de la comunidad. Puedes contribuir de muchas formas, aunque no seas programador.</p>
 <section id="community-forum">
-<h2>Foro comunitario<a class="headerlink" href="#community-forum" title="Enlace permanente a este encabezado"></a></h2>
+<h3>Foro comunitario<a class="headerlink" href="#community-forum" title="Enlace permanente a este encabezado"></a></h3>
 <p>Si quieres involucrarte, tienes un porblema o quieres conectarte, <a class="reference external" href="https://community.opendronemap.org/">el foro</a> es un excelente lugar para comenzar. Es posible que que encuentres tus preguntas ya respondidas o puedes encontrar consejos utiles y recursos. Tambien puedes contribuir con tus conjuntos de datos de acceso abierto para que otros los puedan explorar. Es un buen lugar para revisar antes de enviar informes de errores oponerse ne contacto con los desarrolladores antes de escribir una nueva caracterisitca.</p>
 </section>
 <section id="reporting-bugs">
-<h2>Reportando Errores<a class="headerlink" href="#reporting-bugs" title="Enlace permanente a este encabezado"></a></h2>
+<h3>Reportando Errores<a class="headerlink" href="#reporting-bugs" title="Enlace permanente a este encabezado"></a></h3>
 <p>Errores son rastreados como problemas de Github. Por favor crea un porblema en el repositorio y etiquetalo con la etiqueta del error.</p>
 <p>Explica el problema e incluye detalles adicionales para ayudar a los mantenedores a reproducir el problema:</p>
 <ul class="simple">
@@ -475,7 +513,7 @@ Un lanzamiento estable? un clon de un master?</p></li>
 <li><p><strong>Estas usando ODM en una maquina virtual o Docker?</strong> Si es asi, que software de maquina virtualestas usando y que sistema operativo y versiones estas usando para el host y el guest?</p></li>
 </ul>
 <section id="template-for-submitting-bug-reports">
-<h3>Plantilla Para Enviar Informes de Errores<a class="headerlink" href="#template-for-submitting-bug-reports" title="Enlace permanente a este encabezado"></a></h3>
+<h4>Plantilla Para Enviar Informes de Errores<a class="headerlink" href="#template-for-submitting-bug-reports" title="Enlace permanente a este encabezado"></a></h4>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>[Short description of problem here]
 
 **Reproduction Steps:**
@@ -509,7 +547,7 @@ Un lanzamiento estable? un clon de un master?</p></li>
 </section>
 </section>
 <section id="pull-requests">
-<h2>Solicitudes de Extraxion<a class="headerlink" href="#pull-requests" title="Enlace permanente a este encabezado"></a></h2>
+<h3>Solicitudes de Extraxion<a class="headerlink" href="#pull-requests" title="Enlace permanente a este encabezado"></a></h3>
 <ul class="simple">
 <li><p>Incluye capturas de pantalla y GIFs animados en tus solicitudes de extraccion siempre que sea posible.</p></li>
 <li><p>Sigue la guia de estilo de PEP8 Python.</p></li>
@@ -534,12 +572,13 @@ Un lanzamiento estable? un clon de un master?</p></li>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/contributing.rst">esta página</a>!</p>
 </section>
 </section>
+</section>
 
 
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Pie de página">
-        <a href="../requesting-features/" class="btn btn-neutral float-left" title="Cómo solicitar funciones" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
+        <a href="../flying/" class="btn btn-neutral float-left" title="Consejos de vuelo" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Anterior</a>
         <a href="../faq/" class="btn btn-neutral float-right" title="Frequently Asked Questions and Additional Resources" accesskey="n" rel="next">Siguiente <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

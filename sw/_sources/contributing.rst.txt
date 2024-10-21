@@ -1,4 +1,47 @@
-.. contributing
+#######################################
+How to Contribute and Request Features
+#######################################
+
+How To Request Features
+=======================
+
+All software needs user feedback and feature requests, to grow and maintain
+alignment with the needs of its users.
+
+OpenDroneMap is FOSS software.  Free and open source (FOSS) projects are interesting
+from the inside and outside: from the outside, successful ones feel like they should be able
+to do anything, and itâ€™s hard to know what a reasonable request is. From the inside of a
+project, they can feel very resource constrained: largely by time, money, and opportunity
+overload.
+
+**Demanding that a feature be implemented is probably not going to convince the development team to do so**. Imagine
+if somebody knocked on your door and asked you to "stop reading this page right now and come to my house to cook me dinner!". Your first response might very reasonably be "who on earth is this person and why should I spend my time and energy fulfilling his agenda instead of my own?".
+
+**Suggesting** that a feature be implemented is a more effective (and cordial) way to ask for new features, especially if you're prepared to offer some of your own resources (time, funds or both) to help get the feature implemented. Explaining why
+*your* suggestion can benefit others can also help. If the feature benefits you exclusively, it might be harder to convince others to do the work for you.
+
+A feature request can be submitted as issues on the applicable Github repository (e.g.,
+`WebODM <https://github.com/OpenDroneMap/WebODM/issues>`_ or `ODM <https://github.com/OpenDroneMap/ODM/issues>`_
+or similar) or more simply as a discussion topic on `the community forum <https://community.opendronemap.org/>`_.
+Try to start by searching these sources to see if someone else has already brought it up.  Sometimes a feature is already in
+the works, or has at least been discussed.
+
+To request the addition of support for new drone cameras: please share a set of test images on the `datasets channel on the forum <https://community.opendronemap.org/c/datasets/10>`_. Without test images there's not much the developers can do.
+
+And importantly, the trick is to listen: if someone within the project says: "This is a big lift,
+we need MONEY or TIME or SOMEONE TO HELP CODE IT" (or possibly a combination of the three)
+then there are two answers that work really well in response:
+
+    *Ok. I didnâ€™t know it was a big feature request! I hope someone comes along with the necessary resources. As a community member, I would be happy to be an early user and tester!*
+
+or
+
+    *Letâ€™s figure out if we can put together the resources to get this done! Hereâ€™s what I can contribute toward it: â€¦*
+
+We are glad you are excited to see new features added to the project.  Some new features need support,
+and some are easier to implement.  We'll do our best to help you understand where your request falls, and
+we appreciate any support you can provide.
+
 
 How To Contribute
 =================

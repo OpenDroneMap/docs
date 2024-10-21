@@ -56,6 +56,5 @@ The documentation is available in several languages. Some translations are incom
     multispectral
     large
     flying
-    requesting-features
     contributing
     faq
