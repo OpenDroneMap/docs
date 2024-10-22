@@ -1,24 +1,13 @@
 .. large
 
-Splitting Large Datasets
-========================
+Large Datasets
+==============
 
 Starting with ODM version ``0.6.0`` you can split up very large datasets into manageable chunks (called submodels), running the pipeline on each chunk, and then producing merged DEMs, orthophotos and point clouds. The process is referred to as "split-merge".
 
 Why might you use the split-merge pipeline? If you have a very large number of images in your dataset, split-merge will help make the processing more manageable on a large machine (it will require less memory). If you have many machines all connected to the same network you can also process the submodels in parallel, thus allowing for horizontal scaling and processing thousands of images more quickly.
 
 Split-merge works in WebODM out of the box as long as the processing nodes support split-merge, by enabling the ``--split`` option when creating a new task.
-
-Calibrate images
-----------------
-
-Image calibration is recommended (but not required) for large datasets because error propagation due to image distortion could cause a bowl effect on the models. Calibration instructions can be found at 	`Camera Calibration </tutorials/#calibrating-the-camera>`_.
-
-.. figure:: images/msimbasi_bowling.png
-   :alt: image of lens distortion effect on bowling of data
-   :align: center
-
-Bowling effect on point cloud over 13,000+ image dataset collected by World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania.
 
 Local Split-Merge
 -----------------
@@ -52,7 +41,7 @@ ODM can also automatically distribute the processing of each submodel to multipl
    :align: center
 
 Getting Started with Distributed Split-Merge
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The first step is start ClusterODM
 

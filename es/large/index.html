@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Splitting Large Datasets &mdash; documentación de OpenDroneMap - 3.5.4</title>
+  <title>Large Datasets &mdash; documentación de OpenDroneMap - 3.5.4</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -371,8 +371,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Splitting Large Datasets</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#calibrate-images">Calibrar imágenes</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Large Datasets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#local-split-merge">Split-merge local</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#distributed-split-merge">Split-Merge distribuido</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#getting-started-with-distributed-split-merge">Introducción a split-merge distribuido</a></li>
@@ -439,7 +438,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Splitting Large Datasets</li>
+      <li class="breadcrumb-item active">Large Datasets</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/large.rst.txt" rel="nofollow"> Ver código fuente de la página</a>
       </li>
@@ -449,19 +448,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="splitting-large-datasets">
-<h1>Splitting Large Datasets<a class="headerlink" href="#splitting-large-datasets" title="Enlace permanente a este encabezado"></a></h1>
+  <section id="large-datasets">
+<h1>Large Datasets<a class="headerlink" href="#large-datasets" title="Enlace permanente a este encabezado"></a></h1>
 <p>A partir de la versión <code class="docutils literal notranslate"><span class="pre">0.6.0</span></code> de ODM, puede dividir conjuntos de datos muy grandes en fragmentos manejables (llamados submodelos), ejecutar la canalización en cada fragmento y luego producir DEM, ortofotos y nubes de puntos fusionados. El proceso se conoce como «split-merge».</p>
 <p>¿Por qué debería utilizar la canalización split-merge? Si tiene una gran cantidad de imágenes en su conjunto de datos, split-merge ayudará a que el procesamiento sea más manejable en una máquina grande (requerirá menos memoria). Si tiene muchas máquinas conectadas a la misma red, también puede procesar los submodelos en paralelo, lo que permite el escalado horizontal y el procesamiento de miles de imágenes más rápidamente.</p>
 <p>Split-merge funciona en WebODM de forma inmediata siempre que los nodos de procesamiento admitan split-merge, al habilitar la opción <code class="docutils literal notranslate"><span class="pre">--split</span></code> al crear una nueva tarea.</p>
-<section id="calibrate-images">
-<h2>Calibrar imágenes<a class="headerlink" href="#calibrate-images" title="Enlace permanente a este encabezado"></a></h2>
-<p>Image calibration is recommended (but not required) for large datasets because error propagation due to image distortion could cause a bowl effect on the models. Calibration instructions can be found at      <a class="reference external" href="/tutorials/#calibrating-the-camera">Camera Calibration</a>.</p>
-<figure class="align-center">
-<img alt="image of lens distortion effect on bowling of data" src="../_images/msimbasi_bowling.png" />
-</figure>
-<p>Efecto de tazón en la nube de puntos sobre más de 13,000 conjuntos de datos de imágenes recopilados por el Banco Mundial de Tanzania sobre la cuenca de Msimbasi, propensa a inundaciones, Dar es Salaam, Tanzania</p>
-</section>
 <section id="local-split-merge">
 <h2>Split-merge local<a class="headerlink" href="#local-split-merge" title="Enlace permanente a este encabezado"></a></h2>
 <p>¡Es fácil dividir un conjunto de datos en submodelos más manejables y procesar secuencialmente todos los submodelos en la misma máquina! Simplemente use <code class="docutils literal notranslate"><span class="pre">--split</span></code> y <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code> para decidir el número promedio de imágenes por submodelos y la superposición (en metros) entre submodelos respectivamente</p>

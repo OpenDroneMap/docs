@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Memecah Data Besar &mdash; Dokumentasi OpenDroneMap 3.5.4</title>
+  <title>Large Datasets &mdash; Dokumentasi OpenDroneMap 3.5.4</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -371,8 +371,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Memecah Data Besar</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#calibrate-images">Kalibrasi gambar</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Large Datasets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#local-split-merge">Membagi-Menggabungkan Lokal</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#distributed-split-merge">Membagi-Menggabungkan Terdistribusi</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#getting-started-with-distributed-split-merge">Memulai dengan Didistribusikan Membagi-Menggabungkan</a></li>
@@ -439,7 +438,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Memecah Data Besar</li>
+      <li class="breadcrumb-item active">Large Datasets</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/large.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -449,19 +448,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="splitting-large-datasets">
-<h1>Memecah Data Besar<a class="headerlink" href="#splitting-large-datasets" title="Permalink to this heading"></a></h1>
+  <section id="large-datasets">
+<h1>Large Datasets<a class="headerlink" href="#large-datasets" title="Permalink to this heading"></a></h1>
 <p>Starting with ODM version <code class="docutils literal notranslate"><span class="pre">0.6.0</span></code> you can split up very large datasets into manageable chunks (called submodels), running the pipeline on each chunk, and then producing merged DEMs, orthophotos and point clouds. The process is referred to as &quot;split-merge&quot;.</p>
 <p>Why might you use the split-merge pipeline? If you have a very large number of images in your dataset, split-merge will help make the processing more manageable on a large machine (it will require less memory). If you have many machines all connected to the same network you can also process the submodels in parallel, thus allowing for horizontal scaling and processing thousands of images more quickly.</p>
 <p>Split-merge works in WebODM out of the box as long as the processing nodes support split-merge, by enabling the <code class="docutils literal notranslate"><span class="pre">--split</span></code> option when creating a new task.</p>
-<section id="calibrate-images">
-<h2>Kalibrasi gambar<a class="headerlink" href="#calibrate-images" title="Permalink to this heading"></a></h2>
-<p>Image calibration is recommended (but not required) for large datasets because error propagation due to image distortion could cause a bowl effect on the models. Calibration instructions can be found at      <a class="reference external" href="/tutorials/#calibrating-the-camera">Camera Calibration</a>.</p>
-<figure class="align-center">
-<img alt="image of lens distortion effect on bowling of data" src="../_images/msimbasi_bowling.png" />
-</figure>
-<p>Bowling effect on point cloud over 13,000+ image dataset collected by World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania.</p>
-</section>
 <section id="local-split-merge">
 <h2>Membagi-Menggabungkan Lokal<a class="headerlink" href="#local-split-merge" title="Permalink to this heading"></a></h2>
 <p>Splitting a dataset into more manageable submodels and sequentially processing all submodels on the same machine is easy! Just use <code class="docutils literal notranslate"><span class="pre">--split</span></code> and <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code> to decide the the average number of images per submodels and the overlap (in meters) between submodels respectively</p>

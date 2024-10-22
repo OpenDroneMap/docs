@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Splitting Large Datasets &mdash; OpenDroneMap 3.5.4 documentation</title>
+  <title>Large Datasets &mdash; OpenDroneMap 3.5.4 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -371,8 +371,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Splitting Large Datasets</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#calibrate-images">Calibrate images</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Large Datasets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#local-split-merge">Local Split-Merge</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#distributed-split-merge">Distributed Split-Merge</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#getting-started-with-distributed-split-merge">Getting Started with Distributed Split-Merge</a></li>
@@ -439,7 +438,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Splitting Large Datasets</li>
+      <li class="breadcrumb-item active">Large Datasets</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/large.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -449,19 +448,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="splitting-large-datasets">
-<h1>Splitting Large Datasets<a class="headerlink" href="#splitting-large-datasets" title="Permalink to this heading"></a></h1>
+  <section id="large-datasets">
+<h1>Large Datasets<a class="headerlink" href="#large-datasets" title="Permalink to this heading"></a></h1>
 <p>ODM సంస్కరణ `` 0.6.0`` తో ప్రారంభించి, మీరు చాలా పెద్ద డేటాసెట్లను నిర్వహించదగిన భాగాలుగా విభజించవచ్చు (సబ్‌మోడల్స్ అని పిలుస్తారు), ప్రతి భాగం పైప్‌లైన్‌ను నడుపుతుంది, ఆపై విలీనం చేసిన DEM లు, ఆర్థోఫోటోలు మరియు పాయింట్ మేఘాలను ఉత్పత్తి చేస్తుంది. ఈ ప్రక్రియను &quot;స్ప్లిట్-విలీనం&quot; గా సూచిస్తారు.</p>
 <p>మీరు స్ప్లిట్-విలీన పైప్‌లైన్‌ను ఎందుకు ఉపయోగించవచ్చు? మీ డేటాసెట్‌లో మీకు చాలా ఎక్కువ సంఖ్యలో చిత్రాలు ఉంటే, స్ప్లిట్-విలీనం పెద్ద మెషీన్‌లో ప్రాసెసింగ్‌ను మరింత నిర్వహించగలిగేలా చేస్తుంది (దీనికి తక్కువ మెమరీ అవసరం). ఒకే నెట్‌వర్క్‌తో అనుసంధానించబడిన అనేక యంత్రాలు మీకు ఉంటే, మీరు సబ్‌మోడల్‌లను సమాంతరంగా ప్రాసెస్ చేయవచ్చు, తద్వారా క్షితిజ సమాంతర స్కేలింగ్ మరియు వేలాది చిత్రాలను మరింత త్వరగా ప్రాసెస్ చేయడానికి అనుమతిస్తుంది.</p>
 <p>Split-merge works in WebODM out of the box as long as the processing nodes support split-merge, by enabling the <code class="docutils literal notranslate"><span class="pre">--split</span></code> option when creating a new task.</p>
-<section id="calibrate-images">
-<h2>Calibrate images<a class="headerlink" href="#calibrate-images" title="Permalink to this heading"></a></h2>
-<p>Image calibration is recommended (but not required) for large datasets because error propagation due to image distortion could cause a bowl effect on the models. Calibration instructions can be found at      <a class="reference external" href="/tutorials/#calibrating-the-camera">Camera Calibration</a>.</p>
-<figure class="align-center">
-<img alt="image of lens distortion effect on bowling of data" src="../_images/msimbasi_bowling.png" />
-</figure>
-<p>Bowling effect on point cloud over 13,000+ image dataset collected by World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania.</p>
-</section>
 <section id="local-split-merge">
 <h2>Local Split-Merge<a class="headerlink" href="#local-split-merge" title="Permalink to this heading"></a></h2>
 <p>Splitting a dataset into more manageable submodels and sequentially processing all submodels on the same machine is easy! Just use <code class="docutils literal notranslate"><span class="pre">--split</span></code> and <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code> to decide the the average number of images per submodels and the overlap (in meters) between submodels respectively</p>

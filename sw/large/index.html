@@ -4,7 +4,7 @@
   <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Splitting Large Datasets &mdash; OpenDroneMap 3.5.4 documentation</title>
+  <title>Large Datasets &mdash; OpenDroneMap 3.5.4 documentation</title>
       <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
       <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -370,8 +370,7 @@
 </li>
 </ul>
 </li>
-<li class="toctree-l1 current"><a class="current reference internal" href="#">Splitting Large Datasets</a><ul>
-<li class="toctree-l2"><a class="reference internal" href="#calibrate-images">Kurekebisha Picha</a></li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Large Datasets</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#local-split-merge">Split-Merge ya Ndani</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#distributed-split-merge">Kugawanya Split-Merge</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#getting-started-with-distributed-split-merge">Kupata kuanza pamoja na kugawanya Split-Merge</a></li>
@@ -438,7 +437,7 @@
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
       <li><a href="../" class="icon icon-home"></a></li>
-      <li class="breadcrumb-item active">Splitting Large Datasets</li>
+      <li class="breadcrumb-item active">Large Datasets</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/large.rst.txt" rel="nofollow"> View page source</a>
       </li>
@@ -448,19 +447,11 @@
           <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
            <div itemprop="articleBody">
              
-  <section id="splitting-large-datasets">
-<h1>Splitting Large Datasets<a class="headerlink" href="#splitting-large-datasets" title="Permalink to this heading"></a></h1>
+  <section id="large-datasets">
+<h1>Large Datasets<a class="headerlink" href="#large-datasets" title="Permalink to this heading"></a></h1>
 <p>Anza na toleo la ODM <code class="docutils literal notranslate"><span class="pre">0.6.0</span></code> unaweza kugawa group kubwa la data linaloweza kudhibitiwa (liitwalo submodels), kutumia pipeline katika kila kundi, na kisha zalisha DEM itakayounganisha, orthophoto na pointcloud. Mchakato utawekwa kama &quot;split-merge.&quot;</p>
 <p>Kwa nini unaweza kutumia split-merge pipeline? Ikiwa una idadi ya picha nyingi kwenye dataseti yako, split-merge itasaidia mchakato kuongozwa vizuri katika mashine kubwa (itahitaji nafasi ndogo). Ikiwa una mashine nyingi zilizounganishwa katika mtandao mmoja pia unaweza kuchakata submodel kwa pamoja, ndivyo itakavyoruhu kuongeza mstari mlalo na kuchakata maelfu ya picha kwa urahisi zaidi.</p>
 <p>Split-merge inafanya kazi ndani ya ODM nje ya boxi ikiwa node zinasaidia split-merge, kwa kuruhusu chaguo la <code class="docutils literal notranslate"><span class="pre">--split</span></code> unapotengeneza njia mpya.</p>
-<section id="calibrate-images">
-<h2>Kurekebisha Picha<a class="headerlink" href="#calibrate-images" title="Permalink to this heading"></a></h2>
-<p>Image calibration is recommended (but not required) for large datasets because error propagation due to image distortion could cause a bowl effect on the models. Calibration instructions can be found at      <a class="reference external" href="/tutorials/#calibrating-the-camera">Camera Calibration</a>.</p>
-<figure class="align-center">
-<img alt="image of lens distortion effect on bowling of data" src="../_images/msimbasi_bowling.png" />
-</figure>
-<p>Madhara ya kubonyea picha juu ya point cloudi kwa kundi kubwa la picha zaidi ya 13,000+ zilizokusanywa na World Bank Tanzania katika maeneo ya mafuriko Msimbasi Basin, Dar es Salaam, Tanzania.</p>
-</section>
 <section id="local-split-merge">
 <h2>Split-Merge ya Ndani<a class="headerlink" href="#local-split-merge" title="Permalink to this heading"></a></h2>
 <p>Mgawio wa kundi data katika submodel, urahisi na katika kuchakata wepesi zaidi ndani ya mashine moja kwa wepesi! Tumia <code class="docutils literal notranslate"><span class="pre">--split</span></code> na <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code> kuchagua nambari ya picha inayotakiwa kwa kila submodel na mpishano (katika meters) baina ya submodel mfululizo</p>
