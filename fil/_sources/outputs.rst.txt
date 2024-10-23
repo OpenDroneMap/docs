@@ -21,7 +21,7 @@ Point Cloud
 ``odm_texturing/odm_textured_model.obj`` -- The textured surface mesh
 ``odm_texturing/odm_textured_model_geo.obj`` -- The georeferenced and textured surface mesh
 
-You can access the point cloud and textured meshes using MeshLab. Open MeshLab, and choose File:Import Mesh and choose your textured mesh from a location similar to the following: ``odm_texturing\odm_textured_model.obj``
+You can access the point cloud and textured meshes using MeshLab. Open MeshLab, and choose ``File:Import Mesh`` and choose your textured mesh from a location similar to the following: ``odm_texturing\odm_textured_model.obj``
 
 .. figure:: images/UR_3D.gif
    :alt: image of OpenDroneMap derived textured mesh
@@ -45,7 +45,7 @@ Orthophoto
 DTM/DSM
 ^^^^^^^
 
-DTM/DSM will only be created if the ``--dtm`` or ``--dsm`` options are used. See `tutorial on elevation models <https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-models>`_ for more options in creating.
+DTM/DSM will only be created if the ``--dtm`` or ``--dsm`` options are used. See `tutorial on elevation models <../tutorials/#creating-digital-elevation-models>`_ for more options in creating.
 
 Data will be stored in:
 

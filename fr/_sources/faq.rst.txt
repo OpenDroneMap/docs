@@ -73,6 +73,6 @@ In addition to user resources, we recommend to also read the following:
 * WebODM documentation: https://docs.webodm.org
 * NodeODM API specification: https://github.com/OpenDroneMap/NodeODM/blob/master/docs/index.adoc
 * Overview of the ODM pipeline: http://community.opendronemap.org/t/where-can-i-find-background-information-on-the-concepts-of-odm/665/2
-* We keep a `section in our forum dedicated to research papers <http://community.opendronemap.org/c/ideas-proposals/research-papers>`_. This is a valuable place where to read more about state of the art research related to structure from motion, multi-view stereo, meshing, texturing, etc. which can be used to improve the software.
+* We keep a `section in our forum dedicated to research papers  <https://community.opendronemap.org/c/learning/research-papers/12>`_. This is a valuable place where to read more about state of the art research related to structure from motion, multi-view stereo, meshing, texturing, etc. which can be used to improve the software.
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/faq.rst>`_!
