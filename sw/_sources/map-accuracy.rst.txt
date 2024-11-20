@@ -269,5 +269,19 @@ When previously mapped sites need revisited, OpenDroneMap can align multiple ver
 
 Animated gif comparing two separately processed, but aligned digital surface models.
 
+-----------------------
+Aligning Large  Datasets
+-----------------------
+
+When attempting to process very large datasets it may very well be the case that one needs to devide a large set of images into smaller more manageable chunks for ease of processing.This process however, may introduce some uncertainty with respect to the alignment of all the processed outputs.To make sure that all point clouds and terrain/suface models are seamlessly alighn in preparation for merging we follow the simple techniques outlined below.   
+
+**Workflow for aligning large  datasets:**
+
+#.Split the full compliment of images into manageable chunks. E.g. If you have flown and collected a total of  1000 images but you know your processor cannot handle all these images at once, you may want to devide these images into four sets of submodels with 250 images each.
+#.Process the first dataset with theDigital Surface Model (DSM) option enabled.
+#.Download the DSM from first dataseta in its raw-tiff format and rename it to 'align.tif'
+#.Load the second dataset together with the align.tif
+#.Process the second dataset (including the align.tif file)
+#.Repeat until all submodels have been processed.    
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/map-accuracy.rst>`_!

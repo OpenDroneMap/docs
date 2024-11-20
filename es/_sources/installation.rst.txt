@@ -101,7 +101,7 @@ Then, only if you are on Windows 10 Home, Windows 8 (any version) or Windows 7 (
 
 If you are on Windows 10 Professional or a newer version, you should install instead:
 
-* Docker for Windows: https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe
+* Docker for Windows:https://docs.docker.com/desktop/install/windows-install/
 
 Please do **NOT** install both docker programs. They are different and will create a mess if they are both installed.
 
