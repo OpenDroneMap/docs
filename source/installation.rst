@@ -8,7 +8,7 @@ This section is excerpted and modified with permission from `OpenDroneMap: The M
 Quickstart
 ----------
 
-Installers for OpenDroneMap are available for purchase from UAV4Geo, and are the easiest way to get started and come with support.
+Installers for OpenDroneMap are available for purchase, and are the easiest way to get started and come with support.
 
 https://opendronemap.org/webodm/download/#installer
 
