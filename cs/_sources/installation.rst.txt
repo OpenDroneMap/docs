@@ -30,7 +30,7 @@ No more than 100-200 images can be processed with the above specifications (the 
 * 100 GB of disk space
 * 16 GB RAM
 
-The above will allow for a few hundred images to be processed without too many issues. A CPU with more cores will allow for faster processing, while a graphics card (GPU) currently has no impact on performance. For processing more images, add more disk space and RAM linearly to the number of images you need to process.
+The above will allow the processing of a few hundred images with minimal issues. A CPU with more cores will allow for faster processing, while a graphics card (GPU) currently has no impact on performance. For processing more images, add more disk space and RAM linearly to the number of images you need to process.
 
 .. csv-table:: Minimum RAM needed for N images
   :header: "Number of images", "RAM or RAM + Swap"
