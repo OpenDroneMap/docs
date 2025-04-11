@@ -41,6 +41,7 @@ Press the "Fork" button at the top of this page.
 ![image](https://user-images.githubusercontent.com/1951843/54656025-77fd0380-4a9a-11e9-82f6-35278ed9ccfc.png)
 
 ## Step 2. Install Git and Python 3
+As there is an issue with python3.13 [(https://github.com/ethereum/s……olidity/issues/15811) with ](https://github.com/ethereum/solidity/issues/15811) python3.12 at most should be used.
 
 ### Linux:
 
