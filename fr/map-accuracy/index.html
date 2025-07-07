@@ -1,24 +1,23 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="fr" >
+<html class="writer-html5" lang="fr" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>High Precision Workflows &mdash; Documentation OpenDroneMap 3.5.4</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>High Precision Workflows &mdash; Documentation OpenDroneMap 3.5.6</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5c6a93cf"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=041d0952"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Recherche" href="../search/" />
@@ -31,14 +30,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../" class="icon icon-home"> OpenDroneMap
+
+          
+          
+          <a href="../" class="icon icon-home">
+            OpenDroneMap
           </a>
-              <div class="version">
-                3.5.4
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
-    <input type="text" name="q" placeholder="Rechercher docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -352,7 +352,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="#image-geolocation-files">Image Geolocation Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#improving-relative-accuracy">Improving relative accuracy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#multi-temporal-datasets">Multi-temporal Datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#multi-temporal-datasets">Multi-temporal Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="#plugin-time-sift">Plugin Time-SIFT</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="#aligning-large-datasets">Aligning Large  Datasets</a></li>
 </ul>
 </li>
@@ -438,7 +441,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a></li>
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">High Precision Workflows</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/map-accuracy.rst.txt" rel="nofollow"> Afficher la source de la page</a>
@@ -450,9 +453,9 @@
            <div itemprop="articleBody">
              
   <section id="high-precision-workflows">
-<h1>High Precision Workflows<a class="headerlink" href="#high-precision-workflows" title="Lien permanent vers cette rubrique"></a></h1>
+<h1>High Precision Workflows<a class="headerlink" href="#high-precision-workflows" title="Lien vers cette rubrique"></a></h1>
 <section id="map-accuracy">
-<h2>Précision de la carte<a class="headerlink" href="#map-accuracy" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>Précision de la carte<a class="headerlink" href="#map-accuracy" title="Lien vers cette rubrique"></a></h2>
 <p>La précision peut être définie comme le degré ou la proximité avec laquelle les informations sur une carte correspondent aux valeurs du monde réel. Par conséquent, lorsque nous parlons d’exactitude, nous parlons de qualité des données et du nombre d’erreurs contenues dans un certain ensemble de données (Pascual 2011).</p>
 <p><strong>Précision relative ou locale</strong></p>
 <p>La précision locale ou relative peut être définie comme le degré auquel les distances entre deux points sur une carte correspondent aux distances réelles entre ces points dans le monde réel.</p>
@@ -470,13 +473,13 @@
 <p><strong>Un niveau de précision pour chaque projet</strong></p>
 <p>Chaque projet a une précision spécifique qui doit être respectée. Par exemple, évaluer l’avancement d’un chantier de construction ou mesurer une zone touchée par un incendie ne nécessite pas l’utilisation de GCP, car une précision absolue n’aura pas d’impact sur le processus de prise de décision. D’autre part, il existe des tâches pour lesquelles la précision est critique, par exemple les évaluations de conformité de projet et l’arpentage des titres fonciers, qui nécessitent une précision relative et absolue plus élevée.</p>
 <section id="what-to-expect">
-<h3>A quoi s’attendre<a class="headerlink" href="#what-to-expect" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>A quoi s’attendre<a class="headerlink" href="#what-to-expect" title="Lien vers cette rubrique"></a></h3>
 <p>En termes généraux, on peut s’attendre à ce que la précision relative soit de l’ordre de 1 à 3 fois la GSD moyenne pour l’ensemble de données. Et quant à la précision absolue, il faut considérer qu’elle dépend de l’unité GPS montée dans le drone mais la précision horizontale d’un GPS standard est généralement de l’ordre de 2 à 6 mètres et la précision verticale entre 3 à 4 fois la précision horizontale.</p>
 <p>Lors de l’utilisation de GCP, la précision absolue peut être améliorée à 2,5 fois GSD pour la précision horizontale et à 4 fois la GSD pour la précision verticale (Madawalagama 2016).</p>
 <p>À un GSD de 1 cm, la précision est comparable à celle du RTK GNSS, et se situe à l’échelle 1:200 selon les normes de précision cartographique NSDI et FGDC dans des conditions sous-optimales (Barry 2013).</p>
 </section>
 <section id="aspects-impacting-map-accuracy">
-<h3>Aspects affectant la précision de la carte<a class="headerlink" href="#aspects-impacting-map-accuracy" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Aspects affectant la précision de la carte<a class="headerlink" href="#aspects-impacting-map-accuracy" title="Lien vers cette rubrique"></a></h3>
 <p><strong>Météo</strong></p>
 <p>Les conditions météorologiques ont un impact direct sur les résultats de la photogrammétrie, il est donc important de prendre en compte la couverture nuageuse, la vitesse du vent, l’humidité, l’altitude du soleil et d’autres facteurs influençant la stabilité du drone et l’éclairage du terrain.</p>
 <p><strong>Caméras</strong></p>
@@ -487,7 +490,7 @@
 <p>La vitesse de vol a un effet particulier dans les caméras équipées d’un obturateur roulant, tandis que celles équipées d’un obturateur global ou mécanique tendent à réduire cet effet. Les drones équipés de systèmes de positionnement RTK sont également affectés par la vitesse, mais en survolant chaque photo prise, vous pouvez obtenir une très bonne précision. Si au contraire vous vous déplacez lors de chaque prise de photo, la précision sera limitée par deux facteurs : la vitesse à laquelle vous vous déplacez multipliée par les incréments de 1 seconde de RTK (Mather 2020).</p>
 </section>
 <section id="references">
-<h3>Références<a class="headerlink" href="#references" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Références<a class="headerlink" href="#references" title="Lien vers cette rubrique"></a></h3>
 <p>Barry, P., &amp; Coakley, R. « Précision de la photogrammétrie UAV par rapport au réseau RTK GPS. » Enquêtes de base. 2013. <a class="reference external" href="http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf">http://uav.ie/PDF/Accuracy_UAV_compare_RTK_GPS.pdf</a> (consulté le 10 13, 2020).</p>
 <p>Déploiement de drones. Comment utiliser les points de contrôle au sol ? : Un guide d’utilisation des points de contrôle au sol avec un logiciel de cartographie par drone. 5 8, 2017. <a class="reference external" href="https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/">https://www.dronedeploy.com/blog/what-are-ground-control-points-gcps/</a> (consulté le 7 9, 2020).</p>
 <p>Madawalagama, S.L., Munasinghe, N., Dampegama, S.D.P.J. et Samarakoon, L. « Cartographie aérienne à faible coût avec qualité grand public. » 37e Conférence asiatique sur la télédétection. Colombo, Sri Lanka, 2016.</p>
@@ -497,21 +500,21 @@
 </section>
 </section>
 <section id="ground-control-points">
-<h2>Ground Control Points<a class="headerlink" href="#ground-control-points" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>Ground Control Points<a class="headerlink" href="#ground-control-points" title="Lien vers cette rubrique"></a></h2>
 <section id="overview">
-<h3>Overview<a class="headerlink" href="#overview" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Overview<a class="headerlink" href="#overview" title="Lien vers cette rubrique"></a></h3>
 <p>Ground control points are useful for correcting distortions in the data and referencing the data to know coordinate systems.</p>
 <p>A Ground Control Point (GCP) is a position measurement made on the ground, typically using a high precision GPS. (Toffanin 2019)</p>
 <p>Ground control points can be set existing structures like pavement corners, lines on a parking lot or contrasting color floor tiles, otherwise can be set using targets placed on the ground.</p>
 <p>Targets can be purchased or build with an ample variety of materials ranging from bucket lids to floor tiles.</p>
 <section id="recommended-practices-for-gcp-setting">
-<h4>Recommended practices for GCP setting<a class="headerlink" href="#recommended-practices-for-gcp-setting" title="Lien permanent vers cette rubrique"></a></h4>
+<h4>Recommended practices for GCP setting<a class="headerlink" href="#recommended-practices-for-gcp-setting" title="Lien vers cette rubrique"></a></h4>
 <p>Keep ground control points visible for all camera locations. Consider the expected ground sampling distance, illumination, vegetation, buildings and all the existing obstacles.</p>
 <p>Procure an evenly horizontal distribution of the GCPs within the project, covering high and low elevations. A minimum of 5 GCP works for most of the jobs, and for larger projects 8 â€“ 10 are sufficient. Locate some points near the corners and others in the center, considering that GCP spacing should be larger than the image footprint so that you canâ€™t see more than one GCP in a single image.</p>
 <p>In order to ensure each GCP are found in at least 5 images, separate the points 10 to 30 meters from the perimeter of the project. This distance is dependent of the overlapping, so increasing overlapping should reduce the required distance from the perimeter.</p>
 </section>
 <section id="gcp-file-format">
-<h4>GCP file format<a class="headerlink" href="#gcp-file-format" title="Lien permanent vers cette rubrique"></a></h4>
+<h4>GCP file format<a class="headerlink" href="#gcp-file-format" title="Lien vers cette rubrique"></a></h4>
 <p>The format of the GCP file is simple.</p>
 <blockquote>
 <div><ul class="simple">
@@ -543,7 +546,7 @@
 </section>
 </section>
 <section id="user-interfaces">
-<h3>User Interfaces<a class="headerlink" href="#user-interfaces" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>User Interfaces<a class="headerlink" href="#user-interfaces" title="Lien vers cette rubrique"></a></h3>
 <p>You can use one of two user interfaces for creating GCP files:</p>
 <blockquote>
 <div><ul class="simple">
@@ -552,7 +555,7 @@
 </ul>
 </div></blockquote>
 <section id="id1">
-<h4>POSM GCPi<a class="headerlink" href="#id1" title="Lien permanent vers cette rubrique"></a></h4>
+<h4>POSM GCPi<a class="headerlink" href="#id1" title="Lien vers cette rubrique"></a></h4>
 <p>The POSM GCPi is loaded by default on WebODM. An example is available at <a class="reference external" href="http://demo.webodm.org/plugins/posm-gcpi/">the WebODM Demo</a>. To use this with known ground control XYZ values, one would do the following:</p>
 <p>Create a GCP list that only includes gcp name (this is the label that will be seen in the GCP interface), x, y, and z, with a header with a proj4 string of your GCPs (make sure they are in a planar coordinate system, such as UTM. It should look something like this:</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="o">+</span><span class="n">proj</span><span class="o">=</span><span class="n">utm</span> <span class="o">+</span><span class="n">zone</span><span class="o">=</span><span class="mi">37</span> <span class="o">+</span><span class="n">south</span> <span class="o">+</span><span class="n">ellps</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">datum</span><span class="o">=</span><span class="n">WGS84</span> <span class="o">+</span><span class="n">units</span><span class="o">=</span><span class="n">m</span> <span class="o">+</span><span class="n">no_defs</span>
@@ -566,7 +569,7 @@
 <p>Then one can load this GCP list into the interface, load the images, and place each of the GCPs in the image.</p>
 </section>
 <section id="id2">
-<h4>GCP Editor Pro<a class="headerlink" href="#id2" title="Lien permanent vers cette rubrique"></a></h4>
+<h4>GCP Editor Pro<a class="headerlink" href="#id2" title="Lien vers cette rubrique"></a></h4>
 <p>This app needs to be installed separately or can be loaded as a WebODM plugin from <a class="reference external" href="https://github.com/uav4geo/GCPEditorPro">https://github.com/uav4geo/GCPEditorPro</a></p>
 <p>Create a CSV file that includes the gcp name, northing, easting and elevation.</p>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">GCP</span> <span class="n">Label</span><span class="p">,</span><span class="n">Northing</span><span class="p">,</span><span class="n">Easting</span><span class="p">,</span><span class="n">Elevation</span>
@@ -580,12 +583,12 @@
 </section>
 </section>
 <section id="id3">
-<h3>Références<a class="headerlink" href="#id3" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Références<a class="headerlink" href="#id3" title="Lien vers cette rubrique"></a></h3>
 <p>Toffanin, Piero. <a class="reference external" href="https://odmbook.com/">Open Drone Map: The Missing Guide.</a> MasseranoLabs LLC, 2019.</p>
 </section>
 </section>
 <section id="image-geolocation-files">
-<h2>Image Geolocation Files<a class="headerlink" href="#image-geolocation-files" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>Image Geolocation Files<a class="headerlink" href="#image-geolocation-files" title="Lien vers cette rubrique"></a></h2>
 <p>By default ODM will use the GPS information embedded in the images, if it is available. Sometimes images do not contain GPS information, or a user wishes to override the information with more accurate data (such as RTK).</p>
 <p>Starting from ODM <code class="docutils literal notranslate"><span class="pre">2.0</span></code> people can supply an image geolocation file (geo) for this purpose.</p>
 <p>The format of the image geolocation file is simple.</p>
@@ -613,13 +616,13 @@
 <p>The <code class="docutils literal notranslate"><span class="pre">geo.txt</span></code> file must be created in the base of your project folder or when using WebODM, uploaded with the raw jpg or tif input files.</p>
 </section>
 <section id="improving-relative-accuracy">
-<h2>Improving relative accuracy<a class="headerlink" href="#improving-relative-accuracy" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>Improving relative accuracy<a class="headerlink" href="#improving-relative-accuracy" title="Lien vers cette rubrique"></a></h2>
 <p>Georeferencing by default is done using GPS (GNSS) or GCPs (if provided).</p>
 <p>Starting from ODM <code class="docutils literal notranslate"><span class="pre">3.0.2</span></code> people can supply a reference alignment file to georeference the program outputs. The reconstruction will be initially performed using GPS/GCPs and will subsequently be aligned to the reference model via a linear scaling/rotation/shift operation.</p>
 <p>If you supply a file called <code class="docutils literal notranslate"><span class="pre">align.laz</span></code>, <code class="docutils literal notranslate"><span class="pre">align.las</span></code> or <code class="docutils literal notranslate"><span class="pre">align.tif</span></code> (single band GeoTIFF DEM) then ODM will automatically detect it and attempt to align outputs to this reference model. If it has another name you can specify using <code class="docutils literal notranslate"><span class="pre">--align</span> <span class="pre">&lt;path&gt;</span></code>.</p>
 <p>The alignment file must be created in the base of your project folder. The base folder is usually where you have stored your images. If you are using WebODM or NodeODM, then upload the align file with your images. If resizing your images in WebODM, use an <code class="docutils literal notranslate"><span class="pre">align.laz</span></code> or <code class="docutils literal notranslate"><span class="pre">align.las</span></code> file instead of a tif.</p>
 <section id="multi-temporal-datasets">
-<h3>Multi-temporal Datasets<a class="headerlink" href="#multi-temporal-datasets" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Multi-temporal Datasets<a class="headerlink" href="#multi-temporal-datasets" title="Lien vers cette rubrique"></a></h3>
 <p>When previously mapped sites need revisited, OpenDroneMap can align multiple versions of a dataset through time by using a prior point cloud or digital elevation model. As the prior point cloud <a class="reference external" href="https://community.opendronemap.org/t/tips-to-increase-same-site-temporal-consistency/22161/7">seems to provide better results</a>, that is the approach we will review here.</p>
 <p><strong>Workflow for multi-temporal datasets:</strong></p>
 <ol class="arabic">
@@ -641,9 +644,78 @@
 <img alt="Animated gif comparing two separately processed, but aligned digital surface models." src="../_images/align_pc.gif" />
 </figure>
 <p>Animated gif comparing two separately processed, but aligned digital surface models.</p>
+<section id="plugin-time-sift">
+<h4>Plugin Time-SIFT<a class="headerlink" href="#plugin-time-sift" title="Lien vers cette rubrique"></a></h4>
+<p>The script at contrib/time-sift in the ODM repository does Time-SIFT processing with ODM. Time-SIFT is a method for multi-temporal analysis without the need to co-registrate the data.</p>
+<blockquote>
+<div><p>D. Feurer, F. Vinatier, Joining multi-epoch archival aerial images in
+a single SfM block allows 3-D change detection with almost
+exclusively image information, ISPRS Journal of Photogrammetry and
+Remote Sensing, Volume 146, 2018, Pages 495-506, ISSN 0924-2716, doi:
+10.1016/j.isprsjprs.2018.10.016
+(<a class="reference external" href="https://doi.org/10.1016/j.isprsjprs.2018.10.016">https://doi.org/10.1016/j.isprsjprs.2018.10.016</a>)</p>
+</div></blockquote>
+<section id="requirements">
+<h5>Requirements<a class="headerlink" href="#requirements" title="Lien vers cette rubrique"></a></h5>
+<ul class="simple">
+<li><p>ODM ! :-)</p></li>
+<li><p>subprocess</p></li>
+<li><p>json</p></li>
+<li><p>os</p></li>
+<li><p>shutil</p></li>
+<li><p>pathlib</p></li>
+<li><p>sys</p></li>
+<li><p>argparse</p></li>
+<li><p>textwrap</p></li>
+</ul>
+</section>
+<section id="usage">
+<h5>Usage<a class="headerlink" href="#usage" title="Lien vers cette rubrique"></a></h5>
+</section>
+<section id="provided-example">
+<h5>Provided example<a class="headerlink" href="#provided-example" title="Lien vers cette rubrique"></a></h5>
+<p>Download or clone <a class="reference external" href="https://forge.inrae.fr/Denis.Feurer/timesift-odm-data-example.git">this repo</a>
+to get example data.</p>
+<p>Then execute</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">python</span> <span class="n">Timesift_odm</span><span class="o">.</span><span class="n">py</span> <span class="n">datasets</span> <span class="o">--</span><span class="n">end</span><span class="o">-</span><span class="k">with</span> <span class="n">odm_filterpoints</span>
+</pre></div>
+</div>
+<p>It should make the Time-SIFT processing on the downloaded example data, stopping after the filtered dense clouds step.</p>
+<p>In the destination dir, you should obtain new directories, <code class="docutils literal notranslate"><span class="pre">0_before</span></code> and <code class="docutils literal notranslate"><span class="pre">1_after</span></code> at the same level as the <code class="docutils literal notranslate"><span class="pre">time-sift-block</span></code> directory. These new directories contain all the results natively co-registered.</p>
+<p>You can then use <a class="reference external" href="https://cloudcompare.org/">CloudCompare</a> to compute distance between the <code class="docutils literal notranslate"><span class="pre">datasets/0_before/odm_filterpoints/point_cloud.ply</span></code> and the <code class="docutils literal notranslate"><span class="pre">datasets/1_after/odm_filterpoints</span> <span class="pre">point_cloud.ply</span></code> and obtain this image showing the difference between the two 3D surfaces. Here, two soil samples were excavated as can be seen on the image below. <img alt="image1" src="https://forge.inrae.fr/Denis.Feurer/timesift-odm-data-example/-/raw/main/Example.png?ref_type=heads" /></p>
+<section id="your-own-data">
+<h6>Your own data<a class="headerlink" href="#your-own-data" title="Lien vers cette rubrique"></a></h6>
+<p>In your dataset directory (usually <code class="docutils literal notranslate"><span class="pre">datasets</span></code>, but you can have chosen another name) you have to prepare a Time-SIFT project directory (default name : <code class="docutils literal notranslate"><span class="pre">time-sift-block</span></code>, <em>can be tuned via a parameter</em>) that contains : * <code class="docutils literal notranslate"><span class="pre">images/</span></code> : a subdirectory with all images of all epochs. This directory name is fixed as it is the one expected by ODM *
+<code class="docutils literal notranslate"><span class="pre">images_epochs.txt</span></code> : a file that has the same format as the file used for the split and merge ODM function. This file name <em>can be tuned via a parameter</em>.</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">images_epochs.txt</span></code> file has two columns, the first column contains image names and the second contains the epoch name as follows</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">DSC_0368</span><span class="o">.</span><span class="n">JPG</span> <span class="mi">0</span><span class="n">_before</span>
+<span class="n">DSC_0369</span><span class="o">.</span><span class="n">JPG</span> <span class="mi">0</span><span class="n">_before</span>
+<span class="n">DSC_0370</span><span class="o">.</span><span class="n">JPG</span> <span class="mi">0</span><span class="n">_before</span>
+<span class="n">DSC_0389</span><span class="o">.</span><span class="n">JPG</span> <span class="mi">1</span><span class="n">_after</span>
+<span class="n">DSC_0390</span><span class="o">.</span><span class="n">JPG</span> <span class="mi">1</span><span class="n">_after</span>
+<span class="n">DSC_0391</span><span class="o">.</span><span class="n">JPG</span> <span class="mi">1</span><span class="n">_after</span>
+</pre></div>
+</div>
+<p>Your directory, before running the script, should look like this :</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$PWD/datasets/
+└── time-sift-block/
+    ├── images/
+    └── images_epochs.txt
+</pre></div>
+</div>
+<p>At the end of the script you obtain a directory by epoch (at the same level as the Time-SIFT project directory). Each directory is processed with images of each epoch and all results are natively co-registered due to the initial sfm step done with all images.</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$PWD/datasets/
+├── 0_before/
+├── 1_after/
+└── time-sift-block/
+</pre></div>
+</div>
+</section>
+</section>
+</section>
 </section>
 <section id="aligning-large-datasets">
-<h3>Aligning Large  Datasets<a class="headerlink" href="#aligning-large-datasets" title="Lien permanent vers cette rubrique"></a></h3>
+<h3>Aligning Large  Datasets<a class="headerlink" href="#aligning-large-datasets" title="Lien vers cette rubrique"></a></h3>
 <p>When attempting to process very large datasets it may very well be the case that one needs to devide a large set of images into smaller more manageable chunks for ease of processing.This process however, may introduce some uncertainty with respect to the alignment of all the processed outputs.To make sure that all point clouds and terrain/suface models are seamlessly alighn in preparation for merging we follow the simple techniques outlined below.</p>
 <p><strong>Workflow for aligning large  datasets:</strong></p>
 <p>#.Split the full compliment of images into manageable chunks. E.g. If you have flown and collected a total of  1000 images but you know your processor cannot handle all these images at once, you may want to devide these images into four sets of submodels with 250 images each.
@@ -668,7 +740,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, OpenDroneMap.</p>
+    <p>&#169; Droits d'auteur 2020, OpenDroneMap.</p>
   </div>
 
   Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un

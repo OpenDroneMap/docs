@@ -1,23 +1,22 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="en" >
+<html class="writer-html5" lang="en" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Large Datasets &mdash; OpenDroneMap 3.5.4 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>Large Datasets &mdash; OpenDroneMap 3.5.6 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=492b34c2"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -30,14 +29,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../" class="icon icon-home"> OpenDroneMap
+
+          
+          
+          <a href="../" class="icon icon-home">
+            OpenDroneMap
           </a>
-              <div class="version">
-                3.5.4
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -351,7 +351,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#image-geolocation-files">Image Geolocation Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#improving-relative-accuracy">Improving relative accuracy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#multi-temporal-datasets">Multi-temporal Datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#multi-temporal-datasets">Multi-temporal Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#plugin-time-sift">Plugin Time-SIFT</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aligning-large-datasets">Aligning Large  Datasets</a></li>
 </ul>
 </li>
@@ -437,7 +440,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a></li>
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Large Datasets</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/large.rst.txt" rel="nofollow"> View page source</a>
@@ -449,12 +452,12 @@
            <div itemprop="articleBody">
              
   <section id="large-datasets">
-<h1>Large Datasets<a class="headerlink" href="#large-datasets" title="Permalink to this heading"></a></h1>
+<h1>Large Datasets<a class="headerlink" href="#large-datasets" title="Link to this heading"></a></h1>
 <p>Starting with ODM version <code class="docutils literal notranslate"><span class="pre">0.6.0</span></code> you can split up very large datasets into manageable chunks (called submodels), running the pipeline on each chunk, and then producing merged DEMs, orthophotos and point clouds. The process is referred to as “split-merge”.</p>
 <p>Why might you use the split-merge pipeline? If you have a very large number of images in your dataset, split-merge will help make the processing more manageable on a large machine (it will require less memory). If you have many machines all connected to the same network you can also process the submodels in parallel, thus allowing for horizontal scaling and processing thousands of images more quickly.</p>
 <p>Split-merge works in WebODM out of the box as long as the processing nodes support split-merge, by enabling the <code class="docutils literal notranslate"><span class="pre">--split</span></code> option when creating a new task.</p>
 <section id="local-split-merge">
-<h2>Local Split-Merge<a class="headerlink" href="#local-split-merge" title="Permalink to this heading"></a></h2>
+<h2>Local Split-Merge<a class="headerlink" href="#local-split-merge" title="Link to this heading"></a></h2>
 <p>Splitting a dataset into more manageable submodels and sequentially processing all submodels on the same machine is easy! Just use <code class="docutils literal notranslate"><span class="pre">--split</span></code> and <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code> to decide the the average number of images per submodels and the overlap (in meters) between submodels respectively</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-ti<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span>/my/project:/datasets/code<span class="w"> </span>opendronemap/odm<span class="w"> </span>--project-path<span class="w"> </span>/datasets<span class="w"> </span>--split<span class="w"> </span><span class="m">400</span><span class="w"> </span>--split-overlap<span class="w"> </span><span class="m">100</span>
 </pre></div>
@@ -471,13 +474,13 @@
 <p>will create 3 submodels. Make sure to pass <code class="docutils literal notranslate"><span class="pre">--split-overlap</span> <span class="pre">0</span></code> if you manually provide a <code class="docutils literal notranslate"><span class="pre">image_groups.txt</span></code> file.</p>
 </section>
 <section id="distributed-split-merge">
-<h2>Distributed Split-Merge<a class="headerlink" href="#distributed-split-merge" title="Permalink to this heading"></a></h2>
+<h2>Distributed Split-Merge<a class="headerlink" href="#distributed-split-merge" title="Link to this heading"></a></h2>
 <p>ODM can also automatically distribute the processing of each submodel to multiple machines via <a class="reference external" href="https://github.com/OpenDroneMap/NodeODM">NodeODM</a> nodes, orchestrated via <a class="reference external" href="https://github.com/OpenDroneMap/ClusterODM">ClusterODM</a>.</p>
 <figure class="align-center">
 <img alt="image of lens distortion effect on bowling of data" src="../_images/clusterodm.png" />
 </figure>
 <section id="getting-started-with-distributed-split-merge">
-<h3>Getting Started with Distributed Split-Merge<a class="headerlink" href="#getting-started-with-distributed-split-merge" title="Permalink to this heading"></a></h3>
+<h3>Getting Started with Distributed Split-Merge<a class="headerlink" href="#getting-started-with-distributed-split-merge" title="Link to this heading"></a></h3>
 <p>The first step is start ClusterODM</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-ti<span class="w"> </span>-p<span class="w"> </span><span class="m">3001</span>:3000<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span>opendronemap/clusterodm
 </pre></div>
@@ -506,7 +509,7 @@ Escape<span class="w"> </span>character<span class="w"> </span>is<span class="w"
 </div>
 </section>
 <section id="understanding-the-cluster">
-<h3>Understanding the Cluster<a class="headerlink" href="#understanding-the-cluster" title="Permalink to this heading"></a></h3>
+<h3>Understanding the Cluster<a class="headerlink" href="#understanding-the-cluster" title="Link to this heading"></a></h3>
 <p>When connected via telnet, it is possible to interrogate what is happening on the cluster. For example, we can use the command HELP to find out available commands</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># HELP</span>
 NODE<span class="w"> </span>ADD<span class="w"> </span>&lt;hostname&gt;<span class="w"> </span>&lt;port&gt;<span class="w"> </span><span class="o">[</span>token<span class="o">]</span><span class="w"> </span>-<span class="w"> </span>Add<span class="w"> </span>new<span class="w"> </span>node
@@ -542,7 +545,7 @@ OK
 </div>
 </section>
 <section id="accessing-the-logs">
-<h3>Accessing the Logs<a class="headerlink" href="#accessing-the-logs" title="Permalink to this heading"></a></h3>
+<h3>Accessing the Logs<a class="headerlink" href="#accessing-the-logs" title="Link to this heading"></a></h3>
 <p>While a process is running, it is also possible to list the tasks, and view the task output</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># TASK LIST</span>
 <span class="c1"># TASK OUTPUT &lt;taskId&gt; [lines]</span>
@@ -550,7 +553,7 @@ OK
 </div>
 </section>
 <section id="autoscaling-clusterodm">
-<h3>Autoscaling ClusterODM<a class="headerlink" href="#autoscaling-clusterodm" title="Permalink to this heading"></a></h3>
+<h3>Autoscaling ClusterODM<a class="headerlink" href="#autoscaling-clusterodm" title="Link to this heading"></a></h3>
 <p>ClusterODM also includes the option to autoscale on multiple platforms, including, to date, Amazon and Digital Ocean. This allows users to reduce costs associated with always-on instances as well as being able to scale processing based on demand.</p>
 <p>To setup autoscaling you must:</p>
 <ul class="simple">
@@ -588,15 +591,15 @@ info:<span class="w"> </span>Found<span class="w"> </span>docker-machine<span cl
 </section>
 </section>
 <section id="limitations">
-<h2>Limitations<a class="headerlink" href="#limitations" title="Permalink to this heading"></a></h2>
+<h2>Limitations<a class="headerlink" href="#limitations" title="Link to this heading"></a></h2>
 <p>The 3D textured meshes are currently not being merged as part of the workflow (only point clouds, DEMs and orthophotos are).</p>
 <p>GCPs are fully supported, however, there needs to be at least 3 GCP points on each submodel for the georeferencing to take place. If a submodel has fewer than 3 GCPs, a combination of the remaining GCPs + EXIF data will be used instead (which is going to be less accurate). We recommend using the <code class="docutils literal notranslate"><span class="pre">image_groups.txt</span></code> file to accurately control the submodel split when using GCPs.</p>
 </section>
 <section id="estimating-data-collection-effort">
-<h2>Estimating data collection effort<a class="headerlink" href="#estimating-data-collection-effort" title="Permalink to this heading"></a></h2>
+<h2>Estimating data collection effort<a class="headerlink" href="#estimating-data-collection-effort" title="Link to this heading"></a></h2>
 <p>Larger datasets can be collected with specialized fix wing UAVs, vertical takeoff and landing (VTOL) UAVs, and collected quite efficiently under certain conditions. In many instances, however, we are constrained to doing data collection efforts with commodity quadcopters. In these cases, a common question is the data collection time under ideal conditions with commodity equipment.</p>
 <section id="data-collection-effort-full-3d">
-<h3>Data collection effort, full 3D<a class="headerlink" href="#data-collection-effort-full-3d" title="Permalink to this heading"></a></h3>
+<h3>Data collection effort, full 3D<a class="headerlink" href="#data-collection-effort-full-3d" title="Link to this heading"></a></h3>
 <p>For best in class results with full 3D reconstruction and 5cm resolution, it is feasible to collect 1-2km<sup>2</sup> per person, per day. This requires the following set of flights:</p>
 <ul class="simple">
 <li><p>60% overlap nadir flight</p></li>
@@ -605,7 +608,7 @@ info:<span class="w"> </span>Found<span class="w"> </span>docker-machine<span cl
 <p>The 45-degree cross-grid flight provides the basis for a fully tied together model, while the nadir flights provide the necessary texture for orthophoto texturing. The lower overlap  meets the minimum requirement for orthophoto products as facilitated by by feature matching from the much higher overlap cross-grid.</p>
 </section>
 <section id="data-collection-effort-2d-and-2-5d-products">
-<h3>Data collection effort, 2D and 2.5D products<a class="headerlink" href="#data-collection-effort-2d-and-2-5d-products" title="Permalink to this heading"></a></h3>
+<h3>Data collection effort, 2D and 2.5D products<a class="headerlink" href="#data-collection-effort-2d-and-2-5d-products" title="Link to this heading"></a></h3>
 <p>For best in class results 2D and 2.5D products and 5cm resolution, it is feasible to collect 2-4km<sup>2</sup> per person, per day. This requires the following set of flights:</p>
 <ul class="simple">
 <li><p>70-80% overlap slightly off-nadir (5-10 degree off nadir)</p></li>
@@ -615,7 +618,7 @@ info:<span class="w"> </span>Found<span class="w"> </span>docker-machine<span cl
 </section>
 </section>
 <section id="acknowledgments">
-<h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Permalink to this heading"></a></h2>
+<h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Link to this heading"></a></h2>
 <p>Huge props to Pau and the folks at Mapillary for their amazing contributions to OpenDroneMap through their OpenSfM code, which is a key component of the split-merge pipeline. We look forward to further pushing the limits of OpenDroneMap and seeing how big a dataset we can process.</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst">this page</a>!</p>
 </section>

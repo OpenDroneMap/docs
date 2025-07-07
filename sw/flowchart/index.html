@@ -1,40 +1,59 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="sw" >
+<html class="writer-html5" lang="sw" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Flowchart with options &mdash; OpenDroneMap 3.5.4 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>Flowchart with options &mdash; OpenDroneMap 3.5.6 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="https://unpkg.com/mermaid@10.9.1/dist/mermaid.min.js"></script>
-        <script>mermaid.initialize({startOnLoad:true});</script>
-        <script src="https://unpkg.com/d3/dist/d3.min.js"></script>
-        <script>
-                window.addEventListener("load", function () {
-                  var svgs = d3.selectAll(".mermaid#id-7adf7ecd-f183-44bb-b7b2-fdffa6d1b2af svg");
-                  svgs.each(function() {
-                    var svg = d3.select(this);
-                    svg.html("<g>" + svg.html() + "</g>");
-                    var inner = svg.select("g");
-                    var zoom = d3.zoom().on("zoom", function(event) {
-                      inner.attr("transform", event.transform);
-                    });
-                    svg.call(zoom);
-                  });
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=271eb3bd"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs"></script>
+      <script type="module" src="https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs"></script>
+      <script type="module">import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs";import elkLayouts from "https://cdn.jsdelivr.net/npm/@mermaid-js/layout-elk@0.1.4/dist/mermaid-layout-elk.esm.min.mjs";mermaid.registerLayoutLoaders(elkLayouts);mermaid.initialize({startOnLoad:false});</script>
+      <script src="https://cdn.jsdelivr.net/npm/d3@7.9.0/dist/d3.min.js"></script>
+      <script type="module">
+import mermaid from "https://cdn.jsdelivr.net/npm/mermaid@10.9.1/dist/mermaid.esm.min.mjs";
+const load = async () => {
+    await mermaid.run();
+    const all_mermaids = document.querySelectorAll(".mermaid");
+    const mermaids_to_add_zoom = 1 === -1 ? all_mermaids.length : 1;
+    const mermaids_processed = document.querySelectorAll(".mermaid[data-processed='true']");
+    if(mermaids_to_add_zoom > 0) {
+        var svgs = d3.selectAll(".mermaid[data-zoom-id=id-6c2c739e-9409-41f9-98bd-4a9b2604984e] svg");
+        if(all_mermaids.length !== mermaids_processed.length) {
+            // try again in a sec, wait for mermaids to load
+            setTimeout(load, 200);
+            return;
+        } else if(svgs.size() !== mermaids_to_add_zoom) {
+            // try again in a sec, wait for mermaids to load
+            setTimeout(load, 200);
+            return;
+        } else {
+            svgs.each(function() {
+                var svg = d3.select(this);
+                svg.html("<g class='wrapper'>" + svg.html() + "</g>");
+                var inner = svg.select("g");
+                var zoom = d3.zoom().on("zoom", function(event) {
+                    inner.attr("transform", event.transform);
                 });
-                </script>
+                svg.call(zoom);
+            });
+        }
+    }
+};
+
+window.addEventListener("load", load);
+</script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -47,14 +66,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../" class="icon icon-home"> OpenDroneMap
+
+          
+          
+          <a href="../" class="icon icon-home">
+            OpenDroneMap
           </a>
-              <div class="version">
-                3.5.4
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -368,7 +388,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#image-geolocation-files">Image Geolocation Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#improving-relative-accuracy">Improving relative accuracy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#multi-temporal-datasets">Multi-temporal Datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#multi-temporal-datasets">Multi-temporal Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#plugin-time-sift">Plugin Time-SIFT</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aligning-large-datasets">Aligning Large  Datasets</a></li>
 </ul>
 </li>
@@ -454,7 +477,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a></li>
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Flowchart with options</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/flowchart.rst.txt" rel="nofollow"> View page source</a>
@@ -466,9 +489,9 @@
            <div itemprop="articleBody">
              
   <section id="flowchart-with-options">
-<h1>Flowchart with options<a class="headerlink" href="#flowchart-with-options" title="Permalink to this heading"></a></h1>
-<div id="id-7adf7ecd-f183-44bb-b7b2-fdffa6d1b2af" class="mermaid">
-             flowchart  TB
+<h1>Flowchart with options<a class="headerlink" href="#flowchart-with-options" title="Link to this heading"></a></h1>
+<pre data-zoom-id="id-6c2c739e-9409-41f9-98bd-4a9b2604984e" class="mermaid">
+         flowchart  TB
 
 
 
@@ -728,8 +751,7 @@
 
          classDef imagesstyle fill:#64ff0c,rx:10,ry:10,stroke:#333,stroke-width:2px;
          class images imagesstyle
-        </div>
-        </section>
+    </pre></section>
 
 
            </div>

@@ -1,24 +1,23 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="cs" >
+<html class="writer-html5" lang="cs" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Instalace a spuštění &mdash; Dokumentace pro OpenDroneMap 3.5.4</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>Instalace a spuštění &mdash; Dokumentace pro OpenDroneMap 3.5.6</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=0a63c74e"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=0f3dec7d"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Rejstřík" href="../genindex/" />
     <link rel="search" title="Vyhledávání" href="../search/" />
@@ -31,14 +30,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../" class="icon icon-home"> OpenDroneMap
+
+          
+          
+          <a href="../" class="icon icon-home">
+            OpenDroneMap
           </a>
-              <div class="version">
-                3.5.4
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -352,7 +352,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#image-geolocation-files">Image Geolocation Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#improving-relative-accuracy">Improving relative accuracy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#multi-temporal-datasets">Multi-temporal Datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#multi-temporal-datasets">Multi-temporal Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#plugin-time-sift">Plugin Time-SIFT</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aligning-large-datasets">Aligning Large  Datasets</a></li>
 </ul>
 </li>
@@ -438,7 +441,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a></li>
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Instalace a spuštění</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/installation.rst.txt" rel="nofollow"> View page source</a>
@@ -450,16 +453,16 @@
            <div itemprop="articleBody">
              
   <section id="installation-and-getting-started">
-<h1>Instalace a spuštění<a class="headerlink" href="#installation-and-getting-started" title="Permalink to this heading"></a></h1>
+<h1>Instalace a spuštění<a class="headerlink" href="#installation-and-getting-started" title="Link to this heading"></a></h1>
 <p>Tato část je převzata a upravena se svolením z <a class="reference external" href="https://odmbook.com">OpenDroneMap: The Missing Guide</a>, autor Piero Toffanin.</p>
 <section id="quickstart">
-<h2>Quickstart<a class="headerlink" href="#quickstart" title="Permalink to this heading"></a></h2>
+<h2>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading"></a></h2>
 <p>Installers for OpenDroneMap are available for purchase, and are the easiest way to get started and come with support.</p>
 <p><a class="reference external" href="https://opendronemap.org/webodm/download/#installer">https://opendronemap.org/webodm/download/#installer</a></p>
 <p>That said, OpenDroneMap is a free and open source ecoystem. Community support is available for those looking to install themselves and directions follow:</p>
 </section>
 <section id="hardware-recommendations">
-<h2>Doporučení k hardwaru<a class="headerlink" href="#hardware-recommendations" title="Permalink to this heading"></a></h2>
+<h2>Doporučení k hardwaru<a class="headerlink" href="#hardware-recommendations" title="Link to this heading"></a></h2>
 <p>Minimální požadavky pro spuštění softwaru jsou:</p>
 <ul class="simple">
 <li><p>64bitový procesor vyrobený v roce 2010 nebo později</p></li>
@@ -474,11 +477,7 @@
 </ul>
 <p>The above will allow the processing of a few hundred images with minimal issues. A CPU with more cores will allow for faster processing, while a graphics card (GPU) currently has no impact on performance. For processing more images, add more disk space and RAM linearly to the number of images you need to process.</p>
 <table class="docutils align-default" id="id4">
-<caption><span class="caption-text">Minimum RAM needed for N images</span><a class="headerlink" href="#id4" title="Permalink k této tabulce"></a></caption>
-<colgroup>
-<col style="width: 50%" />
-<col style="width: 50%" />
-</colgroup>
+<caption><span class="caption-text">Minimum RAM needed for N images</span><a class="headerlink" href="#id4" title="Link to this table"></a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Number of images</p></th>
 <th class="head"><p>RAM or RAM + Swap</p></th>
@@ -510,13 +509,13 @@
 </table>
 </section>
 <section id="installation">
-<span id="docker-installation"></span><h2>Instalace<a class="headerlink" href="#installation" title="Permalink to this heading"></a></h2>
+<span id="docker-installation"></span><h2>Instalace<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
 <p>Pro spuštění ODM doporučujeme používat <a class="reference external" href="https://www.docker.com">docker</a>, ať už používáte Windows, MacOS nebo Linux.</p>
 <section id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Permalink to this heading"></a></h3>
+<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h3>
 <p>Pro spuštění OpenDroneMap potřebujete alespoň Windows 7. Předchozí verze systému Windows nejsou podporovány.</p>
 <section id="step-1-check-virtualization-support">
-<h4>Krok 1. Zkontrolujte podporu virtualizace<a class="headerlink" href="#step-1-check-virtualization-support" title="Permalink to this heading"></a></h4>
+<h4>Krok 1. Zkontrolujte podporu virtualizace<a class="headerlink" href="#step-1-check-virtualization-support" title="Link to this heading"></a></h4>
 <p>Docker vyžaduje od procesoru funkci zvanou virtualizace, která mu umožňuje spouštět virtuální počítače (VM). Ujistěte se, že ji máte povolenou! Někdy je tato funkce vypnutá. Chcete-li to zkontrolovat, můžete v systému Windows 8 nebo vyšším otevřít <strong>Správce úloh</strong> (stiskněte klávesy CTRL+SHIFT+ESC) a přepnout na kartu <strong>Výkon</strong>.</p>
 <figure class="align-center">
 <img alt="Obrázek kontroly virtualizace v systému Windows 8 nebo vyšším" src="../_images/virtualizationcheck.png" />
@@ -530,7 +529,7 @@
 <p><em>Obvyklé klávesy, které je třeba stisknout při spuštění počítače pro přístup ke spouštěcí nabídce různých výrobců počítačů</em></p>
 </section>
 <section id="step-2-install-requirements">
-<h4>Krok 2. Požadavky na instalaci<a class="headerlink" href="#step-2-install-requirements" title="Permalink to this heading"></a></h4>
+<h4>Krok 2. Požadavky na instalaci<a class="headerlink" href="#step-2-install-requirements" title="Link to this heading"></a></h4>
 <p>Nejprve je třeba nainstalovat:</p>
 <ul class="simple">
 <li><p>Git: <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p></li>
@@ -553,7 +552,7 @@
 <p>Po instalaci nástroje Docker jej spusťte z ikony na ploše, která byla vytvořena při instalaci (<strong>Docker Quickstart</strong> v případě Docker Toolbox, <strong>Docker for Windows</strong> pro Docker for Windows). Je to důležité, tento krok nevynechávejte. Pokud se objeví chyby, postupujte podle pokynů na obrazovce a opravte je.</p>
 </section>
 <section id="step-3-check-memory-and-cpu-allocation">
-<h4>Krok 3. Zkontrolujte přidělení paměti a procesoru<a class="headerlink" href="#step-3-check-memory-and-cpu-allocation" title="Permalink to this heading"></a></h4>
+<h4>Krok 3. Zkontrolujte přidělení paměti a procesoru<a class="headerlink" href="#step-3-check-memory-and-cpu-allocation" title="Link to this heading"></a></h4>
 <p>Docker v systému Windows funguje tak, že na pozadí běží virtuální počítač (virtuální počítač si představte jako „emulátor počítače“). Tento virtuální počítač má přiděleno určité množství paměti a WebODM může využívat pouze tolik paměti, kolik mu bylo přiděleno.</p>
 <p>Pokud jste nainstalovali Docker Toolbox (pokud jste místo toho nainstalovali Docker pro Windows, viz níže):</p>
 <ol class="arabic simple">
@@ -584,7 +583,7 @@
 <p><em>Krok 3 a 4 nastavení Dockeru</em></p>
 </section>
 <section id="step-4-download-webodm">
-<h4>Krok 4. Stáhněte si WebODM<a class="headerlink" href="#step-4-download-webodm" title="Permalink to this heading"></a></h4>
+<h4>Krok 4. Stáhněte si WebODM<a class="headerlink" href="#step-4-download-webodm" title="Link to this heading"></a></h4>
 <p>Otevřete program <strong>Git Gui</strong>, který je nainstalován se systémem Git. Odtud:</p>
 <ul class="simple">
 <li><p>Po otevření nástroje Git Gui klikněte na možnost „Klonovat existující úložiště“.</p></li>
@@ -604,7 +603,7 @@
 <p>Přejděte do nabídky <strong>Úložiště</strong> a klikněte na tlačítko <strong>Vytvořit ikonu na ploše</strong>. To vám umožní se v budoucnu k této aplikaci snadno vracet.</p>
 </section>
 <section id="step-4-launch-webodm">
-<h4>Krok 4. Spusťte WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Permalink to this heading"></a></h4>
+<h4>Krok 4. Spusťte WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Link to this heading"></a></h4>
 <p>V prostředí Git Gui přejděte do nabídky <strong>Úložiště</strong> a klikněte na položku <strong>Git Bash</strong>. V terminálu příkazového řádku zadejte:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>start<span class="w"> </span><span class="p">&amp;</span>
 </pre></div>
@@ -629,10 +628,10 @@
 </section>
 </section>
 <section id="macos">
-<h3>macOS<a class="headerlink" href="#macos" title="Permalink to this heading"></a></h3>
+<h3>macOS<a class="headerlink" href="#macos" title="Link to this heading"></a></h3>
 <p>Na většině moderních počítačů Mac (po roce 2010) se systémem macOS Sierra 10.12 nebo vyšším lze OpenDroneMap spustit pomocí dockeru, pokud je podporována hardwarová virtualizace (viz níže).</p>
 <section id="id1">
-<h4>Krok 1. Zkontrolujte podporu virtualizace<a class="headerlink" href="#id1" title="Permalink to this heading"></a></h4>
+<h4>Krok 1. Zkontrolujte podporu virtualizace<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
 <p>Otevřete okno Terminálu a napište:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sysctl<span class="w"> </span>kern.hv_support
 </pre></div>
@@ -645,7 +644,7 @@
 <p>Pokud je výsledkem  <em>kern.hv_support: 0</em>, To bohužel znamená, že váš Mac je příliš starý na spuštění OpenDroneMap :(.</p>
 </section>
 <section id="id2">
-<h4>Krok 2. Požadavky na instalaci<a class="headerlink" href="#id2" title="Permalink to this heading"></a></h4>
+<h4>Krok 2. Požadavky na instalaci<a class="headerlink" href="#id2" title="Link to this heading"></a></h4>
 <p>Je třeba nainstalovat pouze dva programy:</p>
 <ol class="arabic simple">
 <li><p>Docker: <a class="reference external" href="https://download.docker.com/mac/stable/Docker.dmg">https://download.docker.com/mac/stable/Docker.dmg</a></p></li>
@@ -675,7 +674,7 @@
 <p>Pokud se zobrazí hlášení „bash: git: command not found“, zkuste restartovat aplikaci <strong>Terminal</strong> a překontrolujte, zda během instalace nedošlo k chybě.</p>
 </section>
 <section id="id3">
-<h4>Krok 3. Zkontrolujte přidělení paměti a procesoru<a class="headerlink" href="#id3" title="Permalink to this heading"></a></h4>
+<h4>Krok 3. Zkontrolujte přidělení paměti a procesoru<a class="headerlink" href="#id3" title="Link to this heading"></a></h4>
 <p>Docker v systému macOS funguje tak, že na pozadí běží virtuální počítač (představte si ho jako „emulátor počítače“). Tento virtuální počítač má přiděleno určité množství paměti a WebODM může využívat pouze tolik paměti, kolik mu bylo přiděleno.</p>
 <ol class="arabic simple">
 <li><p>Klikněte pravým tlačítkem myši na ikonu velryby na hlavním panelu a klikněte na položku <strong>Předvolby</strong>…</p></li>
@@ -689,7 +688,7 @@
 <p><em>Pokročilé nastavení Dockeru</em></p>
 </section>
 <section id="step-4-download-and-launch-webodm">
-<h4>Krok 4. Stažení a spuštění WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Permalink to this heading"></a></h4>
+<h4>Krok 4. Stažení a spuštění WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Link to this heading"></a></h4>
 <p>V <strong>Terminálu</strong> napište:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/OpenDroneMap/WebODM
 $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>WebODM
@@ -700,10 +699,10 @@ $<span class="w"> </span>./webodm.sh<span class="w"> </span>start
 </section>
 </section>
 <section id="linux">
-<h3>Linux<a class="headerlink" href="#linux" title="Permalink to this heading"></a></h3>
+<h3>Linux<a class="headerlink" href="#linux" title="Link to this heading"></a></h3>
 <p>OpenDroneMap lze spustit na libovolné distribuci Linuxu, která podporuje docker. Podle webových stránek s dokumentací <a class="reference external" href="https://docs.docker.com/install/">dockeru</a> jsou oficiálně podporovanými distribucemi CentOS, Debian, Ubuntu a Fedora, pro ostatní jsou k dispozici statické binární soubory. Pokud si musíte vybrat distribuci výhradně pro spuštění OpenDroneMap, doporučuje se Ubuntu.</p>
 <section id="step-1-install-requirements">
-<h4>Krok 1. Instalace požadavků<a class="headerlink" href="#step-1-install-requirements" title="Permalink to this heading"></a></h4>
+<h4>Krok 1. Instalace požadavků<a class="headerlink" href="#step-1-install-requirements" title="Link to this heading"></a></h4>
 <p>Je třeba nainstalovat čtyři programy:</p>
 <ol class="arabic simple">
 <li><p>Docker</p></li>
@@ -713,7 +712,7 @@ $<span class="w"> </span>./webodm.sh<span class="w"> </span>start
 </ol>
 <p>Nemůžeme popsat instalační proces pro všechny distribuce Linuxu, takže se omezíme na ty, které jsou oficiálně podporovány dockerem. Ve všech případech jde jen o otevření terminálového příkazu a zadání několika příkazů.</p>
 <section id="install-on-ubuntu-debian">
-<h5>Instalace na Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Permalink to this heading"></a></h5>
+<h5>Instalace na Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Link to this heading"></a></h5>
 <p>Příkazy k zadání:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
 $<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
@@ -723,7 +722,7 @@ $<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>
 </div>
 </section>
 <section id="install-on-centos-rhel">
-<h5>Instalace na CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Permalink to this heading"></a></h5>
+<h5>Instalace na CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Link to this heading"></a></h5>
 <p>Příkazy k zadání:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
 $<span class="w"> </span>sh<span class="w"> </span>get-docker.sh
@@ -732,7 +731,7 @@ $<span class="w"> </span>sudo<span class="w"> </span>yum<span class="w"> </span>
 </div>
 </section>
 <section id="install-on-fedora">
-<h5>Instalace v systému Fedora<a class="headerlink" href="#install-on-fedora" title="Permalink to this heading"></a></h5>
+<h5>Instalace v systému Fedora<a class="headerlink" href="#install-on-fedora" title="Link to this heading"></a></h5>
 <p>Příkazy k zadání:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
 $<span class="w"> </span>sh<span class="w"> </span>get-docker.sh
@@ -741,7 +740,7 @@ $<span class="w"> </span>sudo<span class="w"> </span>dnf<span class="w"> </span>
 </div>
 </section>
 <section id="install-on-arch">
-<h5>Instalace na Arch<a class="headerlink" href="#install-on-arch" title="Permalink to this heading"></a></h5>
+<h5>Instalace na Arch<a class="headerlink" href="#install-on-arch" title="Link to this heading"></a></h5>
 <p>Příkazy k zadání:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>pacman<span class="w"> </span>-Sy<span class="w"> </span>docker<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>python-pip
 </pre></div>
@@ -749,7 +748,7 @@ $<span class="w"> </span>sudo<span class="w"> </span>dnf<span class="w"> </span>
 </section>
 </section>
 <section id="step-2-check-additional-requirements">
-<h4>Krok 2. Zkontrolujte další požadavky<a class="headerlink" href="#step-2-check-additional-requirements" title="Permalink to this heading"></a></h4>
+<h4>Krok 2. Zkontrolujte další požadavky<a class="headerlink" href="#step-2-check-additional-requirements" title="Link to this heading"></a></h4>
 <p>Kromě tří výše uvedených programů je zapotřebí také skript dockercompose. Někdy je již nainstalován spolu s dockerem, ale někdy ne. Chcete-li ověřit, zda je nainstalován, zkuste zadat následující příkaz:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>--version
 </pre></div>
@@ -760,7 +759,7 @@ $<span class="w"> </span>sudo<span class="w"> </span>dnf<span class="w"> </span>
 </div>
 </section>
 <section id="step-3-download-and-launch-webodm">
-<h4>Krok 3. Stažení a spuštění WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Permalink to this heading"></a></h4>
+<h4>Krok 3. Stažení a spuštění WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Link to this heading"></a></h4>
 <p>Z terminálu typu:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/OpenDroneMap/WebODM
 $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>WebODM
@@ -772,7 +771,7 @@ $<span class="w"> </span>./webodm.sh<span class="w"> </span>start
 </section>
 </section>
 <section id="basic-commands-and-troubleshooting">
-<h2>Základní příkazy a řešení potíží<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Permalink to this heading"></a></h2>
+<h2>Základní příkazy a řešení potíží<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Link to this heading"></a></h2>
 <p>Skvělé na používání dockeru je, že 99 % úloh, které kdy budete potřebovat provést při používání WebODM, lze provést pomocí skriptu ./webodm.sh. S jednou z nich jste se již setkali:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>start
 </pre></div>
@@ -805,7 +804,7 @@ $<span class="w"> </span>./webodm.sh<span class="w"> </span>--help
 <p><a class="reference external" href="https://community.opendronemap.org">Komunitní fórum</a> je skvělým místem, kde můžete požádat o pomoc, pokud se zaseknete při některém z kroků instalace, a pro obecné otázky týkající se používání skriptu ./webodm.sh.</p>
 </section>
 <section id="hello-webodm">
-<h2>Dobrý den, WebODM!<a class="headerlink" href="#hello-webodm" title="Permalink to this heading"></a></h2>
+<h2>Dobrý den, WebODM!<a class="headerlink" href="#hello-webodm" title="Link to this heading"></a></h2>
 <p>Po spuštění souboru ./webodm.sh start a otevření WebODM v prohlížeči se zobrazí uvítací zpráva a budete vyzváni k vytvoření prvního uživatele. Věnujte nějaký čas seznámení s webovým rozhraním a prozkoumejte jeho různé nabídky.</p>
 <figure class="align-center">
 <img alt="Snímek obrazovky ovládacího panelu WebODM" src="../_images/webodmdashboard.png" />
@@ -817,7 +816,7 @@ $<span class="w"> </span>./webodm.sh<span class="w"> </span>--help
 <img alt="Obrázek oslavného tance" src="../_images/congratulations.png" />
 </figure>
 <section id="running-on-more-than-one-machine">
-<h3>Spuštění na více než jednom počítači<a class="headerlink" href="#running-on-more-than-one-machine" title="Permalink to this heading"></a></h3>
+<h3>Spuštění na více než jednom počítači<a class="headerlink" href="#running-on-more-than-one-machine" title="Link to this heading"></a></h3>
 <p><strong>Případně:</strong> Pokud máte jiný počítač, můžete proces instalace zopakovat (nainstalovat docker, git, python atd.) a spustit nový uzel NodeODM zadáním v okně Terminal/Git Bash:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>-p<span class="w"> </span><span class="m">3000</span>:3000<span class="w"> </span>opendronemap/nodeodm<span class="w"> </span>-q<span class="w"> </span><span class="m">1</span><span class="w"> </span>--token<span class="w"> </span>secret
 </pre></div>

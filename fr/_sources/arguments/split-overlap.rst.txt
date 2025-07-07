@@ -10,7 +10,7 @@ split-overlap
 
 **Options:** *<positive integer>*
 
-Radius of the overlap between submodels. After grouping images into clusters, images that are closer than this radius to a cluster are added to the cluster. This is done to ensure that neighboring submodels overlap. Default: ``150``
+Radius of the overlap between submodels in meters. After grouping images into clusters, images that are closer than this radius to a cluster are added to the cluster. This is done to ensure that neighboring submodels overlap.  All images need GPS information. Default: ``150``
 
 
 

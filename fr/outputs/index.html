@@ -1,24 +1,23 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="fr" >
+<html class="writer-html5" lang="fr" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Sorties OpenDroneMap &mdash; Documentation OpenDroneMap 3.5.4</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>Sorties OpenDroneMap &mdash; Documentation OpenDroneMap 3.5.6</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
-        <script src="../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=5c6a93cf"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/translations.js?v=041d0952"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Recherche" href="../search/" />
@@ -31,14 +30,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../" class="icon icon-home"> OpenDroneMap
+
+          
+          
+          <a href="../" class="icon icon-home">
+            OpenDroneMap
           </a>
-              <div class="version">
-                3.5.4
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
-    <input type="text" name="q" placeholder="Rechercher docs" />
+    <input type="text" name="q" placeholder="Rechercher docs" aria-label="Rechercher docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -352,7 +352,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#image-geolocation-files">Image Geolocation Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#improving-relative-accuracy">Improving relative accuracy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#multi-temporal-datasets">Multi-temporal Datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#multi-temporal-datasets">Multi-temporal Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#plugin-time-sift">Plugin Time-SIFT</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aligning-large-datasets">Aligning Large  Datasets</a></li>
 </ul>
 </li>
@@ -438,7 +441,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a></li>
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Sorties OpenDroneMap</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/outputs.rst.txt" rel="nofollow"> Afficher la source de la page</a>
@@ -450,10 +453,10 @@
            <div itemprop="articleBody">
              
   <section id="opendronemap-outputs">
-<h1>Sorties OpenDroneMap<a class="headerlink" href="#opendronemap-outputs" title="Lien permanent vers cette rubrique"></a></h1>
+<h1>Sorties OpenDroneMap<a class="headerlink" href="#opendronemap-outputs" title="Lien vers cette rubrique"></a></h1>
 <p>Vous trouverez ci-dessous quelques-uns des résultats utiles produits par ODM.</p>
 <section id="point-cloud">
-<h2>Nuage de points<a class="headerlink" href="#point-cloud" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>Nuage de points<a class="headerlink" href="#point-cloud" title="Lien vers cette rubrique"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_georeferencing/odm_georeferenced_model.ply/laz/csv</span></code> – Le nuage de points géoréférencé dans différents formats de fichiers</p>
 <figure class="align-center">
 <img alt="image of OpenDroneMap derived point cloud" src="../_images/pointcloud.png" />
@@ -461,7 +464,7 @@
 <p><em>Nuage de points au-dessus de l’Université d’État de Zanzibar, avec l’aimable autorisation de</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
 </section>
 <section id="d-textured-model">
-<h2>Modèle texturé 3D<a class="headerlink" href="#d-textured-model" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>Modèle texturé 3D<a class="headerlink" href="#d-textured-model" title="Lien vers cette rubrique"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_texturing/odm_textured_model.obj</span></code> – Le maillage de surface texturé <code class="docutils literal notranslate"><span class="pre">odm_texturing/odm_textured_model_geo.obj</span></code> – Le maillage de surface géoréférencé et texturé</p>
 <p>You can access the point cloud and textured meshes using MeshLab. Open MeshLab, and choose <code class="docutils literal notranslate"><span class="pre">File:Import</span> <span class="pre">Mesh</span></code> and choose your textured mesh from a location similar to the following: <code class="docutils literal notranslate"><span class="pre">odm_texturing\odm_textured_model.obj</span></code></p>
 <figure class="align-center">
@@ -470,7 +473,7 @@
 <p><em>Maillage texturé avec l’aimable autorisation de</em> <a class="reference external" href="https://twitter.com/opendronemap">OpenDroneMap</a></p>
 </section>
 <section id="orthophoto">
-<h2>Orthophoto<a class="headerlink" href="#orthophoto" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>Orthophoto<a class="headerlink" href="#orthophoto" title="Lien vers cette rubrique"></a></h2>
 <p><code class="docutils literal notranslate"><span class="pre">odm_orthophoto/odm_orthphoto.tif</span></code> – Orthophoto GeoTIFF. Vous pouvez l’utiliser dans QGIS en tant que couche raster.</p>
 <p><code class="docutils literal notranslate"><span class="pre">odm_orthophoto/odm_orthphoto.original.tif</span></code> – L’orthophoto dans son état d’origine non rogné.</p>
 <figure class="align-center">
@@ -479,7 +482,7 @@
 <p><em>Orthophoto de l’Université d’État de Zanzibar, avec l’aimable autorisation de</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
 </section>
 <section id="dtm-dsm">
-<h2>DTM/DSM<a class="headerlink" href="#dtm-dsm" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>DTM/DSM<a class="headerlink" href="#dtm-dsm" title="Lien vers cette rubrique"></a></h2>
 <p>DTM/DSM will only be created if the <code class="docutils literal notranslate"><span class="pre">--dtm</span></code> or <code class="docutils literal notranslate"><span class="pre">--dsm</span></code> options are used. See <a class="reference external" href="../tutorials/#creating-digital-elevation-models">tutorial on elevation models</a> for more options in creating.</p>
 <p>Les données seront stockées dans:</p>
 <blockquote>
@@ -494,11 +497,11 @@
 <p><em>Modèle de surface numérique sur l’Université d’État de Zanzibar, avec l’aimable autorisation de</em> <a class="reference external" href="https://www.linkedin.com/in/khadija-abdulla-ali-56b4044a/">Khadija Abdullah Ali</a></p>
 </section>
 <section id="logs">
-<h2>Logs<a class="headerlink" href="#logs" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>Logs<a class="headerlink" href="#logs" title="Lien vers cette rubrique"></a></h2>
 <p>Logs are output to stdout. On Linux <a class="reference external" href="https://en.wikipedia.org/wiki/ANSI_escape_code">ANSI escape color code</a> (eg ^[[39m)  is used and could be disabled by setting no_ansiesc environment variable to any value like <code class="docutils literal notranslate"><span class="pre">env</span> <span class="pre">no_ansiesc=1</span></code></p>
 </section>
 <section id="list-of-all-outputs">
-<h2>Liste de toutes les sorties<a class="headerlink" href="#list-of-all-outputs" title="Lien permanent vers cette rubrique"></a></h2>
+<h2>Liste de toutes les sorties<a class="headerlink" href="#list-of-all-outputs" title="Lien vers cette rubrique"></a></h2>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span>project/
 ├── images/
 │   ├── img-1234.jpg
@@ -557,7 +560,7 @@
   <hr/>
 
   <div role="contentinfo">
-    <p>&#169; Copyright 2020, OpenDroneMap.</p>
+    <p>&#169; Droits d'auteur 2020, OpenDroneMap.</p>
   </div>
 
   Compilé avec <a href="https://www.sphinx-doc.org/">Sphinx</a> en utilisant un

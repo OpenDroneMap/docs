@@ -1,24 +1,23 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="cs" >
+<html class="writer-html5" lang="cs" data-content_root="../../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>camera-lens &mdash; Dokumentace pro OpenDroneMap 3.5.4</title>
-      <link rel="stylesheet" href="../../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../../_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>camera-lens &mdash; Dokumentace pro OpenDroneMap 3.5.6</title>
+      <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=e59714d7" />
+
   
-        <script data-url_root="../../" id="documentation_options" src="../../_static/documentation_options.js"></script>
-        <script src="../../_static/jquery.js"></script>
-        <script src="../../_static/underscore.js"></script>
-        <script src="../../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../../_static/doctools.js"></script>
-        <script src="../../_static/sphinx_highlight.js"></script>
-        <script src="../../_static/translations.js"></script>
+    <link rel="shortcut icon" href="../../_static/favicon.ico"/>
+      <script src="../../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../../_static/documentation_options.js?v=0a63c74e"></script>
+      <script src="../../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/translations.js?v=0f3dec7d"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Rejstřík" href="../../genindex/" />
     <link rel="search" title="Vyhledávání" href="../../search/" />
@@ -31,14 +30,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../../" class="icon icon-home"> OpenDroneMap
+
+          
+          
+          <a href="../../" class="icon icon-home">
+            OpenDroneMap
           </a>
-              <div class="version">
-                3.5.4
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../../search/" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -352,7 +352,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../../map-accuracy/#image-geolocation-files">Image Geolocation Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../../map-accuracy/#improving-relative-accuracy">Improving relative accuracy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../../map-accuracy/#multi-temporal-datasets">Multi-temporal Datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../../map-accuracy/#multi-temporal-datasets">Multi-temporal Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../../map-accuracy/#plugin-time-sift">Plugin Time-SIFT</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../../map-accuracy/#aligning-large-datasets">Aligning Large  Datasets</a></li>
 </ul>
 </li>
@@ -438,7 +441,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../../" class="icon icon-home"></a></li>
+      <li><a href="../../" class="icon icon-home" aria-label="Home"></a></li>
           <li class="breadcrumb-item"><a href="../">Možnosti a značky</a></li>
       <li class="breadcrumb-item active">camera-lens</li>
       <li class="wy-breadcrumbs-aside">
@@ -451,7 +454,7 @@
            <div itemprop="articleBody">
              
   <section id="camera-lens">
-<span id="id1"></span><h1>camera-lens<a class="headerlink" href="#camera-lens" title="Permalink to this heading"></a></h1>
+<span id="id1"></span><h1>camera-lens<a class="headerlink" href="#camera-lens" title="Link to this heading"></a></h1>
 <p><strong>Options:</strong> <em>auto |  perspective |  brown |  fisheye |  fisheye_opencv |  spherical |  equirectangular |  dual</em></p>
 <p>Nastavení typu projekce kamery. Ruční nastavení hodnoty může pomoci zlepšit geometrické nezkreslení. Ve výchozím nastavení se aplikace pokusí určit typ objektivu z metadat snímků. . Výchozí hodnota: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p>
 <div class="line-block">
@@ -474,10 +477,6 @@
 </div>
 <hr class="docutils" />
 <table class="docutils align-default">
-<colgroup>
-<col style="width: 44%" />
-<col style="width: 56%" />
-</colgroup>
 <thead>
 <tr class="row-odd"><th class="head"><p>Resource</p></th>
 <th class="head"><p>Impact</p></th>
@@ -503,62 +502,62 @@
 </table>
 <hr class="docutils" />
 <section id="what-are-camera-lens-models">
-<h2>Co jsou modely objektivů fotoaparátů?<a class="headerlink" href="#what-are-camera-lens-models" title="Permalink to this heading"></a></h2>
+<h2>Co jsou modely objektivů fotoaparátů?<a class="headerlink" href="#what-are-camera-lens-models" title="Link to this heading"></a></h2>
 <p>Modely objektivů kamer jsou modely projekce/zkreslení, které OpenSFM používá ke korekci optiky kamerových platforem, které zaznamenávají naše snímky. Tyto korekce jsou nezbytné pro správné modelování kamery/scény, a tedy i pro správnou rekonstrukci dat.</p>
 </section>
 <section id="when-are-manual-selections-appropriate">
-<h2>Kdy je vhodný ruční výběr?<a class="headerlink" href="#when-are-manual-selections-appropriate" title="Permalink to this heading"></a></h2>
+<h2>Kdy je vhodný ruční výběr?<a class="headerlink" href="#when-are-manual-selections-appropriate" title="Link to this heading"></a></h2>
 <p>Ruční výběr modelu objektivu kamery se v současné době doporučuje pouze v případě sférických kamer (GoPro Fusion, GoPro Max, Insta360, Kodak PixPro atd.), protože tyto kamery nejsou v současné době automaticky detekovány systémem OpenSFM.</p>
 </section>
 <section id="why-would-one-use-a-particular-camera-lens-model">
-<h2>Proč používat určitý model objektivu fotoaparátu?<a class="headerlink" href="#why-would-one-use-a-particular-camera-lens-model" title="Permalink to this heading"></a></h2>
+<h2>Proč používat určitý model objektivu fotoaparátu?<a class="headerlink" href="#why-would-one-use-a-particular-camera-lens-model" title="Link to this heading"></a></h2>
 <p>Ve vzácných případech nemusí být program OpenSFM schopen zjistit (nebo načíst z databáze fotoaparátů) správný model objektivu fotoaparátu pro váš konkrétní snímač, v takovém případě byste měli vybrat nejbližší vhodný model. V případě pochybností zkuste nejprve zadat <code class="docutils literal notranslate"><span class="pre">brown</span></code>.</p>
 </section>
 <section id="example-images">
-<h2>Ukázkové obrázky<a class="headerlink" href="#example-images" title="Permalink to this heading"></a></h2>
+<h2>Ukázkové obrázky<a class="headerlink" href="#example-images" title="Link to this heading"></a></h2>
 <p>Následující příklady jsou všechny údaje pořízené standardním objektivem Rectilinear Lens. Ruční výběr různých modelů objektivů fotoaparátu je demonstrován s cílem ukázat některé rozdíly v tom, jak to ovlivní rekonstrukci.</p>
 <section id="auto-rectilinear-data">
-<h3><code class="docutils literal notranslate"><span class="pre">auto</span></code> : Rectilinear Data<a class="headerlink" href="#auto-rectilinear-data" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">auto</span></code> : Rectilinear Data<a class="headerlink" href="#auto-rectilinear-data" title="Link to this heading"></a></h3>
 <figure class="align-default" id="id2">
 <img alt="Pravoúhlá data vykreslená pomocí ``automatického`` modelu objektivu kamery" src="https://user-images.githubusercontent.com/19295950/127077336-ae79a958-a953-4376-86fd-430d0e5457f2.png" />
 <figcaption>
-<p><span class="caption-text">Toto mračno bodů ukazuje správnou rekonstrukci pomocí <code class="docutils literal notranslate"><span class="pre">automatického</span></code> (<code class="docutils literal notranslate"><span class="pre">brown</span></code>) modelu objektivu kamery, který je pro tento snímač vhodný.</span><a class="headerlink" href="#id2" title="Permalink k tomuto obrázku"></a></p>
+<p><span class="caption-text">Toto mračno bodů ukazuje správnou rekonstrukci pomocí <code class="docutils literal notranslate"><span class="pre">automatického</span></code> (<code class="docutils literal notranslate"><span class="pre">brown</span></code>) modelu objektivu kamery, který je pro tento snímač vhodný.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="brown-rectilinear-data">
-<h3><code class="docutils literal notranslate"><span class="pre">brown</span></code> : Rectilinear Data<a class="headerlink" href="#brown-rectilinear-data" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">brown</span></code> : Rectilinear Data<a class="headerlink" href="#brown-rectilinear-data" title="Link to this heading"></a></h3>
 <figure class="align-default" id="id3">
 <img alt="Rektilineární data vykreslená pomocí ``brown`` Camera Lens Model" src="https://user-images.githubusercontent.com/19295950/127077753-580a174e-7572-4315-8801-224ce097d9fc.png" />
 <figcaption>
-<p><span class="caption-text">Stejně jako v předchozím příkladu je toto mračno bodů rekonstruováno pomocí <code class="docutils literal notranslate"><span class="pre">brown</span></code> modelu objektivu kamery.</span><a class="headerlink" href="#id3" title="Permalink k tomuto obrázku"></a></p>
+<p><span class="caption-text">Stejně jako v předchozím příkladu je toto mračno bodů rekonstruováno pomocí <code class="docutils literal notranslate"><span class="pre">brown</span></code> modelu objektivu kamery.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="fisheye-rectilinear-data">
-<h3><code class="docutils literal notranslate"><span class="pre">fisheye</span></code> : Rektilineární data<a class="headerlink" href="#fisheye-rectilinear-data" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">fisheye</span></code> : Rektilineární data<a class="headerlink" href="#fisheye-rectilinear-data" title="Link to this heading"></a></h3>
 <figure class="align-default" id="id4">
 <img alt="Rektilineární data vykreslená pomocí modelu objektivu kamery ``fisheye``" src="https://user-images.githubusercontent.com/19295950/127077826-53d459fe-5e4e-4b10-8e70-fbddf775c4f7.png" />
 <figcaption>
-<p><span class="caption-text">Při této rekonstrukci mračna bodů došlo k výraznému vyklenutí a dalším artefaktům v důsledku použití nesprávného modelu objektivu kamery.</span><a class="headerlink" href="#id4" title="Permalink k tomuto obrázku"></a></p>
+<p><span class="caption-text">Při této rekonstrukci mračna bodů došlo k výraznému vyklenutí a dalším artefaktům v důsledku použití nesprávného modelu objektivu kamery.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="perspective-rectilinear-data">
-<h3><code class="docutils literal notranslate"><span class="pre">perspective</span></code> : Rectilinear Data<a class="headerlink" href="#perspective-rectilinear-data" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">perspective</span></code> : Rectilinear Data<a class="headerlink" href="#perspective-rectilinear-data" title="Link to this heading"></a></h3>
 <figure class="align-default" id="id5">
 <img alt="Rektilineární data vykreslená pomocí ``perspektivního`` modelu objektivu kamery" src="https://user-images.githubusercontent.com/19295950/127077485-699f9e61-72a6-45f2-990f-f5748b6ee99f.png" />
 <figcaption>
-<p><span class="caption-text">Toto mračno bodů se vykresluje dobře, velmi podobně jako příklady <code class="docutils literal notranslate"><span class="pre">auto</span></code> a <code class="docutils literal notranslate"><span class="pre">brown</span></code>. Ve velmi rozsáhlých souborech nebo nad velmi plochým/homogenním terénem (zemědělská pole) lze pozorovat artefakty v <code class="docutils literal notranslate"><span class="pre">perspektivním</span></code> modelu objektivu kamery. V takových případech může pomoci vynucení <code class="docutils literal notranslate"><span class="pre">hnědé</span></code> barvy.</span><a class="headerlink" href="#id5" title="Permalink k tomuto obrázku"></a></p>
+<p><span class="caption-text">Toto mračno bodů se vykresluje dobře, velmi podobně jako příklady <code class="docutils literal notranslate"><span class="pre">auto</span></code> a <code class="docutils literal notranslate"><span class="pre">brown</span></code>. Ve velmi rozsáhlých souborech nebo nad velmi plochým/homogenním terénem (zemědělská pole) lze pozorovat artefakty v <code class="docutils literal notranslate"><span class="pre">perspektivním</span></code> modelu objektivu kamery. V takových případech může pomoci vynucení <code class="docutils literal notranslate"><span class="pre">hnědé</span></code> barvy.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 </section>
 <section id="spherical-rectilinear-data">
-<h3><code class="docutils literal notranslate"><span class="pre">spherical</span></code> : Rectilinear Data<a class="headerlink" href="#spherical-rectilinear-data" title="Permalink to this heading"></a></h3>
+<h3><code class="docutils literal notranslate"><span class="pre">spherical</span></code> : Rectilinear Data<a class="headerlink" href="#spherical-rectilinear-data" title="Link to this heading"></a></h3>
 <figure class="align-default" id="id6">
 <img alt="Rektilineární data vykreslená pomocí ``sférického`` modelu objektivu kamery" src="https://user-images.githubusercontent.com/19295950/127078960-27e35cbb-a378-4d0d-92e2-42dbfd1edd7c.png" />
 <figcaption>
-<p><span class="caption-text">Toto mračno bodů se nepodařilo správně rekonstruovat kvůli ručnímu výběru modelu objektivu kamery <code class="docutils literal notranslate"><span class="pre">fisheye</span></code>. Podobná selhání při rekonstrukci mohou často znamenat nesprávný ruční výběr nebo v okrajových případech nesprávný <code class="docutils literal notranslate"><span class="pre">automatický</span></code> výběr Modelu objektivu kamery a doporučujeme vám vyzkoušet jiný vhodnější Model.</span><a class="headerlink" href="#id6" title="Permalink k tomuto obrázku"></a></p>
+<p><span class="caption-text">Toto mračno bodů se nepodařilo správně rekonstruovat kvůli ručnímu výběru modelu objektivu kamery <code class="docutils literal notranslate"><span class="pre">fisheye</span></code>. Podobná selhání při rekonstrukci mohou často znamenat nesprávný ruční výběr nebo v okrajových případech nesprávný <code class="docutils literal notranslate"><span class="pre">automatický</span></code> výběr Modelu objektivu kamery a doporučujeme vám vyzkoušet jiný vhodnější Model.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Naučte se upravovat</a> a pomozte zlepšit <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/camera-lens.rst">tuto stránku</a>!</p>

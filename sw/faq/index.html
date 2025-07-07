@@ -1,23 +1,22 @@
+
+
 <!DOCTYPE html>
-<html class="writer-html5" lang="sw" >
+<html class="writer-html5" lang="sw" data-content_root="../">
 <head>
-  <meta charset="utf-8" /><meta name="generator" content="Docutils 0.17.1: http://docutils.sourceforge.net/" />
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
 
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Frequently Asked Questions and Additional Resources &mdash; OpenDroneMap 3.5.4 documentation</title>
-      <link rel="stylesheet" href="../_static/pygments.css" type="text/css" />
-      <link rel="stylesheet" href="../_static/css/theme.css" type="text/css" />
-    <link rel="shortcut icon" href="../_static/favicon.ico"/>
-  <!--[if lt IE 9]>
-    <script src="../_static/js/html5shiv.min.js"></script>
-  <![endif]-->
+  <title>Frequently Asked Questions and Additional Resources &mdash; OpenDroneMap 3.5.6 documentation</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
   
-        <script data-url_root="../" id="documentation_options" src="../_static/documentation_options.js"></script>
-        <script src="../_static/jquery.js"></script>
-        <script src="../_static/underscore.js"></script>
-        <script src="../_static/_sphinx_javascript_frameworks_compat.js"></script>
-        <script src="../_static/doctools.js"></script>
-        <script src="../_static/sphinx_highlight.js"></script>
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=271eb3bd"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -29,14 +28,15 @@
     <nav data-toggle="wy-nav-shift" class="wy-nav-side">
       <div class="wy-side-scroll">
         <div class="wy-side-nav-search" >
-            <a href="../" class="icon icon-home"> OpenDroneMap
+
+          
+          
+          <a href="../" class="icon icon-home">
+            OpenDroneMap
           </a>
-              <div class="version">
-                3.5.4
-              </div>
 <div role="search">
   <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
-    <input type="text" name="q" placeholder="Search docs" />
+    <input type="text" name="q" placeholder="Search docs" aria-label="Search docs" />
     <input type="hidden" name="check_keywords" value="yes" />
     <input type="hidden" name="area" value="default" />
   </form>
@@ -350,7 +350,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#image-geolocation-files">Image Geolocation Files</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#improving-relative-accuracy">Improving relative accuracy</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#multi-temporal-datasets">Multi-temporal Datasets</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#multi-temporal-datasets">Multi-temporal Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#plugin-time-sift">Plugin Time-SIFT</a></li>
+</ul>
+</li>
 <li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aligning-large-datasets">Aligning Large  Datasets</a></li>
 </ul>
 </li>
@@ -436,7 +439,7 @@
         <div class="rst-content">
           <div role="navigation" aria-label="Page navigation">
   <ul class="wy-breadcrumbs">
-      <li><a href="../" class="icon icon-home"></a></li>
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
       <li class="breadcrumb-item active">Frequently Asked Questions and Additional Resources</li>
       <li class="wy-breadcrumbs-aside">
             <a href="../_sources/faq.rst.txt" rel="nofollow"> View page source</a>
@@ -448,11 +451,11 @@
            <div itemprop="articleBody">
              
   <section id="frequently-asked-questions-and-additional-resources">
-<h1>Frequently Asked Questions and Additional Resources<a class="headerlink" href="#frequently-asked-questions-and-additional-resources" title="Permalink to this heading"></a></h1>
+<h1>Frequently Asked Questions and Additional Resources<a class="headerlink" href="#frequently-asked-questions-and-additional-resources" title="Link to this heading"></a></h1>
 <section id="frequently-asked-questions">
-<h2>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Permalink to this heading"></a></h2>
+<h2>Frequently Asked Questions<a class="headerlink" href="#frequently-asked-questions" title="Link to this heading"></a></h2>
 <section id="data-processing">
-<h3>Data Processing<a class="headerlink" href="#data-processing" title="Permalink to this heading"></a></h3>
+<h3>Data Processing<a class="headerlink" href="#data-processing" title="Link to this heading"></a></h3>
 <p><strong>Can I process two or more orthophoto GeoTIFFs to stitch them together?</strong></p>
 <p>No. ODM is a photogrammetric pipeline and orthophotos do not have the necessary camera information since the images have already been orthorectified. You can use another program such as <a class="reference external" href="http://hugin.sourceforge.net/">Hugin</a> to do that.</p>
 <p><strong>The software is not using all of my CPU cores / memory / GPU all of the times. Is it normal?</strong></p>
@@ -461,14 +464,14 @@
 <p>No need; the native (non-docker) version of the software already uses all available resources.</p>
 </section>
 <section id="licensing">
-<h3>Licensing<a class="headerlink" href="#licensing" title="Permalink to this heading"></a></h3>
+<h3>Licensing<a class="headerlink" href="#licensing" title="Link to this heading"></a></h3>
 <p><strong>I want to build a commercial application that includes ODM. Do I need a commercial license?</strong></p>
 <p>ODM is free and open source software, released under the <a class="reference external" href="https://github.com/OpenDroneMap/ODM/blob/master/LICENSE">AGPLv3</a>. You are free to build and sell applications with it, just make sure to comply with the requirements of the license, in particular the disclose source requirement.</p>
 <p><strong>Are there other licensing options aside from the AGPLv3?</strong></p>
 <p>Nope, sorry!</p>
 </section>
 <section id="memory-issues">
-<h3>Memory issues<a class="headerlink" href="#memory-issues" title="Permalink to this heading"></a></h3>
+<h3>Memory issues<a class="headerlink" href="#memory-issues" title="Link to this heading"></a></h3>
 <p><strong>Your computer is running out of memory, what can you do?</strong></p>
 <ol class="arabic simple">
 <li><p>First you can buy more RAM, this is the ultimate and final solution.</p></li>
@@ -490,9 +493,9 @@
 </section>
 </section>
 <section id="additional-references">
-<h2>Additional References<a class="headerlink" href="#additional-references" title="Permalink to this heading"></a></h2>
+<h2>Additional References<a class="headerlink" href="#additional-references" title="Link to this heading"></a></h2>
 <section id="for-users">
-<h3>For Users<a class="headerlink" href="#for-users" title="Permalink to this heading"></a></h3>
+<h3>For Users<a class="headerlink" href="#for-users" title="Link to this heading"></a></h3>
 <p>The following resources are a good place to start:</p>
 <ul class="simple">
 <li><p><a class="reference external" href="https://github.com/OpenDroneMap/OpenDroneMap">README page for ODM</a></p></li>
@@ -503,7 +506,7 @@
 </ul>
 </section>
 <section id="for-developers">
-<h3>For Developers<a class="headerlink" href="#for-developers" title="Permalink to this heading"></a></h3>
+<h3>For Developers<a class="headerlink" href="#for-developers" title="Link to this heading"></a></h3>
 <p>In addition to user resources, we recommend to also read the following:</p>
 <ul class="simple">
 <li><p>WebODM documentation: <a class="reference external" href="https://docs.webodm.org">https://docs.webodm.org</a></p></li>
