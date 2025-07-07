@@ -8,7 +8,7 @@ Point Cloud
 
 ``odm_georeferencing/odm_georeferenced_model.ply/laz/csv`` -- The georeferenced point cloud in different file formats
 
-.. figure:: images/pointcloud.png
+.. figure:: images/pointcloud.webp
    :alt: image of OpenDroneMap derived point cloud
    :align: center
    
@@ -23,7 +23,7 @@ Point Cloud
 
 You can access the point cloud and textured meshes using MeshLab. Open MeshLab, and choose ``File:Import Mesh`` and choose your textured mesh from a location similar to the following: ``odm_texturing\odm_textured_model.obj``
 
-.. figure:: images/UR_3D.gif
+.. figure:: images/UR_3D.webp
    :alt: image of OpenDroneMap derived textured mesh
    :align: center
    
@@ -36,7 +36,7 @@ Orthophoto
 
 ``odm_orthophoto/odm_orthphoto.original.tif`` -- The orthophoto in its original un-cropped state.
 
-.. figure:: images/orthophoto.png
+.. figure:: images/orthophoto.webp
    :alt: image of OpenDroneMap orthophoto
    :align: center
 
@@ -52,7 +52,7 @@ Data will be stored in:
  * ``odm_dem/dtm.tif``
  * ``odm_dem/dsm.tif``
 
-.. figure:: images/digitalsurfacemodel.png
+.. figure:: images/digitalsurfacemodel.webp
    :alt: image of OpenDroneMap derived digital surface model
    :align: center
    
@@ -102,7 +102,7 @@ List of all outputs
     │   ├── odm_georeferencing_log.txt      # Georeferencing log
     │   └── odm_georeferencing_utm_log.txt  # Log for the extract_utm portion
     ├── odm_orthophoto/
-    │   ├── odm_orthophoto.png              # Orthophoto image (no coordinates)
+    │   ├── odm_orthophoto.webp              # Orthophoto image (no coordinates)
     │   ├── odm_orthophoto.tif              # Orthophoto GeoTiff
     │   ├── odm_orthophoto_log.txt          # Log file
     │   └── gdal_translate_log.txt          # Log for georeferencing the png file

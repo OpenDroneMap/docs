@@ -15,7 +15,7 @@ Local or relative accuracy can be defined as the degree to which de distances be
 
 Relative accuracy is independent of the location of the map in the world, so a map can have a high relative accuracy (in size and shape) but its position in the world can be shifted (Figure 1). 
 
-.. figure:: images/rel_accuracy.png
+.. figure:: images/rel_accuracy.webp
    :alt: Model showing high relative accuracy
    :align: center
    
@@ -27,7 +27,7 @@ Relative accuracy is independent of the location of the map in the world, so a m
 
 Absolute accuracy is the accuracy of the reconstruction in relation to its true position on the planet (Pix4D 2019). Figure 2 shows a relative and absolute accurate model, as the points are correctly placed according to its real world position. 
 
-.. figure:: images/abs_accuracy.png
+.. figure:: images/abs_accuracy.webp
    :alt: Model showing high absolute accuracy
    :align: center
 
@@ -263,7 +263,7 @@ When previously mapped sites need revisited, OpenDroneMap can align multiple ver
 
 **Output example for aligned datasets:**
 
-.. figure:: images/align_pc.gif
+.. figure:: images/align_pc.webp
    :alt: Animated gif comparing two separately processed, but aligned digital surface models.
    :align: center
 
@@ -350,7 +350,7 @@ At the end of the script you obtain a directory by epoch (at the same level as t
    ├── 1_after/
    └── time-sift-block/
 
-.. |image1| image:: https://forge.inrae.fr/Denis.Feurer/timesift-odm-data-example/-/raw/main/Example.png?ref_type=heads
+.. |image1| image:: https://forge.inrae.fr/Denis.Feurer/timesift-odm-data-example/-/raw/main/Example.webp?ref_type=heads
 
 
 -----------------------

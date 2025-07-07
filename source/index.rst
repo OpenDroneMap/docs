@@ -30,7 +30,7 @@ The documentation is available in several languages. Some translations are incom
 |
 |
 
-.. figure:: images/seedling.png
+.. figure:: images/seedling.webp
     :alt: image of seedling
     :align: right
     :height: 70
@@ -41,7 +41,7 @@ The documentation is available in several languages. Some translations are incom
     installation
 
 
-.. figure:: images/pencil.png
+.. figure:: images/pencil.webp
     :alt: image of pencil
     :align: right
     :height: 60

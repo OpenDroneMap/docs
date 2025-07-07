@@ -62,7 +62,7 @@ Step 1. Check Virtualization Support
 
 Docker requires a feature from your CPU called virtualization, which allows it to run virtual machines (VMs). Make sure you have it enabled! Sometimes this is disabled. To check, on Windows 8 or higher you can open the **Task Manager** (press CTRL+SHIFT+ESC) and switch to the **Performance** tab.
 
-.. figure:: images/virtualizationcheck.png
+.. figure:: images/virtualizationcheck.webp
    :alt: Image of checking virtualization in Windows 8 or higher
    :align: center
 
@@ -73,7 +73,7 @@ www.microsoft.com/en-us/download/details.aspx?id=592>`_ instead.
 
 If virtualization is disabled, you’ll need to enable it. The procedure unfortunately is a bit different for each computer model, so the best way to do this is to look up on a search engine “how to enable vtx for <type your computer model here>”. Often times it’s a matter of restarting the computer, immediately pressing F2 or F12 during startup, navigating the boot menu and changing the settings to enable virtualization (often called “VT-X”).
 
-.. figure:: images/bioskeys.png
+.. figure:: images/bioskeys.webp
    :alt: Table of different bios keys
    :align: center
 
@@ -89,7 +89,7 @@ First, you’ll need to install:
 
 For Python 3, make sure you check **Add Python 3.x to PATH** during the installation.
 
-.. figure:: images/installpython3.png
+.. figure:: images/installpython3.webp
    :alt: Screenshot of Python3 installation process
    :align: center
 
@@ -119,7 +119,7 @@ If you installed Docker Toolbox (see below if you installed Docker for Windows i
 3. Right click the **default** VM and press **Settings...**
 4. Move the **Base Memory** slider from the **System** panel and allocate 60-70% of all available memory, optionally adding 50% of the available processors from the **Processor** tab also
 
-.. figure:: images/virtualboxsettings.png
+.. figure:: images/virtualboxsettings.webp
    :alt: Screenshot of VirtualBox Settings
    :align: center
 
@@ -134,13 +134,13 @@ If you installed Docker for Windows instead:
 3. From the panel, click **Advanced** and use the sliders to allocate 60-70% of available memory and use half of all available CPUs.
 4. Press **Apply**.
 
-.. figure:: images/dockericon.png
+.. figure:: images/dockericon.webp
    :alt: Screenshot of Docker Icon
    :align: center
 
 *Step 1 Docker icon*
 
-.. figure:: images/dockersettings.png
+.. figure:: images/dockersettings.webp
    :alt: Screenshot of Docker Settings
    :align: center
 
@@ -156,7 +156,7 @@ Open the **Git Gui** program that comes installed with Git. From there:
 * In **Target Directory** click browse and navigate to a folder of your choosing (create one if necessary)
 * Press **Clone**
 
-.. figure:: images/gitgui.png
+.. figure:: images/gitgui.webp
    :alt: Screenshot of Git Gui
    :align: center
 
@@ -164,7 +164,7 @@ Open the **Git Gui** program that comes installed with Git. From there:
 
 If the download succeeded, you should now see this window:
 
-.. figure:: images/gitguisuccess.png
+.. figure:: images/gitguisuccess.webp
    :alt: Screenshot of Git Gui after successful download
    :align: center
 
@@ -183,7 +183,7 @@ From Git Gui, go to the **Repository** menu, then click **Git Bash**. From the c
 	
 Several components will download to your machine at this point, including WebODM, NodeODM and ODM. After the download you should be greeted by the following screen:
 
-.. figure:: images/webodmsuccess.png
+.. figure:: images/webodmsuccess.webp
    :alt: Screenshot of after successfully downloading WebODM
    :align: center
 
@@ -238,7 +238,7 @@ There are only two programs to install:
 
 After installing docker you should find an icon that looks like a whale in the task bar.
 
-.. figure:: images/macwhale.png
+.. figure:: images/macwhale.webp
    :alt: Screenshot of Docker whale
    :align: center
 
@@ -280,7 +280,7 @@ Docker on macOS works by running a VM in the background (think of it as a “com
 3. Adjust the CPUs slider to use half of all available CPUs and the memory to use 60-70% of all available memory
 4. Press **Apply & Restart**
 
-.. figure:: images/dockeradvanced.png
+.. figure:: images/dockeradvanced.webp
    :alt: Screenshot of Docker advanced settings
    :align: center
 
@@ -435,7 +435,7 @@ Hello, WebODM!
 
 After running ./webodm.sh start and opening WebODM in the browser, you will be greeted with a welcome message and will be asked to create the first user. Take some time to familiarize yourself with the web interface and explore its various menus.
 
-.. figure:: images/webodmdashboard.png
+.. figure:: images/webodmdashboard.webp
    :alt: Screenshot of WebODM Dashboard
    :align: center
 
@@ -445,7 +445,7 @@ Notice that under the **Processing Nodes** menu there’s a "node-odm-1" node al
 
 If you’ve made it this far, congratulations! Now it’s time to start processing some data.
 
-.. figure:: images/congratulations.png
+.. figure:: images/congratulations.webp
    :alt: Image of celebratory dance
    :align: center
 

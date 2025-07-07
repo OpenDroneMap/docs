@@ -18,7 +18,7 @@ Once you have an account there are two ways to contribute. One is quick for smal
 
 Browse to https://github.com/OpenDroneMap/docs/tree/publish/source. Each row in the table corresponds to a page in the documentation. Tap on the file name, in the second (2nd) column from left. Press the "Edit" icon.
 
-![image](https://user-images.githubusercontent.com/1951843/54656313-78e26500-4a9b-11e9-9d7f-412bf7c36a2b.png)
+![image](https://user-images.githubusercontent.com/1951843/54656313-78e26500-4a9b-11e9-9d7f-412bf7c36a2b.webp)
 
 Make your changes, then scroll down and tap the "Propose Changes" button.
 
@@ -38,7 +38,7 @@ You may want to read the English Style Guide for github https://github.com/raywe
 
 Press the "Fork" button at the top of this page.
 
-![image](https://user-images.githubusercontent.com/1951843/54656025-77fd0380-4a9a-11e9-82f6-35278ed9ccfc.png)
+![image](https://user-images.githubusercontent.com/1951843/54656025-77fd0380-4a9a-11e9-82f6-35278ed9ccfc.webp)
 
 ## Step 2. Install Git and Python 3
 As there is an issue with python3.13 [(https://github.com/ethereum/s……olidity/issues/15811) with ](https://github.com/ethereum/solidity/issues/15811) python3.12 at most should be used.
@@ -104,7 +104,7 @@ After running `source .venv/bin/activate` there should be some indication that t
 
 Note: If you've installed `sphinx` on your system, you may run into issues with commands using that version instead of the version inside your virtualenv.
 
-![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/terminal_venv.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/terminal_venv.webp)
 
 Then if there are no errors, run:
 
@@ -171,9 +171,9 @@ An *italic section of text* may also have a single asterisk on either side.
 
 Italic text needs to have a space before, then a backtick or grave accent (\`) that touches the first character of the italic text, then the italic text, then a backtick or grave accent (\`) that touches the last character of the italic text, then a space. The backticks may also be asterisks.
 
-![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_italic_transifex.png)
-![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_italic_en.png)
-![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_italic_sw.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_italic_transifex.webp)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_italic_en.webp)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_italic_sw.webp)
 
 
 ### Bold
@@ -184,9 +184,9 @@ A **bold section of text** will have double asterisks on either side.
 
 Bold text needs to have a space before, then a double asterisk (`**`) that touches the first character of the bold text, then the bold text, then a double asterisk (`**`) that touches the last character of the bold text, then a space.
 
-![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_bold_transifex.png)
-![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_bold_en.png)
-![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_bold_sw.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_bold_transifex.webp)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_bold_en.webp)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_bold_sw.webp)
 
 ### Link
 
@@ -195,9 +195,9 @@ Check out the `ODM documentation <https://docs.opendronemap.org/>`_!
 ```
 Links need to have a space before, then a backtick or grave accent (\`), then the text that will become the link on the page (in the above example: "ODM documentation"), then a space, then a less than symbol (`<`), then the complete URL, then a greater than symbol and underscore (`>_`).
 
-![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_link_transifex.png)
-![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_link_en.png)
-![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_link_sw.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_link_transifex.webp)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_link_en.webp)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_link_sw.webp)
 
 ### Code
 
@@ -205,13 +205,13 @@ Code snippets need to have a space before, then a double backtick or grave accen
 
 **NOTE:** Code snippets may be referring to specific software commands and so often should NOT be translated.
 
-![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code_transifex.png)
-![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code_en.png)
-![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code_sw.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code_transifex.webp)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code_en.webp)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code_sw.webp)
 
-![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code2_transifex.png)
-![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code2_en.png)
-![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code2_es.png)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code2_transifex.webp)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code2_en.webp)
+![](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_code2_es.webp)
 
 
 ## Managing the translation process
@@ -248,7 +248,7 @@ You can also run the build for just one specific language, for example:
 sphinx-build -b dirhtml -D language='sw' source "_build/html/sw/"
 ```
 
-![build errors logged to the terminal](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/sphinx-build_errors_in_terminal.png)
+![build errors logged to the terminal](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/sphinx-build_errors_in_terminal.webp)
 
 You should see output in your console such as:
 
@@ -261,7 +261,7 @@ Look at the source file and line that is mentioned. In this case the file is `so
 
 Go to Transifex, go to the resource, and go to the string. The warning/error message should help you understand what went wrong. In this case the link syntax wasn't matched correctly. Fix and save the translation.
 
-![Transifex screen grab](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_err_transifex.png)
+![Transifex screen grab](https://raw.githubusercontent.com/OpenDroneMap/docs/publish/source/readme-img/reST_syntax_err_transifex.webp)
 
 Pull the language down (for example, `tx pull -l sw`) and then try the build again.
 
