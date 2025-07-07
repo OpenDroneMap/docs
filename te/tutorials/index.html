@@ -458,7 +458,7 @@
 <section id="creating-high-quality-orthophotos">
 <h2>Creating High Quality Orthophotos<a class="headerlink" href="#creating-high-quality-orthophotos" title="Link to this heading"></a></h2>
 <figure class="align-center">
-<img alt="image of OpenDroneMap orthophoto" src="../_images/orthophoto.png" />
+<img alt="image of OpenDroneMap orthophoto" src="../_images/orthophoto.webp" />
 </figure>
 <p>Without any parameter tweaks, ODM chooses a good compromise between quality, speed and memory usage. If you want to get higher quality results, you need to tweak some parameters:</p>
 <blockquote>
@@ -473,7 +473,7 @@
 <h2>Creating Digital Elevation Models<a class="headerlink" href="#creating-digital-elevation-models" title="Link to this heading"></a></h2>
 <p>By default ODM does not create digital elevation models (DEMs). To create a digital terrain model, make sure to pass the <code class="docutils literal notranslate"><span class="pre">--dtm</span></code> flag. To create a digital surface model, be sure to pass the <code class="docutils literal notranslate"><span class="pre">--dsm</span></code> flag.</p>
 <figure class="align-center">
-<img alt="image of OpenDroneMap derived digital surface model" src="../_images/digitalsurfacemodel.png" />
+<img alt="image of OpenDroneMap derived digital surface model" src="../_images/digitalsurfacemodel.webp" />
 </figure>
 <p>For DTM generation, a Simple Morphological Filter (smrf) is used to classify points in ground vs. non-ground and only the ground points are used. The <code class="docutils literal notranslate"><span class="pre">smrf</span></code> filter can be controlled via several parameters:</p>
 <blockquote>
@@ -488,7 +488,7 @@
 <p>Overall the <code class="docutils literal notranslate"><span class="pre">--smrf-threshold</span></code> option has the biggest impact on results.</p>
 <p>SMRF is good at avoiding Type I errors (small number of ground points mistakenly classified as non-ground) but only &quot;acceptable&quot; at avoiding Type II errors (large number non-ground points mistakenly classified as ground). This needs to be taken in consideration when generating DTMs that are meant to be used visually, since objects mistaken for ground look like artifacts in the final DTM.</p>
 <figure class="align-center">
-<img alt="image of lens distortion effect on bowling of data" src="../_images/smrf.png" />
+<img alt="image of lens distortion effect on bowling of data" src="../_images/smrf.webp" />
 </figure>
 <p>Two other important parameters affect DEM generation:</p>
 <blockquote>
@@ -510,14 +510,14 @@
 <p>You can also click in the camera icon to display single images in a frame on the upper right corner. A click on the image frame toggles into full screen mode.</p>
 <p>Within the image frame there are links to download the image and the GeoJSON camera file.</p>
 <figure class="align-center">
-<img alt="Camera locations" src="../_images/cameras.png" />
+<img alt="Camera locations" src="../_images/cameras.webp" />
 </figure>
 </section>
 <section id="textured-model">
 <h3>Textured model<a class="headerlink" href="#textured-model" title="Link to this heading"></a></h3>
 <p>Activate this function to show load the textured model. Depending on the file size and connection speed, it may take several seconds to load.</p>
 <figure class="align-center">
-<img alt="Textured model" src="../_images/texturedmodel.png" />
+<img alt="Textured model" src="../_images/texturedmodel.webp" />
 </figure>
 </section>
 <section id="appearance">
@@ -532,7 +532,7 @@
 <h4>Field of view<a class="headerlink" href="#field-of-view" title="Link to this heading"></a></h4>
 <p>In order to control model elements to be included within the scene the field of view can be adjusted. Default value is set to 60 degrees.</p>
 <figure class="align-center">
-<img alt="Field of view adjustment" src="../_images/FOV_animation.gif" />
+<img alt="Field of view adjustment" src="../_images/FOV_animation.webp" />
 </figure>
 </section>
 <section id="eye-dome-lighting">
@@ -541,14 +541,14 @@
 <p>Eye Dome-lighting group objects, shade their outlines and enhances depth perception in scientific visualization images. It is useful for recognition and measurement of structures within a model. It can be modified by adjusting Radius, Strength and Opacity.</p>
 <p>By default, Eye Dome-Lighting is enabled on Potree 3D viewer, but it can be disabled by clicking on the enable option.</p>
 <figure class="align-center">
-<img alt="Eye dome lighting adjustment" src="../_images/EDL_animation.gif" />
+<img alt="Eye dome lighting adjustment" src="../_images/EDL_animation.webp" />
 </figure>
 </section>
 <section id="background">
 <h4>Background<a class="headerlink" href="#background" title="Link to this heading"></a></h4>
 <p>Potree 3D viewer background can be modified. Available options are <strong>Skybox</strong> / <strong>Gradient</strong> / <strong>Black</strong> / <strong>White</strong> / <strong>None</strong></p>
 <figure class="align-center">
-<img alt="Background selection" src="../_images/Background_animation.gif" />
+<img alt="Background selection" src="../_images/Background_animation.webp" />
 </figure>
 </section>
 <section id="other">
@@ -567,7 +567,7 @@
 It also has controls for showing or hiding the resulting measurement labels.</p>
 <p>Measurements are performed by left clicking on the desired points and for some tools right clicking is needed in order to terminate the process.</p>
 <figure class="align-center">
-<img alt="Tools - Measurement tools" src="../_images/measurement.png" />
+<img alt="Tools - Measurement tools" src="../_images/measurement.webp" />
 </figure>
 <p><strong>Angle</strong></p>
 <p>This tool measures the tridimensional angle formed by the lines connecting 3 points.
@@ -586,7 +586,7 @@ Further information such as Total length can also be obtained from selecting thi
 To start a measurement, click on the height icon and then click on the desired two points. The process will be automatically ended.
 Further information can also be obtained from selecting this element under the scene section.</p>
 <figure class="align-center">
-<img alt="Height measurement" src="../_images/height_animation.gif" />
+<img alt="Height measurement" src="../_images/height_animation.webp" />
 </figure>
 <p><strong>Circle</strong></p>
 <p>This tool measures the radius of a circle formed by three points.
@@ -613,7 +613,7 @@ Further information can also be obtained from selecting this element under the s
 To start a measurement, click on the Height profile icon and then form a line on the model by clicking on the desired points (two or more). Right click to finish measurement.
 Further information and options, such as &quot;Show 2d Profile&quot;, can also been obtained from selecting this element under the scene section.</p>
 <figure class="align-center">
-<img alt="Height profile" src="../_images/height_profile.png" />
+<img alt="Height profile" src="../_images/height_profile.webp" />
 </figure>
 <p><strong>Annotation</strong></p>
 <p>This tool creates an annotation label on a highlighted point on the model.
@@ -626,20 +626,20 @@ To remove all measurement, click on the &quot;Remove measurements&quot; icon.</p
 <section id="clipping">
 <h4>Clipping<a class="headerlink" href="#clipping" title="Link to this heading"></a></h4>
 <figure class="align-center">
-<img alt="Tools - Clipping tools" src="../_images/clipping.png" />
+<img alt="Tools - Clipping tools" src="../_images/clipping.webp" />
 </figure>
 <p>Point cloud can be clipped by selecting an area. Clipping options include <strong>None</strong> / <strong>Highlight</strong> / <strong>Inside</strong> / <strong>Outside</strong></p>
 <p>To clip a point cloud, click on the volume clip icon, place the cube on the model and relocate, redimension and rotate to contain the desired area.
 Highlight is set by default as the clipping method. If display only the points contained within the cube click on &quot;Inside&quot;, otherwise click on &quot;Outside&quot;.</p>
 <p>To remove the clipping volume or polygons click on the &quot;Remove all measurements&quot; icon.</p>
 <figure class="align-center">
-<img alt="Tools - Clipping" src="../_images/clipping_animation.gif" />
+<img alt="Tools - Clipping" src="../_images/clipping_animation.webp" />
 </figure>
 </section>
 <section id="navigation">
 <h4>Navigation<a class="headerlink" href="#navigation" title="Link to this heading"></a></h4>
 <figure class="align-center">
-<img alt="Tools - Navigation controls" src="../_images/navigation.png" />
+<img alt="Tools - Navigation controls" src="../_images/navigation.webp" />
 </figure>
 <p>Potree 3D viewer have 4 Navigation controls which define its behavior.</p>
 <p><strong>Earth Control</strong></p>
@@ -662,7 +662,7 @@ Highlight is set by default as the clipping method. If display only the points c
 <p>The camera animation button creates a camera animation path. Position of the camera is defined by the points on the green line while the points in the blue line are the location towards the camera is intended to be facing.</p>
 <p>To create an animation, adjust the points for the camera locations and camera direction, then select the camera element under the Scene section to create more point, change animation speed or play the animation.</p>
 <figure class="align-center">
-<img alt="Tools - Navigation controls" src="../_images/camera_animation.gif" />
+<img alt="Tools - Navigation controls" src="../_images/camera_animation.webp" />
 </figure>
 </section>
 </section>
@@ -674,7 +674,7 @@ Elements are arranged in six groups, which are <strong>Point clouds</strong> / <
 <p>Each element under these groups can be selected to get further information or to control its properties.</p>
 <p>For instance, point clouds properties can be modified to show elevation and also the color ramp cam be customized.</p>
 <figure class="align-center">
-<img alt="Tools - Navigation controls" src="../_images/pointcloud_elevation.png" />
+<img alt="Tools - Navigation controls" src="../_images/pointcloud_elevation.webp" />
 </figure>
 </section>
 </section>
@@ -691,7 +691,7 @@ Also ensure that your naked eye horizontal visibility distance is congruent with
 <p>Most stockpile measurement jobs does not require a crosshatch pattern or angled gimbal as the resting angle of stockpile materials allows the camera to capture the entire stockpile sides. Only some special cases where erosion or machinery operations causes steep angles on the faces of the stockpile would benefit of the crosshatch flight pattern and angled camera gimbal but consider that these additional recognized features come at a cost, (in field labor and processing time) and the resulting improvements are sometimes negligible.</p>
 <p>In most of the cases a lawn mower flight pattern is capable of producing highly accurate stockpile models.</p>
 <figure class="align-center">
-<img alt="a simple lawnmower flight pattern can produce accurate results" src="../_images/lawnmower_pattern.png" />
+<img alt="a simple lawnmower flight pattern can produce accurate results" src="../_images/lawnmower_pattern.webp" />
 </figure>
 <p>Recommended overlap would be between 75% and 80% with a sidelap in the order of 65% to 70%. It is also recommended to slightly increase overlap and sidelap as the flight height is increased.</p>
 </section>
@@ -720,28 +720,28 @@ When placing or measuring GCP, equipment accuracy should be greater than the GSD
 <h3>Measuring<a class="headerlink" href="#measuring" title="Link to this heading"></a></h3>
 <p>As almost 50% of the material will be found in the first 20% of the stockpile height, special care should be taken in adequately defining the base plane.</p>
 <figure class="align-center">
-<img alt="almost 50% of the material will be found in the first 20% of the stockpile height" src="../_images/stockpile.png" />
+<img alt="almost 50% of the material will be found in the first 20% of the stockpile height" src="../_images/stockpile.webp" />
 </figure>
 <p>In WebODM Dashboard, clic on &quot;view map&quot; to start a 2D view of your project.</p>
 <p>Once in the 2D map view, clic on the &quot;Measure volume, area and length&quot; button.</p>
 <figure class="align-center">
-<img alt="clic on the &quot;Measure volume, area and length&quot; button" src="../_images/measurement1.png" />
+<img alt="clic on the &quot;Measure volume, area and length&quot; button" src="../_images/measurement1.webp" />
 </figure>
 <p>then clic on &quot;Create a new measurement&quot;</p>
 <figure class="align-center">
-<img alt="clic on &quot;Create a new measurement&quot;" src="../_images/measurement2.png" />
+<img alt="clic on &quot;Create a new measurement&quot;" src="../_images/measurement2.webp" />
 </figure>
 <p>Start placing the points to define the stockpile base plane</p>
 <figure class="align-center">
-<img alt="Define the stockpile base plane" src="../_images/measurement3.png" />
+<img alt="Define the stockpile base plane" src="../_images/measurement3.webp" />
 </figure>
 <p>Clic on &quot;Finish measurement&quot; to finish the process.</p>
 <figure class="align-center">
-<img alt="Clic on &quot;Finish measurement&quot; to finish the process" src="../_images/measurement4.png" />
+<img alt="Clic on &quot;Finish measurement&quot; to finish the process" src="../_images/measurement4.webp" />
 </figure>
 <p>Dialog box will show the  message &quot;Computing ...&quot; for a few seconds, and after the computing is finished the volume measurement value will be displayed.</p>
 <figure class="align-center">
-<img alt="Clic on &quot;Finish measurement&quot; to finish the process" src="../_images/measurement7.png" />
+<img alt="Clic on &quot;Finish measurement&quot; to finish the process" src="../_images/measurement7.webp" />
 </figure>
 <p>If you are using the command line OpenDroneMap you can use the dsm files to measure the stockpile volumes using other programs.</p>
 <p>Also consider that once the limits of the stockpile are set in software like <a class="reference external" href="https://www.qgis.org">QGis</a>, you will find there are some ways to determine the base plane. So for isolated stockpiles which boundaries are mostly visible, a linear approach can be used. While for stockpiles set in slopes or in bins, the base plane is better defined by the lowest point.
@@ -1086,12 +1086,12 @@ maybe smaller).</p></li>
 <h3>Calibrating the Camera<a class="headerlink" href="#calibrating-the-camera" title="Link to this heading"></a></h3>
 <p>Camera calibration is a special challenge with commodity cameras. Temperature changes, vibrations, focus, and other factors can affect the derived parameters with substantial effects on resulting data. Automatic or self calibration is possible and desirable with drone flights, but depending on the flight pattern, automatic calibration may not remove all distortion from the resulting products. James and Robson (2014) in their paper <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609">Mitigating systematic error in topographic models derived from UAV and ground‐based image networks</a> address how to minimize the distortion from self-calibration.</p>
 <figure class="align-center">
-<img alt="image of lens distortion effect on bowling of data" src="../_images/msimbasi_bowling.png" />
+<img alt="image of lens distortion effect on bowling of data" src="../_images/msimbasi_bowling.webp" />
 </figure>
 <p><em>Bowling effect on point cloud over 13,000+ image dataset collected by World Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania.</em></p>
 <p>To mitigate this effect, there are a few options but the simplest are as follows: fly two patterns separated by 20°, and rather than having a nadir (straight down pointing) camera, use one that tilts forward by 5°.</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../_images/flightplanning.gif"><img alt="animation showing optimum" src="../_images/flightplanning.gif" style="width: 640px; height: 480px;" />
+<a class="reference internal image-reference" href="../_images/flightplanning.webp"><img alt="animation showing optimum" src="../_images/flightplanning.webp" style="width: 640px; height: 480px;" />
 </a>
 </figure>
 <p>As this approach takes longer than traditional imaging, pilots and teams may apply this technique to a smaller area and use the collected data to optimize future flights. OpenDroneMap can generate a calibration file called cameras.json from a small sample flight. The calibration file can be used for future flights, mitigating the bowling effect without sacrificing efficiency.</p>
@@ -1101,11 +1101,11 @@ maybe smaller).</p></li>
 <li><p>To get good 2D and 2.5D (digital elevation model) results, you will require 42% overlap and sidelap for an equivalent 70% overlap and sidelap.</p></li>
 </ul>
 <figure class="align-center">
-<img alt="animation showing experimental optimum" src="../_images/rotation.gif" />
+<img alt="animation showing experimental optimum" src="../_images/rotation.webp" />
 </figure>
 <p>Vertically separated flight lines also improve accuracy, but less so than a camera that is forward facing by 5°.</p>
 <figure class="align-center">
-<img alt="figure showing effect of vertically separated flight lines and forward facing cameras on improving self calibration" src="../_images/forward_facing.png" />
+<img alt="figure showing effect of vertically separated flight lines and forward facing cameras on improving self calibration" src="../_images/forward_facing.webp" />
 </figure>
 <p>From James and Robson (2014), <a class="reference external" href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></p>
 </section>
@@ -1114,13 +1114,13 @@ maybe smaller).</p></li>
 <p>Starting from ODM <code class="docutils literal notranslate"><span class="pre">2.0</span></code> people can supply image masks to inform the software to skip reconstruction over certain areas. This is useful for cases where the sky was accidentally included in the input photos from oblique shots, or simply to limit the reconstruction of a single subject.</p>
 <p>To add a mask, simply create a new black and white image of the same dimension as the target image you want to mask (you can use a program such as GIMP to do this). Color in black the areas to exclude from the reconstruction.</p>
 <figure class="align-center">
-<img alt="Target image" src="https://user-images.githubusercontent.com/1951843/93247037-ade87a00-f75b-11ea-8b42-25bc1d89279d.png" />
+<img alt="Target image" src="https://user-images.githubusercontent.com/1951843/93247037-ade87a00-f75b-11ea-8b42-25bc1d89279d.webp" />
 </figure>
 <figure class="align-center">
-<img alt="Image mask" src="https://user-images.githubusercontent.com/1951843/93247007-a2954e80-f75b-11ea-87b3-4f04bd1737b9.png" />
+<img alt="Image mask" src="https://user-images.githubusercontent.com/1951843/93247007-a2954e80-f75b-11ea-87b3-4f04bd1737b9.webp" />
 </figure>
 <figure class="align-center">
-<img alt="3D result (building is masked)" src="https://user-images.githubusercontent.com/1951843/93246970-8f827e80-f75b-11ea-8179-5a8fdd9f5193.png" />
+<img alt="3D result (building is masked)" src="https://user-images.githubusercontent.com/1951843/93246970-8f827e80-f75b-11ea-8179-5a8fdd9f5193.webp" />
 </figure>
 <p>Name your file:</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;_mask.JPG</span></code></p>
@@ -1224,14 +1224,14 @@ Place your images in a directory named “images” (for example /my/project/ima
 </div>
 <p>Replace user and hostname with your appropriate username and the hpc address. Basically, this command will tunnel the port of the hpc to your local port. After this, open a browser in your local machine and connect to <cite>http://localhost:10000</cite>. Port 10000 is where ClusterODM's administrative web interface is hosted at. This is what it looks like:</p>
 <figure class="align-center">
-<img alt="Screenshot of ClusterODM's administrative web interface" src="https://user-images.githubusercontent.com/70782465/214938402-707bee90-ea17-4573-82f8-74096d9caf03.png" />
+<img alt="Screenshot of ClusterODM's administrative web interface" src="https://user-images.githubusercontent.com/70782465/214938402-707bee90-ea17-4573-82f8-74096d9caf03.webp" />
 </figure>
 <p>Here you can check the NodeODMs status and even add or delete working nodes.</p>
 <p>After that, do tunneling for port 3000 of the HPC to your local machine:</p>
 <p>ssh -L localhost:3000:localhost:3000 user&#64;hostname</p>
 <p>Port 3000 is ClusterODM's proxy. This is the place we assign tasks to ClusterODM. Once again, connect to <cite>http://localhost:3000</cite> with your browser after tunneling. Here, you can Assign Tasks and observe the tasks' processes.</p>
 <figure class="align-center">
-<img alt="Screenshot of ClusterODM's jobs interface" src="https://user-images.githubusercontent.com/70782465/214938234-113f99dc-f69e-4e78-a782-deaf94e986b0.png" />
+<img alt="Screenshot of ClusterODM's jobs interface" src="https://user-images.githubusercontent.com/70782465/214938234-113f99dc-f69e-4e78-a782-deaf94e986b0.webp" />
 </figure>
 <p>After adding images in this browser, you can press Start Task and see ClusterODM assigning tasks to the nodes you have wired to. Go for a walk and check the progress.</p>
 </section>
@@ -1265,7 +1265,7 @@ Place your images in a directory named “images” (for example /my/project/ima
 <h4>Modify code<a class="headerlink" href="#modify-code" title="Link to this heading"></a></h4>
 <p>For our test today, we will attempt to upgrade Ceres Solver to version 2.2.0. Most external libraries like Ceres can be found in the Superbuild directory. In this case we edit SuperBuild/cmake/External-Ceres.cmake, and set it to use version 2.2.0</p>
 <figure class="align-default">
-<img alt="../_images/vimdiff_ceres_change.png" src="../_images/vimdiff_ceres_change.png" />
+<img alt="../_images/vimdiff_ceres_change.webp" src="../_images/vimdiff_ceres_change.webp" />
 </figure>
 <p>Now that we've made that small, but substantive change, we need to rebuild Ceres on the docker image for testing.</p>
 </section>

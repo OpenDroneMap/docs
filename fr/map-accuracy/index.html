@@ -461,13 +461,13 @@
 <p>La précision locale ou relative peut être définie comme le degré auquel les distances entre deux points sur une carte correspondent aux distances réelles entre ces points dans le monde réel.</p>
 <p>La précision relative est indépendante de l’emplacement de la carte dans le monde, donc une carte peut avoir une précision relative élevée (en taille et en forme) mais sa position dans le monde peut être décalée (Figure 1).</p>
 <figure class="align-center">
-<img alt="Model showing high relative accuracy" src="../_images/rel_accuracy.png" />
+<img alt="Model showing high relative accuracy" src="../_images/rel_accuracy.webp" />
 </figure>
 <p><em>Figure 1. Modèle montrant une précision relative élevée mais mal placé par rapport à sa position réelle dans le monde</em></p>
 <p><strong>Précision absolue ou globale</strong></p>
 <p>La précision absolue est la précision de la reconstruction par rapport à sa position réelle sur la planète (Pix4D 2019). La figure 2 montre un modèle de précision relative et absolue, car les points sont correctement placés en fonction de sa position dans le monde réel.</p>
 <figure class="align-center">
-<img alt="Model showing high absolute accuracy" src="../_images/abs_accuracy.png" />
+<img alt="Model showing high absolute accuracy" src="../_images/abs_accuracy.webp" />
 </figure>
 <p><em>Figure 2. Modèle montrant une précision relative et absolue élevée. Placé correctement en fonction de sa position réelle dans le monde</em></p>
 <p><strong>Un niveau de précision pour chaque projet</strong></p>
@@ -641,7 +641,7 @@
 </ol>
 <p><strong>Output example for aligned datasets:</strong></p>
 <figure class="align-center">
-<img alt="Animated gif comparing two separately processed, but aligned digital surface models." src="../_images/align_pc.gif" />
+<img alt="Animated gif comparing two separately processed, but aligned digital surface models." src="../_images/align_pc.webp" />
 </figure>
 <p>Animated gif comparing two separately processed, but aligned digital surface models.</p>
 <section id="plugin-time-sift">
@@ -682,7 +682,7 @@ to get example data.</p>
 </div>
 <p>It should make the Time-SIFT processing on the downloaded example data, stopping after the filtered dense clouds step.</p>
 <p>In the destination dir, you should obtain new directories, <code class="docutils literal notranslate"><span class="pre">0_before</span></code> and <code class="docutils literal notranslate"><span class="pre">1_after</span></code> at the same level as the <code class="docutils literal notranslate"><span class="pre">time-sift-block</span></code> directory. These new directories contain all the results natively co-registered.</p>
-<p>You can then use <a class="reference external" href="https://cloudcompare.org/">CloudCompare</a> to compute distance between the <code class="docutils literal notranslate"><span class="pre">datasets/0_before/odm_filterpoints/point_cloud.ply</span></code> and the <code class="docutils literal notranslate"><span class="pre">datasets/1_after/odm_filterpoints</span> <span class="pre">point_cloud.ply</span></code> and obtain this image showing the difference between the two 3D surfaces. Here, two soil samples were excavated as can be seen on the image below. <img alt="image1" src="https://forge.inrae.fr/Denis.Feurer/timesift-odm-data-example/-/raw/main/Example.png?ref_type=heads" /></p>
+<p>You can then use <a class="reference external" href="https://cloudcompare.org/">CloudCompare</a> to compute distance between the <code class="docutils literal notranslate"><span class="pre">datasets/0_before/odm_filterpoints/point_cloud.ply</span></code> and the <code class="docutils literal notranslate"><span class="pre">datasets/1_after/odm_filterpoints</span> <span class="pre">point_cloud.ply</span></code> and obtain this image showing the difference between the two 3D surfaces. Here, two soil samples were excavated as can be seen on the image below. <img alt="image1" src="https://forge.inrae.fr/Denis.Feurer/timesift-odm-data-example/-/raw/main/Example.webp?ref_type=heads" /></p>
 <section id="your-own-data">
 <h6>Your own data<a class="headerlink" href="#your-own-data" title="Lien vers cette rubrique"></a></h6>
 <p>In your dataset directory (usually <code class="docutils literal notranslate"><span class="pre">datasets</span></code>, but you can have chosen another name) you have to prepare a Time-SIFT project directory (default name : <code class="docutils literal notranslate"><span class="pre">time-sift-block</span></code>, <em>can be tuned via a parameter</em>) that contains : * <code class="docutils literal notranslate"><span class="pre">images/</span></code> : a subdirectory with all images of all epochs. This directory name is fixed as it is the one expected by ODM *

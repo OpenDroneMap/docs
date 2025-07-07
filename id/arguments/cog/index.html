@@ -516,19 +516,19 @@
 <section id="true-cog">
 <h3>True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code><a class="headerlink" href="#true-cog" title="Link to this heading"></a></h3>
 <figure class="align-default" id="id2">
-<img alt="GDAL Info showing LAYOUT=COG" src="https://user-images.githubusercontent.com/19295950/127079824-c85fa5a9-842a-4f28-a380-b6404aac7ef2.png" />
+<img alt="GDAL Info showing LAYOUT=COG" src="https://user-images.githubusercontent.com/19295950/127079824-c85fa5a9-842a-4f28-a380-b6404aac7ef2.webp" />
 <figcaption>
 <p><span class="caption-text">The Raster Information tool in QGIS can print information from gdalinfo which can be used to confirm the conformance of a GeoTIFF to the COG spec.</span><a class="headerlink" href="#id2" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id3">
-<img alt="QGIS Layer Properties showing Internal Overviews" src="https://user-images.githubusercontent.com/19295950/138731905-d10483bd-b91b-4f63-bfb4-89c0f50bf74b.png" />
+<img alt="QGIS Layer Properties showing Internal Overviews" src="https://user-images.githubusercontent.com/19295950/138731905-d10483bd-b91b-4f63-bfb4-89c0f50bf74b.webp" />
 <figcaption>
 <p><span class="caption-text">The Layer Properties panel can show that there are in fact internal overviews. Keep in mind that not every GeoTIFF has internal overviews, but every COG must.</span><a class="headerlink" href="#id3" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id4">
-<img alt="QGIS Layer Properties showing an on-disk file size of 8.78 MB" src="https://user-images.githubusercontent.com/19295950/138733095-fb5f07ef-fbb0-48f4-8401-25cbf5294b9d.png" />
+<img alt="QGIS Layer Properties showing an on-disk file size of 8.78 MB" src="https://user-images.githubusercontent.com/19295950/138733095-fb5f07ef-fbb0-48f4-8401-25cbf5294b9d.webp" />
 <figcaption>
 <p><span class="caption-text">Note that the on-disk file size is 8.78 MB for the COG due to the presence of internal overviews when compared to the 6.30 MB of the non-COG GeoTIFF below.</span><a class="headerlink" href="#id4" title="Link to this image"></a></p>
 </figcaption>
@@ -537,19 +537,19 @@
 <section id="false-null">
 <h3>False: <code class="docutils literal notranslate"><span class="pre">null</span></code><a class="headerlink" href="#false-null" title="Link to this heading"></a></h3>
 <figure class="align-default" id="id5">
-<img alt="GDAL Info not showing LAYOUT=COG" src="https://user-images.githubusercontent.com/19295950/127080115-7e09ba30-140f-402d-b00a-8bb0c7bc72ff.png" />
+<img alt="GDAL Info not showing LAYOUT=COG" src="https://user-images.githubusercontent.com/19295950/127080115-7e09ba30-140f-402d-b00a-8bb0c7bc72ff.webp" />
 <figcaption>
 <p><span class="caption-text">The Raster Information tool in QGIS does not show LAYOUT=COG, which indicates that this GeoTIFF does not meet the COG spec.</span><a class="headerlink" href="#id5" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id6">
-<img alt="QGIS Layer Properties not showing Internal Overviews" src="https://user-images.githubusercontent.com/19295950/138732051-d227c98d-10a5-46de-ac99-8c5ffb0a12b2.png" />
+<img alt="QGIS Layer Properties not showing Internal Overviews" src="https://user-images.githubusercontent.com/19295950/138732051-d227c98d-10a5-46de-ac99-8c5ffb0a12b2.webp" />
 <figcaption>
 <p><span class="caption-text">The Layer Properties panel shows that the GeoTIFF lacks all levels of Internal Pyramids.</span><a class="headerlink" href="#id6" title="Link to this image"></a></p>
 </figcaption>
 </figure>
 <figure class="align-default" id="id7">
-<img alt="QGIS Layer Properties showing an on-disk file size of 6.30 MB" src="https://user-images.githubusercontent.com/19295950/138733132-a9c4f8b4-673a-426b-a665-bde5e89e4de3.png" />
+<img alt="QGIS Layer Properties showing an on-disk file size of 6.30 MB" src="https://user-images.githubusercontent.com/19295950/138733132-a9c4f8b4-673a-426b-a665-bde5e89e4de3.webp" />
 <figcaption>
 <p><span class="caption-text">Note that the on-disk file size is 6.30 MB for the COG due to the lack of internal overviews when compared to the 8.78 MB of the COG GeoTIFF above.</span><a class="headerlink" href="#id7" title="Link to this image"></a></p>
 </figcaption>

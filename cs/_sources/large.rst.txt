@@ -36,7 +36,7 @@ Distributed Split-Merge
 
 ODM can also automatically distribute the processing of each submodel to multiple machines via `NodeODM <https://github.com/OpenDroneMap/NodeODM>`_ nodes, orchestrated via `ClusterODM <https://github.com/OpenDroneMap/ClusterODM>`_.
 
-.. figure:: images/clusterodm.png
+.. figure:: images/clusterodm.webp
    :alt: image of lens distortion effect on bowling of data
    :align: center
 

@@ -458,7 +458,7 @@
 <section id="creating-high-quality-orthophotos">
 <h2>Creación de Ortofotos de Alta Calidad<a class="headerlink" href="#creating-high-quality-orthophotos" title="Link to this heading"></a></h2>
 <figure class="align-center">
-<img alt="Imagen de ortofoto de OpenDroneMap" src="../_images/orthophoto.png" />
+<img alt="Imagen de ortofoto de OpenDroneMap" src="../_images/orthophoto.webp" />
 </figure>
 <p>Sin ningún ajuste de parámetros, ODM elije un buen balance entre calidad, velocidad y uso de memoria. Si quiere obtener resultados de mayor calidad, debe modificar algunos parámetros:</p>
 <blockquote>
@@ -473,7 +473,7 @@
 <h2>Creación de modelos de elevación digitales<a class="headerlink" href="#creating-digital-elevation-models" title="Link to this heading"></a></h2>
 <p>By default ODM does not create digital elevation models (DEMs). To create a digital terrain model, make sure to pass the <code class="docutils literal notranslate"><span class="pre">--dtm</span></code> flag. To create a digital surface model, be sure to pass the <code class="docutils literal notranslate"><span class="pre">--dsm</span></code> flag.</p>
 <figure class="align-center">
-<img alt="imagen del modelo digital de superficie derivado de OpenDroneMap" src="../_images/digitalsurfacemodel.png" />
+<img alt="imagen del modelo digital de superficie derivado de OpenDroneMap" src="../_images/digitalsurfacemodel.webp" />
 </figure>
 <p>Para la generación del DTM, se utiliza un filtro morfológico simple (smrf) para clasificar los puntos terrestres frente a los no terrestres y solo se utilizan los puntos terrestres. El filtro <code class="docutils literal notranslate"><span class="pre">smrf</span></code> se puede controlar mediante varios parámetros:</p>
 <blockquote>
@@ -488,7 +488,7 @@
 <p>En general, la opción <code class="docutils literal notranslate"><span class="pre">--smrf-threshold</span></code> tiene el mayor impacto en los resultados.</p>
 <p>SMRF es bueno para evitar errores de Tipo I (un pequeño número de puntos de tierra clasificados erróneamente como no terrestres) pero solo es «aceptable» para evitar errores de Tipo II (gran número de puntos no terrestres clasificados erróneamente como terrestres). Esto debe tenerse en cuenta al generar DTM para ser usados visualmente, ya que los objetos que se confunden con el suelo parecen artefactos en el DTM final.</p>
 <figure class="align-center">
-<img alt="Imagen del efecto de distorsión de la lente en el combamiento de datos" src="../_images/smrf.png" />
+<img alt="Imagen del efecto de distorsión de la lente en el combamiento de datos" src="../_images/smrf.webp" />
 </figure>
 <p>Otros dos parámetros importantes afectan la generación de DEM:</p>
 <blockquote>
@@ -510,14 +510,14 @@
 <p>También puede hacer clic en el icono de la cámara para mostrar imágenes individuales en un marco en la esquina superior derecha. Un clic en el marco de la imagen cambia al modo de pantalla completa.</p>
 <p>Dentro del marco de la imagen hay enlaces para descargar la imagen y el archivo de la cámara GeoJSON.</p>
 <figure class="align-center">
-<img alt="Localización de las cámaras" src="../_images/cameras.png" />
+<img alt="Localización de las cámaras" src="../_images/cameras.webp" />
 </figure>
 </section>
 <section id="textured-model">
 <h3>Modelo texturizado<a class="headerlink" href="#textured-model" title="Link to this heading"></a></h3>
 <p>Active esta función para mostrar cargar el modelo texturizado. Dependiendo del tamaño del archivo y la velocidad de la conexión, la carga puede tardar varios segundos.</p>
 <figure class="align-center">
-<img alt="Modelo texturizado" src="../_images/texturedmodel.png" />
+<img alt="Modelo texturizado" src="../_images/texturedmodel.webp" />
 </figure>
 </section>
 <section id="appearance">
@@ -532,7 +532,7 @@
 <h4>Campo de visión<a class="headerlink" href="#field-of-view" title="Link to this heading"></a></h4>
 <p>Para controlar los elementos del modelo que se incluirán en la escena, se puede ajustar el campo de visión. El valor predeterminado se establece en 60 grados.</p>
 <figure class="align-center">
-<img alt="Ajuste del campo de visión" src="../_images/FOV_animation.gif" />
+<img alt="Ajuste del campo de visión" src="../_images/FOV_animation.webp" />
 </figure>
 </section>
 <section id="eye-dome-lighting">
@@ -541,14 +541,14 @@
 <p>Los objetos de grupo de iluminación de domo, sombrean sus contornos y mejoran la percepción de profundidad en imágenes de visualización científica. Es útil para el reconocimiento y la medición de estructuras dentro de un modelo. Se puede modificar ajustando Radio, Fuerza y Opacidad.</p>
 <p>De forma predeterminada, Eye Dome-Lighting está habilitado en el visor Potree 3D, pero se puede deshabilitar haciendo clic en la opción habilitar.</p>
 <figure class="align-center">
-<img alt="Ajuste de la Iluminación de domo" src="../_images/EDL_animation.gif" />
+<img alt="Ajuste de la Iluminación de domo" src="../_images/EDL_animation.webp" />
 </figure>
 </section>
 <section id="background">
 <h4>Fondo<a class="headerlink" href="#background" title="Link to this heading"></a></h4>
 <p>El fondo del visualizador en 3D Potree se puede modificar. Las opciones disponibles son <strong>Skybox</strong> / <strong>Gradiente</strong> / <strong>Negro</strong> / <strong>Blanco</strong> / <strong>Ninguno</strong></p>
 <figure class="align-center">
-<img alt="Selección del fondo" src="../_images/Background_animation.gif" />
+<img alt="Selección del fondo" src="../_images/Background_animation.webp" />
 </figure>
 </section>
 <section id="other">
@@ -566,7 +566,7 @@
 <p>El módulo de visor 3D Potree proporciona varias herramientas para la medición. Este conjunto de herramientas consta de 12 elementos. También tiene controles para mostrar u ocultar las etiquetas de medición resultantes.</p>
 <p>Las mediciones se realizan haciendo clic izquierdo en los puntos deseados y para algunas herramientas es necesario hacer clic derecho para finalizar el proceso.</p>
 <figure class="align-center">
-<img alt="Herramientas - Herramientas de medición" src="../_images/measurement.png" />
+<img alt="Herramientas - Herramientas de medición" src="../_images/measurement.webp" />
 </figure>
 <p><strong>Ángulo</strong></p>
 <p>Esta herramienta mide el ángulo tridimensional formado por las líneas que conectan 3 puntos. Para iniciar una medición, haga clic en el icono de ángulo, luego haga clic con el botón izquierdo en 3 puntos y el proceso finalizará automáticamente. También se puede obtener más información seleccionando este elemento en la sección de escena.</p>
@@ -577,7 +577,7 @@
 <p><strong>Altura</strong></p>
 <p>Esta herramienta mide la altura o la distancia vertical entre dos puntos. Para iniciar una medición, haga clic en el icono de altura y luego haga clic en los dos puntos deseados. El proceso finalizará automáticamente. También se puede obtener más información seleccionando este elemento en la sección de escena.</p>
 <figure class="align-center">
-<img alt="Height measurement" src="../_images/height_animation.gif" />
+<img alt="Height measurement" src="../_images/height_animation.webp" />
 </figure>
 <p><strong>Círculo</strong></p>
 <p>Esta herramienta mide el radio de un círculo formado por tres puntos. Para iniciar una medición, haga clic en el icono del círculo y luego haga clic en los dos puntos deseados. El proceso finalizará automáticamente. También se puede obtener más información, como Circunferencia, seleccionando este elemento en la sección de escena.</p>
@@ -592,7 +592,7 @@
 <p><strong>Perfil de altura</strong></p>
 <p>Esta herramienta crea un perfil de altura formado por una línea en el modelo. Para iniciar una medición, haga clic en el icono de perfil de altura y luego forme una línea en el modelo haciendo clic en los puntos deseados (dos o más). Haga clic derecho para finalizar la medición. También se puede obtener más información y opciones, como «Mostrar perfil 2d», seleccionando este elemento en la sección de escena.</p>
 <figure class="align-center">
-<img alt="Height profile" src="../_images/height_profile.png" />
+<img alt="Height profile" src="../_images/height_profile.webp" />
 </figure>
 <p><strong>Anotación</strong></p>
 <p>Esta herramienta crea una etiqueta de anotación en un punto resaltado del modelo. Para iniciar una medición, haga clic en el icono de anotación y luego haga clic en el punto deseado. El proceso finalizará automáticamente. Para editar la anotación, seleccione este elemento en la sección de la escena, luego edite el Título y la Descripción.</p>
@@ -602,19 +602,19 @@
 <section id="clipping">
 <h4>Recorte<a class="headerlink" href="#clipping" title="Link to this heading"></a></h4>
 <figure class="align-center">
-<img alt="Herramientas - Herramientas de recorte" src="../_images/clipping.png" />
+<img alt="Herramientas - Herramientas de recorte" src="../_images/clipping.webp" />
 </figure>
 <p>La nube de puntos se puede recortar seleccionando un área. Las opciones de recorte incluyen ** Ninguno ** / ** Resaltado ** / ** Interior ** / ** Exterior **</p>
 <p>Para recortar una nube de puntos, haga clic en el icono de recorte de volumen, coloque el cubo en el modelo y reubique, redimensione y gire para contener el área deseada. Resaltar está configurado de forma predeterminada como el método de recorte. Si se muestran solo los puntos contenidos dentro del cubo, haga clic en «Dentro», de lo contrario, haga clic en «Fuera».</p>
 <p>Para eliminar el volumen de recorte o los polígonos, haga clic en el icono «Eliminar todas las mediciones».</p>
 <figure class="align-center">
-<img alt="Herramientas - Recorte" src="../_images/clipping_animation.gif" />
+<img alt="Herramientas - Recorte" src="../_images/clipping_animation.webp" />
 </figure>
 </section>
 <section id="navigation">
 <h4>Navegación<a class="headerlink" href="#navigation" title="Link to this heading"></a></h4>
 <figure class="align-center">
-<img alt="Herramientas - Controles de navegación" src="../_images/navigation.png" />
+<img alt="Herramientas - Controles de navegación" src="../_images/navigation.webp" />
 </figure>
 <p>El visor Potree 3D tiene 4 controles de navegación que definen su comportamiento.</p>
 <p>Control de tierra</p>
@@ -637,7 +637,7 @@
 <p>El botón de animación de la cámara crea una ruta de animación de la cámara. La posición de la cámara se define mediante los puntos en la línea verde, mientras que los puntos en la línea azul son la ubicación hacia la que se pretende que esté orientada la cámara.</p>
 <p>Para crear una animación, ajuste los puntos para las ubicaciones de la cámara y la dirección de la cámara, luego seleccione el elemento de la cámara en la sección Escena para crear más puntos, cambiar la velocidad de la animación o reproducir la animación.</p>
 <figure class="align-center">
-<img alt="Herramientas - Controles de navegación" src="../_images/camera_animation.gif" />
+<img alt="Herramientas - Controles de navegación" src="../_images/camera_animation.webp" />
 </figure>
 </section>
 </section>
@@ -647,7 +647,7 @@
 <p>Cada elemento de estos grupos se puede seleccionar para obtener más información o para controlar sus propiedades.</p>
 <p>Por ejemplo, las propiedades de las nubes de puntos se pueden modificar para mostrar la elevación y también se puede personalizar la rampa de color.</p>
 <figure class="align-center">
-<img alt="Herramientas - Controles de navegación" src="../_images/pointcloud_elevation.png" />
+<img alt="Herramientas - Controles de navegación" src="../_images/pointcloud_elevation.webp" />
 </figure>
 </section>
 </section>
@@ -662,7 +662,7 @@
 <p>La mayoría de los trabajos de medición de pilas no requieren un patrón de vuelo cruzado o la cámara en ángulo, ya que el ángulo de reposo de los materiales de las pilas permite que la cámara capture todos los lados. Solo algunos casos especiales en los que la erosión o las operaciones de maquinaria causan ángulos pronunciados en las caras de la pila se verán beneficiados del patrón de vuelo cruzado y la cámara en ángulo, pero considere que estas características adicionales tienen un costo (en mano de obra de campo y tiempo de procesamiento) y las mejoras resultantes son a veces insignificantes.</p>
 <p>En la mayoría de los casos, un patrón de vuelo paralelo como una podadora, es capaz de producir modelos de pilas de alta precisión.</p>
 <figure class="align-center">
-<img alt="un patrón de vuelo simple de cortadora de césped puede producir resultados precisos" src="../_images/lawnmower_pattern.png" />
+<img alt="un patrón de vuelo simple de cortadora de césped puede producir resultados precisos" src="../_images/lawnmower_pattern.webp" />
 </figure>
 <p>El traslape frontal recomendado debe estar entre 75% y 80%, con un traslape lateral en el orden de 65% y 70%. También se recomienda incrementar ligeramente el traslape lateral y frontal conforme se incremente la altura del vuelo.</p>
 </section>
@@ -689,28 +689,28 @@
 <h3>Medición<a class="headerlink" href="#measuring" title="Link to this heading"></a></h3>
 <p>Como casi el 50% del material se encuentra en el primer 20% de la altura de la pila, se debe tener especial cuidado en definir adecuadamente el plano de la base.</p>
 <figure class="align-center">
-<img alt="casi el 50% del material se encontrará en el primer 20% de la altura de la pila" src="../_images/stockpile.png" />
+<img alt="casi el 50% del material se encontrará en el primer 20% de la altura de la pila" src="../_images/stockpile.webp" />
 </figure>
 <p>En el tablero de WebODM, haga clic en «ver mapa» para iniciar una vista 2D de su proyecto.</p>
 <p>Una vez en la vista de mapa 2D, haga clic en el botón «Medir volumen, área y distancia».</p>
 <figure class="align-center">
-<img alt="haga clic en el botón &quot;Medición de  volumen, área y distancia&quot;" src="../_images/measurement1.png" />
+<img alt="haga clic en el botón &quot;Medición de  volumen, área y distancia&quot;" src="../_images/measurement1.webp" />
 </figure>
 <p>luego haga clic en «Crear una nueva medición»</p>
 <figure class="align-center">
-<img alt="haga clic en &quot;Crear una nueva medición&quot;" src="../_images/measurement2.png" />
+<img alt="haga clic en &quot;Crear una nueva medición&quot;" src="../_images/measurement2.webp" />
 </figure>
 <p>Empiece a colocar los puntos para definir el plano de la base de la pila</p>
 <figure class="align-center">
-<img alt="Definir el plano base de la pila" src="../_images/measurement3.png" />
+<img alt="Definir el plano base de la pila" src="../_images/measurement3.webp" />
 </figure>
 <p>Haga clic en «Finalizar medición» para finalizar el proceso.</p>
 <figure class="align-center">
-<img alt="Haga clic en &quot;Finalizar medición&quot; para finalizar el proceso" src="../_images/measurement4.png" />
+<img alt="Haga clic en &quot;Finalizar medición&quot; para finalizar el proceso" src="../_images/measurement4.webp" />
 </figure>
 <p>El cuadro de diálogo muestra el mensaje «Calculando…» por algunos segundos, y después de que el cálculo esté terminado la medición de volumen será desplegada.</p>
 <figure class="align-center">
-<img alt="Haga clic en &quot;Finalizar medición&quot; para finalizar el proceso" src="../_images/measurement7.png" />
+<img alt="Haga clic en &quot;Finalizar medición&quot; para finalizar el proceso" src="../_images/measurement7.webp" />
 </figure>
 <p>Si utiliza OpenDroneMap en la línea de comandos, puede usar los archivos DSM para medir el volumen de las pilas usando otros programas.</p>
 <p>También considere que una vez que los límites de la pila están definidos en un software como <a class="reference external" href="https://www.qgis.org">QGis</a>, encontrará que existen varias maneras de determinar el plano de la base. Así que para pilas aisladas, cuyos límites son mayormente visibles, se puede usar un enfoque linear. Mientras que para pilas ubicadas en pendientes o en contenedores, el plano de la base es mejor definido el punto mas bajo. Se recomienda la creación de una superficie tridimensional triangulada para definir el plano de la base de pilas grandes. Esto también es válido para pilas sobre superficies irregulares.</p>
@@ -916,12 +916,12 @@ images folder for each project.</p></li>
 <h3>Calibrar la cámara<a class="headerlink" href="#calibrating-the-camera" title="Link to this heading"></a></h3>
 <p>La calibración de la cámara es un desafío especial con las cámaras básicas. Los cambios de temperatura, las vibraciones, el enfoque y otros factores pueden afectar los parámetros derivados con efectos sustanciales en los datos resultantes. La calibración automática o la autocalibración es posible y deseable para los vuelos de drones, pero dependiendo del patrón de vuelo, la calibración automática puede no eliminar toda la distorsión de los productos resultantes. James y Robson (2014) en su artículo <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609">Mitigating systematic error in topographic models derived from UAV and ground‐based image networks</a>  abordan cómo para minimizar la distorsión de la autocalibración.</p>
 <figure class="align-center">
-<img alt="Imagen del efecto de distorsión de la lente en el combamiento de datos" src="../_images/msimbasi_bowling.png" />
+<img alt="Imagen del efecto de distorsión de la lente en el combamiento de datos" src="../_images/msimbasi_bowling.webp" />
 </figure>
 <p><em>Efecto de tazón en la nube de puntos de un juego de datos de mas de 13,000 imágenes colectadas por el Banco mundial de Tanzania sobre la cuenca propensa a inundaciones de Msimbasi, Dar es Salaam, Tanzania.</em></p>
 <p>Para mitigar este efecto, hay algunas opciones, pero las más simples son las siguientes: vuele dos patrones separados por 20 °, y en lugar de tener una cámara nadir (apuntando hacia abajo), use una que se incline hacia adelante en 5 °.</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../_images/flightplanning.gif"><img alt="animación que muestra el óptimo" src="../_images/flightplanning.gif" style="width: 640px; height: 480px;" />
+<a class="reference internal image-reference" href="../_images/flightplanning.webp"><img alt="animación que muestra el óptimo" src="../_images/flightplanning.webp" style="width: 640px; height: 480px;" />
 </a>
 </figure>
 <p>As this approach takes longer than traditional imaging, pilots and teams may apply this technique to a smaller area and use the collected data to optimize future flights. OpenDroneMap can generate a calibration file called cameras.json from a small sample flight. The calibration file can be used for future flights, mitigating the bowling effect without sacrificing efficiency.</p>
@@ -931,11 +931,11 @@ images folder for each project.</p></li>
 <li><p>Para obtener buenos resultados en 2D y 2.5D (modelo de elevación digital), necesitará un 42% de superposición y superposición lateral para una superposición y superposición lateral equivalente del 70%.</p></li>
 </ul>
 <figure class="align-center">
-<img alt="animación que muestra el óptimo experimental" src="../_images/rotation.gif" />
+<img alt="animación que muestra el óptimo experimental" src="../_images/rotation.webp" />
 </figure>
 <p>Las líneas de vuelo separadas verticalmente también mejoran la precisión, pero menos que una cámara que mira hacia adelante en 5 °.</p>
 <figure class="align-center">
-<img alt="Figura que muestra el efecto de las líneas de vuelo separadas verticalmente y las cámaras orientadas hacia adelante para mejorar la autocalibración." src="../_images/forward_facing.png" />
+<img alt="Figura que muestra el efecto de las líneas de vuelo separadas verticalmente y las cámaras orientadas hacia adelante para mejorar la autocalibración." src="../_images/forward_facing.webp" />
 </figure>
 <p>De James and Robson (2014), <a class="reference external" href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></p>
 </section>
@@ -944,13 +944,13 @@ images folder for each project.</p></li>
 <p>Starting from ODM <code class="docutils literal notranslate"><span class="pre">2.0</span></code> people can supply image masks to inform the software to skip reconstruction over certain areas. This is useful for cases where the sky was accidentally included in the input photos from oblique shots, or simply to limit the reconstruction of a single subject.</p>
 <p>To add a mask, simply create a new black and white image of the same dimension as the target image you want to mask (you can use a program such as GIMP to do this). Color in black the areas to exclude from the reconstruction.</p>
 <figure class="align-center">
-<img alt="Target image" src="https://user-images.githubusercontent.com/1951843/93247037-ade87a00-f75b-11ea-8b42-25bc1d89279d.png" />
+<img alt="Target image" src="https://user-images.githubusercontent.com/1951843/93247037-ade87a00-f75b-11ea-8b42-25bc1d89279d.webp" />
 </figure>
 <figure class="align-center">
-<img alt="Image mask" src="https://user-images.githubusercontent.com/1951843/93247007-a2954e80-f75b-11ea-87b3-4f04bd1737b9.png" />
+<img alt="Image mask" src="https://user-images.githubusercontent.com/1951843/93247007-a2954e80-f75b-11ea-87b3-4f04bd1737b9.webp" />
 </figure>
 <figure class="align-center">
-<img alt="3D result (building is masked)" src="https://user-images.githubusercontent.com/1951843/93246970-8f827e80-f75b-11ea-8179-5a8fdd9f5193.png" />
+<img alt="3D result (building is masked)" src="https://user-images.githubusercontent.com/1951843/93246970-8f827e80-f75b-11ea-8179-5a8fdd9f5193.webp" />
 </figure>
 <p>Name your file:</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;_mask.JPG</span></code></p>
@@ -1054,14 +1054,14 @@ Place your images in a directory named “images” (for example /my/project/ima
 </div>
 <p>Replace user and hostname with your appropriate username and the hpc address. Basically, this command will tunnel the port of the hpc to your local port. After this, open a browser in your local machine and connect to <cite>http://localhost:10000</cite>. Port 10000 is where ClusterODM’s administrative web interface is hosted at. This is what it looks like:</p>
 <figure class="align-center">
-<img alt="Screenshot of ClusterODM's administrative web interface" src="https://user-images.githubusercontent.com/70782465/214938402-707bee90-ea17-4573-82f8-74096d9caf03.png" />
+<img alt="Screenshot of ClusterODM's administrative web interface" src="https://user-images.githubusercontent.com/70782465/214938402-707bee90-ea17-4573-82f8-74096d9caf03.webp" />
 </figure>
 <p>Here you can check the NodeODMs status and even add or delete working nodes.</p>
 <p>After that, do tunneling for port 3000 of the HPC to your local machine:</p>
 <p>ssh -L localhost:3000:localhost:3000 user&#64;hostname</p>
 <p>Port 3000 is ClusterODM’s proxy. This is the place we assign tasks to ClusterODM. Once again, connect to <cite>http://localhost:3000</cite> with your browser after tunneling. Here, you can Assign Tasks and observe the tasks” processes.</p>
 <figure class="align-center">
-<img alt="Screenshot of ClusterODM's jobs interface" src="https://user-images.githubusercontent.com/70782465/214938234-113f99dc-f69e-4e78-a782-deaf94e986b0.png" />
+<img alt="Screenshot of ClusterODM's jobs interface" src="https://user-images.githubusercontent.com/70782465/214938234-113f99dc-f69e-4e78-a782-deaf94e986b0.webp" />
 </figure>
 <p>After adding images in this browser, you can press Start Task and see ClusterODM assigning tasks to the nodes you have wired to. Go for a walk and check the progress.</p>
 </section>
@@ -1095,7 +1095,7 @@ Place your images in a directory named “images” (for example /my/project/ima
 <h4>Modify code<a class="headerlink" href="#modify-code" title="Link to this heading"></a></h4>
 <p>For our test today, we will attempt to upgrade Ceres Solver to version 2.2.0. Most external libraries like Ceres can be found in the Superbuild directory. In this case we edit SuperBuild/cmake/External-Ceres.cmake, and set it to use version 2.2.0</p>
 <figure class="align-default">
-<img alt="../_images/vimdiff_ceres_change.png" src="../_images/vimdiff_ceres_change.png" />
+<img alt="../_images/vimdiff_ceres_change.webp" src="../_images/vimdiff_ceres_change.webp" />
 </figure>
 <p>Now that we’ve made that small, but substantive change, we need to rebuild Ceres on the docker image for testing.</p>
 </section>

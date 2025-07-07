@@ -458,7 +458,7 @@
 <section id="creating-high-quality-orthophotos">
 <h2>Vytváření vysoce kvalitních ortofotomap<a class="headerlink" href="#creating-high-quality-orthophotos" title="Link to this heading"></a></h2>
 <figure class="align-center">
-<img alt="snímek ortofota OpenDroneMap" src="../_images/orthophoto.png" />
+<img alt="snímek ortofota OpenDroneMap" src="../_images/orthophoto.webp" />
 </figure>
 <p>Bez jakýchkoli úprav parametrů volí ODM dobrý kompromis mezi kvalitou, rychlostí a spotřebou paměti. Pokud chcete získat kvalitnější výsledky, musíte některé parametry upravit:</p>
 <blockquote>
@@ -473,7 +473,7 @@
 <h2>Vytváření digitálních výškových modelů<a class="headerlink" href="#creating-digital-elevation-models" title="Link to this heading"></a></h2>
 <p>By default ODM does not create digital elevation models (DEMs). To create a digital terrain model, make sure to pass the <code class="docutils literal notranslate"><span class="pre">--dtm</span></code> flag. To create a digital surface model, be sure to pass the <code class="docutils literal notranslate"><span class="pre">--dsm</span></code> flag.</p>
 <figure class="align-center">
-<img alt="obrázek digitálního modelu povrchu odvozeného z OpenDroneMap" src="../_images/digitalsurfacemodel.png" />
+<img alt="obrázek digitálního modelu povrchu odvozeného z OpenDroneMap" src="../_images/digitalsurfacemodel.webp" />
 </figure>
 <p>Pro generování DTM se používá jednoduchý morfologický filtr (smrf), který klasifikuje body na pozemní a nepozemní a používají se pouze pozemní body. Filtr <code class="docutils literal notranslate"><span class="pre">smrf</span></code> lze ovládat pomocí několika parametrů:</p>
 <blockquote>
@@ -488,7 +488,7 @@
 <p>Celkově má na výsledky největší vliv možnost <code class="docutils literal notranslate"><span class="pre">--smrf-threshold</span></code>.</p>
 <p>SMRF se dobře vyhýbá chybám typu I (malý počet zemních bodů chybně klasifikovaných jako nezemní), ale jen „přijatelně“ se vyhýbá chybám typu II (velký počet nezemních bodů chybně klasifikovaných jako zemní). To je třeba vzít v úvahu při generování DTM, které mají být použity vizuálně, protože objekty mylně považované za zem vypadají ve výsledném DTM jako artefakty.</p>
 <figure class="align-center">
-<img alt="obraz vlivu zkreslení objektivu na bowling dat" src="../_images/smrf.png" />
+<img alt="obraz vlivu zkreslení objektivu na bowling dat" src="../_images/smrf.webp" />
 </figure>
 <p>Generování DEM ovlivňují dva další důležité parametry:</p>
 <blockquote>
@@ -510,14 +510,14 @@
 <p>Kliknutím na ikonu fotoaparátu můžete také zobrazit jednotlivé snímky v rámečku v pravém horním rohu. Kliknutím na rámeček snímku se přepnete do režimu celé obrazovky.</p>
 <p>V rámci snímku jsou odkazy na stažení snímku a souboru kamery GeoJSON.</p>
 <figure class="align-center">
-<img alt="Umístění kamery" src="../_images/cameras.png" />
+<img alt="Umístění kamery" src="../_images/cameras.webp" />
 </figure>
 </section>
 <section id="textured-model">
 <h3>Texturovaný model<a class="headerlink" href="#textured-model" title="Link to this heading"></a></h3>
 <p>Aktivací této funkce zobrazíte načtení texturovaného modelu. V závislosti na velikosti souboru a rychlosti připojení může načtení trvat několik sekund.</p>
 <figure class="align-center">
-<img alt="Texturovaný model" src="../_images/texturedmodel.png" />
+<img alt="Texturovaný model" src="../_images/texturedmodel.webp" />
 </figure>
 </section>
 <section id="appearance">
@@ -532,7 +532,7 @@
 <h4>Zorné pole<a class="headerlink" href="#field-of-view" title="Link to this heading"></a></h4>
 <p>Za účelem kontroly prvků modelu, které mají být zahrnuty do scény, lze upravit zorné pole. Výchozí hodnota je nastavena na 60 stupňů.</p>
 <figure class="align-center">
-<img alt="Nastavení zorného pole" src="../_images/FOV_animation.gif" />
+<img alt="Nastavení zorného pole" src="../_images/FOV_animation.webp" />
 </figure>
 </section>
 <section id="eye-dome-lighting">
@@ -541,14 +541,14 @@
 <p>Eye Dome-lighting seskupuje objekty, stínuje jejich obrysy a zlepšuje vnímání hloubky ve vědeckých vizualizacích. Je užitečné pro rozpoznávání a měření struktur v modelu. Lze jej upravit nastavením poloměru, síly a krytí.</p>
 <p>Ve výchozím nastavení je funkce Eye Dome-Lighting v prohlížeči Potree 3D povolena, ale lze ji vypnout kliknutím na možnost povolit.</p>
 <figure class="align-center">
-<img alt="Nastavení osvětlení oční kopule" src="../_images/EDL_animation.gif" />
+<img alt="Nastavení osvětlení oční kopule" src="../_images/EDL_animation.webp" />
 </figure>
 </section>
 <section id="background">
 <h4>Pozadí<a class="headerlink" href="#background" title="Link to this heading"></a></h4>
 <p>Pozadí prohlížeče Potree 3D lze upravit. Dostupné možnosti jsou <strong>Skybox</strong> / <strong>Gradient</strong> / <strong>Černá</strong> / <strong>Bílá</strong> / <strong>Žádná</strong>.</p>
 <figure class="align-center">
-<img alt="Volba pozadí" src="../_images/Background_animation.gif" />
+<img alt="Volba pozadí" src="../_images/Background_animation.webp" />
 </figure>
 </section>
 <section id="other">
@@ -566,7 +566,7 @@
 <p>Modul Potree 3D viewer poskytuje několik nástrojů pro měření. Tato sada nástrojů se skládá z 12 prvků. Obsahuje také ovládací prvky pro zobrazení nebo skrytí výsledných popisek měření.</p>
 <p>Měření se provádí kliknutím levým tlačítkem myši na požadované body a u některých nástrojů je pro ukončení procesu nutné kliknutí pravým tlačítkem myši.</p>
 <figure class="align-center">
-<img alt="Nástroje - Měřící nástroje" src="../_images/measurement.png" />
+<img alt="Nástroje - Měřící nástroje" src="../_images/measurement.webp" />
 </figure>
 <p><strong>Úhel</strong></p>
 <p>Tento nástroj měří trojrozměrný úhel tvořený přímkami spojujícími 3 body. Chcete-li zahájit měření, klikněte na ikonu úhlu, poté klikněte levým tlačítkem myši na 3 body a proces se automaticky ukončí. Další informace získáte také výběrem tohoto prvku v sekci scéna.</p>
@@ -577,7 +577,7 @@
 <p><strong>Výška</strong></p>
 <p>Tento nástroj měří výšku nebo svislou vzdálenost mezi dvěma body. Chcete-li zahájit měření, klikněte na ikonu výšky a poté klikněte na požadované dva body. Proces se automaticky ukončí. Další informace získáte také výběrem tohoto prvku v sekci Scéna.</p>
 <figure class="align-center">
-<img alt="Height measurement" src="../_images/height_animation.gif" />
+<img alt="Height measurement" src="../_images/height_animation.webp" />
 </figure>
 <p><strong>Kruh</strong></p>
 <p>Tento nástroj měří poloměr kružnice tvořené třemi body. Chcete-li zahájit měření, klikněte na ikonu kružnice a poté klikněte na požadované dva body. Proces se automaticky ukončí. Další informace, jako je Obvod, lze získat také výběrem tohoto prvku v sekci Scéna.</p>
@@ -592,7 +592,7 @@
 <p><strong>Výškový profil</strong></p>
 <p>Tento nástroj vytvoří na modelu výškový profil tvořený čarou. Chcete-li zahájit měření, klikněte na ikonu Výškový profil a poté vytvořte na modelu čáru kliknutím na požadované body (dva nebo více). Měření ukončíte kliknutím pravým tlačítkem myši. Další informace a možnosti, například „Zobrazit 2d profil“, lze získat také výběrem tohoto prvku v sekci scény.</p>
 <figure class="align-center">
-<img alt="Height profile" src="../_images/height_profile.png" />
+<img alt="Height profile" src="../_images/height_profile.webp" />
 </figure>
 <p><strong>Poznámka</strong></p>
 <p>Tento nástroj vytvoří na zvýrazněném bodě modelu anotační štítek. Chcete-li zahájit měření, klikněte na ikonu anotace a poté klikněte na požadovaný bod. Proces se automaticky ukončí. Chcete-li anotaci upravit, vyberte tento prvek v sekci scény a poté upravte Nadpis a Popis.</p>
@@ -602,19 +602,19 @@
 <section id="clipping">
 <h4>Ořez<a class="headerlink" href="#clipping" title="Link to this heading"></a></h4>
 <figure class="align-center">
-<img alt="Tools - Clipping tools" src="../_images/clipping.png" />
+<img alt="Tools - Clipping tools" src="../_images/clipping.webp" />
 </figure>
 <p>Mračno bodů lze oříznout výběrem oblasti. Mezi možnosti oříznutí patří <strong>žádné</strong> / <strong>zvýraznění</strong> / <strong>vnitřní</strong> / <strong>vnější</strong>.</p>
 <p>Chcete-li mračno bodů oříznout, klikněte na ikonu oříznutí svazku, umístěte krychli na model a přemístěte ji, změňte její rozměry a otočte ji tak, aby obsahovala požadovanou oblast. Jako metoda oříznutí je ve výchozím nastavení nastaveno zvýraznění. Pokud chcete zobrazit pouze body obsažené v krychli, klikněte na „Inside“ (Uvnitř), v opačném případě klikněte na „Outside“ (Vně).</p>
 <p>Chcete-li odstranit ořezový objem nebo polygony, klikněte na ikonu „Odstranit všechna měření“.</p>
 <figure class="align-center">
-<img alt="Nástroje - Ořezávání" src="../_images/clipping_animation.gif" />
+<img alt="Nástroje - Ořezávání" src="../_images/clipping_animation.webp" />
 </figure>
 </section>
 <section id="navigation">
 <h4>Navigace<a class="headerlink" href="#navigation" title="Link to this heading"></a></h4>
 <figure class="align-center">
-<img alt="Nástroje - Ovládací prvky navigace" src="../_images/navigation.png" />
+<img alt="Nástroje - Ovládací prvky navigace" src="../_images/navigation.webp" />
 </figure>
 <p>Prohlížeč Potree 3D má 4 navigační ovládací prvky, které určují jeho chování.</p>
 <p><strong>Ovládání ze země</strong></p>
@@ -637,7 +637,7 @@
 <p>Tlačítko animace kamery vytvoří cestu animace kamery. Poloha kamery je definována body na zelené čáře, zatímco body na modré čáře představují místo, kam má kamera směřovat.</p>
 <p>Chcete-li vytvořit animaci, upravte body pro umístění kamery a směr kamery a poté vyberte prvek kamery v části Scéna a vytvořte další bod, změňte rychlost animace nebo animaci přehrajte.</p>
 <figure class="align-center">
-<img alt="Nástroje - Ovládací prvky navigace" src="../_images/camera_animation.gif" />
+<img alt="Nástroje - Ovládací prvky navigace" src="../_images/camera_animation.webp" />
 </figure>
 </section>
 </section>
@@ -647,7 +647,7 @@
 <p>Každý prvek v těchto skupinách lze vybrat a získat další informace nebo ovládat jeho vlastnosti.</p>
 <p>Například vlastnosti mračen bodů lze upravit tak, aby zobrazovaly nadmořskou výšku, a také lze přizpůsobit barevnou rampu.</p>
 <figure class="align-center">
-<img alt="Nástroje - Ovládací prvky navigace" src="../_images/pointcloud_elevation.png" />
+<img alt="Nástroje - Ovládací prvky navigace" src="../_images/pointcloud_elevation.webp" />
 </figure>
 </section>
 </section>
@@ -662,7 +662,7 @@
 <p>Most stockpile measurement jobs does not require a crosshatch pattern or angled gimbal as the resting angle of stockpile materials allows the camera to capture the entire stockpile sides. Only some special cases where erosion or machinery operations causes steep angles on the faces of the stockpile would benefit of the crosshatch flight pattern and angled camera gimbal but consider that these additional recognized features come at a cost, (in field labor and processing time) and the resulting improvements are sometimes negligible.</p>
 <p>Ve většině případů je letový model sekačky na trávu schopen vytvořit velmi přesné modely shromážěných snímků.</p>
 <figure class="align-center">
-<img alt="jednoduchý vzor letu sekačky na trávu může poskytnout přesné výsledky." src="../_images/lawnmower_pattern.png" />
+<img alt="jednoduchý vzor letu sekačky na trávu může poskytnout přesné výsledky." src="../_images/lawnmower_pattern.webp" />
 </figure>
 <p>Doporučené překrytí by se mělo pohybovat mezi 75 a 80 % s bočním překrytím v rozmezí 65 až 70 %. S rostoucí výškou letu se rovněž doporučuje mírně zvyšovat překrytí a boční odstup.</p>
 </section>
@@ -689,28 +689,28 @@
 <h3>Měření<a class="headerlink" href="#measuring" title="Link to this heading"></a></h3>
 <p>Vzhledem k tomu, že téměř 50 % materiálu se nachází v prvních 20 % výšky zásoby, je třeba věnovat zvláštní pozornost vhodnému vymezení základní roviny.</p>
 <figure class="align-center">
-<img alt="téměř 50 % materiálu se nachází v prvních 20 % výšky zásoby." src="../_images/stockpile.png" />
+<img alt="téměř 50 % materiálu se nachází v prvních 20 % výšky zásoby." src="../_images/stockpile.webp" />
 </figure>
 <p>V ovládacím panelu WebODM Dashboard klikněte na „zobrazit mapu“ a spusťte 2D zobrazení projektu.</p>
 <p>V zobrazení 2D mapy klikněte na tlačítko „Změřit objem, plochu a délku“.</p>
 <figure class="align-center">
-<img alt="klikněte na tlačítko &quot;Změřit objem, plochu a délku&quot;." src="../_images/measurement1.png" />
+<img alt="klikněte na tlačítko &quot;Změřit objem, plochu a délku&quot;." src="../_images/measurement1.webp" />
 </figure>
 <p>pak klikněte na „Vytvořit nové měření“.</p>
 <figure class="align-center">
-<img alt="klikněte na &quot;Vytvořit nové měření&quot;" src="../_images/measurement2.png" />
+<img alt="klikněte na &quot;Vytvořit nové měření&quot;" src="../_images/measurement2.webp" />
 </figure>
 <p>Začněte umísťovat body, abyste definovali základní rovinu zásoby.</p>
 <figure class="align-center">
-<img alt="Definice základní roviny zásob" src="../_images/measurement3.png" />
+<img alt="Definice základní roviny zásob" src="../_images/measurement3.webp" />
 </figure>
 <p>Kliknutím na „Dokončit měření“ proces dokončíte.</p>
 <figure class="align-center">
-<img alt="Proces dokončíte kliknutím na &quot;Dokončit měření&quot;." src="../_images/measurement4.png" />
+<img alt="Proces dokončíte kliknutím na &quot;Dokončit měření&quot;." src="../_images/measurement4.webp" />
 </figure>
 <p>V dialogovém okně se na několik sekund zobrazí zpráva „ Výpočet …“ a po dokončení výpočtu se zobrazí naměřená hodnota objemu.</p>
 <figure class="align-center">
-<img alt="Proces dokončíte kliknutím na &quot;Dokončit měření&quot;." src="../_images/measurement7.png" />
+<img alt="Proces dokončíte kliknutím na &quot;Dokončit měření&quot;." src="../_images/measurement7.webp" />
 </figure>
 <p>Pokud používáte příkazový řádek OpenDroneMap, můžete soubory dsm použít k měření objemů zásob pomocí jiných programů.</p>
 <p>Uvažte také, že jakmile jsou limity shromážděných snímků nastaveny v softwaru, jako je <a class="reference external" href="https://www.qgis.org">QGis</a>, zjistíte, že existují některé způsoby, jak určit základní rovinu. Takže pro izolované shromážděné snímky, jejichž hranice jsou většinou viditelné, lze použít lineární přístup. Zatímco u shromážděných snímcích nastavených ve svazích nebo v zásobnících je lepší určit základní rovinu pomocí nejnižšího bodu. Pro velké množstcví shromážděných snímků se doporučuje vytvořit trojúhelníkovou 3D plochu pro určení základní roviny. To platí i pro shromážděné snímky vytvořené na nepravidelných plochách.</p>
@@ -916,12 +916,12 @@ images folder for each project.</p></li>
 <h3>Kalibrace kamery<a class="headerlink" href="#calibrating-the-camera" title="Link to this heading"></a></h3>
 <p>Kalibrace fotoaparátů je u komoditních fotoaparátů zvláštní výzvou. Změny teploty, vibrace, zaostření a další faktory mohou ovlivnit odvozené parametry, což má zásadní vliv na výsledná data. Automatická nebo vlastní kalibrace je u letů dronů možná a žádoucí, ale v závislosti na průběhu letu nemusí automatická kalibrace odstranit z výsledných produktů všechna zkreslení. James a Robson (2014) se ve svém článku <a class="reference external" href="https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609">Mitigating systematic error in topographic models derived from UAV and ground-based image networks</a> zabývají tím, jak minimalizovat zkreslení způsobené autokalibrací.</p>
 <figure class="align-center">
-<img alt="obraz vlivu zkreslení objektivu na bowling dat" src="../_images/msimbasi_bowling.png" />
+<img alt="obraz vlivu zkreslení objektivu na bowling dat" src="../_images/msimbasi_bowling.webp" />
 </figure>
 <p><em>Efekt bowlingu na mračnu bodů nad sadou více než 13 000 snímků shromážděných Světovou bankou v Tanzanii nad povodím Msimbasi v Dar es Salaamu v Tanzanii, které je náchylné k povodním.</em></p>
 <p>Pro zmírnění tohoto efektu existuje několik možností, ale nejjednodušší jsou následující: letět se dvěma obrazci oddělenými od sebe o 20° a namísto nadiru (přímého směru dolů) použít kameru, která se naklání dopředu o 5°.</p>
 <figure class="align-center">
-<a class="reference internal image-reference" href="../_images/flightplanning.gif"><img alt="animace zobrazující optimum" src="../_images/flightplanning.gif" style="width: 640px; height: 480px;" />
+<a class="reference internal image-reference" href="../_images/flightplanning.webp"><img alt="animace zobrazující optimum" src="../_images/flightplanning.webp" style="width: 640px; height: 480px;" />
 </a>
 </figure>
 <p>As this approach takes longer than traditional imaging, pilots and teams may apply this technique to a smaller area and use the collected data to optimize future flights. OpenDroneMap can generate a calibration file called cameras.json from a small sample flight. The calibration file can be used for future flights, mitigating the bowling effect without sacrificing efficiency.</p>
@@ -931,11 +931,11 @@ images folder for each project.</p></li>
 <li><p>Chcete-li získat dobré výsledky 2D a 2,5D (digitální model reliéfu), budete potřebovat 42% překrytí a boční překrytí pro ekvivalentní 70% překrytí a boční překrytí.</p></li>
 </ul>
 <figure class="align-center">
-<img alt="animace zobrazující experimentální optimum" src="../_images/rotation.gif" />
+<img alt="animace zobrazující experimentální optimum" src="../_images/rotation.webp" />
 </figure>
 <p>Vertikálně oddělené letové linie také zlepšují přesnost, ale méně než kamera, která je natočena dopředu o 5°.</p>
 <figure class="align-center">
-<img alt="obrázek znázorňující vliv vertikálně oddělených letových linií a dopředu namířených kamer na zlepšení vlastní kalibrace." src="../_images/forward_facing.png" />
+<img alt="obrázek znázorňující vliv vertikálně oddělených letových linií a dopředu namířených kamer na zlepšení vlastní kalibrace." src="../_images/forward_facing.webp" />
 </figure>
 <p>Z James a Robson (2014), <a class="reference external" href="https://creativecommons.org/licenses/by/4.0">CC BY 4.0</a></p>
 </section>
@@ -944,13 +944,13 @@ images folder for each project.</p></li>
 <p>Starting from ODM <code class="docutils literal notranslate"><span class="pre">2.0</span></code> people can supply image masks to inform the software to skip reconstruction over certain areas. This is useful for cases where the sky was accidentally included in the input photos from oblique shots, or simply to limit the reconstruction of a single subject.</p>
 <p>To add a mask, simply create a new black and white image of the same dimension as the target image you want to mask (you can use a program such as GIMP to do this). Color in black the areas to exclude from the reconstruction.</p>
 <figure class="align-center">
-<img alt="Target image" src="https://user-images.githubusercontent.com/1951843/93247037-ade87a00-f75b-11ea-8b42-25bc1d89279d.png" />
+<img alt="Target image" src="https://user-images.githubusercontent.com/1951843/93247037-ade87a00-f75b-11ea-8b42-25bc1d89279d.webp" />
 </figure>
 <figure class="align-center">
-<img alt="Image mask" src="https://user-images.githubusercontent.com/1951843/93247007-a2954e80-f75b-11ea-87b3-4f04bd1737b9.png" />
+<img alt="Image mask" src="https://user-images.githubusercontent.com/1951843/93247007-a2954e80-f75b-11ea-87b3-4f04bd1737b9.webp" />
 </figure>
 <figure class="align-center">
-<img alt="3D result (building is masked)" src="https://user-images.githubusercontent.com/1951843/93246970-8f827e80-f75b-11ea-8179-5a8fdd9f5193.png" />
+<img alt="3D result (building is masked)" src="https://user-images.githubusercontent.com/1951843/93246970-8f827e80-f75b-11ea-8179-5a8fdd9f5193.webp" />
 </figure>
 <p>Name your file:</p>
 <p><code class="docutils literal notranslate"><span class="pre">&lt;filename&gt;_mask.JPG</span></code></p>
@@ -1054,14 +1054,14 @@ Place your images in a directory named “images” (for example /my/project/ima
 </div>
 <p>Replace user and hostname with your appropriate username and the hpc address. Basically, this command will tunnel the port of the hpc to your local port. After this, open a browser in your local machine and connect to <cite>http://localhost:10000</cite>. Port 10000 is where ClusterODM’s administrative web interface is hosted at. This is what it looks like:</p>
 <figure class="align-center">
-<img alt="Screenshot of ClusterODM's administrative web interface" src="https://user-images.githubusercontent.com/70782465/214938402-707bee90-ea17-4573-82f8-74096d9caf03.png" />
+<img alt="Screenshot of ClusterODM's administrative web interface" src="https://user-images.githubusercontent.com/70782465/214938402-707bee90-ea17-4573-82f8-74096d9caf03.webp" />
 </figure>
 <p>Here you can check the NodeODMs status and even add or delete working nodes.</p>
 <p>After that, do tunneling for port 3000 of the HPC to your local machine:</p>
 <p>ssh -L localhost:3000:localhost:3000 user&#64;hostname</p>
 <p>Port 3000 is ClusterODM’s proxy. This is the place we assign tasks to ClusterODM. Once again, connect to <cite>http://localhost:3000</cite> with your browser after tunneling. Here, you can Assign Tasks and observe the tasks‘ processes.</p>
 <figure class="align-center">
-<img alt="Screenshot of ClusterODM's jobs interface" src="https://user-images.githubusercontent.com/70782465/214938234-113f99dc-f69e-4e78-a782-deaf94e986b0.png" />
+<img alt="Screenshot of ClusterODM's jobs interface" src="https://user-images.githubusercontent.com/70782465/214938234-113f99dc-f69e-4e78-a782-deaf94e986b0.webp" />
 </figure>
 <p>After adding images in this browser, you can press Start Task and see ClusterODM assigning tasks to the nodes you have wired to. Go for a walk and check the progress.</p>
 </section>
@@ -1095,7 +1095,7 @@ Place your images in a directory named “images” (for example /my/project/ima
 <h4>Modify code<a class="headerlink" href="#modify-code" title="Link to this heading"></a></h4>
 <p>For our test today, we will attempt to upgrade Ceres Solver to version 2.2.0. Most external libraries like Ceres can be found in the Superbuild directory. In this case we edit SuperBuild/cmake/External-Ceres.cmake, and set it to use version 2.2.0</p>
 <figure class="align-default">
-<img alt="../_images/vimdiff_ceres_change.png" src="../_images/vimdiff_ceres_change.png" />
+<img alt="../_images/vimdiff_ceres_change.webp" src="../_images/vimdiff_ceres_change.webp" />
 </figure>
 <p>Now that we’ve made that small, but substantive change, we need to rebuild Ceres on the docker image for testing.</p>
 </section>

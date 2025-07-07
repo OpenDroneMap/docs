@@ -461,13 +461,13 @@
 <p>స్థానిక లేదా సాపేక్ష ఖచ్చితత్వాన్ని మ్యాప్‌లోని రెండు పాయింట్ల మధ్య దూరం వాస్తవ ప్రపంచంలో ఆ పాయింట్ల మధ్య దూరాలకు అనుగుణంగా ఉంటుంది.</p>
 <p>సాపేక్ష ఖచ్చితత్వం ప్రపంచంలోని మ్యాప్ యొక్క స్థానానికి స్వతంత్రంగా ఉంటుంది, కాబట్టి మ్యాప్ అధిక సాపేక్ష ఖచ్చితత్వాన్ని కలిగి ఉంటుంది (పరిమాణం మరియు ఆకారంలో) కానీ ప్రపంచంలో దాని స్థానాన్ని మార్చవచ్చు (మూర్తి 1).</p>
 <figure class="align-center">
-<img alt="Model showing high relative accuracy" src="../_images/rel_accuracy.png" />
+<img alt="Model showing high relative accuracy" src="../_images/rel_accuracy.webp" />
 </figure>
 <p><em>Figure 1. Model showing high relative accuracy but misplaced according to its real world position</em></p>
 <p>** సంపూర్ణ లేదా ప్రపంచ ఖచ్చితత్వం **</p>
 <p>సంపూర్ణ ఖచ్చితత్వం అంటే గ్రహం మీద దాని నిజమైన స్థానానికి సంబంధించి పునర్నిర్మాణం యొక్క ఖచ్చితత్వం (పిక్స్ 4 డి 2019). మూర్తి 2 సాపేక్ష మరియు సంపూర్ణ ఖచ్చితమైన నమూనాను చూపిస్తుంది, ఎందుకంటే పాయింట్లు దాని వాస్తవ ప్రపంచ స్థానం ప్రకారం సరిగ్గా ఉంచబడతాయి.</p>
 <figure class="align-center">
-<img alt="Model showing high absolute accuracy" src="../_images/abs_accuracy.png" />
+<img alt="Model showing high absolute accuracy" src="../_images/abs_accuracy.webp" />
 </figure>
 <p><em>Figure 2. Model showing high relative and absolute accuracy. Placed correctly according to its real world position</em></p>
 <p>** ప్రతి ప్రాజెక్ట్ కోసం ఖచ్చితత్వం స్థాయి **</p>
@@ -641,7 +641,7 @@
 </ol>
 <p><strong>Output example for aligned datasets:</strong></p>
 <figure class="align-center">
-<img alt="Animated gif comparing two separately processed, but aligned digital surface models." src="../_images/align_pc.gif" />
+<img alt="Animated gif comparing two separately processed, but aligned digital surface models." src="../_images/align_pc.webp" />
 </figure>
 <p>Animated gif comparing two separately processed, but aligned digital surface models.</p>
 <section id="plugin-time-sift">
@@ -682,7 +682,7 @@ to get example data.</p>
 </div>
 <p>It should make the Time-SIFT processing on the downloaded example data, stopping after the filtered dense clouds step.</p>
 <p>In the destination dir, you should obtain new directories, <code class="docutils literal notranslate"><span class="pre">0_before</span></code> and <code class="docutils literal notranslate"><span class="pre">1_after</span></code> at the same level as the <code class="docutils literal notranslate"><span class="pre">time-sift-block</span></code> directory. These new directories contain all the results natively co-registered.</p>
-<p>You can then use <a class="reference external" href="https://cloudcompare.org/">CloudCompare</a> to compute distance between the <code class="docutils literal notranslate"><span class="pre">datasets/0_before/odm_filterpoints/point_cloud.ply</span></code> and the <code class="docutils literal notranslate"><span class="pre">datasets/1_after/odm_filterpoints</span> <span class="pre">point_cloud.ply</span></code> and obtain this image showing the difference between the two 3D surfaces. Here, two soil samples were excavated as can be seen on the image below. <img alt="image1" src="https://forge.inrae.fr/Denis.Feurer/timesift-odm-data-example/-/raw/main/Example.png?ref_type=heads" /></p>
+<p>You can then use <a class="reference external" href="https://cloudcompare.org/">CloudCompare</a> to compute distance between the <code class="docutils literal notranslate"><span class="pre">datasets/0_before/odm_filterpoints/point_cloud.ply</span></code> and the <code class="docutils literal notranslate"><span class="pre">datasets/1_after/odm_filterpoints</span> <span class="pre">point_cloud.ply</span></code> and obtain this image showing the difference between the two 3D surfaces. Here, two soil samples were excavated as can be seen on the image below. <img alt="image1" src="https://forge.inrae.fr/Denis.Feurer/timesift-odm-data-example/-/raw/main/Example.webp?ref_type=heads" /></p>
 <section id="your-own-data">
 <h6>Your own data<a class="headerlink" href="#your-own-data" title="Link to this heading"></a></h6>
 <p>In your dataset directory (usually <code class="docutils literal notranslate"><span class="pre">datasets</span></code>, but you can have chosen another name) you have to prepare a Time-SIFT project directory (default name : <code class="docutils literal notranslate"><span class="pre">time-sift-block</span></code>, <em>can be tuned via a parameter</em>) that contains : * <code class="docutils literal notranslate"><span class="pre">images/</span></code> : a subdirectory with all images of all epochs. This directory name is fixed as it is the one expected by ODM *
