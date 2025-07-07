@@ -56,21 +56,21 @@ The following examples are all data taken with a standard Rectilinear Lens. Manu
 
 ``auto`` : Rectilinear Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. figure:: https://user-images.githubusercontent.com/19295950/127077336-ae79a958-a953-4376-86fd-430d0e5457f2.png
+.. figure:: https://user-images.githubusercontent.com/19295950/127077336-ae79a958-a953-4376-86fd-430d0e5457f2.webp
   :alt: Rectilinear data rendered by ``auto`` Camera Lens Model
 
   This Point Cloud shows a proper reconstruction via the ``auto`` (``brown``) Camera Lens Model, which is appropriate for this sensor.
 
 ``brown`` : Rectilinear Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. figure:: https://user-images.githubusercontent.com/19295950/127077753-580a174e-7572-4315-8801-224ce097d9fc.png
+.. figure:: https://user-images.githubusercontent.com/19295950/127077753-580a174e-7572-4315-8801-224ce097d9fc.webp
   :alt: Rectilinear data rendered by ``brown`` Camera Lens Model
 
   As in the prior example, this Point Cloud is reconstructed via the ``brown`` Camera Lens Model.
 
 ``fisheye`` : Rectilinear Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. figure:: https://user-images.githubusercontent.com/19295950/127077826-53d459fe-5e4e-4b10-8e70-fbddf775c4f7.png
+.. figure:: https://user-images.githubusercontent.com/19295950/127077826-53d459fe-5e4e-4b10-8e70-fbddf775c4f7.webp
   :alt: Rectilinear data rendered by ``fisheye`` Camera Lens Model
 
   In this Point Cloud reconstruction, severe bowling and other artifacts have been introduced via the use of the wrong Camera Lens Model.
@@ -78,7 +78,7 @@ The following examples are all data taken with a standard Rectilinear Lens. Manu
 ``perspective`` : Rectilinear Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: https://user-images.githubusercontent.com/19295950/127077485-699f9e61-72a6-45f2-990f-f5748b6ee99f.png
+.. figure:: https://user-images.githubusercontent.com/19295950/127077485-699f9e61-72a6-45f2-990f-f5748b6ee99f.webp
   :alt: Rectilinear data rendered by ``perspective`` Camera Lens Model
 
   This Point Cloud rendered well, very similar to the ``auto`` and ``brown`` examples. One may see artifacts in the ``perspective`` Camera Lens Model in very large collections, or over very flat/homogenus terrain (agricultural fields). In such cases, forcing ``brown`` may help.
@@ -86,7 +86,7 @@ The following examples are all data taken with a standard Rectilinear Lens. Manu
 ``spherical`` : Rectilinear Data
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-.. figure:: https://user-images.githubusercontent.com/19295950/127078960-27e35cbb-a378-4d0d-92e2-42dbfd1edd7c.png
+.. figure:: https://user-images.githubusercontent.com/19295950/127078960-27e35cbb-a378-4d0d-92e2-42dbfd1edd7c.webp
   :alt: Rectilinear data rendered by ``spherical`` Camera Lens Model
 
   This Point Cloud failed to reconstruct properly due to the manual selection of the ``fisheye`` Camera Lens Model. Similar failures to reconstruct can often indicate the wrong manual selection, or in edge cases, wrong ``auto`` selection of the Camera Lens Model, and you are advised to try another Model that is more appropriate.

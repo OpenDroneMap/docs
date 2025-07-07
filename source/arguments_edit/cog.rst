@@ -41,34 +41,34 @@ Example Images
 
 True: ``--cog``
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^
-.. figure:: https://user-images.githubusercontent.com/19295950/127079824-c85fa5a9-842a-4f28-a380-b6404aac7ef2.png
+.. figure:: https://user-images.githubusercontent.com/19295950/127079824-c85fa5a9-842a-4f28-a380-b6404aac7ef2.webp
   :alt: GDAL Info showing LAYOUT=COG
 
   The Raster Information tool in QGIS can print information from gdalinfo which can be used to confirm the conformance of a GeoTIFF to the COG spec.
 
-.. figure:: https://user-images.githubusercontent.com/19295950/138731905-d10483bd-b91b-4f63-bfb4-89c0f50bf74b.png
+.. figure:: https://user-images.githubusercontent.com/19295950/138731905-d10483bd-b91b-4f63-bfb4-89c0f50bf74b.webp
   :alt: QGIS Layer Properties showing Internal Overviews
 
   The Layer Properties panel can show that there are in fact internal overviews. Keep in mind that not every GeoTIFF has internal overviews, but every COG must.
 
-.. figure:: https://user-images.githubusercontent.com/19295950/138733095-fb5f07ef-fbb0-48f4-8401-25cbf5294b9d.png
+.. figure:: https://user-images.githubusercontent.com/19295950/138733095-fb5f07ef-fbb0-48f4-8401-25cbf5294b9d.webp
   :alt: QGIS Layer Properties showing an on-disk file size of 8.78 MB
 
   Note that the on-disk file size is 8.78 MB for the COG due to the presence of internal overviews when compared to the 6.30 MB of the non-COG GeoTIFF below.
 
 False: ``null``
 ^^^^^^^^^^^^^^^
-.. figure:: https://user-images.githubusercontent.com/19295950/127080115-7e09ba30-140f-402d-b00a-8bb0c7bc72ff.png
+.. figure:: https://user-images.githubusercontent.com/19295950/127080115-7e09ba30-140f-402d-b00a-8bb0c7bc72ff.webp
   :alt: GDAL Info not showing LAYOUT=COG
 
   The Raster Information tool in QGIS does not show LAYOUT=COG, which indicates that this GeoTIFF does not meet the COG spec.
 
-.. figure:: https://user-images.githubusercontent.com/19295950/138732051-d227c98d-10a5-46de-ac99-8c5ffb0a12b2.png
+.. figure:: https://user-images.githubusercontent.com/19295950/138732051-d227c98d-10a5-46de-ac99-8c5ffb0a12b2.webp
   :alt: QGIS Layer Properties not showing Internal Overviews
 
   The Layer Properties panel shows that the GeoTIFF lacks all levels of Internal Pyramids.
 
-.. figure:: https://user-images.githubusercontent.com/19295950/138733132-a9c4f8b4-673a-426b-a665-bde5e89e4de3.png
+.. figure:: https://user-images.githubusercontent.com/19295950/138733132-a9c4f8b4-673a-426b-a665-bde5e89e4de3.webp
   :alt: QGIS Layer Properties showing an on-disk file size of 6.30 MB
 
   Note that the on-disk file size is 6.30 MB for the COG due to the lack of internal overviews when compared to the 8.78 MB of the COG GeoTIFF above.

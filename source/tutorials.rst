@@ -10,7 +10,7 @@ Below you will find instructions for some common use cases.
 Creating High Quality Orthophotos
 *********************************
 
-.. figure:: images/orthophoto.png
+.. figure:: images/orthophoto.webp
    :alt: image of OpenDroneMap orthophoto
    :align: center
 
@@ -26,7 +26,7 @@ Creating Digital Elevation Models
 
 By default ODM does not create digital elevation models (DEMs). To create a digital terrain model, make sure to pass the ``--dtm`` flag. To create a digital surface model, be sure to pass the ``--dsm`` flag.
 
-.. figure:: images/digitalsurfacemodel.png
+.. figure:: images/digitalsurfacemodel.webp
    :alt: image of OpenDroneMap derived digital surface model
    :align: center
 
@@ -43,7 +43,7 @@ Overall the ``--smrf-threshold`` option has the biggest impact on results.
 
 SMRF is good at avoiding Type I errors (small number of ground points mistakenly classified as non-ground) but only "acceptable" at avoiding Type II errors (large number non-ground points mistakenly classified as ground). This needs to be taken in consideration when generating DTMs that are meant to be used visually, since objects mistaken for ground look like artifacts in the final DTM.
 
-.. figure:: images/smrf.png
+.. figure:: images/smrf.webp
    :alt: image of lens distortion effect on bowling of data
    :align: center
 
@@ -68,7 +68,7 @@ You can also click in the camera icon to display single images in a frame on the
 
 Within the image frame there are links to download the image and the GeoJSON camera file.
 
-.. figure:: images/cameras.png
+.. figure:: images/cameras.webp
    :alt: Camera locations
    :align: center
 
@@ -77,7 +77,7 @@ Textured model
 
 Activate this function to show load the textured model. Depending on the file size and connection speed, it may take several seconds to load.
 
-.. figure:: images/texturedmodel.png
+.. figure:: images/texturedmodel.webp
    :alt: Textured model
    :align: center
 
@@ -99,7 +99,7 @@ Field of view
 
 In order to control model elements to be included within the scene the field of view can be adjusted. Default value is set to 60 degrees.
 
-.. figure:: images/FOV_animation.gif
+.. figure:: images/FOV_animation.webp
    :alt: Field of view adjustment
    :align: center
 
@@ -113,7 +113,7 @@ Eye Dome-lighting group objects, shade their outlines and enhances depth percept
 
 By default, Eye Dome-Lighting is enabled on Potree 3D viewer, but it can be disabled by clicking on the enable option.
 
-.. figure:: images/EDL_animation.gif
+.. figure:: images/EDL_animation.webp
    :alt: Eye dome lighting adjustment
    :align: center
 
@@ -123,7 +123,7 @@ Background
 
 Potree 3D viewer background can be modified. Available options are **Skybox** / **Gradient** / **Black** / **White** / **None**
 
-.. figure:: images/Background_animation.gif
+.. figure:: images/Background_animation.webp
    :alt: Background selection
    :align: center
 
@@ -149,7 +149,7 @@ It also has controls for showing or hiding the resulting measurement labels.
 
 Measurements are performed by left clicking on the desired points and for some tools right clicking is needed in order to terminate the process.
 
-.. figure:: images/measurement.png
+.. figure:: images/measurement.webp
    :alt: Tools - Measurement tools
    :align: center
 
@@ -177,7 +177,7 @@ This tool measures the height or vertical distance between two points.
 To start a measurement, click on the height icon and then click on the desired two points. The process will be automatically ended.
 Further information can also be obtained from selecting this element under the scene section.
 
-.. figure:: images/height_animation.gif
+.. figure:: images/height_animation.webp
    :alt: Height measurement
    :align: center
 
@@ -217,7 +217,7 @@ This tool creates a height profile formed by a line on the model.
 To start a measurement, click on the Height profile icon and then form a line on the model by clicking on the desired points (two or more). Right click to finish measurement.
 Further information and options, such as "Show 2d Profile", can also been obtained from selecting this element under the scene section.
 
-.. figure:: images/height_profile.png
+.. figure:: images/height_profile.webp
    :alt: Height profile
    :align: center
 
@@ -237,7 +237,7 @@ Clipping
 ---------
 
 
-.. figure:: images/clipping.png
+.. figure:: images/clipping.webp
    :alt: Tools - Clipping tools
    :align: center
 
@@ -248,14 +248,14 @@ Highlight is set by default as the clipping method. If display only the points c
 
 To remove the clipping volume or polygons click on the "Remove all measurements" icon.
 
-.. figure:: images/clipping_animation.gif
+.. figure:: images/clipping_animation.webp
    :alt: Tools - Clipping
    :align: center
 
 Navigation
 -----------
 
-.. figure:: images/navigation.png
+.. figure:: images/navigation.webp
    :alt: Tools - Navigation controls
    :align: center
 
@@ -299,7 +299,7 @@ The camera animation button creates a camera animation path. Position of the cam
 
 To create an animation, adjust the points for the camera locations and camera direction, then select the camera element under the Scene section to create more point, change animation speed or play the animation.
 
-.. figure:: images/camera_animation.gif
+.. figure:: images/camera_animation.webp
    :alt: Tools - Navigation controls
    :align: center
 
@@ -315,7 +315,7 @@ Each element under these groups can be selected to get further information or to
 
 For instance, point clouds properties can be modified to show elevation and also the color ramp cam be customized.
 
-.. figure:: images/pointcloud_elevation.png
+.. figure:: images/pointcloud_elevation.webp
    :alt: Tools - Navigation controls
    :align: center
 
@@ -339,7 +339,7 @@ Most stockpile measurement jobs does not require a crosshatch pattern or angled 
 
 In most of the cases a lawn mower flight pattern is capable of producing highly accurate stockpile models.
 
-.. figure:: images/lawnmower_pattern.png
+.. figure:: images/lawnmower_pattern.webp
    :alt: a simple lawnmower flight pattern can produce accurate results
    :align: center
 
@@ -382,7 +382,7 @@ Measuring
 
 As almost 50% of the material will be found in the first 20% of the stockpile height, special care should be taken in adequately defining the base plane.
 
-.. figure:: images/stockpile.png
+.. figure:: images/stockpile.webp
    :alt: almost 50% of the material will be found in the first 20% of the stockpile height
    :align: center
 
@@ -390,31 +390,31 @@ In WebODM Dashboard, clic on "view map" to start a 2D view of your project.
 
 Once in the 2D map view, clic on the "Measure volume, area and length" button.
 
-.. figure:: images/measurement1.png
+.. figure:: images/measurement1.webp
    :alt: clic on the "Measure volume, area and length" button
    :align: center
 
 then clic on "Create a new measurement"
 
-.. figure:: images/measurement2.png
+.. figure:: images/measurement2.webp
    :alt: clic on "Create a new measurement"
    :align: center
 
 Start placing the points to define the stockpile base plane
 
-.. figure:: images/measurement3.png
+.. figure:: images/measurement3.webp
    :alt: Define the stockpile base plane
    :align: center
 
 Clic on "Finish measurement" to finish the process.
 
-.. figure:: images/measurement4.png
+.. figure:: images/measurement4.webp
    :alt: Clic on "Finish measurement" to finish the process
    :align: center
 
 Dialog box will show the  message "Computing ..." for a few seconds, and after the computing is finished the volume measurement value will be displayed.
 
-.. figure:: images/measurement7.png
+.. figure:: images/measurement7.webp
    :alt: Clic on "Finish measurement" to finish the process
    :align: center
 
@@ -790,7 +790,7 @@ Calibrating the Camera
 
 Camera calibration is a special challenge with commodity cameras. Temperature changes, vibrations, focus, and other factors can affect the derived parameters with substantial effects on resulting data. Automatic or self calibration is possible and desirable with drone flights, but depending on the flight pattern, automatic calibration may not remove all distortion from the resulting products. James and Robson (2014) in their paper `Mitigating systematic error in topographic models derived from UAV and ground‐based image networks <https://onlinelibrary.wiley.com/doi/full/10.1002/esp.3609>`_ address how to minimize the distortion from self-calibration.
 
-.. figure:: images/msimbasi_bowling.png
+.. figure:: images/msimbasi_bowling.webp
    :alt: image of lens distortion effect on bowling of data
    :align: center
 
@@ -798,7 +798,7 @@ Camera calibration is a special challenge with commodity cameras. Temperature ch
 
 To mitigate this effect, there are a few options but the simplest are as follows: fly two patterns separated by 20°, and rather than having a nadir (straight down pointing) camera, use one that tilts forward by 5°.
 
-.. figure:: images/flightplanning.gif
+.. figure:: images/flightplanning.webp
   :alt: animation showing optimum
   :align: center
   :height: 480
@@ -811,13 +811,13 @@ Alternatively, the following experimental method can be applied: fly with much l
 * Crossgrid overlap percentages can be lower than parallel flights. To get good 3D results, you will require 68% overlap and sidelap for an equivalent 83% overlap and sidelap.
 * To get good 2D and 2.5D (digital elevation model) results, you will require 42% overlap and sidelap for an equivalent 70% overlap and sidelap.
 
-.. figure:: images/rotation.gif
+.. figure:: images/rotation.webp
   :alt: animation showing experimental optimum
   :align: center
 
 Vertically separated flight lines also improve accuracy, but less so than a camera that is forward facing by 5°.
 
-.. figure:: images/forward_facing.png
+.. figure:: images/forward_facing.webp
    :alt: figure showing effect of vertically separated flight lines and forward facing cameras on improving self calibration
    :align: center
 
@@ -831,16 +831,16 @@ Starting from ODM ``2.0`` people can supply image masks to inform the software t
 
 To add a mask, simply create a new black and white image of the same dimension as the target image you want to mask (you can use a program such as GIMP to do this). Color in black the areas to exclude from the reconstruction. 
 
-.. figure:: https://user-images.githubusercontent.com/1951843/93247037-ade87a00-f75b-11ea-8b42-25bc1d89279d.png
+.. figure:: https://user-images.githubusercontent.com/1951843/93247037-ade87a00-f75b-11ea-8b42-25bc1d89279d.webp
    :alt: Target image
    :align: center
 
-.. figure:: https://user-images.githubusercontent.com/1951843/93247007-a2954e80-f75b-11ea-87b3-4f04bd1737b9.png
+.. figure:: https://user-images.githubusercontent.com/1951843/93247007-a2954e80-f75b-11ea-87b3-4f04bd1737b9.webp
    :alt: Image mask
    :align: center
 
 
-.. figure:: https://user-images.githubusercontent.com/1951843/93246970-8f827e80-f75b-11ea-8179-5a8fdd9f5193.png
+.. figure:: https://user-images.githubusercontent.com/1951843/93246970-8f827e80-f75b-11ea-8179-5a8fdd9f5193.webp
    :alt: 3D result (building is masked)
    :align: center
 
@@ -986,7 +986,7 @@ After finish hosting ClusterODM on the head node and finish wiring it to the Nod
 
 Replace user and hostname with your appropriate username and the hpc address. Basically, this command will tunnel the port of the hpc to your local port. After this, open a browser in your local machine and connect to `http://localhost:10000`. Port 10000 is where ClusterODM's administrative web interface is hosted at. This is what it looks like:
 
-.. figure:: https://user-images.githubusercontent.com/70782465/214938402-707bee90-ea17-4573-82f8-74096d9caf03.png
+.. figure:: https://user-images.githubusercontent.com/70782465/214938402-707bee90-ea17-4573-82f8-74096d9caf03.webp
    :alt: Screenshot of ClusterODM's administrative web interface
    :align: center
 
@@ -1001,7 +1001,7 @@ ssh -L localhost:3000:localhost:3000 user@hostname
 
 Port 3000 is ClusterODM's proxy. This is the place we assign tasks to ClusterODM. Once again, connect to `http://localhost:3000` with your browser after tunneling. Here, you can Assign Tasks and observe the tasks' processes.
 
-.. figure:: https://user-images.githubusercontent.com/70782465/214938234-113f99dc-f69e-4e78-a782-deaf94e986b0.png
+.. figure:: https://user-images.githubusercontent.com/70782465/214938234-113f99dc-f69e-4e78-a782-deaf94e986b0.webp
    :alt: Screenshot of ClusterODM's jobs interface
    :align: center
 
@@ -1044,7 +1044,7 @@ Modify code
 
 For our test today, we will attempt to upgrade Ceres Solver to version 2.2.0. Most external libraries like Ceres can be found in the Superbuild directory. In this case we edit SuperBuild/cmake/External-Ceres.cmake, and set it to use version 2.2.0
 
-.. figure:: images/vimdiff_ceres_change.png
+.. figure:: images/vimdiff_ceres_change.webp
 
 Now that we've made that small, but substantive change, we need to rebuild Ceres on the docker image for testing.
 
