@@ -30,7 +30,7 @@ const load = async () => {
     const mermaids_to_add_zoom = 1 === -1 ? all_mermaids.length : 1;
     const mermaids_processed = document.querySelectorAll(".mermaid[data-processed='true']");
     if(mermaids_to_add_zoom > 0) {
-        var svgs = d3.selectAll(".mermaid[data-zoom-id=id-4110da54-ae57-4c07-90d0-f798635daae1] svg");
+        var svgs = d3.selectAll(".mermaid[data-zoom-id=id-40e53a49-14b3-483d-b659-454c68af78f5] svg");
         if(all_mermaids.length !== mermaids_processed.length) {
             // try again in a sec, wait for mermaids to load
             setTimeout(load, 200);
@@ -491,7 +491,7 @@ window.addEventListener("load", load);
              
   <section id="flowchart-with-options">
 <h1>Flowchart with options<a class="headerlink" href="#flowchart-with-options" title="Link to this heading"></a></h1>
-<pre data-zoom-id="id-4110da54-ae57-4c07-90d0-f798635daae1" class="mermaid">
+<pre data-zoom-id="id-40e53a49-14b3-483d-b659-454c68af78f5" class="mermaid">
          flowchart  TB
 
 

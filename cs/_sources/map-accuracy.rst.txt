@@ -313,7 +313,11 @@ It should make the Time-SIFT processing on the downloaded example data, stopping
 
 In the destination dir, you should obtain new directories, ``0_before`` and ``1_after`` at the same level as the ``time-sift-block`` directory. These new directories contain all the results natively co-registered.
 
-You can then use `CloudCompare <https://cloudcompare.org/>`__ to compute distance between the ``datasets/0_before/odm_filterpoints/point_cloud.ply`` and the ``datasets/1_after/odm_filterpoints point_cloud.ply`` and obtain this image showing the difference between the two 3D surfaces. Here, two soil samples were excavated as can be seen on the image below. |image1|
+You can then use `CloudCompare <https://cloudcompare.org/>`__ to compute distance between the ``datasets/0_before/odm_filterpoints/point_cloud.ply`` and the ``datasets/1_after/odm_filterpoints point_cloud.ply`` and obtain this image showing the difference between the two 3D surfaces. Here, two soil samples were excavated as can be seen on the image below.
+.. figure:: images/timeSIFTexampleSoilExcavation.webp
+   :alt: Distance between two point clouds showing soil surface before and after soil excavation (soil sampling for bulk density measurement).
+   :align: center
+
 
 Your own data
 ~~~~~~~~~~~~~
