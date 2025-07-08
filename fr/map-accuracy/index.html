@@ -682,18 +682,10 @@ to get example data.</p>
 </div>
 <p>It should make the Time-SIFT processing on the downloaded example data, stopping after the filtered dense clouds step.</p>
 <p>In the destination dir, you should obtain new directories, <code class="docutils literal notranslate"><span class="pre">0_before</span></code> and <code class="docutils literal notranslate"><span class="pre">1_after</span></code> at the same level as the <code class="docutils literal notranslate"><span class="pre">time-sift-block</span></code> directory. These new directories contain all the results natively co-registered.</p>
-<p>You can then use <a class="reference external" href="https://cloudcompare.org/">CloudCompare</a> to compute distance between the <code class="docutils literal notranslate"><span class="pre">datasets/0_before/odm_filterpoints/point_cloud.ply</span></code> and the <code class="docutils literal notranslate"><span class="pre">datasets/1_after/odm_filterpoints</span> <span class="pre">point_cloud.ply</span></code> and obtain this image showing the difference between the two 3D surfaces. Here, two soil samples were excavated as can be seen on the image below.
-.. figure:: images/timeSIFTexampleSoilExcavation.webp</p>
-<blockquote>
-<div><dl class="field-list simple">
-<dt class="field-odd">alt<span class="colon">:</span></dt>
-<dd class="field-odd"><p>Distance between two point clouds showing soil surface before and after soil excavation (soil sampling for bulk density measurement).</p>
-</dd>
-<dt class="field-even">align<span class="colon">:</span></dt>
-<dd class="field-even"><p>center</p>
-</dd>
-</dl>
-</div></blockquote>
+<p>You can then use <a class="reference external" href="https://cloudcompare.org/">CloudCompare</a> to compute distance between the <code class="docutils literal notranslate"><span class="pre">datasets/0_before/odm_filterpoints/point_cloud.ply</span></code> and the <code class="docutils literal notranslate"><span class="pre">datasets/1_after/odm_filterpoints</span> <span class="pre">point_cloud.ply</span></code> and obtain this image showing the difference between the two 3D surfaces. Here, two soil samples were excavated as can be seen on the image below.</p>
+<figure class="align-center">
+<img alt="Distance between two point clouds showing soil surface before and after soil excavation (soil sampling for bulk density measurement)." src="../_images/timeSIFTexampleSoilExcavation.webp" />
+</figure>
 <section id="your-own-data">
 <h6>Your own data<a class="headerlink" href="#your-own-data" title="Lien vers cette rubrique"></a></h6>
 <p>In your dataset directory (usually <code class="docutils literal notranslate"><span class="pre">datasets</span></code>, but you can have chosen another name) you have to prepare a Time-SIFT project directory (default name : <code class="docutils literal notranslate"><span class="pre">time-sift-block</span></code>, <em>can be tuned via a parameter</em>) that contains : * <code class="docutils literal notranslate"><span class="pre">images/</span></code> : a subdirectory with all images of all epochs. This directory name is fixed as it is the one expected by ODM *
