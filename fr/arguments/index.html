@@ -244,6 +244,7 @@
 <li class="toctree-l2"><a class="reference internal" href="geo/">geo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gltf/">gltf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="gps-accuracy/">gps-accuracy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gps-z-offset/">gps-z-offset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="help/">help</a></li>
 <li class="toctree-l2"><a class="reference internal" href="ignore-gsd/">ignore-gsd</a></li>
 <li class="toctree-l2"><a class="reference internal" href="matcher-neighbors/">matcher-neighbors</a></li>
@@ -509,6 +510,8 @@
 </dd>
 <dt><a class="reference internal" href="gps-accuracy/#gps-accuracy"><span class="std std-ref">gps-accuracy</span></a> &lt;positive float&gt;</dt><dd><p>Set a value in meters for the GPS Dilution of Precision (DOP) information for all images. If your images are tagged with high precision GPS information (RTK), this value will be automatically set accordingly. You can use this option to manually set it in case the reconstruction fails. Lowering this option can sometimes help control bowling-effects over large areas. Default: <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
 </dd>
+<dt><a class="reference internal" href="gps-z-offset/#gps-z-offset"><span class="std std-ref">gps-z-offset</span></a> &lt;float&gt;</dt><dd><p>Set a GPS offset in meters for the vertical axis (Z) by adding it to the altitude value of the GPS EXIF data. This does not change the value of any GCPs. This can be useful for example when adjusting from ellipsoidal to orthometric height. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
 <dt><a class="reference internal" href="help/#help"><span class="std std-ref">help</span></a></dt><dd><p>Montrer le message d’aide et sortir</p>
 </dd>
 <dt><a class="reference internal" href="ignore-gsd/#ignore-gsd"><span class="std std-ref">ignore-gsd</span></a></dt><dd><p>Ignore Ground Sampling Distance (GSD).A memory and processor hungry change relative to the default behavior if set to true. Ordinarily, GSD estimates are used to cap the maximum resolution of image outputs and resizes images when necessary, resulting in faster processing and lower memory usage. Since GSD is an estimate, sometimes ignoring it can result in slightly better image output quality. Never set –ignore-gsd to true unless you are positive you need it, and even then: do not use it. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
@@ -613,7 +616,7 @@
 </dd>
 <dt><a class="reference internal" href="split-image-groups/#split-image-groups"><span class="std std-ref">split-image-groups</span></a> &lt;path string&gt;</dt><dd><p>Chemin d’accès au fichier des groupes d’images qui contrôle la façon dont les images doivent être divisées en groupes. Le fichier doit utiliser le format suivant : nom_image nom_groupe Par défaut : <code class="docutils literal notranslate"><span class="pre">Aucun</span></code></p>
 </dd>
-<dt><a class="reference internal" href="split-overlap/#split-overlap"><span class="std std-ref">split-overlap</span></a> &lt;positive integer&gt;</dt><dd><p>Rayon du chevauchement entre les sous-modèles. Après avoir regroupé les images en clusters, les images plus proches que ce rayon d’un cluster sont ajoutées au cluster. Ceci est fait pour s’assurer que les sous-modèles voisins se chevauchent. Par défaut : <code class="docutils literal notranslate"><span class="pre">150</span></code></p>
+<dt><a class="reference internal" href="split-overlap/#split-overlap"><span class="std std-ref">split-overlap</span></a> &lt;positive integer&gt;</dt><dd><p>Radius of the overlap between submodels in meters. After grouping images into clusters, images that are closer than this radius to a cluster are added to the cluster. This is done to ensure that neighboring submodels overlap. All imagesneed GPS information. Default: <code class="docutils literal notranslate"><span class="pre">150</span></code></p>
 </dd>
 <dt><a class="reference internal" href="texturing-keep-unseen-faces/#texturing-keep-unseen-faces"><span class="std std-ref">texturing-keep-unseen-faces</span></a></dt><dd><p>Keep faces in the mesh that are not seen in any camera. Default:  <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
 </dd>
@@ -670,6 +673,7 @@
 <li class="toctree-l1"><a class="reference internal" href="geo/">geo</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gltf/">gltf</a></li>
 <li class="toctree-l1"><a class="reference internal" href="gps-accuracy/">gps-accuracy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gps-z-offset/">gps-z-offset</a></li>
 <li class="toctree-l1"><a class="reference internal" href="help/">help</a></li>
 <li class="toctree-l1"><a class="reference internal" href="ignore-gsd/">ignore-gsd</a></li>
 <li class="toctree-l1"><a class="reference internal" href="matcher-neighbors/">matcher-neighbors</a></li>

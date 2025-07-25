@@ -29,7 +29,7 @@ const load = async () => {
     const mermaids_to_add_zoom = 1 === -1 ? all_mermaids.length : 1;
     const mermaids_processed = document.querySelectorAll(".mermaid[data-processed='true']");
     if(mermaids_to_add_zoom > 0) {
-        var svgs = d3.selectAll(".mermaid[data-zoom-id=id-fef16ecc-b962-46fb-927d-8f90b4ee8e31] svg");
+        var svgs = d3.selectAll(".mermaid[data-zoom-id=id-2349c09b-56d7-4857-b62b-a9777dd9ec7c] svg");
         if(all_mermaids.length !== mermaids_processed.length) {
             // try again in a sec, wait for mermaids to load
             setTimeout(load, 200);
@@ -280,6 +280,7 @@ window.addEventListener("load", load);
 <li class="toctree-l2"><a class="reference internal" href="../arguments/geo/">geo</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/gltf/">gltf</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/gps-accuracy/">gps-accuracy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/gps-z-offset/">gps-z-offset</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/help/">help</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/ignore-gsd/">ignore-gsd</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/matcher-neighbors/">matcher-neighbors</a></li>
@@ -490,7 +491,7 @@ window.addEventListener("load", load);
              
   <section id="flowchart-with-options">
 <h1>Flowchart with options<a class="headerlink" href="#flowchart-with-options" title="Link to this heading"></a></h1>
-<pre data-zoom-id="id-fef16ecc-b962-46fb-927d-8f90b4ee8e31" class="mermaid">
+<pre data-zoom-id="id-2349c09b-56d7-4857-b62b-a9777dd9ec7c" class="mermaid">
          flowchart  TB
 
 

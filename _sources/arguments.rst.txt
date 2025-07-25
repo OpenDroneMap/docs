@@ -89,6 +89,9 @@ Options and Flags
 :ref:`gps-accuracy<gps-accuracy>` <positive float>
   Set a value in meters for the GPS Dilution of Precision (DOP) information for all images. If your images are tagged with high precision GPS information (RTK), this value will be automatically set accordingly. You can use this option to manually set it in case the reconstruction fails. Lowering this option can sometimes help control bowling-effects over large areas. Default: ``3``
 
+:ref:`gps-z-offset<gps-z-offset>` <float>
+  Set a GPS offset in meters for the vertical axis (Z) by adding it to the altitude value of the GPS EXIF data. This does not change the value of any GCPs. This can be useful for example when adjusting from ellipsoidal to orthometric height. Default: ``0``
+
 :ref:`help<help>` 
   show this help message and exit
 
@@ -246,7 +249,7 @@ Options and Flags
   Path to the image groups file that controls how images should be split into groups. The file needs to use the following format: image_name group_nameDefault: ``None``
 
 :ref:`split-overlap<split-overlap>` <positive integer>
-  Radius of the overlap between submodels. After grouping images into clusters, images that are closer than this radius to a cluster are added to the cluster. This is done to ensure that neighboring submodels overlap. Default: ``150``
+  Radius of the overlap between submodels in meters. After grouping images into clusters, images that are closer than this radius to a cluster are added to the cluster. This is done to ensure that neighboring submodels overlap. All imagesneed GPS information. Default: ``150``
 
 :ref:`texturing-keep-unseen-faces<texturing-keep-unseen-faces>` 
   Keep faces in the mesh that are not seen in any camera. Default:  ``False``
