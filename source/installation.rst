@@ -375,7 +375,7 @@ You should see somethings similar to the following:
 	docker compose version 24.0.5, build ced0996600
 	
 
-Step 3. Download and Launch WebODM
+Step 3a. Download and Launch WebODM
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 From a terminal type:
@@ -387,6 +387,140 @@ From a terminal type:
 	$ ./webodm.sh start
 	
 Then open a web browser to http://localhost:8000.
+
+Step 3b. Start Docker Compose stack
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+
+copy the following 3 files into a newly created folder:
+
+The ``config-default.json``:
+
+.. code:: json
+	
+	{
+		"instance": "node-OpenDroneMap",
+		"odm_path": "/code",
+	
+		"logger": {
+			"level": "info",
+			"maxFileSize": 104857600,
+			"maxFiles": 10,
+			"logDirectory": ""
+		},
+	
+		"port": "auto",
+		"deamon": false,
+		"parallelQueueProcessing": 8,
+		"cleanupTasksAfter": 2880,
+		"test": false,
+		"testSkipOrthophotos": false,
+		"testSkipDems": false,
+		"token": "",
+		"authorizedIps": [],
+		"maxImages": ""
+	}
+
+The ``init.sql``:
+
+.. code:: sql
+
+	CREATE EXTENSION postgis_raster;
+	SET postgis.gdal_enabled_drivers = 'ENABLE_ALL';
+
+And finally the ``compose.yml``:
+
+.. code:: yml
+
+	services:
+	  webodm-node-odm-1:
+	    image: opendronemap/nodeodm:gpu
+	    container_name: webodm-node-odm-1
+	    ports:
+	      - "3000:3000"
+	    volumes:
+	      - ./config-default.json:/var/www/config-default.json
+	    privileged: true
+	    restart: unless-stopped
+	    deploy:
+	      resources:
+	        reservations:
+	          devices:
+	            - driver: nvidia
+	              capabilities: [gpu]
+
+	  webapp-odm:
+	    image: opendronemap/webodm_webapp
+	    container_name: webapp
+	    entrypoint: /bin/bash -c "service cron start && chmod +x /webodm/*.sh && /bin/bash -c \"/webodm/wait-for-it.sh -t 0 redis-odm:6379 -- /webodm/start.sh\" && python manage.py migrate"
+		restart: always
+	    volumes:
+	      - ./data/webodm:/webodm/app/media:z
+	    ports:
+	      - "8000:8000"
+	    depends_on:
+	      - db-odm
+	      - redis-odm
+	      - webodm-node-odm-1
+	    environment:
+	      - WO_BROKER=redis://redis-odm
+	      - WO_DEFAULT_NODES=1
+	      - WO_HOST=localhost
+	      - WO_PORT=8000
+	      - WO_MEDIA_DIR=appmedia
+	      - WO_DB_DIR=dbdata
+	      - WO_SSL=NO
+	      - WO_SSL_INSECURE_PORT_REDIRECT=80
+	      - WO_DATABASE_HOST=db-odm
+	      - WO_DATABASE_NAME=webodm_dev
+	      - WO_DATABASE_USER=postgres
+	      - WO_DATABASE_PASSWORD=postgres
+
+	  redis-odm:
+	    image: redis:alpine
+	    container_name: redis-odm
+	    restart: always
+
+	  db-odm:
+	    image: postgis/postgis:17-3.5-alpine
+	    container_name: db-odm
+	    restart: always
+	    volumes:
+	      - ./data/odm-db:/var/lib/postgresql/data
+	      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+	    environment:
+	      - POSTGRES_USER=postgres
+	      - POSTGRES_PASSWORD=postgres
+	      - POSTGRES_DB=webodm_dev
+	    healthcheck:
+	      test: [ "CMD", "pg_isready", "-q", "-d", "webodm_dev", "-U", "postgres"]
+	      timeout: 45s
+	      interval: 20s
+	      retries: 5
+
+	  worker:
+	    image: opendronemap/webodm_webapp
+	    container_name: worker
+	    entrypoint: /bin/bash -c "/webodm/wait-for-it.sh -t 0 redis-odm:6379 -- /webodm/wait-for-it.sh -t 0 webapp-odm:8000 -- /webodm/worker.sh start"
+		restart: always
+	    volumes:
+	      - ./data/webodm:/webodm/app/media:z
+	    depends_on:
+	      - redis-odm
+	      - db-odm
+	    environment:
+	      - WO_BROKER=redis://redis-odm
+	      - WO_DATABASE_HOST=db-odm
+	      - WO_DATABASE_NAME=webodm_dev
+	      - WO_DATABASE_USER=postgres
+	      - WO_DATABASE_PASSWORD=postgres
+
+Finally, start the stack using ``docker compose up -d``.
+You can now access WebODM at http://localhost:8000 and the nodeODM at http://localhost:3000.
+
+To view logs of the services use ``docker compose logs``
+
+To shut down the services run ``docker compose down``.
+
 
 Basic Commands and Troubleshooting
 ----------------------------------
@@ -433,7 +567,8 @@ Other useful commands are listed below:
 Hello, WebODM!
 --------------
 
-After running ./webodm.sh start and opening WebODM in the browser, you will be greeted with a welcome message and will be asked to create the first user. Take some time to familiarize yourself with the web interface and explore its various menus.
+After starting the containers using 3a. or 3b. you can open WebODM in the browser.
+This will greet you with a welcome message and will ask to create the first user. Take some time to familiarize yourself with the web interface and explore its various menus.
 
 .. figure:: images/webodmdashboard.webp
    :alt: Screenshot of WebODM Dashboard
