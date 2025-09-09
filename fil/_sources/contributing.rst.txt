@@ -10,7 +10,7 @@ alignment with the needs of its users.
 
 OpenDroneMap is FOSS software.  Free and open source (FOSS) projects are interesting
 from the inside and outside: from the outside, successful ones feel like they should be able
-to do anything, and itâ€™s hard to know what a reasonable request is. From the inside of a
+to do anything, and it's hard to know what a reasonable request is. From the inside of a
 project, they can feel very resource constrained: largely by time, money, and opportunity
 overload.
 
@@ -32,11 +32,11 @@ And importantly, the trick is to listen: if someone within the project says: "Th
 we need MONEY or TIME or SOMEONE TO HELP CODE IT" (or possibly a combination of the three)
 then there are two answers that work really well in response:
 
-    *Ok. I didnâ€™t know it was a big feature request! I hope someone comes along with the necessary resources. As a community member, I would be happy to be an early user and tester!*
+    *Ok. I didn't know it was a big feature request! I hope someone comes along with the necessary resources. As a community member, I would be happy to be an early user and tester!*
 
 or
 
-    *Letâ€™s figure out if we can put together the resources to get this done! Hereâ€™s what I can contribute toward it: â€¦*
+    *Let's figure out if we can put together the resources to get this done! Here's what I can contribute toward it: €¦$...*
 
 We are glad you are excited to see new features added to the project.  Some new features need support,
 and some are easier to implement.  We'll do our best to help you understand where your request falls, and
