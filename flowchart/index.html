@@ -29,7 +29,7 @@ const load = async () => {
     const mermaids_to_add_zoom = 1 === -1 ? all_mermaids.length : 1;
     const mermaids_processed = document.querySelectorAll(".mermaid[data-processed='true']");
     if(mermaids_to_add_zoom > 0) {
-        var svgs = d3.selectAll(".mermaid[data-zoom-id=id-2ad79c0b-3ff4-4076-b80e-ba9571d2431a] svg");
+        var svgs = d3.selectAll(".mermaid[data-zoom-id=id-c4468e40-8db0-4575-a1ad-096c4400d95c] svg");
         if(all_mermaids.length !== mermaids_processed.length) {
             // try again in a sec, wait for mermaids to load
             setTimeout(load, 200);
@@ -103,7 +103,8 @@ window.addEventListener("load", load);
 <li class="toctree-l3"><a class="reference internal" href="../installation/#linux">Linux</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-install-requirements">Step 1. Install Requirements</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-check-additional-requirements">Step 2. Check Additional Requirements</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-download-and-launch-webodm">Step 3. Download and Launch WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3a-download-and-launch-webodm">Step 3a. Download and Launch WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3b-start-docker-compose-stack">Step 3b. Start Docker Compose stack</a></li>
 </ul>
 </li>
 </ul>
@@ -491,7 +492,7 @@ window.addEventListener("load", load);
              
   <section id="flowchart-with-options">
 <h1>Flowchart with options<a class="headerlink" href="#flowchart-with-options" title="Link to this heading"></a></h1>
-<pre data-zoom-id="id-2ad79c0b-3ff4-4076-b80e-ba9571d2431a" class="mermaid">
+<pre data-zoom-id="id-c4468e40-8db0-4575-a1ad-096c4400d95c" class="mermaid">
          flowchart  TB
 
 

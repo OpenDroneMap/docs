@@ -67,7 +67,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#step-1-install-requirements">Langkah 1. Instal Persyaratan</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#step-2-check-additional-requirements">Langkah 2. Periksa Persyaratan Tambahan</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-3-download-and-launch-webodm">Langkah 3. Unduh dan Jalankan WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3a-download-and-launch-webodm">Step 3a. Download and Launch WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3b-start-docker-compose-stack">Step 3b. Start Docker Compose stack</a></li>
 </ul>
 </li>
 </ul>
@@ -759,8 +760,8 @@ $<span class="w"> </span>sudo<span class="w"> </span>dnf<span class="w"> </span>
 </pre></div>
 </div>
 </section>
-<section id="step-3-download-and-launch-webodm">
-<h4>Langkah 3. Unduh dan Jalankan WebODM<a class="headerlink" href="#step-3-download-and-launch-webodm" title="Link to this heading"></a></h4>
+<section id="step-3a-download-and-launch-webodm">
+<h4>Step 3a. Download and Launch WebODM<a class="headerlink" href="#step-3a-download-and-launch-webodm" title="Link to this heading"></a></h4>
 <p>Dari tipe terminal:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/OpenDroneMap/WebODM
 $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>WebODM
@@ -768,6 +769,129 @@ $<span class="w"> </span>./webodm.sh<span class="w"> </span>start
 </pre></div>
 </div>
 <p>Kemudian buka browser web ke <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
+</section>
+<section id="step-3b-start-docker-compose-stack">
+<h4>Step 3b. Start Docker Compose stack<a class="headerlink" href="#step-3b-start-docker-compose-stack" title="Link to this heading"></a></h4>
+<p>copy the following 3 files into a newly created folder:</p>
+<p>The <code class="docutils literal notranslate"><span class="pre">config-default.json</span></code>:</p>
+<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
+<span class="w">        </span><span class="nt">&quot;instance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;node-OpenDroneMap&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;odm_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/code&quot;</span><span class="p">,</span>
+
+<span class="w">        </span><span class="nt">&quot;logger&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
+<span class="w">                </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;info&quot;</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;maxFileSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">104857600</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;maxFiles&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
+<span class="w">                </span><span class="nt">&quot;logDirectory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="w">        </span><span class="p">},</span>
+
+<span class="w">        </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;auto&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;deamon&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;parallelQueueProcessing&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;cleanupTasksAfter&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2880</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;test&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;testSkipOrthophotos&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;testSkipDems&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
+<span class="w">        </span><span class="nt">&quot;authorizedIps&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
+<span class="w">        </span><span class="nt">&quot;maxImages&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
+<span class="p">}</span>
+</pre></div>
+</div>
+<p>The <code class="docutils literal notranslate"><span class="pre">init.sql</span></code>:</p>
+<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="n">EXTENSION</span><span class="w"> </span><span class="n">postgis_raster</span><span class="p">;</span>
+<span class="k">SET</span><span class="w"> </span><span class="n">postgis</span><span class="p">.</span><span class="n">gdal_enabled_drivers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;ENABLE_ALL&#39;</span><span class="p">;</span>
+</pre></div>
+</div>
+<p>And finally the <code class="docutils literal notranslate"><span class="pre">compose.yml</span></code>:</p>
+<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>services:
+  webodm-node-odm-1:
+    image: opendronemap/nodeodm:gpu
+    container_name: webodm-node-odm-1
+    ports:
+      - &quot;3000:3000&quot;
+    volumes:
+      - ./config-default.json:/var/www/config-default.json
+    privileged: true
+    restart: unless-stopped
+    deploy:
+      resources:
+        reservations:
+          devices:
+            - driver: nvidia
+              capabilities: [gpu]
+
+  webapp-odm:
+    image: opendronemap/webodm_webapp
+    container_name: webapp
+    entrypoint: /bin/bash -c &quot;service cron start &amp;&amp; chmod +x /webodm/*.sh &amp;&amp; /bin/bash -c \&quot;/webodm/wait-for-it.sh -t 0 redis-odm:6379 -- /webodm/start.sh\&quot; &amp;&amp; python manage.py migrate&quot;
+        restart: always
+    volumes:
+      - ./data/webodm:/webodm/app/media:z
+    ports:
+      - &quot;8000:8000&quot;
+    depends_on:
+      - db-odm
+      - redis-odm
+      - webodm-node-odm-1
+    environment:
+      - WO_BROKER=redis://redis-odm
+      - WO_DEFAULT_NODES=1
+      - WO_HOST=localhost
+      - WO_PORT=8000
+      - WO_MEDIA_DIR=appmedia
+      - WO_DB_DIR=dbdata
+      - WO_SSL=NO
+      - WO_SSL_INSECURE_PORT_REDIRECT=80
+      - WO_DATABASE_HOST=db-odm
+      - WO_DATABASE_NAME=webodm_dev
+      - WO_DATABASE_USER=postgres
+      - WO_DATABASE_PASSWORD=postgres
+
+  redis-odm:
+    image: redis:alpine
+    container_name: redis-odm
+    restart: always
+
+  db-odm:
+    image: postgis/postgis:17-3.5-alpine
+    container_name: db-odm
+    restart: always
+    volumes:
+      - ./data/odm-db:/var/lib/postgresql/data
+      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
+    environment:
+      - POSTGRES_USER=postgres
+      - POSTGRES_PASSWORD=postgres
+      - POSTGRES_DB=webodm_dev
+    healthcheck:
+      test: [ &quot;CMD&quot;, &quot;pg_isready&quot;, &quot;-q&quot;, &quot;-d&quot;, &quot;webodm_dev&quot;, &quot;-U&quot;, &quot;postgres&quot;]
+      timeout: 45s
+      interval: 20s
+      retries: 5
+
+  worker:
+    image: opendronemap/webodm_webapp
+    container_name: worker
+    entrypoint: /bin/bash -c &quot;/webodm/wait-for-it.sh -t 0 redis-odm:6379 -- /webodm/wait-for-it.sh -t 0 webapp-odm:8000 -- /webodm/worker.sh start&quot;
+        restart: always
+    volumes:
+      - ./data/webodm:/webodm/app/media:z
+    depends_on:
+      - redis-odm
+      - db-odm
+    environment:
+      - WO_BROKER=redis://redis-odm
+      - WO_DATABASE_HOST=db-odm
+      - WO_DATABASE_NAME=webodm_dev
+      - WO_DATABASE_USER=postgres
+      - WO_DATABASE_PASSWORD=postgres
+</pre></div>
+</div>
+<p>Finally, start the stack using <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">up</span> <span class="pre">-d</span></code>.
+You can now access WebODM at <a class="reference external" href="http://localhost:8000">http://localhost:8000</a> and the nodeODM at <a class="reference external" href="http://localhost:3000">http://localhost:3000</a>.</p>
+<p>To view logs of the services use <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">logs</span></code></p>
+<p>To shut down the services run <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">down</span></code>.</p>
 </section>
 </section>
 </section>
@@ -806,7 +930,8 @@ $<span class="w"> </span>./webodm.sh<span class="w"> </span>--help
 </section>
 <section id="hello-webodm">
 <h2>Halo, WebODM!<a class="headerlink" href="#hello-webodm" title="Link to this heading"></a></h2>
-<p>Setelah menjalankan ./webodm.sh mulai dan membuka WebODM di browser, anda akan disambut dengan pesan selamat datang dan akan diminta untuk membuat pengguna pertama. Luangkan waktu untuk membiasakan diri dengan antarmuka web dan menjelajahi berbagai menunya.</p>
+<p>After starting the containers using 3a. or 3b. you can open WebODM in the browser.
+This will greet you with a welcome message and will ask to create the first user. Take some time to familiarize yourself with the web interface and explore its various menus.</p>
 <figure class="align-center">
 <img alt="Screenshot of WebODM Dashboard" src="../_images/webodmdashboard.webp" />
 </figure>
