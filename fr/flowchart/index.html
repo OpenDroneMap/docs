@@ -30,7 +30,7 @@ const load = async () => {
     const mermaids_to_add_zoom = 1 === -1 ? all_mermaids.length : 1;
     const mermaids_processed = document.querySelectorAll(".mermaid[data-processed='true']");
     if(mermaids_to_add_zoom > 0) {
-        var svgs = d3.selectAll(".mermaid[data-zoom-id=id-e1a41d93-9910-47d7-b1e4-b9eb19967192] svg");
+        var svgs = d3.selectAll(".mermaid[data-zoom-id=id-1a848308-687e-419f-8da7-2afef76530bb] svg");
         if(all_mermaids.length !== mermaids_processed.length) {
             // try again in a sec, wait for mermaids to load
             setTimeout(load, 200);
@@ -104,8 +104,8 @@ window.addEventListener("load", load);
 <li class="toctree-l3"><a class="reference internal" href="../installation/#linux">Linux</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-install-requirements">Étape 1. Exigences d’installation</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-check-additional-requirements">Étape 2. Vérifier les exigences supplémentaires</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3a-download-and-launch-webodm">Step 3a. Download and Launch WebODM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3b-start-docker-compose-stack">Step 3b. Start Docker Compose stack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3a-download-and-launch-webodm-with-webodm-sh-call-of-docker-compose">Step 3a. Download and Launch WebODM with webodm.sh call of docker compose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3b-alternatively-start-via-docker-compose-without-webodm-sh">Step 3b. Alternatively, start via docker compose without webodm.sh</a></li>
 </ul>
 </li>
 </ul>
@@ -493,7 +493,7 @@ window.addEventListener("load", load);
              
   <section id="flowchart-with-options">
 <h1>Flowchart with options<a class="headerlink" href="#flowchart-with-options" title="Lien vers cette rubrique"></a></h1>
-<pre data-zoom-id="id-e1a41d93-9910-47d7-b1e4-b9eb19967192" class="mermaid">
+<pre data-zoom-id="id-1a848308-687e-419f-8da7-2afef76530bb" class="mermaid">
          flowchart  TB
 
 

@@ -67,8 +67,8 @@
 <li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="#step-1-install-requirements">Langkah 1. Instal Persyaratan</a></li>
 <li class="toctree-l4"><a class="reference internal" href="#step-2-check-additional-requirements">Langkah 2. Periksa Persyaratan Tambahan</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-3a-download-and-launch-webodm">Step 3a. Download and Launch WebODM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-3b-start-docker-compose-stack">Step 3b. Start Docker Compose stack</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3a-download-and-launch-webodm-with-webodm-sh-call-of-docker-compose">Step 3a. Download and Launch WebODM with webodm.sh call of docker compose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="#step-3b-alternatively-start-via-docker-compose-without-webodm-sh">Step 3b. Alternatively, start via docker compose without webodm.sh</a></li>
 </ul>
 </li>
 </ul>
@@ -751,7 +751,7 @@ $<span class="w"> </span>sudo<span class="w"> </span>dnf<span class="w"> </span>
 </section>
 <section id="step-2-check-additional-requirements">
 <h4>Langkah 2. Periksa Persyaratan Tambahan<a class="headerlink" href="#step-2-check-additional-requirements" title="Link to this heading"></a></h4>
-<p>Selain ketiga program di atas, menulis skrip docker juga diperlukan. Terkadang sudah terpasang dengan docker, tapi terkadang tidak. Untuk memverifikasi apakah sudah terpasang coba ketik:</p>
+<p>In addition to the three programs above, the docker compose script is also needed. Sometimes it’s already installed with docker, but sometimes it isn’t. To verify if it’s installed try to type:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>--version
 </pre></div>
 </div>
@@ -760,8 +760,8 @@ $<span class="w"> </span>sudo<span class="w"> </span>dnf<span class="w"> </span>
 </pre></div>
 </div>
 </section>
-<section id="step-3a-download-and-launch-webodm">
-<h4>Step 3a. Download and Launch WebODM<a class="headerlink" href="#step-3a-download-and-launch-webodm" title="Link to this heading"></a></h4>
+<section id="step-3a-download-and-launch-webodm-with-webodm-sh-call-of-docker-compose">
+<h4>Step 3a. Download and Launch WebODM with webodm.sh call of docker compose<a class="headerlink" href="#step-3a-download-and-launch-webodm-with-webodm-sh-call-of-docker-compose" title="Link to this heading"></a></h4>
 <p>Dari tipe terminal:</p>
 <div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/OpenDroneMap/WebODM
 $<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>WebODM
@@ -770,8 +770,8 @@ $<span class="w"> </span>./webodm.sh<span class="w"> </span>start
 </div>
 <p>Kemudian buka browser web ke <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
 </section>
-<section id="step-3b-start-docker-compose-stack">
-<h4>Step 3b. Start Docker Compose stack<a class="headerlink" href="#step-3b-start-docker-compose-stack" title="Link to this heading"></a></h4>
+<section id="step-3b-alternatively-start-via-docker-compose-without-webodm-sh">
+<h4>Step 3b. Alternatively, start via docker compose without webodm.sh<a class="headerlink" href="#step-3b-alternatively-start-via-docker-compose-without-webodm-sh" title="Link to this heading"></a></h4>
 <p>copy the following 3 files into a newly created folder:</p>
 <p>The <code class="docutils literal notranslate"><span class="pre">config-default.json</span></code>:</p>
 <div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
