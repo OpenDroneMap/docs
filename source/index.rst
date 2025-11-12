@@ -26,6 +26,7 @@ The documentation is available in several languages. Some translations are incom
 - `Indonesian </id>`_
 - `Swahili </sw>`_
 - `Telugu </te>`_
+- `Chinese </zh>`_
 
 |
 |
