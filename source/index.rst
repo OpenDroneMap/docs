@@ -18,14 +18,14 @@ There is a `guide <https://github.com/opendronemap/docs#how-to-make-your-first-c
 
 The documentation is available in several languages. Some translations are incomplete and will still display in English. The below languages are at least 20 percent translated. You can help us translate those languages (and other languages!) via Transifex. There is a `getting started guide on GitHub <https://github.com/opendronemap/docs#translations>`_.
 
-- `English <https://docs.opendronemap.org/>`_
-- `Czech <https://docs.opendronemap.org/cs>`_
-- `Filipino <https://docs.opendronemap.org/fil>`_
-- `French <https://docs.opendronemap.org/fr>`_
-- `Spanish <https://docs.opendronemap.org/es>`_
-- `Indonesian <https://docs.opendronemap.org/id>`_
-- `Swahili <https://docs.opendronemap.org/sw>`_
-- `Telugu <https://docs.opendronemap.org/te>`_
+- `English </>`_
+- `Czech </cs>`_
+- `Filipino </fil>`_
+- `French </fr>`_
+- `Spanish </es>`_
+- `Indonesian </id>`_
+- `Swahili </sw>`_
+- `Telugu </te>`_
 
 |
 |
