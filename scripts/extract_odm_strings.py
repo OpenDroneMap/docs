@@ -117,7 +117,7 @@ if len(options) > 0:
                 f.write("\n")
             print("Wrote %s" % include_file)
 
-        argument_edit = Path(include_file).read_text()
+        argument_edit = Path(include_file).read_text(encoding='utf-8')
 
         kwargs = {
             'opt': opt_name,
