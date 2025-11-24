@@ -1,5 +1,5 @@
 [main]
-host = https://www.transifex.com
+host    = https://app.transifex.com
 
 [o:americanredcross:p:opendronemap_docs:r:arguments]
 file_filter            = source/locale/<lang>/LC_MESSAGES/arguments.po
