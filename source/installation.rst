@@ -429,7 +429,7 @@ The ``init.sql``:
 
 And finally the ``compose.yml``:
 
-.. code:: yml
+.. code:: yaml
 
 	services:
 	  webodm-node-odm-1:
