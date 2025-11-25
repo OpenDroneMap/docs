@@ -219,7 +219,7 @@ Code snippets need to have a space before, then a double backtick or grave accen
 This project uses [Transifex](https://www.transifex.com/) and the [`Transifex Client`](https://developers.transifex.com/docs/cli) tool to help people contribute translations. The `transifex-client` tool is included in the requirements.txt file and should be installed on your system during setup when you run `pip install -r requirements.txt`.
 
 ::warning
-The APIv2 of Transifex is getting deprecated. We have to migrate to new Transifex Client.
+The APIv2 of Transifex is getting deprecated. We have to migrate to [**new version of Transifex Client**](https://developers.transifex.com/docs/cli).
 
 refer: https://developers.transifex.com/docs/cli#differences-with-the-previous-version
 ::
