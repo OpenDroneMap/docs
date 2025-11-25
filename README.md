@@ -152,7 +152,7 @@ The script creates a blank `*.rst` file for each argument in `/source/arguments_
 
 Transifex has a getting [started guide for translators](https://docs.transifex.com/getting-started-1/translators) that will walk you through the steps to setup an account.
 
-The ODM documentation Transifex project can be found at: https://www.transifex.com/americanredcross/opendronemap_docs/
+The ODM documentation Transifex project can be found at: https://app.transifex.com/americanredcross/opendronemap_docs/
 
 The documentation uses a formatting known as [reStructuredTest (reST)](https://www.sphinx-doc.org/en/master/usage/restructuredtext/basics.html) to add links, formatting, and other styling. reST uses plain text to annotate the documentation and identify to the system how to process the different page items. Unfortunately, the translation management process doesn't hide the reST markup. It is important that you keep the reST markup when translating.
 
