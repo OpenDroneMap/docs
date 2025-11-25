@@ -21,4 +21,5 @@ Thumbs.db
 *.sublime-project
 *.sublime-workspace
 
-source/locale/
+source/locale/*
+!source/locale/README.md
