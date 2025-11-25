@@ -41,7 +41,7 @@ ODM can also automatically distribute the processing of each submodel to multipl
    :align: center
 
 Getting Started with Distributed Split-Merge
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 The first step is start ClusterODM
 

@@ -997,7 +997,9 @@ After that, do tunneling for port 3000 of the HPC to your local machine:
 
 ::
 
-ssh -L localhost:3000:localhost:3000 user@hostname
+.. code-block:: bash
+
+   ssh -L localhost:3000:localhost:3000 user@hostname
 
 Port 3000 is ClusterODM's proxy. This is the place we assign tasks to ClusterODM. Once again, connect to `http://localhost:3000` with your browser after tunneling. Here, you can Assign Tasks and observe the tasks' processes.
 
