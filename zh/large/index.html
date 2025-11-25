@@ -1,0 +1,660 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Large Datasets &mdash; OpenDroneMap 3.5.6 文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a05f0288"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex/" />
+    <link rel="search" title="搜索" href="../search/" />
+    <link rel="next" title="Flying Tips" href="../flying/" />
+    <link rel="prev" title="Multispectral and Thermal" href="../multispectral/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            OpenDroneMap
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#quickstart">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hardware-recommendations">Hardware Recommendations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-check-virtualization-support">Step 1. Check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-install-requirements">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-check-memory-and-cpu-allocation">Step 3. Check Memory and CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-webodm">Step 4. Download WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-launch-webodm">Step 4. Launch WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id1">Step 1. Check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id2">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id3">Step 3. Check Memory and CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-and-launch-webodm">Step 4. Download and Launch WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-install-requirements">Step 1. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-check-additional-requirements">Step 2. Check Additional Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3a-download-and-launch-webodm-with-webodm-sh-call-of-docker-compose">Step 3a. Download and Launch WebODM with webodm.sh call of docker compose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3b-alternatively-start-via-docker-compose-without-webodm-sh">Step 3b. Alternatively, start via docker compose without webodm.sh</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#basic-commands-and-troubleshooting">Basic Commands and Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hello-webodm">Hello, WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#running-on-more-than-one-machine">Running on more than one machine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-high-quality-orthophotos">Creating High Quality Orthophotos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-digital-elevation-models">Creating Digital Elevation Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-potree-3d-viewer-module-on-webodm">Using Potree 3D viewer module on WebODM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#cameras">Cameras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#textured-model">Textured model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#appearance">Appearance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#point-budget">Point budget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#field-of-view">Field of view</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#eye-dome-lighting">Eye Dome-lighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#background">Background</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#other">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#tools">Tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#measurement">Measurement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#clipping">Clipping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#navigation">Navigation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#scene">Scene</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-docker">Using Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#listing-docker-machines">Listing Docker Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#accessing-logs-on-the-instance">Accessing logs on the instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#command-line-access-to-instances">Command line access to instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#cleaning-up-after-docker">Cleaning up after Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-odm-from-low-bandwidth-location">Using ODM from low-bandwidth location</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#what-is-this-and-who-is-it-for">What is this and who is it for?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#steps">Steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#install">Install</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#prep-data-and-project">Prep data and project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#resize-droplet-pull-pin-run-away">Resize droplet, pull pin, run away</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#after-it-finishes-assuming-you-survive-that-long">After it finishes (assuming you survive that long)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#advanced">Advanced</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#calibrating-the-camera">Calibrating the Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#using-image-masks">Using Image Masks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#using-singularity">Using Singularity</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#build-singularity-image-from-docker-image">Build Singularity image from Docker image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#using-singularity-sif-image">Using Singularity SIF image</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#clusterodm-nodeodm-slurm-with-singularity-on-hpc">ClusterODM, NodeODM, SLURM, with Singularity on HPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#development-and-testing-of-odm">Development and testing of ODM</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#fork-and-clone-repository">Fork and clone repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#set-up-local-nodeodm-docker-instance">Set up local NodeODM docker instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#modify-code">Modify code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#connect-to-nodeodm-instance">Connect to NodeODM instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#install-and-use-changes">Install and use changes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../arguments/">Options and Flags</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/3d-tiles/">3d-tiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/align/">align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary/">auto-boundary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/auto-boundary/#what-is-auto-boundary">What Is Auto-Boundary?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/auto-boundary/#when-is-auto-boundary-helpful">When Is Auto-Boundary Helpful?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/auto-boundary/#why-would-one-use-auto-boundary">Why would one use auto-boundary?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/auto-boundary/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/auto-boundary/#true-auto-boundary">True: <code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/auto-boundary/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary-distance/">auto-boundary-distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/bg-removal/">bg-removal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">boundary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#what-is-boundary-geojson">What is Boundary [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#when-is-boundary-geojson-appropriate">When is Boundary [GeoJSON] appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#why-would-one-use-boundary-geojson">Why would one use Boundary [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#how-would-one-create-boundary-geojson">How would one create Boundary [GeoJSON]?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#geojson-io">GeoJSON.io</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#qgis">QGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-point-cloud">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Point Cloud</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-orthophoto">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Orthophoto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-digital-elevation-model">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Digital Elevation Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-3d-model-textured-mesh">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - 3D Model/Textured Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/build-overviews/">build-overviews</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#what-are-overviews">What Are Overviews?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#why-would-one-use-overviews">Why would one use Overviews?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/build-overviews/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/build-overviews/#true-build-overviews">True: <code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/build-overviews/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/camera-lens/">camera-lens</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#what-are-camera-lens-models">What Are Camera Lens Models?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#when-are-manual-selections-appropriate">When are manual selections appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#why-would-one-use-a-particular-camera-lens-model">Why would one use a particular Camera Lens Model?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/camera-lens/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#auto-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">auto</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#brown-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">brown</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#fisheye-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">fisheye</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#perspective-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">perspective</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/camera-lens/#spherical-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">spherical</span></code> : Rectilinear Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/cameras/">cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/cog/">cog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#what-are-cloud-optimized-geotiffs-cogs">What Are Cloud Optimized GeoTIFFs (COGs)?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#when-are-cogs-appropriate">When are COGs appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#why-would-one-use-cogs">Why would one use COGs?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/cog/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#true-cog">True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/cog/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/copy-to/">copy-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/crop/">crop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/debug/">debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-decimation/">dem-decimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-euclidean-map/">dem-euclidean-map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-gapfill-steps/">dem-gapfill-steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dem-resolution/">dem-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/depthmap-resolution/">depthmap-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dsm/">dsm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/dtm/">dtm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/end-with/">end-with</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/fast-orthophoto/">fast-orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/feature-quality/">feature-quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/feature-type/">feature-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/force-gps/">force-gps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/gcp/">gcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/geo/">geo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/gltf/">gltf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/gps-accuracy/">gps-accuracy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/gps-z-offset/">gps-z-offset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/help/">help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/ignore-gsd/">ignore-gsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/matcher-neighbors/">matcher-neighbors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/matcher-order/">matcher-order</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/matcher-type/">matcher-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/max-concurrency/">max-concurrency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/merge/">merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/mesh-octree-depth/">mesh-octree-depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/mesh-size/">mesh-size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/min-num-features/">min-num-features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/name/">name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/no-gpu/">no-gpu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/optimize-disk-space/">optimize-disk-space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-compression/">orthophoto-compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-cutline/">orthophoto-cutline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-kmz/">orthophoto-kmz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-no-tiled/">orthophoto-no-tiled</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-png/">orthophoto-png</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/orthophoto-resolution/">orthophoto-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-classify/">pc-classify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-copc/">pc-copc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-csv/">pc-csv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-ept/">pc-ept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-filter/">pc-filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-geometric/">pc-geometric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-las/">pc-las</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-quality/">pc-quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-rectify/">pc-rectify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-sample/">pc-sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-skip-geometric/">pc-skip-geometric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-tile/">pc-tile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/primary-band/">primary-band</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/project-path/">project-path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/radiometric-calibration/">radiometric-calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rerun/">rerun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rerun-all/">rerun-all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rerun-from/">rerun-from</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/resize-to/">resize-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rolling-shutter/">rolling-shutter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/rolling-shutter-readout/">rolling-shutter-readout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/sfm-algorithm/">sfm-algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/sfm-no-partial/">sfm-no-partial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-3dmodel/">skip-3dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-band-alignment/">skip-band-alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-orthophoto/">skip-orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/skip-report/">skip-report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/sky-removal/">sky-removal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/sm-cluster/">sm-cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/sm-no-align/">sm-no-align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-scalar/">smrf-scalar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-slope/">smrf-slope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-threshold/">smrf-threshold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/smrf-window/">smrf-window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/split/">split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/split-image-groups/">split-image-groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/split-overlap/">split-overlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-data-term/">texturing-data-term</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-keep-unseen-faces/">texturing-keep-unseen-faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-outlier-removal-type/">texturing-outlier-removal-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-single-material/">texturing-single-material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-global-seam-leveling/">texturing-skip-global-seam-leveling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-local-seam-leveling/">texturing-skip-local-seam-leveling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-tone-mapping/">texturing-tone-mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/tiles/">tiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/time/">time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-3dmesh/">use-3dmesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-exif/">use-exif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-fixed-camera-params/">use-fixed-camera-params</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/use-hybrid-bundle-adjustment/">use-hybrid-bundle-adjustment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/verbose/">verbose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/version/">version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/video-limit/">video-limit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/video-resolution/">video-resolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../flowchart/">Flowchart with options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outputs/">OpenDroneMap Outputs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#point-cloud">Point Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#d-textured-model">3D Textured Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#orthophoto">Orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#logs">Logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#list-of-all-outputs">List of all outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">High Precision Workflows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#map-accuracy">Map accuracy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#what-to-expect">What to expect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aspects-impacting-map-accuracy">Aspects impacting map accuracy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#ground-control-points">Ground Control Points</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#recommended-practices-for-gcp-setting">Recommended practices for GCP setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#gcp-file-format">GCP file format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#user-interfaces">User Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#id1">POSM GCPi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#id3">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#image-geolocation-files">Image Geolocation Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#improving-relative-accuracy">Improving relative accuracy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#multi-temporal-datasets">Multi-temporal Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#plugin-time-sift">Plugin Time-SIFT</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aligning-large-datasets">Aligning Large  Datasets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../multispectral/">Multispectral and Thermal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#multispectral-support">Multispectral Support</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multispectral/#supported-sensors">Supported Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multispectral/#creating-orthophotos-from-multispectral-data">Creating Orthophotos from Multispectral Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multispectral/#workflows-for-non-supported-sensors">Workflows for Non-supported Sensors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#thermal-support">Thermal Support</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multispectral/#hardware">Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multispectral/#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Large Datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#local-split-merge">Local Split-Merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#distributed-split-merge">Distributed Split-Merge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#getting-started-with-distributed-split-merge">Getting Started with Distributed Split-Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#understanding-the-cluster">Understanding the Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#accessing-the-logs">Accessing the Logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#autoscaling-clusterodm">Autoscaling ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="#estimating-data-collection-effort">Estimating data collection effort</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="#data-collection-effort-full-3d">Data collection effort, full 3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="#data-collection-effort-2d-and-2-5d-products">Data collection effort, 2D and 2.5D products</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="#acknowledgments">Acknowledgments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../flying/">Flying Tips</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../flying/#data-collection-effort-full-3d">Data collection effort, full 3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flying/#data-collection-effort-2d-and-2-5d-products">Data collection effort, 2D and 2.5D products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flying/#other-resources-on-flying">Other resources on flying</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/">How to Contribute and Request Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#how-to-request-features">How To Request Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#how-to-contribute">How To Contribute</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/#community-forum">Community Forum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/#reporting-bugs">Reporting Bugs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../contributing/#template-for-submitting-bug-reports">Template For Submitting Bug Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/#pull-requests">Pull Requests</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/">Frequently Asked Questions and Additional Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faq/#frequently-asked-questions">Frequently Asked Questions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#data-processing">Data Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#licensing">Licensing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#memory-issues">Memory issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/#additional-references">Additional References</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#for-users">For Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#for-developers">For Developers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">OpenDroneMap</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Large Datasets</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/large.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="large-datasets">
+<h1>Large Datasets<a class="headerlink" href="#large-datasets" title="Link to this heading"></a></h1>
+<p>Starting with ODM version <code class="docutils literal notranslate"><span class="pre">0.6.0</span></code> you can split up very large datasets into manageable chunks (called submodels), running the pipeline on each chunk, and then producing merged DEMs, orthophotos and point clouds. The process is referred to as &quot;split-merge&quot;.</p>
+<p>Why might you use the split-merge pipeline? If you have a very large number of images in your dataset, split-merge will help make the processing more manageable on a large machine (it will require less memory). If you have many machines all connected to the same network you can also process the submodels in parallel, thus allowing for horizontal scaling and processing thousands of images more quickly.</p>
+<p>Split-merge works in WebODM out of the box as long as the processing nodes support split-merge, by enabling the <code class="docutils literal notranslate"><span class="pre">--split</span></code> option when creating a new task.</p>
+<section id="local-split-merge">
+<h2>Local Split-Merge<a class="headerlink" href="#local-split-merge" title="Link to this heading"></a></h2>
+<p>Splitting a dataset into more manageable submodels and sequentially processing all submodels on the same machine is easy! Just use <code class="docutils literal notranslate"><span class="pre">--split</span></code> and <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code> to decide the the average number of images per submodels and the overlap (in meters) between submodels respectively</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-ti<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span>/my/project:/datasets/code<span class="w"> </span>opendronemap/odm<span class="w"> </span>--project-path<span class="w"> </span>/datasets<span class="w"> </span>--split<span class="w"> </span><span class="m">400</span><span class="w"> </span>--split-overlap<span class="w"> </span><span class="m">100</span>
+</pre></div>
+</div>
+<p>If you already know how you want to split the dataset, you can provide that information and it will be used instead of the clustering algorithm.</p>
+<p>The grouping can be provided by adding a file named image_groups.txt in the main dataset folder. The file should have one line per image. Each line should have two words: first the name of the image and second the name of the group it belongs to. For example:</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="mf">01.</span><span class="n">jpg</span> <span class="n">A</span>
+<span class="mf">02.</span><span class="n">jpg</span> <span class="n">A</span>
+<span class="mf">03.</span><span class="n">jpg</span> <span class="n">B</span>
+<span class="mf">04.</span><span class="n">jpg</span> <span class="n">B</span>
+<span class="mf">05.</span><span class="n">jpg</span> <span class="n">C</span>
+</pre></div>
+</div>
+<p>will create 3 submodels. Make sure to pass <code class="docutils literal notranslate"><span class="pre">--split-overlap</span> <span class="pre">0</span></code> if you manually provide a <code class="docutils literal notranslate"><span class="pre">image_groups.txt</span></code> file.</p>
+</section>
+<section id="distributed-split-merge">
+<h2>Distributed Split-Merge<a class="headerlink" href="#distributed-split-merge" title="Link to this heading"></a></h2>
+<p>ODM can also automatically distribute the processing of each submodel to multiple machines via <a class="reference external" href="https://github.com/OpenDroneMap/NodeODM">NodeODM</a> nodes, orchestrated via <a class="reference external" href="https://github.com/OpenDroneMap/ClusterODM">ClusterODM</a>.</p>
+<figure class="align-center">
+<img alt="image of lens distortion effect on bowling of data" src="../_images/clusterodm.webp" />
+</figure>
+<section id="getting-started-with-distributed-split-merge">
+<h3>Getting Started with Distributed Split-Merge<a class="headerlink" href="#getting-started-with-distributed-split-merge" title="Link to this heading"></a></h3>
+<p>The first step is start ClusterODM</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-ti<span class="w"> </span>-p<span class="w"> </span><span class="m">3001</span>:3000<span class="w"> </span>-p<span class="w"> </span><span class="m">8080</span>:8080<span class="w"> </span>opendronemap/clusterodm
+</pre></div>
+</div>
+<p>Then on each machine you want to use for processing, launch a NodeODM instance via</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-ti<span class="w"> </span>-p<span class="w"> </span><span class="m">3000</span>:3000<span class="w"> </span>opendronemap/nodeodm
+</pre></div>
+</div>
+<p>Connect via telnet to ClusterODM and add the IP addresses/port of the machines running NodeODM</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>telnet<span class="w"> </span>&lt;cluster-odm-ip&gt;<span class="w"> </span><span class="m">8080</span>
+Connected<span class="w"> </span>to<span class="w"> </span>&lt;cluster-odm-ip&gt;.
+Escape<span class="w"> </span>character<span class="w"> </span>is<span class="w"> </span><span class="s1">&#39;^]&#39;</span>.
+<span class="o">[</span>...<span class="o">]</span>
+<span class="c1"># node add &lt;node-odm-ip-1&gt; 3000</span>
+<span class="c1"># node add &lt;node-odm-ip-2&gt; 3000</span>
+<span class="o">[</span>...<span class="o">]</span>
+<span class="c1"># node list</span>
+<span class="m">1</span><span class="o">)</span><span class="w"> </span>&lt;node-odm-ip-1&gt;:3000<span class="w"> </span><span class="o">[</span>online<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">0</span>/2<span class="o">]</span><span class="w"> </span>&lt;version<span class="w"> </span><span class="m">1</span>.5.1&gt;
+<span class="m">2</span><span class="o">)</span><span class="w"> </span>&lt;node-odm-ip-2&gt;:3000<span class="w"> </span><span class="o">[</span>online<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">0</span>/2<span class="o">]</span><span class="w"> </span>&lt;version<span class="w"> </span><span class="m">1</span>.5.1&gt;
+</pre></div>
+</div>
+<p>Make sure you are running version <code class="docutils literal notranslate"><span class="pre">1.5.1</span></code> or higher of the NodeODM API.</p>
+<p>At this point, simply use the <code class="docutils literal notranslate"><span class="pre">--sm-cluster</span></code> option to enable distributed split-merge</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>-ti<span class="w"> </span>--rm<span class="w"> </span>-v<span class="w"> </span>/my/project:/datasets/code<span class="w"> </span>opendronemap/odm<span class="w"> </span>--project-path<span class="w"> </span>/datasets<span class="w"> </span>--split<span class="w"> </span><span class="m">800</span><span class="w"> </span>--split-overlap<span class="w"> </span><span class="m">120</span><span class="w"> </span>--sm-cluster<span class="w"> </span>http://&lt;cluster-odm-ip&gt;:3001
+</pre></div>
+</div>
+</section>
+<section id="understanding-the-cluster">
+<h3>Understanding the Cluster<a class="headerlink" href="#understanding-the-cluster" title="Link to this heading"></a></h3>
+<p>When connected via telnet, it is possible to interrogate what is happening on the cluster. For example, we can use the command HELP to find out available commands</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># HELP</span>
+NODE<span class="w"> </span>ADD<span class="w"> </span>&lt;hostname&gt;<span class="w"> </span>&lt;port&gt;<span class="w"> </span><span class="o">[</span>token<span class="o">]</span><span class="w"> </span>-<span class="w"> </span>Add<span class="w"> </span>new<span class="w"> </span>node
+NODE<span class="w"> </span>DEL<span class="w"> </span>&lt;node<span class="w"> </span>number&gt;<span class="w"> </span>-<span class="w"> </span>Remove<span class="w"> </span>a<span class="w"> </span>node
+NODE<span class="w"> </span>INFO<span class="w"> </span>&lt;node<span class="w"> </span>number&gt;<span class="w"> </span>-<span class="w"> </span>View<span class="w"> </span>node<span class="w"> </span>info
+NODE<span class="w"> </span>LIST<span class="w"> </span>-<span class="w"> </span>List<span class="w"> </span>nodes
+NODE<span class="w"> </span>LOCK<span class="w"> </span>&lt;node<span class="w"> </span>number&gt;<span class="w"> </span>-<span class="w"> </span>Stop<span class="w"> </span>forwarding<span class="w"> </span>tasks<span class="w"> </span>to<span class="w"> </span>this<span class="w"> </span>node
+NODE<span class="w"> </span>UNLOCK<span class="w"> </span>&lt;node<span class="w"> </span>number&gt;<span class="w"> </span>-<span class="w"> </span>Resume<span class="w"> </span>forwarding<span class="w"> </span>tasks<span class="w"> </span>to<span class="w"> </span>this<span class="w"> </span>node
+NODE<span class="w"> </span>UPDATE<span class="w"> </span>-<span class="w"> </span>Update<span class="w"> </span>all<span class="w"> </span>nodes<span class="w"> </span>info
+NODE<span class="w"> </span>BEST<span class="w"> </span>&lt;number<span class="w"> </span>of<span class="w"> </span>images&gt;<span class="w"> </span>-<span class="w"> </span>Show<span class="w"> </span>best<span class="w"> </span>node<span class="w"> </span><span class="k">for</span><span class="w"> </span>the<span class="w"> </span>number<span class="w"> </span>of<span class="w"> </span>images
+ROUTE<span class="w"> </span>INFO<span class="w"> </span>&lt;taskId&gt;<span class="w"> </span>-<span class="w"> </span>Find<span class="w"> </span>route<span class="w"> </span>information<span class="w"> </span><span class="k">for</span><span class="w"> </span>task
+ROUTE<span class="w"> </span>LIST<span class="w"> </span><span class="o">[</span>node<span class="w"> </span>number<span class="o">]</span><span class="w"> </span>-<span class="w"> </span>List<span class="w"> </span>routes
+TASK<span class="w"> </span>LIST<span class="w"> </span><span class="o">[</span>node<span class="w"> </span>number<span class="o">]</span><span class="w"> </span>-<span class="w"> </span>List<span class="w"> </span>tasks
+TASK<span class="w"> </span>INFO<span class="w"> </span>&lt;taskId&gt;<span class="w"> </span>-<span class="w"> </span>View<span class="w"> </span>task<span class="w"> </span>info
+TASK<span class="w"> </span>OUTPUT<span class="w"> </span>&lt;taskId&gt;<span class="w"> </span><span class="o">[</span>lines<span class="o">]</span><span class="w"> </span>-<span class="w"> </span>View<span class="w"> </span>task<span class="w"> </span>output
+TASK<span class="w"> </span>CANCEL<span class="w"> </span>&lt;taskId&gt;<span class="w"> </span>-<span class="w"> </span>Cancel<span class="w"> </span>task
+TASK<span class="w"> </span>REMOVE<span class="w"> </span>&lt;taskId&gt;<span class="w"> </span>-<span class="w"> </span>Remove<span class="w"> </span>task
+ASR<span class="w"> </span>VIEWCMD<span class="w"> </span>&lt;number<span class="w"> </span>of<span class="w"> </span>images&gt;<span class="w"> </span>-<span class="w"> </span>View<span class="w"> </span><span class="nb">command</span><span class="w"> </span>used<span class="w"> </span>to<span class="w"> </span>create<span class="w"> </span>a<span class="w"> </span>machine
+!!<span class="w"> </span>-<span class="w"> </span>Repeat<span class="w"> </span>last<span class="w"> </span><span class="nb">command</span>
+</pre></div>
+</div>
+<p>If, for example, the NodeODM instance wasn't active when ClusterODM started, we might list nodes and see something as follows</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># NODE LIST</span>
+<span class="m">1</span><span class="o">)</span><span class="w"> </span>localhost:3000<span class="w"> </span><span class="o">[</span>offline<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">0</span>/2<span class="o">]</span><span class="w"> </span>&lt;version<span class="w"> </span><span class="m">1</span>.5.3&gt;<span class="w"> </span><span class="o">[</span>L<span class="o">]</span>
+</pre></div>
+</div>
+<p>To address this, we can start up our local node (if not already started), and then perform a <code class="docutils literal notranslate"><span class="pre">NODE</span> <span class="pre">UPDATE</span></code></p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># NODE UPDATE</span>
+OK
+<span class="c1"># NODE LIST</span>
+<span class="m">1</span><span class="o">)</span><span class="w"> </span>localhost:3000<span class="w"> </span><span class="o">[</span>online<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">0</span>/2<span class="o">]</span><span class="w"> </span>&lt;version<span class="w"> </span><span class="m">1</span>.5.3&gt;<span class="w"> </span><span class="o">[</span>L<span class="o">]</span>
+</pre></div>
+</div>
+</section>
+<section id="accessing-the-logs">
+<h3>Accessing the Logs<a class="headerlink" href="#accessing-the-logs" title="Link to this heading"></a></h3>
+<p>While a process is running, it is also possible to list the tasks, and view the task output</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># TASK LIST</span>
+<span class="c1"># TASK OUTPUT &lt;taskId&gt; [lines]</span>
+</pre></div>
+</div>
+</section>
+<section id="autoscaling-clusterodm">
+<h3>Autoscaling ClusterODM<a class="headerlink" href="#autoscaling-clusterodm" title="Link to this heading"></a></h3>
+<p>ClusterODM also includes the option to autoscale on multiple platforms, including, to date, Amazon and Digital Ocean. This allows users to reduce costs associated with always-on instances as well as being able to scale processing based on demand.</p>
+<p>To setup autoscaling you must:</p>
+<ul class="simple">
+<li><p>Have a functioning version of NodeJS installed and then install ClusterODM</p></li>
+</ul>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/OpenDroneMap/ClusterODM
+<span class="nb">cd</span><span class="w"> </span>ClusterODM
+npm<span class="w"> </span>install
+</pre></div>
+</div>
+<ul class="simple">
+<li><p>Make sure docker-machine is installed.</p></li>
+<li><p>Setup a S3-compatible bucket for storing results.</p></li>
+<li><p>Create a configuration file for <a class="reference external" href="https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/digitalocean.md">DigitalOcean</a> or <a class="reference external" href="https://github.com/OpenDroneMap/ClusterODM/blob/master/docs/aws.md">Amazon Web Services</a>.</p></li>
+</ul>
+<p>You can then launch ClusterODM with</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>node<span class="w"> </span>index.js<span class="w"> </span>--asr<span class="w"> </span>configuration.json
+</pre></div>
+</div>
+<p>You should see something similar to following messages in the console</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>info:<span class="w"> </span>ASR:<span class="w"> </span>DigitalOceanAsrProvider
+info:<span class="w"> </span>Can<span class="w"> </span>write<span class="w"> </span>to<span class="w"> </span>S3
+info:<span class="w"> </span>Found<span class="w"> </span>docker-machine<span class="w"> </span>executable
+</pre></div>
+</div>
+<p>You should always have at least one static NodeODM node attached to ClusterODM, even if you plan to use the autoscaler for all processing. If you setup auto scaling, you can't have zero nodes and rely 100% on the autoscaler. You need to attach a NodeODM node to act as the &quot;reference node&quot; otherwise ClusterODM will not know how to handle certain requests (for the forwarding the UI, for validating options prior to spinning up an instance, etc.). For this purpose, you should add a &quot;dummy&quot; NodeODM node and lock it</p>
+<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>telnet<span class="w"> </span>localhost<span class="w"> </span><span class="m">8080</span>
+&gt;<span class="w"> </span>NODE<span class="w"> </span>ADD<span class="w"> </span>localhost<span class="w"> </span><span class="m">3001</span>
+&gt;<span class="w"> </span>NODE<span class="w"> </span>LOCK<span class="w"> </span><span class="m">1</span>
+&gt;<span class="w"> </span>NODE<span class="w"> </span>LIST
+<span class="m">1</span><span class="o">)</span><span class="w"> </span>localhost:3001<span class="w"> </span><span class="o">[</span>online<span class="o">]</span><span class="w"> </span><span class="o">[</span><span class="m">0</span>/2<span class="o">]</span><span class="w"> </span>&lt;version<span class="w"> </span><span class="m">1</span>.5.1&gt;<span class="w"> </span><span class="o">[</span>L<span class="o">]</span>
+</pre></div>
+</div>
+<p>This way all tasks will be automatically forwarded to the autoscaler.</p>
+</section>
+</section>
+<section id="limitations">
+<h2>Limitations<a class="headerlink" href="#limitations" title="Link to this heading"></a></h2>
+<p>The 3D textured meshes are currently not being merged as part of the workflow (only point clouds, DEMs and orthophotos are).</p>
+<p>GCPs are fully supported, however, there needs to be at least 3 GCP points on each submodel for the georeferencing to take place. If a submodel has fewer than 3 GCPs, a combination of the remaining GCPs + EXIF data will be used instead (which is going to be less accurate). We recommend using the <code class="docutils literal notranslate"><span class="pre">image_groups.txt</span></code> file to accurately control the submodel split when using GCPs.</p>
+</section>
+<section id="estimating-data-collection-effort">
+<h2>Estimating data collection effort<a class="headerlink" href="#estimating-data-collection-effort" title="Link to this heading"></a></h2>
+<p>Larger datasets can be collected with specialized fix wing UAVs, vertical takeoff and landing (VTOL) UAVs, and collected quite efficiently under certain conditions. In many instances, however, we are constrained to doing data collection efforts with commodity quadcopters. In these cases, a common question is the data collection time under ideal conditions with commodity equipment.</p>
+<section id="data-collection-effort-full-3d">
+<h3>Data collection effort, full 3D<a class="headerlink" href="#data-collection-effort-full-3d" title="Link to this heading"></a></h3>
+<p>For best in class results with full 3D reconstruction and 5cm resolution, it is feasible to collect 1-2km<sup>2</sup> per person, per day. This requires the following set of flights:</p>
+<ul class="simple">
+<li><p>60% overlap nadir flight</p></li>
+<li><p>70-80% overlap 45-degree gimbal angle cross-grid</p></li>
+</ul>
+<p>The 45-degree cross-grid flight provides the basis for a fully tied together model, while the nadir flights provide the necessary texture for orthophoto texturing. The lower overlap  meets the minimum requirement for orthophoto products as facilitated by by feature matching from the much higher overlap cross-grid.</p>
+</section>
+<section id="data-collection-effort-2d-and-2-5d-products">
+<h3>Data collection effort, 2D and 2.5D products<a class="headerlink" href="#data-collection-effort-2d-and-2-5d-products" title="Link to this heading"></a></h3>
+<p>For best in class results 2D and 2.5D products and 5cm resolution, it is feasible to collect 2-4km<sup>2</sup> per person, per day. This requires the following set of flights:</p>
+<ul class="simple">
+<li><p>70-80% overlap slightly off-nadir (5-10 degree off nadir)</p></li>
+</ul>
+<p>For more complex buildings and vegetation, aim for closer to 80% overlap. If buildings, vegetation, and terrain changes are not complex, it's quite feasible to use closer to 70% overlap.</p>
+<p>(credit: derived from ongoing conversations with Ivan Gayton, Humanitarian OpenStreetMap Team)</p>
+</section>
+</section>
+<section id="acknowledgments">
+<h2>Acknowledgments<a class="headerlink" href="#acknowledgments" title="Link to this heading"></a></h2>
+<p>Huge props to Pau and the folks at Mapillary for their amazing contributions to OpenDroneMap through their OpenSfM code, which is a key component of the split-merge pipeline. We look forward to further pushing the limits of OpenDroneMap and seeing how big a dataset we can process.</p>
+<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Learn to edit</a> and help improve <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/large.rst">this page</a>!</p>
+</section>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="../multispectral/" class="btn btn-neutral float-left" title="Multispectral and Thermal" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="../flying/" class="btn btn-neutral float-right" title="Flying Tips" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2020, OpenDroneMap。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>

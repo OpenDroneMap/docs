@@ -1,0 +1,785 @@
+
+
+<!DOCTYPE html>
+<html class="writer-html5" lang="zh" data-content_root="../">
+<head>
+  <meta charset="utf-8" /><meta name="viewport" content="width=device-width, initial-scale=1" />
+
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Options and Flags &mdash; OpenDroneMap 3.5.6 文档</title>
+      <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+
+  
+    <link rel="shortcut icon" href="../_static/favicon.ico"/>
+      <script src="../_static/jquery.js?v=5d32c60e"></script>
+      <script src="../_static/_sphinx_javascript_frameworks_compat.js?v=2cd50e6c"></script>
+      <script src="../_static/documentation_options.js?v=a05f0288"></script>
+      <script src="../_static/doctools.js?v=9a2dae69"></script>
+      <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+    <script src="../_static/js/theme.js"></script>
+    <link rel="index" title="索引" href="../genindex/" />
+    <link rel="search" title="搜索" href="../search/" />
+    <link rel="next" title="3d-tiles" href="3d-tiles/" />
+    <link rel="prev" title="Tutorials" href="../tutorials/" /> 
+</head>
+
+<body class="wy-body-for-nav"> 
+  <div class="wy-grid-for-nav">
+    <nav data-toggle="wy-nav-shift" class="wy-nav-side">
+      <div class="wy-side-scroll">
+        <div class="wy-side-nav-search" >
+
+          
+          
+          <a href="../" class="icon icon-home">
+            OpenDroneMap
+          </a>
+<div role="search">
+  <form id="rtd-search-form" class="wy-form" action="../search/" method="get">
+    <input type="text" name="q" placeholder="搜索文档" aria-label="搜索文档" />
+    <input type="hidden" name="check_keywords" value="yes" />
+    <input type="hidden" name="area" value="default" />
+  </form>
+</div>
+        </div><div class="wy-menu wy-menu-vertical" data-spy="affix" role="navigation" aria-label="导航菜单">
+              <ul>
+<li class="toctree-l1"><a class="reference internal" href="../installation/">Installation and Getting Started</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#quickstart">Quickstart</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hardware-recommendations">Hardware Recommendations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#installation">Installation</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#windows">Windows</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-check-virtualization-support">Step 1. Check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-install-requirements">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-check-memory-and-cpu-allocation">Step 3. Check Memory and CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-webodm">Step 4. Download WebODM</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-launch-webodm">Step 4. Launch WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#macos">macOS</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id1">Step 1. Check Virtualization Support</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id2">Step 2. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#id3">Step 3. Check Memory and CPU Allocation</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-and-launch-webodm">Step 4. Download and Launch WebODM</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#linux">Linux</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-install-requirements">Step 1. Install Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-check-additional-requirements">Step 2. Check Additional Requirements</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3a-download-and-launch-webodm-with-webodm-sh-call-of-docker-compose">Step 3a. Download and Launch WebODM with webodm.sh call of docker compose</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3b-alternatively-start-via-docker-compose-without-webodm-sh">Step 3b. Alternatively, start via docker compose without webodm.sh</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#basic-commands-and-troubleshooting">Basic Commands and Troubleshooting</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../installation/#hello-webodm">Hello, WebODM!</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../installation/#running-on-more-than-one-machine">Running on more than one machine</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+<ul class="current">
+<li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutorials</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-high-quality-orthophotos">Creating High Quality Orthophotos</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-digital-elevation-models">Creating Digital Elevation Models</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-potree-3d-viewer-module-on-webodm">Using Potree 3D viewer module on WebODM</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#cameras">Cameras</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#textured-model">Textured model</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#appearance">Appearance</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#point-budget">Point budget</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#field-of-view">Field of view</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#eye-dome-lighting">Eye Dome-lighting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#background">Background</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#other">Other</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#tools">Tools</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#measurement">Measurement</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#clipping">Clipping</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#navigation">Navigation</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#scene">Scene</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#measuring-stockpile-volume">Measuring stockpile volume</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#fieldwork-planning">Fieldwork planning</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-pattern">Flight pattern</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#flight-height">Flight height</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#gcps">GCPs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#processing-parameters">Processing parameters</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#measuring">Measuring</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#expected-accuracy">Expected accuracy</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-docker">Using Docker</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#listing-docker-machines">Listing Docker Machines</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#accessing-logs-on-the-instance">Accessing logs on the instance</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#command-line-access-to-instances">Command line access to instances</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#cleaning-up-after-docker">Cleaning up after Docker</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-odm-from-low-bandwidth-location">Using ODM from low-bandwidth location</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#what-is-this-and-who-is-it-for">What is this and who is it for?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#steps">Steps</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#install">Install</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#prep-data-and-project">Prep data and project</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#resize-droplet-pull-pin-run-away">Resize droplet, pull pin, run away</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#after-it-finishes-assuming-you-survive-that-long">After it finishes (assuming you survive that long)</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#advanced">Advanced</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#calibrating-the-camera">Calibrating the Camera</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#using-image-masks">Using Image Masks</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#using-singularity">Using Singularity</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#build-singularity-image-from-docker-image">Build Singularity image from Docker image</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#using-singularity-sif-image">Using Singularity SIF image</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#clusterodm-nodeodm-slurm-with-singularity-on-hpc">ClusterODM, NodeODM, SLURM, with Singularity on HPC</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../tutorials/#development-and-testing-of-odm">Development and testing of ODM</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#fork-and-clone-repository">Fork and clone repository</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#set-up-local-nodeodm-docker-instance">Set up local NodeODM docker instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#modify-code">Modify code</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#connect-to-nodeodm-instance">Connect to NodeODM instance</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../tutorials/#install-and-use-changes">Install and use changes</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1 current"><a class="current reference internal" href="#">Options and Flags</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="3d-tiles/">3d-tiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="align/">align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="auto-boundary/">auto-boundary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="auto-boundary/#what-is-auto-boundary">What Is Auto-Boundary?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auto-boundary/#when-is-auto-boundary-helpful">When Is Auto-Boundary Helpful?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auto-boundary/#why-would-one-use-auto-boundary">Why would one use auto-boundary?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="auto-boundary/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="auto-boundary/#true-auto-boundary">True: <code class="docutils literal notranslate"><span class="pre">--auto-boundary</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="auto-boundary/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="auto-boundary-distance/">auto-boundary-distance</a></li>
+<li class="toctree-l2"><a class="reference internal" href="bg-removal/">bg-removal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="boundary/">boundary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="boundary/#what-is-boundary-geojson">What is Boundary [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boundary/#when-is-boundary-geojson-appropriate">When is Boundary [GeoJSON] appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boundary/#why-would-one-use-boundary-geojson">Why would one use Boundary [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="boundary/#how-would-one-create-boundary-geojson">How would one create Boundary [GeoJSON]?</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boundary/#geojson-io">GeoJSON.io</a></li>
+<li class="toctree-l4"><a class="reference internal" href="boundary/#qgis">QGIS</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="boundary/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="boundary/#true-boundary-geojson-point-cloud">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Point Cloud</a></li>
+<li class="toctree-l4"><a class="reference internal" href="boundary/#true-boundary-geojson-orthophoto">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Orthophoto</a></li>
+<li class="toctree-l4"><a class="reference internal" href="boundary/#true-boundary-geojson-digital-elevation-model">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Digital Elevation Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="boundary/#true-boundary-geojson-3d-model-textured-mesh">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - 3D Model/Textured Mesh</a></li>
+<li class="toctree-l4"><a class="reference internal" href="boundary/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="build-overviews/">build-overviews</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="build-overviews/#what-are-overviews">What Are Overviews?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-overviews/#when-are-overviews-appropriate">When are Overviews appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-overviews/#why-would-one-use-overviews">Why would one use Overviews?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="build-overviews/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="build-overviews/#true-build-overviews">True: <code class="docutils literal notranslate"><span class="pre">--build-overviews</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="build-overviews/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="camera-lens/">camera-lens</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="camera-lens/#what-are-camera-lens-models">What Are Camera Lens Models?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="camera-lens/#when-are-manual-selections-appropriate">When are manual selections appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="camera-lens/#why-would-one-use-a-particular-camera-lens-model">Why would one use a particular Camera Lens Model?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="camera-lens/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="camera-lens/#auto-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">auto</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="camera-lens/#brown-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">brown</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="camera-lens/#fisheye-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">fisheye</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="camera-lens/#perspective-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">perspective</span></code> : Rectilinear Data</a></li>
+<li class="toctree-l4"><a class="reference internal" href="camera-lens/#spherical-rectilinear-data"><code class="docutils literal notranslate"><span class="pre">spherical</span></code> : Rectilinear Data</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="cameras/">cameras</a></li>
+<li class="toctree-l2"><a class="reference internal" href="cog/">cog</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="cog/#what-are-cloud-optimized-geotiffs-cogs">What Are Cloud Optimized GeoTIFFs (COGs)?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cog/#when-are-cogs-appropriate">When are COGs appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cog/#why-would-one-use-cogs">Why would one use COGs?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="cog/#example-images">Example Images</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="cog/#true-cog">True: <code class="docutils literal notranslate"><span class="pre">--cog</span></code></a></li>
+<li class="toctree-l4"><a class="reference internal" href="cog/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="copy-to/">copy-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="crop/">crop</a></li>
+<li class="toctree-l2"><a class="reference internal" href="debug/">debug</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dem-decimation/">dem-decimation</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dem-euclidean-map/">dem-euclidean-map</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dem-gapfill-steps/">dem-gapfill-steps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dem-resolution/">dem-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="depthmap-resolution/">depthmap-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dsm/">dsm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="dtm/">dtm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="end-with/">end-with</a></li>
+<li class="toctree-l2"><a class="reference internal" href="fast-orthophoto/">fast-orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feature-quality/">feature-quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="feature-type/">feature-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="force-gps/">force-gps</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gcp/">gcp</a></li>
+<li class="toctree-l2"><a class="reference internal" href="geo/">geo</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gltf/">gltf</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gps-accuracy/">gps-accuracy</a></li>
+<li class="toctree-l2"><a class="reference internal" href="gps-z-offset/">gps-z-offset</a></li>
+<li class="toctree-l2"><a class="reference internal" href="help/">help</a></li>
+<li class="toctree-l2"><a class="reference internal" href="ignore-gsd/">ignore-gsd</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matcher-neighbors/">matcher-neighbors</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matcher-order/">matcher-order</a></li>
+<li class="toctree-l2"><a class="reference internal" href="matcher-type/">matcher-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="max-concurrency/">max-concurrency</a></li>
+<li class="toctree-l2"><a class="reference internal" href="merge/">merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mesh-octree-depth/">mesh-octree-depth</a></li>
+<li class="toctree-l2"><a class="reference internal" href="mesh-size/">mesh-size</a></li>
+<li class="toctree-l2"><a class="reference internal" href="min-num-features/">min-num-features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="name/">name</a></li>
+<li class="toctree-l2"><a class="reference internal" href="no-gpu/">no-gpu</a></li>
+<li class="toctree-l2"><a class="reference internal" href="optimize-disk-space/">optimize-disk-space</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orthophoto-compression/">orthophoto-compression</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orthophoto-cutline/">orthophoto-cutline</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orthophoto-kmz/">orthophoto-kmz</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orthophoto-no-tiled/">orthophoto-no-tiled</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orthophoto-png/">orthophoto-png</a></li>
+<li class="toctree-l2"><a class="reference internal" href="orthophoto-resolution/">orthophoto-resolution</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pc-classify/">pc-classify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pc-copc/">pc-copc</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pc-csv/">pc-csv</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pc-ept/">pc-ept</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pc-filter/">pc-filter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pc-geometric/">pc-geometric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pc-las/">pc-las</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pc-quality/">pc-quality</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pc-rectify/">pc-rectify</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pc-sample/">pc-sample</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pc-skip-geometric/">pc-skip-geometric</a></li>
+<li class="toctree-l2"><a class="reference internal" href="pc-tile/">pc-tile</a></li>
+<li class="toctree-l2"><a class="reference internal" href="primary-band/">primary-band</a></li>
+<li class="toctree-l2"><a class="reference internal" href="project-path/">project-path</a></li>
+<li class="toctree-l2"><a class="reference internal" href="radiometric-calibration/">radiometric-calibration</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rerun/">rerun</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rerun-all/">rerun-all</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rerun-from/">rerun-from</a></li>
+<li class="toctree-l2"><a class="reference internal" href="resize-to/">resize-to</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rolling-shutter/">rolling-shutter</a></li>
+<li class="toctree-l2"><a class="reference internal" href="rolling-shutter-readout/">rolling-shutter-readout</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sfm-algorithm/">sfm-algorithm</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sfm-no-partial/">sfm-no-partial</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip-3dmodel/">skip-3dmodel</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip-band-alignment/">skip-band-alignment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip-orthophoto/">skip-orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="skip-report/">skip-report</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sky-removal/">sky-removal</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sm-cluster/">sm-cluster</a></li>
+<li class="toctree-l2"><a class="reference internal" href="sm-no-align/">sm-no-align</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smrf-scalar/">smrf-scalar</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smrf-slope/">smrf-slope</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smrf-threshold/">smrf-threshold</a></li>
+<li class="toctree-l2"><a class="reference internal" href="smrf-window/">smrf-window</a></li>
+<li class="toctree-l2"><a class="reference internal" href="split/">split</a></li>
+<li class="toctree-l2"><a class="reference internal" href="split-image-groups/">split-image-groups</a></li>
+<li class="toctree-l2"><a class="reference internal" href="split-overlap/">split-overlap</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texturing-data-term/">texturing-data-term</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texturing-keep-unseen-faces/">texturing-keep-unseen-faces</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texturing-outlier-removal-type/">texturing-outlier-removal-type</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texturing-single-material/">texturing-single-material</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texturing-skip-global-seam-leveling/">texturing-skip-global-seam-leveling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texturing-skip-local-seam-leveling/">texturing-skip-local-seam-leveling</a></li>
+<li class="toctree-l2"><a class="reference internal" href="texturing-tone-mapping/">texturing-tone-mapping</a></li>
+<li class="toctree-l2"><a class="reference internal" href="tiles/">tiles</a></li>
+<li class="toctree-l2"><a class="reference internal" href="time/">time</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use-3dmesh/">use-3dmesh</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use-exif/">use-exif</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use-fixed-camera-params/">use-fixed-camera-params</a></li>
+<li class="toctree-l2"><a class="reference internal" href="use-hybrid-bundle-adjustment/">use-hybrid-bundle-adjustment</a></li>
+<li class="toctree-l2"><a class="reference internal" href="verbose/">verbose</a></li>
+<li class="toctree-l2"><a class="reference internal" href="version/">version</a></li>
+<li class="toctree-l2"><a class="reference internal" href="video-limit/">video-limit</a></li>
+<li class="toctree-l2"><a class="reference internal" href="video-resolution/">video-resolution</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../flowchart/">Flowchart with options</a></li>
+<li class="toctree-l1"><a class="reference internal" href="../outputs/">OpenDroneMap Outputs</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#point-cloud">Point Cloud</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#d-textured-model">3D Textured Model</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#orthophoto">Orthophoto</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#dtm-dsm">DTM/DSM</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#logs">Logs</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../outputs/#list-of-all-outputs">List of all outputs</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../map-accuracy/">High Precision Workflows</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#map-accuracy">Map accuracy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#what-to-expect">What to expect</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aspects-impacting-map-accuracy">Aspects impacting map accuracy</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#references">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#ground-control-points">Ground Control Points</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#overview">Overview</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#recommended-practices-for-gcp-setting">Recommended practices for GCP setting</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#gcp-file-format">GCP file format</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#user-interfaces">User Interfaces</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#id1">POSM GCPi</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#id2">GCP Editor Pro</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#id3">References</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#image-geolocation-files">Image Geolocation Files</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../map-accuracy/#improving-relative-accuracy">Improving relative accuracy</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#multi-temporal-datasets">Multi-temporal Datasets</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../map-accuracy/#plugin-time-sift">Plugin Time-SIFT</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../map-accuracy/#aligning-large-datasets">Aligning Large  Datasets</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../multispectral/">Multispectral and Thermal</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#multispectral-support">Multispectral Support</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multispectral/#supported-sensors">Supported Sensors</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multispectral/#creating-orthophotos-from-multispectral-data">Creating Orthophotos from Multispectral Data</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multispectral/#workflows-for-non-supported-sensors">Workflows for Non-supported Sensors</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../multispectral/#thermal-support">Thermal Support</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../multispectral/#hardware">Hardware</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../multispectral/#usage">Usage</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../large/">Large Datasets</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../large/#local-split-merge">Local Split-Merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#distributed-split-merge">Distributed Split-Merge</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../large/#getting-started-with-distributed-split-merge">Getting Started with Distributed Split-Merge</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#understanding-the-cluster">Understanding the Cluster</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#accessing-the-logs">Accessing the Logs</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#autoscaling-clusterodm">Autoscaling ClusterODM</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#limitations">Limitations</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#estimating-data-collection-effort">Estimating data collection effort</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../large/#data-collection-effort-full-3d">Data collection effort, full 3D</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../large/#data-collection-effort-2d-and-2-5d-products">Data collection effort, 2D and 2.5D products</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../large/#acknowledgments">Acknowledgments</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../flying/">Flying Tips</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../flying/#data-collection-effort-full-3d">Data collection effort, full 3D</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flying/#data-collection-effort-2d-and-2-5d-products">Data collection effort, 2D and 2.5D products</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../flying/#other-resources-on-flying">Other resources on flying</a></li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../contributing/">How to Contribute and Request Features</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#how-to-request-features">How To Request Features</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../contributing/#how-to-contribute">How To Contribute</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/#community-forum">Community Forum</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/#reporting-bugs">Reporting Bugs</a><ul>
+<li class="toctree-l4"><a class="reference internal" href="../contributing/#template-for-submitting-bug-reports">Template For Submitting Bug Reports</a></li>
+</ul>
+</li>
+<li class="toctree-l3"><a class="reference internal" href="../contributing/#pull-requests">Pull Requests</a></li>
+</ul>
+</li>
+</ul>
+</li>
+<li class="toctree-l1"><a class="reference internal" href="../faq/">Frequently Asked Questions and Additional Resources</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../faq/#frequently-asked-questions">Frequently Asked Questions</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#data-processing">Data Processing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#licensing">Licensing</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#memory-issues">Memory issues</a></li>
+</ul>
+</li>
+<li class="toctree-l2"><a class="reference internal" href="../faq/#additional-references">Additional References</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#for-users">For Users</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../faq/#for-developers">For Developers</a></li>
+</ul>
+</li>
+</ul>
+</li>
+</ul>
+
+        </div>
+      </div>
+    </nav>
+
+    <section data-toggle="wy-nav-shift" class="wy-nav-content-wrap"><nav class="wy-nav-top" aria-label="移动版导航菜单" >
+          <i data-toggle="wy-nav-top" class="fa fa-bars"></i>
+          <a href="../">OpenDroneMap</a>
+      </nav>
+
+      <div class="wy-nav-content">
+        <div class="rst-content">
+          <div role="navigation" aria-label="页面导航">
+  <ul class="wy-breadcrumbs">
+      <li><a href="../" class="icon icon-home" aria-label="Home"></a></li>
+      <li class="breadcrumb-item active">Options and Flags</li>
+      <li class="wy-breadcrumbs-aside">
+            <a href="../_sources/arguments.rst.txt" rel="nofollow"> 查看页面源码</a>
+      </li>
+  </ul>
+  <hr/>
+</div>
+          <div role="main" class="document" itemscope="itemscope" itemtype="http://schema.org/Article">
+           <div itemprop="articleBody">
+             
+  <section id="options-and-flags">
+<h1>Options and Flags<a class="headerlink" href="#options-and-flags" title="Link to this heading"></a></h1>
+<dl class="simple">
+<dt><a class="reference internal" href="3d-tiles/#d-tiles"><span class="std std-ref">3d-tiles</span></a></dt><dd><p>Generate OGC 3D Tiles outputs. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="align/#align"><span class="std std-ref">align</span></a> &lt;path string&gt;</dt><dd><p>Path to a GeoTIFF DEM or a LAS/LAZ point cloud that the reconstruction outputs should be automatically aligned to. Experimental. Default: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt><a class="reference internal" href="auto-boundary/#auto-boundary"><span class="std std-ref">auto-boundary</span></a></dt><dd><p>Automatically set a boundary using camera shot locations to limit the area of the reconstruction. This can help remove far away background artifacts (sky, background landscapes, etc.). See also --boundary. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="auto-boundary-distance/#auto-boundary-distance"><span class="std std-ref">auto-boundary-distance</span></a> &lt;positive float&gt;</dt><dd><p>Specify the distance between camera shot locations and the outer edge of the boundary when computing the boundary with --auto-boundary. Set to 0 to automatically choose a value. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
+<dt><a class="reference internal" href="bg-removal/#bg-removal"><span class="std std-ref">bg-removal</span></a></dt><dd><p>Automatically compute image masks using AI to remove the background. Experimental. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="boundary/#boundary"><span class="std std-ref">boundary</span></a> &lt;json&gt;</dt><dd><p>GeoJSON polygon limiting the area of the reconstruction. Can be specified either as path to a GeoJSON file or as a JSON string representing the contents of a GeoJSON file. Default: ``</p>
+</dd>
+<dt><a class="reference internal" href="build-overviews/#build-overviews"><span class="std std-ref">build-overviews</span></a></dt><dd><p>Build orthophoto overviews for faster display in programs such as QGIS. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="camera-lens/#camera-lens"><span class="std std-ref">camera-lens</span></a> auto |  perspective |  brown |  fisheye |  fisheye_opencv |  spherical |  equirectangular |  dual</dt><dd><p>Set a camera projection type. Manually setting a value can help improve geometric undistortion. By default the application tries to determine a lens type from the images metadata. . Default: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p>
+</dd>
+<dt><a class="reference internal" href="cameras/#cameras"><span class="std std-ref">cameras</span></a> &lt;json&gt;</dt><dd><p>Use the camera parameters computed from another dataset instead of calculating them. Can be specified either as path to a cameras.json file or as a JSON string representing the contents of a cameras.json file. Default: ``</p>
+</dd>
+<dt><a class="reference internal" href="cog/#cog"><span class="std std-ref">cog</span></a></dt><dd><p>Create Cloud-Optimized GeoTIFFs instead of normal GeoTIFFs. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="copy-to/#copy-to"><span class="std std-ref">copy-to</span></a> &lt;path&gt;</dt><dd><p>Copy output results to this folder after processing.</p>
+</dd>
+<dt><a class="reference internal" href="crop/#crop"><span class="std std-ref">crop</span></a> &lt;positive float&gt;</dt><dd><p>Automatically crop image outputs by creating a smooth buffer around the dataset boundaries, shrunk by N meters. Use 0 to disable cropping. Default: <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
+</dd>
+<dt><a class="reference internal" href="dem-decimation/#dem-decimation"><span class="std std-ref">dem-decimation</span></a> &lt;positive integer&gt;</dt><dd><p>Decimate the points before generating the DEM. 1 is no decimation (full quality). 100 decimates ~99%% of the points. Useful for speeding up generation of DEM results in very large datasets. Default: <code class="docutils literal notranslate"><span class="pre">1</span></code></p>
+</dd>
+<dt><a class="reference internal" href="dem-euclidean-map/#dem-euclidean-map"><span class="std std-ref">dem-euclidean-map</span></a></dt><dd><p>Computes an euclidean raster map for each DEM. The map reports the distance from each cell to the nearest NODATA value (before any hole filling takes place). This can be useful to isolate the areas that have been filled. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="dem-gapfill-steps/#dem-gapfill-steps"><span class="std std-ref">dem-gapfill-steps</span></a> &lt;positive integer&gt;</dt><dd><p>Number of steps used to fill areas with gaps. Set to 0 to disable gap filling. Starting with a radius equal to the output resolution, N different DEMs are generated with progressively bigger radius using the inverse distance weighted (IDW) algorithm and merged together. Remaining gaps are then merged using nearest neighbor interpolation. Default: <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
+</dd>
+<dt><a class="reference internal" href="dem-resolution/#dem-resolution"><span class="std std-ref">dem-resolution</span></a> &lt;float&gt;</dt><dd><p>DSM/DTM resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
+</dd>
+<dt><a class="reference internal" href="dsm/#dsm"><span class="std std-ref">dsm</span></a></dt><dd><p>Use this tag to build a DSM (Digital Surface Model, ground + objects) using a progressive morphological filter. Check the --dem* parameters for finer tuning. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="dtm/#dtm"><span class="std std-ref">dtm</span></a></dt><dd><p>Use this tag to build a DTM (Digital Terrain Model, ground only) using a simple morphological filter. Check the --dem* and --smrf* parameters for finer tuning. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="end-with/#end-with"><span class="std std-ref">end-with</span></a> dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess</dt><dd><p>End processing at this stage. . Default: <code class="docutils literal notranslate"><span class="pre">odm_postprocess</span></code></p>
+</dd>
+<dt><a class="reference internal" href="fast-orthophoto/#fast-orthophoto"><span class="std std-ref">fast-orthophoto</span></a></dt><dd><p>Skips dense reconstruction and 3D model generation. It generates an orthophoto directly from the sparse reconstruction. If you just need an orthophoto and do not need a full 3D model, turn on this option. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="feature-quality/#feature-quality"><span class="std std-ref">feature-quality</span></a> ultra |  high |  medium |  low |  lowest</dt><dd><p>Set feature extraction quality. Higher quality generates better features, but requires more memory and takes longer. . Default: <code class="docutils literal notranslate"><span class="pre">high</span></code></p>
+</dd>
+<dt><a class="reference internal" href="feature-type/#feature-type"><span class="std std-ref">feature-type</span></a> akaze |  dspsift |  hahog |  orb |  sift</dt><dd><p>Choose the algorithm for extracting keypoints and computing descriptors. . Default: <code class="docutils literal notranslate"><span class="pre">dspsift</span></code></p>
+</dd>
+<dt><a class="reference internal" href="force-gps/#force-gps"><span class="std std-ref">force-gps</span></a></dt><dd><p>Use images' GPS exif data for reconstruction, even if there are GCPs present.This flag is useful if you have high precision GPS measurements. If there are no GCPs, this flag does nothing. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="gcp/#gcp"><span class="std std-ref">gcp</span></a> &lt;path string&gt;</dt><dd><p>Path to the file containing the ground control points used for georeferencing. The file needs to use the following format: EPSG:&lt;code&gt; or &lt;+proj definition&gt;geo_x geo_y geo_z im_x im_y image_name [gcp_name] [extra1] [extra2]Default: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt><a class="reference internal" href="geo/#geo"><span class="std std-ref">geo</span></a> &lt;path string&gt;</dt><dd><p>Path to the image geolocation file containing the camera center coordinates used for georeferencing. If you don't have values for yaw/pitch/roll you can set them to 0. The file needs to use the following format: EPSG:&lt;code&gt; or &lt;+proj definition&gt;image_name geo_x geo_y geo_z [yaw (degrees)] [pitch (degrees)] [roll (degrees)] [horz accuracy (meters)] [vert accuracy (meters)]Default: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt><a class="reference internal" href="gltf/#gltf"><span class="std std-ref">gltf</span></a></dt><dd><p>Generate single file Binary glTF (GLB) textured models. Default:  <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="gps-accuracy/#gps-accuracy"><span class="std std-ref">gps-accuracy</span></a> &lt;positive float&gt;</dt><dd><p>Set a value in meters for the GPS Dilution of Precision (DOP) information for all images. If your images are tagged with high precision GPS information (RTK), this value will be automatically set accordingly. You can use this option to manually set it in case the reconstruction fails. Lowering this option can sometimes help control bowling-effects over large areas. Default: <code class="docutils literal notranslate"><span class="pre">3</span></code></p>
+</dd>
+<dt><a class="reference internal" href="gps-z-offset/#gps-z-offset"><span class="std std-ref">gps-z-offset</span></a> &lt;float&gt;</dt><dd><p>Set a GPS offset in meters for the vertical axis (Z) by adding it to the altitude value of the GPS EXIF data. This does not change the value of any GCPs. This can be useful for example when adjusting from ellipsoidal to orthometric height. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
+<dt><a class="reference internal" href="help/#help"><span class="std std-ref">help</span></a></dt><dd><p>show this help message and exit</p>
+</dd>
+<dt><a class="reference internal" href="ignore-gsd/#ignore-gsd"><span class="std std-ref">ignore-gsd</span></a></dt><dd><p>Ignore Ground Sampling Distance (GSD).A memory and processor hungry change relative to the default behavior if set to true. Ordinarily, GSD estimates are used to cap the maximum resolution of image outputs and resizes images when necessary, resulting in faster processing and lower memory usage. Since GSD is an estimate, sometimes ignoring it can result in slightly better image output quality. Never set --ignore-gsd to true unless you are positive you need it, and even then: do not use it. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="matcher-neighbors/#matcher-neighbors"><span class="std std-ref">matcher-neighbors</span></a> &lt;positive integer&gt;</dt><dd><p>Perform image matching with the nearest images based on GPS exif data. Set to 0 to match by triangulation. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
+<dt><a class="reference internal" href="matcher-order/#matcher-order"><span class="std std-ref">matcher-order</span></a> &lt;positive integer&gt;</dt><dd><p>Perform image matching with the nearest N images based on image filename order. Can speed up processing of sequential images, such as those extracted from video. It is applied only on non-georeferenced datasets. Set to 0 to disable. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
+<dt><a class="reference internal" href="matcher-type/#matcher-type"><span class="std std-ref">matcher-type</span></a> bow |  bruteforce |  flann</dt><dd><p>Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of Words. FLANN is slower, but more stable. BOW is faster, but can sometimes miss valid matches. BRUTEFORCE is very slow but robust.. Default: <code class="docutils literal notranslate"><span class="pre">flann</span></code></p>
+</dd>
+<dt><a class="reference internal" href="max-concurrency/#max-concurrency"><span class="std std-ref">max-concurrency</span></a> &lt;positive integer&gt;</dt><dd><p>The maximum number of processes to use in various processes. Peak memory requirement is ~1GB per thread and 2 megapixel image resolution. Default: <code class="docutils literal notranslate"><span class="pre">4</span></code></p>
+</dd>
+<dt><a class="reference internal" href="merge/#merge"><span class="std std-ref">merge</span></a> all |  pointcloud |  orthophoto |  dem</dt><dd><p>Choose what to merge in the merge step in a split dataset. By default all available outputs are merged. Options: ['all', 'pointcloud', 'orthophoto', 'dem']. Default: <code class="docutils literal notranslate"><span class="pre">all</span></code></p>
+</dd>
+<dt><a class="reference internal" href="mesh-octree-depth/#mesh-octree-depth"><span class="std std-ref">mesh-octree-depth</span></a> &lt;integer: 1 &lt;= x &lt;= 14&gt;</dt><dd><p>Octree depth used in the mesh reconstruction, increase to get more vertices, recommended values are 8-12. Default: <code class="docutils literal notranslate"><span class="pre">11</span></code></p>
+</dd>
+<dt><a class="reference internal" href="mesh-size/#mesh-size"><span class="std std-ref">mesh-size</span></a> &lt;positive integer&gt;</dt><dd><p>The maximum vertex count of the output mesh. Default: <code class="docutils literal notranslate"><span class="pre">200000</span></code></p>
+</dd>
+<dt><a class="reference internal" href="min-num-features/#min-num-features"><span class="std std-ref">min-num-features</span></a> &lt;integer&gt;</dt><dd><p>Minimum number of features to extract per image. More features can be useful for finding more matches between images, potentially allowing the reconstruction of areas with little overlap or insufficient features. More features also slow down processing. Default: <code class="docutils literal notranslate"><span class="pre">10000</span></code></p>
+</dd>
+<dt><a class="reference internal" href="name/#name"><span class="std std-ref">name</span></a> &lt;dataset name&gt;</dt><dd><p>Name of dataset (i.e subfolder name within project folder). Default: <code class="docutils literal notranslate"><span class="pre">code</span></code></p>
+</dd>
+<dt><a class="reference internal" href="no-gpu/#no-gpu"><span class="std std-ref">no-gpu</span></a></dt><dd><p>Do not use GPU acceleration, even if it's available. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="optimize-disk-space/#optimize-disk-space"><span class="std std-ref">optimize-disk-space</span></a></dt><dd><p>Delete heavy intermediate files to optimize disk space usage. This affects the ability to restart the pipeline from an intermediate stage, but allows datasets to be processed on machines that don't have sufficient disk space available. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="orthophoto-compression/#orthophoto-compression"><span class="std std-ref">orthophoto-compression</span></a> JPEG |  LZW |  PACKBITS |  DEFLATE |  LZMA |  NONE</dt><dd><p>Set the compression to use for orthophotos. . Default: <code class="docutils literal notranslate"><span class="pre">DEFLATE</span></code></p>
+</dd>
+<dt><a class="reference internal" href="orthophoto-cutline/#orthophoto-cutline"><span class="std std-ref">orthophoto-cutline</span></a></dt><dd><p>Generates a polygon around the cropping area that cuts the orthophoto around the edges of features. This polygon can be useful for stitching seamless mosaics with multiple overlapping orthophotos. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="orthophoto-kmz/#orthophoto-kmz"><span class="std std-ref">orthophoto-kmz</span></a></dt><dd><p>Set this parameter if you want to generate a Google Earth (KMZ) rendering of the orthophoto. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="orthophoto-no-tiled/#orthophoto-no-tiled"><span class="std std-ref">orthophoto-no-tiled</span></a></dt><dd><p>Set this parameter if you want a striped GeoTIFF. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="orthophoto-png/#orthophoto-png"><span class="std std-ref">orthophoto-png</span></a></dt><dd><p>Set this parameter if you want to generate a PNG rendering of the orthophoto. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="orthophoto-resolution/#orthophoto-resolution"><span class="std std-ref">orthophoto-resolution</span></a> &lt;float &gt; 0.0&gt;</dt><dd><p>Orthophoto resolution in cm / pixel. Note that this value is capped by a ground sampling distance (GSD) estimate.Default: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
+</dd>
+<dt><a class="reference internal" href="pc-classify/#pc-classify"><span class="std std-ref">pc-classify</span></a></dt><dd><p>Classify the point cloud outputs. You can control the behavior of this option by tweaking the --dem-* parameters. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="pc-copc/#pc-copc"><span class="std std-ref">pc-copc</span></a></dt><dd><p>Save the georeferenced point cloud in Cloud Optimized Point Cloud (COPC) format. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="pc-csv/#pc-csv"><span class="std std-ref">pc-csv</span></a></dt><dd><p>Export the georeferenced point cloud in CSV format. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="pc-ept/#pc-ept"><span class="std std-ref">pc-ept</span></a></dt><dd><p>Export the georeferenced point cloud in Entwine Point Tile (EPT) format. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="pc-filter/#pc-filter"><span class="std std-ref">pc-filter</span></a> &lt;positive float&gt;</dt><dd><p>Filters the point cloud by removing points that deviate more than N standard deviations from the local mean. Set to 0 to disable filtering. Default: <code class="docutils literal notranslate"><span class="pre">5</span></code></p>
+</dd>
+<dt><a class="reference internal" href="pc-las/#pc-las"><span class="std std-ref">pc-las</span></a></dt><dd><p>Export the georeferenced point cloud in LAS format. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="pc-quality/#pc-quality"><span class="std std-ref">pc-quality</span></a> ultra |  high |  medium |  low |  lowest</dt><dd><p>Set point cloud quality. Higher quality generates better, denser point clouds, but requires more memory and takes longer. Each step up in quality increases processing time roughly by a factor of 4x.. Default: <code class="docutils literal notranslate"><span class="pre">medium</span></code></p>
+</dd>
+<dt><a class="reference internal" href="pc-rectify/#pc-rectify"><span class="std std-ref">pc-rectify</span></a></dt><dd><p>Perform ground rectification on the point cloud. This means that wrongly classified ground points will be re-classified and gaps will be filled. Useful for generating DTMs. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="pc-sample/#pc-sample"><span class="std std-ref">pc-sample</span></a> &lt;positive float&gt;</dt><dd><p>Filters the point cloud by keeping only a single point around a radius N (in meters). This can be useful to limit the output resolution of the point cloud and remove duplicate points. Set to 0 to disable sampling. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
+<dt><a class="reference internal" href="pc-skip-geometric/#pc-skip-geometric"><span class="std std-ref">pc-skip-geometric</span></a></dt><dd><p>Geometric estimates improve the accuracy of the point cloud by computing geometrically consistent depthmaps but may not be usable in larger datasets. This flag disables geometric estimates. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="primary-band/#primary-band"><span class="std std-ref">primary-band</span></a> &lt;string&gt;</dt><dd><p>When processing multispectral datasets, you can specify the name of the primary band that will be used for reconstruction. It's recommended to choose a band which has sharp details and is in focus. Default: <code class="docutils literal notranslate"><span class="pre">auto</span></code></p>
+</dd>
+<dt><a class="reference internal" href="project-path/#project-path"><span class="std std-ref">project-path</span></a> &lt;path&gt;</dt><dd><p>Path to the project folder. Your project folder should contain subfolders for each dataset. Each dataset should have an &quot;images&quot; folder.</p>
+</dd>
+<dt><a class="reference internal" href="radiometric-calibration/#radiometric-calibration"><span class="std std-ref">radiometric-calibration</span></a> none |  camera |  camera+sun</dt><dd><p>Set the radiometric calibration to perform on images. When processing multispectral and thermal images you should set this option to obtain reflectance/temperature values (otherwise you will get digital number values). [camera] applies black level, vignetting, row gradient gain/exposure compensation (if appropriate EXIF tags are found) and computes absolute temperature values. [camera+sun] is experimental, applies all the corrections of [camera], plus compensates for spectral radiance registered via a downwelling light sensor (DLS) taking in consideration the angle of the sun. . Default: <code class="docutils literal notranslate"><span class="pre">none</span></code></p>
+</dd>
+<dt><a class="reference internal" href="rerun/#rerun"><span class="std std-ref">rerun</span></a> dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess</dt><dd><p>Rerun this stage only and stop. . Default: ``</p>
+</dd>
+<dt><a class="reference internal" href="rerun-all/#rerun-all"><span class="std std-ref">rerun-all</span></a></dt><dd><p>Permanently delete all previous results and rerun the processing pipeline.</p>
+</dd>
+<dt><a class="reference internal" href="rerun-from/#rerun-from"><span class="std std-ref">rerun-from</span></a> dataset |  split |  merge |  opensfm |  openmvs |  odm_filterpoints |  odm_meshing |  mvs_texturing |  odm_georeferencing |  odm_dem |  odm_orthophoto |  odm_report |  odm_postprocess</dt><dd><p>Rerun processing from this stage. . Default: ``</p>
+</dd>
+<dt><a class="reference internal" href="rolling-shutter/#rolling-shutter"><span class="std std-ref">rolling-shutter</span></a></dt><dd><p>Turn on rolling shutter correction. If the camera has a rolling shutter and the images were taken in motion, you can turn on this option to improve the accuracy of the results. See also --rolling-shutter-readout. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="rolling-shutter-readout/#rolling-shutter-readout"><span class="std std-ref">rolling-shutter-readout</span></a> &lt;positive integer&gt;</dt><dd><p>Override the rolling shutter readout time for your camera sensor (in milliseconds), instead of using the rolling shutter readout database. Note that not all cameras are present in the database. Set to 0 to use the database value. Default: <code class="docutils literal notranslate"><span class="pre">0</span></code></p>
+</dd>
+<dt><a class="reference internal" href="sfm-algorithm/#sfm-algorithm"><span class="std std-ref">sfm-algorithm</span></a> incremental |  triangulation |  planar</dt><dd><p>Choose the structure from motion algorithm. For aerial datasets, if camera GPS positions and angles are available, triangulation can generate better results. For planar scenes captured at fixed altitude with nadir-only images, planar can be much faster. . Default: <code class="docutils literal notranslate"><span class="pre">incremental</span></code></p>
+</dd>
+<dt><a class="reference internal" href="sfm-no-partial/#sfm-no-partial"><span class="std std-ref">sfm-no-partial</span></a></dt><dd><p>Do not attempt to merge partial reconstructions. This can happen when images do not have sufficient overlap or are isolated. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="skip-3dmodel/#skip-3dmodel"><span class="std std-ref">skip-3dmodel</span></a></dt><dd><p>Skip generation of a full 3D model. This can save time if you only need 2D results such as orthophotos and DEMs. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="skip-band-alignment/#skip-band-alignment"><span class="std std-ref">skip-band-alignment</span></a></dt><dd><p>When processing multispectral datasets, ODM will automatically align the images for each band. If the images have been postprocessed and are already aligned, use this option. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="skip-orthophoto/#skip-orthophoto"><span class="std std-ref">skip-orthophoto</span></a></dt><dd><p>Skip generation of the orthophoto. This can save time if you only need 3D results or DEMs. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="skip-report/#skip-report"><span class="std std-ref">skip-report</span></a></dt><dd><p>Skip generation of PDF report. This can save time if you don't need a report. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="sky-removal/#sky-removal"><span class="std std-ref">sky-removal</span></a></dt><dd><p>Automatically compute image masks using AI to remove the sky. Experimental. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="sm-cluster/#sm-cluster"><span class="std std-ref">sm-cluster</span></a> &lt;string&gt;</dt><dd><p>URL to a ClusterODM instance for distributing a split-merge workflow on multiple nodes in parallel. Default: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt><a class="reference internal" href="sm-no-align/#sm-no-align"><span class="std std-ref">sm-no-align</span></a></dt><dd><p>Skip alignment of submodels in split-merge. Useful if GPS is good enough on very large datasets. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="smrf-scalar/#smrf-scalar"><span class="std std-ref">smrf-scalar</span></a> &lt;positive float&gt;</dt><dd><p>Simple Morphological Filter elevation scalar parameter. Default: <code class="docutils literal notranslate"><span class="pre">1.25</span></code></p>
+</dd>
+<dt><a class="reference internal" href="smrf-slope/#smrf-slope"><span class="std std-ref">smrf-slope</span></a> &lt;positive float&gt;</dt><dd><p>Simple Morphological Filter slope parameter (rise over run). Default: <code class="docutils literal notranslate"><span class="pre">0.15</span></code></p>
+</dd>
+<dt><a class="reference internal" href="smrf-threshold/#smrf-threshold"><span class="std std-ref">smrf-threshold</span></a> &lt;positive float&gt;</dt><dd><p>Simple Morphological Filter elevation threshold parameter (meters). Default: <code class="docutils literal notranslate"><span class="pre">0.5</span></code></p>
+</dd>
+<dt><a class="reference internal" href="smrf-window/#smrf-window"><span class="std std-ref">smrf-window</span></a> &lt;positive float&gt;</dt><dd><p>Simple Morphological Filter window radius parameter (meters). Default: <code class="docutils literal notranslate"><span class="pre">18.0</span></code></p>
+</dd>
+<dt><a class="reference internal" href="split/#split"><span class="std std-ref">split</span></a> &lt;positive integer&gt;</dt><dd><p>Average number of images per submodel. When splitting a large dataset into smaller submodels, images are grouped into clusters. This value regulates the number of images that each cluster should have on average. Default: <code class="docutils literal notranslate"><span class="pre">999999</span></code></p>
+</dd>
+<dt><a class="reference internal" href="split-image-groups/#split-image-groups"><span class="std std-ref">split-image-groups</span></a> &lt;path string&gt;</dt><dd><p>Path to the image groups file that controls how images should be split into groups. The file needs to use the following format: image_name group_nameDefault: <code class="docutils literal notranslate"><span class="pre">None</span></code></p>
+</dd>
+<dt><a class="reference internal" href="split-overlap/#split-overlap"><span class="std std-ref">split-overlap</span></a> &lt;positive integer&gt;</dt><dd><p>Radius of the overlap between submodels in meters. After grouping images into clusters, images that are closer than this radius to a cluster are added to the cluster. This is done to ensure that neighboring submodels overlap. All imagesneed GPS information. Default: <code class="docutils literal notranslate"><span class="pre">150</span></code></p>
+</dd>
+<dt><a class="reference internal" href="texturing-keep-unseen-faces/#texturing-keep-unseen-faces"><span class="std std-ref">texturing-keep-unseen-faces</span></a></dt><dd><p>Keep faces in the mesh that are not seen in any camera. Default:  <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="texturing-single-material/#texturing-single-material"><span class="std std-ref">texturing-single-material</span></a></dt><dd><p>Generate OBJs that have a single material and a single texture file instead of multiple ones. Default:  <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="texturing-skip-global-seam-leveling/#texturing-skip-global-seam-leveling"><span class="std std-ref">texturing-skip-global-seam-leveling</span></a></dt><dd><p>Skip normalization of colors across all images. Useful when processing radiometric data. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="tiles/#tiles"><span class="std std-ref">tiles</span></a></dt><dd><p>Generate static tiles for orthophotos and DEMs that are suitable for viewers like Leaflet or OpenLayers. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="use-3dmesh/#use-3dmesh"><span class="std std-ref">use-3dmesh</span></a></dt><dd><p>Use a full 3D mesh to compute the orthophoto instead of a 2.5D mesh. This option is a bit faster and provides similar results in planar areas. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="use-exif/#use-exif"><span class="std std-ref">use-exif</span></a></dt><dd><p>Use this tag if you have a GCP File but want to use the EXIF information for georeferencing instead. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="use-fixed-camera-params/#use-fixed-camera-params"><span class="std std-ref">use-fixed-camera-params</span></a></dt><dd><p>Turn off camera parameter optimization during bundle adjustment. This can be sometimes useful for improving results that exhibit doming/bowling or when images are taken with a rolling shutter camera. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="use-hybrid-bundle-adjustment/#use-hybrid-bundle-adjustment"><span class="std std-ref">use-hybrid-bundle-adjustment</span></a></dt><dd><p>Run local bundle adjustment for every image added to the reconstruction and a global adjustment every 100 images. Speeds up reconstruction for very large datasets. Default: <code class="docutils literal notranslate"><span class="pre">False</span></code></p>
+</dd>
+<dt><a class="reference internal" href="version/#version"><span class="std std-ref">version</span></a></dt><dd><p>Displays version number and exits.</p>
+</dd>
+<dt><a class="reference internal" href="video-limit/#video-limit"><span class="std std-ref">video-limit</span></a> &lt;positive integer&gt;</dt><dd><p>Maximum number of frames to extract from video files for processing. Set to 0 for no limit. Default: <code class="docutils literal notranslate"><span class="pre">500</span></code></p>
+</dd>
+<dt><a class="reference internal" href="video-resolution/#video-resolution"><span class="std std-ref">video-resolution</span></a> &lt;positive integer&gt;</dt><dd><p>The maximum output resolution of extracted video frames in pixels. Default: <code class="docutils literal notranslate"><span class="pre">4000</span></code></p>
+</dd>
+</dl>
+<p>If you want to add more details to a command, <a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">learn to edit</a> and help improve the matching file in the <code class="docutils literal notranslate"><span class="pre">arguments_edit</span></code> <a class="reference external" href="https://github.com/OpenDroneMap/docs/tree/publish/source/arguments_edit">project folder</a>!</p>
+<div class="toctree-wrapper compound">
+<ul>
+<li class="toctree-l1"><a class="reference internal" href="3d-tiles/">3d-tiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="align/">align</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auto-boundary/">auto-boundary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="auto-boundary-distance/">auto-boundary-distance</a></li>
+<li class="toctree-l1"><a class="reference internal" href="bg-removal/">bg-removal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="boundary/">boundary</a></li>
+<li class="toctree-l1"><a class="reference internal" href="build-overviews/">build-overviews</a></li>
+<li class="toctree-l1"><a class="reference internal" href="camera-lens/">camera-lens</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cameras/">cameras</a></li>
+<li class="toctree-l1"><a class="reference internal" href="cog/">cog</a></li>
+<li class="toctree-l1"><a class="reference internal" href="copy-to/">copy-to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="crop/">crop</a></li>
+<li class="toctree-l1"><a class="reference internal" href="debug/">debug</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dem-decimation/">dem-decimation</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dem-euclidean-map/">dem-euclidean-map</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dem-gapfill-steps/">dem-gapfill-steps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dem-resolution/">dem-resolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="depthmap-resolution/">depthmap-resolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dsm/">dsm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="dtm/">dtm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="end-with/">end-with</a></li>
+<li class="toctree-l1"><a class="reference internal" href="fast-orthophoto/">fast-orthophoto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feature-quality/">feature-quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="feature-type/">feature-type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="force-gps/">force-gps</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gcp/">gcp</a></li>
+<li class="toctree-l1"><a class="reference internal" href="geo/">geo</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gltf/">gltf</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gps-accuracy/">gps-accuracy</a></li>
+<li class="toctree-l1"><a class="reference internal" href="gps-z-offset/">gps-z-offset</a></li>
+<li class="toctree-l1"><a class="reference internal" href="help/">help</a></li>
+<li class="toctree-l1"><a class="reference internal" href="ignore-gsd/">ignore-gsd</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matcher-neighbors/">matcher-neighbors</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matcher-order/">matcher-order</a></li>
+<li class="toctree-l1"><a class="reference internal" href="matcher-type/">matcher-type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="max-concurrency/">max-concurrency</a></li>
+<li class="toctree-l1"><a class="reference internal" href="merge/">merge</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mesh-octree-depth/">mesh-octree-depth</a></li>
+<li class="toctree-l1"><a class="reference internal" href="mesh-size/">mesh-size</a></li>
+<li class="toctree-l1"><a class="reference internal" href="min-num-features/">min-num-features</a></li>
+<li class="toctree-l1"><a class="reference internal" href="name/">name</a></li>
+<li class="toctree-l1"><a class="reference internal" href="no-gpu/">no-gpu</a></li>
+<li class="toctree-l1"><a class="reference internal" href="optimize-disk-space/">optimize-disk-space</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orthophoto-compression/">orthophoto-compression</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orthophoto-cutline/">orthophoto-cutline</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orthophoto-kmz/">orthophoto-kmz</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orthophoto-no-tiled/">orthophoto-no-tiled</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orthophoto-png/">orthophoto-png</a></li>
+<li class="toctree-l1"><a class="reference internal" href="orthophoto-resolution/">orthophoto-resolution</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pc-classify/">pc-classify</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pc-copc/">pc-copc</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pc-csv/">pc-csv</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pc-ept/">pc-ept</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pc-filter/">pc-filter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pc-geometric/">pc-geometric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pc-las/">pc-las</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pc-quality/">pc-quality</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pc-rectify/">pc-rectify</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pc-sample/">pc-sample</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pc-skip-geometric/">pc-skip-geometric</a></li>
+<li class="toctree-l1"><a class="reference internal" href="pc-tile/">pc-tile</a></li>
+<li class="toctree-l1"><a class="reference internal" href="primary-band/">primary-band</a></li>
+<li class="toctree-l1"><a class="reference internal" href="project-path/">project-path</a></li>
+<li class="toctree-l1"><a class="reference internal" href="radiometric-calibration/">radiometric-calibration</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rerun/">rerun</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rerun-all/">rerun-all</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rerun-from/">rerun-from</a></li>
+<li class="toctree-l1"><a class="reference internal" href="resize-to/">resize-to</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rolling-shutter/">rolling-shutter</a></li>
+<li class="toctree-l1"><a class="reference internal" href="rolling-shutter-readout/">rolling-shutter-readout</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sfm-algorithm/">sfm-algorithm</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sfm-no-partial/">sfm-no-partial</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skip-3dmodel/">skip-3dmodel</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skip-band-alignment/">skip-band-alignment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skip-orthophoto/">skip-orthophoto</a></li>
+<li class="toctree-l1"><a class="reference internal" href="skip-report/">skip-report</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sky-removal/">sky-removal</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sm-cluster/">sm-cluster</a></li>
+<li class="toctree-l1"><a class="reference internal" href="sm-no-align/">sm-no-align</a></li>
+<li class="toctree-l1"><a class="reference internal" href="smrf-scalar/">smrf-scalar</a></li>
+<li class="toctree-l1"><a class="reference internal" href="smrf-slope/">smrf-slope</a></li>
+<li class="toctree-l1"><a class="reference internal" href="smrf-threshold/">smrf-threshold</a></li>
+<li class="toctree-l1"><a class="reference internal" href="smrf-window/">smrf-window</a></li>
+<li class="toctree-l1"><a class="reference internal" href="split/">split</a></li>
+<li class="toctree-l1"><a class="reference internal" href="split-image-groups/">split-image-groups</a></li>
+<li class="toctree-l1"><a class="reference internal" href="split-overlap/">split-overlap</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texturing-data-term/">texturing-data-term</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texturing-keep-unseen-faces/">texturing-keep-unseen-faces</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texturing-outlier-removal-type/">texturing-outlier-removal-type</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texturing-single-material/">texturing-single-material</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texturing-skip-global-seam-leveling/">texturing-skip-global-seam-leveling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texturing-skip-local-seam-leveling/">texturing-skip-local-seam-leveling</a></li>
+<li class="toctree-l1"><a class="reference internal" href="texturing-tone-mapping/">texturing-tone-mapping</a></li>
+<li class="toctree-l1"><a class="reference internal" href="tiles/">tiles</a></li>
+<li class="toctree-l1"><a class="reference internal" href="time/">time</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use-3dmesh/">use-3dmesh</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use-exif/">use-exif</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use-fixed-camera-params/">use-fixed-camera-params</a></li>
+<li class="toctree-l1"><a class="reference internal" href="use-hybrid-bundle-adjustment/">use-hybrid-bundle-adjustment</a></li>
+<li class="toctree-l1"><a class="reference internal" href="verbose/">verbose</a></li>
+<li class="toctree-l1"><a class="reference internal" href="version/">version</a></li>
+<li class="toctree-l1"><a class="reference internal" href="video-limit/">video-limit</a></li>
+<li class="toctree-l1"><a class="reference internal" href="video-resolution/">video-resolution</a></li>
+</ul>
+</div>
+</section>
+
+
+           </div>
+          </div>
+          <footer><div class="rst-footer-buttons" role="navigation" aria-label="页脚">
+        <a href="../tutorials/" class="btn btn-neutral float-left" title="Tutorials" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> 上一页</a>
+        <a href="3d-tiles/" class="btn btn-neutral float-right" title="3d-tiles" accesskey="n" rel="next">下一页 <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
+    </div>
+
+  <hr/>
+
+  <div role="contentinfo">
+    <p>&#169; 版权所有 2020, OpenDroneMap。</p>
+  </div>
+
+  利用 <a href="https://www.sphinx-doc.org/">Sphinx</a> 构建，使用的 
+    <a href="https://github.com/readthedocs/sphinx_rtd_theme">主题</a>
+    由 <a href="https://readthedocs.org">Read the Docs</a> 开发.
+   
+
+</footer>
+        </div>
+      </div>
+    </section>
+  </div>
+  <script>
+      jQuery(function () {
+          SphinxRtdTheme.Navigation.enable(true);
+      });
+  </script> 
+
+</body>
+</html>
