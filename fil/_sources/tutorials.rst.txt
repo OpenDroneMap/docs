@@ -890,16 +890,16 @@ Starting from ODM ``2.0`` people can supply image masks to inform the software t
 
 To add a mask, simply create a new black and white image of the same dimension as the target image you want to mask (you can use a program such as GIMP to do this). Color in black the areas to exclude from the reconstruction. 
 
-.. figure:: https://user-images.githubusercontent.com/1951843/93247037-ade87a00-f75b-11ea-8b42-25bc1d89279d.webp
+.. figure:: images/target_image.webp
    :alt: Target image
    :align: center
 
-.. figure:: https://user-images.githubusercontent.com/1951843/93247007-a2954e80-f75b-11ea-87b3-4f04bd1737b9.webp
+.. figure:: images/target_image_mask.webp
    :alt: Image mask
    :align: center
 
 
-.. figure:: https://user-images.githubusercontent.com/1951843/93246970-8f827e80-f75b-11ea-8179-5a8fdd9f5193.webp
+.. figure:: images/3D_result.webp
    :alt: 3D result (building is masked)
    :align: center
 
