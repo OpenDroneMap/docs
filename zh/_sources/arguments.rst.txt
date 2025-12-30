@@ -113,6 +113,9 @@ Options and Flags
 :ref:`merge<merge>` all |  pointcloud |  orthophoto |  dem
   Choose what to merge in the merge step in a split dataset. By default all available outputs are merged. Options: ['all', 'pointcloud', 'orthophoto', 'dem']. Default: ``all``
 
+:ref:`merge-skip-blending<merge-skip-blending>` 
+  During the orthophoto merging, skip expensive blending operation: ``False``
+
 :ref:`mesh-octree-depth<mesh-octree-depth>` <integer: 1 <= x <= 14>
   Octree depth used in the mesh reconstruction, increase to get more vertices, recommended values are 8-12. Default: ``11``
 

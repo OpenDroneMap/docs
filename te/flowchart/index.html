@@ -218,7 +218,7 @@ const load = async () => {
     if ("True" === "True") {
         const mermaids_to_add_zoom = 1 === -1 ? all_mermaids.length : 1;
         if(mermaids_to_add_zoom > 0) {
-            var svgs = d3.selectAll(".mermaid[data-zoom-id=id-0c17d851-bfe9-42c9-8ec1-379226471c11] svg");
+            var svgs = d3.selectAll(".mermaid[data-zoom-id=id-2ca9d95e-9a43-4aa8-a1f4-b9895eb6e784] svg");
             if(all_mermaids.length !== mermaids_processed.length) {
                 setTimeout(load, 200);
                 return;
@@ -625,6 +625,7 @@ window.addEventListener("load", load);
 <li class="toctree-l2"><a class="reference internal" href="../arguments/matcher-type/">matcher-type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/max-concurrency/">max-concurrency</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/merge/">merge</a></li>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/merge-skip-blending/">merge-skip-blending</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/mesh-octree-depth/">mesh-octree-depth</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/mesh-size/">mesh-size</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/min-num-features/">min-num-features</a></li>
@@ -828,7 +829,7 @@ window.addEventListener("load", load);
              
   <section id="flowchart-with-options">
 <h1>Flowchart with options<a class="headerlink" href="#flowchart-with-options" title="Link to this heading"></a></h1>
-<pre data-zoom-id="id-0c17d851-bfe9-42c9-8ec1-379226471c11" class="mermaid">
+<pre data-zoom-id="id-2ca9d95e-9a43-4aa8-a1f4-b9895eb6e784" class="mermaid">
          flowchart  TB
 
 
