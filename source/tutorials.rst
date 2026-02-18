@@ -779,7 +779,7 @@ Resize droplet, pull pin, run away
 
 ::
 
-   nohup python run.py myproject --split 1 --split-overlap 0 --depthmap-resolution 1000 --orthophoto-resolution 5 --dem-resolution 15 --pc-las --dsm
+   nohup python run.py myproject --split 1 --split-overlap 0 --orthophoto-resolution 5 --dem-resolution 15 --pc-las --dsm
 
 -  This points ODM at the folder (in this example)
    ``/mnt/odmdata/myproject/``. Provided the image_groups.txt and
