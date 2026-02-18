@@ -1,6 +1,11 @@
 #!/usr/bin/python3
 
-import argparse, os, urllib.request, ast, sys, glob
+import argparse
+import os
+import urllib.request
+import ast
+import sys
+import glob
 from io import StringIO
 from pathlib import Path
 from string import Template
@@ -100,14 +105,21 @@ if len(options) > 0:
     # Clean up the output directory - remove all existing .rst files
     print("Cleaning up %s ..." % argsoutdir)
     for old_file in glob.glob(os.path.join(argsoutdir, "*.rst")):
-        os.remove(old_file)
+        try:
+            os.remove(old_file)
+            print("Removed %s" % old_file)
+        except (OSError, PermissionError) as e:
+            print("Warning: Could not remove %s: %s" % (old_file, e))
 
     # Clean up old .pot files for deprecated arguments
     if os.path.isdir(argspotdir):
         print("Cleaning up %s ..." % argspotdir)
         for old_pot in glob.glob(os.path.join(argspotdir, "*.pot")):
-            os.remove(old_pot)
-            print("Removed %s" % old_pot)
+            try:
+                os.remove(old_pot)
+                print("Removed %s" % old_pot)
+            except (OSError, PermissionError) as e:
+                print("Warning: Could not remove %s: %s" % (old_pot, e))
 
     # Clean up old .po files for deprecated arguments in all languages
     for lang in LANGUAGES:
@@ -115,9 +127,11 @@ if len(options) > 0:
         if os.path.isdir(argspodir):
             print("Cleaning up %s ..." % argspodir)
             for old_po in glob.glob(os.path.join(argspodir, "*.po")):
-                os.remove(old_po)
-                print("Removed %s" % old_po)
-        print("Removed %s" % old_file)
+                try:
+                    os.remove(old_po)
+                    print("Removed %s" % old_po)
+                except (OSError, PermissionError) as e:
+                    print("Warning: Could not remove %s: %s" % (old_po, e))
 
     with open(argstmplfile) as f:
         argstmpl = Template(f.read())
@@ -177,6 +191,20 @@ if len(options) > 0:
         f.write(tmpl.substitute(arguments=subst))
 
     print("Wrote %s" % outfile)
+
+    # Clean up orphaned files in arguments_edit/ directory
+    arguments_edit_dir = os.path.join(argsoutdir + "_edit")
+    if os.path.isdir(arguments_edit_dir):
+        print("Cleaning up orphaned files in %s ..." % arguments_edit_dir)
+        current_opt_names = set(get_opt_name(opt) for opt in keys)
+        for edit_file in glob.glob(os.path.join(arguments_edit_dir, "*.rst")):
+            edit_opt_name = os.path.splitext(os.path.basename(edit_file))[0]
+            if edit_opt_name not in current_opt_names:
+                try:
+                    os.remove(edit_file)
+                    print("Removed orphaned %s" % edit_file)
+                except (OSError, PermissionError) as e:
+                    print("Warning: Could not remove %s: %s" % (edit_file, e))
 
     # Update .tx/config to remove deprecated options
     if os.path.isfile(txconfigfile):
