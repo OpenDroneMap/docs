@@ -1,6 +1,6 @@
 #!/usr/bin/python3
 
-import argparse, os, urllib.request, ast, sys
+import argparse, os, urllib.request, ast, sys, glob
 from io import StringIO
 from pathlib import Path
 from string import Template
@@ -90,6 +90,12 @@ if len(options) > 0:
 
     keys = list(options.keys())
     keys.sort(key=lambda a: a.replace("-", ""))
+
+    # Clean up the output directory - remove all existing .rst files
+    print("Cleaning up %s ..." % argsoutdir)
+    for old_file in glob.glob(os.path.join(argsoutdir, "*.rst")):
+        os.remove(old_file)
+        print("Removed %s" % old_file)
 
     with open(argstmplfile) as f:
         argstmpl = Template(f.read())

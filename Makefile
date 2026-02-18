@@ -15,7 +15,7 @@ help:
 .PHONY: help Makefile
 
 # this is for testing, it will only build the EN version of the docs
-livehtml:
+livehtml: autogenerate
 	sphinx-autobuild --open-browser --host 0.0.0.0 -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)/html"
 
 # this will update `arguments.rst` to match arguments in the ODM code
