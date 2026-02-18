@@ -31,6 +31,11 @@ msgstr "Preguntas frecuentes"
 msgid "Data Processing"
 msgstr "Procesamiento de datos"
 
+#: ../../faq.rst:12
+msgid ""
+"**Can I process two or more orthophoto GeoTIFFs to stitch them together?**"
+msgstr ""
+
 #: ../../faq.rst:14
 msgid ""
 "No. ODM is a photogrammetric pipeline and orthophotos do not have the "
@@ -73,6 +78,12 @@ msgstr ""
 msgid "Licensing"
 msgstr "Licenciamiento"
 
+#: ../../faq.rst:27
+msgid ""
+"**I want to build a commercial application that includes ODM. Do I need a "
+"commercial license?**"
+msgstr ""
+
 #: ../../faq.rst:29
 msgid ""
 "ODM is free and open source software, released under the `AGPLv3 <https://"
@@ -85,6 +96,10 @@ msgstr ""
 "libertad de crear y vender aplicaciones con él, solo asegúrese de cumplir "
 "con los requisitos de la licencia, en particular, el requisito de divulgar "
 "la fuente."
+
+#: ../../faq.rst:31
+msgid "**Are there other licensing options aside from the AGPLv3?**"
+msgstr ""
 
 #: ../../faq.rst:33
 msgid "Nope, sorry!"

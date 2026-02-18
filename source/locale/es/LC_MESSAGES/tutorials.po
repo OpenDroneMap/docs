@@ -73,6 +73,13 @@ msgstr ""
 msgid "Creating Digital Elevation Models"
 msgstr "Creación de modelos de elevación digitales"
 
+#: ../../tutorials.rst:26
+msgid ""
+"By default ODM does not create digital elevation models (DEMs). To create a "
+"digital terrain model, make sure to pass the ``--dtm`` flag. To create a "
+"digital surface model, be sure to pass the ``--dsm`` flag."
+msgstr ""
+
 #: ../../tutorials.rst:-1
 msgid "image of OpenDroneMap derived digital surface model"
 msgstr "imagen del modelo digital de superficie derivado de OpenDroneMap"
@@ -980,6 +987,12 @@ msgstr ""
 "topográfico están diseñadas para proporcionar la precisión milimétrica "
 "requerida."
 
+#: ../../tutorials.rst:359
+msgid ""
+"For further information on the use of GCPs, please refer to the `Ground "
+"Control Points section <https://docs.opendronemap.org/gcp/>`_."
+msgstr ""
+
 #: ../../tutorials.rst:362
 msgid "Processing parameters"
 msgstr "Parámetros de procesamiento"
@@ -1223,6 +1236,12 @@ msgstr ""
 "Presionar \"Enter\" o \"Espacio\", las teclas de flecha o las teclas \"Page "
 "Up\" o \"Page Down\" ahora nos ayudará a navegar por los registros. La letra "
 "minúscula \"Q\" nos permitirá volver a la línea de comandos."
+
+#: ../../tutorials.rst:492
+msgid ""
+"We can also extract just the end of the logs using the `tail` command as "
+"follows:"
+msgstr ""
 
 #: ../../tutorials.rst:503
 msgid ""
@@ -1681,6 +1700,13 @@ msgstr ""
 "configuración de ejemplo) ``/mnt/odmdata/``, que en este caso apunta al "
 "Volumen que creamos. Dentro de eso se crean directorios de proyectos "
 "individuales."
+
+#: ../../tutorials.rst:727
+msgid ""
+"Individual project directories, i.e. ``/mnt/odmdata/myproject/`` contain the "
+"gcp_list.txt file, the image_groups.txt file, and the images folder for each "
+"project."
+msgstr ""
 
 #: ../../tutorials.rst:730
 msgid ""

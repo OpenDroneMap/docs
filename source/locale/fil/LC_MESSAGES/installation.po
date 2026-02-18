@@ -100,6 +100,15 @@ msgstr "100 GB of disk space"
 msgid "16 GB RAM"
 msgstr "16 GB RAM"
 
+#: ../../installation.rst:33
+msgid ""
+"The above will allow the processing of a few hundred images with minimal "
+"issues. A CPU with more cores will allow for faster processing, while a "
+"graphics card (GPU) currently has no impact on performance. For processing "
+"more images, add more disk space and RAM linearly to the number of images "
+"you need to process."
+msgstr ""
+
 #: ../../installation.rst:35
 msgid "Minimum RAM needed for N images"
 msgstr ""
@@ -312,6 +321,11 @@ msgid ""
 msgstr ""
 "Kung ang gamit ay Windows 10 Professional o mas bagong bersiyon, dapat i-"
 "install ito:"
+
+#: ../../installation.rst:104
+msgid ""
+"Docker for Windows:https://docs.docker.com/desktop/install/windows-install/"
+msgstr ""
 
 #: ../../installation.rst:106
 msgid ""
@@ -785,6 +799,13 @@ msgstr "Maginstall sa Arch"
 msgid "Step 2. Check Additional Requirements"
 msgstr "Step 2. I-check ang mga karagdagan na requirements"
 
+#: ../../installation.rst:365
+msgid ""
+"In addition to the three programs above, the docker compose script is also "
+"needed. Sometimes it’s already installed with docker, but sometimes it "
+"isn’t. To verify if it’s installed try to type:"
+msgstr ""
+
 #: ../../installation.rst:371
 msgid "You should see somethings similar to the following:"
 msgstr "Dapat makita ang mga sumusunod:"
@@ -882,6 +903,14 @@ msgstr ""
 #: ../../installation.rst:568
 msgid "Hello, WebODM!"
 msgstr "Hello, WebODM!"
+
+#: ../../installation.rst:570
+msgid ""
+"After starting the containers using 3a. or 3b. you can open WebODM in the "
+"browser. This will greet you with a welcome message and will ask to create "
+"the first user. Take some time to familiarize yourself with the web "
+"interface and explore its various menus."
+msgstr ""
 
 #: ../../installation.rst:-1
 msgid "Screenshot of WebODM Dashboard"

@@ -73,6 +73,13 @@ msgstr ""
 msgid "Creating Digital Elevation Models"
 msgstr "Vytváření digitálních výškových modelů"
 
+#: ../../tutorials.rst:26
+msgid ""
+"By default ODM does not create digital elevation models (DEMs). To create a "
+"digital terrain model, make sure to pass the ``--dtm`` flag. To create a "
+"digital surface model, be sure to pass the ``--dsm`` flag."
+msgstr ""
+
 #: ../../tutorials.rst:-1
 msgid "image of OpenDroneMap derived digital surface model"
 msgstr "obrázek digitálního modelu povrchu odvozeného z OpenDroneMap"
@@ -1616,6 +1623,13 @@ msgstr ""
 "project_path na (podle našeho příkladu nastavení) ``/mnt/odmdata/``, což v "
 "tomto případě ukazuje na námi vytvořený svazek. V jeho rámci se vytvoří "
 "jednotlivé adresáře projektu."
+
+#: ../../tutorials.rst:727
+msgid ""
+"Individual project directories, i.e. ``/mnt/odmdata/myproject/`` contain the "
+"gcp_list.txt file, the image_groups.txt file, and the images folder for each "
+"project."
+msgstr ""
 
 #: ../../tutorials.rst:730
 msgid ""

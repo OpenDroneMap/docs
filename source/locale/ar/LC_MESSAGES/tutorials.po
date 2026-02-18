@@ -72,6 +72,13 @@ msgstr ""
 msgid "Creating Digital Elevation Models"
 msgstr "إنشاء نماذج الارتفاعات الرقمية"
 
+#: ../../tutorials.rst:26
+msgid ""
+"By default ODM does not create digital elevation models (DEMs). To create a "
+"digital terrain model, make sure to pass the ``--dtm`` flag. To create a "
+"digital surface model, be sure to pass the ``--dsm`` flag."
+msgstr ""
+
 #: ../../tutorials.rst:-1
 msgid "image of OpenDroneMap derived digital surface model"
 msgstr ""
@@ -984,6 +991,12 @@ msgstr ""
 "سيساعدنا الآن في التنقل عبر السجلات. الحرف الصغير `Q` سيتيح لنا الهروب إلى "
 "سطر الأوامر."
 
+#: ../../tutorials.rst:492
+msgid ""
+"We can also extract just the end of the logs using the `tail` command as "
+"follows:"
+msgstr ""
+
 #: ../../tutorials.rst:503
 msgid ""
 "The value `-5` tells the tail command to give us just the last 5 lines of "
@@ -1410,6 +1423,13 @@ msgstr ""
 "وقم بتعيين معلمة project_path إلى (وفقًا لإعداد المثال الخاص بنا) ``/mnt/"
 "odmdata/`` ، والتي تشير في هذه الحالة إلى المجلد الذي أنشأناه. يتم إنشاء "
 "أدلة المشاريع الفردية في ذلك."
+
+#: ../../tutorials.rst:727
+msgid ""
+"Individual project directories, i.e. ``/mnt/odmdata/myproject/`` contain the "
+"gcp_list.txt file, the image_groups.txt file, and the images folder for each "
+"project."
+msgstr ""
 
 #: ../../tutorials.rst:730
 msgid ""

@@ -100,6 +100,15 @@ msgstr "100GB de espacio en disco"
 msgid "16 GB RAM"
 msgstr "16GB de RAM"
 
+#: ../../installation.rst:33
+msgid ""
+"The above will allow the processing of a few hundred images with minimal "
+"issues. A CPU with more cores will allow for faster processing, while a "
+"graphics card (GPU) currently has no impact on performance. For processing "
+"more images, add more disk space and RAM linearly to the number of images "
+"you need to process."
+msgstr ""
+
 #: ../../installation.rst:35
 msgid "Minimum RAM needed for N images"
 msgstr ""
@@ -317,6 +326,11 @@ msgid ""
 msgstr ""
 "Si estas en Windows 10 Professional o una versión más reciente, deberias "
 "instalar en su lugar:"
+
+#: ../../installation.rst:104
+msgid ""
+"Docker for Windows:https://docs.docker.com/desktop/install/windows-install/"
+msgstr ""
 
 #: ../../installation.rst:106
 msgid ""
@@ -793,6 +807,13 @@ msgstr "Instalar en Arch"
 msgid "Step 2. Check Additional Requirements"
 msgstr "Paso 2. Verifique los requisitos adicionales"
 
+#: ../../installation.rst:365
+msgid ""
+"In addition to the three programs above, the docker compose script is also "
+"needed. Sometimes it’s already installed with docker, but sometimes it "
+"isn’t. To verify if it’s installed try to type:"
+msgstr ""
+
 #: ../../installation.rst:371
 msgid "You should see somethings similar to the following:"
 msgstr "Debería ver algo similar a lo siguiente:"
@@ -890,6 +911,14 @@ msgstr ""
 #: ../../installation.rst:568
 msgid "Hello, WebODM!"
 msgstr "¡Hola WebODM!"
+
+#: ../../installation.rst:570
+msgid ""
+"After starting the containers using 3a. or 3b. you can open WebODM in the "
+"browser. This will greet you with a welcome message and will ask to create "
+"the first user. Take some time to familiarize yourself with the web "
+"interface and explore its various menus."
+msgstr ""
 
 #: ../../installation.rst:-1
 msgid "Screenshot of WebODM Dashboard"

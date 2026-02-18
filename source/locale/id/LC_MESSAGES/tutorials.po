@@ -954,6 +954,12 @@ msgid ""
 "let us escape back to the command line."
 msgstr ""
 
+#: ../../tutorials.rst:492
+msgid ""
+"We can also extract just the end of the logs using the `tail` command as "
+"follows:"
+msgstr ""
+
 #: ../../tutorials.rst:503
 msgid ""
 "The value `-5` tells the tail command to give us just the last 5 lines of "

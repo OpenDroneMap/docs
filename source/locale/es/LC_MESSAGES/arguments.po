@@ -27,6 +27,10 @@ msgstr ""
 msgid "Options and Flags"
 msgstr "Opciones e indicadores"
 
+#: ../../arguments.rst:12
+msgid "Generate OGC 3D Tiles outputs. Default: ``False``"
+msgstr ""
+
 #: ../../arguments.rst:15
 msgid ""
 "Path to a GeoTIFF DEM or a LAS/LAZ point cloud that the reconstruction "
@@ -89,6 +93,12 @@ msgstr ""
 
 #: ../../arguments.rst:33
 msgid ""
+":ref:`camera-lens<camera-lens>` auto |  perspective |  brown |  fisheye |  "
+"fisheye_opencv |  spherical |  equirectangular |  dual"
+msgstr ""
+
+#: ../../arguments.rst:33
+msgid ""
 "Set a camera projection type. Manually setting a value can help improve "
 "geometric undistortion. By default the application tries to determine a lens "
 "type from the images metadata. . Default: ``auto``"
@@ -138,6 +148,13 @@ msgstr ""
 #: ../../arguments.rst:45
 msgid ":ref:`crop<crop>` <positive float>"
 msgstr ":ref:`crop<crop>` <positive float>"
+
+#: ../../arguments.rst:45
+msgid ""
+"Automatically crop image outputs by creating a smooth buffer around the "
+"dataset boundaries, shrunk by N meters. Use 0 to disable cropping. Default: "
+"``3``"
+msgstr ""
 
 #: ../../arguments.rst:48
 msgid ":ref:`dem-decimation<dem-decimation>` <positive integer>"
@@ -191,6 +208,12 @@ msgstr ""
 #: ../../arguments.rst:57
 msgid ":ref:`dem-resolution<dem-resolution>` <float>"
 msgstr ":ref:`dem-resolution<dem-resolution>` <float>"
+
+#: ../../arguments.rst:57
+msgid ""
+"DSM/DTM resolution in cm / pixel. Note that this value is capped by a ground "
+"sampling distance (GSD) estimate. Default: ``5``"
+msgstr ""
 
 #: ../../arguments.rst:60
 msgid ":ref:`dsm<dsm>`"
@@ -268,6 +291,12 @@ msgstr ""
 "genera mejores características, pero requiere más memoria y lleva más "
 "tiempo. Predeterminado: ``high``"
 
+#: ../../arguments.rst:75
+msgid ""
+"Choose the algorithm for extracting keypoints and computing descriptors. . "
+"Default: ``dspsift``"
+msgstr ""
+
 #: ../../arguments.rst:78
 msgid ":ref:`force-gps<force-gps>`"
 msgstr ":ref:`force-gps<force-gps>`"
@@ -312,6 +341,16 @@ msgstr ""
 msgid ":ref:`gps-accuracy<gps-accuracy>` <positive float>"
 msgstr ":ref:`gps-accuracy<gps-accuracy>` <positive float>"
 
+#: ../../arguments.rst:90
+msgid ""
+"Set a value in meters for the GPS Dilution of Precision (DOP) information "
+"for all images. If your images are tagged with high precision GPS "
+"information (RTK), this value will be automatically set accordingly. You can "
+"use this option to manually set it in case the reconstruction fails. "
+"Lowering this option can sometimes help control bowling-effects over large "
+"areas. Default: ``3``"
+msgstr ""
+
 #: ../../arguments.rst:93
 msgid ":ref:`gps-z-offset<gps-z-offset>` <float>"
 msgstr ""
@@ -336,12 +375,40 @@ msgstr "muestra este mensaje de ayuda y sale"
 msgid ":ref:`ignore-gsd<ignore-gsd>`"
 msgstr ":ref:`ignore-gsd<ignore-gsd>`"
 
+#: ../../arguments.rst:99
+msgid ""
+"Ignore Ground Sampling Distance (GSD).A memory and processor hungry change "
+"relative to the default behavior if set to true. Ordinarily, GSD estimates "
+"are used to cap the maximum resolution of image outputs and resizes images "
+"when necessary, resulting in faster processing and lower memory usage. Since "
+"GSD is an estimate, sometimes ignoring it can result in slightly better "
+"image output quality. Never set --ignore-gsd to true unless you are positive "
+"you need it, and even then: do not use it. Default: ``False``"
+msgstr ""
+
+#: ../../arguments.rst:102
+msgid ""
+"Perform image matching with the nearest images based on GPS exif data. Set "
+"to 0 to match by triangulation. Default: ``0``"
+msgstr ""
+
 #: ../../arguments.rst:105
 msgid ""
 "Perform image matching with the nearest N images based on image filename "
 "order. Can speed up processing of sequential images, such as those extracted "
 "from video. It is applied only on non-georeferenced datasets. Set to 0 to "
 "disable. Default: ``0``"
+msgstr ""
+
+#: ../../arguments.rst:108
+msgid ":ref:`matcher-type<matcher-type>` bow |  bruteforce |  flann"
+msgstr ""
+
+#: ../../arguments.rst:108
+msgid ""
+"Matcher algorithm, Fast Library for Approximate Nearest Neighbors or Bag of "
+"Words. FLANN is slower, but more stable. BOW is faster, but can sometimes "
+"miss valid matches. BRUTEFORCE is very slow but robust.. Default: ``flann``"
 msgstr ""
 
 #: ../../arguments.rst:111
@@ -404,6 +471,14 @@ msgstr ""
 #: ../../arguments.rst:126
 msgid ":ref:`min-num-features<min-num-features>` <integer>"
 msgstr ":ref:`min-num-features<min-num-features>` <integer>"
+
+#: ../../arguments.rst:126
+msgid ""
+"Minimum number of features to extract per image. More features can be useful "
+"for finding more matches between images, potentially allowing the "
+"reconstruction of areas with little overlap or insufficient features. More "
+"features also slow down processing. Default: ``10000``"
+msgstr ""
 
 #: ../../arguments.rst:129
 msgid ":ref:`name<name>` <dataset name>"
@@ -504,9 +579,21 @@ msgstr ""
 msgid ":ref:`orthophoto-resolution<orthophoto-resolution>` <float > 0.0>"
 msgstr ":ref:`orthophoto-resolution<orthophoto-resolution>` <float > 0.0>"
 
+#: ../../arguments.rst:153
+msgid ""
+"Orthophoto resolution in cm / pixel. Note that this value is capped by a "
+"ground sampling distance (GSD) estimate.Default: ``5``"
+msgstr ""
+
 #: ../../arguments.rst:156
 msgid ":ref:`pc-classify<pc-classify>`"
 msgstr ":ref:`pc-classify<pc-classify>`"
+
+#: ../../arguments.rst:156
+msgid ""
+"Classify the point cloud outputs. You can control the behavior of this "
+"option by tweaking the --dem-\\* parameters. Default: ``False``"
+msgstr ""
 
 #: ../../arguments.rst:162
 msgid ":ref:`pc-csv<pc-csv>`"
@@ -533,6 +620,12 @@ msgstr ""
 #: ../../arguments.rst:168
 msgid ":ref:`pc-filter<pc-filter>` <positive float>"
 msgstr ":ref:`pc-filter<pc-filter>` <positive float>"
+
+#: ../../arguments.rst:168
+msgid ""
+"Filters the point cloud by removing points that deviate more than N standard "
+"deviations from the local mean. Set to 0 to disable filtering. Default: ``5``"
+msgstr ""
 
 #: ../../arguments.rst:171
 msgid ":ref:`pc-las<pc-las>`"
@@ -589,6 +682,13 @@ msgstr ""
 "(en metros). Esto puede resultar útil para limitar la resolución de salida "
 "de la nube de puntos y eliminar puntos duplicados. Establecer en 0 para "
 "deshabilitar el muestreo. Predeterminado: ``0``"
+
+#: ../../arguments.rst:183
+msgid ""
+"Geometric estimates improve the accuracy of the point cloud by computing "
+"geometrically consistent depthmaps but may not be usable in larger datasets. "
+"This flag disables geometric estimates. Default: ``False``"
+msgstr ""
 
 #: ../../arguments.rst:186
 msgid ":ref:`primary-band<primary-band>` <string>"
@@ -880,6 +980,14 @@ msgstr ""
 msgid ":ref:`split-overlap<split-overlap>` <positive integer>"
 msgstr ":ref:`split-overlap<split-overlap>` <positive integer>"
 
+#: ../../arguments.rst:255
+msgid ""
+"Radius of the overlap between submodels in meters. After grouping images "
+"into clusters, images that are closer than this radius to a cluster are "
+"added to the cluster. This is done to ensure that neighboring submodels "
+"overlap. All imagesneed GPS information. Default: ``150``"
+msgstr ""
+
 #: ../../arguments.rst:258
 msgid ":ref:`texturing-keep-unseen-faces<texturing-keep-unseen-faces>`"
 msgstr ":ref:`texturing-keep-unseen-faces<texturing-keep-unseen-faces>`"
@@ -890,6 +998,10 @@ msgid ""
 msgstr ""
 "Mantén las caras en la malla que no se ven en ninguna cámara. "
 "Predeterminado: ``False``"
+
+#: ../../arguments.rst:261
+msgid ":ref:`texturing-single-material<texturing-single-material>`"
+msgstr ""
 
 #: ../../arguments.rst:261
 msgid ""

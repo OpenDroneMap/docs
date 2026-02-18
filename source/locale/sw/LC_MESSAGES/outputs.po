@@ -70,6 +70,14 @@ msgstr ""
 "``odm_texturing/odm_textured_model_geo.obj`` -- The georeferenced na "
 "textured surface mesh"
 
+#: ../../outputs.rst:24
+msgid ""
+"You can access the point cloud and textured meshes using MeshLab. Open "
+"MeshLab, and choose ``File:Import Mesh`` and choose your textured mesh from "
+"a location similar to the following: "
+"``odm_texturing\\odm_textured_model.obj``"
+msgstr ""
+
 #: ../../outputs.rst:-1
 msgid "image of OpenDroneMap derived textured mesh"
 msgstr ""
@@ -115,6 +123,13 @@ msgstr ""
 #: ../../outputs.rst:46
 msgid "DTM/DSM"
 msgstr "DTM/DSM"
+
+#: ../../outputs.rst:48
+msgid ""
+"DTM/DSM will only be created if the ``--dtm`` or ``--dsm`` options are used. "
+"See `tutorial on elevation models <../tutorials/#creating-digital-elevation-"
+"models>`_ for more options in creating."
+msgstr ""
 
 #: ../../outputs.rst:50
 msgid "Data will be stored in:"

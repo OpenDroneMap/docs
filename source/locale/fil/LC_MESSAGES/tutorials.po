@@ -78,6 +78,13 @@ msgstr ""
 msgid "Creating Digital Elevation Models"
 msgstr "Paglikha ng Digital Elevation Models"
 
+#: ../../tutorials.rst:26
+msgid ""
+"By default ODM does not create digital elevation models (DEMs). To create a "
+"digital terrain model, make sure to pass the ``--dtm`` flag. To create a "
+"digital surface model, be sure to pass the ``--dsm`` flag."
+msgstr ""
+
 #: ../../tutorials.rst:-1
 msgid "image of OpenDroneMap derived digital surface model"
 msgstr ""
@@ -998,6 +1005,12 @@ msgstr ""
 "keys ay makakatulong sa pag-navigate ng logs. Ang maliit na titik `Q` naman "
 "ay ang escape back pabalik ng command line."
 
+#: ../../tutorials.rst:492
+msgid ""
+"We can also extract just the end of the logs using the `tail` command as "
+"follows:"
+msgstr ""
+
 #: ../../tutorials.rst:503
 msgid ""
 "The value `-5` tells the tail command to give us just the last 5 lines of "
@@ -1449,6 +1462,13 @@ msgstr ""
 "ang set ng project_path parameter sa (ayon sa halimbawa na set-up) ``/mnt/"
 "odmdata/``, na sa kaso na ito ay pinupunto ang volume na nilikha. Ang "
 "Indibidwal na direktoryo ng proyekto ay nilikha sa loob nito."
+
+#: ../../tutorials.rst:727
+msgid ""
+"Individual project directories, i.e. ``/mnt/odmdata/myproject/`` contain the "
+"gcp_list.txt file, the image_groups.txt file, and the images folder for each "
+"project."
+msgstr ""
 
 #: ../../tutorials.rst:730
 msgid ""

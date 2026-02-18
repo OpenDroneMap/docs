@@ -140,6 +140,13 @@ msgstr ""
 "support.dronedeploy.com/docs/making-successful-maps>` _ పై డ్రోన్‌డెప్లోయ్ గైడ్ కూడా "
 "చూడండి."
 
+#: ../../flying.rst:40
+msgid ""
+"Finally, lens distortion is a challenge in projects requiring accurate 3D "
+"data. See our section in these docs on `Camera Calibration </tutorials/"
+"#calibrating-the-camera>`_."
+msgstr ""
+
 #: ../../flying.rst:42
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
