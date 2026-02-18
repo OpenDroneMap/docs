@@ -46,8 +46,8 @@ msgstr ""
 
 #: ../../resources.rst:12
 msgid ""
-"`Ground Control Points Format Specification "
-"<https://github.com/mapillary/OpenSfM/blob/master/doc/source/gcp.rst>`_"
+"`Ground Control Points Format Specification <https://github.com/mapillary/"
+"OpenSfM/blob/master/doc/source/gcp.rst>`_"
 msgstr ""
 
 #: ../../resources.rst:13
@@ -68,29 +68,28 @@ msgstr ""
 
 #: ../../resources.rst:21
 msgid ""
-"NodeODM API specification: "
-"https://github.com/OpenDroneMap/NodeODM/blob/master/docs/index.adoc"
+"NodeODM API specification: https://github.com/OpenDroneMap/NodeODM/blob/"
+"master/docs/index.adoc"
 msgstr ""
 
 #: ../../resources.rst:22
 msgid ""
-"Overview of the ODM pipeline: http://community.opendronemap.org/t/where-"
-"can-i-find-background-information-on-the-concepts-of-odm/665/2"
+"Overview of the ODM pipeline: http://community.opendronemap.org/t/where-can-"
+"i-find-background-information-on-the-concepts-of-odm/665/2"
 msgstr ""
 
 #: ../../resources.rst:23
 msgid ""
-"We keep a `section in our forum dedicated to research papers "
-"<http://community.opendronemap.org/c/ideas-proposals/research-papers>`_. "
-"This is a valuable place where to read more about state of the art "
-"research related to structure from motion, multi-view stereo, meshing, "
-"texturing, etc. which can be used to improve the software."
+"We keep a `section in our forum dedicated to research papers <http://"
+"community.opendronemap.org/c/ideas-proposals/research-papers>`_. This is a "
+"valuable place where to read more about state of the art research related to "
+"structure from motion, multi-view stereo, meshing, texturing, etc. which can "
+"be used to improve the software."
 msgstr ""
 
 #: ../../resources.rst:26
 msgid ""
-"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-"
-"first-contribution>`_ and help improve `this page "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/resources.rst>`_!"
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
+"contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/"
+"docs/blob/publish/source/resources.rst>`_!"
 msgstr ""
-

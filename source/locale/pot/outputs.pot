@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.7.0\n"
+"Project-Id-Version: OpenDroneMap 3.6.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-28 10:32-0500\n"
+"POT-Creation-Date: 2026-02-18 11:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -32,7 +32,7 @@ msgstr ""
 msgid "``odm_georeferencing/odm_georeferenced_model.ply/laz/csv`` -- The georeferenced point cloud in different file formats"
 msgstr ""
 
-#: ../../outputs.rst:None
+#: ../../outputs.rst:-1
 msgid "image of OpenDroneMap derived point cloud"
 msgstr ""
 
@@ -49,10 +49,10 @@ msgid "``odm_texturing/odm_textured_model.obj`` -- The textured surface mesh ``o
 msgstr ""
 
 #: ../../outputs.rst:24
-msgid "You can access the point cloud and textured meshes using MeshLab. Open MeshLab, and choose File:Import Mesh and choose your textured mesh from a location similar to the following: ``odm_texturing\\odm_textured_model.obj``"
+msgid "You can access the point cloud and textured meshes using MeshLab. Open MeshLab, and choose ``File:Import Mesh`` and choose your textured mesh from a location similar to the following: ``odm_texturing\\odm_textured_model.obj``"
 msgstr ""
 
-#: ../../outputs.rst:None
+#: ../../outputs.rst:-1
 msgid "image of OpenDroneMap derived textured mesh"
 msgstr ""
 
@@ -72,7 +72,7 @@ msgstr ""
 msgid "``odm_orthophoto/odm_orthphoto.original.tif`` -- The orthophoto in its original un-cropped state."
 msgstr ""
 
-#: ../../outputs.rst:None
+#: ../../outputs.rst:-1
 msgid "image of OpenDroneMap orthophoto"
 msgstr ""
 
@@ -85,7 +85,7 @@ msgid "DTM/DSM"
 msgstr ""
 
 #: ../../outputs.rst:48
-msgid "DTM/DSM will only be created if the ``--dtm`` or ``--dsm`` options are used. See `tutorial on elevation models <https://docs.opendronemap.org/tutorials.html#creating-digital-elevation-models>`_ for more options in creating."
+msgid "DTM/DSM will only be created if the ``--dtm`` or ``--dsm`` options are used. See `tutorial on elevation models <../tutorials/#creating-digital-elevation-models>`_ for more options in creating."
 msgstr ""
 
 #: ../../outputs.rst:50
@@ -100,7 +100,7 @@ msgstr ""
 msgid "``odm_dem/dsm.tif``"
 msgstr ""
 
-#: ../../outputs.rst:None
+#: ../../outputs.rst:-1
 msgid "image of OpenDroneMap derived digital surface model"
 msgstr ""
 
@@ -109,9 +109,17 @@ msgid "*Digital surface model over State University Zanzibar, courtesy of* `Khad
 msgstr ""
 
 #: ../../outputs.rst:62
+msgid "Logs"
+msgstr ""
+
+#: ../../outputs.rst:63
+msgid "Logs are output to stdout. On Linux `ANSI escape color code <https://en.wikipedia.org/wiki/ANSI_escape_code>`_ (eg ^[[39m)  is used and could be disabled by setting no_ansiesc environment variable to any value like ``env no_ansiesc=1``"
+msgstr ""
+
+#: ../../outputs.rst:67
 msgid "List of all outputs"
 msgstr ""
 
-#: ../../outputs.rst:110
+#: ../../outputs.rst:115
 msgid "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/outputs.rst>`_!"
 msgstr ""

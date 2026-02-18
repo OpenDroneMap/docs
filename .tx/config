@@ -73,14 +73,6 @@ type                   = PO
 replace_edited_strings = false
 keep_translations      = false
 
-[o:americanredcross:p:opendronemap_docs:r:arguments_debug]
-file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/debug.po
-source_file            = source/locale/pot/arguments/debug.pot
-source_lang            = en
-type                   = PO
-replace_edited_strings = false
-keep_translations      = false
-
 [o:americanredcross:p:opendronemap_docs:r:arguments_dem-decimation]
 file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/dem-decimation.po
 source_file            = source/locale/pot/arguments/dem-decimation.pot
@@ -108,14 +100,6 @@ keep_translations      = false
 [o:americanredcross:p:opendronemap_docs:r:arguments_dem-resolution]
 file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/dem-resolution.po
 source_file            = source/locale/pot/arguments/dem-resolution.pot
-source_lang            = en
-type                   = PO
-replace_edited_strings = false
-keep_translations      = false
-
-[o:americanredcross:p:opendronemap_docs:r:arguments_depthmap-resolution]
-file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/depthmap-resolution.po
-source_file            = source/locale/pot/arguments/depthmap-resolution.pot
 source_lang            = en
 type                   = PO
 replace_edited_strings = false
@@ -212,14 +196,6 @@ keep_translations      = false
 [o:americanredcross:p:opendronemap_docs:r:arguments_ignore-gsd]
 file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/ignore-gsd.po
 source_file            = source/locale/pot/arguments/ignore-gsd.pot
-source_lang            = en
-type                   = PO
-replace_edited_strings = false
-keep_translations      = false
-
-[o:americanredcross:p:opendronemap_docs:r:arguments_matcher-distance]
-file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/matcher-distance.po
-source_file            = source/locale/pot/arguments/matcher-distance.pot
 source_lang            = en
 type                   = PO
 replace_edited_strings = false
@@ -377,14 +353,6 @@ type                   = PO
 replace_edited_strings = false
 keep_translations      = false
 
-[o:americanredcross:p:opendronemap_docs:r:arguments_pc-geometric]
-file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/pc-geometric.po
-source_file            = source/locale/pot/arguments/pc-geometric.pot
-source_lang            = en
-type                   = PO
-replace_edited_strings = false
-keep_translations      = false
-
 [o:americanredcross:p:opendronemap_docs:r:arguments_pc-las]
 file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/pc-las.po
 source_file            = source/locale/pot/arguments/pc-las.pot
@@ -412,14 +380,6 @@ keep_translations      = false
 [o:americanredcross:p:opendronemap_docs:r:arguments_pc-sample]
 file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/pc-sample.po
 source_file            = source/locale/pot/arguments/pc-sample.pot
-source_lang            = en
-type                   = PO
-replace_edited_strings = false
-keep_translations      = false
-
-[o:americanredcross:p:opendronemap_docs:r:arguments_pc-tile]
-file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/pc-tile.po
-source_file            = source/locale/pot/arguments/pc-tile.pot
 source_lang            = en
 type                   = PO
 replace_edited_strings = false
@@ -468,14 +428,6 @@ keep_translations      = false
 [o:americanredcross:p:opendronemap_docs:r:arguments_rerun-from]
 file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/rerun-from.po
 source_file            = source/locale/pot/arguments/rerun-from.pot
-source_lang            = en
-type                   = PO
-replace_edited_strings = false
-keep_translations      = false
-
-[o:americanredcross:p:opendronemap_docs:r:arguments_resize-to]
-file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/resize-to.po
-source_file            = source/locale/pot/arguments/resize-to.pot
 source_lang            = en
 type                   = PO
 replace_edited_strings = false
@@ -569,25 +521,9 @@ type                   = PO
 replace_edited_strings = false
 keep_translations      = false
 
-[o:americanredcross:p:opendronemap_docs:r:arguments_texturing-data-term]
-file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/texturing-data-term.po
-source_file            = source/locale/pot/arguments/texturing-data-term.pot
-source_lang            = en
-type                   = PO
-replace_edited_strings = false
-keep_translations      = false
-
 [o:americanredcross:p:opendronemap_docs:r:arguments_texturing-keep-unseen-faces]
 file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/texturing-keep-unseen-faces.po
 source_file            = source/locale/pot/arguments/texturing-keep-unseen-faces.pot
-source_lang            = en
-type                   = PO
-replace_edited_strings = false
-keep_translations      = false
-
-[o:americanredcross:p:opendronemap_docs:r:arguments_texturing-outlier-removal-type]
-file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/texturing-outlier-removal-type.po
-source_file            = source/locale/pot/arguments/texturing-outlier-removal-type.pot
 source_lang            = en
 type                   = PO
 replace_edited_strings = false
@@ -601,33 +537,9 @@ type                   = PO
 replace_edited_strings = false
 keep_translations      = false
 
-[o:americanredcross:p:opendronemap_docs:r:arguments_texturing-skip-local-seam-leveling]
-file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/texturing-skip-local-seam-leveling.po
-source_file            = source/locale/pot/arguments/texturing-skip-local-seam-leveling.pot
-source_lang            = en
-type                   = PO
-replace_edited_strings = false
-keep_translations      = false
-
-[o:americanredcross:p:opendronemap_docs:r:arguments_texturing-tone-mapping]
-file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/texturing-tone-mapping.po
-source_file            = source/locale/pot/arguments/texturing-tone-mapping.pot
-source_lang            = en
-type                   = PO
-replace_edited_strings = false
-keep_translations      = false
-
 [o:americanredcross:p:opendronemap_docs:r:arguments_tiles]
 file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/tiles.po
 source_file            = source/locale/pot/arguments/tiles.pot
-source_lang            = en
-type                   = PO
-replace_edited_strings = false
-keep_translations      = false
-
-[o:americanredcross:p:opendronemap_docs:r:arguments_time]
-file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/time.po
-source_file            = source/locale/pot/arguments/time.pot
 source_lang            = en
 type                   = PO
 replace_edited_strings = false
@@ -660,14 +572,6 @@ keep_translations      = false
 [o:americanredcross:p:opendronemap_docs:r:arguments_use-hybrid-bundle-adjustment]
 file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/use-hybrid-bundle-adjustment.po
 source_file            = source/locale/pot/arguments/use-hybrid-bundle-adjustment.pot
-source_lang            = en
-type                   = PO
-replace_edited_strings = false
-keep_translations      = false
-
-[o:americanredcross:p:opendronemap_docs:r:arguments_verbose]
-file_filter            = source/locale/<lang>/LC_MESSAGES/arguments/verbose.po
-source_file            = source/locale/pot/arguments/verbose.pot
 source_lang            = en
 type                   = PO
 replace_edited_strings = false

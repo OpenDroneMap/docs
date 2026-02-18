@@ -12,23 +12,84 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-12 15:01-0500\n"
+"POT-Creation-Date: 2026-02-18 11:05+0100\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: Khadija Abdulla <khastylez@gmail.com>, 2020\n"
 "Language: sw\n"
-"Language-Team: Swahili "
-"(https://www.transifex.com/americanredcross/teams/111882/sw/)\n"
-"Plural-Forms: nplurals=2; plural=(n != 1)\n"
+"Language-Team: Swahili (https://www.transifex.com/americanredcross/teams/"
+"111882/sw/)\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Generated-By: Babel 2.9.1\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../flying.rst:2
 msgid "Flying Tips"
 msgstr "Kidokeza cha kurusha ndege nyuki"
 
-#: ../../flying.rst:4
+#: ../../flying.rst:5
+msgid "Data collection effort, full 3D"
+msgstr ""
+
+#: ../../flying.rst:7
+msgid ""
+"For best in class results with full 3D reconstruction, we recommend the "
+"following:"
+msgstr ""
+
+#: ../../flying.rst:9
+#, python-format
+msgid "60% overlap nadir flight"
+msgstr ""
+
+#: ../../flying.rst:10
+#, python-format
+msgid "70-80% overlap 45-degree gimbal angle cross-grid"
+msgstr ""
+
+#: ../../flying.rst:12
+msgid ""
+"The 45-degree cross-grid flight provides the basis for a fully tied together "
+"model, while the nadir flights provide the necessary texture for orthophoto "
+"texturing. The lower overlap  meets the minimum requirement for orthophoto "
+"products as facilitated by feature matching from the much higher overlap "
+"cross-grid."
+msgstr ""
+
+#: ../../flying.rst:15
+msgid "Data collection effort, 2D and 2.5D products"
+msgstr ""
+
+#: ../../flying.rst:17
+msgid ""
+"For best in class results 2D and 2.5D products, we recommend the following:"
+msgstr ""
+
+#: ../../flying.rst:19
+#, python-format
+msgid "70-80% overlap slightly off-nadir (5-10 degree off nadir)"
+msgstr ""
+
+#: ../../flying.rst:21
+#, python-format
+msgid ""
+"For more complex buildings and vegetation, aim for closer to 80-83% overlap. "
+"If buildings, vegetation, and terrain changes are not complex, it's quite "
+"feasible to use closer to 70% overlap."
+msgstr ""
+
+#: ../../flying.rst:23
+msgid ""
+"(credit: derived from ongoing conversations with Ivan Gayton, Humanitarian "
+"OpenStreetMap Team)"
+msgstr ""
+
+#: ../../flying.rst:26
+msgid "Other resources on flying"
+msgstr ""
+
+#: ../../flying.rst:28
 msgid ""
 "The `Humanitarian OpenStreetMap team <https://www.hotosm.org/>`_ has "
 "guidelines on `flying for UAV mapping <https://uav-"
@@ -38,63 +99,51 @@ msgstr ""
 "muongozo juu ya `kurusha UAV kwa ramani <https://uav-"
 "guidelines.openaerialmap.org/>`_:"
 
-#: ../../flying.rst:6
+#: ../../flying.rst:30
 msgid ""
-"`Choosing the right UAV <https://uav-"
-"guidelines.openaerialmap.org/pages/05-choosing-the-right-uav/>`_"
+"`Choosing the right UAV <https://uav-guidelines.openaerialmap.org/pages/05-"
+"choosing-the-right-uav/>`_"
 msgstr ""
-"`Chagua UAV sahihi <https://uav-guidelines.openaerialmap.org/pages/05"
-"-choosing-the-right-uav/>`_"
+"`Chagua UAV sahihi <https://uav-guidelines.openaerialmap.org/pages/05-"
+"choosing-the-right-uav/>`_"
 
-#: ../../flying.rst:8
+#: ../../flying.rst:32
 msgid ""
-"`Choosing the right sensor <https://uav-"
-"guidelines.openaerialmap.org/pages/06-choosing-the-sensor/>`_"
+"`Choosing the right sensor <https://uav-guidelines.openaerialmap.org/pages/"
+"06-choosing-the-sensor/>`_"
 msgstr ""
-"`Chagua sensa sahihi <https://uav-guidelines.openaerialmap.org/pages/06"
-"-choosing-the-sensor/>`_"
+"`Chagua sensa sahihi <https://uav-guidelines.openaerialmap.org/pages/06-"
+"choosing-the-sensor/>`_"
 
-#: ../../flying.rst:10
+#: ../../flying.rst:34
 msgid ""
-"`Mission preparation <https://uav-guidelines.openaerialmap.org/pages/07"
-"-preparing-for-the-uav-mission/>`_"
+"`Mission preparation <https://uav-guidelines.openaerialmap.org/pages/07-"
+"preparing-for-the-uav-mission/>`_"
 msgstr ""
-"`Kuandaa mission <https://uav-guidelines.openaerialmap.org/pages/07"
-"-preparing-for-the-uav-mission/>`_"
+"`Kuandaa mission <https://uav-guidelines.openaerialmap.org/pages/07-"
+"preparing-for-the-uav-mission/>`_"
 
-#: ../../flying.rst:12
+#: ../../flying.rst:36
 msgid ""
-"The guidelines are intended for drone mapping projects on islands, but "
-"have general use for all drone mappers."
+"The guidelines are intended for drone mapping projects on islands, but have "
+"general use for all drone mappers."
 msgstr ""
-"Muongozo umekusudiwa kwa drone project za visiwa, lakini ina matumizi kwa"
-" ujumla ya watengeza ramani kwa drone."
+"Muongozo umekusudiwa kwa drone project za visiwa, lakini ina matumizi kwa "
+"ujumla ya watengeza ramani kwa drone."
 
-#: ../../flying.rst:14
+#: ../../flying.rst:38
 msgid ""
-"See also DroneDeploy's guide on `Making Successful Maps "
-"<https://support.dronedeploy.com/docs/making-successful-maps>`_, which "
-"provides great tips on mission planning."
+"See also DroneDeploy's guide on `Making Successful Maps <https://"
+"support.dronedeploy.com/docs/making-successful-maps>`_, which provides great "
+"tips on mission planning."
 msgstr ""
-"Angalia pia DroneDeploy's muongozo juu ya `Kutengeza ramani yenye "
-"mafanikio <https://support.dronedeploy.com/docs/making-successful-"
-"maps>`_, ambayo inaelezea mambo muhimu juu ya kuandaa mission."
+"Angalia pia DroneDeploy's muongozo juu ya `Kutengeza ramani yenye mafanikio "
+"<https://support.dronedeploy.com/docs/making-successful-maps>`_, ambayo "
+"inaelezea mambo muhimu juu ya kuandaa mission."
 
-#: ../../flying.rst:16
-#, fuzzy
+#: ../../flying.rst:42
 msgid ""
-"Finally, lens distortion is a challenge in projects requiring accurate 3D"
-" data. See our section in these docs on `Camera Calibration </tutorials"
-"/#calibrating-the-camera>`_."
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
+"contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/"
+"docs/blob/publish/source/flying.rst>`_!"
 msgstr ""
-"Mwisho, mvurugio lenzi ni changamoto katika project kuchukua data za 3B "
-"sahihi. Angalia kipande chetu katika kitabu hiki cha `Camera Calibration "
-"<tutorials.html#calibrating-the-camera>`_."
-
-#: ../../flying.rst:19
-msgid ""
-"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-"
-"first-contribution>`_ and help improve `this page "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/flying.rst>`_!"
-msgstr ""
-

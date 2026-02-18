@@ -1,21 +1,22 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2020, OpenDroneMap
-# This file is distributed under the same license as the OpenDroneMap package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.6.6\n"
+"Project-Id-Version: OpenDroneMap 3.6.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-12 15:01-0500\n"
-"PO-Revision-Date: 2021-11-12 20:54+0000\n"
-"Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
+"POT-Creation-Date: 2026-02-18 11:35+0100\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fil\n"
-"Plural-Forms: nplurals=2; plural=(n == 1 || n==2 || n==3) || (n % 10 != 4 || n % 10 != 6 || n % 10 != 9);\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../arguments/max-concurrency.rst:9
 msgid "max-concurrency"
@@ -35,7 +36,6 @@ msgstr ""
 #: ../../arguments/max-concurrency.rst:18
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
-"contribution>`_ and help improve `this page "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
-"/max-concurrency.rst>`_!"
+"contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/"
+"docs/blob/publish/source/arguments_edit/max-concurrency.rst>`_!"
 msgstr ""

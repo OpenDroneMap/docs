@@ -16,6 +16,12 @@ outfile = os.path.join(os.path.dirname(__file__), "..", "source", "arguments.rst
 tmplfile = os.path.join(os.path.dirname(__file__), "arguments.template.rst")
 argstmplfile = os.path.join(os.path.dirname(__file__), "arguments.arg.template.rst")
 argsoutdir = os.path.join(os.path.dirname(__file__), "..", "source", "arguments")
+argspotdir = os.path.join(os.path.dirname(__file__), "..", "source", "locale", "pot", "arguments")
+localedir = os.path.join(os.path.dirname(__file__), "..", "source", "locale")
+txconfigfile = os.path.join(os.path.dirname(__file__), "..", ".tx", "config")
+
+# List of supported languages (should match Makefile)
+LANGUAGES = ['ar', 'cs', 'es', 'fil', 'fr', 'id', 'sw', 'te', 'zh']
 
 strings = []
 print("Fetching %s ..." % url)
@@ -95,6 +101,22 @@ if len(options) > 0:
     print("Cleaning up %s ..." % argsoutdir)
     for old_file in glob.glob(os.path.join(argsoutdir, "*.rst")):
         os.remove(old_file)
+
+    # Clean up old .pot files for deprecated arguments
+    if os.path.isdir(argspotdir):
+        print("Cleaning up %s ..." % argspotdir)
+        for old_pot in glob.glob(os.path.join(argspotdir, "*.pot")):
+            os.remove(old_pot)
+            print("Removed %s" % old_pot)
+
+    # Clean up old .po files for deprecated arguments in all languages
+    for lang in LANGUAGES:
+        argspodir = os.path.join(localedir, lang, "LC_MESSAGES", "arguments")
+        if os.path.isdir(argspodir):
+            print("Cleaning up %s ..." % argspodir)
+            for old_po in glob.glob(os.path.join(argspodir, "*.po")):
+                os.remove(old_po)
+                print("Removed %s" % old_po)
         print("Removed %s" % old_file)
 
     with open(argstmplfile) as f:
@@ -156,6 +178,49 @@ if len(options) > 0:
 
     print("Wrote %s" % outfile)
 
+    # Update .tx/config to remove deprecated options
+    if os.path.isfile(txconfigfile):
+        print("Updating %s ..." % txconfigfile)
+        with open(txconfigfile, 'r') as f:
+            config_lines = f.readlines()
+
+        # Get list of current options
+        current_opts = set(get_opt_name(opt) for opt in keys)
+
+        # Parse and filter .tx/config
+        new_config_lines = []
+        skip_section = False
+        i = 0
+        while i < len(config_lines):
+            line = config_lines[i]
+
+            # Check if this is an arguments section header
+            if line.startswith('[o:americanredcross:p:opendronemap_docs:r:arguments_'):
+                # Extract option name
+                section_name = line.strip()[1:-1]  # Remove [ and ]
+                opt_name = section_name.split(':')[-1].replace('arguments_', '')
+
+                # Check if this option still exists
+                if opt_name not in current_opts:
+                    print("Removing deprecated section: %s" % opt_name)
+                    skip_section = True
+                    # Skip this section header and all lines until next section or EOF
+                    i += 1
+                    while i < len(config_lines) and not config_lines[i].startswith('['):
+                        i += 1
+                    continue
+                else:
+                    skip_section = False
+
+            if not skip_section:
+                new_config_lines.append(line)
+
+            i += 1
+
+        # Write updated config
+        with open(txconfigfile, 'w') as f:
+            f.writelines(new_config_lines)
+        print("Updated %s" % txconfigfile)
 
 else:
     print("No strings found")

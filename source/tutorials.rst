@@ -17,10 +17,9 @@ Creating High Quality Orthophotos
 Without any parameter tweaks, ODM chooses a good compromise between quality, speed and memory usage. If you want to get higher quality results, you need to tweak some parameters:
 
  * ``--orthophoto-resolution`` is the resolution of the orthophoto in cm/pixel. Decrease this value for a higher resolution result.
- * ``--texturing-data-term`` should be set to `area` in forest areas.
  * ``--mesh-size`` should be increased to ``300000-600000`` and ``--mesh-octree-depth`` should be increased to ``10-11`` in urban areas to recreate better buildings / roofs.
 
-********************************* 
+*********************************
 Creating Digital Elevation Models
 *********************************
 
@@ -528,7 +527,7 @@ As an alternative to Docker, one may choose to run WebODM using `Podman <https:/
    $ apk add podman podman-docker
 
 The Podman command line bears strong resemblance to the Docker one, so referring to the past section and replacing every ``docker`` command invocation with ``podman`` is likely sufficient to teach its basic use.
-   
+
 Migrating from Docker to Podman
 ===============================
 Unfortunately, given the number of options ``webodm.sh`` provides for deployment, migrating between the two may require some manual work before switching platforms. If WebODM's information was stored in directories using the ``--media-dir`` and ``--db-dir`` flags, then the data within those needs to be owned by the user running the Podman containers. If running rootlessly, be sure to set this to your current user. You should be safe to recursively chown the whole git repository as such if your ``media-dir`` and ``db-dir`` lives within it:
@@ -550,7 +549,7 @@ Now, install Podman according to your operating system's documentation. If you n
    $ podman volume import webodm-appmedia webodm-appmedia.tar
 
 It is recommended that you log out and log back in to your system at this point to ensure all environment variables are properly sourced.
-   
+
 Running ``webodm.sh`` now should result in user data persisting between the switch.
 
 For versions of podman-compose < 1.5.0
@@ -577,7 +576,7 @@ A major benefit of using Podman instead of Docker is due to its ability to run r
 
 MacOS
 =====
-In theory, `installing <https://podman-desktop.io/docs/installation/macos-install>`_ and running Podman Desktop from the official website should be all you need to use the ``webodm.sh`` script. Install and configure it for both `Docker compatibility <https://podman-desktop.io/docs/migrating-from-docker/customizing-docker-compatibility#enable-docker-compatibility>`_ and `Compose functionality <https://podman-desktop.io/docs/compose/setting-up-compose>`_. 
+In theory, `installing <https://podman-desktop.io/docs/installation/macos-install>`_ and running Podman Desktop from the official website should be all you need to use the ``webodm.sh`` script. Install and configure it for both `Docker compatibility <https://podman-desktop.io/docs/migrating-from-docker/customizing-docker-compatibility#enable-docker-compatibility>`_ and `Compose functionality <https://podman-desktop.io/docs/compose/setting-up-compose>`_.
 
 *************************************
 Using ODM from low-bandwidth location
@@ -888,7 +887,7 @@ Using Image Masks
 
 Starting from ODM ``2.0`` people can supply image masks to inform the software to skip reconstruction over certain areas. This is useful for cases where the sky was accidentally included in the input photos from oblique shots, or simply to limit the reconstruction of a single subject.
 
-To add a mask, simply create a new black and white image of the same dimension as the target image you want to mask (you can use a program such as GIMP to do this). Color in black the areas to exclude from the reconstruction. 
+To add a mask, simply create a new black and white image of the same dimension as the target image you want to mask (you can use a program such as GIMP to do this). Color in black the areas to exclude from the reconstruction.
 
 .. figure:: images/target_image.webp
    :alt: Target image
@@ -912,8 +911,8 @@ For example, ``DJI_0018.JPG`` can have a mask by creating a ``DJI_0018_mask.JPG`
 Using Singularity
 =================
 
-`Singularity <https://sylabs.io/>`__ is another container platform able to run Docker images. 
-Singularity can be run both on local machins and in instances where the user does not have root access. 
+`Singularity <https://sylabs.io/>`__ is another container platform able to run Docker images.
+Singularity can be run both on local machins and in instances where the user does not have root access.
 Instances where a user may not have root privlidges include HPC clusters and cloud cluster resources.
 A container is a single file without anything else to install.
 
@@ -931,14 +930,14 @@ For latest ODM Docker image (Recommended) :
 For latest ODM GPU Docker image :
 
 .. code:: bash
-   
+
    singularity build --disable-cache -f odm_gpu.sif docker://opendronemap/odm:gpu
 
 Using Singularity SIF image
 ---------------------------
 
 
-Once you have used one of the above commands to download and create the `odm_latest.sif` image, it can be ran using singularity. 
+Once you have used one of the above commands to download and create the `odm_latest.sif` image, it can be ran using singularity.
 Place your images in a directory named “images” (for example /my/project/images) , then simply run :
 
 .. code:: bash

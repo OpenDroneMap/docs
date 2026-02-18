@@ -2,11 +2,11 @@
 # Copyright (C) 2020, OpenDroneMap
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Husni Mubarok <husn.mubarok@gmail.com>, 2020
 # Sendy Brammadi <sendy.brammadi@gmail.com>, 2021
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -15,7 +15,8 @@ msgstr ""
 "POT-Creation-Date: 2021-11-12 15:01-0500\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: Sendy Brammadi <sendy.brammadi@gmail.com>, 2021\n"
-"Language-Team: Indonesian (https://www.transifex.com/americanredcross/teams/111882/id/)\n"
+"Language-Team: Indonesian (https://www.transifex.com/americanredcross/teams/"
+"111882/id/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
@@ -53,11 +54,11 @@ msgstr ""
 
 #: ../../resources.rst:12
 msgid ""
-"`Ground Control Points Format Specification "
-"<https://github.com/mapillary/OpenSfM/blob/master/doc/source/gcp.rst>`_"
+"`Ground Control Points Format Specification <https://github.com/mapillary/"
+"OpenSfM/blob/master/doc/source/gcp.rst>`_"
 msgstr ""
-"`Format Spesifikasi Ground Control Points "
-"<https://github.com/mapillary/OpenSfM/blob/master/doc/source/gcp.rst>`_"
+"`Format Spesifikasi Ground Control Points <https://github.com/mapillary/"
+"OpenSfM/blob/master/doc/source/gcp.rst>`_"
 
 #: ../../resources.rst:13
 msgid "`OpenDroneMap: The Missing Guide <https://odmbook.com/>`_"
@@ -68,11 +69,10 @@ msgid "For Developers"
 msgstr "Untuk para Pengembang"
 
 #: ../../resources.rst:18
-msgid ""
-"In addition to user resources, we recommend to also read the following:"
+msgid "In addition to user resources, we recommend to also read the following:"
 msgstr ""
-"Sebagai tambahan untuk sumber referensi pengguna, kami merekomendasikan juga"
-" untuk membaca berikut:"
+"Sebagai tambahan untuk sumber referensi pengguna, kami merekomendasikan juga "
+"untuk membaca berikut:"
 
 #: ../../resources.rst:20
 msgid "WebODM documentation: https://docs.webodm.org"
@@ -80,41 +80,41 @@ msgstr "Dokumentasi WebODM: https://docs.webodm.org"
 
 #: ../../resources.rst:21
 msgid ""
-"NodeODM API specification: "
-"https://github.com/OpenDroneMap/NodeODM/blob/master/docs/index.adoc"
+"NodeODM API specification: https://github.com/OpenDroneMap/NodeODM/blob/"
+"master/docs/index.adoc"
 msgstr ""
-"Spesifikasi NodeODM API: "
-"https://github.com/OpenDroneMap/NodeODM/blob/master/docs/index.adoc"
+"Spesifikasi NodeODM API: https://github.com/OpenDroneMap/NodeODM/blob/master/"
+"docs/index.adoc"
 
 #: ../../resources.rst:22
 msgid ""
-"Overview of the ODM pipeline: http://community.opendronemap.org/t/where-"
-"can-i-find-background-information-on-the-concepts-of-odm/665/2"
+"Overview of the ODM pipeline: http://community.opendronemap.org/t/where-can-"
+"i-find-background-information-on-the-concepts-of-odm/665/2"
 msgstr ""
 "Gambaran alur perkembangan ODM: http://community.opendronemap.org/t/where-"
 "can-i-find-background-information-on-the-concepts-of-odm/665/2"
 
 #: ../../resources.rst:23
 msgid ""
-"We keep a `section in our forum dedicated to research papers "
-"<http://community.opendronemap.org/c/ideas-proposals/research-papers>`_. "
-"This is a valuable place where to read more about state of the art research "
-"related to structure from motion, multi-view stereo, meshing, texturing, "
-"etc. which can be used to improve the software."
+"We keep a `section in our forum dedicated to research papers <http://"
+"community.opendronemap.org/c/ideas-proposals/research-papers>`_. This is a "
+"valuable place where to read more about state of the art research related to "
+"structure from motion, multi-view stereo, meshing, texturing, etc. which can "
+"be used to improve the software."
 msgstr ""
 "Kami menyimpan `bagian dalam forum kami yang didedikasikan untuk makalah "
 "penelitian <http://community.opendronemap.org/c/ideas-proposals/research-"
 "papers>`_.  Ini adalah tempat yang berharga untuk membaca lebih lanjut "
-"tentang penelitian terkait tentang structure from motion, multi-view stereo,"
-" meshing, texturing, dll. Yang dapat digunakan untuk meningkatkan kemampuan "
+"tentang penelitian terkait tentang structure from motion, multi-view stereo, "
+"meshing, texturing, dll. Yang dapat digunakan untuk meningkatkan kemampuan "
 "perangkat lunak."
 
 #: ../../resources.rst:26
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
-"contribution>`_ and help improve `this page "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/resources.rst>`_!"
+"contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/"
+"docs/blob/publish/source/resources.rst>`_!"
 msgstr ""
 "`Pelajari untuk mengedit <https://github.com/opendronemap/docs#how-to-make-"
-"your-first-contribution>`_ dan bantu tingkatkan `halaman ini "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/resources.rst>`_!"
+"your-first-contribution>`_ dan bantu tingkatkan `halaman ini <https://"
+"github.com/OpenDroneMap/docs/blob/publish/source/resources.rst>`_!"
