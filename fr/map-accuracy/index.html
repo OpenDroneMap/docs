@@ -8,7 +8,7 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>High Precision Workflows &mdash; Documentation OpenDroneMap 3.6.0</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
-      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=e59714d7" />
+      <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -731,12 +731,14 @@ to get example data.</p>
 <h3>Aligning Large  Datasets<a class="headerlink" href="#aligning-large-datasets" title="Lien vers cette rubrique"></a></h3>
 <p>When attempting to process very large datasets it may very well be the case that one needs to devide a large set of images into smaller more manageable chunks for ease of processing.This process however, may introduce some uncertainty with respect to the alignment of all the processed outputs.To make sure that all point clouds and terrain/suface models are seamlessly alighn in preparation for merging we follow the simple techniques outlined below.</p>
 <p><strong>Workflow for aligning large  datasets:</strong></p>
-<p>#.Split the full compliment of images into manageable chunks. E.g. If you have flown and collected a total of  1000 images but you know your processor cannot handle all these images at once, you may want to devide these images into four sets of submodels with 250 images each.
-#.Process the first dataset with theDigital Surface Model (DSM) option enabled.
-#.Download the DSM from first dataseta in its raw-tiff format and rename it to “align.tif”
-#.Load the second dataset together with the align.tif
-#.Process the second dataset (including the align.tif file)
-#.Repeat until all submodels have been processed.</p>
+<ol class="arabic simple">
+<li><p>Split the full compliment of images into manageable chunks. E.g. If you have flown and collected a total of  1000 images but you know your processor cannot handle all these images at once, you may want to devide these images into four sets of submodels with 250 images each.</p></li>
+<li><p>Process the first dataset with theDigital Surface Model (DSM) option enabled.</p></li>
+<li><p>Download the DSM from first dataseta in its raw-tiff format and rename it to “align.tif”</p></li>
+<li><p>Load the second dataset together with the align.tif</p></li>
+<li><p>Process the second dataset (including the align.tif file)</p></li>
+<li><p>Repeat until all submodels have been processed.</p></li>
+</ol>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Apprenez à éditer</a> et aidez à améliorer <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/map-accuracy.rst">cette page</a>!</p>
 </section>
 </section>
