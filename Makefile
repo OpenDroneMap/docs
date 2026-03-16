@@ -39,7 +39,7 @@ pushlang:
 
 # push translated strings from Transifex
 pulllang:
-	tx pull --language "cs,es,fil,fr,id,sw,te,zh"
+	tx pull --languages "cs,es,fil,fr,id,sw,te,zh"
 
 build:
 	@$(SPHINXBUILD) -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)/html" -nW

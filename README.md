@@ -216,12 +216,26 @@ Code snippets need to have a space before, then a double backtick or grave accen
 
 ## Managing the translation process
 
-This project uses [Transifex](https://www.transifex.com/) and the [`transifex-client`](https://docs.transifex.com/client/introduction) tool to help people contribute translations. The `transifex-client` tool is included in the requirements.txt file and should be installed on your system during setup when you run `pip install -r requirements.txt`.
+This project uses [Transifex](https://www.transifex.com/) and the [`Transifex Client`](https://developers.transifex.com/docs/cli) tool to help people contribute translations. The `transifex-client` tool is included in the requirements.txt file and should be installed on your system during setup when you run `pip install -r requirements.txt`.
 
-You need to configure your account. For this, you need to create an API Token for your user to access this service through the command line. This can be done under your Transifex [User’s Settings](https://www.transifex.com/user/settings/api/). Set it up to use the token:
+::warning
+The APIv2 of Transifex is getting deprecated. We have to migrate to [**new version of Transifex Client**](https://developers.transifex.com/docs/cli).
+
+refer: https://developers.transifex.com/docs/cli#differences-with-the-previous-version
+::
+
+You need to configure your account. For this, you need to create an API Token for your user to access this service through the command line. This can be done under your Transifex [User’s Settings](https://app.transifex.com/user/settings/api/). Set it up to use the token. The available environment variables for the CLI:
 
 ```
-tx init --token $TOKEN --skipsetup
+TX_TOKEN: The API token
+TX_HOSTNAME: The API hostname
+TX_CACERT: Path to CA certificate bundle file
+```
+
+You can either add these variables in your CI settings, your profile file, or when executing the commands like this: 
+
+```
+TX_TOKEN=myapitoken tx pull
 ```
 
 If there are **new** English `.rst` source files, you can map them by updating the `./.tx/config` file.

@@ -1,6 +1,6 @@
-#########################
+##########################
 Multispectral and Thermal
-#########################
+##########################
 
 Multispectral Support
 =====================
@@ -21,16 +21,16 @@ While we aim to support as many cameras as possible, multispectral support has b
 Other cameras might also work. You can help us expand this list by `sharing datasets <https://community.opendronemap.org/c/datasets/10>`_ captured with other cameras.
 
 Creating Orthophotos from Multispectral Data
--------------------------------------------
+---------------------------------------------
 
 For supported sensors listed above (and likley other sensors), users can process multipsectral data in the same manner as visible light images. Images from all sensor bands should be processed at once (do not separate the bands into multiple folders). Users have the option to pass the ``--radiometric-calibration`` parameter with options ``camera`` or ``camera+sun`` to enable radiometric normalization. If the images are part of a multi-camera setup, the resulting orthophoto will have N bands, one for each camera (+ alpha).
 
-NDVI and other vegetation indices can be calculated from these stitched orthophotos using software such as `qGIS <https://www.qgis.org/>`_
+NDVI and other vegetation indices can be calculated from these stitched orthophotos using software such as `QGIS <https://www.qgis.org/>`__
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst>`_!
 
 Workflows for Non-supported Sensors
------------------------------------
+-------------------------------------
 
 **Sentera AGX710:**
 
@@ -56,7 +56,7 @@ While the Sentera AGX710 is not officially supported by ODM, the following workf
 
  python3 contrib/ndvi/rename_sentera_agx710_multispectral_tif.py  output_dir/odm_orthophoto.tif 
 
-* output_dir/odm_orthophoto.tif could be open with `QGIS <https://qgis.org/>`_ with correct band names 
+* output_dir/odm_orthophoto.tif could be open with `QGIS <https://qgis.org/>`__ with correct band names 
 
 Thermal Support
 ===============
