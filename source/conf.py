@@ -34,8 +34,8 @@ extensions = [
     'sphinx.ext.todo',
     'sphinx_rtd_theme',
     'sphinx.ext.githubpages',
-    'sphinxcontrib.mermaid'
-
+    'sphinxcontrib.mermaid',
+    'sphinx_copybutton'
 ]
 
 # mermaid version

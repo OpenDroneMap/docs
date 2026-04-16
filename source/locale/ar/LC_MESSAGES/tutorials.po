@@ -12,7 +12,7 @@ msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.5.7\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2026-02-18 11:09+0100\n"
+"POT-Creation-Date: 2026-04-16 11:30+0200\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: danbjoseph <danbjoseph@gmail.com>, 2020\n"
 "Language: ar\n"
@@ -1057,18 +1057,18 @@ msgid ""
 "Alpine Linux: ::"
 msgstr ""
 
-#: ../../tutorials.rst:529
+#: ../../tutorials.rst:530
 msgid ""
 "The Podman command line bears strong resemblance to the Docker one, so "
 "referring to the past section and replacing every ``docker`` command "
 "invocation with ``podman`` is likely sufficient to teach its basic use."
 msgstr ""
 
-#: ../../tutorials.rst:532
+#: ../../tutorials.rst:533
 msgid "Migrating from Docker to Podman"
 msgstr ""
 
-#: ../../tutorials.rst:533
+#: ../../tutorials.rst:534
 msgid ""
 "Unfortunately, given the number of options ``webodm.sh`` provides for "
 "deployment, migrating between the two may require some manual work before "
@@ -1080,13 +1080,13 @@ msgid ""
 "``db-dir`` lives within it: ::"
 msgstr ""
 
-#: ../../tutorials.rst:537
+#: ../../tutorials.rst:538
 msgid ""
 "If ``webodm.sh`` was used without flags, then a different intervention is "
 "necessary to migrate their data. ::"
 msgstr ""
 
-#: ../../tutorials.rst:542
+#: ../../tutorials.rst:543
 msgid ""
 "Regardless of data location, you'll now need to uninstall Docker completely "
 "from your system according to your operating system's documentation. Note "
@@ -1094,30 +1094,30 @@ msgid ""
 "installing docker-compose for you. To clean that up, run the following: ::"
 msgstr ""
 
-#: ../../tutorials.rst:546
+#: ../../tutorials.rst:547
 msgid ""
 "Now, install Podman according to your operating system's documentation. If "
 "you needed to export the media and db dirs from Docker before, you may now "
 "use it to import the volumes. ::"
 msgstr ""
 
-#: ../../tutorials.rst:551
+#: ../../tutorials.rst:552
 msgid ""
 "It is recommended that you log out and log back in to your system at this "
 "point to ensure all environment variables are properly sourced."
 msgstr ""
 
-#: ../../tutorials.rst:553
+#: ../../tutorials.rst:554
 msgid ""
 "Running ``webodm.sh`` now should result in user data persisting between the "
 "switch."
 msgstr ""
 
-#: ../../tutorials.rst:556
+#: ../../tutorials.rst:557
 msgid "For versions of podman-compose < 1.5.0"
 msgstr ""
 
-#: ../../tutorials.rst:558
+#: ../../tutorials.rst:559
 msgid ""
 "podman-compose versions lower than 1.5.0 lack support for environment "
 "variables in docker-compose files. If your distribution does not provide an "
@@ -1128,7 +1128,7 @@ msgid ""
 "line of the ``/etc/containers/containers.conf`` file."
 msgstr ""
 
-#: ../../tutorials.rst:560
+#: ../../tutorials.rst:561
 msgid ""
 "If you choose to use Docker Compose instead of podman-compose, you might "
 "need to configure a few extra environment variables to tell WebODM where to "
@@ -1137,15 +1137,15 @@ msgid ""
 "should be fairly agnostic across distros. ::"
 msgstr ""
 
-#: ../../tutorials.rst:565
+#: ../../tutorials.rst:566
 msgid "Finally, start WebODM as such: ::"
 msgstr ""
 
-#: ../../tutorials.rst:570
+#: ../../tutorials.rst:571
 msgid "Configuring Podman to run Rootlessly"
 msgstr ""
 
-#: ../../tutorials.rst:571
+#: ../../tutorials.rst:572
 msgid ""
 "A major benefit of using Podman instead of Docker is due to its ability to "
 "run rootlessly. Your specific operating system may or may not configure this "
@@ -1155,11 +1155,11 @@ msgid ""
 "is likely what you'll need to do: ::"
 msgstr ""
 
-#: ../../tutorials.rst:578
+#: ../../tutorials.rst:579
 msgid "MacOS"
 msgstr ""
 
-#: ../../tutorials.rst:579
+#: ../../tutorials.rst:580
 msgid ""
 "In theory, `installing <https://podman-desktop.io/docs/installation/macos-"
 "install>`_ and running Podman Desktop from the official website should be "
@@ -1170,21 +1170,21 @@ msgid ""
 "compose>`_."
 msgstr ""
 
-#: ../../tutorials.rst:583
+#: ../../tutorials.rst:584
 msgid "Using ODM from low-bandwidth location"
 msgstr "استخدام ODM من موقع النطاق الترددي المنخفض"
 
-#: ../../tutorials.rst:586
+#: ../../tutorials.rst:587
 msgid "What is this and who is it for?"
 msgstr "ما هذا ومن هو؟"
 
-#: ../../tutorials.rst:588
+#: ../../tutorials.rst:589
 msgid ""
 "Via `Ivan Gayton's repo <https://github.com/ivangayton/GDAL_scripts/>`_."
 msgstr ""
 "عبر  `Ivan Gayton's repo <https://github.com/ivangayton/GDAL_scripts/>`_"
 
-#: ../../tutorials.rst:590
+#: ../../tutorials.rst:591
 msgid ""
 "`OpenDroneMap <https://www.opendronemap.org/>`__ can’t always be effectively "
 "set up locally—it takes a fairly powerful machine to process large datasets—"
@@ -1202,7 +1202,7 @@ msgstr ""
 "الترددي اللازم لمعالجة مجموعات بيانات صور الطائرات بدون طيار على السحابة من "
 "المواقع الأفريقية."
 
-#: ../../tutorials.rst:598
+#: ../../tutorials.rst:599
 msgid ""
 "Here we present a tricky but workable process to create an OpenDroneMap "
 "cloud machine (*not* CloudODM, mind you, just a cloud-based instance of ODM "
@@ -1223,7 +1223,7 @@ msgstr ""
 "ضجة مع إعداد صعب قليلاً ، فإن \"CloudODM <https://www.opendronemap.org/"
 "cloudodm/>\" __ هو ما يجب أن تنظر إليه."
 
-#: ../../tutorials.rst:609
+#: ../../tutorials.rst:610
 msgid ""
 "The whole process is mostly targeted at someone flying substantial missions "
 "in an African or similar location looking to process data ASAP while still "
@@ -1235,15 +1235,15 @@ msgstr ""
 "ميدانية. ولذلك ، فإنه يؤكد على سير العمل الذي يهدف إلى تقليل نقل البيانات / "
 "النطاق الترددي ، بدلاً من أبسط طريقة لتشغيل ODM."
 
-#: ../../tutorials.rst:616
+#: ../../tutorials.rst:617
 msgid "Steps"
 msgstr "خطوات"
 
-#: ../../tutorials.rst:619
+#: ../../tutorials.rst:620
 msgid "Install"
 msgstr "تثبيت"
 
-#: ../../tutorials.rst:621
+#: ../../tutorials.rst:622
 msgid ""
 "Create a Digital Ocean droplet with at least 4GB of RAM. That’ll cost about "
 "$20/month. Less than 4GB of RAM and the install will probably fail. When we "
@@ -1261,11 +1261,11 @@ msgstr ""
 "(أرخص قطرة ، بسعر 5 دولارات شهريًا ، ويأتي مع محرك أقراص صغير لا يمكنك "
 "تقليصه)."
 
-#: ../../tutorials.rst:629
+#: ../../tutorials.rst:630
 msgid "Should be an Ubuntu 18.04 instance to ensure dependency compatibility"
 msgstr "يجب أن يكون نسخة Ubuntu 18.04 لضمان توافق التبعية"
 
-#: ../../tutorials.rst:631
+#: ../../tutorials.rst:632
 msgid ""
 "Create a user with sudo privileges. `Digital Ocean’s insanely good "
 "documentation <https://www.digitalocean.com/community/tutorials/initial-"
@@ -1277,14 +1277,14 @@ msgid ""
 "match all of the examples in this document."
 msgstr ""
 
-#: ../../tutorials.rst:640
+#: ../../tutorials.rst:641
 msgid ""
 "Go ahead and execute ``sudo apt update`` and ``sudo apt upgrade`` to ensure "
 "your server isn’t dangerously without updates. Make sure to stay with Ubuntu "
 "18.04."
 msgstr ""
 
-#: ../../tutorials.rst:644
+#: ../../tutorials.rst:645
 msgid ""
 "Download and install ODM on it from the `ODM Github <https://github.com/"
 "OpenDroneMap/ODM>`__ (regular, not WebODM) with the following commands:"
@@ -1292,7 +1292,7 @@ msgstr ""
 "قم بتنزيل وتثبيت ODM عليه من `ODM Github <https://github.com/OpenDroneMap/"
 "ODM>` __ (عادي ، وليس WebODM) باستخدام الأوامر التالية:"
 
-#: ../../tutorials.rst:654
+#: ../../tutorials.rst:655
 msgid ""
 "If you do this from the default home folder of your user (i.e. ``odm``) the "
 "path to the install will be ``/home/odm/ODM`` (abbreviated as ``~/ODM/``)."
@@ -1300,7 +1300,7 @@ msgstr ""
 "إذا قمت بذلك من المجلد الرئيسي الافتراضي للمستخدم (أي `` odm '') ، فسيكون "
 "المسار إلى التثبيت هو '' home / odm / ODM '' (يُختصر باسم `` ~ / ODM / '')."
 
-#: ../../tutorials.rst:657
+#: ../../tutorials.rst:658
 msgid ""
 "There are some environmental variables that need to be set. Open the "
 "~/.bashrc file on your machine and add the following 3 lines at the end "
@@ -1319,7 +1319,7 @@ msgstr ""
 "كما في مثالنا (على سبيل المثال إذا كنت تستخدم اسم مستخدم مختلفًا في إعداد "
 "الخادم الخاص بك) :"
 
-#: ../../tutorials.rst:672
+#: ../../tutorials.rst:673
 msgid ""
 "Note that the ODM github readme contains a slight error, the install "
 "directory name will be ODM, not OpenDroneMap (you’ll see this if you compare "
@@ -1329,7 +1329,7 @@ msgstr ""
 "دليل التثبيت هو ODM ، وليس OpenDroneMap (سترى هذا إذا قارنت الإرشادات "
 "المذكورة أعلاه بالإرشادات الموجودة على ODM GitHub)."
 
-#: ../../tutorials.rst:676
+#: ../../tutorials.rst:677
 msgid ""
 "In order to prevent a crash wherein the split-merge process fails to locate "
 "its own executable, we add the following lines to ``~/.bashrc`` (adjust "
@@ -1339,7 +1339,7 @@ msgstr ""
 "بها ، نضيف الأسطر التالية إلى ``~/.bashrc`` (اضبط المسارات إذا قمت بإعداد "
 "الأشياء بشكل مختلف عن مثالنا):"
 
-#: ../../tutorials.rst:686
+#: ../../tutorials.rst:687
 msgid ""
 "Now you’ll need a second cloud hard drive (a “Volume” in Digital Ocean "
 "jargon) big enough to manage your project. Rule of thumb seems to be 10 "
@@ -1359,11 +1359,11 @@ msgstr ""
 "<https://www.digitalocean.com/docs/volumes/how-to/mount/>`__ (في هذا "
 "المثال ، نقوم بتعيينه إلى ``/mnt/odmdata/``)."
 
-#: ../../tutorials.rst:697
+#: ../../tutorials.rst:698
 msgid "Prep data and project"
 msgstr "إعداد البيانات والمشروع"
 
-#: ../../tutorials.rst:699
+#: ../../tutorials.rst:700
 msgid ""
 "Now push your images onto the server. You can use `Secure Copy (scp) "
 "<https://en.wikipedia.org/wiki/Secure_copy>`__ like so: ``scp -r /path/to/my/"
@@ -1373,7 +1373,7 @@ msgstr ""
 "en.wikipedia.org/wiki/Secure_copy>`__ مثل ذلك: ``scp -r /path/to/my/"
 "imagefolder odm@xxx.xxx.xxx.xxx:/mnt/odmdata/``."
 
-#: ../../tutorials.rst:703
+#: ../../tutorials.rst:704
 msgid ""
 "This pushes the entire folder full of images (that’s what the ``-r`` option "
 "does, “recursive”) into the remote location (in our example, into the volume "
@@ -1383,7 +1383,7 @@ msgstr ""
 "\"العودية\") في الموقع البعيد (في مثالنا ، في الحجم الذي نعلقه على الجهاز "
 "السحابي على ``/mnt/odmdata/``."
 
-#: ../../tutorials.rst:707
+#: ../../tutorials.rst:708
 msgid ""
 "This will take some bandwidth. No way around the size of the files.\\ `1 "
 "<#footnote1>`__, \\ `2 <#footnote2>`__\\"
@@ -1391,11 +1391,11 @@ msgstr ""
 "سيستغرق هذا بعض عرض النطاق الترددي. لا توجد طريقة حول حجم الملفات.\\ `1 "
 "<#footnote1>`__, \\ `2 <#footnote2>`__\\"
 
-#: ../../tutorials.rst:711
+#: ../../tutorials.rst:712
 msgid "Directory structure"
 msgstr "بنية الدليل"
 
-#: ../../tutorials.rst:713
+#: ../../tutorials.rst:714
 msgid ""
 "ODM requires the directories on the machine to be set up just so. The "
 "critical bits are the install folder (if you installed as above, it’s ``/"
@@ -1405,7 +1405,7 @@ msgstr ""
 "التثبيت (إذا قمت بتثبيته كما هو موضح أعلاه ، فهو ``/home/odm/ODM/`` ومجلد "
 "المشروع (i.e. ``/mnt/odmdata/myproject/``))"
 
-#: ../../tutorials.rst:718
+#: ../../tutorials.rst:719
 msgid ""
 "ODM’s settings.yaml file specifies a single parent directory containing all "
 "projects. This is what goes in the project path line of the settings.yaml "
@@ -1424,14 +1424,14 @@ msgstr ""
 "odmdata/`` ، والتي تشير في هذه الحالة إلى المجلد الذي أنشأناه. يتم إنشاء "
 "أدلة المشاريع الفردية في ذلك."
 
-#: ../../tutorials.rst:727
+#: ../../tutorials.rst:728
 msgid ""
 "Individual project directories, i.e. ``/mnt/odmdata/myproject/`` contain the "
 "gcp_list.txt file, the image_groups.txt file, and the images folder for each "
 "project."
 msgstr ""
 
-#: ../../tutorials.rst:730
+#: ../../tutorials.rst:731
 msgid ""
 "The images folder, i.e. ``/mnt/odmdata/myproject/images/`` contains all of "
 "the images. If you set it up like this, the images don’t get re-copied "
@@ -1441,7 +1441,7 @@ msgstr ""
 "إذا قمت بإعداده على هذا النحو ، فلن تتم إعادة نسخ الصور لأنها موجودة بالفعل "
 "في الدليل الذي يريدها ODM."
 
-#: ../../tutorials.rst:734
+#: ../../tutorials.rst:735
 msgid ""
 "Modify settings.yaml to specify the parent directory of the project folder "
 "(in this case the Volume we created, ``/mnt/odmdata/``). Make sure the "
@@ -1454,7 +1454,7 @@ msgstr ""
 "الصحيح ، مثل  ``/mnt/odmdata/myproject/images`` والملفات المساعدة الأخرى "
 "(gcp_list.txt و image_groups.txt) في المجلد الجذر ``/mnt/odmdata/myproject/``"
 
-#: ../../tutorials.rst:740
+#: ../../tutorials.rst:741
 msgid ""
 "if you have the images in separate folders for individual AOI blocks or "
 "flights (which you will if your flight management was organized), you can "
@@ -1480,11 +1480,11 @@ msgstr ""
 "(لذا ``/mnt/odmdata/myproject/images/``). سيسمح ملف image_groups.txt لـ ODM "
 "بتتبع الصور التي تنتمي إلى نفس الدفعة ، على الرغم من أنها كلها في دليل واحد."
 
-#: ../../tutorials.rst:756
+#: ../../tutorials.rst:757
 msgid "Resize droplet, pull pin, run away"
 msgstr "تغيير حجم القطرة ، وسحب دبوس ، والهروب"
 
-#: ../../tutorials.rst:758
+#: ../../tutorials.rst:759
 msgid ""
 "Shut down and resize your machine to an appropriately monstrous number of "
 "CPUs and amount of memory. I use the memory-optimized machine with 24 "
@@ -1498,7 +1498,7 @@ msgstr ""
 "الساعة - والتي تضيف بسرعة ، تزيد عن 1000 دولار / شهر). إعادة التشغيل ، "
 "والبدء في العمل بسرعة حتى لا تضيع وقتًا كبيرًا."
 
-#: ../../tutorials.rst:763
+#: ../../tutorials.rst:764
 msgid ""
 "Launch the ODM process via ssh using nohup (so that if you’re cut off, "
 "processing will continue)"
@@ -1506,7 +1506,7 @@ msgstr ""
 "ابدأ تشغيل عملية ODM عبر ssh باستخدام nohup (بحيث إذا تم قطع الاتصال ، "
 "فستستمر المعالجة)"
 
-#: ../../tutorials.rst:766
+#: ../../tutorials.rst:767
 msgid ""
 "Alternately you can use GNU screen to launch the process from a screen "
 "session which won’t stop if your connection is interrupted; launch "
@@ -1522,7 +1522,7 @@ msgstr ""
 "لجميع مخرجات وحدة التحكم ما لم تفعل شيئًا محددًا لالتقاط ذلك ، بينما يمنحك "
 "nohup ملفًا يحتوي على جميع مخرجات وحدة التحكم ، بما في ذلك رسائل الخطأ ، مجانًا"
 
-#: ../../tutorials.rst:773
+#: ../../tutorials.rst:774
 msgid ""
 "Note: as of 2020-03 the normal incantation ``python run.py -i /path/to/image/"
 "folder project_name`` seems *not* to work; the ``-i`` or ``--image`` "
@@ -1536,7 +1536,7 @@ msgstr ""
 "المشروع في ملف settings.yaml لتوجيه ODM إلى المكان الصحيح. الآن باستخدام "
 "(بما في ذلك الدمج المقسم):"
 
-#: ../../tutorials.rst:784
+#: ../../tutorials.rst:785
 msgid ""
 "This points ODM at the folder (in this example) ``/mnt/odmdata/myproject/``. "
 "Provided the image_groups.txt and gcp_list.txt are in this folder, the "
@@ -1549,7 +1549,7 @@ msgstr ""
 "موجودة في ``/mnt/odmdata/myproject/images/`` ، ومسار المشروع في الإعدادات. "
 "yaml هو ``/mnt/odmdata/``  لن تضيع الوقت ونسخ الصور الفضائية."
 
-#: ../../tutorials.rst:791
+#: ../../tutorials.rst:792
 msgid ""
 "Note that this assumes you have an image_groups.txt file. If not, this ``-"
 "split-overlap 0`` will probably fuck things up, and the ``--split 1`` is "
@@ -1566,11 +1566,11 @@ msgstr ""
 "حالتنا نحن نفترض أن الصور مجمعة بالفعل بشكل معقول). إذا لم يكن لديك مجموعة "
 "بيانات كبيرة (> 1000 صورة) ، فاحذف خياري \"- تقسيم\" و \"- تقسيم متداخل\"."
 
-#: ../../tutorials.rst:800
+#: ../../tutorials.rst:801
 msgid "Follow the progress using tail (so that you’ll know when it’s done)"
 msgstr "اتبع التقدم باستخدام الذيل (حتى تعرف متى يتم ذلك)"
 
-#: ../../tutorials.rst:806
+#: ../../tutorials.rst:807
 msgid ""
 "You may want to keep an eye on htop (to get a sense of the resource usage so "
 "that in future you can only spin up a machine as large as necessary)"
@@ -1578,11 +1578,11 @@ msgstr ""
 "قد ترغب في مراقبة htop (للحصول على فكرة عن استخدام الموارد حتى تتمكن في "
 "المستقبل من تدوير آلة كبيرة بقدر الضرورة)"
 
-#: ../../tutorials.rst:811
+#: ../../tutorials.rst:812
 msgid "After it finishes (assuming you survive that long)"
 msgstr "بعد الانتهاء (بافتراض أنك تعيش طويلاً)"
 
-#: ../../tutorials.rst:813
+#: ../../tutorials.rst:814
 msgid ""
 "As soon as processing is done, shut down the machine and resize it back down "
 "to the inexpensive minimum capacity."
@@ -1590,11 +1590,11 @@ msgstr ""
 "بمجرد الانتهاء من المعالجة ، أغلق الماكينة وقم بتغيير حجمها مرة أخرى إلى "
 "الحد الأدنى للسعة غير المكلفة."
 
-#: ../../tutorials.rst:815
+#: ../../tutorials.rst:816
 msgid "Start the machine back up, and log in via ssh."
 msgstr "قم بتشغيل الجهاز احتياطيًا ، وقم بتسجيل الدخول عبر ssh."
 
-#: ../../tutorials.rst:816
+#: ../../tutorials.rst:817
 msgid ""
 "If you want to save download bandwidth, you can compress the orthophoto "
 "using GDAL. Don’t add overviews, do that on your local machine to avoid "
@@ -1604,7 +1604,7 @@ msgstr ""
 "باستخدام GDAL. لا تضيف نظرة عامة ، افعل ذلك على جهازك المحلي لتجنب تكبير "
 "الملف قبل تنزيله."
 
-#: ../../tutorials.rst:824
+#: ../../tutorials.rst:825
 msgid ""
 "Download using scp: ``scp odm@xxx.xxx.xxx.xxx:/mnt/odmdata/myproject/"
 "odm_orthophoto/odm_orthophoto.tif`` (or grab the compressed version you "
@@ -1614,7 +1614,7 @@ msgstr ""
 "odm_orthophoto/odm_orthophoto.tif`` (أو احصل على النسخة المضغوطة التي "
 "أنشأتها في الخطوة الأخيرة) "
 
-#: ../../tutorials.rst:828
+#: ../../tutorials.rst:829
 msgid ""
 "Once you get the file on your local computer, you can use QGIS to add "
 "overviews (“pyramids”) or use the GDAL command ``gdaladdo -r average /path/"
@@ -1624,7 +1624,7 @@ msgstr ""
 "QGIS لإضافة نظرة عامة (\"الأهرامات\") أو استخدام أمر GDAL  ``gdaladdo -r "
 "average /path/to/image.tif 2 4 8 16 32 64 128 256 512 1024``."
 
-#: ../../tutorials.rst:832
+#: ../../tutorials.rst:833
 msgid ""
 "You can archive the odm_texturing, odm_georeferencing, and odm-dem folders "
 "using tar to make them easier to download in one piece (and maybe smaller)."
@@ -1632,15 +1632,15 @@ msgstr ""
 "يمكنك أرشفة مجلدات odm_texturing و odm_georeferencing و odm-dem باستخدام tar "
 "لتسهيل عملية التنزيل في قطعة واحدة (وربما أصغر)."
 
-#: ../../tutorials.rst:843
+#: ../../tutorials.rst:844
 msgid "Advanced"
 msgstr ""
 
-#: ../../tutorials.rst:847
+#: ../../tutorials.rst:848
 msgid "Calibrating the Camera"
 msgstr "معايرة الكاميرا"
 
-#: ../../tutorials.rst:849
+#: ../../tutorials.rst:850
 msgid ""
 "Camera calibration is a special challenge with commodity cameras. "
 "Temperature changes, vibrations, focus, and other factors can affect the "
@@ -1663,7 +1663,7 @@ msgstr ""
 "onlinelibrary.wiley.com/doi/full/10.1002/esp.3609> \"_ معالجة كيف لتقليل "
 "التشويه من المعايرة الذاتية."
 
-#: ../../tutorials.rst:855
+#: ../../tutorials.rst:856
 msgid ""
 "*Bowling effect on point cloud over 13,000+ image dataset collected by World "
 "Bank Tanzania over the flood prone Msimbasi Basin, Dar es Salaam, Tanzania.*"
@@ -1672,7 +1672,7 @@ msgstr ""
 "جمعها من قبل البنك الدولي في تنزانيا حول حوض الفيضانات المعرض للفيضانات ، "
 "دار السلام ، تنزانيا. *"
 
-#: ../../tutorials.rst:857
+#: ../../tutorials.rst:858
 msgid ""
 "To mitigate this effect, there are a few options but the simplest are as "
 "follows: fly two patterns separated by 20°, and rather than having a nadir "
@@ -1686,7 +1686,7 @@ msgstr ""
 msgid "animation showing optimum"
 msgstr ""
 
-#: ../../tutorials.rst:865
+#: ../../tutorials.rst:866
 msgid ""
 "As this approach takes longer than traditional imaging, pilots and teams may "
 "apply this technique to a smaller area and use the collected data to "
@@ -1696,7 +1696,7 @@ msgid ""
 "efficiency."
 msgstr ""
 
-#: ../../tutorials.rst:867
+#: ../../tutorials.rst:868
 msgid ""
 "Alternatively, the following experimental method can be applied: fly with "
 "much lower overlap, but two *crossgrid* flights (sometimes called "
@@ -1706,7 +1706,7 @@ msgstr ""
 "لكن رحلتين * متصالبتين * (تسمى أحيانًا التقاطع المائل) مفصولتين بزاوية 20 "
 "درجة مع كاميرا أمامية 5 درجات."
 
-#: ../../tutorials.rst:869
+#: ../../tutorials.rst:870
 #, python-format
 msgid ""
 "Crossgrid overlap percentages can be lower than parallel flights. To get "
@@ -1717,7 +1717,7 @@ msgstr ""
 "نتائج جيدة ثلاثية الأبعاد ، ستحتاج إلى تداخل 68٪ و sidelap لما يعادل 83٪ "
 "تداخل و sidelap."
 
-#: ../../tutorials.rst:870
+#: ../../tutorials.rst:871
 #, python-format
 msgid ""
 "To get good 2D and 2.5D (digital elevation model) results, you will require "
@@ -1730,7 +1730,7 @@ msgstr ""
 msgid "animation showing experimental optimum"
 msgstr ""
 
-#: ../../tutorials.rst:876
+#: ../../tutorials.rst:877
 msgid ""
 "Vertically separated flight lines also improve accuracy, but less so than a "
 "camera that is forward facing by 5°."
@@ -1744,7 +1744,7 @@ msgid ""
 "facing cameras on improving self calibration"
 msgstr ""
 
-#: ../../tutorials.rst:882
+#: ../../tutorials.rst:883
 msgid ""
 "From James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/"
 "licenses/by/4.0>`_"
@@ -1752,11 +1752,11 @@ msgstr ""
 "من James and Robson (2014), `CC BY 4.0 <https://creativecommons.org/licenses/"
 "by/4.0>`_"
 
-#: ../../tutorials.rst:886
+#: ../../tutorials.rst:887
 msgid "Using Image Masks"
 msgstr ""
 
-#: ../../tutorials.rst:888
+#: ../../tutorials.rst:889
 msgid ""
 "Starting from ODM ``2.0`` people can supply image masks to inform the "
 "software to skip reconstruction over certain areas. This is useful for cases "
@@ -1764,7 +1764,7 @@ msgid ""
 "shots, or simply to limit the reconstruction of a single subject."
 msgstr ""
 
-#: ../../tutorials.rst:890
+#: ../../tutorials.rst:891
 msgid ""
 "To add a mask, simply create a new black and white image of the same "
 "dimension as the target image you want to mask (you can use a program such "
@@ -1784,26 +1784,26 @@ msgstr ""
 msgid "3D result (building is masked)"
 msgstr ""
 
-#: ../../tutorials.rst:905
+#: ../../tutorials.rst:906
 msgid "Name your file:"
 msgstr ""
 
-#: ../../tutorials.rst:907
+#: ../../tutorials.rst:908
 msgid "``<filename>_mask.JPG``"
 msgstr ""
 
-#: ../../tutorials.rst:909
+#: ../../tutorials.rst:910
 msgid ""
 "For example, ``DJI_0018.JPG`` can have a mask by creating a "
 "``DJI_0018_mask.JPG`` file and include that in the list of images. You can "
 "use ``.JPG``, ``.PNG``, ``.BMP`` and ``.TIF`` formats for image masks."
 msgstr ""
 
-#: ../../tutorials.rst:912
+#: ../../tutorials.rst:913
 msgid "Using Singularity"
 msgstr ""
 
-#: ../../tutorials.rst:914
+#: ../../tutorials.rst:915
 msgid ""
 "`Singularity <https://sylabs.io/>`__ is another container platform able to "
 "run Docker images. Singularity can be run both on local machins and in "
@@ -1812,27 +1812,27 @@ msgid ""
 "resources. A container is a single file without anything else to install."
 msgstr ""
 
-#: ../../tutorials.rst:920
+#: ../../tutorials.rst:921
 msgid "Build Singularity image from Docker image"
 msgstr ""
 
-#: ../../tutorials.rst:922
+#: ../../tutorials.rst:923
 msgid "Singularity can use Docker image to build SIF image."
 msgstr ""
 
-#: ../../tutorials.rst:924
+#: ../../tutorials.rst:925
 msgid "For latest ODM Docker image (Recommended) :"
 msgstr ""
 
-#: ../../tutorials.rst:930
+#: ../../tutorials.rst:931
 msgid "For latest ODM GPU Docker image :"
 msgstr ""
 
-#: ../../tutorials.rst:937
+#: ../../tutorials.rst:938
 msgid "Using Singularity SIF image"
 msgstr ""
 
-#: ../../tutorials.rst:940
+#: ../../tutorials.rst:941
 msgid ""
 "Once you have used one of the above commands to download and create the "
 "`odm_latest.sif` image, it can be ran using singularity. Place your images "
@@ -1840,17 +1840,17 @@ msgid ""
 "run :"
 msgstr ""
 
-#: ../../tutorials.rst:947
+#: ../../tutorials.rst:948
 msgid ""
 "Like with docker, additional `Options and Flags <https://"
 "docs.opendronemap.org/arguments/>`_ can be added to the command :"
 msgstr ""
 
-#: ../../tutorials.rst:961
+#: ../../tutorials.rst:962
 msgid "ClusterODM, NodeODM, SLURM, with Singularity on HPC"
 msgstr ""
 
-#: ../../tutorials.rst:964
+#: ../../tutorials.rst:965
 msgid ""
 "You can write a SLURM script to schedule and set up available nodes with "
 "NodeODM for the ClusterODM to be wired to if you are on the HPC. Using SLURM "
@@ -1859,11 +1859,11 @@ msgid ""
 "HPC."
 msgstr ""
 
-#: ../../tutorials.rst:966
+#: ../../tutorials.rst:967
 msgid "To setup HPC with SLURM, you must make sure SLURM is installed."
 msgstr ""
 
-#: ../../tutorials.rst:968
+#: ../../tutorials.rst:969
 msgid ""
 "SLURM script will be different from cluster to cluster, depending on which "
 "nodes in the cluster that you have. However, the main idea is we want to run "
@@ -1875,25 +1875,25 @@ msgid ""
 "ClusterODM running on HPC."
 msgstr ""
 
-#: ../../tutorials.rst:970
+#: ../../tutorials.rst:971
 msgid ""
 "Here is an example of SLURM script assigning nodes 48, 50, 51 to run "
 "NodeODM. You can freely change and use it depending on your system:"
 msgstr ""
 
-#: ../../tutorials.rst:994
+#: ../../tutorials.rst:995
 msgid "You can check for available nodes using sinfo:"
 msgstr ""
 
-#: ../../tutorials.rst:1000
+#: ../../tutorials.rst:1001
 msgid "Run the following command to schedule using the SLURM script:"
 msgstr ""
 
-#: ../../tutorials.rst:1007
+#: ../../tutorials.rst:1008
 msgid "You can also check for currently running jobs using squeue:"
 msgstr ""
 
-#: ../../tutorials.rst:1014
+#: ../../tutorials.rst:1015
 msgid ""
 "Unfortunately, SLURM does not handle assigning jobs to the head node. Hence, "
 "if we want to run ClusterODM on the head node, we have to run it locally. "
@@ -1901,20 +1901,20 @@ msgid ""
 "ClusterODMs. Here is an example following the sample SLURM script:"
 msgstr ""
 
-#: ../../tutorials.rst:1025
+#: ../../tutorials.rst:1026
 msgid ""
 "You should always check to make sure which ports are being used to run "
 "NodeODM if ClusterODM is not wired correctly."
 msgstr ""
 
-#: ../../tutorials.rst:1027
+#: ../../tutorials.rst:1028
 msgid ""
 "It is also possible to pre-populate nodes using JSON. If starting ClusterODM "
 "from apptainer or docker, the relevant JSON is available at `docker/data/"
 "nodes.json`. Contents might look similar to the following:"
 msgstr ""
 
-#: ../../tutorials.rst:1038
+#: ../../tutorials.rst:1039
 msgid ""
 "After finish hosting ClusterODM on the head node and finish wiring it to the "
 "NodeODM, you can try tunneling to see if ClusterODM works as expected. Open "
@@ -1922,7 +1922,7 @@ msgid ""
 "the following command:"
 msgstr ""
 
-#: ../../tutorials.rst:1045
+#: ../../tutorials.rst:1046
 msgid ""
 "Replace user and hostname with your appropriate username and the hpc "
 "address. Basically, this command will tunnel the port of the hpc to your "
@@ -1935,21 +1935,21 @@ msgstr ""
 msgid "Screenshot of ClusterODM's administrative web interface"
 msgstr ""
 
-#: ../../tutorials.rst:1052
+#: ../../tutorials.rst:1053
 msgid ""
 "Here you can check the NodeODMs status and even add or delete working nodes."
 msgstr ""
 
-#: ../../tutorials.rst:1054
+#: ../../tutorials.rst:1055
 msgid ""
 "After that, do tunneling for port 3000 of the HPC to your local machine:"
 msgstr ""
 
-#: ../../tutorials.rst:1058
+#: ../../tutorials.rst:1059
 msgid "ssh -L localhost:3000:localhost:3000 user@hostname"
 msgstr ""
 
-#: ../../tutorials.rst:1060
+#: ../../tutorials.rst:1061
 msgid ""
 "Port 3000 is ClusterODM's proxy. This is the place we assign tasks to "
 "ClusterODM. Once again, connect to `http://localhost:3000` with your browser "
@@ -1960,18 +1960,18 @@ msgstr ""
 msgid "Screenshot of ClusterODM's jobs interface"
 msgstr ""
 
-#: ../../tutorials.rst:1066
+#: ../../tutorials.rst:1067
 msgid ""
 "After adding images in this browser, you can press Start Task and see "
 "ClusterODM assigning tasks to the nodes you have wired to. Go for a walk and "
 "check the progress."
 msgstr ""
 
-#: ../../tutorials.rst:1069
+#: ../../tutorials.rst:1070
 msgid "Development and testing of ODM"
 msgstr ""
 
-#: ../../tutorials.rst:1071
+#: ../../tutorials.rst:1072
 msgid ""
 "Development and testing of code changes can be difficult. The simplest way "
 "to do so is modify the code and rebuild docker images from source, much as "
@@ -1979,42 +1979,42 @@ msgid ""
 "OpenDroneMap/ODM?tab=readme-ov-file#build-docker-images-from-source>`_."
 msgstr ""
 
-#: ../../tutorials.rst:1073
+#: ../../tutorials.rst:1074
 msgid ""
 "However, having to do a full docker rebuild for each change is time "
 "consuming and wasteful. What might be better is to have a dedicated, long "
 "running node that allows us to test out changes in near real time."
 msgstr ""
 
-#: ../../tutorials.rst:1075 ../../tutorials.rst:1082
+#: ../../tutorials.rst:1076 ../../tutorials.rst:1083
 msgid "Fork and clone repository"
 msgstr ""
 
-#: ../../tutorials.rst:1076 ../../tutorials.rst:1092
+#: ../../tutorials.rst:1077 ../../tutorials.rst:1093
 msgid "Set up local NodeODM docker instance"
 msgstr ""
 
-#: ../../tutorials.rst:1077 ../../tutorials.rst:1101
+#: ../../tutorials.rst:1078 ../../tutorials.rst:1102
 msgid "Modify code"
 msgstr ""
 
-#: ../../tutorials.rst:1079 ../../tutorials.rst:1128
+#: ../../tutorials.rst:1080 ../../tutorials.rst:1129
 msgid "Install and use changes"
 msgstr ""
 
-#: ../../tutorials.rst:1084
+#: ../../tutorials.rst:1085
 msgid ""
 "First, let's fork the ODM repo, and checkout a new branch locally that will "
 "function as our development branch."
 msgstr ""
 
-#: ../../tutorials.rst:1094
+#: ../../tutorials.rst:1095
 msgid ""
 "Next, we will set up a NodeODM instance with a locally mounted volume that "
 "points to our development branch of ODM"
 msgstr ""
 
-#: ../../tutorials.rst:1103
+#: ../../tutorials.rst:1104
 msgid ""
 "For our test today, we will attempt to upgrade Ceres Solver to version "
 "2.2.0. Most external libraries like Ceres can be found in the Superbuild "
@@ -2022,38 +2022,38 @@ msgid ""
 "set it to use version 2.2.0"
 msgstr ""
 
-#: ../../tutorials.rst:1107
+#: ../../tutorials.rst:1108
 msgid ""
 "Now that we've made that small, but substantive change, we need to rebuild "
 "Ceres on the docker image for testing."
 msgstr ""
 
-#: ../../tutorials.rst:1113
+#: ../../tutorials.rst:1114
 msgid "Let us find out our container name, in case we forgot:"
 msgstr ""
 
-#: ../../tutorials.rst:1121
+#: ../../tutorials.rst:1122
 msgid ""
 "Now that we know the container name, we will connect to that instance using "
 "docker exec as follows:"
 msgstr ""
 
-#: ../../tutorials.rst:1130
+#: ../../tutorials.rst:1131
 msgid "Let us get the environment prepared for our testing:"
 msgstr ""
 
-#: ../../tutorials.rst:1140
+#: ../../tutorials.rst:1141
 msgid "Next we can rebuild Ceres."
 msgstr ""
 
-#: ../../tutorials.rst:1159
+#: ../../tutorials.rst:1160
 msgid ""
 "Success! Now we can either run ODM directly inside this container, use the "
 "NodeODM interface to process data, or connect in with WebODM for additional "
 "testing."
 msgstr ""
 
-#: ../../tutorials.rst:1162
+#: ../../tutorials.rst:1163
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
 "contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/"

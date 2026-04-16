@@ -3,4 +3,5 @@ sphinx==7.4.7
 sphinx-intl
 sphinx-rtd-theme
 sphinxcontrib-mermaid
+sphinx-copybutton
 wheel

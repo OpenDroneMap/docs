@@ -88,8 +88,7 @@ From the same Terminal (or command prompt) run the following:
 
 ```
 cd docs/
-python3 -m venv .venv
-source .venv/bin/activate
+python3.12 -m venv .venv
 
 # Linux/Mac
 source .venv/bin/activate
