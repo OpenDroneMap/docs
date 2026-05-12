@@ -85,7 +85,7 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Tutoriales</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#creating-high-quality-orthophotos">Creación de Ortofotos de Alta Calidad</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#creating-digital-elevation-models">Creación de modelos de elevación digitales</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#using-potree-3d-viewer-module-on-webodm">Usar el módulo Potree de visualización 3D en WebODM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="#using-potree-3d-viewer-module-on-opendronemap-desktop">Using Potree 3D viewer module on OpenDroneMap Desktop</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="#cameras">Cámaras</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#textured-model">Modelo texturizado</a></li>
 <li class="toctree-l3"><a class="reference internal" href="#appearance">Apariencia</a><ul>
@@ -512,8 +512,8 @@
 </pre></div>
 </div>
 </section>
-<section id="using-potree-3d-viewer-module-on-webodm">
-<h2>Usar el módulo Potree de visualización 3D en WebODM<a class="headerlink" href="#using-potree-3d-viewer-module-on-webodm" title="Link to this heading"></a></h2>
+<section id="using-potree-3d-viewer-module-on-opendronemap-desktop">
+<h2>Using Potree 3D viewer module on OpenDroneMap Desktop<a class="headerlink" href="#using-potree-3d-viewer-module-on-opendronemap-desktop" title="Link to this heading"></a></h2>
 <section id="cameras">
 <h3>Cámaras<a class="headerlink" href="#cameras" title="Link to this heading"></a></h3>
 <p>Active esta función para mostrar la posición de las cámaras</p>
@@ -687,7 +687,7 @@
 </section>
 <section id="processing-parameters">
 <h3>Parámetros de procesamiento<a class="headerlink" href="#processing-parameters" title="Link to this heading"></a></h3>
-<p>Se puede lograr un modelo de alta precisión usando los parámetros predefinidos para alta resolución en WebODM. Luego puede ajustar aún más algunos parámetros según sea necesario.</p>
+<p>A highly accurate model can be achieved using OpenDroneMap Desktop high resolution predefined settings. Then you can further adjust some parameters as necessary.</p>
 <p>Si utiliza ODM, estos valores de referencia pueden ayudarle a configurar los parámetros de proceso.</p>
 <p>–dsm: true</p>
 <p>–dem-resolution 2.0</p>
@@ -701,7 +701,7 @@
 <figure class="align-center">
 <img alt="casi el 50% del material se encontrará en el primer 20% de la altura de la pila" src="../_images/stockpile.webp" />
 </figure>
-<p>En el tablero de WebODM, haga clic en «ver mapa» para iniciar una vista 2D de su proyecto.</p>
+<p>In OpenDroneMap Desktop Dashboard, clic on «view map» to start a 2D view of your project.</p>
 <p>Una vez en la vista de mapa 2D, haga clic en el botón «Medir volumen, área y distancia».</p>
 <figure class="align-center">
 <img alt="haga clic en el botón &quot;Medición de  volumen, área y distancia&quot;" src="../_images/measurement1.webp" />
@@ -878,7 +878,9 @@ $ sudo usermod --add-subgids 10000-75535 $(whoami)
 <li><p>Continúe y ejecute <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">update</span></code> y <code class="docutils literal notranslate"><span class="pre">sudo</span> <span class="pre">apt</span> <span class="pre">upgrade</span></code> para asegurarse de que su servidor no esté peligrosamente sin actualizaciones. Asegúrese de permanecer con Ubuntu 18.04.</p></li>
 </ul>
 </li>
-<li><p>Descargue e instale ODM en él desde el ʻODM Github &lt;<a class="reference external" href="https://github.com/OpenDroneMap/ODM">https://github.com/OpenDroneMap/ODM</a>&gt;`__ (normal, no WebODM) con los siguientes comandos:</p></li>
+<li><p>Download and install ODM on it from the <a class="reference external" href="https://github.com/OpenDroneMap/ODM">ODM
+Github</a>
+with the following commands:</p></li>
 </ul>
 <div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">git</span> <span class="n">pull</span> <span class="n">https</span><span class="p">:</span><span class="o">//</span><span class="n">github</span><span class="o">.</span><span class="n">com</span><span class="o">/</span><span class="n">OpenDroneMap</span><span class="o">/</span><span class="n">ODM</span><span class="o">.</span><span class="n">git</span>
 <span class="n">cd</span> <span class="n">ODM</span>
@@ -1205,7 +1207,7 @@ make -j$(nproc) ceres
 [100%] Built target ceres
 </pre></div>
 </div>
-<p>Success! Now we can either run ODM directly inside this container, use the NodeODM interface to process data, or connect in with WebODM for additional testing.</p>
+<p>Success! Now we can either run ODM directly inside this container, use the NodeODM interface to process data, or connect in with OpenDroneMap Desktop for additional testing.</p>
 <p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Aprende a editar</a> y ayuda a mejorar <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst">esta página</a>!</p>
 </section>
 </section>

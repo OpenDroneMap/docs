@@ -85,7 +85,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutorials</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-high-quality-orthophotos">Creating High Quality Orthophotos</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-digital-elevation-models">Creating Digital Elevation Models</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-potree-3d-viewer-module-on-webodm">Using Potree 3D viewer module on WebODM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-potree-3d-viewer-module-on-opendronemap-desktop">Using Potree 3D viewer module on OpenDroneMap Desktop</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/#cameras">Cameras</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/#textured-model">Textured model</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/#appearance">Appearance</a><ul>
@@ -466,7 +466,6 @@
 <h1>Large Datasets<a class="headerlink" href="#large-datasets" title="Link to this heading"></a></h1>
 <p>ODM సంస్కరణ `` 0.6.0`` తో ప్రారంభించి, మీరు చాలా పెద్ద డేటాసెట్లను నిర్వహించదగిన భాగాలుగా విభజించవచ్చు (సబ్‌మోడల్స్ అని పిలుస్తారు), ప్రతి భాగం పైప్‌లైన్‌ను నడుపుతుంది, ఆపై విలీనం చేసిన DEM లు, ఆర్థోఫోటోలు మరియు పాయింట్ మేఘాలను ఉత్పత్తి చేస్తుంది. ఈ ప్రక్రియను &quot;స్ప్లిట్-విలీనం&quot; గా సూచిస్తారు.</p>
 <p>మీరు స్ప్లిట్-విలీన పైప్‌లైన్‌ను ఎందుకు ఉపయోగించవచ్చు? మీ డేటాసెట్‌లో మీకు చాలా ఎక్కువ సంఖ్యలో చిత్రాలు ఉంటే, స్ప్లిట్-విలీనం పెద్ద మెషీన్‌లో ప్రాసెసింగ్‌ను మరింత నిర్వహించగలిగేలా చేస్తుంది (దీనికి తక్కువ మెమరీ అవసరం). ఒకే నెట్‌వర్క్‌తో అనుసంధానించబడిన అనేక యంత్రాలు మీకు ఉంటే, మీరు సబ్‌మోడల్‌లను సమాంతరంగా ప్రాసెస్ చేయవచ్చు, తద్వారా క్షితిజ సమాంతర స్కేలింగ్ మరియు వేలాది చిత్రాలను మరింత త్వరగా ప్రాసెస్ చేయడానికి అనుమతిస్తుంది.</p>
-<p>Split-merge works in WebODM out of the box as long as the processing nodes support split-merge, by enabling the <code class="docutils literal notranslate"><span class="pre">--split</span></code> option when creating a new task.</p>
 <section id="local-split-merge">
 <h2>Local Split-Merge<a class="headerlink" href="#local-split-merge" title="Link to this heading"></a></h2>
 <p>Splitting a dataset into more manageable submodels and sequentially processing all submodels on the same machine is easy! Just use <code class="docutils literal notranslate"><span class="pre">--split</span></code> and <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code> to decide the the average number of images per submodels and the overlap (in meters) between submodels respectively</p>

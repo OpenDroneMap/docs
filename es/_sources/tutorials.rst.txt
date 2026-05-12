@@ -57,7 +57,7 @@ Example of how to generate a DTM::
     docker run -ti --rm -v /my/project:/datasets/code <my_odm_image> --project-path /datasets --dtm --dem-resolution 2 --smrf-threshold 0.4 --smrf-window 24
 
 ***************************************
-Using Potree 3D viewer module on WebODM
+Using Potree 3D viewer module on OpenDroneMap Desktop
 ***************************************
 
 Cameras
@@ -362,7 +362,7 @@ For further information on the use of GCPs, please refer to the `Ground Control 
 Processing parameters
 ======================
 
-A highly accurate model can be achieved using WebODM high resolution predefined settings. Then you can further adjust some parameters as necessary.
+A highly accurate model can be achieved using OpenDroneMap Desktop high resolution predefined settings. Then you can further adjust some parameters as necessary.
 
 
 If using ODM, these this reference values can help you configure the process settings.
@@ -386,7 +386,7 @@ As almost 50% of the material will be found in the first 20% of the stockpile he
    :alt: almost 50% of the material will be found in the first 20% of the stockpile height
    :align: center
 
-In WebODM Dashboard, clic on "view map" to start a 2D view of your project.
+In OpenDroneMap Desktop Dashboard, clic on "view map" to start a 2D view of your project.
 
 Once in the 2D map view, clic on the "Measure volume, area and length" button.
 
@@ -643,7 +643,7 @@ Install
       Ubuntu 18.04.
 
 -  Download and install ODM on it from the `ODM
-   Github <https://github.com/OpenDroneMap/ODM>`__ (regular, not WebODM)
+   Github <https://github.com/OpenDroneMap/ODM>`__ 
    with the following commands:
 
 ::
@@ -1157,7 +1157,7 @@ Next we can rebuild Ceres.
 	[100%] Completed 'ceres'
 	[100%] Built target ceres
 
-Success! Now we can either run ODM directly inside this container, use the NodeODM interface to process data, or connect in with WebODM for additional testing.
+Success! Now we can either run ODM directly inside this container, use the NodeODM interface to process data, or connect in with OpenDroneMap Desktop for additional testing.
 
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/tutorials.rst>`_!

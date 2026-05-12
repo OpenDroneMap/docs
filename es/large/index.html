@@ -85,7 +85,7 @@
 <li class="toctree-l1"><a class="reference internal" href="../tutorials/">Tutoriales</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-high-quality-orthophotos">Creación de Ortofotos de Alta Calidad</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/#creating-digital-elevation-models">Creación de modelos de elevación digitales</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-potree-3d-viewer-module-on-webodm">Usar el módulo Potree de visualización 3D en WebODM</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-potree-3d-viewer-module-on-opendronemap-desktop">Using Potree 3D viewer module on OpenDroneMap Desktop</a><ul>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/#cameras">Cámaras</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/#textured-model">Modelo texturizado</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/#appearance">Apariencia</a><ul>
@@ -466,7 +466,6 @@
 <h1>Large Datasets<a class="headerlink" href="#large-datasets" title="Link to this heading"></a></h1>
 <p>A partir de la versión <code class="docutils literal notranslate"><span class="pre">0.6.0</span></code> de ODM, puede dividir conjuntos de datos muy grandes en fragmentos manejables (llamados submodelos), ejecutar la canalización en cada fragmento y luego producir DEM, ortofotos y nubes de puntos fusionados. El proceso se conoce como «split-merge».</p>
 <p>¿Por qué debería utilizar la canalización split-merge? Si tiene una gran cantidad de imágenes en su conjunto de datos, split-merge ayudará a que el procesamiento sea más manejable en una máquina grande (requerirá menos memoria). Si tiene muchas máquinas conectadas a la misma red, también puede procesar los submodelos en paralelo, lo que permite el escalado horizontal y el procesamiento de miles de imágenes más rápidamente.</p>
-<p>Split-merge funciona en WebODM de forma inmediata siempre que los nodos de procesamiento admitan split-merge, al habilitar la opción <code class="docutils literal notranslate"><span class="pre">--split</span></code> al crear una nueva tarea.</p>
 <section id="local-split-merge">
 <h2>Split-merge local<a class="headerlink" href="#local-split-merge" title="Link to this heading"></a></h2>
 <p>¡Es fácil dividir un conjunto de datos en submodelos más manejables y procesar secuencialmente todos los submodelos en la misma máquina! Simplemente use <code class="docutils literal notranslate"><span class="pre">--split</span></code> y <code class="docutils literal notranslate"><span class="pre">--split-overlap</span></code> para decidir el número promedio de imágenes por submodelos y la superposición (en metros) entre submodelos respectivamente</p>

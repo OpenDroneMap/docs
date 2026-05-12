@@ -21,7 +21,7 @@ if somebody knocked on your door and asked you to "stop reading this page right 
 *your* suggestion can benefit others can also help. If the feature benefits you exclusively, it might be harder to convince others to do the work for you.
 
 A feature request can be submitted as issues on the applicable Github repository (e.g.,
-`WebODM <https://github.com/OpenDroneMap/WebODM/issues>`_ or `ODM <https://github.com/OpenDroneMap/ODM/issues>`_
+`ODM <https://github.com/OpenDroneMap/ODM/issues>`_
 or similar) or more simply as a discussion topic on `the community forum <https://community.opendronemap.org/>`_.
 Try to start by searching these sources to see if someone else has already brought it up.  Sometimes a feature is already in
 the works, or has at least been discussed.

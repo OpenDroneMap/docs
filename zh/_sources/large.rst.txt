@@ -7,7 +7,6 @@ Starting with ODM version ``0.6.0`` you can split up very large datasets into ma
 
 Why might you use the split-merge pipeline? If you have a very large number of images in your dataset, split-merge will help make the processing more manageable on a large machine (it will require less memory). If you have many machines all connected to the same network you can also process the submodels in parallel, thus allowing for horizontal scaling and processing thousands of images more quickly.
 
-Split-merge works in WebODM out of the box as long as the processing nodes support split-merge, by enabling the ``--split`` option when creating a new task.
 
 Local Split-Merge
 -----------------
