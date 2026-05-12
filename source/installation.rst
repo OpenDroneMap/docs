@@ -10,7 +10,7 @@ Quickstart
 
 Installers for OpenDroneMap are available for purchase, and are the easiest way to get started and come with support.
 
-https://opendronemap.org/webodm/download/#installer
+https://opendronemap.org/download/
 
 That said, OpenDroneMap is a free and open source ecoystem. Community support is available for those looking to install themselves and directions follow:
 
@@ -362,7 +362,7 @@ Commands to type:
 Step 2. Check Additional Requirements
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
-In addition to the three programs above, the dockercompose script is also needed. Sometimes it’s already installed with docker, but sometimes it isn’t. To verify if it’s installed try to type:
+In addition to the three programs above, the docker compose script is also needed. Sometimes it’s already installed with docker, but sometimes it isn’t. To verify if it’s installed try to type:
 
 .. code:: bash
 
@@ -375,8 +375,8 @@ You should see somethings similar to the following:
 	docker compose version 24.0.5, build ced0996600
 	
 
-Step 3a. Download and Launch WebODM
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Step 3a. Download and Launch WebODM with webodm.sh call of docker compose
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 From a terminal type:
 
@@ -388,8 +388,8 @@ From a terminal type:
 	
 Then open a web browser to http://localhost:8000.
 
-Step 3b. Start Docker Compose stack
-^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+Step 3b. Alternatively, start via docker compose without webodm.sh
+^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 
 copy the following 3 files into a newly created folder:
 
