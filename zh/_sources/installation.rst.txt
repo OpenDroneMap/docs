@@ -10,7 +10,7 @@ Quickstart
 
 Installers for OpenDroneMap are available for purchase, and are the easiest way to get started and come with support.
 
-https://opendronemap.org/webodm/download/#installer
+https://opendronemap.org/download/
 
 That said, OpenDroneMap is a free and open source ecoystem. Community support is available for those looking to install themselves and directions follow:
 
