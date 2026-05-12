@@ -17,10 +17,9 @@ Creating High Quality Orthophotos
 Without any parameter tweaks, ODM chooses a good compromise between quality, speed and memory usage. If you want to get higher quality results, you need to tweak some parameters:
 
  * ``--orthophoto-resolution`` is the resolution of the orthophoto in cm/pixel. Decrease this value for a higher resolution result.
- * ``--texturing-data-term`` should be set to `area` in forest areas.
  * ``--mesh-size`` should be increased to ``300000-600000`` and ``--mesh-octree-depth`` should be increased to ``10-11`` in urban areas to recreate better buildings / roofs.
 
-********************************* 
+*********************************
 Creating Digital Elevation Models
 *********************************
 
@@ -525,32 +524,37 @@ Using Podman
 ************
 As an alternative to Docker, one may choose to run WebODM using `Podman <https://podman.io>`. To do so, simply install your distribution's podman package as well as its compatibility layer for docker. For example, on Alpine Linux:
 ::
-   $ apk add podman podman-docker
+
+   apk add podman podman-docker
 
 The Podman command line bears strong resemblance to the Docker one, so referring to the past section and replacing every ``docker`` command invocation with ``podman`` is likely sufficient to teach its basic use.
-   
+
 Migrating from Docker to Podman
 ===============================
 Unfortunately, given the number of options ``webodm.sh`` provides for deployment, migrating between the two may require some manual work before switching platforms. If WebODM's information was stored in directories using the ``--media-dir`` and ``--db-dir`` flags, then the data within those needs to be owned by the user running the Podman containers. If running rootlessly, be sure to set this to your current user. You should be safe to recursively chown the whole git repository as such if your ``media-dir`` and ``db-dir`` lives within it:
 ::
+
    sudo chown -R $(whoami) WebODM
 
 If ``webodm.sh`` was used without flags, then a different intervention is necessary to migrate their data.
 ::
-   $ docker volume export webodm-dbdata > webodm-dbdata.tar
-   $ docker volume export webodm-appmedia > webodm-appmedia.tar
+
+   docker volume export webodm-dbdata > webodm-dbdata.tar
+   docker volume export webodm-appmedia > webodm-appmedia.tar
 
 Regardless of data location, you'll now need to uninstall Docker completely from your system according to your operating system's documentation. Note that, by default, the ``webodm.sh`` script may have taken the liberty of installing docker-compose for you. To clean that up, run the following:
 ::
-   $ rm ~/.docker/cni-plugins-docker-compose
+
+   rm ~/.docker/cni-plugins-docker-compose
 
 Now, install Podman according to your operating system's documentation. If you needed to export the media and db dirs from Docker before, you may now use it to import the volumes.
 ::
-   $ podman volume import webodm-dbdata webodm-dbdata.tar
-   $ podman volume import webodm-appmedia webodm-appmedia.tar
+
+   podman volume import webodm-dbdata webodm-dbdata.tar
+   podman volume import webodm-appmedia webodm-appmedia.tar
 
 It is recommended that you log out and log back in to your system at this point to ensure all environment variables are properly sourced.
-   
+
 Running ``webodm.sh`` now should result in user data persisting between the switch.
 
 For versions of podman-compose < 1.5.0
@@ -560,24 +564,28 @@ podman-compose versions lower than 1.5.0 lack support for environment variables 
 
 If you choose to use Docker Compose instead of podman-compose, you might need to configure a few extra environment variables to tell WebODM where to send its Docker API requests to. The following environment configuration resulted in WebODM successfully spawning in Alpine Linux 3.22, though it should be fairly agnostic across distros.
 ::
-   $ export WEBODM_PODMAN_SOCKET=$(podman info --format '{{.Host.RemoteSocket.Path}}')
-   $ mkdir -p $(dirname WEBODM_PODMAN_SOCKET)
-   $ export DOCKER_HOST=unix://$WEBODM_PODMAN_SOCKET
+
+   export WEBODM_PODMAN_SOCKET=$(podman info --format '{{.Host.RemoteSocket.Path}}')
+   mkdir -p $(dirname WEBODM_PODMAN_SOCKET)
+   export DOCKER_HOST=unix://$WEBODM_PODMAN_SOCKET
+
 Finally, start WebODM as such:
 ::
-   $ podman system service --time=0 unix://$WEBODM_PODMAN_SOCKET & ./webodm.sh start
+
+   podman system service --time=0 unix://$WEBODM_PODMAN_SOCKET & ./webodm.sh start
 
 Configuring Podman to run Rootlessly
 ====================================
 A major benefit of using Podman instead of Docker is due to its ability to run rootlessly. Your specific operating system may or may not configure this for you manually, but generic instructions on doing so can be found `in Podman's official documentation <https://docs.podman.io/en/latest/markdown/podman.1.html#rootless-mode>`_. To surmise, executing the following commands is likely what you'll need to do:
 ::
-   $ sudo usermod --add-subuids 10000-75535 $(whoami)
-   $ sudo usermod --add-subgids 10000-75535 $(whoami)
+
+   sudo usermod --add-subuids 10000-75535 $(whoami)
+   sudo usermod --add-subgids 10000-75535 $(whoami)
 
 
 MacOS
 =====
-In theory, `installing <https://podman-desktop.io/docs/installation/macos-install>`_ and running Podman Desktop from the official website should be all you need to use the ``webodm.sh`` script. Install and configure it for both `Docker compatibility <https://podman-desktop.io/docs/migrating-from-docker/customizing-docker-compatibility#enable-docker-compatibility>`_ and `Compose functionality <https://podman-desktop.io/docs/compose/setting-up-compose>`_. 
+In theory, `installing <https://podman-desktop.io/docs/installation/macos-install>`_ and running Podman Desktop from the official website should be all you need to use the ``webodm.sh`` script. Install and configure it for both `Docker compatibility <https://podman-desktop.io/docs/migrating-from-docker/customizing-docker-compatibility#enable-docker-compatibility>`_ and `Compose functionality <https://podman-desktop.io/docs/compose/setting-up-compose>`_.
 
 *************************************
 Using ODM from low-bandwidth location
@@ -780,7 +788,7 @@ Resize droplet, pull pin, run away
 
 ::
 
-   nohup python run.py myproject --split 1 --split-overlap 0 --depthmap-resolution 1000 --orthophoto-resolution 5 --dem-resolution 15 --pc-las --dsm
+   nohup python run.py myproject --split 1 --split-overlap 0 --orthophoto-resolution 5 --dem-resolution 15 --pc-las --dsm
 
 -  This points ODM at the folder (in this example)
    ``/mnt/odmdata/myproject/``. Provided the image_groups.txt and
@@ -888,7 +896,7 @@ Using Image Masks
 
 Starting from ODM ``2.0`` people can supply image masks to inform the software to skip reconstruction over certain areas. This is useful for cases where the sky was accidentally included in the input photos from oblique shots, or simply to limit the reconstruction of a single subject.
 
-To add a mask, simply create a new black and white image of the same dimension as the target image you want to mask (you can use a program such as GIMP to do this). Color in black the areas to exclude from the reconstruction. 
+To add a mask, simply create a new black and white image of the same dimension as the target image you want to mask (you can use a program such as GIMP to do this). Color in black the areas to exclude from the reconstruction.
 
 .. figure:: images/target_image.webp
    :alt: Target image
@@ -912,8 +920,8 @@ For example, ``DJI_0018.JPG`` can have a mask by creating a ``DJI_0018_mask.JPG`
 Using Singularity
 =================
 
-`Singularity <https://sylabs.io/>`__ is another container platform able to run Docker images. 
-Singularity can be run both on local machins and in instances where the user does not have root access. 
+`Singularity <https://sylabs.io/>`__ is another container platform able to run Docker images.
+Singularity can be run both on local machins and in instances where the user does not have root access.
 Instances where a user may not have root privlidges include HPC clusters and cloud cluster resources.
 A container is a single file without anything else to install.
 
@@ -931,14 +939,14 @@ For latest ODM Docker image (Recommended) :
 For latest ODM GPU Docker image :
 
 .. code:: bash
-   
+
    singularity build --disable-cache -f odm_gpu.sif docker://opendronemap/odm:gpu
 
 Using Singularity SIF image
 ---------------------------
 
 
-Once you have used one of the above commands to download and create the `odm_latest.sif` image, it can be ran using singularity. 
+Once you have used one of the above commands to download and create the `odm_latest.sif` image, it can be ran using singularity.
 Place your images in a directory named “images” (for example /my/project/images) , then simply run :
 
 .. code:: bash
@@ -1056,7 +1064,7 @@ After that, do tunneling for port 3000 of the HPC to your local machine:
 
 ::
 
-ssh -L localhost:3000:localhost:3000 user@hostname
+   ssh -L localhost:3000:localhost:3000 user@hostname
 
 Port 3000 is ClusterODM's proxy. This is the place we assign tasks to ClusterODM. Once again, connect to `http://localhost:3000` with your browser after tunneling. Here, you can Assign Tasks and observe the tasks' processes.
 

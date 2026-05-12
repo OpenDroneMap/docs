@@ -9,6 +9,7 @@
   <title>version &mdash; OpenDroneMap 3.6.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../../_static/copybutton.css?v=76b2166b" />
 
   
     <link rel="shortcut icon" href="../../_static/favicon.ico"/>
@@ -17,12 +18,14 @@
       <script src="../../_static/documentation_options.js?v=27df7ab8"></script>
       <script src="../../_static/doctools.js?v=9a2dae69"></script>
       <script src="../../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../../_static/copybutton.js?v=f281be69"></script>
       <script src="../../_static/translations.js?v=c8bef9c8"></script>
     <script src="../../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../../genindex/" />
     <link rel="search" title="Search" href="../../search/" />
     <link rel="next" title="video-limit" href="../video-limit/" />
-    <link rel="prev" title="verbose" href="../verbose/" /> 
+    <link rel="prev" title="use-hybrid-bundle-adjustment" href="../use-hybrid-bundle-adjustment/" /> 
 </head>
 
 <body class="wy-body-for-nav"> 
@@ -235,12 +238,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../copy-to/">copy-to</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../crop/">crop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../debug/">debug</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dem-decimation/">dem-decimation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dem-euclidean-map/">dem-euclidean-map</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dem-gapfill-steps/">dem-gapfill-steps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dem-resolution/">dem-resolution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../depthmap-resolution/">depthmap-resolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dsm/">dsm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../dtm/">dtm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../end-with/">end-with</a></li>
@@ -278,20 +279,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../pc-csv/">pc-csv</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pc-ept/">pc-ept</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pc-filter/">pc-filter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../pc-geometric/">pc-geometric</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pc-las/">pc-las</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pc-quality/">pc-quality</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pc-rectify/">pc-rectify</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pc-sample/">pc-sample</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../pc-skip-geometric/">pc-skip-geometric</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../pc-tile/">pc-tile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../primary-band/">primary-band</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../project-path/">project-path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../radiometric-calibration/">radiometric-calibration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../rerun/">rerun</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../rerun-all/">rerun-all</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../rerun-from/">rerun-from</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../resize-to/">resize-to</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../rolling-shutter/">rolling-shutter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../rolling-shutter-readout/">rolling-shutter-readout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../sfm-algorithm/">sfm-algorithm</a></li>
@@ -310,20 +308,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../split/">split</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../split-image-groups/">split-image-groups</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../split-overlap/">split-overlap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../texturing-data-term/">texturing-data-term</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../texturing-keep-unseen-faces/">texturing-keep-unseen-faces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../texturing-outlier-removal-type/">texturing-outlier-removal-type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../texturing-single-material/">texturing-single-material</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../texturing-skip-global-seam-leveling/">texturing-skip-global-seam-leveling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../texturing-skip-local-seam-leveling/">texturing-skip-local-seam-leveling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../texturing-tone-mapping/">texturing-tone-mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../tiles/">tiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../time/">time</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../use-3dmesh/">use-3dmesh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../use-exif/">use-exif</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../use-fixed-camera-params/">use-fixed-camera-params</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../use-hybrid-bundle-adjustment/">use-hybrid-bundle-adjustment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../verbose/">verbose</a></li>
 <li class="toctree-l2 current"><a class="current reference internal" href="#">version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../video-limit/">video-limit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../video-resolution/">video-resolution</a></li>
@@ -473,7 +465,7 @@
            </div>
           </div>
           <footer><div class="rst-footer-buttons" role="navigation" aria-label="Footer">
-        <a href="../verbose/" class="btn btn-neutral float-left" title="verbose" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
+        <a href="../use-hybrid-bundle-adjustment/" class="btn btn-neutral float-left" title="use-hybrid-bundle-adjustment" accesskey="p" rel="prev"><span class="fa fa-arrow-circle-left" aria-hidden="true"></span> Previous</a>
         <a href="../video-limit/" class="btn btn-neutral float-right" title="video-limit" accesskey="n" rel="next">Next <span class="fa fa-arrow-circle-right" aria-hidden="true"></span></a>
     </div>
 

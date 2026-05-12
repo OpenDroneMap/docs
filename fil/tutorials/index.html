@@ -9,6 +9,7 @@
   <title>Mga Tutoryal &mdash; OpenDroneMap 3.6.0 documentation</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -17,6 +18,8 @@
       <script src="../_static/documentation_options.js?v=306d93b2"></script>
       <script src="../_static/doctools.js?v=9a2dae69"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Index" href="../genindex/" />
     <link rel="search" title="Search" href="../search/" />
@@ -234,12 +237,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/copy-to/">copy-to</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/crop/">crop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/debug/">debug</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/dem-decimation/">dem-decimation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/dem-euclidean-map/">dem-euclidean-map</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/dem-gapfill-steps/">dem-gapfill-steps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/dem-resolution/">dem-resolution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/depthmap-resolution/">depthmap-resolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/dsm/">dsm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/dtm/">dtm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/end-with/">end-with</a></li>
@@ -277,20 +278,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-csv/">pc-csv</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-ept/">pc-ept</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-filter/">pc-filter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-geometric/">pc-geometric</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-las/">pc-las</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-quality/">pc-quality</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-rectify/">pc-rectify</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-sample/">pc-sample</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-skip-geometric/">pc-skip-geometric</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-tile/">pc-tile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/primary-band/">primary-band</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/project-path/">project-path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/radiometric-calibration/">radiometric-calibration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/rerun/">rerun</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/rerun-all/">rerun-all</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/rerun-from/">rerun-from</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/resize-to/">resize-to</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/rolling-shutter/">rolling-shutter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/rolling-shutter-readout/">rolling-shutter-readout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/sfm-algorithm/">sfm-algorithm</a></li>
@@ -309,20 +307,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../arguments/split/">split</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/split-image-groups/">split-image-groups</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/split-overlap/">split-overlap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-data-term/">texturing-data-term</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-keep-unseen-faces/">texturing-keep-unseen-faces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-outlier-removal-type/">texturing-outlier-removal-type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-single-material/">texturing-single-material</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-global-seam-leveling/">texturing-skip-global-seam-leveling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-local-seam-leveling/">texturing-skip-local-seam-leveling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-tone-mapping/">texturing-tone-mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/tiles/">tiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/time/">time</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/use-3dmesh/">use-3dmesh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/use-exif/">use-exif</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/use-fixed-camera-params/">use-fixed-camera-params</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/use-hybrid-bundle-adjustment/">use-hybrid-bundle-adjustment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/verbose/">verbose</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/version/">version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/video-limit/">video-limit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/video-resolution/">video-resolution</a></li>
@@ -473,7 +465,6 @@
 <blockquote>
 <div><ul class="simple">
 <li><p>&quot;orthophoto resolution&quot; ay ang resolusyon ng orthophoto sa cm / pixel. Bawasan ang halagang ito para sa isang mas mataas na resulta ng resolusyon.</p></li>
-<li><p>&quot;--texturing-data-term&quot; ay dapat itakda sa 'area' sa mga lugar na kagubatan.</p></li>
 <li><p><code class="docutils literal notranslate"><span class="pre">--mesh-size</span></code> ay dapat itaas sa <code class="docutils literal notranslate"><span class="pre">300000-6000</span></code> at <code class="docutils literal notranslate"><span class="pre">--mesh-octree-depth</span></code> ay dapat itaas ng <code class="docutils literal notranslate"><span class="pre">10-11</span></code> sa urban areas para maka-create ng magandang building / bubong.</p></li>
 </ul>
 </div></blockquote>
@@ -835,7 +826,7 @@ The resulting accuracy is comparable to the commercially available photogrammetr
 <section id="using-podman">
 <h2>Using Podman<a class="headerlink" href="#using-podman" title="Link to this heading"></a></h2>
 <p>As an alternative to Docker, one may choose to run WebODM using <cite>Podman &lt;https://podman.io&gt;</cite>. To do so, simply install your distribution's podman package as well as its compatibility layer for docker. For example, on Alpine Linux:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ apk add podman podman-docker
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">apk</span> <span class="n">add</span> <span class="n">podman</span> <span class="n">podman</span><span class="o">-</span><span class="n">docker</span>
 </pre></div>
 </div>
 <p>The Podman command line bears strong resemblance to the Docker one, so referring to the past section and replacing every <code class="docutils literal notranslate"><span class="pre">docker</span></code> command invocation with <code class="docutils literal notranslate"><span class="pre">podman</span></code> is likely sufficient to teach its basic use.</p>
@@ -846,17 +837,17 @@ The resulting accuracy is comparable to the commercially available photogrammetr
 </pre></div>
 </div>
 <p>If <code class="docutils literal notranslate"><span class="pre">webodm.sh</span></code> was used without flags, then a different intervention is necessary to migrate their data.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ docker volume export webodm-dbdata &gt; webodm-dbdata.tar
-$ docker volume export webodm-appmedia &gt; webodm-appmedia.tar
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">docker</span> <span class="n">volume</span> <span class="n">export</span> <span class="n">webodm</span><span class="o">-</span><span class="n">dbdata</span> <span class="o">&gt;</span> <span class="n">webodm</span><span class="o">-</span><span class="n">dbdata</span><span class="o">.</span><span class="n">tar</span>
+<span class="n">docker</span> <span class="n">volume</span> <span class="n">export</span> <span class="n">webodm</span><span class="o">-</span><span class="n">appmedia</span> <span class="o">&gt;</span> <span class="n">webodm</span><span class="o">-</span><span class="n">appmedia</span><span class="o">.</span><span class="n">tar</span>
 </pre></div>
 </div>
 <p>Regardless of data location, you'll now need to uninstall Docker completely from your system according to your operating system's documentation. Note that, by default, the <code class="docutils literal notranslate"><span class="pre">webodm.sh</span></code> script may have taken the liberty of installing docker-compose for you. To clean that up, run the following:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ rm ~/.docker/cni-plugins-docker-compose
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">rm</span> <span class="o">~/.</span><span class="n">docker</span><span class="o">/</span><span class="n">cni</span><span class="o">-</span><span class="n">plugins</span><span class="o">-</span><span class="n">docker</span><span class="o">-</span><span class="n">compose</span>
 </pre></div>
 </div>
 <p>Now, install Podman according to your operating system's documentation. If you needed to export the media and db dirs from Docker before, you may now use it to import the volumes.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ podman volume import webodm-dbdata webodm-dbdata.tar
-$ podman volume import webodm-appmedia webodm-appmedia.tar
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">podman</span> <span class="n">volume</span> <span class="kn">import</span><span class="w"> </span><span class="nn">webodm</span><span class="o">-</span><span class="n">dbdata</span> <span class="n">webodm</span><span class="o">-</span><span class="n">dbdata</span><span class="o">.</span><span class="n">tar</span>
+<span class="n">podman</span> <span class="n">volume</span> <span class="kn">import</span><span class="w"> </span><span class="nn">webodm</span><span class="o">-</span><span class="n">appmedia</span> <span class="n">webodm</span><span class="o">-</span><span class="n">appmedia</span><span class="o">.</span><span class="n">tar</span>
 </pre></div>
 </div>
 <p>It is recommended that you log out and log back in to your system at this point to ensure all environment variables are properly sourced.</p>
@@ -866,21 +857,21 @@ $ podman volume import webodm-appmedia webodm-appmedia.tar
 <h3>For versions of podman-compose &lt; 1.5.0<a class="headerlink" href="#for-versions-of-podman-compose-1-5-0" title="Link to this heading"></a></h3>
 <p>podman-compose versions lower than 1.5.0 lack support for environment variables in docker-compose files. If your distribution does not provide an up to date version in its repositories, you can choose to either provide your own up-to-date binary or use the <a class="reference external" href="https://docs.docker.com/compose/install/linux/#install-the-plugin-manually">Docker Compose</a> with podman itself. In either case, you'll need to update the compose_providers line of the <code class="docutils literal notranslate"><span class="pre">/etc/containers/containers.conf</span></code> file.</p>
 <p>If you choose to use Docker Compose instead of podman-compose, you might need to configure a few extra environment variables to tell WebODM where to send its Docker API requests to. The following environment configuration resulted in WebODM successfully spawning in Alpine Linux 3.22, though it should be fairly agnostic across distros.</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ export WEBODM_PODMAN_SOCKET=$(podman info --format &#39;{{.Host.RemoteSocket.Path}}&#39;)
-$ mkdir -p $(dirname WEBODM_PODMAN_SOCKET)
-$ export DOCKER_HOST=unix://$WEBODM_PODMAN_SOCKET
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>export WEBODM_PODMAN_SOCKET=$(podman info --format &#39;{{.Host.RemoteSocket.Path}}&#39;)
+mkdir -p $(dirname WEBODM_PODMAN_SOCKET)
+export DOCKER_HOST=unix://$WEBODM_PODMAN_SOCKET
 </pre></div>
 </div>
 <p>Finally, start WebODM as such:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ podman system service --time=0 unix://$WEBODM_PODMAN_SOCKET &amp; ./webodm.sh start
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>podman system service --time=0 unix://$WEBODM_PODMAN_SOCKET &amp; ./webodm.sh start
 </pre></div>
 </div>
 </section>
 <section id="configuring-podman-to-run-rootlessly">
 <h3>Configuring Podman to run Rootlessly<a class="headerlink" href="#configuring-podman-to-run-rootlessly" title="Link to this heading"></a></h3>
 <p>A major benefit of using Podman instead of Docker is due to its ability to run rootlessly. Your specific operating system may or may not configure this for you manually, but generic instructions on doing so can be found <a class="reference external" href="https://docs.podman.io/en/latest/markdown/podman.1.html#rootless-mode">in Podman's official documentation</a>. To surmise, executing the following commands is likely what you'll need to do:</p>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>$ sudo usermod --add-subuids 10000-75535 $(whoami)
-$ sudo usermod --add-subgids 10000-75535 $(whoami)
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span>sudo usermod --add-subuids 10000-75535 $(whoami)
+sudo usermod --add-subgids 10000-75535 $(whoami)
 </pre></div>
 </div>
 </section>
@@ -975,7 +966,7 @@ images folder for each project.</p></li>
 </ul>
 </li>
 </ul>
-<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nohup</span> <span class="n">python</span> <span class="n">run</span><span class="o">.</span><span class="n">py</span> <span class="n">myproject</span> <span class="o">--</span><span class="n">split</span> <span class="mi">1</span> <span class="o">--</span><span class="n">split</span><span class="o">-</span><span class="n">overlap</span> <span class="mi">0</span> <span class="o">--</span><span class="n">depthmap</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">1000</span> <span class="o">--</span><span class="n">orthophoto</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">5</span> <span class="o">--</span><span class="n">dem</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">15</span> <span class="o">--</span><span class="n">pc</span><span class="o">-</span><span class="n">las</span> <span class="o">--</span><span class="n">dsm</span>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">nohup</span> <span class="n">python</span> <span class="n">run</span><span class="o">.</span><span class="n">py</span> <span class="n">myproject</span> <span class="o">--</span><span class="n">split</span> <span class="mi">1</span> <span class="o">--</span><span class="n">split</span><span class="o">-</span><span class="n">overlap</span> <span class="mi">0</span> <span class="o">--</span><span class="n">orthophoto</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">5</span> <span class="o">--</span><span class="n">dem</span><span class="o">-</span><span class="n">resolution</span> <span class="mi">15</span> <span class="o">--</span><span class="n">pc</span><span class="o">-</span><span class="n">las</span> <span class="o">--</span><span class="n">dsm</span>
 </pre></div>
 </div>
 <ul class="simple">
@@ -1159,7 +1150,9 @@ Place your images in a directory named “images” (for example /my/project/ima
 </figure>
 <p>Here you can check the NodeODMs status and even add or delete working nodes.</p>
 <p>After that, do tunneling for port 3000 of the HPC to your local machine:</p>
-<p>ssh -L localhost:3000:localhost:3000 user&#64;hostname</p>
+<div class="highlight-default notranslate"><div class="highlight"><pre><span></span><span class="n">ssh</span> <span class="o">-</span><span class="n">L</span> <span class="n">localhost</span><span class="p">:</span><span class="mi">3000</span><span class="p">:</span><span class="n">localhost</span><span class="p">:</span><span class="mi">3000</span> <span class="n">user</span><span class="nd">@hostname</span>
+</pre></div>
+</div>
 <p>Port 3000 is ClusterODM's proxy. This is the place we assign tasks to ClusterODM. Once again, connect to <cite>http://localhost:3000</cite> with your browser after tunneling. Here, you can Assign Tasks and observe the tasks' processes.</p>
 <figure class="align-center">
 <img alt="Screenshot of ClusterODM's jobs interface" src="https://user-images.githubusercontent.com/70782465/214938234-113f99dc-f69e-4e78-a782-deaf94e986b0.webp" />

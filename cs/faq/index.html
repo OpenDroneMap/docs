@@ -9,6 +9,7 @@
   <title>Frequently Asked Questions and Additional Resources &mdash; Dokumentace pro OpenDroneMap 3.6.0</title>
       <link rel="stylesheet" type="text/css" href="../_static/pygments.css?v=03e43079" />
       <link rel="stylesheet" type="text/css" href="../_static/css/theme.css?v=9edc463e" />
+      <link rel="stylesheet" type="text/css" href="../_static/copybutton.css?v=76b2166b" />
 
   
     <link rel="shortcut icon" href="../_static/favicon.ico"/>
@@ -17,6 +18,8 @@
       <script src="../_static/documentation_options.js?v=1e41f4fd"></script>
       <script src="../_static/doctools.js?v=9a2dae69"></script>
       <script src="../_static/sphinx_highlight.js?v=dc90522c"></script>
+      <script src="../_static/clipboard.min.js?v=a7894cd8"></script>
+      <script src="../_static/copybutton.js?v=f281be69"></script>
       <script src="../_static/translations.js?v=0f3dec7d"></script>
     <script src="../_static/js/theme.js"></script>
     <link rel="index" title="Rejstřík" href="../genindex/" />
@@ -176,19 +179,19 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary-distance/">auto-boundary-distance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/bg-removal/">bg-removal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">hranice</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#what-is-boundary-geojson">Co je to Hranice [GeoJSON]?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#when-is-boundary-geojson-appropriate">Kdy je vhodné použít Hranice [GeoJSON]?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#why-would-one-use-boundary-geojson">Proč by měl někdo použít Hranice [GeoJSON]?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#how-would-one-create-boundary-geojson">Jak se vytváří Hranice [GeoJSON]?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">boundary</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#what-is-boundary-geojson">What is Boundary [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#when-is-boundary-geojson-appropriate">When is Boundary [GeoJSON] appropriate?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#why-would-one-use-boundary-geojson">Why would one use Boundary [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#how-would-one-create-boundary-geojson">How would one create Boundary [GeoJSON]?</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#geojson-io">GeoJSON.io</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#qgis">QGIS</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#example-images">Ukázkové obrázky</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#example-images">Example Images</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-point-cloud">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Point Cloud</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-orthophoto">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Orthophoto</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-digital-elevation-model">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Digitální model reliéfu</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-digital-elevation-model">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Digital Elevation Model</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-3d-model-textured-mesh">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - 3D Model/Textured Mesh</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
 </ul>
@@ -234,12 +237,10 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/copy-to/">copy-to</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/crop/">crop</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/debug/">debug</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/dem-decimation/">dem-decimation</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/dem-euclidean-map/">dem-euclidean-map</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/dem-gapfill-steps/">dem-gapfill-steps</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/dem-resolution/">dem-resolution</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/depthmap-resolution/">depthmap-resolution</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/dsm/">dsm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/dtm/">dtm</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/end-with/">end-with</a></li>
@@ -277,20 +278,17 @@
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-csv/">pc-csv</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-ept/">pc-ept</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-filter/">pc-filter</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-geometric/">pc-geometric</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-las/">pc-las</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-quality/">pc-quality</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-rectify/">pc-rectify</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-sample/">pc-sample</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/pc-skip-geometric/">pc-skip-geometric</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/pc-tile/">pc-tile</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/primary-band/">primary-band</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/project-path/">project-path</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/radiometric-calibration/">radiometric-calibration</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/rerun/">rerun</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/rerun-all/">rerun-all</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/rerun-from/">rerun-from</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/resize-to/">resize-to</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/rolling-shutter/">rolling-shutter</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/rolling-shutter-readout/">rolling-shutter-readout</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/sfm-algorithm/">sfm-algorithm</a></li>
@@ -309,20 +307,14 @@
 <li class="toctree-l2"><a class="reference internal" href="../arguments/split/">split</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/split-image-groups/">split-image-groups</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/split-overlap/">split-overlap</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-data-term/">texturing-data-term</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-keep-unseen-faces/">texturing-keep-unseen-faces</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-outlier-removal-type/">texturing-outlier-removal-type</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-single-material/">texturing-single-material</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-global-seam-leveling/">texturing-skip-global-seam-leveling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-skip-local-seam-leveling/">texturing-skip-local-seam-leveling</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/texturing-tone-mapping/">texturing-tone-mapping</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/tiles/">tiles</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/time/">time</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/use-3dmesh/">use-3dmesh</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/use-exif/">use-exif</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/use-fixed-camera-params/">use-fixed-camera-params</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/use-hybrid-bundle-adjustment/">use-hybrid-bundle-adjustment</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/verbose/">verbose</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/version/">version</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/video-limit/">video-limit</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/video-resolution/">video-resolution</a></li>
