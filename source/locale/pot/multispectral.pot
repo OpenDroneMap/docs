@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.7.0\n"
+"Project-Id-Version: OpenDroneMap 3.6.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-28 10:32-0500\n"
+"POT-Creation-Date: 2026-02-18 11:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,42 +16,136 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../multispectral.rst:2
+#: ../../multispectral.rst:3
+msgid "Multispectral and Thermal"
+msgstr ""
+
+#: ../../multispectral.rst:6
 msgid "Multispectral Support"
 msgstr ""
 
-#: ../../multispectral.rst:4
+#: ../../multispectral.rst:8
 msgid "Since version 0.9.9 ODM has basic support for radiometric normalization, which is able to generate reflectance orthophotos from multispectral cameras. Multispectral cameras capture multiple shots of the scene using different band sensors."
 msgstr ""
 
-#: ../../multispectral.rst:7
-msgid "Hardware"
-msgstr ""
-
-#: ../../multispectral.rst:9
-msgid "While we aim to support as many cameras as possible, multispectral support has been developed using the following cameras, so they will work better:"
-msgstr ""
-
-#: ../../multispectral.rst:11
-msgid "`MicaSense RedEdge-MX and Altum <https://www.micasense.com/>`_"
-msgstr ""
-
 #: ../../multispectral.rst:12
-msgid "`Sentera 6X <https://sentera.com/6x/>`_"
+msgid "Supported Sensors"
 msgstr ""
 
 #: ../../multispectral.rst:14
-msgid "Other cameras might also work. You can help us expand this list by `sharing datasets <https://community.opendronemap.org/c/datasets/10>`_ captured with other cameras."
+msgid "While we aim to support as many cameras as possible, multispectral support has been developed using the following cameras, so they will work better:"
+msgstr ""
+
+#: ../../multispectral.rst:16
+msgid "`MicaSense RedEdge-MX and Altum <https://www.micasense.com/>`_"
 msgstr ""
 
 #: ../../multispectral.rst:17
-msgid "Usage"
+msgid "`Sentera 6X <https://sentera.com/products/fieldcapture/sensors/6x/>`_ (as of ODM version 1.0.1)"
+msgstr ""
+
+#: ../../multispectral.rst:18
+msgid "`DJI Phantom 4 Multispectral <https://www.dji.com/p4-multispectral>`_ (as of ODM version 2.8.8)"
 msgstr ""
 
 #: ../../multispectral.rst:19
-msgid "Process all the images from all bands at once (do not separate the bands into multiple folders) and pass the `--radiometric-calibration` parameter to enable radiometric normalization. If the images are part of a multi-camera setup, the resulting orthophoto will have N bands, one for each camera (+ alpha)."
+msgid "`DJI Mavic 3 Multispectral <https://ag.dji.com/mavic-3-m>`_ (as of ODM version 3.5.3)"
 msgstr ""
 
-#: ../../multispectral.rst:22
+#: ../../multispectral.rst:21
+#: ../../multispectral.rst:79
+msgid "Other cameras might also work. You can help us expand this list by `sharing datasets <https://community.opendronemap.org/c/datasets/10>`_ captured with other cameras."
+msgstr ""
+
+#: ../../multispectral.rst:24
+msgid "Creating Orthophotos from Multispectral Data"
+msgstr ""
+
+#: ../../multispectral.rst:26
+msgid "For supported sensors listed above (and likley other sensors), users can process multipsectral data in the same manner as visible light images. Images from all sensor bands should be processed at once (do not separate the bands into multiple folders). Users have the option to pass the ``--radiometric-calibration`` parameter with options ``camera`` or ``camera+sun`` to enable radiometric normalization. If the images are part of a multi-camera setup, the resulting orthophoto will have N bands, one for each camera (+ alpha)."
+msgstr ""
+
+#: ../../multispectral.rst:28
+msgid "NDVI and other vegetation indices can be calculated from these stitched orthophotos using software such as `qGIS <https://www.qgis.org/>`_"
+msgstr ""
+
+#: ../../multispectral.rst:30
+#: ../../multispectral.rst:87
 msgid "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/multispectral.rst>`_!"
+msgstr ""
+
+#: ../../multispectral.rst:33
+msgid "Workflows for Non-supported Sensors"
+msgstr ""
+
+#: ../../multispectral.rst:35
+msgid "**Sentera AGX710:**"
+msgstr ""
+
+#: ../../multispectral.rst:38
+msgid "While the Sentera AGX710 is not officially supported by ODM, the following workflow gives some good results."
+msgstr ""
+
+#: ../../multispectral.rst:40
+msgid "all JPGs from the NDRE directory should be renamed with the exact following pattern 0000X_NIR.jpg. No extra '_' should be present in the file names ie 10_51_14_IMG_00008.jpg => 00008_NIR.jpg"
+msgstr ""
+
+#: ../../multispectral.rst:41
+msgid "all JPGs from the nRGB directory should be renamed with the exact following pattern 0000X_RGB.jpg. No extra '_' should be present in the file names ie 10_51_14_IMG_00023.jpg => 00023_RGB.jpg"
+msgstr ""
+
+#: ../../multispectral.rst:42
+msgid "All renamed XXXX_NIR.jpg and XXXX_RGB.jpg should be placed in the same folder"
+msgstr ""
+
+#: ../../multispectral.rst:43
+msgid "The following command could be used to create an odm_orthophoto.tif file"
+msgstr ""
+
+#: ../../multispectral.rst:53
+msgid "After the successful ODM processing, odm_orthophoto.tif bands names could be accurately renamed using contrib/ndvi/rename_sentera_agx710_multispectral_tif.py script"
+msgstr ""
+
+#: ../../multispectral.rst:59
+msgid "output_dir/odm_orthophoto.tif could be open with `QGIS <https://qgis.org/>`_ with correct band names"
+msgstr ""
+
+#: ../../multispectral.rst:62
+msgid "Thermal Support"
+msgstr ""
+
+#: ../../multispectral.rst:64
+msgid "ODM has support for radiometric calibration of thermal data, which is able to generate temperature orthophotos from long-wave infrared (LWIR) cameras. LWIR images can be processed alone or as part of a multispectral dataset."
+msgstr ""
+
+#: ../../multispectral.rst:-1
+msgid "Screen shot of thermal imagery as displayed in WebODM"
+msgstr ""
+
+#: ../../multispectral.rst:71
+msgid "Hardware"
+msgstr ""
+
+#: ../../multispectral.rst:73
+msgid "While we aim to support as many cameras as possible, thermal support has been developed using the following cameras, so they will work better:"
+msgstr ""
+
+#: ../../multispectral.rst:75
+msgid "`MicaSense Altum <https://www.micasense.com/>`_"
+msgstr ""
+
+#: ../../multispectral.rst:76
+msgid "`DJI Zenmuse XT <https://www.dji.com/zenmuse-xt>`_"
+msgstr ""
+
+#: ../../multispectral.rst:77
+msgid "`DJI Zenmuse H20 Series <https://enterprise.dji.com/zenmuse-h20-series>`_"
+msgstr ""
+
+#: ../../multispectral.rst:82
+msgid "Usage"
+msgstr ""
+
+#: ../../multispectral.rst:84
+msgid "Process the images using the `--radiometric-calibration camera` parameter to enable radiometric calibration."
 msgstr ""

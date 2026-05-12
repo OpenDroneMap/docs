@@ -24,16 +24,15 @@ msgstr ""
 
 #: ../../geo.rst:5
 msgid ""
-"By default ODM will use the GPS information embedded in the images, if it"
-" is available. Sometimes images do not contain GPS information, or a user"
-" wishes to override the information with more accurate data (such as "
-"RTK)."
+"By default ODM will use the GPS information embedded in the images, if it is "
+"available. Sometimes images do not contain GPS information, or a user wishes "
+"to override the information with more accurate data (such as RTK)."
 msgstr ""
 
 #: ../../geo.rst:7
 msgid ""
-"Starting from ODM ``2.0`` people can supply an image geolocation file "
-"(geo) for this purpose."
+"Starting from ODM ``2.0`` people can supply an image geolocation file (geo) "
+"for this purpose."
 msgstr ""
 
 #: ../../geo.rst:9
@@ -42,17 +41,17 @@ msgstr ""
 
 #: ../../geo.rst:11
 msgid ""
-"The first line should contain the name of the projection used for the geo"
-" coordinates. This can be specified either as a PROJ string (e.g. "
-"``+proj=utm +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), EPSG"
-" code (e.g. ``EPSG:4326``) or as a ``WGS84 UTM <zone>[N|S]`` value (eg. "
-"``WGS84 UTM 16N``)"
+"The first line should contain the name of the projection used for the geo "
+"coordinates. This can be specified either as a PROJ string (e.g. ``+proj=utm "
+"+zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), EPSG code (e.g. "
+"``EPSG:4326``) or as a ``WGS84 UTM <zone>[N|S]`` value (eg. ``WGS84 UTM "
+"16N``)"
 msgstr ""
 
 #: ../../geo.rst:12
 msgid ""
-"Subsequent lines are the image filename, X, Y & Z (optional) coordinates,"
-" the camera angles (optional, currently used only for radiometric "
+"Subsequent lines are the image filename, X, Y & Z (optional) coordinates, "
+"the camera angles (optional, currently used only for radiometric "
 "calibration) and the horizontal/vertical accuracy (optional):"
 msgstr ""
 
@@ -74,18 +73,18 @@ msgstr ""
 
 #: ../../geo.rst:30
 msgid ""
-"If you supply a file called ``geo.txt`` then ODM will automatically "
-"detect it. If it has another name you can specify using ``--geo <path>``."
+"If you supply a file called ``geo.txt`` then ODM will automatically detect "
+"it. If it has another name you can specify using ``--geo <path>``."
 msgstr ""
 
 #: ../../geo.rst:32
-msgid "The ``geo.txt`` file must be created in the base of your project folder."
+msgid ""
+"The ``geo.txt`` file must be created in the base of your project folder."
 msgstr ""
 
 #: ../../geo.rst:35
 msgid ""
-"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-"
-"first-contribution>`_ and help improve `this page "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/geo.rst>`_!"
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
+"contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/"
+"docs/blob/publish/source/geo.rst>`_!"
 msgstr ""
-

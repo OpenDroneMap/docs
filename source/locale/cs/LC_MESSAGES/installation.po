@@ -1,25 +1,28 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2020, OpenDroneMap
-# This file is distributed under the same license as the OpenDroneMap package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2020.
+#
 # Translators:
 # trendspotter <jirka.p@volny.cz>, 2023
-# 
 #, fuzzy
 msgid ""
 msgstr ""
 "Project-Id-Version: OpenDroneMap 2.7.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-28 10:32-0500\n"
+"POT-Creation-Date: 2026-02-18 11:05+0100\n"
 "PO-Revision-Date: 2020-07-21 21:10+0000\n"
 "Last-Translator: trendspotter <jirka.p@volny.cz>, 2023\n"
-"Language-Team: Czech (https://www.transifex.com/americanredcross/teams/111882/cs/)\n"
-"MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
-"Content-Transfer-Encoding: 8bit\n"
 "Language: cs\n"
-"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n <= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+"Language-Team: Czech (https://www.transifex.com/americanredcross/teams/"
+"111882/cs/)\n"
+"Plural-Forms: nplurals=4; plural=(n == 1 && n % 1 == 0) ? 0 : (n >= 2 && n "
+"<= 4 && n % 1 == 0) ? 1: (n % 1 != 0 ) ? 2 : 3;\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../installation.rst:4
 msgid "Installation and Getting Started"
@@ -33,131 +36,48 @@ msgstr ""
 "Tato část je převzata a upravena se svolením z `OpenDroneMap: The Missing "
 "Guide <https://odmbook.com>`_, autor Piero Toffanin."
 
-#: ../../installation.rst:8
+#: ../../installation.rst:9
+msgid "Quickstart"
+msgstr ""
+
+#: ../../installation.rst:11
 msgid ""
-"Until recently OpenDroneMap was the term used to refer to a single command "
-"line application (what is now known as the ODM project).  With the recent "
-"development of a web interface, an API and other tools, OpenDroneMap has "
-"become an ecosystem of various applications to process, analyze and display "
-"aerial data. This ecosystem is made of several components:"
+"Installers for OpenDroneMap are available for purchase, and are the easiest "
+"way to get started and come with support."
 msgstr ""
 
-#: ../../installation.rstNone
-msgid "ODM Logo"
+#: ../../installation.rst:13
+msgid "https://opendronemap.org/webodm/download/#installer"
 msgstr ""
 
-#: ../../installation.rst:14
+#: ../../installation.rst:15
 msgid ""
-"**ODM** is the processing engine, which can be used from the command line. "
-"It takes images as input and produces a variety of outputs, including point "
-"clouds, 3D models and orthophotos"
+"That said, OpenDroneMap is a free and open source ecoystem. Community "
+"support is available for those looking to install themselves and directions "
+"follow:"
 msgstr ""
 
-#: ../../installation.rstNone
-msgid "NodeODM Logo"
-msgstr ""
-
-#: ../../installation.rst:20
-msgid ""
-"**NodeODM** is a light-weight API built on top of ODM. It allows users and "
-"applications to access the functions of ODM over a computer network"
-msgstr ""
-
-#: ../../installation.rstNone
-msgid "WebODM Logo"
-msgstr ""
-
-#: ../../installation.rst:26
-msgid ""
-"**WebODM** is a friendly user interface that includes a map viewer, a 3D "
-"viewer, user logins, a plugin system and many other features that are "
-"expected of modern drone mapping platforms"
-msgstr ""
-
-#: ../../installation.rstNone
-msgid "CloudODM Logo"
-msgstr ""
-
-#: ../../installation.rst:32
-msgid ""
-"**CloudODM** is a small command line client to communicate with ODM via the "
-"NodeODM API"
-msgstr ""
-
-#: ../../installation.rstNone
-msgid "PyODM Logo"
-msgstr ""
-
-#: ../../installation.rst:38
-msgid ""
-"**PyODM** is a Python SDK for creating tasks via the NodeODM API. We cover "
-"it in more detail in the “Automated Processing With Python” chapter"
-msgstr ""
-
-#: ../../installation.rstNone
-msgid "ClusterODM Logo"
-msgstr ""
-
-#: ../../installation.rst:44
-msgid ""
-"**ClusterODM** is a load balancer for connecting together multiple NodeODM "
-"instances"
-msgstr ""
-
-#: ../../installation.rst:46
-msgid ""
-"ODM, NodeODM and WebODM are available on all major platforms (Windows, macOS"
-" and Linux) via a program called docker, which is required to run the "
-"software. Docker offers a way to run “containers”. Containers are packaged "
-"copies of an entire system, its software and its dependencies. These "
-"containers run within a virtual environment. On Linux this virtual "
-"environment is available from the operating system and is very efficient. On"
-" macOS and Windows the containers run within a VM, so there’s a bit of a "
-"overhead. but it’s still very suitable for running the software. Once "
-"installed users do not have to worry much about docker, as it operates "
-"(almost) transparently."
-msgstr ""
-
-#: ../../installation.rst:48
-msgid ""
-"Without docker it would not be possible to run ODM on Windows or macOS. On "
-"these platforms ODM cannot run natively. Future development efforts are "
-"being focused on leveraging the new Windows Subsystem for Linux (WSL) and "
-"the possibility to make a native port of all dependencies to macOS, which is"
-" going to make the installation much easier."
-msgstr ""
-
-#: ../../installation.rst:50
-msgid ""
-"On Ubuntu Linux 18.04 it’s feasible to run all OpenDroneMap software "
-"natively. However, because there’s very little performance penalty for "
-"running docker on Linux and docker is straightforward to setup on this "
-"platform, we don’t recommend it. On Linux the advantages of containerization"
-" far outweigh a tiny performance penalty. With docker users also get easy "
-"one-step updates of the software, so that’s nice."
-msgstr ""
-
-#: ../../installation.rst:54
+#: ../../installation.rst:18
 msgid "Hardware Recommendations"
 msgstr "Doporučení k hardwaru"
 
-#: ../../installation.rst:56
+#: ../../installation.rst:20
 msgid "The bare minimum requirements for running the software are:"
 msgstr "Minimální požadavky pro spuštění softwaru jsou:"
 
-#: ../../installation.rst:59
+#: ../../installation.rst:23
 msgid "64bit CPU manufactured on or after 2010"
 msgstr "64bitový procesor vyrobený v roce 2010 nebo později"
 
-#: ../../installation.rst:60
+#: ../../installation.rst:24
 msgid "20 GB of disk space"
 msgstr "20 GB místa na disku"
 
-#: ../../installation.rst:61
+#: ../../installation.rst:25
 msgid "4 GB RAM"
 msgstr "4 GB RAM"
 
-#: ../../installation.rst:63
+#: ../../installation.rst:27
 msgid ""
 "No more than 100-200 images can be processed with the above specifications "
 "(the software will run out of memory). Recommended requirements are:"
@@ -165,37 +85,100 @@ msgstr ""
 "S výše uvedenými specifikacemi lze zpracovat maximálně 100-200 snímků "
 "(software vyčerpá paměť). Doporučené požadavky jsou:"
 
-#: ../../installation.rst:65
+#: ../../installation.rst:29
 msgid "Latest Generation CPU"
 msgstr "Nejnovější generace CPU"
 
-#: ../../installation.rst:66
+#: ../../installation.rst:30
 msgid "100 GB of disk space"
 msgstr "100 GB místa na disku"
 
-#: ../../installation.rst:67
+#: ../../installation.rst:31
 msgid "16 GB RAM"
 msgstr "16 GB RAM"
 
-#: ../../installation.rst:69
+#: ../../installation.rst:33
 msgid ""
-"The above will allow for a few hundred images to be processed without too "
-"many issues. A CPU with more cores will allow for faster processing, while a"
-" graphics card (GPU) currently has no impact on performance. For processing "
+"The above will allow the processing of a few hundred images with minimal "
+"issues. A CPU with more cores will allow for faster processing, while a "
+"graphics card (GPU) currently has no impact on performance. For processing "
 "more images, add more disk space and RAM linearly to the number of images "
 "you need to process."
 msgstr ""
-"Výše uvedený postup umožní zpracovat několik stovek snímků bez větších "
-"problémů. Procesor s více jádry umožní rychlejší zpracování, zatímco "
-"grafická karta (GPU) nemá v současné době na výkon žádný vliv. Pro "
-"zpracování většího počtu snímků přidejte více místa na disku a paměti RAM "
-"lineárně podle počtu snímků, které potřebujete zpracovat."
 
-#: ../../installation.rst:75
+#: ../../installation.rst:35
+msgid "Minimum RAM needed for N images"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "Number of images"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "RAM or RAM + Swap"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "40"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "4"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "250"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "16"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "500"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "32"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "1500"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "64"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "2500"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "128"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "3500"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "192"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "5000"
+msgstr ""
+
+#: ../../installation.rst:1
+msgid "256"
+msgstr ""
+
+#: ../../installation.rst:50
 msgid "Installation"
 msgstr "Instalace"
 
-#: ../../installation.rst:77
+#: ../../installation.rst:52
 msgid ""
 "We recommend people use `docker <https://www.docker.com>`_ for running ODM, "
 "whether you are on Windows, macOS or Linux."
@@ -203,11 +186,11 @@ msgstr ""
 "Pro spuštění ODM doporučujeme používat `docker <https://www.docker.com>`_, "
 "ať už používáte Windows, MacOS nebo Linux."
 
-#: ../../installation.rst:80
+#: ../../installation.rst:55
 msgid "Windows"
 msgstr "Windows"
 
-#: ../../installation.rst:82
+#: ../../installation.rst:57
 msgid ""
 "To run OpenDroneMap you need at least Windows 7. Previous versions of "
 "Windows are not supported."
@@ -215,11 +198,11 @@ msgstr ""
 "Pro spuštění OpenDroneMap potřebujete alespoň Windows 7. Předchozí verze "
 "systému Windows nejsou podporovány."
 
-#: ../../installation.rst:86 ../../installation.rst:238
+#: ../../installation.rst:61 ../../installation.rst:213
 msgid "Step 1. Check Virtualization Support"
 msgstr "Krok 1. Zkontrolujte podporu virtualizace"
 
-#: ../../installation.rst:88
+#: ../../installation.rst:63
 msgid ""
 "Docker requires a feature from your CPU called virtualization, which allows "
 "it to run virtual machines (VMs). Make sure you have it enabled! Sometimes "
@@ -232,15 +215,15 @@ msgstr ""
 "8 nebo vyšším otevřít **Správce úloh** (stiskněte klávesy CTRL+SHIFT+ESC) a "
 "přepnout na kartu **Výkon**."
 
-#: ../../installation.rstNone
+#: ../../installation.rst:-1
 msgid "Image of checking virtualization in Windows 8 or higher"
 msgstr "Obrázek kontroly virtualizace v systému Windows 8 nebo vyšším"
 
-#: ../../installation.rst:94
+#: ../../installation.rst:69
 msgid "*Virtualization should be enabled*"
 msgstr "*Virtualizace by měla být povolena*"
 
-#: ../../installation.rst:96
+#: ../../installation.rst:71
 msgid ""
 "On Windows 7 to see if you have virtualization enabled you can use the "
 "`Microsoft® Hardware-Assisted Virtualization Detection Tool <http:// "
@@ -248,17 +231,17 @@ msgid ""
 msgstr ""
 "V systému Windows 7 můžete pro zjištění, zda máte povolenou virtualizaci, "
 "použít místo toho nástroj `Microsoft® Hardware-Assisted Virtualization "
-"Detection Tool <http:// www.microsoft.com/en-"
-"us/download/details.aspx?id=592>`_."
+"Detection Tool <http:// www.microsoft.com/en-us/download/details.aspx?"
+"id=592>`_."
 
-#: ../../installation.rst:99
+#: ../../installation.rst:74
 msgid ""
 "If virtualization is disabled, you’ll need to enable it. The procedure "
-"unfortunately is a bit different for each computer model, so the best way to"
-" do this is to look up on a search engine “how to enable vtx for <type your "
-"computer model here>”. Often times it’s a matter of restarting the computer,"
-" immediately pressing F2 or F12 during startup, navigating the boot menu and"
-" changing the settings to enable virtualization (often called “VT-X”)."
+"unfortunately is a bit different for each computer model, so the best way to "
+"do this is to look up on a search engine “how to enable vtx for <type your "
+"computer model here>”. Often times it’s a matter of restarting the computer, "
+"immediately pressing F2 or F12 during startup, navigating the boot menu and "
+"changing the settings to enable virtualization (often called “VT-X”)."
 msgstr ""
 "Pokud je virtualizace zakázána, je třeba ji povolit. Postup se bohužel u "
 "každého modelu počítače trochu liší, takže nejlépe uděláte, když si ve "
@@ -267,36 +250,35 @@ msgstr ""
 "F2 nebo F12 během spouštění, procházení spouštěcí nabídky a změnu nastavení "
 "pro povolení virtualizace (často nazývané \"VT-X\")."
 
-#: ../../installation.rstNone
+#: ../../installation.rst:-1
 msgid "Table of different bios keys"
 msgstr "Tabulka různých klíčů biosu"
 
-#: ../../installation.rst:105
+#: ../../installation.rst:80
 msgid ""
 "*Common keys to press at computer startup to access the boot menu for "
 "various PC vendors*"
 msgstr ""
-"*Obvyklé klávesy, které je třeba stisknout při spuštění počítače pro přístup"
-" ke spouštěcí nabídce různých výrobců počítačů*"
+"*Obvyklé klávesy, které je třeba stisknout při spuštění počítače pro přístup "
+"ke spouštěcí nabídce různých výrobců počítačů*"
 
-#: ../../installation.rst:108 ../../installation.rst:257
+#: ../../installation.rst:83 ../../installation.rst:232
 msgid "Step 2. Install Requirements"
 msgstr "Krok 2. Požadavky na instalaci"
 
-#: ../../installation.rst:110
+#: ../../installation.rst:85
 msgid "First, you’ll need to install:"
 msgstr "Nejprve je třeba nainstalovat:"
 
-#: ../../installation.rst:112
+#: ../../installation.rst:87
 msgid "Git: https://git-scm.com/downloads"
 msgstr "Git: https://git-scm.com/downloads"
 
-#: ../../installation.rst:113
+#: ../../installation.rst:88
 msgid "Python (latest version 3): https://www.python.org/downloads/windows/"
-msgstr ""
-"Python (nejnovější verze 3): https://www.python.org/downloads/windows/"
+msgstr "Python (nejnovější verze 3): https://www.python.org/downloads/windows/"
 
-#: ../../installation.rst:115
+#: ../../installation.rst:90
 msgid ""
 "For Python 3, make sure you check **Add Python 3.x to PATH** during the "
 "installation."
@@ -304,51 +286,48 @@ msgstr ""
 "V případě Pythonu 3 se ujistěte, že jste během instalace zaškrtli políčko "
 "**Přidat Python 3.x do PATH**."
 
-#: ../../installation.rstNone
+#: ../../installation.rst:-1
 msgid "Screenshot of Python3 installation process"
 msgstr "Snímek obrazovky procesu instalace Pythonu3"
 
-#: ../../installation.rst:121
+#: ../../installation.rst:96
 msgid ""
-"*Don’t forget to add the Python executable to your PATH (so that you can run"
-" commands with it)*"
+"*Don’t forget to add the Python executable to your PATH (so that you can run "
+"commands with it)*"
 msgstr ""
 "*Nezapomeňte přidat spustitelný soubor Pythonu do cesty PATH (abyste s ním "
 "mohli spouštět příkazy)*."
 
-#: ../../installation.rst:123
+#: ../../installation.rst:98
 msgid ""
-"Then, only if you are on Windows 10 Home, Windows 8 (any version) or Windows"
-" 7 (any version), install:"
+"Then, only if you are on Windows 10 Home, Windows 8 (any version) or Windows "
+"7 (any version), install:"
 msgstr ""
 "Pouze pokud používáte systém Windows 10 Home, Windows 8 (jakoukoli verzi) "
 "nebo Windows 7 (jakoukoli verzi), nainstalujte jej:"
 
-#: ../../installation.rst:125
+#: ../../installation.rst:100
 msgid ""
-"Docker Toolbox: "
-"https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe"
+"Docker Toolbox: https://github.com/docker/toolbox/releases/download/v18.09.3/"
+"DockerToolbox-18.09.3.exe"
 msgstr ""
-"Docker Toolbox: "
-"https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe"
+"Docker Toolbox: https://github.com/docker/toolbox/releases/download/v18.09.3/"
+"DockerToolbox-18.09.3.exe"
 
-#: ../../installation.rst:127
+#: ../../installation.rst:102
 msgid ""
-"If you are on Windows 10 Professional or a newer version, you should install"
-" instead:"
+"If you are on Windows 10 Professional or a newer version, you should install "
+"instead:"
 msgstr ""
 "Pokud používáte systém Windows 10 Professional nebo novější verzi, měli "
 "byste místo toho nainstalovat:"
 
-#: ../../installation.rst:129
+#: ../../installation.rst:104
 msgid ""
-"Docker for Windows: "
-"https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe"
+"Docker for Windows:https://docs.docker.com/desktop/install/windows-install/"
 msgstr ""
-"Docker pro Windows: "
-"https://download.docker.com/win/stable/Docker%20for%20Windows%20Installer.exe"
 
-#: ../../installation.rst:131
+#: ../../installation.rst:106
 msgid ""
 "Please do **NOT** install both docker programs. They are different and will "
 "create a mess if they are both installed."
@@ -356,7 +335,7 @@ msgstr ""
 "Prosím, **NE** instalujte oba programy docker. Jsou odlišné a pokud budou "
 "nainstalovány oba, vznikne nepořádek."
 
-#: ../../installation.rst:133
+#: ../../installation.rst:108
 msgid ""
 "After installing docker, launch it from the Desktop icon that is created "
 "from the installation (**Docker Quickstart** in the case of Docker Toolbox, "
@@ -370,34 +349,34 @@ msgstr ""
 "nevynechávejte. Pokud se objeví chyby, postupujte podle pokynů na obrazovce "
 "a opravte je."
 
-#: ../../installation.rst:136 ../../installation.rst:299
+#: ../../installation.rst:111 ../../installation.rst:274
 msgid "Step 3. Check Memory and CPU Allocation"
 msgstr "Krok 3. Zkontrolujte přidělení paměti a procesoru"
 
-#: ../../installation.rst:138
+#: ../../installation.rst:113
 msgid ""
 "Docker on Windows works by running a VM in the background (think of a VM as "
-"a “computer emulator”). This VM has a certain amount of memory allocated and"
-" WebODM can only use as much memory as it’s allocated."
+"a “computer emulator”). This VM has a certain amount of memory allocated and "
+"WebODM can only use as much memory as it’s allocated."
 msgstr ""
 "Docker v systému Windows funguje tak, že na pozadí běží virtuální počítač "
 "(virtuální počítač si představte jako \"emulátor počítače\"). Tento "
-"virtuální počítač má přiděleno určité množství paměti a WebODM může využívat"
-" pouze tolik paměti, kolik mu bylo přiděleno."
+"virtuální počítač má přiděleno určité množství paměti a WebODM může využívat "
+"pouze tolik paměti, kolik mu bylo přiděleno."
 
-#: ../../installation.rst:140
+#: ../../installation.rst:115
 msgid ""
 "If you installed Docker Toolbox (see below if you installed Docker for "
 "Windows instead):"
 msgstr ""
-"Pokud jste nainstalovali Docker Toolbox (pokud jste místo toho nainstalovali"
-" Docker pro Windows, viz níže):"
+"Pokud jste nainstalovali Docker Toolbox (pokud jste místo toho nainstalovali "
+"Docker pro Windows, viz níže):"
 
-#: ../../installation.rst:142
+#: ../../installation.rst:117
 msgid "Open the **VirtualBox Manager** application"
 msgstr "Otevřete aplikaci **VirtualBox Manager**."
 
-#: ../../installation.rst:143
+#: ../../installation.rst:118
 msgid ""
 "Right click the **default** VM and press **Close (ACPI Shutdown)** to stop "
 "the machine"
@@ -405,13 +384,14 @@ msgstr ""
 "Klikněte pravým tlačítkem myši na **defaultní** virtuální počítač a "
 "stiskněte **Close (ACPI Shutdown)** pro zastavení počítače."
 
-#: ../../installation.rst:144
+#: ../../installation.rst:119
 msgid "Right click the **default** VM and press **Settings...**"
 msgstr ""
 "Klikněte pravým tlačítkem myši na **výchozí** virtuální počítač a stiskněte "
 "**Nastavení...**"
 
-#: ../../installation.rst:145
+#: ../../installation.rst:120
+#, python-format
 msgid ""
 "Move the **Base Memory** slider from the **System** panel and allocate "
 "60-70% of all available memory, optionally adding 50% of the available "
@@ -421,85 +401,84 @@ msgstr ""
 "veškeré dostupné paměti, případně přidejte také 50 % dostupných procesorů z "
 "karty **Procesor**."
 
-#: ../../installation.rstNone
+#: ../../installation.rst:-1
 msgid "Screenshot of VirtualBox Settings"
 msgstr "Snímek obrazovky nastavení VirtualBoxu"
 
-#: ../../installation.rst:151
+#: ../../installation.rst:126
 msgid "*VirtualBox default VM settings*"
 msgstr "*Výchozí nastavení virtuálního počítače VirtualBox*"
 
-#: ../../installation.rst:153
+#: ../../installation.rst:128
 msgid "Then press **OK**, right click the **default** VM and press **Start**."
 msgstr ""
 "Poté stiskněte tlačítko **OK**, klikněte pravým tlačítkem myši na "
 "**výchozí** virtuální počítač a stiskněte tlačítko **Spustit**."
 
-#: ../../installation.rst:155
+#: ../../installation.rst:130
 msgid "If you installed Docker for Windows instead:"
 msgstr "Pokud jste místo toho nainstalovali Docker pro Windows:"
 
-#: ../../installation.rst:157
+#: ../../installation.rst:132
 msgid "Look in the system tray and right click the “white whale” icon."
 msgstr ""
 "Podívejte se do systémové lišty a klikněte pravým tlačítkem myši na ikonu "
 "\"bílé velryby\"."
 
-#: ../../installation.rst:158
+#: ../../installation.rst:133
 msgid "From the menu, press **Settings...**"
 msgstr "V nabídce stiskněte **Nastavení...**."
 
-#: ../../installation.rst:159
+#: ../../installation.rst:134
+#, python-format
 msgid ""
-"From the panel, click **Advanced** and use the sliders to allocate 60-70% of"
-" available memory and use half of all available CPUs."
+"From the panel, click **Advanced** and use the sliders to allocate 60-70% of "
+"available memory and use half of all available CPUs."
 msgstr ""
 "Na panelu klikněte na tlačítko **Pokročilé** a pomocí posuvníků přidělte "
 "60-70 % dostupné paměti a využijte polovinu všech dostupných procesorů."
 
-#: ../../installation.rst:160
+#: ../../installation.rst:135
 msgid "Press **Apply**."
 msgstr "Stiskněte **Použít**."
 
-#: ../../installation.rstNone
+#: ../../installation.rst:-1
 msgid "Screenshot of Docker Icon"
 msgstr "Snímek obrazovky ikony Dockeru"
 
-#: ../../installation.rst:166
+#: ../../installation.rst:141
 msgid "*Step 1 Docker icon*"
 msgstr "*Krok 1 Ikona Docker*"
 
-#: ../../installation.rstNone
+#: ../../installation.rst:-1
 msgid "Screenshot of Docker Settings"
 msgstr "Snímek obrazovky nastavení aplikace Docker"
 
-#: ../../installation.rst:172
+#: ../../installation.rst:147
 msgid "*Step 3 & 4 Docker settings*"
 msgstr "*Krok 3 a 4 nastavení Dockeru*"
 
-#: ../../installation.rst:175
+#: ../../installation.rst:150
 msgid "Step 4. Download WebODM"
 msgstr "Krok 4. Stáhněte si WebODM"
 
-#: ../../installation.rst:177
-msgid ""
-"Open the **Git Gui** program that comes installed with Git. From there:"
+#: ../../installation.rst:152
+msgid "Open the **Git Gui** program that comes installed with Git. From there:"
 msgstr ""
 "Otevřete program **Git Gui**, který je nainstalován se systémem Git. Odtud:"
 
-#: ../../installation.rst:179
+#: ../../installation.rst:154
 msgid "When Git Gui opens, click 'Clone Existing Repository' option"
 msgstr ""
 "Po otevření nástroje Git Gui klikněte na možnost \"Klonovat existující "
 "úložiště\"."
 
-#: ../../installation.rst:180
+#: ../../installation.rst:155
 msgid "In **Source Location** type: https://github.com/OpenDroneMap/WebODM"
 msgstr ""
-"Do pole **Zdrojové umístění** zadejte: "
-"https://github.com/OpenDroneMap/WebODM"
+"Do pole **Zdrojové umístění** zadejte: https://github.com/OpenDroneMap/WebODM"
 
-#: ../../installation.rst:181
+#: ../../installation.rst:156
 msgid ""
 "In **Target Directory** click browse and navigate to a folder of your "
 "choosing (create one if necessary)"
@@ -507,43 +486,43 @@ msgstr ""
 "V okně **Cílový adresář** klikněte na tlačítko procházet a přejděte do "
 "vybrané složky (v případě potřeby ji vytvořte)."
 
-#: ../../installation.rst:182
+#: ../../installation.rst:157
 msgid "Press **Clone**"
 msgstr "Stiskněte tlačítko **Klonovat**"
 
-#: ../../installation.rstNone
+#: ../../installation.rst:-1
 msgid "Screenshot of Git Gui"
 msgstr "Snímek obrazovky Git Gui"
 
-#: ../../installation.rst:188
+#: ../../installation.rst:163
 msgid "*Git Gui*"
 msgstr "*Git Gui*"
 
-#: ../../installation.rst:190
+#: ../../installation.rst:165
 msgid "If the download succeeded, you should now see this window:"
 msgstr "Pokud se stahování podařilo, mělo by se zobrazit toto okno:"
 
-#: ../../installation.rstNone
+#: ../../installation.rst:-1
 msgid "Screenshot of Git Gui after successful download"
 msgstr "Snímek obrazovky Git Gui po úspěšném stažení"
 
-#: ../../installation.rst:196
+#: ../../installation.rst:171
 msgid "*Git Gui after successful download (clone)*"
 msgstr "*Git Gui po úspěšném stažení (klonování)*"
 
-#: ../../installation.rst:198
+#: ../../installation.rst:173
 msgid ""
-"Go to the **Repository** menu, then click **Create Desktop Icon**. This will"
-" allow you to come back to this application easily in the future."
+"Go to the **Repository** menu, then click **Create Desktop Icon**. This will "
+"allow you to come back to this application easily in the future."
 msgstr ""
 "Přejděte do nabídky **Úložiště** a klikněte na tlačítko **Vytvořit ikonu na "
 "ploše**. To vám umožní se v budoucnu k této aplikaci snadno vracet."
 
-#: ../../installation.rst:201
+#: ../../installation.rst:176
 msgid "Step 4. Launch WebODM"
 msgstr "Krok 4. Spusťte WebODM"
 
-#: ../../installation.rst:203
+#: ../../installation.rst:178
 msgid ""
 "From Git Gui, go to the **Repository** menu, then click **Git Bash**. From "
 "the command line terminal type:"
@@ -551,7 +530,7 @@ msgstr ""
 "V prostředí Git Gui přejděte do nabídky **Úložiště** a klikněte na položku "
 "**Git Bash**. V terminálu příkazového řádku zadejte:"
 
-#: ../../installation.rst:209
+#: ../../installation.rst:184
 msgid ""
 "Several components will download to your machine at this point, including "
 "WebODM, NodeODM and ODM. After the download you should be greeted by the "
@@ -560,47 +539,46 @@ msgstr ""
 "V tomto okamžiku se do počítače stáhne několik komponent, včetně WebODM, "
 "NodeODM a ODM. Po stažení by vás měla přivítat následující obrazovka:"
 
-#: ../../installation.rstNone
+#: ../../installation.rst:-1
 msgid "Screenshot of after successfully downloading WebODM"
 msgstr "Snímek obrazovky po úspěšném stažení WebODM"
 
-#: ../../installation.rst:215
+#: ../../installation.rst:190
 msgid "*Console output after starting WebODM for the first time*"
 msgstr "*Výstup konzoly po prvním spuštění WebODM*"
 
-#: ../../installation.rst:217
+#: ../../installation.rst:192
 msgid ""
-"If you are using Docker for Windows, open a web browser to "
-"http://localhost:8000"
+"If you are using Docker for Windows, open a web browser to http://"
+"localhost:8000"
 msgstr ""
 "Pokud používáte Docker pro Windows, otevřete webový prohlížeč na adrese "
 "http://localhost:8000."
 
-#: ../../installation.rst:218
+#: ../../installation.rst:193
 msgid ""
-"If you are using Docker Toolbox, find the IP address to connect to by "
-"typing:"
+"If you are using Docker Toolbox, find the IP address to connect to by typing:"
 msgstr ""
 "Pokud používáte Docker Toolbox, vyhledejte IP adresu, ke které se chcete "
 "připojit, zadáním:"
 
-#: ../../installation.rst:224
+#: ../../installation.rst:199
 msgid "You should get a result like the following:"
 msgstr "Měli byste získat následující výsledek:"
 
-#: ../../installation.rst:230
+#: ../../installation.rst:205
 msgid ""
-"Then connect to http://192.168.1.100:8000 (replacing the IP address with the"
-" proper one)."
+"Then connect to http://192.168.1.100:8000 (replacing the IP address with the "
+"proper one)."
 msgstr ""
 "Poté se připojte k webu http://192.168.1.100:8000 (IP adresu nahraďte "
 "správnou)."
 
-#: ../../installation.rst:233
+#: ../../installation.rst:208
 msgid "macOS"
 msgstr "macOS"
 
-#: ../../installation.rst:235
+#: ../../installation.rst:210
 msgid ""
 "Most modern (post 2010) Mac computers running macOS Sierra 10.12 or higher "
 "can run OpenDroneMap using docker, as long as hardware virtualization is "
@@ -610,15 +588,15 @@ msgstr ""
 "10.12 nebo vyšším lze OpenDroneMap spustit pomocí dockeru, pokud je "
 "podporována hardwarová virtualizace (viz níže)."
 
-#: ../../installation.rst:240
+#: ../../installation.rst:215
 msgid "Open a Terminal window and type:"
 msgstr "Otevřete okno Terminálu a napište:"
 
-#: ../../installation.rst:246
+#: ../../installation.rst:221
 msgid "You will get a response similar to the following:"
 msgstr "Dostanete podobnou odpověď, jako je tato:"
 
-#: ../../installation.rst:252
+#: ../../installation.rst:227
 msgid ""
 "If the result is *kern.hv_support: 1*, then your Mac is supported! Continue "
 "with Step 2."
@@ -626,7 +604,7 @@ msgstr ""
 "Pokud je výsledkem *kern.hv_support: 1*, pak je váš Mac podporován! "
 "Pokračujte krokem 2."
 
-#: ../../installation.rst:254
+#: ../../installation.rst:229
 msgid ""
 "If the result is *kern.hv_support: 0*, unfortunately it means your Mac is "
 "too old to run OpenDroneMap. :("
@@ -634,19 +612,19 @@ msgstr ""
 "Pokud je výsledkem  *kern.hv_support: 0*, To bohužel znamená, že váš Mac je "
 "příliš starý na spuštění OpenDroneMap :(."
 
-#: ../../installation.rst:259
+#: ../../installation.rst:234
 msgid "There are only two programs to install:"
 msgstr "Je třeba nainstalovat pouze dva programy:"
 
-#: ../../installation.rst:261
+#: ../../installation.rst:236
 msgid "Docker: https://download.docker.com/mac/stable/Docker.dmg"
 msgstr "Docker: https://download.docker.com/mac/stable/Docker.dmg"
 
-#: ../../installation.rst:262
+#: ../../installation.rst:237
 msgid "Git: https://sourceforge.net/projects/git-osx-installer/files/"
 msgstr "Git: https://sourceforge.net/projects/git-osx-installer/files/"
 
-#: ../../installation.rst:264
+#: ../../installation.rst:239
 msgid ""
 "After installing docker you should find an icon that looks like a whale in "
 "the task bar."
@@ -654,15 +632,15 @@ msgstr ""
 "Po instalaci dockeru byste měli na hlavním panelu najít ikonu, která vypadá "
 "jako velryba."
 
-#: ../../installation.rstNone
+#: ../../installation.rst:-1
 msgid "Screenshot of Docker whale"
 msgstr "Snímek obrazovky Docker whale"
 
-#: ../../installation.rst:270
+#: ../../installation.rst:245
 msgid "*Docker app running*"
 msgstr "*Spuštěná aplikace Docker*"
 
-#: ../../installation.rst:272
+#: ../../installation.rst:247
 msgid ""
 "You can verify that docker is running properly by opening the **Terminal** "
 "app and typing:"
@@ -670,19 +648,19 @@ msgstr ""
 "Správné spuštění dockeru můžete ověřit tak, že otevřete aplikaci "
 "**Terminál** a zadáte:"
 
-#: ../../installation.rst:278
+#: ../../installation.rst:253
 msgid "Which should return"
 msgstr "Který by měl vrátit"
 
-#: ../../installation.rst:284
+#: ../../installation.rst:259
 msgid "To verify that git is installed, simply type:"
 msgstr "Chcete-li ověřit, zda je git nainstalován, jednoduše zadejte:"
 
-#: ../../installation.rst:290
+#: ../../installation.rst:265
 msgid "Which should return something similar to the following:"
 msgstr "Který by měl vrátit něco podobného:"
 
-#: ../../installation.rst:296
+#: ../../installation.rst:271
 msgid ""
 "If you get a “bash: git: command not found”, try to restart your "
 "**Terminal** app and double-check for any errors during the install process."
@@ -691,7 +669,7 @@ msgstr ""
 "restartovat aplikaci **Terminal** a překontrolujte, zda během instalace "
 "nedošlo k chybě."
 
-#: ../../installation.rst:301
+#: ../../installation.rst:276
 msgid ""
 "Docker on macOS works by running a VM in the background (think of it as a "
 "“computer emulator”). This VM has a certain amount of memory allocated and "
@@ -702,18 +680,19 @@ msgstr ""
 "přiděleno určité množství paměti a WebODM může využívat pouze tolik paměti, "
 "kolik mu bylo přiděleno."
 
-#: ../../installation.rst:303
+#: ../../installation.rst:278
 msgid ""
 "Right click the whale icon from the task bar and click **Preferences**..."
 msgstr ""
-"Klikněte pravým tlačítkem myši na ikonu velryby na hlavním panelu a klikněte"
-" na položku **Předvolby**..."
+"Klikněte pravým tlačítkem myši na ikonu velryby na hlavním panelu a klikněte "
+"na položku **Předvolby**..."
 
-#: ../../installation.rst:304
+#: ../../installation.rst:279
 msgid "Select the **Advanced** tab"
 msgstr "Vyberte kartu **Pokročilé**"
 
-#: ../../installation.rst:305
+#: ../../installation.rst:280
+#, python-format
 msgid ""
 "Adjust the CPUs slider to use half of all available CPUs and the memory to "
 "use 60-70% of all available memory"
@@ -721,75 +700,75 @@ msgstr ""
 "Nastavte posuvník CPU tak, aby využíval polovinu všech dostupných CPU, a "
 "paměť tak, aby využívala 60-70 % veškeré dostupné paměti."
 
-#: ../../installation.rst:306
+#: ../../installation.rst:281
 msgid "Press **Apply & Restart**"
 msgstr "Stiskněte tlačítko **Použít a restartovat**"
 
-#: ../../installation.rstNone
+#: ../../installation.rst:-1
 msgid "Screenshot of Docker advanced settings"
 msgstr "Snímek obrazovky pokročilého nastavení Docker"
 
-#: ../../installation.rst:312
+#: ../../installation.rst:287
 msgid "*Docker advanced settings*"
 msgstr "*Pokročilé nastavení Dockeru*"
 
-#: ../../installation.rst:315
+#: ../../installation.rst:290
 msgid "Step 4. Download and Launch WebODM"
 msgstr "Krok 4. Stažení a spuštění WebODM"
 
-#: ../../installation.rst:317
+#: ../../installation.rst:292
 msgid "From a **Terminal** type:"
 msgstr "V **Terminálu** napište:"
 
-#: ../../installation.rst:325 ../../installation.rst:426
+#: ../../installation.rst:300 ../../installation.rst:389
 msgid "Then open a web browser to http://localhost:8000."
 msgstr "Poté otevřete webový prohlížeč na adrese http://localhost:8000."
 
-#: ../../installation.rst:328
+#: ../../installation.rst:303
 msgid "Linux"
 msgstr "Linux"
 
-#: ../../installation.rst:330
+#: ../../installation.rst:305
 msgid ""
 "OpenDroneMap can run on any Linux distribution that supports docker. "
-"According to `docker’s documentation website "
-"<https://docs.docker.com/install/>`_ the officially supported distributions "
-"are CentOS, Debian, Ubuntu and Fedora, with static binaries available for "
-"others. If you have to pick a distribution solely for running OpenDroneMap, "
-"Ubuntu is the recommended way to go."
+"According to `docker’s documentation website <https://docs.docker.com/"
+"install/>`_ the officially supported distributions are CentOS, Debian, "
+"Ubuntu and Fedora, with static binaries available for others. If you have to "
+"pick a distribution solely for running OpenDroneMap, Ubuntu is the "
+"recommended way to go."
 msgstr ""
 "OpenDroneMap lze spustit na libovolné distribuci Linuxu, která podporuje "
-"docker. Podle webových stránek s dokumentací `dockeru "
-"<https://docs.docker.com/install/>`_ jsou oficiálně podporovanými "
-"distribucemi CentOS, Debian, Ubuntu a Fedora, pro ostatní jsou k dispozici "
-"statické binární soubory. Pokud si musíte vybrat distribuci výhradně pro "
-"spuštění OpenDroneMap, doporučuje se Ubuntu."
+"docker. Podle webových stránek s dokumentací `dockeru <https://"
+"docs.docker.com/install/>`_ jsou oficiálně podporovanými distribucemi "
+"CentOS, Debian, Ubuntu a Fedora, pro ostatní jsou k dispozici statické "
+"binární soubory. Pokud si musíte vybrat distribuci výhradně pro spuštění "
+"OpenDroneMap, doporučuje se Ubuntu."
 
-#: ../../installation.rst:333
+#: ../../installation.rst:308
 msgid "Step 1. Install Requirements"
 msgstr "Krok 1. Instalace požadavků"
 
-#: ../../installation.rst:335
+#: ../../installation.rst:310
 msgid "There are four programs that need to be installed:"
 msgstr "Je třeba nainstalovat čtyři programy:"
 
-#: ../../installation.rst:337
+#: ../../installation.rst:312
 msgid "Docker"
 msgstr "Docker"
 
-#: ../../installation.rst:338
+#: ../../installation.rst:313
 msgid "Git"
 msgstr "Git"
 
-#: ../../installation.rst:339
+#: ../../installation.rst:314
 msgid "Python (2 or 3)"
 msgstr "Python (2 nebo 3)"
 
-#: ../../installation.rst:340
+#: ../../installation.rst:315
 msgid "Pip"
 msgstr "Pip"
 
-#: ../../installation.rst:342
+#: ../../installation.rst:317
 msgid ""
 "We cannot possibly cover the installation process for every Linux "
 "distribution out there, so we’ll limit the instructions to those that are "
@@ -797,69 +776,89 @@ msgid ""
 "matter of opening a terminal prompt and typing a few commands."
 msgstr ""
 "Nemůžeme popsat instalační proces pro všechny distribuce Linuxu, takže se "
-"omezíme na ty, které jsou oficiálně podporovány dockerem. Ve všech případech"
-" jde jen o otevření terminálového příkazu a zadání několika příkazů."
+"omezíme na ty, které jsou oficiálně podporovány dockerem. Ve všech případech "
+"jde jen o otevření terminálového příkazu a zadání několika příkazů."
 
-#: ../../installation.rst:345
+#: ../../installation.rst:320
 msgid "Install on Ubuntu / Debian"
 msgstr "Instalace na Ubuntu / Debian"
 
-#: ../../installation.rst:347 ../../installation.rst:359
-#: ../../installation.rst:370 ../../installation.rst:381
+#: ../../installation.rst:322 ../../installation.rst:334
+#: ../../installation.rst:345 ../../installation.rst:356
 msgid "Commands to type:"
 msgstr "Příkazy k zadání:"
 
-#: ../../installation.rst:357
+#: ../../installation.rst:332
 msgid "Install on CentOS / RHEL"
 msgstr "Instalace na CentOS / RHEL"
 
-#: ../../installation.rst:368
+#: ../../installation.rst:343
 msgid "Install on Fedora"
 msgstr "Instalace v systému Fedora"
 
-#: ../../installation.rst:379
+#: ../../installation.rst:354
 msgid "Install on Arch"
 msgstr "Instalace na Arch"
 
-#: ../../installation.rst:388
+#: ../../installation.rst:363
 msgid "Step 2. Check Additional Requirements"
 msgstr "Krok 2. Zkontrolujte další požadavky"
 
-#: ../../installation.rst:390
+#: ../../installation.rst:365
 msgid ""
-"In addition to the three programs above, the dockercompose script is also "
+"In addition to the three programs above, the docker compose script is also "
 "needed. Sometimes it’s already installed with docker, but sometimes it "
 "isn’t. To verify if it’s installed try to type:"
 msgstr ""
-"Kromě tří výše uvedených programů je zapotřebí také skript dockercompose. "
-"Někdy je již nainstalován spolu s dockerem, ale někdy ne. Chcete-li ověřit, "
-"zda je nainstalován, zkuste zadat následující příkaz:"
 
-#: ../../installation.rst:396
+#: ../../installation.rst:371
 msgid "You should see somethings similar to the following:"
 msgstr "Měli byste vidět něco podobného:"
 
-#: ../../installation.rst:402
-msgid "If instead you get something similar to the following:"
-msgstr "Pokud se místo toho zobrazí něco podobného:"
-
-#: ../../installation.rst:408
-msgid "you can install it by using pip:"
-msgstr "můžete nainstalovat pomocí pip:"
-
-#: ../../installation.rst:416
-msgid "Step 3. Download and Launch WebODM"
-msgstr "Krok 3. Stažení a spuštění WebODM"
-
-#: ../../installation.rst:418
+#: ../../installation.rst:381
 msgid "From a terminal type:"
 msgstr "Z terminálu typu:"
 
-#: ../../installation.rst:429
+#: ../../installation.rst:392
+msgid "Step 3b. Alternatively, start via docker compose without webodm.sh"
+msgstr ""
+
+#: ../../installation.rst:394
+msgid "copy the following 3 files into a newly created folder:"
+msgstr ""
+
+#: ../../installation.rst:396
+msgid "The ``config-default.json``:"
+msgstr ""
+
+#: ../../installation.rst:423
+msgid "The ``init.sql``:"
+msgstr ""
+
+#: ../../installation.rst:430
+msgid "And finally the ``compose.yml``:"
+msgstr ""
+
+#: ../../installation.rst:517
+msgid ""
+"Finally, start the stack using ``docker compose up -d``. You can now access "
+"WebODM at http://localhost:8000 and the nodeODM at http://localhost:3000."
+msgstr ""
+
+#: ../../installation.rst:520
+msgid "To view logs of the services use ``docker compose logs``"
+msgstr ""
+
+#: ../../installation.rst:522
+msgid "To shut down the services run ``docker compose down``."
+msgstr ""
+
+#: ../../installation.rst:526
 msgid "Basic Commands and Troubleshooting"
 msgstr "Základní příkazy a řešení potíží"
 
-#: ../../installation.rst:431
+#: ../../installation.rst:528
+#, python-format
 msgid ""
 "The cool thing about using docker is that 99% of the tasks you’ll ever need "
 "to perform while using WebODM can be done via the ./webodm.sh script. You "
@@ -869,17 +868,17 @@ msgstr ""
 "provést při používání WebODM, lze provést pomocí skriptu ./webodm.sh. S "
 "jednou z nich jste se již setkali:"
 
-#: ../../installation.rst:437
+#: ../../installation.rst:534
 msgid ""
-"which takes care of starting WebODM and setting up a default processing node"
-" (node-odm-1). If you want to stop WebODM, you can already guess what the "
+"which takes care of starting WebODM and setting up a default processing node "
+"(node-odm-1). If you want to stop WebODM, you can already guess what the "
 "command is:"
 msgstr ""
-"který se postará o spuštění WebODM a nastavení výchozího uzlu pro zpracování"
-" (node-odm-1). Pokud chcete službu WebODM zastavit, můžete již tušit, jaký "
-"je její příkaz:"
+"který se postará o spuštění WebODM a nastavení výchozího uzlu pro zpracování "
+"(node-odm-1). Pokud chcete službu WebODM zastavit, můžete již tušit, jaký je "
+"její příkaz:"
 
-#: ../../installation.rst:443
+#: ../../installation.rst:540
 msgid ""
 "There are several other commands you can use, along with different flags. "
 "Flags are parameters passed to the ./webodm.sh command and are typically "
@@ -891,72 +890,68 @@ msgstr ""
 "mají předponu \"-\". Například příznak **port** dává WebODM pokyn k použití "
 "jiného síťového portu:"
 
-#: ../../installation.rst:449
+#: ../../installation.rst:546
 msgid "Other useful commands are listed below:"
 msgstr "Další užitečné příkazy jsou uvedeny níže:"
 
-#: ../../installation.rst:468
+#: ../../installation.rst:565
 msgid ""
-"`The community forum <https://community.opendronemap.org>`_ is a great place"
-" to ask for help if you     get stuck during any of the installation steps "
+"`The community forum <https://community.opendronemap.org>`_ is a great place "
+"to ask for help if you     get stuck during any of the installation steps "
 "and for general questions on using the ./webodm.sh script."
 msgstr ""
 "`Komunitní fórum <https://community.opendronemap.org>`_ je skvělým místem, "
 "kde můžete požádat o pomoc, pokud se zaseknete při některém z kroků "
 "instalace, a pro obecné otázky týkající se používání skriptu ./webodm.sh."
 
-#: ../../installation.rst:471
+#: ../../installation.rst:568
 msgid "Hello, WebODM!"
 msgstr "Dobrý den, WebODM!"
 
-#: ../../installation.rst:473
+#: ../../installation.rst:570
 msgid ""
-"After running ./webodm.sh start and opening WebODM in the browser, you will "
-"be greeted with a welcome message and will be asked to create the first "
-"user. Take some time to familiarize yourself with the web interface and "
-"explore its various menus."
+"After starting the containers using 3a. or 3b. you can open WebODM in the "
+"browser. This will greet you with a welcome message and will ask to create "
+"the first user. Take some time to familiarize yourself with the web "
+"interface and explore its various menus."
 msgstr ""
-"Po spuštění souboru ./webodm.sh start a otevření WebODM v prohlížeči se "
-"zobrazí uvítací zpráva a budete vyzváni k vytvoření prvního uživatele. "
-"Věnujte nějaký čas seznámení s webovým rozhraním a prozkoumejte jeho různé "
-"nabídky."
 
-#: ../../installation.rstNone
+#: ../../installation.rst:-1
 msgid "Screenshot of WebODM Dashboard"
 msgstr "Snímek obrazovky ovládacího panelu WebODM"
 
-#: ../../installation.rst:479
+#: ../../installation.rst:577
 msgid "*WebODM Dashboard*"
 msgstr "*WebODM Dashboard*"
 
-#: ../../installation.rst:481
+#: ../../installation.rst:579
 msgid ""
 "Notice that under the **Processing Nodes** menu there’s a \"node-odm-1\" "
 "node already configured for you to use. This is a NodeODM node and has been "
-"created automatically by WebODM. This node is running on the same machine as"
-" WebODM."
+"created automatically by WebODM. This node is running on the same machine as "
+"WebODM."
 msgstr ""
 "Všimněte si, že v nabídce **Processing Nodes** je již nakonfigurován uzel "
 "\"node-odm-1\", který můžete použít. Jedná se o uzel NodeODM a byl vytvořen "
 "automaticky pomocí WebODM. Tento uzel běží na stejném počítači jako WebODM."
 
-#: ../../installation.rst:483
+#: ../../installation.rst:581
 msgid ""
 "If you’ve made it this far, congratulations! Now it’s time to start "
 "processing some data."
 msgstr ""
-"Pokud jste se dostali až sem, gratulujeme vám! Nyní je čas začít zpracovávat"
-" data."
+"Pokud jste se dostali až sem, gratulujeme vám! Nyní je čas začít zpracovávat "
+"data."
 
-#: ../../installation.rstNone
+#: ../../installation.rst:-1
 msgid "Image of celebratory dance"
 msgstr "Obrázek oslavného tance"
 
-#: ../../installation.rst:490
+#: ../../installation.rst:588
 msgid "Running on more than one machine"
 msgstr "Spuštění na více než jednom počítači"
 
-#: ../../installation.rst:492
+#: ../../installation.rst:590
 msgid ""
 "**Optionally:** If you have another computer, you can repeat the "
 "installation process (install docker, git, python, etc.) and launch a new "
@@ -966,19 +961,19 @@ msgstr ""
 "(nainstalovat docker, git, python atd.) a spustit nový uzel NodeODM zadáním "
 "v okně Terminal/Git Bash:"
 
-#: ../../installation.rst:498
+#: ../../installation.rst:596
 msgid ""
 "The above command asks docker to launch a new container using the "
 "opendronemap/nodeodm image from Docker Hub (the latest version of NodeODM), "
 "using port 3000, setting a maximum number of concurrent tasks to 1 and to "
 "protect the node from unauthorized access using the password \"secret\"."
 msgstr ""
-"Výše uvedený příkaz požádá docker o spuštění nového kontejneru pomocí obrazu"
-" opendronemap/nodeodm z Docker Hub (nejnovější verze NodeODM), použití portu"
-" 3000, nastavení maximálního počtu souběžných úloh na 1 a ochranu uzlu před "
+"Výše uvedený příkaz požádá docker o spuštění nového kontejneru pomocí obrazu "
+"opendronemap/nodeodm z Docker Hub (nejnovější verze NodeODM), použití portu "
+"3000, nastavení maximálního počtu souběžných úloh na 1 a ochranu uzlu před "
 "neoprávněným přístupem pomocí hesla \"secret\"."
 
-#: ../../installation.rst:500
+#: ../../installation.rst:598
 msgid ""
 "From WebODM you can then press the **Add New** button under **Processing "
 "Nodes**. For the **hostname/IP** field type the IP of the second computer. "
@@ -992,7 +987,7 @@ msgstr ""
 "zadejte \"secret\". Můžete také přidat nepovinný **název** uzlu, například "
 "\"druhý počítač\". Poté stiskněte tlačítko **Uložit**."
 
-#: ../../installation.rst:502
+#: ../../installation.rst:600
 msgid ""
 "If everything went well, you should now have two processing nodes! You will "
 "be able to process multiple tasks in parallel using two different machines."
@@ -1000,12 +995,12 @@ msgstr ""
 "Pokud vše proběhlo v pořádku, měli byste nyní mít dva zpracovatelské uzly! "
 "Budete moci paralelně zpracovávat více úloh na dvou různých strojích."
 
-#: ../../installation.rst:505
+#: ../../installation.rst:603
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
-"contribution>`_ and help improve `this page "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst>`_!"
+"contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/"
+"docs/blob/publish/source/installation.rst>`_!"
 msgstr ""
 "`Naučte se upravovat <https://github.com/opendronemap/docs#how-to-make-your-"
-"first-contribution>`_ a pomozte zlepšit `tuto stránku "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst>`_!"
+"first-contribution>`_ a pomozte zlepšit `tuto stránku <https://github.com/"
+"OpenDroneMap/docs/blob/publish/source/installation.rst>`_!"

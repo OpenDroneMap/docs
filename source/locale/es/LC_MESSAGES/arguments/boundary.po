@@ -1,33 +1,30 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2020, OpenDroneMap
-# This file is distributed under the same license as the OpenDroneMap package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
-# Translators:
-# israel Villarreal <israelbar@gmail.com>, 2021
-# 
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.7.0\n"
+"Project-Id-Version: OpenDroneMap 3.6.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-28 10:32-0500\n"
-"PO-Revision-Date: 2021-11-12 20:52+0000\n"
-"Last-Translator: israel Villarreal <israelbar@gmail.com>, 2021\n"
-"Language-Team: Spanish (https://www.transifex.com/americanredcross/teams/111882/es/)\n"
+"POT-Creation-Date: 2026-04-16 11:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: es\n"
-"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../arguments/boundary.rst:9
 msgid "boundary"
-msgstr "boundary"
+msgstr ""
 
 #: ../../arguments/boundary.rst:11
 msgid "**Options:** *<json>*"
-msgstr "**Opciones:** *<json>*"
+msgstr ""
 
 #: ../../arguments/boundary.rst:13
 msgid ""
@@ -35,9 +32,6 @@ msgid ""
 "either as path to a GeoJSON file or as a JSON string representing the "
 "contents of a GeoJSON file. Default: ``"
 msgstr ""
-"Polígono GeoJSON que limita el área de reconstrucción. Se puede especificar "
-"como ruta a un archivo GeoJSON o como una cadena JSON que representa el "
-"contenido de un archivo GeoJSON. Predeterminado: ``"
 
 #: ../../arguments/boundary.rst:15
 msgid "Parameter Type:"
@@ -52,6 +46,7 @@ msgid "Parameter Domain:"
 msgstr ""
 
 #: ../../arguments/boundary.rst:18
+#, python-brace-format
 msgid "True: ``GeoJSON{}``"
 msgstr ""
 
@@ -135,8 +130,8 @@ msgstr ""
 msgid ""
 "Further, given that the ``--boundary`` is applied after the products are "
 "generated (and thereby modifying them), it adds processing time to the "
-"dataset, and may not be appropriate if one's primary concern is generating a"
-" complete product as fast as possible."
+"dataset, and may not be appropriate if one's primary concern is generating a "
+"complete product as fast as possible."
 msgstr ""
 
 #: ../../arguments/boundary.rst:50
@@ -155,8 +150,8 @@ msgid ""
 "include 20m of overfly in your survey so that the reconstruction is clean "
 "and with sufficient overlap right up to the property boundaries. However, "
 "due to this overfly and your flight height you also capture and reconstruct "
-"bordering properties and homes that are not part of your survey AOI. Using a"
-" GeoJSON representation of the AOI property's boundary, you would then "
+"bordering properties and homes that are not part of your survey AOI. Using a "
+"GeoJSON representation of the AOI property's boundary, you would then "
 "\"clip\" all of the final products to be just what is inside the GeoJSON "
 "boundary, providing you with a clean, focused, and \"safe\" representation "
 "of the survey AOI (and nothing beyond it)."
@@ -202,23 +197,23 @@ msgstr ""
 
 #: ../../arguments/boundary.rst:75
 msgid ""
-"Selecting the \"Draw Polygon\" menu option will allow you to place verticies"
-" for your polygon by left-clicking on the map."
+"Selecting the \"Draw Polygon\" menu option will allow you to place vertices "
+"for your polygon by left-clicking on the map."
 msgstr ""
 
 #: ../../arguments/boundary.rst:78
-msgid "Placing Verticies"
+msgid "Placing Vertices"
 msgstr ""
 
 #: ../../arguments/boundary.rst:82
-msgid "Placing verticies in the Map View to create the boundary GeoJSON."
+msgid "Placing vertices in the Map View to create the boundary GeoJSON."
 msgstr ""
 
 #: ../../arguments/boundary.rst:82
 msgid ""
 "Choose the appropriate locations of the boundary of your polygon by left-"
-"clicking on the map to place a vertex. You can place as many vertices as you"
-" require."
+"clicking on the map to place a vertex. You can place as many vertices as you "
+"require."
 msgstr ""
 
 #: ../../arguments/boundary.rst:85
@@ -234,8 +229,8 @@ msgid ""
 "To close the polygon, you left-click on your first vertex. You will be able "
 "to close your polygon once you have placed at least three vertices on the "
 "map. A completed polygon will have a different representation than one that "
-"is in-progress. It will have a darker border and a fill, implying that it is"
-" now a \"solid\" polygon. If your polygon looks like this, you are ready to "
+"is in-progress. It will have a darker border and a fill, implying that it is "
+"now a \"solid\" polygon. If your polygon looks like this, you are ready to "
 "save it."
 msgstr ""
 
@@ -243,7 +238,7 @@ msgstr ""
 msgid "Saving A Polygon"
 msgstr ""
 
-#: ../../arguments/boundary.rstNone
+#: ../../arguments/boundary.rst:-1
 msgid "Saving the polygon using the Save menu and choosing GeoJSON."
 msgstr ""
 
@@ -287,8 +282,8 @@ msgstr ""
 msgid ""
 "When you are editing the Task Options for your Task, you can choose to load "
 "the Boundary [GeoJSON] created above by clicking the \"Load\" icon. "
-"Alternatively, you can paste the textual representation of the boundary into"
-" the Boundary [GeoJSON] text box."
+"Alternatively, you can paste the textual representation of the boundary into "
+"the Boundary [GeoJSON] text box."
 msgstr ""
 
 #: ../../arguments/boundary.rst:154
@@ -303,8 +298,8 @@ msgstr ""
 msgid ""
 "Once the Boundary [GeoJSON] has been loaded from disk or pasted from the "
 "system clipboard, you can confirm its presence by seeing the text in the "
-"text box. You can now save the Task Options to enable the Boundary [GeoJSON]"
-" for the processing Task."
+"text box. You can now save the Task Options to enable the Boundary [GeoJSON] "
+"for the processing Task."
 msgstr ""
 
 #: ../../arguments/boundary.rst:161
@@ -313,8 +308,8 @@ msgstr ""
 
 #: ../../arguments/boundary.rst:163
 msgid ""
-"`https://qgis.org/en/site/forusers/download.html "
-"<https://qgis.org/en/site/forusers/download.html>`_"
+"`https://qgis.org/en/site/forusers/download.html <https://qgis.org/en/site/"
+"forusers/download.html>`_"
 msgstr ""
 
 #: ../../arguments/boundary.rst:163
@@ -343,7 +338,8 @@ msgid "New Temporary Scratch Layer Geometry Type"
 msgstr ""
 
 #: ../../arguments/boundary.rst:177
-msgid "Setting \"Polygon\" as the Geometry Type for the Temporary Scratch Layer."
+msgid ""
+"Setting \"Polygon\" as the Geometry Type for the Temporary Scratch Layer."
 msgstr ""
 
 #: ../../arguments/boundary.rst:177
@@ -416,14 +412,14 @@ msgstr ""
 
 #: ../../arguments/boundary.rst:206
 msgid ""
-"Clicking the \"Toggle Editing\" tool will prompt you to save your changes to"
-" the Temporary Scratch Layer."
+"Clicking the \"Toggle Editing\" tool will prompt you to save your changes to "
+"the Temporary Scratch Layer."
 msgstr ""
 
 #: ../../arguments/boundary.rst:206
 msgid ""
-"Once you are finished with your boundary polygon, you can click the \"Toggle"
-" Editing\" tool to accept your changes and write them out to the Temporary "
+"Once you are finished with your boundary polygon, you can click the \"Toggle "
+"Editing\" tool to accept your changes and write them out to the Temporary "
 "Scratch Layer and make the layer valid for saving/exporting to disk."
 msgstr ""
 
@@ -438,8 +434,8 @@ msgstr ""
 
 #: ../../arguments/boundary.rst:213
 msgid ""
-"Clicking Save on this dialog will write the changes to the Temporary Scratch"
-" Layer and enable export/save functionality."
+"Clicking Save on this dialog will write the changes to the Temporary Scratch "
+"Layer and enable export/save functionality."
 msgstr ""
 
 #: ../../arguments/boundary.rst:216
@@ -448,8 +444,8 @@ msgstr ""
 
 #: ../../arguments/boundary.rst:220
 msgid ""
-"A right-click on the Temporary Scratch Layer in the Layers panel will expose"
-" the Export menu item, with the Save Features As sub-menu item."
+"A right-click on the Temporary Scratch Layer in the Layers panel will expose "
+"the Export menu item, with the Save Features As sub-menu item."
 msgstr ""
 
 #: ../../arguments/boundary.rst:220
@@ -466,8 +462,8 @@ msgstr ""
 
 #: ../../arguments/boundary.rst:227
 msgid ""
-"The \"Save Vector Layer As\" dialog showing Format as GeoJSON, an example of"
-" a valid File Name and path, CRS of EPSG:4326 and other default options."
+"The \"Save Vector Layer As\" dialog showing Format as GeoJSON, an example of "
+"a valid File Name and path, CRS of EPSG:4326 and other default options."
 msgstr ""
 
 #: ../../arguments/boundary.rst:227
@@ -544,9 +540,8 @@ msgstr ""
 
 #: ../../arguments/boundary.rst:258
 msgid ""
-"The WebODM 3D View shows the modified extent of the reconstruction 3D "
-"Model/Textured Mesh, bounded by the GeoJSON proivded to the ``--boundary`` "
-"option."
+"The WebODM 3D View shows the modified extent of the reconstruction 3D Model/"
+"Textured Mesh, bounded by the GeoJSON proivded to the ``--boundary`` option."
 msgstr ""
 
 #: ../../arguments/boundary.rst:265
@@ -559,16 +554,13 @@ msgstr ""
 msgid ""
 "The WebODM 3D View shows the full extent of the recosntruction. Compared to "
 "the ``--boundary`` reconstruction above, one can see that the full "
-"reconstruction area is much larger and includes many features outside of the"
-" Area Of Interest used to generate the GeoJSON."
+"reconstruction area is much larger and includes many features outside of the "
+"Area Of Interest used to generate the GeoJSON."
 msgstr ""
 
 #: ../../arguments/boundary.rst:269
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
-"contribution>`_ and help improve `this page "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/boundary.rst>`_!"
+"contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/"
+"docs/blob/publish/source/arguments_edit/boundary.rst>`_!"
 msgstr ""
-"`Aprende a editar <https://github.com/opendronemap/docs#how-to-make-your-"
-"first-contribution>`_ y ayuda a mejorar `esta página "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/boundary.rst>`_!"

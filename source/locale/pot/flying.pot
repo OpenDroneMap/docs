@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.7.0\n"
+"Project-Id-Version: OpenDroneMap 3.6.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-28 10:32-0500\n"
+"POT-Creation-Date: 2026-02-18 11:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -20,34 +20,78 @@ msgstr ""
 msgid "Flying Tips"
 msgstr ""
 
-#: ../../flying.rst:4
-msgid "The `Humanitarian OpenStreetMap team <https://www.hotosm.org/>`_ has guidelines on `flying for UAV mapping <https://uav-guidelines.openaerialmap.org/>`_:"
+#: ../../flying.rst:5
+msgid "Data collection effort, full 3D"
 msgstr ""
 
-#: ../../flying.rst:6
-msgid "`Choosing the right UAV <https://uav-guidelines.openaerialmap.org/pages/05-choosing-the-right-uav/>`_"
+#: ../../flying.rst:7
+msgid "For best in class results with full 3D reconstruction, we recommend the following:"
 msgstr ""
 
-#: ../../flying.rst:8
-msgid "`Choosing the right sensor <https://uav-guidelines.openaerialmap.org/pages/06-choosing-the-sensor/>`_"
+#: ../../flying.rst:9
+msgid "60% overlap nadir flight"
 msgstr ""
 
 #: ../../flying.rst:10
-msgid "`Mission preparation <https://uav-guidelines.openaerialmap.org/pages/07-preparing-for-the-uav-mission/>`_"
+msgid "70-80% overlap 45-degree gimbal angle cross-grid"
 msgstr ""
 
 #: ../../flying.rst:12
-msgid "The guidelines are intended for drone mapping projects on islands, but have general use for all drone mappers."
+msgid "The 45-degree cross-grid flight provides the basis for a fully tied together model, while the nadir flights provide the necessary texture for orthophoto texturing. The lower overlap  meets the minimum requirement for orthophoto products as facilitated by feature matching from the much higher overlap cross-grid."
 msgstr ""
 
-#: ../../flying.rst:14
-msgid "See also DroneDeploy's guide on `Making Successful Maps <https://support.dronedeploy.com/docs/making-successful-maps>`_, which provides great tips on mission planning."
+#: ../../flying.rst:15
+msgid "Data collection effort, 2D and 2.5D products"
 msgstr ""
 
-#: ../../flying.rst:16
-msgid "Finally, lens distortion is a challenge in projects requiring accurate 3D data. See our section in these docs on `Camera Calibration </tutorials/#calibrating-the-camera>`_."
+#: ../../flying.rst:17
+msgid "For best in class results 2D and 2.5D products, we recommend the following:"
 msgstr ""
 
 #: ../../flying.rst:19
+msgid "70-80% overlap slightly off-nadir (5-10 degree off nadir)"
+msgstr ""
+
+#: ../../flying.rst:21
+msgid "For more complex buildings and vegetation, aim for closer to 80-83% overlap. If buildings, vegetation, and terrain changes are not complex, it's quite feasible to use closer to 70% overlap."
+msgstr ""
+
+#: ../../flying.rst:23
+msgid "(credit: derived from ongoing conversations with Ivan Gayton, Humanitarian OpenStreetMap Team)"
+msgstr ""
+
+#: ../../flying.rst:26
+msgid "Other resources on flying"
+msgstr ""
+
+#: ../../flying.rst:28
+msgid "The `Humanitarian OpenStreetMap team <https://www.hotosm.org/>`_ has guidelines on `flying for UAV mapping <https://uav-guidelines.openaerialmap.org/>`_:"
+msgstr ""
+
+#: ../../flying.rst:30
+msgid "`Choosing the right UAV <https://uav-guidelines.openaerialmap.org/pages/05-choosing-the-right-uav/>`_"
+msgstr ""
+
+#: ../../flying.rst:32
+msgid "`Choosing the right sensor <https://uav-guidelines.openaerialmap.org/pages/06-choosing-the-sensor/>`_"
+msgstr ""
+
+#: ../../flying.rst:34
+msgid "`Mission preparation <https://uav-guidelines.openaerialmap.org/pages/07-preparing-for-the-uav-mission/>`_"
+msgstr ""
+
+#: ../../flying.rst:36
+msgid "The guidelines are intended for drone mapping projects on islands, but have general use for all drone mappers."
+msgstr ""
+
+#: ../../flying.rst:38
+msgid "See also DroneDeploy's guide on `Making Successful Maps <https://support.dronedeploy.com/docs/making-successful-maps>`_, which provides great tips on mission planning."
+msgstr ""
+
+#: ../../flying.rst:40
+msgid "Finally, lens distortion is a challenge in projects requiring accurate 3D data. See our section in these docs on `Camera Calibration </tutorials/#calibrating-the-camera>`_."
+msgstr ""
+
+#: ../../flying.rst:42
 msgid "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/flying.rst>`_!"
 msgstr ""

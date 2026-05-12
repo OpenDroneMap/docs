@@ -2,10 +2,10 @@
 # Copyright (C) 2020, OpenDroneMap
 # This file is distributed under the same license as the OpenDroneMap package.
 # FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+#
 # Translators:
 # Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020
-# 
+#
 #, fuzzy
 msgid ""
 msgstr ""
@@ -14,12 +14,14 @@ msgstr ""
 "POT-Creation-Date: 2021-06-22 19:54-0400\n"
 "PO-Revision-Date: 2020-10-05 17:13+0000\n"
 "Last-Translator: Ma. Carmina Filamor-Badajos <mina.filamor@yahoo.com>, 2020\n"
-"Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
+"Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/"
+"111882/fil/)\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 "Language: fil\n"
-"Plural-Forms: nplurals=2; plural=(n == 1 || n==2 || n==3) || (n % 10 != 4 || n % 10 != 6 || n % 10 != 9);\n"
+"Plural-Forms: nplurals=2; plural=(n == 1 || n==2 || n==3) || (n % 10 != 4 || "
+"n % 10 != 6 || n % 10 != 9);\n"
 
 #: ../../../geo.rst:3
 msgid "Image Geolocation Files"
@@ -27,13 +29,13 @@ msgstr "Image Geolocation Files"
 
 #: ../../../geo.rst:5
 msgid ""
-"By default ODM will use the GPS information embedded in the images, if it is"
-" available. Sometimes images do not contain GPS information, or a user "
-"wishes to override the information with more accurate data (such as RTK)."
+"By default ODM will use the GPS information embedded in the images, if it is "
+"available. Sometimes images do not contain GPS information, or a user wishes "
+"to override the information with more accurate data (such as RTK)."
 msgstr ""
-"By default, ginagamit ng ODM ang impormasyon na kasasam sa mga mahe kung ito"
-" ay available. Minsan ang mga imahe ay walang kasama na GPS na impormasyon o"
-" di kaya naman ay mas pinipili ng gagamit na palitan ang impormasyon ng mas "
+"By default, ginagamit ng ODM ang impormasyon na kasasam sa mga mahe kung ito "
+"ay available. Minsan ang mga imahe ay walang kasama na GPS na impormasyon o "
+"di kaya naman ay mas pinipili ng gagamit na palitan ang impormasyon ng mas "
 "sigurado na data (tulad ng RTK)"
 
 #: ../../../geo.rst:7
@@ -41,8 +43,8 @@ msgid ""
 "Starting from ODM ``2.0`` people can supply an image geolocation file (geo) "
 "for this purpose."
 msgstr ""
-"Simula sa ODM ``2.0`` pwedeng magsupply ng image geolocation file (geo) para"
-" sa purpose."
+"Simula sa ODM ``2.0`` pwedeng magsupply ng image geolocation file (geo) para "
+"sa purpose."
 
 #: ../../../geo.rst:9
 msgid "The format of the image geolocation file is simple."
@@ -51,14 +53,14 @@ msgstr "Ang format ng image geolocation file ay simple lamang."
 #: ../../../geo.rst:11
 msgid ""
 "The first line should contain the name of the projection used for the geo "
-"coordinates. This can be specified either as a PROJ string (e.g. ``+proj=utm"
-" +zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), EPSG code (e.g. "
+"coordinates. This can be specified either as a PROJ string (e.g. ``+proj=utm "
+"+zone=10 +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), EPSG code (e.g. "
 "``EPSG:4326``) or as a ``WGS84 UTM <zone>[N|S]`` value (eg. ``WGS84 UTM "
 "16N``)"
 msgstr ""
 "Ang unang linya ay dapat maglaman ng projection na ginagamit para sa geo "
-"coordinates. Ito ay ma-specify bilang PROJ string (e.g. ``+proj=utm +zone=10"
-" +ellps=WGS84 +datum=WGS84 +units=m +no_defs``), EPSG code (e.g. "
+"coordinates. Ito ay ma-specify bilang PROJ string (e.g. ``+proj=utm +zone=10 "
+"+ellps=WGS84 +datum=WGS84 +units=m +no_defs``), EPSG code (e.g. "
 "``EPSG:4326``) o bilang ``WGS84 UTM 1[N|S]`` value (eg. ``WGS84 UTM 16N``)"
 
 #: ../../../geo.rst:12
@@ -108,6 +110,6 @@ msgstr "Sa base ng project folder dapat gawin ang ``geo.txt``."
 #: ../../../geo.rst:35
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
-"contribution>`_ and help improve `this page "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/geo.rst>`_!"
+"contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/"
+"docs/blob/publish/source/geo.rst>`_!"
 msgstr ""

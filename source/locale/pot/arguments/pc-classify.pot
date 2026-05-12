@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.7.0\n"
+"Project-Id-Version: OpenDroneMap 3.6.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-28 10:32-0500\n"
+"POT-Creation-Date: 2026-04-16 11:30+0200\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -21,7 +21,7 @@ msgid "pc-classify"
 msgstr ""
 
 #: ../../arguments/pc-classify.rst:13
-msgid "Classify the point cloud outputs using a Simple Morphological Filter. You can control the behavior of this option by tweaking the --dem-\\* parameters. Default: ``False``"
+msgid "Classify the point cloud outputs. You can control the behavior of this option by tweaking the --dem-\\* parameters. Default: ``False``"
 msgstr ""
 
 #: ../../arguments/pc-classify.rst:18

@@ -1,0 +1,36 @@
+# SOME DESCRIPTIVE TITLE.
+# Copyright (C) 2020, OpenDroneMap
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
+#, fuzzy
+msgid ""
+msgstr ""
+"Project-Id-Version: OpenDroneMap 3.6.0\n"
+"Report-Msgid-Bugs-To: \n"
+"POT-Creation-Date: 2026-04-16 11:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=utf-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Generated-By: Babel 2.18.0\n"
+
+#: ../../arguments/sfm-no-partial.rst:9
+msgid "sfm-no-partial"
+msgstr ""
+
+#: ../../arguments/sfm-no-partial.rst:13
+msgid ""
+"Do not attempt to merge partial reconstructions. This can happen when images "
+"do not have sufficient overlap or are isolated. Default: ``False``"
+msgstr ""
+
+#: ../../arguments/sfm-no-partial.rst:18
+msgid ""
+"`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
+"contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/"
+"docs/blob/publish/source/arguments_edit/sfm-no-partial.rst>`_!"
+msgstr ""

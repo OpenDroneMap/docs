@@ -6,9 +6,9 @@
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.7.0\n"
+"Project-Id-Version: OpenDroneMap 3.6.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-12-28 10:32-0500\n"
+"POT-Creation-Date: 2026-02-18 11:05+0100\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -16,54 +16,62 @@ msgstr ""
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
 
-#: ../../index.rst:None
+#: ../../index.rst:-1
 msgid "OpenDroneMap Logo"
 msgstr ""
 
-#: ../../index.rst:8
+#: ../../index.rst:12
 msgid "Welcome to OpenDroneMap's documentation"
 msgstr ""
 
-#: ../../index.rst:13
+#: ../../index.rst:17
 msgid "There is a `guide <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ on using GitHub to contribute. Anyone is welcome to share their knowledge and improve our documentation. You can also report problems using `GitHub issues <https://github.com/OpenDroneMap/docs/issues>`_."
 msgstr ""
 
-#: ../../index.rst:15
+#: ../../index.rst:19
 msgid "The documentation is available in several languages. Some translations are incomplete and will still display in English. The below languages are at least 20 percent translated. You can help us translate those languages (and other languages!) via Transifex. There is a `getting started guide on GitHub <https://github.com/opendronemap/docs#translations>`_."
 msgstr ""
 
-#: ../../index.rst:17
-msgid "`English <https://docs.opendronemap.org/>`_"
-msgstr ""
-
-#: ../../index.rst:18
-msgid "`Filipino <https://docs.opendronemap.org/fil>`_"
-msgstr ""
-
-#: ../../index.rst:19
-msgid "`French <https://docs.opendronemap.org/fr>`_"
-msgstr ""
-
-#: ../../index.rst:20
-msgid "`Spanish <https://docs.opendronemap.org/es>`_"
-msgstr ""
-
 #: ../../index.rst:21
-msgid "`Indonesian <https://docs.opendronemap.org/id>`_"
+msgid "`English </>`_"
 msgstr ""
 
 #: ../../index.rst:22
-msgid "`Swahili <https://docs.opendronemap.org/sw>`_"
+msgid "`Czech </cs>`_"
 msgstr ""
 
 #: ../../index.rst:23
-msgid "`Telugu <https://docs.opendronemap.org/te>`_"
+msgid "`Filipino </fil>`_"
 msgstr ""
 
-#: ../../index.rst:None
+#: ../../index.rst:24
+msgid "`French </fr>`_"
+msgstr ""
+
+#: ../../index.rst:25
+msgid "`Spanish </es>`_"
+msgstr ""
+
+#: ../../index.rst:26
+msgid "`Indonesian </id>`_"
+msgstr ""
+
+#: ../../index.rst:27
+msgid "`Swahili </sw>`_"
+msgstr ""
+
+#: ../../index.rst:28
+msgid "`Telugu </te>`_"
+msgstr ""
+
+#: ../../index.rst:29
+msgid "`Chinese </zh>`_"
+msgstr ""
+
+#: ../../index.rst:-1
 msgid "image of seedling"
 msgstr ""
 
-#: ../../index.rst:None
+#: ../../index.rst:-1
 msgid "image of pencil"
 msgstr ""

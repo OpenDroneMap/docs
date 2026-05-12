@@ -15,7 +15,7 @@ help:
 .PHONY: help Makefile
 
 # this is for testing, it will only build the EN version of the docs
-livehtml:
+livehtml: autogenerate
 	sphinx-autobuild --open-browser --host 0.0.0.0 -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)/html"
 
 # this will update `arguments.rst` to match arguments in the ODM code
@@ -24,6 +24,9 @@ livehtml:
 # all user contributed content from files in `source/arguments_edit/`
 autogenerate:
 	python scripts/extract_odm_strings.py https://raw.githubusercontent.com/OpenDroneMap/ODM/master/opendm/config.py
+	@$(SPHINXBUILD) -b gettext "$(SOURCEDIR)" "source/locale/pot"
+	sphinx-intl update --pot-dir "source/locale/pot" --language ar,cs,es,fil,fr,id,sw,te,zh
+	@$(MAKE) cleanobsolete
 
 # update main EN pot files that serve as the source for translation process
 updatepot:
@@ -31,7 +34,20 @@ updatepot:
 
 # update the po files for each target language from the EN pot files
 updatelangpo:
-	sphinx-intl update --pot-dir "source/locale/pot" --language cs,es,fil,fr,id,sw,te,zh
+	sphinx-intl update --pot-dir "source/locale/pot" --language ar,cs,es,fil,fr,id,sw,te,zh
+	@$(MAKE) cleanobsolete
+
+# remove obsolete entries from all .po files
+cleanobsolete:
+	@echo "Removing obsolete entries from .po files..."
+	@for lang in ar cs es fil fr id sw te zh; do \
+		for po in source/locale/$$lang/LC_MESSAGES/*.po source/locale/$$lang/LC_MESSAGES/*/*.po; do \
+			if [ -f "$$po" ]; then \
+				msgattrib --no-obsolete --no-fuzzy -o "$$po.tmp" "$$po" 2>/dev/null && mv "$$po.tmp" "$$po" || rm -f "$$po.tmp"; \
+			fi; \
+		done; \
+	done
+	@echo "Done cleaning obsolete entries."
 
 # push new and changed strings to Transifex
 pushlang:
@@ -39,7 +55,7 @@ pushlang:
 
 # push translated strings from Transifex
 pulllang:
-	tx pull --language "cs,es,fil,fr,id,sw,te,zh"
+	tx pull --language "ar,cs,es,fil,fr,id,sw,te,zh"
 
 build:
 	@$(SPHINXBUILD) -b dirhtml "$(SOURCEDIR)" "$(BUILDDIR)/html" -nW

@@ -141,15 +141,13 @@ Flowchart with options
                 gltf:::options
                 texturing-keep-unseen-faces:::options
                 texturing-single-material:::options
-                texturing-skip-global-seam-leveling:::options
                 use-3dmesh:::options
             end
-            gltf ~~~ texturing-keep-unseen-faces ~~~ texturing-single-material  ~~~ texturing-skip-global-seam-leveling ~~~  use-3dmesh
+            gltf ~~~ texturing-keep-unseen-faces ~~~ texturing-single-material  ~~~   use-3dmesh
 
         click gltf "../arguments/gltf/"
         click texturing-keep-unseen-faces "../arguments/texturing-keep-unseen-faces/"
         click texturing-single-material "../arguments/texturing-single-material/"
-        click texturing-skip-global-seam-leveling "../arguments/texturing-skip-global-seam-leveling/"
         click use-3dmesh "../arguments/use-3dmesh/"
 
             subgraph Odm-georeferencing["`**Odm-georeferencing**`"]

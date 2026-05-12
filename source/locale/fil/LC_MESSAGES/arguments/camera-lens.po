@@ -1,35 +1,38 @@
 # SOME DESCRIPTIVE TITLE.
 # Copyright (C) 2020, OpenDroneMap
-# This file is distributed under the same license as the OpenDroneMap package.
-# FIRST AUTHOR <EMAIL@ADDRESS>, YEAR.
-# 
+# This file is distributed under the same license as the OpenDroneMap
+# package.
+# FIRST AUTHOR <EMAIL@ADDRESS>, 2026.
+#
 #, fuzzy
 msgid ""
 msgstr ""
-"Project-Id-Version: OpenDroneMap 2.6.6\n"
+"Project-Id-Version: OpenDroneMap 3.6.0\n"
 "Report-Msgid-Bugs-To: \n"
-"POT-Creation-Date: 2021-11-12 15:01-0500\n"
-"PO-Revision-Date: 2021-11-12 20:52+0000\n"
-"Language-Team: Filipino (https://www.transifex.com/americanredcross/teams/111882/fil/)\n"
+"POT-Creation-Date: 2026-04-16 11:30+0200\n"
+"PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
+"Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
+"Language-Team: LANGUAGE <LL@li.org>\n"
 "MIME-Version: 1.0\n"
-"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Type: text/plain; charset=utf-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"Language: fil\n"
-"Plural-Forms: nplurals=2; plural=(n == 1 || n==2 || n==3) || (n % 10 != 4 || n % 10 != 6 || n % 10 != 9);\n"
+"Generated-By: Babel 2.18.0\n"
 
 #: ../../arguments/camera-lens.rst:9
 msgid "camera-lens"
 msgstr ""
 
 #: ../../arguments/camera-lens.rst:11
-msgid "**Options:** *auto |  perspective |  brown |  fisheye |  spherical*"
+msgid ""
+"**Options:** *auto |  perspective |  brown |  fisheye |  fisheye_opencv |  "
+"spherical |  equirectangular |  dual*"
 msgstr ""
 
 #: ../../arguments/camera-lens.rst:13
 msgid ""
 "Set a camera projection type. Manually setting a value can help improve "
-"geometric undistortion. By default the application tries to determine a lens"
-" type from the images metadata. . Default: ``auto``"
+"geometric undistortion. By default the application tries to determine a lens "
+"type from the images metadata. . Default: ``auto``"
 msgstr ""
 
 #: ../../arguments/camera-lens.rst:15
@@ -49,8 +52,7 @@ msgid "``auto`` : Automatic selection of best camera projection model."
 msgstr ""
 
 #: ../../arguments/camera-lens.rst:19
-msgid ""
-"``brown`` : Robust rectilinear projection model. Preferred by ``auto``."
+msgid "``brown`` : Robust rectilinear projection model. Preferred by ``auto``."
 msgstr ""
 
 #: ../../arguments/camera-lens.rst:20
@@ -117,8 +119,8 @@ msgstr ""
 #: ../../arguments/camera-lens.rst:42
 msgid ""
 "Camera Lens Models are projection/distortion models that OpenSFM uses to "
-"correct for the optics of the camera platforms that record our images. These"
-" corrections are essential for proper camera/scene modeling, and therefore, "
+"correct for the optics of the camera platforms that record our images. These "
+"corrections are essential for proper camera/scene modeling, and therefore, "
 "proper reconstruction of the data."
 msgstr ""
 
@@ -180,8 +182,8 @@ msgstr ""
 
 #: ../../arguments/camera-lens.rst:69
 msgid ""
-"As in the prior example, this Point Cloud is reconstructed via the ``brown``"
-" Camera Lens Model."
+"As in the prior example, this Point Cloud is reconstructed via the ``brown`` "
+"Camera Lens Model."
 msgstr ""
 
 #: ../../arguments/camera-lens.rst:72
@@ -227,14 +229,13 @@ msgid ""
 "This Point Cloud failed to reconstruct properly due to the manual selection "
 "of the ``fisheye`` Camera Lens Model. Similar failures to reconstruct can "
 "often indicate the wrong manual selection, or in edge cases, wrong ``auto`` "
-"selection of the Camera Lens Model, and you are advised to try another Model"
-" that is more appropriate."
+"selection of the Camera Lens Model, and you are advised to try another Model "
+"that is more appropriate."
 msgstr ""
 
 #: ../../arguments/camera-lens.rst:95
 msgid ""
 "`Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-"
-"contribution>`_ and help improve `this page "
-"<https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit"
-"/camera-lens.rst>`_!"
+"contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/"
+"docs/blob/publish/source/arguments_edit/camera-lens.rst>`_!"
 msgstr ""
