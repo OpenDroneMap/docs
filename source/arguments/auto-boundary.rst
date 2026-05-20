@@ -58,13 +58,16 @@ Example Images
 True: ``--auto-boundary``
 ^^^^^^^^^^^^^^^^^^^^^^^^^
 .. figure:: https://user-images.githubusercontent.com/19295950/140864618-2a0c95f2-669e-45dc-b5c5-df82a555e4e5.webp
-  :alt:  displaying the reconstruction extent of a terrestrial orbit survey of a Northern Catalpa tree.
+  :alt: WebODM displaying the reconstruction extent of a terrestrial orbit survey of a Northern Catalpa tree.
 
+  The WebODM 3D View shows the full extent of the reconstruction, bounded by the ``--auto-boundary`` option.
 
 False: ``null``
 ^^^^^^^^^^^^^^^
 .. figure:: https://user-images.githubusercontent.com/19295950/140864753-db3695c5-3ba2-48fb-a644-3e591913de72.webp
+  :alt: WebODM displaying the reconstruction extent of a terrestrial orbit survey of a Northern Catalpa tree.
 
+  The WebODM 3D View shows the full extent of the recosntruction. Compared to the ``--auto-boundary`` reconstruction above, one can see that the full reconstruction area is much larger (and therefore more visually sparse).
 
 
 `Learn to edit <https://github.com/opendronemap/docs#how-to-make-your-first-contribution>`_ and help improve `this page <https://github.com/OpenDroneMap/docs/blob/publish/source/arguments_edit/auto-boundary.rst>`_!

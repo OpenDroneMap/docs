@@ -141,7 +141,7 @@ Downloading A Polygon
 .. figure:: https://user-images.githubusercontent.com/19295950/145103954-17ba7c31-fda6-4883-b7a6-3f0bacc266dd.webp
   :alt: Browser Download/Save file prompt for the generated GeoJSON file.
 
-  Once the GeoJSON file has been chosen for saving, the browser will prompt you to save it to disk. Choose an appropriate location where you can access it at a later time to load into OpenDroneMap Desktop.
+  Once the GeoJSON file has been chosen for saving, the browser will prompt you to save it to disk. Choose an appropriate location where you can access it at a later time to load into WebODM.
 
 Setting Boundary [GeoJSON] In Task Options
 """""""""""""""""""""""""""""""""""""""""""
@@ -186,7 +186,7 @@ New Temporary Scratch Layer Settings
 Adding an Orthophoto Background
 """"""""""""""""""""""""""""""""
 .. figure:: https://user-images.githubusercontent.com/19295950/145109918-df591ce8-3df4-485d-a775-81813b7e61ef.webp
-  :alt: Browsing to a generated Orthophoto from OpenDroneMap Desktop that covers the Area Of Interest (AOI).
+  :alt: Browsing to a generated Orthophoto from WebODM that covers the Area Of Interest (AOI).
   
   If you have run the task already without a Boundary [GeoJSON], you can load the generated Orthophoto from OpenDroneMap into QGIS to use as your basemap for creating your Boundary [GeoJSON]. This should ensure that your boundary polygon exactly matches the data in your Task, as different basemaps can have errors of 1-10m or more. 
   If have not generated an Orthophoto for your Area Of Interest (AOI), you can use one of the various methods within QGIS to add a basemap. Just be mindful of possible differences in location, angle, skew, scale, and other registration changes that can occur between your data and a basemap provider's data.
@@ -232,37 +232,37 @@ Example Images
 True: ``--boundary [GeoJSON]`` - Point Cloud
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. figure:: https://user-images.githubusercontent.com/19295950/140858936-10fda65f-c278-46ae-95bd-7af8f8369554.webp
-  :alt: OpenDroneMap Desktop displaying the "clipped" reconstruction of the Brighton Beach dataset Point Cloud.
+  :alt: WebODM displaying the "clipped" reconstruction of the Brighton Beach dataset Point Cloud.
 
-  The OpenDroneMap Desktop 3D View shows the modified extent of the reconstruction Point Cloud, bounded by the GeoJSON proivded to the ``--boundary`` option.
+  The WebODM 3D View shows the modified extent of the reconstruction Point Cloud, bounded by the GeoJSON proivded to the ``--boundary`` option.
 
 True: ``--boundary [GeoJSON]`` - Orthophoto
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. figure:: https://user-images.githubusercontent.com/19295950/140859033-c6cab4f0-74b3-4266-b5ec-4a90da931340.webp
-  :alt: OpenDroneMap Desktop displaying the "clipped" reconstruction of the Brighton Beach dataset Orthophoto.
+  :alt: WebODM displaying the "clipped" reconstruction of the Brighton Beach dataset Orthophoto.
 
-  The OpenDroneMap Desktop 3D View shows the modified extent of the reconstruction Orthophoto, bounded by the GeoJSON proivded to the ``--boundary`` option.
+  The WebODM 3D View shows the modified extent of the reconstruction Orthophoto, bounded by the GeoJSON proivded to the ``--boundary`` option.
 
 True: ``--boundary [GeoJSON]`` - Digital Elevation Model
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. figure:: https://user-images.githubusercontent.com/19295950/140859073-28db5174-9a40-42d8-86d6-f345d9dad5a8.webp
-  :alt: OpenDroneMap Desktop displaying the "clipped" reconstruction of the Brighton Beach dataset Digital Elevation Model.
+  :alt: WebODM displaying the "clipped" reconstruction of the Brighton Beach dataset Digital Elevation Model.
 
-  The OpenDroneMap Desktop 3D View shows the modified extent of the reconstruction Digital Elevation Model, bounded by the GeoJSON proivded to the ``--boundary`` option.
+  The WebODM 3D View shows the modified extent of the reconstruction Digital Elevation Model, bounded by the GeoJSON proivded to the ``--boundary`` option.
 
 True: ``--boundary [GeoJSON]`` - 3D Model/Textured Mesh
 ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
 .. figure:: https://user-images.githubusercontent.com/19295950/140859125-4854e651-9eff-430d-956c-16f4d9a52dfd.webp
-  :alt: OpenDroneMap Desktop displaying the "clipped" reconstruction of the Brighton Beach dataset 3D Model/Textured Mesh.
+  :alt: WebODM displaying the "clipped" reconstruction of the Brighton Beach dataset 3D Model/Textured Mesh.
 
-  The OpenDroneMap Desktop 3D View shows the modified extent of the reconstruction 3D Model/Textured Mesh, bounded by the GeoJSON proivded to the ``--boundary`` option.
+  The WebODM 3D View shows the modified extent of the reconstruction 3D Model/Textured Mesh, bounded by the GeoJSON proivded to the ``--boundary`` option.
 
 False: ``null``
 ^^^^^^^^^^^^^^^^
 .. figure:: https://user-images.githubusercontent.com/19295950/140858712-9bfd8c56-a52a-480e-b68d-d5a97bc516fd.webp
-  :alt: OpenDroneMap Desktop displaying the full reconstruction of the Brighton Beach dataset Point Cloud.
+  :alt: WebODM displaying the full reconstruction of the Brighton Beach dataset Point Cloud.
 
-  The OpenDroneMap Desktop 3D View shows the full extent of the recosntruction. Compared to the ``--boundary`` reconstruction above, one can see that the full reconstruction area is much larger and includes many features outside of the Area Of Interest used to generate the GeoJSON.
+  The WebODM 3D View shows the full extent of the recosntruction. Compared to the ``--boundary`` reconstruction above, one can see that the full reconstruction area is much larger and includes many features outside of the Area Of Interest used to generate the GeoJSON.
 
 
 
