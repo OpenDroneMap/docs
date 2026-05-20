@@ -358,9 +358,9 @@ At the end of the script you obtain a directory by epoch (at the same level as t
 .. |image1| image:: https://forge.inrae.fr/Denis.Feurer/timesift-odm-data-example/-/raw/main/Example.webp?ref_type=heads
 
 
------------------------
+------------------------
 Aligning Large  Datasets
------------------------
+------------------------
 
 When attempting to process very large datasets it may very well be the case that one needs to devide a large set of images into smaller more manageable chunks for ease of processing.This process however, may introduce some uncertainty with respect to the alignment of all the processed outputs.To make sure that all point clouds and terrain/suface models are seamlessly alighn in preparation for merging we follow the simple techniques outlined below.   
 

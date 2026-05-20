@@ -51,36 +51,6 @@
 <li class="toctree-l1 current"><a class="current reference internal" href="#">Instalace a spuštění</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="#quickstart">Quickstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="#hardware-recommendations">Doporučení k hardwaru</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#installation">Instalace</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#windows">Windows</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#step-1-check-virtualization-support">Krok 1. Zkontrolujte podporu virtualizace</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-2-install-requirements">Krok 2. Požadavky na instalaci</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-3-check-memory-and-cpu-allocation">Krok 3. Zkontrolujte přidělení paměti a procesoru</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-4-download-webodm">Krok 4. Stáhněte si WebODM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-4-launch-webodm">Krok 4. Spusťte WebODM</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#macos">macOS</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#id1">Krok 1. Zkontrolujte podporu virtualizace</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id2">Krok 2. Požadavky na instalaci</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#id3">Krok 3. Zkontrolujte přidělení paměti a procesoru</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-4-download-and-launch-webodm">Krok 4. Stažení a spuštění WebODM</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="#linux">Linux</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="#step-1-install-requirements">Krok 1. Instalace požadavků</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-2-check-additional-requirements">Krok 2. Zkontrolujte další požadavky</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-3a-download-and-launch-webodm-with-webodm-sh-call-of-docker-compose">Step 3a. Download and Launch WebODM with webodm.sh call of docker compose</a></li>
-<li class="toctree-l4"><a class="reference internal" href="#step-3b-alternatively-start-via-docker-compose-without-webodm-sh">Step 3b. Alternatively, start via docker compose without webodm.sh</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="#basic-commands-and-troubleshooting">Základní příkazy a řešení potíží</a></li>
-<li class="toctree-l2"><a class="reference internal" href="#hello-webodm">Dobrý den, WebODM!</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="#running-on-more-than-one-machine">Spuštění na více než jednom počítači</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -123,13 +93,6 @@
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/#accessing-logs-on-the-instance">Přístup k protokolům instance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/#command-line-access-to-instances">Přístup k instancím z příkazového řádku</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/#cleaning-up-after-docker">Úklid po Dockeru</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-podman">Using Podman</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/#migrating-from-docker-to-podman">Migrating from Docker to Podman</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/#for-versions-of-podman-compose-1-5-0">For versions of podman-compose &lt; 1.5.0</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/#configuring-podman-to-run-rootlessly">Configuring Podman to run Rootlessly</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/#macos">MacOS</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-odm-from-low-bandwidth-location">Použití ODM z místa s nízkou šířkou pásma</a><ul>
@@ -180,19 +143,19 @@
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary-distance/">auto-boundary-distance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/bg-removal/">bg-removal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">boundary</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#what-is-boundary-geojson">What is Boundary [GeoJSON]?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#when-is-boundary-geojson-appropriate">When is Boundary [GeoJSON] appropriate?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#why-would-one-use-boundary-geojson">Why would one use Boundary [GeoJSON]?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#how-would-one-create-boundary-geojson">How would one create Boundary [GeoJSON]?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">hranice</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#what-is-boundary-geojson">Co je to Hranice [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#when-is-boundary-geojson-appropriate">Kdy je vhodné použít Hranice [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#why-would-one-use-boundary-geojson">Proč by měl někdo použít Hranice [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#how-would-one-create-boundary-geojson">Jak se vytváří Hranice [GeoJSON]?</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#geojson-io">GeoJSON.io</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#qgis">QGIS</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#example-images">Example Images</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#example-images">Ukázkové obrázky</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-point-cloud">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Point Cloud</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-orthophoto">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Orthophoto</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-digital-elevation-model">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Digital Elevation Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-digital-elevation-model">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Digitální model reliéfu</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-3d-model-textured-mesh">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - 3D Model/Textured Mesh</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
 </ul>
@@ -456,12 +419,11 @@
              
   <section id="installation-and-getting-started">
 <h1>Instalace a spuštění<a class="headerlink" href="#installation-and-getting-started" title="Link to this heading"></a></h1>
-<p>Tato část je převzata a upravena se svolením z <a class="reference external" href="https://odmbook.com">OpenDroneMap: The Missing Guide</a>, autor Piero Toffanin.</p>
 <section id="quickstart">
 <h2>Quickstart<a class="headerlink" href="#quickstart" title="Link to this heading"></a></h2>
 <p>Installers for OpenDroneMap are available for purchase, and are the easiest way to get started and come with support.</p>
 <p><a class="reference external" href="https://opendronemap.org/download/">https://opendronemap.org/download/</a></p>
-<p>That said, OpenDroneMap is a free and open source ecoystem. Community support is available for those looking to install themselves and directions follow:</p>
+<p>That said, OpenDroneMap is a free and open source ecoystem. Community support is available for those looking to install themselves and directions follow can be found here: <a class="reference external" href="https://github.com/OpenDroneMap/ODM">ODM Repo</a></p>
 </section>
 <section id="hardware-recommendations">
 <h2>Doporučení k hardwaru<a class="headerlink" href="#hardware-recommendations" title="Link to this heading"></a></h2>
@@ -478,8 +440,8 @@
 <li><p>16 GB RAM</p></li>
 </ul>
 <p>The above will allow the processing of a few hundred images with minimal issues. A CPU with more cores will allow for faster processing, while a graphics card (GPU) currently has no impact on performance. For processing more images, add more disk space and RAM linearly to the number of images you need to process.</p>
-<table class="docutils align-default" id="id4">
-<caption><span class="caption-text">Minimum RAM needed for N images</span><a class="headerlink" href="#id4" title="Link to this table"></a></caption>
+<table class="docutils align-default" id="id1">
+<caption><span class="caption-text">Minimum RAM needed for N images</span><a class="headerlink" href="#id1" title="Link to this table"></a></caption>
 <thead>
 <tr class="row-odd"><th class="head"><p>Number of images</p></th>
 <th class="head"><p>RAM or RAM + Swap</p></th>
@@ -509,449 +471,6 @@
 </tr>
 </tbody>
 </table>
-</section>
-<section id="installation">
-<span id="docker-installation"></span><h2>Instalace<a class="headerlink" href="#installation" title="Link to this heading"></a></h2>
-<p>Pro spuštění ODM doporučujeme používat <a class="reference external" href="https://www.docker.com">docker</a>, ať už používáte Windows, MacOS nebo Linux.</p>
-<section id="windows">
-<h3>Windows<a class="headerlink" href="#windows" title="Link to this heading"></a></h3>
-<p>Pro spuštění OpenDroneMap potřebujete alespoň Windows 7. Předchozí verze systému Windows nejsou podporovány.</p>
-<section id="step-1-check-virtualization-support">
-<h4>Krok 1. Zkontrolujte podporu virtualizace<a class="headerlink" href="#step-1-check-virtualization-support" title="Link to this heading"></a></h4>
-<p>Docker vyžaduje od procesoru funkci zvanou virtualizace, která mu umožňuje spouštět virtuální počítače (VM). Ujistěte se, že ji máte povolenou! Někdy je tato funkce vypnutá. Chcete-li to zkontrolovat, můžete v systému Windows 8 nebo vyšším otevřít <strong>Správce úloh</strong> (stiskněte klávesy CTRL+SHIFT+ESC) a přepnout na kartu <strong>Výkon</strong>.</p>
-<figure class="align-center">
-<img alt="Obrázek kontroly virtualizace v systému Windows 8 nebo vyšším" src="../_images/virtualizationcheck.webp" />
-</figure>
-<p><em>Virtualizace by měla být povolena</em></p>
-<p>V systému Windows 7 můžete pro zjištění, zda máte povolenou virtualizaci, použít místo toho nástroj <a class="reference external" href="http://www.microsoft.com/en-us/download/details.aspx?id=592">Microsoft® Hardware-Assisted Virtualization Detection Tool</a>.</p>
-<p>Pokud je virtualizace zakázána, je třeba ji povolit. Postup se bohužel u každého modelu počítače trochu liší, takže nejlépe uděláte, když si ve vyhledávači vyhledáte „jak povolit vtx pro &lt;type your computer model here&gt;“. Často se jedná o restartování počítače, okamžité stisknutí klávesy F2 nebo F12 během spouštění, procházení spouštěcí nabídky a změnu nastavení pro povolení virtualizace (často nazývané „VT-X“).</p>
-<figure class="align-center">
-<img alt="Tabulka různých klíčů biosu" src="../_images/bioskeys.webp" />
-</figure>
-<p><em>Obvyklé klávesy, které je třeba stisknout při spuštění počítače pro přístup ke spouštěcí nabídce různých výrobců počítačů</em></p>
-</section>
-<section id="step-2-install-requirements">
-<h4>Krok 2. Požadavky na instalaci<a class="headerlink" href="#step-2-install-requirements" title="Link to this heading"></a></h4>
-<p>Nejprve je třeba nainstalovat:</p>
-<ul class="simple">
-<li><p>Git: <a class="reference external" href="https://git-scm.com/downloads">https://git-scm.com/downloads</a></p></li>
-<li><p>Python (nejnovější verze 3): <a class="reference external" href="https://www.python.org/downloads/windows/">https://www.python.org/downloads/windows/</a></p></li>
-</ul>
-<p>V případě Pythonu 3 se ujistěte, že jste během instalace zaškrtli políčko <strong>Přidat Python 3.x do PATH</strong>.</p>
-<figure class="align-center">
-<img alt="Snímek obrazovky procesu instalace Pythonu3" src="../_images/installpython3.webp" />
-</figure>
-<p><em>Nezapomeňte přidat spustitelný soubor Pythonu do cesty PATH (abyste s ním mohli spouštět příkazy)</em>.</p>
-<p>Pouze pokud používáte systém Windows 10 Home, Windows 8 (jakoukoli verzi) nebo Windows 7 (jakoukoli verzi), nainstalujte jej:</p>
-<ul class="simple">
-<li><p>Docker Toolbox: <a class="reference external" href="https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe">https://github.com/docker/toolbox/releases/download/v18.09.3/DockerToolbox-18.09.3.exe</a></p></li>
-</ul>
-<p>Pokud používáte systém Windows 10 Professional nebo novější verzi, měli byste místo toho nainstalovat:</p>
-<ul class="simple">
-<li><p>Docker for Windows:https://docs.docker.com/desktop/install/windows-install/</p></li>
-</ul>
-<p>Prosím, <strong>NE</strong> instalujte oba programy docker. Jsou odlišné a pokud budou nainstalovány oba, vznikne nepořádek.</p>
-<p>Po instalaci nástroje Docker jej spusťte z ikony na ploše, která byla vytvořena při instalaci (<strong>Docker Quickstart</strong> v případě Docker Toolbox, <strong>Docker for Windows</strong> pro Docker for Windows). Je to důležité, tento krok nevynechávejte. Pokud se objeví chyby, postupujte podle pokynů na obrazovce a opravte je.</p>
-</section>
-<section id="step-3-check-memory-and-cpu-allocation">
-<h4>Krok 3. Zkontrolujte přidělení paměti a procesoru<a class="headerlink" href="#step-3-check-memory-and-cpu-allocation" title="Link to this heading"></a></h4>
-<p>Docker v systému Windows funguje tak, že na pozadí běží virtuální počítač (virtuální počítač si představte jako „emulátor počítače“). Tento virtuální počítač má přiděleno určité množství paměti a WebODM může využívat pouze tolik paměti, kolik mu bylo přiděleno.</p>
-<p>Pokud jste nainstalovali Docker Toolbox (pokud jste místo toho nainstalovali Docker pro Windows, viz níže):</p>
-<ol class="arabic simple">
-<li><p>Otevřete aplikaci <strong>VirtualBox Manager</strong>.</p></li>
-<li><p>Klikněte pravým tlačítkem myši na <strong>defaultní</strong> virtuální počítač a stiskněte <strong>Close (ACPI Shutdown)</strong> pro zastavení počítače.</p></li>
-<li><p>Klikněte pravým tlačítkem myši na <strong>výchozí</strong> virtuální počítač a stiskněte <strong>Nastavení…</strong></p></li>
-<li><p>Přesuňte posuvník <strong>Základní paměť</strong> z panelu <strong>Systém</strong> a přidělte 60-70 % veškeré dostupné paměti, případně přidejte také 50 % dostupných procesorů z karty <strong>Procesor</strong>.</p></li>
-</ol>
-<figure class="align-center">
-<img alt="Snímek obrazovky nastavení VirtualBoxu" src="../_images/virtualboxsettings.webp" />
-</figure>
-<p><em>Výchozí nastavení virtuálního počítače VirtualBox</em></p>
-<p>Poté stiskněte tlačítko <strong>OK</strong>, klikněte pravým tlačítkem myši na <strong>výchozí</strong> virtuální počítač a stiskněte tlačítko <strong>Spustit</strong>.</p>
-<p>Pokud jste místo toho nainstalovali Docker pro Windows:</p>
-<ol class="arabic simple">
-<li><p>Podívejte se do systémové lišty a klikněte pravým tlačítkem myši na ikonu „bílé velryby“.</p></li>
-<li><p>V nabídce stiskněte <strong>Nastavení…</strong>.</p></li>
-<li><p>Na panelu klikněte na tlačítko <strong>Pokročilé</strong> a pomocí posuvníků přidělte 60-70 % dostupné paměti a využijte polovinu všech dostupných procesorů.</p></li>
-<li><p>Stiskněte <strong>Použít</strong>.</p></li>
-</ol>
-<figure class="align-center">
-<img alt="Snímek obrazovky ikony Dockeru" src="../_images/dockericon.webp" />
-</figure>
-<p><em>Krok 1 Ikona Docker</em></p>
-<figure class="align-center">
-<img alt="Snímek obrazovky nastavení aplikace Docker" src="../_images/dockersettings.webp" />
-</figure>
-<p><em>Krok 3 a 4 nastavení Dockeru</em></p>
-</section>
-<section id="step-4-download-webodm">
-<h4>Krok 4. Stáhněte si WebODM<a class="headerlink" href="#step-4-download-webodm" title="Link to this heading"></a></h4>
-<p>Otevřete program <strong>Git Gui</strong>, který je nainstalován se systémem Git. Odtud:</p>
-<ul class="simple">
-<li><p>Po otevření nástroje Git Gui klikněte na možnost „Klonovat existující úložiště“.</p></li>
-<li><p>Do pole <strong>Zdrojové umístění</strong> zadejte: <a class="reference external" href="https://github.com/OpenDroneMap/WebODM">https://github.com/OpenDroneMap/WebODM</a></p></li>
-<li><p>V okně <strong>Cílový adresář</strong> klikněte na tlačítko procházet a přejděte do vybrané složky (v případě potřeby ji vytvořte).</p></li>
-<li><p>Stiskněte tlačítko <strong>Klonovat</strong></p></li>
-</ul>
-<figure class="align-center">
-<img alt="Snímek obrazovky Git Gui" src="../_images/gitgui.webp" />
-</figure>
-<p><em>Git Gui</em></p>
-<p>Pokud se stahování podařilo, mělo by se zobrazit toto okno:</p>
-<figure class="align-center">
-<img alt="Snímek obrazovky Git Gui po úspěšném stažení" src="../_images/gitguisuccess.webp" />
-</figure>
-<p><em>Git Gui po úspěšném stažení (klonování)</em></p>
-<p>Přejděte do nabídky <strong>Úložiště</strong> a klikněte na tlačítko <strong>Vytvořit ikonu na ploše</strong>. To vám umožní se v budoucnu k této aplikaci snadno vracet.</p>
-</section>
-<section id="step-4-launch-webodm">
-<h4>Krok 4. Spusťte WebODM<a class="headerlink" href="#step-4-launch-webodm" title="Link to this heading"></a></h4>
-<p>V prostředí Git Gui přejděte do nabídky <strong>Úložiště</strong> a klikněte na položku <strong>Git Bash</strong>. V terminálu příkazového řádku zadejte:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>start<span class="w"> </span><span class="p">&amp;</span>
-</pre></div>
-</div>
-<p>V tomto okamžiku se do počítače stáhne několik komponent, včetně WebODM, NodeODM a ODM. Po stažení by vás měla přivítat následující obrazovka:</p>
-<figure class="align-center">
-<img alt="Snímek obrazovky po úspěšném stažení WebODM" src="../_images/webodmsuccess.webp" />
-</figure>
-<p><em>Výstup konzoly po prvním spuštění WebODM</em></p>
-<ul class="simple">
-<li><p>Pokud používáte Docker pro Windows, otevřete webový prohlížeč na adrese <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p></li>
-<li><p>Pokud používáte Docker Toolbox, vyhledejte IP adresu, ke které se chcete připojit, zadáním:</p></li>
-</ul>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker-machine<span class="w"> </span>ip
-</pre></div>
-</div>
-<p>Měli byste získat následující výsledek:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="m">192</span>.168.1.100
-</pre></div>
-</div>
-<p>Poté se připojte k webu <a class="reference external" href="http://192.168.1.100:8000">http://192.168.1.100:8000</a> (IP adresu nahraďte správnou).</p>
-</section>
-</section>
-<section id="macos">
-<h3>macOS<a class="headerlink" href="#macos" title="Link to this heading"></a></h3>
-<p>Na většině moderních počítačů Mac (po roce 2010) se systémem macOS Sierra 10.12 nebo vyšším lze OpenDroneMap spustit pomocí dockeru, pokud je podporována hardwarová virtualizace (viz níže).</p>
-<section id="id1">
-<h4>Krok 1. Zkontrolujte podporu virtualizace<a class="headerlink" href="#id1" title="Link to this heading"></a></h4>
-<p>Otevřete okno Terminálu a napište:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sysctl<span class="w"> </span>kern.hv_support
-</pre></div>
-</div>
-<p>Dostanete podobnou odpověď, jako je tato:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>kern.hv_support:<span class="w"> </span><span class="m">1</span>
-</pre></div>
-</div>
-<p>Pokud je výsledkem <em>kern.hv_support: 1</em>, pak je váš Mac podporován! Pokračujte krokem 2.</p>
-<p>Pokud je výsledkem  <em>kern.hv_support: 0</em>, To bohužel znamená, že váš Mac je příliš starý na spuštění OpenDroneMap :(.</p>
-</section>
-<section id="id2">
-<h4>Krok 2. Požadavky na instalaci<a class="headerlink" href="#id2" title="Link to this heading"></a></h4>
-<p>Je třeba nainstalovat pouze dva programy:</p>
-<ol class="arabic simple">
-<li><p>Docker: <a class="reference external" href="https://download.docker.com/mac/stable/Docker.dmg">https://download.docker.com/mac/stable/Docker.dmg</a></p></li>
-<li><p>Git: <a class="reference external" href="https://sourceforge.net/projects/git-osx-installer/files/">https://sourceforge.net/projects/git-osx-installer/files/</a></p></li>
-</ol>
-<p>Po instalaci dockeru byste měli na hlavním panelu najít ikonu, která vypadá jako velryba.</p>
-<figure class="align-center">
-<img alt="Snímek obrazovky Docker whale" src="../_images/macwhale.webp" />
-</figure>
-<p><em>Spuštěná aplikace Docker</em></p>
-<p>Správné spuštění dockeru můžete ověřit tak, že otevřete aplikaci <strong>Terminál</strong> a zadáte:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker<span class="w"> </span>run<span class="w"> </span>hello-world
-</pre></div>
-</div>
-<p>Který by měl vrátit</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>Hello<span class="w"> </span>from<span class="w"> </span>Docker!
-</pre></div>
-</div>
-<p>Chcete-li ověřit, zda je git nainstalován, jednoduše zadejte:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>--version
-</pre></div>
-</div>
-<p>Který by měl vrátit něco podobného:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>git<span class="w"> </span>version<span class="w"> </span><span class="m">2</span>.20.1<span class="w"> </span><span class="o">(</span>Apple<span class="w"> </span>Git-117<span class="o">)</span>
-</pre></div>
-</div>
-<p>Pokud se zobrazí hlášení „bash: git: command not found“, zkuste restartovat aplikaci <strong>Terminal</strong> a překontrolujte, zda během instalace nedošlo k chybě.</p>
-</section>
-<section id="id3">
-<h4>Krok 3. Zkontrolujte přidělení paměti a procesoru<a class="headerlink" href="#id3" title="Link to this heading"></a></h4>
-<p>Docker v systému macOS funguje tak, že na pozadí běží virtuální počítač (představte si ho jako „emulátor počítače“). Tento virtuální počítač má přiděleno určité množství paměti a WebODM může využívat pouze tolik paměti, kolik mu bylo přiděleno.</p>
-<ol class="arabic simple">
-<li><p>Klikněte pravým tlačítkem myši na ikonu velryby na hlavním panelu a klikněte na položku <strong>Předvolby</strong>…</p></li>
-<li><p>Vyberte kartu <strong>Pokročilé</strong></p></li>
-<li><p>Nastavte posuvník CPU tak, aby využíval polovinu všech dostupných CPU, a paměť tak, aby využívala 60-70 % veškeré dostupné paměti.</p></li>
-<li><p>Stiskněte tlačítko <strong>Použít a restartovat</strong></p></li>
-</ol>
-<figure class="align-center">
-<img alt="Snímek obrazovky pokročilého nastavení Docker" src="../_images/dockeradvanced.webp" />
-</figure>
-<p><em>Pokročilé nastavení Dockeru</em></p>
-</section>
-<section id="step-4-download-and-launch-webodm">
-<h4>Krok 4. Stažení a spuštění WebODM<a class="headerlink" href="#step-4-download-and-launch-webodm" title="Link to this heading"></a></h4>
-<p>V <strong>Terminálu</strong> napište:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/OpenDroneMap/WebODM
-$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>WebODM
-$<span class="w"> </span>./webodm.sh<span class="w"> </span>start
-</pre></div>
-</div>
-<p>Poté otevřete webový prohlížeč na adrese <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
-</section>
-</section>
-<section id="linux">
-<h3>Linux<a class="headerlink" href="#linux" title="Link to this heading"></a></h3>
-<p>OpenDroneMap lze spustit na libovolné distribuci Linuxu, která podporuje docker. Podle webových stránek s dokumentací <a class="reference external" href="https://docs.docker.com/install/">dockeru</a> jsou oficiálně podporovanými distribucemi CentOS, Debian, Ubuntu a Fedora, pro ostatní jsou k dispozici statické binární soubory. Pokud si musíte vybrat distribuci výhradně pro spuštění OpenDroneMap, doporučuje se Ubuntu.</p>
-<section id="step-1-install-requirements">
-<h4>Krok 1. Instalace požadavků<a class="headerlink" href="#step-1-install-requirements" title="Link to this heading"></a></h4>
-<p>Je třeba nainstalovat čtyři programy:</p>
-<ol class="arabic simple">
-<li><p>Docker</p></li>
-<li><p>Git</p></li>
-<li><p>Python (2 nebo 3)</p></li>
-<li><p>Pip</p></li>
-</ol>
-<p>Nemůžeme popsat instalační proces pro všechny distribuce Linuxu, takže se omezíme na ty, které jsou oficiálně podporovány dockerem. Ve všech případech jde jen o otevření terminálového příkazu a zadání několika příkazů.</p>
-<section id="install-on-ubuntu-debian">
-<h5>Instalace na Ubuntu / Debian<a class="headerlink" href="#install-on-ubuntu-debian" title="Link to this heading"></a></h5>
-<p>Příkazy k zadání:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>update
-$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
-$<span class="w"> </span>sh<span class="w"> </span>get-docker.sh
-$<span class="w"> </span>sudo<span class="w"> </span>apt<span class="w"> </span>install<span class="w"> </span>-y<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>python-pip
-</pre></div>
-</div>
-</section>
-<section id="install-on-centos-rhel">
-<h5>Instalace na CentOS / RHEL<a class="headerlink" href="#install-on-centos-rhel" title="Link to this heading"></a></h5>
-<p>Příkazy k zadání:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
-$<span class="w"> </span>sh<span class="w"> </span>get-docker.sh
-$<span class="w"> </span>sudo<span class="w"> </span>yum<span class="w"> </span>-y<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>python-pip
-</pre></div>
-</div>
-</section>
-<section id="install-on-fedora">
-<h5>Instalace v systému Fedora<a class="headerlink" href="#install-on-fedora" title="Link to this heading"></a></h5>
-<p>Příkazy k zadání:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>curl<span class="w"> </span>-fsSL<span class="w"> </span>https://get.docker.com<span class="w"> </span>-o<span class="w"> </span>get-docker.sh
-$<span class="w"> </span>sh<span class="w"> </span>get-docker.sh
-$<span class="w"> </span>sudo<span class="w"> </span>dnf<span class="w"> </span>install<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>python-pip
-</pre></div>
-</div>
-</section>
-<section id="install-on-arch">
-<h5>Instalace na Arch<a class="headerlink" href="#install-on-arch" title="Link to this heading"></a></h5>
-<p>Příkazy k zadání:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>sudo<span class="w"> </span>pacman<span class="w"> </span>-Sy<span class="w"> </span>docker<span class="w"> </span>git<span class="w"> </span>python<span class="w"> </span>python-pip
-</pre></div>
-</div>
-</section>
-</section>
-<section id="step-2-check-additional-requirements">
-<h4>Krok 2. Zkontrolujte další požadavky<a class="headerlink" href="#step-2-check-additional-requirements" title="Link to this heading"></a></h4>
-<p>In addition to the three programs above, the docker compose script is also needed. Sometimes it’s already installed with docker, but sometimes it isn’t. To verify if it’s installed try to type:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>docker<span class="w"> </span>compose<span class="w"> </span>--version
-</pre></div>
-</div>
-<p>Měli byste vidět něco podobného:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>compose<span class="w"> </span>version<span class="w"> </span><span class="m">24</span>.0.5,<span class="w"> </span>build<span class="w"> </span>ced0996600
-</pre></div>
-</div>
-</section>
-<section id="step-3a-download-and-launch-webodm-with-webodm-sh-call-of-docker-compose">
-<h4>Step 3a. Download and Launch WebODM with webodm.sh call of docker compose<a class="headerlink" href="#step-3a-download-and-launch-webodm-with-webodm-sh-call-of-docker-compose" title="Link to this heading"></a></h4>
-<p>Z terminálu typu:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>git<span class="w"> </span>clone<span class="w"> </span>https://github.com/OpenDroneMap/WebODM
-$<span class="w"> </span><span class="nb">cd</span><span class="w"> </span>WebODM
-$<span class="w"> </span>./webodm.sh<span class="w"> </span>start
-</pre></div>
-</div>
-<p>Poté otevřete webový prohlížeč na adrese <a class="reference external" href="http://localhost:8000">http://localhost:8000</a>.</p>
-</section>
-<section id="step-3b-alternatively-start-via-docker-compose-without-webodm-sh">
-<h4>Step 3b. Alternatively, start via docker compose without webodm.sh<a class="headerlink" href="#step-3b-alternatively-start-via-docker-compose-without-webodm-sh" title="Link to this heading"></a></h4>
-<p>copy the following 3 files into a newly created folder:</p>
-<p>The <code class="docutils literal notranslate"><span class="pre">config-default.json</span></code>:</p>
-<div class="highlight-json notranslate"><div class="highlight"><pre><span></span><span class="p">{</span>
-<span class="w">        </span><span class="nt">&quot;instance&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;node-OpenDroneMap&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;odm_path&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;/code&quot;</span><span class="p">,</span>
-
-<span class="w">        </span><span class="nt">&quot;logger&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">{</span>
-<span class="w">                </span><span class="nt">&quot;level&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;info&quot;</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;maxFileSize&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">104857600</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;maxFiles&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">10</span><span class="p">,</span>
-<span class="w">                </span><span class="nt">&quot;logDirectory&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
-<span class="w">        </span><span class="p">},</span>
-
-<span class="w">        </span><span class="nt">&quot;port&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;auto&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;deamon&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;parallelQueueProcessing&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">8</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;cleanupTasksAfter&quot;</span><span class="p">:</span><span class="w"> </span><span class="mi">2880</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;test&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;testSkipOrthophotos&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;testSkipDems&quot;</span><span class="p">:</span><span class="w"> </span><span class="kc">false</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;token&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span><span class="p">,</span>
-<span class="w">        </span><span class="nt">&quot;authorizedIps&quot;</span><span class="p">:</span><span class="w"> </span><span class="p">[],</span>
-<span class="w">        </span><span class="nt">&quot;maxImages&quot;</span><span class="p">:</span><span class="w"> </span><span class="s2">&quot;&quot;</span>
-<span class="p">}</span>
-</pre></div>
-</div>
-<p>The <code class="docutils literal notranslate"><span class="pre">init.sql</span></code>:</p>
-<div class="highlight-sql notranslate"><div class="highlight"><pre><span></span><span class="k">CREATE</span><span class="w"> </span><span class="n">EXTENSION</span><span class="w"> </span><span class="n">postgis_raster</span><span class="p">;</span>
-<span class="k">SET</span><span class="w"> </span><span class="n">postgis</span><span class="p">.</span><span class="n">gdal_enabled_drivers</span><span class="w"> </span><span class="o">=</span><span class="w"> </span><span class="s1">&#39;ENABLE_ALL&#39;</span><span class="p">;</span>
-</pre></div>
-</div>
-<p>And finally the <code class="docutils literal notranslate"><span class="pre">compose.yml</span></code>:</p>
-<div class="highlight-yml notranslate"><div class="highlight"><pre><span></span>services:
-  webodm-node-odm-1:
-    image: opendronemap/nodeodm:gpu
-    container_name: webodm-node-odm-1
-    ports:
-      - &quot;3000:3000&quot;
-    volumes:
-      - ./config-default.json:/var/www/config-default.json
-    privileged: true
-    restart: unless-stopped
-    deploy:
-      resources:
-        reservations:
-          devices:
-            - driver: nvidia
-              capabilities: [gpu]
-
-  webapp-odm:
-    image: opendronemap/webodm_webapp
-    container_name: webapp
-    entrypoint: /bin/bash -c &quot;service cron start &amp;&amp; chmod +x /webodm/*.sh &amp;&amp; /bin/bash -c \&quot;/webodm/wait-for-it.sh -t 0 redis-odm:6379 -- /webodm/start.sh\&quot; &amp;&amp; python manage.py migrate&quot;
-        restart: always
-    volumes:
-      - ./data/webodm:/webodm/app/media:z
-    ports:
-      - &quot;8000:8000&quot;
-    depends_on:
-      - db-odm
-      - redis-odm
-      - webodm-node-odm-1
-    environment:
-      - WO_BROKER=redis://redis-odm
-      - WO_DEFAULT_NODES=1
-      - WO_HOST=localhost
-      - WO_PORT=8000
-      - WO_MEDIA_DIR=appmedia
-      - WO_DB_DIR=dbdata
-      - WO_SSL=NO
-      - WO_SSL_INSECURE_PORT_REDIRECT=80
-      - WO_DATABASE_HOST=db-odm
-      - WO_DATABASE_NAME=webodm_dev
-      - WO_DATABASE_USER=postgres
-      - WO_DATABASE_PASSWORD=postgres
-
-  redis-odm:
-    image: redis:alpine
-    container_name: redis-odm
-    restart: always
-
-  db-odm:
-    image: postgis/postgis:17-3.5-alpine
-    container_name: db-odm
-    restart: always
-    volumes:
-      - ./data/odm-db:/var/lib/postgresql/data
-      - ./init.sql:/docker-entrypoint-initdb.d/init.sql
-    environment:
-      - POSTGRES_USER=postgres
-      - POSTGRES_PASSWORD=postgres
-      - POSTGRES_DB=webodm_dev
-    healthcheck:
-      test: [ &quot;CMD&quot;, &quot;pg_isready&quot;, &quot;-q&quot;, &quot;-d&quot;, &quot;webodm_dev&quot;, &quot;-U&quot;, &quot;postgres&quot;]
-      timeout: 45s
-      interval: 20s
-      retries: 5
-
-  worker:
-    image: opendronemap/webodm_webapp
-    container_name: worker
-    entrypoint: /bin/bash -c &quot;/webodm/wait-for-it.sh -t 0 redis-odm:6379 -- /webodm/wait-for-it.sh -t 0 webapp-odm:8000 -- /webodm/worker.sh start&quot;
-        restart: always
-    volumes:
-      - ./data/webodm:/webodm/app/media:z
-    depends_on:
-      - redis-odm
-      - db-odm
-    environment:
-      - WO_BROKER=redis://redis-odm
-      - WO_DATABASE_HOST=db-odm
-      - WO_DATABASE_NAME=webodm_dev
-      - WO_DATABASE_USER=postgres
-      - WO_DATABASE_PASSWORD=postgres
-</pre></div>
-</div>
-<p>Finally, start the stack using <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">up</span> <span class="pre">-d</span></code>.
-You can now access WebODM at <a class="reference external" href="http://localhost:8000">http://localhost:8000</a> and the nodeODM at <a class="reference external" href="http://localhost:3000">http://localhost:3000</a>.</p>
-<p>To view logs of the services use <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">logs</span></code></p>
-<p>To shut down the services run <code class="docutils literal notranslate"><span class="pre">docker</span> <span class="pre">compose</span> <span class="pre">down</span></code>.</p>
-</section>
-</section>
-</section>
-<section id="basic-commands-and-troubleshooting">
-<h2>Základní příkazy a řešení potíží<a class="headerlink" href="#basic-commands-and-troubleshooting" title="Link to this heading"></a></h2>
-<p>Skvělé na používání dockeru je, že 99 % úloh, které kdy budete potřebovat provést při používání WebODM, lze provést pomocí skriptu ./webodm.sh. S jednou z nich jste se již setkali:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>start
-</pre></div>
-</div>
-<p>který se postará o spuštění WebODM a nastavení výchozího uzlu pro zpracování (node-odm-1). Pokud chcete službu WebODM zastavit, můžete již tušit, jaký je její příkaz:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>stop
-</pre></div>
-</div>
-<p>Existuje několik dalších příkazů, které můžete použít spolu s různými příznaky. Příznaky jsou parametry předávané příkazu ./webodm.sh a obvykle mají předponu „-“. Například příznak <strong>port</strong> dává WebODM pokyn k použití jiného síťového portu:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>$<span class="w"> </span>./webodm.sh<span class="w"> </span>start<span class="w"> </span>--port<span class="w"> </span><span class="m">80</span>
-</pre></div>
-</div>
-<p>Další užitečné příkazy jsou uvedeny níže:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span><span class="c1"># Restart WebODM (useful if things get stuck)</span>
-$<span class="w"> </span>./webodm.sh<span class="w"> </span>restart
-
-<span class="c1"># Reset the admin user&#39;s password if you forget it</span>
-$<span class="w"> </span>./webodm.sh<span class="w"> </span>resetadminpassword<span class="w"> </span>newpass
-
-<span class="c1"># Update everything to the latest version</span>
-$<span class="w"> </span>./webodm.sh<span class="w"> </span>update
-
-<span class="c1"># Store processing results in the specified folder instead of the default location (inside docker)</span>
-$<span class="w"> </span>./webodm.sh<span class="w"> </span>restart<span class="w"> </span>--media-dir<span class="w"> </span>/path/to/webodm_results
-
-<span class="c1"># See all options</span>
-$<span class="w"> </span>./webodm.sh<span class="w"> </span>--help
-</pre></div>
-</div>
-<p><a class="reference external" href="https://community.opendronemap.org">Komunitní fórum</a> je skvělým místem, kde můžete požádat o pomoc, pokud se zaseknete při některém z kroků instalace, a pro obecné otázky týkající se používání skriptu ./webodm.sh.</p>
-</section>
-<section id="hello-webodm">
-<h2>Dobrý den, WebODM!<a class="headerlink" href="#hello-webodm" title="Link to this heading"></a></h2>
-<p>After starting the containers using 3a. or 3b. you can open WebODM in the browser.
-This will greet you with a welcome message and will ask to create the first user. Take some time to familiarize yourself with the web interface and explore its various menus.</p>
-<figure class="align-center">
-<img alt="Snímek obrazovky ovládacího panelu WebODM" src="../_images/webodmdashboard.webp" />
-</figure>
-<p><em>WebODM Dashboard</em></p>
-<p>Všimněte si, že v nabídce <strong>Processing Nodes</strong> je již nakonfigurován uzel „node-odm-1“, který můžete použít. Jedná se o uzel NodeODM a byl vytvořen automaticky pomocí WebODM. Tento uzel běží na stejném počítači jako WebODM.</p>
-<p>Pokud jste se dostali až sem, gratulujeme vám! Nyní je čas začít zpracovávat data.</p>
-<figure class="align-center">
-<img alt="Obrázek oslavného tance" src="../_images/congratulations.webp" />
-</figure>
-<section id="running-on-more-than-one-machine">
-<h3>Spuštění na více než jednom počítači<a class="headerlink" href="#running-on-more-than-one-machine" title="Link to this heading"></a></h3>
-<p><strong>Případně:</strong> Pokud máte jiný počítač, můžete proces instalace zopakovat (nainstalovat docker, git, python atd.) a spustit nový uzel NodeODM zadáním v okně Terminal/Git Bash:</p>
-<div class="highlight-bash notranslate"><div class="highlight"><pre><span></span>docker<span class="w"> </span>run<span class="w"> </span>--rm<span class="w"> </span>-it<span class="w"> </span>-p<span class="w"> </span><span class="m">3000</span>:3000<span class="w"> </span>opendronemap/nodeodm<span class="w"> </span>-q<span class="w"> </span><span class="m">1</span><span class="w"> </span>--token<span class="w"> </span>secret
-</pre></div>
-</div>
-<p>Výše uvedený příkaz požádá docker o spuštění nového kontejneru pomocí obrazu opendronemap/nodeodm z Docker Hub (nejnovější verze NodeODM), použití portu 3000, nastavení maximálního počtu souběžných úloh na 1 a ochranu uzlu před neoprávněným přístupem pomocí hesla „secret“.</p>
-<p>Ve WebODM pak můžete stisknout tlačítko <strong>Přidat nový</strong> v části <strong>Zpracovatelské uzly</strong>. Do pole <strong>název hostitele/IP</strong> zadejte IP adresu druhého počítače. Do pole <strong>port</strong> zadejte „3000“. Do pole <strong>token</strong> zadejte „secret“. Můžete také přidat nepovinný <strong>název</strong> uzlu, například „druhý počítač“. Poté stiskněte tlačítko <strong>Uložit</strong>.</p>
-<p>Pokud vše proběhlo v pořádku, měli byste nyní mít dva zpracovatelské uzly! Budete moci paralelně zpracovávat více úloh na dvou různých strojích.</p>
-<p><a class="reference external" href="https://github.com/opendronemap/docs#how-to-make-your-first-contribution">Naučte se upravovat</a> a pomozte zlepšit <a class="reference external" href="https://github.com/OpenDroneMap/docs/blob/publish/source/installation.rst">tuto stránku</a>!</p>
-</section>
 </section>
 </section>
 

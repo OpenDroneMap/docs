@@ -21,7 +21,7 @@ While we aim to support as many cameras as possible, multispectral support has b
 Other cameras might also work. You can help us expand this list by `sharing datasets <https://community.opendronemap.org/c/datasets/10>`_ captured with other cameras.
 
 Creating Orthophotos from Multispectral Data
--------------------------------------------
+--------------------------------------------
 
 For supported sensors listed above (and likley other sensors), users can process multipsectral data in the same manner as visible light images. Images from all sensor bands should be processed at once (do not separate the bands into multiple folders). Users have the option to pass the ``--radiometric-calibration`` parameter with options ``camera`` or ``camera+sun`` to enable radiometric normalization. If the images are part of a multi-camera setup, the resulting orthophoto will have N bands, one for each camera (+ alpha).
 

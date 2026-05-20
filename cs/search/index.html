@@ -487,36 +487,6 @@ window.runMermaid = runMermaid;</script>
 <li class="toctree-l1"><a class="reference internal" href="../installation/">Instalace a spuštění</a><ul>
 <li class="toctree-l2"><a class="reference internal" href="../installation/#quickstart">Quickstart</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../installation/#hardware-recommendations">Doporučení k hardwaru</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../installation/#installation">Instalace</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../installation/#windows">Windows</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-check-virtualization-support">Krok 1. Zkontrolujte podporu virtualizace</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-install-requirements">Krok 2. Požadavky na instalaci</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3-check-memory-and-cpu-allocation">Krok 3. Zkontrolujte přidělení paměti a procesoru</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-webodm">Krok 4. Stáhněte si WebODM</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-launch-webodm">Krok 4. Spusťte WebODM</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../installation/#macos">macOS</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../installation/#id1">Krok 1. Zkontrolujte podporu virtualizace</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../installation/#id2">Krok 2. Požadavky na instalaci</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../installation/#id3">Krok 3. Zkontrolujte přidělení paměti a procesoru</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../installation/#step-4-download-and-launch-webodm">Krok 4. Stažení a spuštění WebODM</a></li>
-</ul>
-</li>
-<li class="toctree-l3"><a class="reference internal" href="../installation/#linux">Linux</a><ul>
-<li class="toctree-l4"><a class="reference internal" href="../installation/#step-1-install-requirements">Krok 1. Instalace požadavků</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../installation/#step-2-check-additional-requirements">Krok 2. Zkontrolujte další požadavky</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3a-download-and-launch-webodm-with-webodm-sh-call-of-docker-compose">Step 3a. Download and Launch WebODM with webodm.sh call of docker compose</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../installation/#step-3b-alternatively-start-via-docker-compose-without-webodm-sh">Step 3b. Alternatively, start via docker compose without webodm.sh</a></li>
-</ul>
-</li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../installation/#basic-commands-and-troubleshooting">Základní příkazy a řešení potíží</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../installation/#hello-webodm">Dobrý den, WebODM!</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../installation/#running-on-more-than-one-machine">Spuštění na více než jednom počítači</a></li>
-</ul>
-</li>
 </ul>
 </li>
 </ul>
@@ -559,13 +529,6 @@ window.runMermaid = runMermaid;</script>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/#accessing-logs-on-the-instance">Přístup k protokolům instance</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/#command-line-access-to-instances">Přístup k instancím z příkazového řádku</a></li>
 <li class="toctree-l3"><a class="reference internal" href="../tutorials/#cleaning-up-after-docker">Úklid po Dockeru</a></li>
-</ul>
-</li>
-<li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-podman">Using Podman</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/#migrating-from-docker-to-podman">Migrating from Docker to Podman</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/#for-versions-of-podman-compose-1-5-0">For versions of podman-compose &lt; 1.5.0</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/#configuring-podman-to-run-rootlessly">Configuring Podman to run Rootlessly</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../tutorials/#macos">MacOS</a></li>
 </ul>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../tutorials/#using-odm-from-low-bandwidth-location">Použití ODM z místa s nízkou šířkou pásma</a><ul>
@@ -616,19 +579,19 @@ window.runMermaid = runMermaid;</script>
 </li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/auto-boundary-distance/">auto-boundary-distance</a></li>
 <li class="toctree-l2"><a class="reference internal" href="../arguments/bg-removal/">bg-removal</a></li>
-<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">boundary</a><ul>
-<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#what-is-boundary-geojson">What is Boundary [GeoJSON]?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#when-is-boundary-geojson-appropriate">When is Boundary [GeoJSON] appropriate?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#why-would-one-use-boundary-geojson">Why would one use Boundary [GeoJSON]?</a></li>
-<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#how-would-one-create-boundary-geojson">How would one create Boundary [GeoJSON]?</a><ul>
+<li class="toctree-l2"><a class="reference internal" href="../arguments/boundary/">hranice</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#what-is-boundary-geojson">Co je to Hranice [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#when-is-boundary-geojson-appropriate">Kdy je vhodné použít Hranice [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#why-would-one-use-boundary-geojson">Proč by měl někdo použít Hranice [GeoJSON]?</a></li>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#how-would-one-create-boundary-geojson">Jak se vytváří Hranice [GeoJSON]?</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#geojson-io">GeoJSON.io</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#qgis">QGIS</a></li>
 </ul>
 </li>
-<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#example-images">Example Images</a><ul>
+<li class="toctree-l3"><a class="reference internal" href="../arguments/boundary/#example-images">Ukázkové obrázky</a><ul>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-point-cloud">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Point Cloud</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-orthophoto">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Orthophoto</a></li>
-<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-digital-elevation-model">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Digital Elevation Model</a></li>
+<li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-digital-elevation-model">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - Digitální model reliéfu</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#true-boundary-geojson-3d-model-textured-mesh">True: <code class="docutils literal notranslate"><span class="pre">--boundary</span> <span class="pre">[GeoJSON]</span></code> - 3D Model/Textured Mesh</a></li>
 <li class="toctree-l4"><a class="reference internal" href="../arguments/boundary/#false-null">False: <code class="docutils literal notranslate"><span class="pre">null</span></code></a></li>
 </ul>
