@@ -39,7 +39,7 @@ Why would one use Overviews?
 ----------------------------
 Overviews speed preview of the raster data by allowing the program rendering the raster to choose the closest size pyramid to match the resolution of the display extent that it is being rendered into, potentially saving a significant amount of time retrieving the full-size raster, buffering it, and then downscaling it for display.
 
-In the case of WebODM, Overviews are used to create dynamic tiles for rapid display and navigation of the 2D web map.
+In the case of OpenDroneMap Desktop, Overviews are used to create dynamic tiles for rapid display and navigation of the 2D web map.
 
 Example Images
 --------------
