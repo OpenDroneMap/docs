@@ -111,7 +111,7 @@ Then if there are no errors, run:
 make livehtml
 ```
 
-Note that if WebODM is running you should temporarily stop it while you edit the documentation.
+Note that if OpenDroneMap Desktop or another application is running on port 8000 you should temporarily stop it while you edit the documentation.
 
 ## Step 5. Start Editing
 
